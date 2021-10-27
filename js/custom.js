@@ -7,4 +7,11 @@ $(function(){
       arrows: false,
       dots: true,
     });
+
+    $(".clse").click(function(){
+        $(".announcment_wrap").hide();
+      });
+    $("#clsee").click(function(){
+        $(".cookies_section").hide();
+      });
 });
