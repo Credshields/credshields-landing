@@ -8,10 +8,15 @@ $(function(){
       dots: true,
     });
 
-    $(".clse").click(function(){
+    $("#clsoe").click(function(){
         $(".announcment_wrap").hide();
       });
+
     $("#clsee").click(function(){
+        $(".cookies_section").hide();
+      });
+
+    $("#clsee2").click(function(){
         $(".cookies_section").hide();
       });
 });
