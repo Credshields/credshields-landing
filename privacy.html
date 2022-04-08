@@ -10,6 +10,17 @@
  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
  <!-- favicon end -->
 
+   <!-- Calendly link widget begin -->
+   <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+   />
+   <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+   ></script>
+
    <!-- Default Css file Start -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -69,7 +80,11 @@
            </ul>
            <nav class="navbar navbar-light cart_drp_clk">
              <form class="form-inline">
-                 <a href="#">Schedule a Meeting</a>
+               <a
+                  href=""
+                  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shashank-credshields/credshields'});return false;"
+                  >Schedule a Meeting</a
+               >
             </form>
            </nav>
          </div>
@@ -117,9 +132,9 @@
       
       <br><br>Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
       <br><br>Account means a unique account created for You to access our Service or parts of our Service.
-      <br><br>Website refers to Solidity Scan, accessible from www.solidityscan.com
+      <br><br>Website refers to Credshields, accessible from www.credshields.com
       <br><br> Service refers to the Website.
-      <br><br>Country refers to: India
+      <br><br>Country refers to: Singapore
       <br><br>Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.
       
       <br><br> Third-party Social Media Service refers to any website or any social network website through which a User can log in or create an account to use the Service.
@@ -137,8 +152,6 @@
         <br><br> Email address
         <br>First name and last name
         <br> Phone number
-        <br> Usage Data
-        <br> Usage Data
         <br> Usage Data is collected automatically when using the Service.
          
         <br> <br>  Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
@@ -286,20 +299,28 @@ By email: <a href="mailto:info@credshields.com">info@credshields.com</a></p>
                <h2>Contact Us</h2>
                <p>Please Enter you Email ID. We promise not to spam.</p>
             </div>
-            <div class="contact_seach">
-               <input type="text" placeholder="Your Email Address" class="form-control"><a href="#">Submit</a>
-            </div>
+            <form class="contact_seach" action="https://formsubmit.co/info@credshields.com" method="POST">
+               <input
+                  type="text"
+                  placeholder="Your Email Address"
+                  class="form-control"
+                  name="email"
+               /><button type="submit">Submit</a>
+            </form>
          </div>
          <div class="col-lg-4">
             <div class="contact_wrap_boxs">
                <h6>Find Us</h6>
-               <p>104, Shirdi Sai Baba Mandir Road <br>  Bengaluru , Karnataka PIN 560008 </p>
+                  <p>
+                     20A TANJONG PAGAR ROAD <br />
+                     SINGAPORE (088443)
+                  </p>
             </div>
          </div>
          <div class="col-lg-4">
             <div class="contact_wrap_boxs">
                <h6>Get in Touch</h6>
-               <p>+161 120 0220 02 <br>  shashank@credshields.io</p>
+               <p>info@credshields.com</p>
             </div>
          </div>
          <div class="col-lg-4">
