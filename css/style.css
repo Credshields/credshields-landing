@@ -460,6 +460,15 @@ img {
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
+.all_invester_wrappess {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
 .company_wrapss {
 	text-align: center;
 	margin-top: 50px;
