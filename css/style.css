@@ -932,7 +932,7 @@ img {
 	justify-content: center;
 	width: fit-content;
 	height: fit-content;
-	margin: 0px 30px;
+	margin: 15px;
 }
 
 .team_wrap:hover .team_image {
