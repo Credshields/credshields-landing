@@ -920,7 +920,7 @@ img {
 .all_team_wraps {
 	display: flex;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: center;
 	flex-wrap: wrap;
 	margin-bottom: 50px;
 }
@@ -932,7 +932,7 @@ img {
 	justify-content: center;
 	width: fit-content;
 	height: fit-content;
-	margin: 15px;
+	margin: 15px 60px;
 }
 
 .team_wrap:hover .team_image {
@@ -940,8 +940,8 @@ img {
 }
 
 .team_image {
-	width: 120px;
-	height: 120px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
 	margin-left: auto;
 	margin-right: auto;
