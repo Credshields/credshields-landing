@@ -35,6 +35,8 @@ h6 {
 }
 body {
 	font-family: 'DM Sans', sans-serif;
+	width: 100vw;
+	overflow-x: hidden;
 }
 a,
 a:hover {
@@ -49,6 +51,7 @@ img {
 .announcment_wrap {
 	background: #242424;
 	padding: 10px 0px;
+	width: 100vw;
 }
 .announcment_wrap h6 {
 	font-style: normal;
@@ -84,6 +87,7 @@ img {
 
 .header_section {
 	padding-top: 10px;
+	width: 100vw;
 }
 .header_section .navbar-nav .nav-item .nav-link {
 	margin: 0 12px;
@@ -131,6 +135,7 @@ img {
 /* home css start  */
 .home_hero_section {
 	padding-bottom: 70px;
+	width: 100vw;
 }
 .custm_hero_bg {
 	background: #f9f9f9;
@@ -259,6 +264,7 @@ img {
 /* products css start */
 .our_product_sec {
 	padding: 60px 0px;
+	width: 100vw;
 }
 .contact_head,
 .products_head {
@@ -399,6 +405,7 @@ img {
 .services_section {
 	padding: 140px 0px;
 	background: #f9f9f9;
+	width: calc(100%);
 }
 .serv_boxs_wrap {
 	background: #ffffff;
@@ -440,6 +447,7 @@ img {
 
 .featured_audit_section {
 	padding: 100px 0px;
+	width: 100vw;
 }
 .featured_audit_section .col-lg-4 {
 	padding-left: 0;
@@ -484,6 +492,7 @@ img {
 
 .company_secure_section {
 	padding: 20px;
+	width: 100vw;
 }
 .company_secure_section .slider_container {
 	background: #F9F9F9;
@@ -517,6 +526,7 @@ img {
 /* about css start */
 .about_us_section {
 	padding: 100px 0px;
+	width: 100vw;
 }
 .company-head {
 	text-align: center;
@@ -573,6 +583,7 @@ img {
 
 .our_partners_section {
 	padding: 100px 0px;
+	width: 100vw;
 }
 .our_partners_section .col-lg-3 {
 	height: 175px;
@@ -580,16 +591,19 @@ img {
 	margin-bottom: 20px;
 }
 .company_wrapss {
-	text-align: center;
 	width: 100%;
 	height: 100%;
 	background: #F9F9F9;
 	border-radius: 9.56962px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .company_wrapss .img-fluid {
 	height: 30px;
-	margin-top: 25%;
 }
+
+
 
 /* contact css start */
 .contact_section {
