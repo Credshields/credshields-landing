@@ -1,58 +1,43 @@
-$(function(){
+$(document).ready(function () {
+  const $carousel = $(".carousel");
 
-    $('#company_slider_1').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 0,
-      speed: 2000,
-      pauseOnHover: true,
-      cssEase: 'linear',
-      arrows: false,
-      dots: false,
-      responsive: [
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
+  $carousel.slick({
+    centerMode: true,
+    centerPadding: "60px",
+    slidesToShow: 3,
+    infinite: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
 
-    setTimeout(()=>{
-      $('#company_slider_2').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 2000,
-        pauseOnHover: true,
-        cssEase: 'linear',
-        arrows: false,
-        dots: false,
-        responsive: [
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    }, 1000);
+  // Set initial slides to be 2, 3, and 4
+  $carousel.slick("slickGoTo", 2);
 
-    $("#clsoe").click(function(){
-        $(".announcment_wrap").hide();
-      });
+  // Click handlers for custom next and previous buttons
+  $(".prev-btn").click(function () {
+    $carousel.slick("slickPrev");
+  });
 
-    $("#clsee").click(function(){
-        $(".cookies_section").hide();
-      });
-
-    $("#clsee2").click(function(){
-        $(".cookies_section").hide();
-      });
+  $(".next-btn").click(function () {
+    $carousel.slick("slickNext");
+  });
 });

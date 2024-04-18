@@ -46,12 +46,22 @@
 	<!-- Custom Css file Start -->
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/responsive.css" />
+
+	<style>
+		@font-face {
+			font-family: Monbloc;
+			src: url("fonts/Monbloc-Inst-Regular.eot");
+			src: url("fonts/Monbloc-Inst-Regular.ttf");
+			src: url("fonts/Monbloc-Inst-Regular.woff");
+			src: url("fonts/Monbloc-Inst-Regular.woff2");
+		}
+	</style>
 	<!-- Custom Css file Start -->
 </head>
 
 <body>
 	<!-- announcement start -->
-	<div class="announcment_wrap">
+	<!-- <div class="announcment_wrap">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-11 ordr_2">
@@ -74,7 +84,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- announcement end -->
 
 	<!-- header section start -->
@@ -92,31 +102,26 @@
 					<ul class="navbar-nav m-auto custom_scrl">
 						<li class="nav-item">
 							<a class="nav-link" href="#pro_sec">
-								<span>EXPLORE</span>
-								<p>Our Products</p>
+								<p>Products</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#services_sec">
-								<span>VIEW ALL</span>
-								<p>Our Services</p>
+								<p>Services</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#about_sec">
-								<span>LEARN</span>
 								<p>About Us</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#contact_sec">
-								<span>Support</span>
 								<p>Contact Us</p>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="https://github.com/Credshields/Audit-Reports">
-								<span>Audits</span>
 								<p>View Audits</p>
 							</a>
 						</li>
@@ -138,39 +143,60 @@
 	<section class="home_hero_section">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12 custm_hero_bg">
+				<div class="col-lg-12">
 					<div class="row">
-						<div class="col-lg-6">
-							<div class="hero_txt">
-								<h2>
-									Building next-gen Security tools for Web3
-								</h2>
-								<p>
-									Next-gen security tools for next-gen applications. Get overall coverage of your
-									security requirements across all verticals in a single place.
-								</p>
-								<div class="hero_btn">
-									<a href=""
-										onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shashank-credshields/credshields'});return false;">Schedule
-										a Meeting</a>
-									<a href="#about_sec">Learn More</a>
+						<div class="hero_container">
+							<h2 class="color_primary">
+								Building next-gen Security
+							</h2>
+							<h2 class="theme_color">
+								tools for Web3
+							</h2>
+							<p>We're at the forefront of developing next-generation AI tools. These innovative tools
+								introduce multiple layers of defense, revolutionizing security standards.</p>
+							<a class="nav-link hero_footer stick_bottom" href="#pro_sec" data-aos="fade-down"
+								data-aos-duration="2000">
+								<p>View Products </p>
+								<div>
+									<svg width="141" height="46" viewBox="0 0 141 46" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path d="M1 1L71.5 25L140 1" stroke="url(#paint0_linear_1405_4799)" />
+										<path d="M1 11L71.5 35L140 11" stroke="url(#paint1_linear_1405_4799)" />
+										<path d="M1 21L71.5 45L140 21" stroke="url(#paint2_linear_1405_4799)" />
+										<defs>
+											<linearGradient id="paint0_linear_1405_4799" x1="1" y1="13" x2="140" y2="13"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#999999" stop-opacity="0" />
+												<stop offset="0.520921" stop-color="#D0D0D0" />
+												<stop offset="1" stop-color="#999999" stop-opacity="0" />
+											</linearGradient>
+											<linearGradient id="paint1_linear_1405_4799" x1="1" y1="23" x2="140" y2="23"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#999999" stop-opacity="0" />
+												<stop offset="0.520921" stop-color="#D0D0D0" />
+												<stop offset="1" stop-color="#999999" stop-opacity="0" />
+											</linearGradient>
+											<linearGradient id="paint2_linear_1405_4799" x1="1" y1="33" x2="140" y2="33"
+												gradientUnits="userSpaceOnUse">
+												<stop stop-color="#999999" stop-opacity="0" />
+												<stop offset="0.520921" stop-color="#D0D0D0" />
+												<stop offset="1" stop-color="#999999" stop-opacity="0" />
+											</linearGradient>
+										</defs>
+									</svg>
 								</div>
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<div class="hero_img">
-								<img src="images/hero_im_1.svg" alt="a" class="img-fluid" />
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 	</section>
 	<!-- hero section end  -->
 
 	<!-- cookies section start -->
-	<section class="cookies_section">
+	<!-- <section class="cookies_section">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -187,8 +213,85 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- cookies section end -->
+
+	<!-- numbers section start -->
+	<section class="numbers_sec" id="num_sec">
+		<div class="container">
+			<div class="row">
+				<div class="stat_container">
+					<h1>
+						<span id="web3Count" class="animate-number theme_color" data-end="200" show-plus="true">0</span>
+					</h1>
+					<p class="color_primary">Web3 Companies Secured</p>
+				</div>
+				<div class="stat_container">
+					<h1>
+						<span id="vulnerabilitiesCount" class="animate-number theme_color" data-end="1000"
+							show-plus="true">0</span>
+					</h1>
+					<p class="color_primary">Vulnerabilities Found</p>
+				</div>
+				<div class="stat_container">
+					<h1>
+						<span id="amountSecured" class="animate-number theme_color" data-end="1000000000"
+							show-plus="true">0</span>
+					</h1>
+					<p class="color_primary">Amount Secured By CredShields</p>
+				</div>
+				<div class="stat_container">
+					<h1>
+						<span id="linesOfCode" class="animate-number theme_color" data-end="300000">0</span>
+					</h1>
+					<p class="color_primary">Lines of code Audited</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- numbers section end -->
+
+	<!-- our product section start -->
+	<section class="audits_sec" id="aud_sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="products_head">
+						<div class="row">
+							<h2 class="part_one">Explore our Most</h2>
+							<h2 class="part_two">Popular Audits</h2>
+						</div>
+						<p>Review number + completed audits to understand the comprehensive security assessments
+							Credshields offers.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12 audit_table">
+			</div>
+			<div id="pagination">
+				<button type="button" id="prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg></button>
+				<div id="pages">
+					<!-- Page buttons will be added here dynamically -->
+				</div>
+				<button type="button" id="next"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+							stroke-linejoin="round" />
+					</svg>
+				</button>
+			</div>
+		</div>
+	</section>
+	<!-- our product section end -->
 
 	<!-- our product section start -->
 	<section class="our_product_sec" id="pro_sec">
@@ -196,54 +299,57 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="products_head">
-						<h6>EXPLORE</h6>
-						<h2>Our Products</h2>
+						<div class="row">
+							<h2 class="part_one">CredShields</h2>
+							<h2 class="part_two">Security Solutions</h2>
+						</div>
 						<p>
-							A wide suite of enterprise security tools for a 360 coverage<br />
+							A wide suite of enterprise security tools for a 360 coverage
 							of all your applications. Secure your applications at every
-							stage: <br />
+							stage:
 							from development to post deployment.
 						</p>
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-center">
-				<div class="col-lg-6">
-					<div class="products_one_wrap" data-aos="fade-up" data-aos-duration="2000">
-						<img src="images/solidity_scan.png" alt="a" class="img-fluid" />
-						<h3>
-							Get your smart contracts <br />
-							audited by a smarter tool
-						</h3>
-						<p>
-							Smart-contract scanning tool built to discover vulnerabilities
-							<br />
-							&amp; mitigate risks in your code.
-						</p>
+			<div class="products_one_container">
+				<div class="products_one_wrap">
+					<p class="product_tag">Product 1</p>
+					<div class="row product_title">
+						<img src="images/solidity_scan.png" width="300" height="45" alt="a" class="img-fluid" />
+						<p>LIVE</p>
+						<img src="images/status-live.png" class="status_live" width="35" height="34" alt="a"
+							class="img-fluid" />
+					</div>
+					<p class="subtle_text">Smart-contract scanning tool built to discover vulnerabilities & mitigate
+						risks
+						in your code.</p>
+					<a href="https://solidityscan.com/">Visit Now</a>
+					<div class="product_img" id="productImg">
+						<img src="images/solidityscan.png" width="1108" alt="a" />
+					</div>
 
-						<a href="https://solidityscan.com/">Visit Now</a>
-
-						<img src="images/product_one_img.png" alt="a" class="img-fluid mt-4" />
+				</div>
+			</div>
+			<div class="coming_soon_wrap">
+				<div class="product_two">
+					<h3>WalletTracker</h3>
+					<p class="product_two_des">Lorem ipsum dolor sit amet consectetur. Amet habitasse convallis netus in
+						eu. Amet convallis cras
+						amet et egestas pellentesque dolor lacinia. Nunc feugiat nullam aenean at et arcu</p>
+					<div class="product_footer">
+						<h4>Coming Soon</h4>
+						<p>Product 2</p>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="product_2_wrap" data-aos="fade-up" data-aos-duration="2000">
-						<div class="product_inner_paddi">
-							<div class="d-flex justify-content-between">
-								<h5>THREAT MONITORING</h5>
-								<img src="images/signal_icon.svg" alt="a" class="img-fluid" />
-							</div>
-
-							<h3>
-								Coming Very <br />
-								Soon!!
-							</h3>
-
-							<p></p>
-
-							<a href="#">We’re Working</a>
-						</div>
-						<img src="images/product_2_bg.png" alt="a" class="img-fluid" />
+				<div class="product_three">
+					<h3>Threat Monitoring</h3>
+					<p class="product_two_des">Lorem ipsum dolor sit amet consectetur. Amet habitasse convallis netus in
+						eu. Amet convallis cras
+						amet et egestas pellentesque dolor lacinia. Nunc feugiat nullam aenean at et arcu</p>
+					<div class="product_footer">
+						<h4>Coming Soon</h4>
+						<p>Product 3</p>
 					</div>
 				</div>
 			</div>
@@ -251,8 +357,80 @@
 	</section>
 	<!-- our product section end -->
 
+
 	<!-- services section start -->
 	<section class="services_section" id="services_sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="products_head">
+						<div class="row">
+							<h2 class="part_one">Our</h2>
+							<h2 class="part_two">SERVICES</h2>
+						</div>
+						<p>Application ecosystems are evolving everyday, and so are the
+							security practises around them. From web-applications to
+							smart contract code review to a security audit of your cloud
+							infra. Our services ensure your security is in safe-hands.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="services_container">
+			<div id="services_con">
+				<a href="blockchain-security.html">
+					<div class="service_wrap" id="blockchain_security">
+						<img src="images/blockchain-security.png" alt="a" class="img-fluid" />
+						<p> Blockchain Security</p>
+					</div>
+				</a>
+				<a href="smart-contract-audit.html">
+					<div class="service_wrap" id="smart_contract">
+						<img src="images/smart-contract-audit.png" alt="a" class="img-fluid" />
+						<p> Smart Contract Audit</p>
+					</div>
+				</a>
+				<a href="mobile-app-security.html">
+					<div class="service_wrap" id="mobile_app">
+						<img src="images/mobile-app-security.png" alt="a" class="img-fluid" />
+						<p> Mobile App Security</p>
+					</div>
+				</a>
+				<a href="bug-bounty-management.html">
+					<div class="service_wrap" id="bug_bounty">
+						<img src="images/bug-bounty-management.png" alt="a" class="img-fluid" />
+						<p>Bug Bounty Management</p>
+					</div>
+				</a>
+				<a href="web-app-security.html">
+					<div class="service_wrap" id="web_app">
+						<img src="images/web-app-security.png" alt="a" class="img-fluid" />
+						<p>Web Application Security</p>
+					</div>
+				</a>
+				<a href="external-network-testing.html">
+					<div class="service_wrap" id="external_network">
+						<img src="images/external-network-testing.png" alt="a" class="img-fluid" />
+						<p>External network Testing</p>
+					</div>
+				</a>
+			</div>
+			<div class="services_focus">
+				<div class="logo_focus">
+					<svg width="266" height="266" viewBox="0 0 266 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M243.984 24.389C243.042 23.9181 242.101 23.5415 241.253 23.0706C234.85 20.1515 228.258 17.609 221.667 15.1607C219.877 14.5957 218.182 14.0307 216.393 13.3715C210.461 11.3941 204.528 9.6049 198.408 8.09824C196.053 7.53325 193.605 6.96826 191.157 6.3091C185.695 4.99077 180.045 3.95496 174.489 3.20163C171.664 2.7308 168.745 2.35413 166.014 2.07163C160.741 1.41247 155.374 0.941636 150.006 0.564972C146.993 0.376641 143.98 0.188309 140.778 0.0941429C138.047 -2.29911e-05 135.411 0 132.586 0C130.043 0 127.595 -2.29911e-05 124.958 0.0941429C121.945 0.188309 118.743 0.282475 115.73 0.564972C110.362 0.941636 104.995 1.41247 99.7217 2.07163C96.8026 2.4483 93.9776 2.7308 91.2468 3.20163C85.691 4.14329 80.041 5.17911 74.5794 6.3091C72.1311 6.87409 69.7769 7.43908 67.3286 8.09824C61.302 9.6049 55.2754 11.3941 49.3429 13.3715C47.5538 13.9365 45.8588 14.5015 43.9755 15.1607C37.2897 17.5148 30.7923 20.0573 24.389 22.9765C23.4473 23.4473 22.5057 23.824 21.564 24.2948C14.2191 27.6848 6.96828 31.4514 0 35.4063C0 43.5046 0.376698 51.3204 1.03586 59.1362C1.13003 60.4545 1.22416 61.5845 1.41249 62.9028C2.07165 69.7769 3.01334 76.5569 4.33167 83.2426C4.70833 85.3143 5.17917 87.2918 5.46167 89.4576C6.59166 95.39 8.19248 101.228 9.69913 106.972C10.3583 109.515 11.2058 112.246 12.0533 114.788C13.6541 120.061 15.4432 125.146 17.4207 130.231C18.5507 133.151 19.7748 136.07 20.9048 138.895C27.214 133.433 33.8997 128.348 40.868 123.828C47.648 119.402 54.8046 115.542 62.2437 112.152C69.4945 108.762 77.0277 105.937 84.8435 103.771C90.3993 102.17 96.2376 100.757 102.076 99.7217C104.336 99.345 106.502 99.0625 108.762 98.6858C116.107 97.65 123.451 97.085 131.079 97.085C131.55 97.085 132.021 97.085 132.491 97.085C133.056 97.085 133.81 97.085 134.375 97.085C142.002 97.1792 149.441 97.7442 156.692 98.8742C158.952 99.2508 161.212 99.5333 163.472 100.004C169.31 101.04 175.054 102.452 180.61 104.053C188.426 106.407 195.865 109.232 203.21 112.528C210.649 115.918 217.806 119.873 224.586 124.299C231.554 128.819 238.24 133.904 244.455 139.46C245.773 136.54 246.903 133.527 248.033 130.514C249.916 125.617 251.611 120.438 253.306 115.447C246.62 110.174 239.746 105.277 232.401 100.852C225.433 96.52 218.088 92.7534 210.461 89.4576C203.116 86.1618 195.488 83.4309 187.673 81.0768C184.848 80.2293 181.929 79.476 179.009 78.7226C174.113 77.5927 169.122 76.4627 164.037 75.7094C159.705 75.0502 155.28 74.391 150.854 73.9202C147.275 73.5435 143.509 73.3552 139.742 73.261C137.294 73.1669 134.846 73.1669 132.303 73.1669C129.949 73.1669 127.783 73.1669 125.429 73.261C121.662 73.3552 117.99 73.6377 114.317 73.9202C109.892 74.2969 105.466 74.8619 101.134 75.521C96.1434 76.3685 91.2468 77.4044 86.3501 78.5343C83.431 79.1935 80.5119 80.041 77.5927 80.8885C69.7769 83.2426 62.1495 86.0676 54.8046 89.1751C47.1771 92.4709 39.8322 96.3317 32.8639 100.475C32.8639 100.381 32.7698 100.098 32.7698 100.004C30.5098 92.0942 28.8148 83.996 27.4023 75.7094C27.4023 75.521 27.3081 75.3327 27.3081 75.1444C25.8956 66.8578 24.954 58.477 24.4831 49.9079C32.1106 46.0471 39.9264 42.6571 47.9305 39.6438C48.0246 39.6438 48.0246 39.5497 48.1188 39.5497C55.9346 36.6305 64.0328 34.1822 72.1311 32.1105H72.2252C80.041 30.1331 87.9509 28.5323 96.0492 27.3081C96.1434 27.3081 96.4259 27.3081 96.6142 27.2139C104.336 26.0839 112.152 25.2365 120.062 24.8598C120.25 24.8598 120.627 24.8598 120.909 24.8598C124.676 24.7656 128.536 24.6714 132.303 24.6714C136.258 24.6714 140.401 24.7656 144.168 24.8598C144.356 24.8598 144.733 24.8598 145.015 24.8598C152.925 25.3306 160.741 25.9898 168.463 27.2139C168.651 27.2139 168.839 27.2139 169.028 27.3081C177.126 28.6264 185.036 30.2272 192.852 32.2047H192.946C201.138 34.2764 209.142 36.913 216.958 39.8322C217.052 39.8322 217.147 39.8322 217.147 39.9263C225.245 42.9396 233.061 46.3296 240.594 50.1904C248.504 54.1454 256.225 58.5712 263.664 63.4678C263.759 62.1495 263.853 60.737 264.041 59.5128C264.7 51.7912 265.077 43.9755 265.077 36.0655C258.768 31.6397 251.517 27.9673 243.984 24.389Z"
+							fill="#1E1E3A" />
+						<path
+							d="M193.699 134.29C186.354 130.9 178.726 128.075 170.816 126.003C164.036 124.12 156.88 122.707 149.817 121.954C148.405 121.86 146.992 121.577 145.768 121.483C141.531 121.106 137.293 120.918 132.962 120.918C128.724 120.918 124.675 121.012 120.626 121.389C119.213 121.483 117.895 121.577 116.577 121.86C109.326 122.707 102.358 123.931 95.4836 125.815C87.5736 127.886 79.852 130.711 72.6013 134.101C65.2563 137.491 58.2881 141.446 51.6023 145.966C44.8223 150.674 38.419 155.759 32.4866 161.503C34.8407 165.929 37.3832 170.261 40.114 174.593C41.9032 177.417 43.5982 180.148 45.4815 182.879C48.4007 187.211 51.3198 191.354 54.4273 195.497C56.3106 197.946 58.1939 200.394 60.1714 202.748C63.6555 207.08 67.328 211.129 71.0004 215.272C72.7896 217.25 74.5787 219.133 76.462 221.016C81.4528 214.707 87.5737 209.246 94.4478 204.82C101.793 200.112 110.079 196.722 118.931 194.932C123.639 193.991 128.347 193.52 133.432 193.52C138.612 193.52 143.508 194.085 148.216 195.027C157.068 196.91 165.26 200.3 172.605 205.102C166.861 210.941 160.835 216.402 154.526 221.675C154.337 221.864 154.055 222.052 153.866 222.24C153.207 222.805 152.454 223.37 151.795 223.841C150.382 224.971 148.97 226.101 147.463 227.231C147.369 227.325 147.181 227.42 147.086 227.514C145.768 228.55 144.45 229.491 143.037 230.527C142.567 230.904 142.002 231.28 141.531 231.563C140.495 232.316 139.459 233.07 138.423 233.729C136.822 234.859 135.222 235.895 133.621 237.025C127.312 232.787 121.097 228.267 115.164 223.465C106.407 225.725 99.0127 230.339 91.9503 235.518C92.6094 236.083 92.5644 236.083 93.3178 236.648C93.6003 236.93 93.8827 237.213 94.3536 237.59C99.6269 242.015 105.089 246.347 110.738 250.396C111.68 251.055 112.622 251.714 113.563 252.374C120.061 257.082 126.841 261.319 133.903 265.368C137.293 263.391 140.683 261.319 143.979 259.248C147.275 257.176 150.571 254.916 153.772 252.656C154.808 251.997 155.844 251.149 156.88 250.396C162.341 246.441 167.709 242.204 172.888 237.778C173.735 237.025 174.583 236.271 175.43 235.518C176.184 234.859 176.937 234.2 177.596 233.54C182.022 229.585 186.354 225.442 190.591 221.205C192.569 219.227 194.452 217.25 196.335 215.178C199.913 211.223 203.492 207.08 206.882 203.031C208.859 200.582 210.837 198.04 212.814 195.403C131.737 141.823 78.3454 186.457 78.3454 186.457C78.157 186.269 77.9687 185.987 77.7804 185.798C72.9779 179.772 68.458 173.463 64.1263 166.965C70.6238 162.257 77.7804 158.302 85.2195 155.194C92.9411 151.804 100.945 149.262 109.232 147.567C115.729 146.249 122.415 145.495 129.195 145.213C130.607 145.213 132.02 145.119 133.432 145.119C135.033 145.119 136.54 145.119 138.141 145.213C144.921 145.401 151.606 146.249 158.01 147.661C166.391 149.45 174.395 151.993 182.022 155.383C189.461 158.679 196.524 162.633 203.021 167.248C209.707 171.956 215.828 177.323 221.383 183.256C223.267 180.431 225.15 177.512 226.845 174.593C229.387 170.355 231.836 166.212 234.19 161.88C227.975 156.136 221.666 150.863 214.886 146.249C208.106 141.634 201.044 137.68 193.699 134.29Z"
+							fill="#1E1E3A" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- <section class="services_section" id="services_sec">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -358,11 +536,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- services section end -->
 
 	<!-- about us css start -->
-	<section class="about_us_section" id="about_sec">
+	<!-- <section class="about_us_section" id="about_sec">
 		<div class="row justify-content-center">
 			<div class="col-lg-12">
 				<div class="company" data-aos="fade-up" data-aos-duration="2000">
@@ -402,11 +580,11 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- about us css end -->
 
 	<!-- Featured audits section -->
-	<section class="featured_audit_section" id="ft_audit_sec">
+	<!-- <section class="featured_audit_section" id="ft_audit_sec">
 		<div class="container">
 			<div class="row margin_top">
 				<div class="col-lg-12">
@@ -475,10 +653,10 @@
 					</div>
 				</div>
 			</div>
-	</section>
+	</section> -->
 
 	<!-- Secured companies section -->
-	<section class="company_secure_section" id="secure_sec">
+	<!-- <section class="company_secure_section" id="secure_sec">
 		<div>
 			<div class="row margin_top">
 				<div class="col-lg-12">
@@ -568,83 +746,18 @@
 				</div>
 			</div>
 		</div>
-	</section>
-
-	<!-- about us css start -->
-	<section class="about_us_section" id="about_sec">
-		<div class="container">
-			<div class="row">
-				<div class="row justify-content-center">
-					<div class="col-lg-10">
-						<div class="products_head">
-							<h6>LEARN MORE</h6>
-							<h2>About Us</h2>
-							<p>
-								We believe that security should not be an afterthought but
-								rather something built in and inherent to your business. We
-								aim to achieve the same and protect leading business across
-								the world with a combination of products and services. We are
-								headquartered in Singapore with our team being a mix of
-								experienced software developers, application architects and
-								cyber security professionals working remotely from India.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row margin_top">
-				<div class="col-lg-12">
-					<div class="products_head">
-						<h2>Meet The Founders</h2>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-lg-12">
-							<div class="company" data-aos="fade-up" data-aos-duration="2000">
-								<div class="data_container_wrap">
-									<div class="data_item_wrap">
-										<img src="images/shashank.jpeg" alt="a" class="team_image" />
-										<div class="team_info">
-											<h5>Shashank</h5>
-											<p>Co-Founder & CEO</p>
-											<div class="team_social_wrap">
-												<a href="https://www.linkedin.com/in/shashank-in/">
-													<img src="images/linkedin.png" alt="a" class="team_social" /></a>
-												<a href="https://twitter.com/cyberboyIndia">
-													<img src="images/twitter.png" alt="a" class="team_social" /></a>
-											</div>
-										</div>
-									</div>
-									<div class="data_item_wrap">
-										<img src="images/indranil.jpeg" alt="a" class="team_image" />
-										<div class="team_info">
-											<h5>Indranil Roy</h5>
-											<p>Co-Founder & CTO</p>
-											<div class="team_social_wrap">
-												<a href="https://www.linkedin.com/in/itsmeroy2012/">
-													<img src="images/linkedin.png" alt="a" class="team_social" /></a>
-												<a href="https://twitter.com/itsmeroy2012">
-													<img src="images/twitter.png" alt="a" class="team_social" /></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- about us css end -->
+	</section> -->
 
 	<!-- Partners section starts-->
 	<section class="our_partners_section" id="partner_sec">
 		<div class="container">
 			<div class="row">
-				<div class="col-12">
+				<div class="col-lg-12">
 					<div class="products_head">
-
-						<h2>Our Partners</h2>
+						<div class="row">
+							<h2 class="part_one">Our</h2>
+							<h2 class="part_two">Partners</h2>
+						</div>
 						<p>We believe that security should not be an afterthought but
 							rather something built in and inherent to your business.
 						</p>
@@ -655,7 +768,7 @@
 				<div class="col-lg-12">
 					<div class="company" data-aos="fade-up" data-aos-duration="2000">
 						<div class="row">
-							<div class="col-lg-3">
+							<div class="col-lg-4">
 								<div class="company_wrapss">
 									<a href="https://hackenproof.com/">
 										<img src="images/hackenproof.svg" alt="a" style="height: 80px;width: 160px;" />
@@ -663,7 +776,7 @@
 								</div>
 							</div>
 
-							<div class="col-lg-3">
+							<div class="col-lg-4">
 								<div class="company_wrapss">
 									<a href="https://core.app/ecosystem/home">
 										<img src="images/avalanche.svg" alt="a" style="height: 150px;width: 300px;" />
@@ -671,19 +784,10 @@
 								</div>
 							</div>
 
-							<div class="col-lg-3">
+							<div class="col-lg-4">
 								<div class="company_wrapss">
-									<a href="https://www.coingabbar.com/">
-										<img style="height: 120px; width: 120px;" src="images/coin-gabbar.svg"
-											alt="a" />
-									</a>
-								</div>
-							</div>
-							<div class="col-lg-3">
-								<div class="company_wrapss">
-									<a href="https://buidlerstribe.com/">
-										<img src="images/builder-tribe.svg" style="height: 80px;width: 160px;"
-											alt="a" />
+									<a href="https://gitopia.com/">
+										<img src="images/gitopia.svg" alt="a" />
 									</a>
 								</div>
 							</div>
@@ -691,12 +795,24 @@
 						</div>
 
 						<div class="row justify-content-center">
-
-							<div class="col-lg-3">
+							<div class="col-lg-4">
 								<div class="company_wrapss">
-									<a href="https://secureverse.in/">
-										<img src="images/secureverse.png" style="height: 120px; width: 120px;"
-											alt="a" />
+									<a href="http://pstake.finance/">
+										<img src="images/p-stake.svg" alt="a" />
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="company_wrapss">
+									<a href="http://comdex.one/">
+										<img src="images/comdex.svg" alt="a" />
+									</a>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="company_wrapss">
+									<a href="https://buidlerstribe.com/">
+										<img src="images/builder-tribe.svg" alt="a" />
 									</a>
 								</div>
 							</div>
@@ -707,75 +823,233 @@
 		</div>
 	</section>
 
+	<section class="testimonial_section" id="testimonial_sec">
+		<div class="container">
+			<div class="testimonial_left_grad"></div>
+			<div class="testimonial_right_grad"></div>
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="products_head">
+						<div class="row">
+							<h2 class="part_one">What People Say</h2>
+							<h2 class="part_two"> ABOUT US</h2>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie ultricies id posuere mauris
+							proin duis placerat lorem. Sed pellentesque.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="testimonial-carousel">
+				<div class="carousel">
+					<div class="testimonial-card"></div>
+					<div class="testimonial-card">
+						<div class="testimonial-header">
+						</div>
+						<p class="testimonial-text">"Hats off to the Solidity Scan team for creating an all-encompassing
+							vulnerability scanner designed specifically for smart contracts. It played a crucial role in
+							securing our contracts from potential scams by efficiently reviewing the source code.
+							Furthermore, the inclusion of a dashboard feature enables effortless management of reports,
+							all
+							conveniently accessible from your own account." </p>
+						<div class="testimonial-footer">
+							<div class="testimonial-image"></div>
+							<div class="testimonial-user">
+								<p class="testimonial-name">Jaxson Vetrovs</p>
+								<p class="testimonial-des">CEO Shady/Aftermath</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-header">
+						</div>
+						<p class="testimonial-text">"Hats off to the Solidity Scan team for creating an all-encompassing
+							vulnerability scanner designed specifically for smart contracts. It played a crucial role in
+							securing our contracts from potential scams by efficiently reviewing the source code.
+							Furthermore, the inclusion of a dashboard feature enables effortless management of reports,
+							all
+							conveniently accessible from your own account." </p>
+						<div class="testimonial-footer">
+							<div class="testimonial-image"></div>
+							<div class="testimonial-user">
+								<p class="testimonial-name">Jaxson Vetrovs</p>
+								<p class="testimonial-des">CEO Shady/Aftermath</p>
+							</div>
+						</div>
+					</div>
+					<div class="testimonial-card">
+						<div class="testimonial-header">
+						</div>
+						<p class="testimonial-text">"Hats off to the Solidity Scan team for creating an all-encompassing
+							vulnerability scanner designed specifically for smart contracts. It played a crucial role in
+							securing our contracts from potential scams by efficiently reviewing the source code.
+							Furthermore, the inclusion of a dashboard feature enables effortless management of reports,
+							all
+							conveniently accessible from your own account." </p>
+						<div class="testimonial-footer">
+							<div class="testimonial-image"></div>
+							<div class="testimonial-user">
+								<p class="testimonial-name">Jaxson Vetrovs</p>
+								<p class="testimonial-des">CEO Shady/Aftermath</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="custom-prev-next">
+					<button type="button" id="prev" class="prev-btn">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg></button>
+					<button type="button" id="next" class="next-btn">
+						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
+								stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- about us css start -->
+	<section class="about_us_section" id="about_sec">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="products_head">
+						<div class="row">
+							<h2 class="part_one">Driven by Purpose:</h2>
+							<h2 class="part_two"> Our Journey, Our Promise</h2>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie ultricies id posuere mauris
+							proin duis placerat lorem. Sed pellentesque.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="company_wrap" data-aos="fade-right" data-aos-duration="1500">
+					<div class="contact_head">
+						<h3>The Company</h3>
+					</div>
+					<div>
+						<img src="images/logo.svg" width="165px" alt="logo" class="img-fluid">
+					</div>
+					<div>
+						<p>We are CredShields, a passionate team of security experts on a mission to build trust in the
+							Web3 world. Since 2021, we've been empowering developers and businesses with a comprehensive
+							suite of security solutions. From bulletproof smart contract audits to robust wallet
+							protection, we help safeguard digital assets and foster a more secure Web3 ecosystem. We
+							believe security shouldn't be an afterthought, which is why we integrate it throughout the
+							development process. Join us in building a future for Web3 where innovation and trust go
+							hand in hand.
+						</p>
+					</div>
+					<div>
+						<h5>In the news</h5>
+						<p>e quam libero congue. Mauris in egestas sed fermentum mi congue elementum mus. Suspendisse
+							mattis tincidunt sodales euismod ut ac fusce. Pulvinar tortor ac pharetra ac.</p>
+					</div>
+					<div>
+						<h5>Achievements</h5>
+						<p>e quam libero congue. Mauris in egestas sed fermentum mi congue elementum mus. Suspendisse
+							mattis tincidunt sodales euismod ut ac fusce. Pulvinar tortor ac pharetra ac.</p>
+					</div>
+				</div>
+				<div class="team_wrap" data-aos="fade-left" data-aos-duration="1500">
+					<div class="contact_head">
+						<h3>The Founders</h3>
+					</div>
+					<div class="founder">
+						<img src="images/shashank.jpeg" width="128px" height="112px" alt="profile">
+						<div>
+							<h4 class="theme_color">Shashank </h4>
+							<p class="color_primary">Co-Founder & CEO</p>
+							<p class="detail_color">10+ years of relevant work experience in finding vulnerabilities and
+								reporting to
+								renowned organizations along with performing audits and managing their responsible
+								disclosure and bug bounty programs</p>
+						</div>
+					</div>
+					<div class="founder">
+						<img src="images/indranil.jpeg" width="128px" height="112px" alt="profile">
+						<div>
+							<h4 class="theme_color">Indranil Roy</h4>
+							<p class="color_primary">Co-Founder & CMO</p>
+							<p class="detail_color">10+ years of relevant work experience in finding vulnerabilities and
+								reporting to renowned organizations along with performing audits and managing their
+								responsible disclosure and bug bounty programs</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- about us css end -->
+
 	<!-- Contact section start -->
 	<section class="contact_section" id="contact_sec">
 		<div class="container">
-			<div class="row custom_contact_bg">
+			<div class="row">
 				<div class="col-lg-12">
-					<div class="contact_head">
-						<h6>SUPPORT</h6>
-						<h2>Contact Us</h2>
-						<p>Please enter your Email ID. We promise not to spam.</p>
+					<div class="products_head">
+						<div class="row">
+							<h2 class="part_one">JoiN OUR</h2>
+							<h2 class="part_two">Community</h2>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie ultricies id posuere mauris
+							proin duis placerat lorem. Sed pellentesque.</p>
 					</div>
-					<form class="contact_seach" action="https://formsubmit.co/info@credshields.com" method="POST">
-						<input type="text" placeholder="Your Email Address" class="form-control" name="email" /><button
-							type="submit">Submit</a>
-					</form>
 				</div>
-				<div class="col-lg-4">
-					<div class="contact_wrap_boxs">
-						<h6>Find Us</h6>
-						<p>
-							20A TANJONG PAGAR ROAD <br />
-							SINGAPORE (088443)
+			</div>
+
+			<div class="row col-lg-12">
+				<div class="social_wrap col-lg-6">
+					<div class="telegram_container">
+						<img src="images/telegram.png" width="42px" height="42px" alt="a" />
+						<p>Join Telegram</p>
+					</div>
+				</div>
+				<div class="social_wrap col-lg-6">
+					<div class="discort_container">
+						<img src="images/discord.png" width="90px" height="90px" alt="a" />
+						<p>Join Discord</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row col-lg-12 custom_contact_bg">
+				<div class="col-lg-6">
+					<div class="contact_head">
+						<h3>Get In Touch</h3>
+						<p>We appreciate each customer and we are proud that 60% of clients come back to work with us
+							again
 						</p>
 					</div>
+					<form class="contact_seach" action="https://formsubmit.co/info@credshields.com" method="POST">
+						<input type="text" placeholder="Your Name" name="name" />
+						<input type="text" placeholder="Your Email Address" name="email" />
+						<input type="text" placeholder="Purpose of contact" name="purpose" />
+						<textarea placeholder="Type your message here"></textarea>
+						<button type="submit">Submit</button>
+					</form>
 				</div>
-				<div class="col-lg-4">
-					<div class="contact_wrap_boxs">
-						<h6>Get in Touch</h6>
-						<p>info@credshields.com</p>
+				<div class="col-lg-6 justify-content-center contact_support">
+					<div class="contact_head">
+						<h3>Support</h3>
+						<div class="hstack">
+							<img src="images/mail.png" width="24px" height="24px" alt="a" />
+							<p>info@credshields.com
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-4">
-					<div class="contact_wrap_boxs">
-						<h6>Let’s Talk</h6>
-						<a href="#">
-							<img src="images/chat_icon.svg" alt="a" class="img-fluid" />
-							Chat with Us</a>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="contact_social_menu">
-						<ul>
 
-							<li>
-								<a href="https://twitter.com/CredShields"><i class="fa fa-twitter"></i></a>
-							</li>
-							<li>
-								<a href="https://www.instagram.com/credshields/"><i class="fa fa-instagram"></i></a>
-							</li>
-							<li>
-								<a href="https://www.linkedin.com/company/credshields/"><i
-										class="fa fa-linkedin-square"></i></a>
-							</li>
-
-
-							<li>
-								<a href="https://t.me/solidityscan"><i class="fa fa-telegram"></i></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="contact_menu_wrap">
-						<ul>
-							<li><a href="privacy.html">Privacy Policy</a></li>
-							<li><a href="tos.html">Terms of Service</a></li>
-							<li><a href="cookie.html">Cookie Policy</a></li>
-						</ul>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -784,6 +1058,58 @@
 	<!-- Footer section start -->
 	<footer class="footer_section">
 		<div class="container">
+			<!-- <div class="footer_container">
+				<div class="footer_logo">
+					<img src="images/Logo.svg" alt="logo" /></a>
+				</div>
+				<div class="footer_links">
+					<div class="quick_link">
+						<h4>
+							Quick Links
+						</h4>
+						<a class="nav-link" href="#services_sec">
+							<p>Services</p>
+						</a>
+						<a class="nav-link" href="#about_sec">
+							<p>About Us</p>
+						</a>
+						<a class="nav-link" href="#contact_sec">
+							<p>Contact Us</p>
+						</a>
+						<a class="nav-link" href="https://github.com/Credshields/Audit-Reports">
+							<p>View Audits</p>
+						</a>
+					</div>
+					<div class="discover_link">
+						<h4>
+							Discover
+						</h4>
+						<a class="nav-link" href="#services_sec" target="_blank">
+							<p>Blogs</p>
+						</a>
+						<a class="nav-link" href="#about_sec" target="_blank">
+							<p>Recent in News</p>
+						</a>
+					</div>
+					<div class="product_link">
+						<h4>
+							Product
+						</h4>
+						<a class="nav-link" href="#services_sec" target="_blank">
+							<p>QuickScan</p>
+						</a>
+						<a class="nav-link" href="#about_sec" target="_blank">
+							<p>Web3 HackHub</p>
+						</a>
+						<a class="nav-link" href="#about_sec" target="_blank">
+							<p>Pricing</p>
+						</a>
+					</div>
+				</div>
+				<div class="social_links">
+
+				</div>
+			</div> -->
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="ftr_menu">
@@ -805,7 +1131,7 @@
 	<!-- footer section end -->
 
 	<!-- Start of HubSpot Embed Code -->
-	<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/24889894.js"></script>
+	<!-- <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/24889894.js"></script> -->
 	<!-- End of HubSpot Embed Code -->
 	<!-- default js file Start -->
 	<script src="js/jquery.min.js"></script>
@@ -824,6 +1150,9 @@
 	<!-- Custom js file Start -->
 	<script src="js/smooth-naigate.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/statAnimation.js"></script>
+	<script src="js/auditReports.js"></script>
+	<script src="js/scrollIntraction.js"></script>
 	<!-- Custom js file end -->
 </body>
 
