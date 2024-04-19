@@ -43,6 +43,7 @@ function scrollServices() {
   const scaleFactor = 800;
   const opacityFactor = 500;
   const servicesFocusRadiusFactor = 0.2;
+  const innerCircleScaleFactor = 200;
   const currentOffset = servicesContainer.offsetTop;
 
   if (
@@ -64,28 +65,30 @@ function scrollServices() {
       0,
       50 - scrollOffset * servicesFocusRadiusFactor
     );
-    const innerRadius = Math.max(
-      4,
-      50 - scrollOffset * servicesFocusRadiusFactor
+    const innerCircleScale = Math.max(
+      1,
+      1 + scrollOffset / innerCircleScaleFactor
     );
 
-    servicesBox.style.transform = `translate(0px, ${translateBlockchainY}px)`;
-    servicesBox.style.scale = scale;
-    servicesBox.style.opacity = opacity;
-    if (opacity === 0) {
-      logoPathElements.forEach((pathElement) => {
-        pathElement.style.fill = "white";
-      });
-      servicesContainer.style.boxShadow = "none";
-    } else {
-      logoPathElements.forEach((pathElement) => {
-        pathElement.style.fill = "#1E1E3A";
-      });
-      servicesContainer.style.boxShadow =
-        "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
-    }
-    servicesFocus.style.borderRadius = innerRadius + "%";
-    servicesContainer.style.borderRadius = outerRadius + "%";
+    requestAnimationFrame(() => {
+      servicesBox.style.transform = `translate(0px, ${translateBlockchainY}px)`;
+      servicesBox.style.scale = scale;
+      servicesBox.style.opacity = opacity;
+      if (opacity === 0) {
+        logoPathElements.forEach((pathElement) => {
+          pathElement.style.fill = "white";
+        });
+        servicesContainer.style.boxShadow = "none";
+      } else {
+        logoPathElements.forEach((pathElement) => {
+          pathElement.style.fill = "#1E1E3A";
+        });
+        servicesContainer.style.boxShadow =
+          "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
+      }
+      servicesFocus.style.scale = innerCircleScale;
+      servicesContainer.style.borderRadius = outerRadius + "%";
+    });
   }
 }
 
@@ -95,13 +98,14 @@ function scrollProduct() {
   const currentOffset = container.offsetTop;
   const imgX = productImg.getBoundingClientRect().left;
   const containerX = productWrap.getBoundingClientRect().left;
+
   if (
     currentOffset <= scrollPosition &&
-    currentOffset + 800 >= scrollPosition
+    currentOffset + 630 >= scrollPosition
   ) {
     const scrollOffset = scrollPosition - currentOffset;
-    console.log(scrollOffset);
-    let translateX = 0;
+    let translateX = scrollOffset < 325 ? -40.08 : 0;
+
     if (currentOffset <= scrollPosition - 325) {
       const imgComputedStyle = window.getComputedStyle(productImg);
       const imgTransform = imgComputedStyle.getPropertyValue("transform");
@@ -112,16 +116,19 @@ function scrollProduct() {
       }
     }
 
-    if (imgX >= containerX) {
+    if (imgX >= containerX && scrollOffset < 325) {
       translateX = -scrollOffset * scaleFactorIncrement;
     }
+
     const translateY = initialTranslateY - scrollOffset;
     const newContainerHeight = containerHeight + scrollOffset;
 
-    container.style.height = newContainerHeight + "px";
-    productWrap.style.transform = `translate(0px, ${scrollOffset}px)`;
+    requestAnimationFrame(() => {
+      container.style.height = newContainerHeight + "px";
+      productWrap.style.transform = `translate(0px, ${scrollOffset}px)`;
 
-    const newTranslateY = Math.max(-415, translateY);
-    productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
+      const newTranslateY = Math.max(-415, translateY);
+      productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
+    });
   }
 }

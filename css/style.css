@@ -313,6 +313,7 @@ img {
 .audits_sec {
   padding: 100px 0px;
   width: 100vw;
+  margin: 5rem 0;
 }
 .audit_row {
   display: flex;
@@ -657,8 +658,10 @@ img {
 
 /* services css start */
 .services_section {
-  padding: 140px 0px;
+  padding-top: 140px;
+  margin-bottom: 140px;
   width: calc(100%);
+  overflow: hidden;
 }
 .services_container {
   width: 110vw;
@@ -727,8 +730,8 @@ img {
   justify-content: center;
 }
 .logo_focus {
-  position: relative;
-  top: 10%;
+  position: absolute;
+  bottom: 20%;
 }
 #blockchain_security {
   position: absolute;
@@ -880,7 +883,7 @@ img {
 .testimonial_section {
   padding: 100px 0px;
   width: 100vw;
-  margin-bottom: 3rem;
+  margin: 5rem 0;
 }
 .testimonial_left_grad {
   background: linear-gradient(
@@ -1121,7 +1124,7 @@ img {
   padding: 3rem 3rem;
   box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
     0px 0px 0px 0px #00000000;
-  margin: 4rem 0;
+  margin: 5rem 0;
 }
 .contact_seach {
   display: flex;
@@ -1264,7 +1267,7 @@ img {
   justify-content: center;
 }
 .telegram_container img {
-  margin: 1.5rem 0;
+  margin: 1.7rem 0;
 }
 .telegram_container p {
   font-size: 32px;
@@ -1285,6 +1288,9 @@ img {
   background-clip: content-box, border-box;
   align-items: center;
   justify-content: center;
+}
+.discort_container img {
+  margin: 1.1rem 0;
 }
 .discort_container p {
   font-size: 32px;
@@ -1327,9 +1333,77 @@ img {
 }
 /* contact css end */
 
+.gradient_bg {
+  width: 797px;
+  height: 912px;
+  position: absolute;
+  bottom: 0;
+  left: -350px;
+  opacity: 30%;
+}
+.inner_bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.inner_rect_bg {
+  position: relative;
+  width: 550px;
+  height: 411.07px;
+  top: 70%;
+  background: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, #1941d2 100%);
+}
+.inner_circle_bg {
+  width: 603px;
+  height: 603px;
+  background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #ff29c3 100%);
+}
+
 /* footer css start */
 .footer_section {
   padding: 20px 0px;
+  position: relative;
+}
+.footer_container {
+  color: white;
+  width: 100%;
+  display: flex;
+}
+.footer_logo {
+  width: 22%;
+}
+.footer_links {
+  width: 45%;
+  display: flex;
+}
+.footer_links h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ffffffed;
+  margin-bottom: 1.5rem;
+}
+.footer_links p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #979797;
+  margin-bottom: 1.5rem;
+}
+
+.quick_link,
+.discover_link,
+.product_link {
+  display: flex;
+  flex-direction: column;
+}
+.quick_link,
+.discover_link {
+  margin-right: 3.5rem;
+}
+.social_links {
+  display: flex;
+  width: 35%;
 }
 .ftr_menu {
   text-align: center;
