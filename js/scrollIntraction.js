@@ -19,10 +19,13 @@ const servicesFocus = document.querySelector(".services_focus");
 const logoPathElements = document.querySelectorAll(".logo_focus path");
 
 window.addEventListener("scroll", () => {
-  scrollProduct();
-  scrollServices();
+  throttledScrollServices();
+  throttledScrollProducts();
 });
 // });
+
+const throttledScrollServices = throttle(scrollServices, 5);
+const throttledScrollProducts = throttle(scrollProduct, 5);
 
 function getTranslateY(element) {
   const transform = window
@@ -55,8 +58,8 @@ function scrollServices() {
     const translateBlockchainY = Math.min(
       1200,
       scrollOffset * translateYFactor
-    );
-    const scale = 1 - scrollOffset / scaleFactor;
+    ).toFixed(2);
+    const scale = (1 - scrollOffset / scaleFactor).toFixed(4);
     let opacity = 1;
     if (scrollOffset > 150)
       opacity = Math.max(0, (opacityFactor - scrollOffset) / opacityFactor);
@@ -71,6 +74,7 @@ function scrollServices() {
     );
 
     requestAnimationFrame(() => {
+      console.log(translateBlockchainY, scale, opacity);
       servicesBox.style.transform = `translate(0px, ${translateBlockchainY}px)`;
       servicesBox.style.scale = scale;
       servicesBox.style.opacity = opacity;
@@ -104,7 +108,7 @@ function scrollProduct() {
     currentOffset + 630 >= scrollPosition
   ) {
     const scrollOffset = scrollPosition - currentOffset;
-    let translateX = scrollOffset < 325 ? -40.08 : 0;
+    let translateX = scrollOffset <= 325 ? -42 : 0;
 
     if (currentOffset <= scrollPosition - 325) {
       const imgComputedStyle = window.getComputedStyle(productImg);
@@ -116,19 +120,27 @@ function scrollProduct() {
       }
     }
 
-    if (imgX >= containerX && scrollOffset < 325) {
+    if (imgX >= containerX && scrollOffset <= 325) {
       translateX = -scrollOffset * scaleFactorIncrement;
     }
 
     const translateY = initialTranslateY - scrollOffset;
-    const newContainerHeight = containerHeight + scrollOffset;
+    const newTranslateY = Math.max(-415, translateY);
 
     requestAnimationFrame(() => {
-      container.style.height = newContainerHeight + "px";
       productWrap.style.transform = `translate(0px, ${scrollOffset}px)`;
-
-      const newTranslateY = Math.max(-415, translateY);
       productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
     });
   }
+}
+
+function throttle(func, delay) {
+  let lastCall = 0;
+  return function (...args) {
+    const now = new Date().getTime();
+    if (now - lastCall >= delay) {
+      func.apply(this, args);
+      lastCall = now;
+    }
+  };
 }

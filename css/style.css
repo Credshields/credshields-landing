@@ -156,8 +156,8 @@ img {
 }
 .hero_container {
   width: 100%;
-  height: calc(100vh - 120px);
-  padding-top: 80px;
+  height: calc(100vh - 80px);
+  padding-top: 120px;
   display: flex;
   flex-direction: column;
 }
@@ -240,6 +240,7 @@ img {
 .numbers_sec {
   padding-top: 4rem;
   padding-bottom: 6rem;
+  margin: 4rem 0;
 }
 .numbers_sec h1 {
   font-family: "DM Sans", sans-serif;
@@ -340,6 +341,7 @@ img {
   font-size: 18px;
   color: white;
   overflow: hidden;
+  white-space: nowrap;
 }
 .audit_col_three {
   display: flex;
@@ -414,11 +416,13 @@ img {
   margin: 0 0.5rem;
   color: #c5c5c5;
   font-weight: 400;
+  opacity: 50%;
 }
 #pagination .active {
   box-shadow: 0px 0px 0px 1px #f4f4f51a;
   color: #a6eec4;
   font-weight: 700;
+  opacity: 1;
 }
 /* products css start */
 .our_product_sec {
@@ -522,7 +526,6 @@ img {
 
 .products_one_wrap a {
   background: linear-gradient(95.78deg, #52f434 17.71%, #34f9f6 100%);
-  box-shadow: 0px 4px 24px 0px #2ff86b73;
   border-radius: 15px;
   border: 1px solid #52f434;
   width: 248px;
@@ -536,8 +539,7 @@ img {
   transition: all linear 0.2s;
 }
 .products_one_wrap a:hover {
-  background: transparent;
-  color: #52f434;
+  box-shadow: 0px 4px 24px 0px #2ff86b73;
 }
 
 .product_img {
@@ -547,15 +549,16 @@ img {
   margin-top: 4rem;
   transform: translate(0px, 216px);
 }
-/* #productImg {
-} */
+#productImg {
+  transition: transform 0.1s ease;
+}
 .products_one_wrap img {
   display: block;
 }
 .coming_soon_wrap {
   display: flex;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 660px;
 }
 .product_two,
 .product_three {
@@ -683,6 +686,7 @@ img {
   width: 100%;
   height: 100%;
   z-index: 1;
+  transition: transform 0.2 ease;
 }
 .service_wrap {
   background: #18181b80;
