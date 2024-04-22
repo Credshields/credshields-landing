@@ -38,7 +38,7 @@ h2 {
   font-family: Monbloc;
 }
 body {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Barlow", sans-serif;
   width: 100vw;
   overflow-x: hidden;
   background: #000000;
@@ -140,6 +140,9 @@ img {
   padding: 11px 20px;
   transition: all linear 0.2s;
   margin-left: 11px;
+}
+.pos_relative {
+  position: relative;
 }
 /* .header_section .form-inline a:hover {
   background: transparent;
@@ -243,13 +246,16 @@ img {
   margin: 4rem 0;
 }
 .numbers_sec h1 {
-  font-family: "DM Sans", sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 53px;
   font-weight: 800;
 }
 .numbers_sec p {
   font-size: 16px;
   font-weight: 600;
+}
+.number_container {
+  display: flex;
 }
 .stat_container {
   width: 25%;
@@ -489,7 +495,7 @@ img {
   border-radius: 16px;
   padding-top: 2.5rem;
   padding-left: 2.5rem;
-  /* margin-bottom: 3rem; */
+  z-index: 1;
   width: 100%;
   height: 800px;
   overflow: hidden;
@@ -559,6 +565,10 @@ img {
   display: flex;
   width: 100%;
   margin-top: 660px;
+  position: relative;
+}
+.coming_soon_wrap .gradient_bg_tl {
+  top: -150px;
 }
 .product_two,
 .product_three {
@@ -570,6 +580,7 @@ img {
   box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
     0px 0px 0px 0px #00000000;
   padding: 3rem;
+  z-index: 1;
 }
 .product_two h3,
 .product_three h3 {
@@ -680,13 +691,18 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 #services_con {
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   transition: transform 0.2 ease;
+}
+.services_container .gradient_bg_tr {
+  top: -400px;
+  right: -500px;
 }
 .service_wrap {
   background: #18181b80;
@@ -700,10 +716,16 @@ img {
   height: 231px;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
-.service_wrap img {
-  width: 180px;
-  height: 139px;
+.gradient {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  height: 200%;
 }
 .service_wrap p {
   font-size: 20px;
@@ -712,7 +734,6 @@ img {
   letter-spacing: -0.01em;
   text-align: center;
   color: #8a94a6;
-  margin-top: 0.5rem;
 }
 .services_focus {
   position: absolute;
@@ -741,6 +762,9 @@ img {
   position: absolute;
   top: 4rem;
   left: calc(50% - 138px);
+}
+#blockchain_security p {
+  margin-top: 1rem;
 }
 #smart_contract {
   position: absolute;
@@ -889,18 +913,22 @@ img {
   width: 100vw;
   margin: 5rem 0;
 }
+.testimonial_section .gradient_bg_tr {
+  z-index: 1;
+  top: -400px;
+  right: -550px;
+}
 .testimonial_left_grad {
   background: linear-gradient(
     270.95deg,
     #000000 6.68%,
     rgba(0, 0, 0, 0) 103.81%
   );
-
   position: absolute;
   left: 0;
   width: 30%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
   transform: rotate(180deg);
 }
 .testimonial_right_grad {
@@ -913,7 +941,7 @@ img {
   right: 0;
   width: 30%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .testimonial-carousel {
   position: relative;
@@ -980,6 +1008,12 @@ img {
 .about_us_section {
   padding: 100px 0px;
   width: 100vw;
+  margin: 4rem 0;
+}
+.about_us_section .gradient_bg_bl {
+  bottom: -400px;
+  left: -550px;
+  opacity: 1;
 }
 .company-head {
   text-align: center;
@@ -1042,6 +1076,12 @@ img {
 .our_partners_section .col-lg-4 {
   height: 125px;
 }
+.our_partners_section .gradient_bg_tr {
+  top: -600px;
+}
+.partner_company {
+  margin: 5rem 0;
+}
 .company_wrap,
 .team_wrap {
   background: #18181b80;
@@ -1059,7 +1099,8 @@ img {
 .company_wrap div {
   margin-bottom: 2.2rem;
 }
-.company_wrap p {
+.company_wrap p,
+.team_wrap p {
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -1097,8 +1138,13 @@ img {
   align-items: center;
   margin-bottom: 1rem;
 }
-.company_wrapss .img-fluid {
-  height: 30px;
+.company_wrapss img {
+  filter: grayscale(100%) hue-rotate(180deg);
+  transition: filter 0.3s ease;
+}
+
+.company_wrapss img:hover {
+  filter: none;
 }
 
 /* contact css start */
@@ -1129,6 +1175,11 @@ img {
   box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
     0px 0px 0px 0px #00000000;
   margin: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+.custom_contact_bg .gradient_bg_tr {
+  top: -250px;
 }
 .contact_seach {
   display: flex;
@@ -1337,30 +1388,26 @@ img {
 }
 /* contact css end */
 
-.gradient_bg {
-  width: 797px;
-  height: 912px;
+.gradient_bg_tr {
   position: absolute;
-  bottom: 0;
-  left: -350px;
-  opacity: 30%;
+  top: -300px;
+  right: -600px;
+  pointer-events: none;
 }
-.inner_bg {
-  position: relative;
-  width: 100%;
-  height: 100%;
+
+.gradient_bg_tl {
+  position: absolute;
+  top: -480px;
+  left: -360px;
+  opacity: 50%;
+  pointer-events: none;
 }
-.inner_rect_bg {
-  position: relative;
-  width: 550px;
-  height: 411.07px;
-  top: 70%;
-  background: linear-gradient(180deg, rgba(24, 75, 255, 0) 0%, #1941d2 100%);
-}
-.inner_circle_bg {
-  width: 603px;
-  height: 603px;
-  background: linear-gradient(180deg, rgba(0, 194, 255, 0) 0%, #ff29c3 100%);
+.gradient_bg_bl {
+  position: absolute;
+  bottom: -200px;
+  left: -360px;
+  opacity: 50%;
+  pointer-events: none;
 }
 
 /* footer css start */
@@ -1372,6 +1419,13 @@ img {
   color: white;
   width: 100%;
   display: flex;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+.footer_container .gradient_bg_tl {
+  opacity: 1;
+  left: -450px;
+  top: -500px;
 }
 .footer_logo {
   width: 22%;

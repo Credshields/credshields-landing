@@ -64,17 +64,19 @@ function scrollServices() {
     if (scrollOffset > 150)
       opacity = Math.max(0, (opacityFactor - scrollOffset) / opacityFactor);
 
-    const outerRadius = Math.max(
+    let outerRadius = Math.max(
       0,
       50 - scrollOffset * servicesFocusRadiusFactor
     );
+    if (scrollOffset < 100) {
+      outerRadius = 50;
+    }
     const innerCircleScale = Math.max(
       1,
       1 + scrollOffset / innerCircleScaleFactor
     );
 
     requestAnimationFrame(() => {
-      console.log(translateBlockchainY, scale, opacity);
       servicesBox.style.transform = `translate(0px, ${translateBlockchainY}px)`;
       servicesBox.style.scale = scale;
       servicesBox.style.opacity = opacity;
@@ -98,7 +100,7 @@ function scrollServices() {
 
 function scrollProduct() {
   const scrollPosition = window.scrollY + 100;
-  const scaleFactorIncrement = 0.12;
+  const scaleFactorIncrement = 0.18;
   const currentOffset = container.offsetTop;
   const imgX = productImg.getBoundingClientRect().left;
   const containerX = productWrap.getBoundingClientRect().left;
@@ -108,22 +110,11 @@ function scrollProduct() {
     currentOffset + 630 >= scrollPosition
   ) {
     const scrollOffset = scrollPosition - currentOffset;
-    let translateX = scrollOffset <= 325 ? -42 : 0;
+    let translateX = scrollOffset > 218 ? -40 : 0;
 
-    if (currentOffset <= scrollPosition - 325) {
-      const imgComputedStyle = window.getComputedStyle(productImg);
-      const imgTransform = imgComputedStyle.getPropertyValue("transform");
-      const transformMatrix = imgTransform.match(/matrix.*\((.+)\)/);
-      if (transformMatrix) {
-        const matrixValues = transformMatrix[1].split(",").map(parseFloat);
-        translateX = matrixValues[4];
-      }
-    }
-
-    if (imgX >= containerX && scrollOffset <= 325) {
+    if (imgX >= containerX && scrollOffset <= 218) {
       translateX = -scrollOffset * scaleFactorIncrement;
     }
-
     const translateY = initialTranslateY - scrollOffset;
     const newTranslateY = Math.max(-415, translateY);
 

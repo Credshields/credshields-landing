@@ -129,6 +129,45 @@
   .checklist_table table tr td {
     font-size: 12px;
   }
+  .hero_container h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .hero_container p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .number_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .stat_container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .numbers_sec p {
+    margin-top: 0.5rem;
+  }
+  .products_head .row {
+    align-items: center;
+    justify-content: center;
+  }
+  .products_head h2 {
+    margin-bottom: 0.5rem;
+  }
+  .products_head .part_one {
+    margin-right: 0;
+  }
+  .products_head p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    margin: 1.5rem 0;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
