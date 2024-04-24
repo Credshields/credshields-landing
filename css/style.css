@@ -1596,7 +1596,6 @@ img {
   justify-content: flex-start;
 }
 .serv_hero_txt img {
-  width: 180px;
   display: block;
   margin-bottom: 4rem;
 }
@@ -1639,7 +1638,7 @@ img {
   color: white;
   opacity: 50%;
   text-align: left;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 .process_section {
   padding: 60px 0px;
@@ -1689,14 +1688,21 @@ img {
   font-weight: 600;
   color: white;
 }
+.check_list_head p {
+  color: white;
+  opacity: 50%;
+}
+.checklist_table {
+  width: 100%;
+}
 .checklist_table table {
   width: 100%;
 }
 .checklist_table table tr th {
-  text-align: center;
+  text-align: left;
   border: 1px solid #c4c4c4;
   background: rgba(36, 36, 36, 0.2);
-  padding: 5px 0px;
+  padding: 5px 10px;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -1704,9 +1710,9 @@ img {
   color: #979797;
 }
 .checklist_table table tr td {
-  text-align: center;
+  text-align: left;
   border: 1px solid #c4c4c4;
-  padding: 6px 0px;
+  padding: 6px 10px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1869,6 +1875,7 @@ img {
 }
 .service_detail_sec {
   padding-top: 4rem;
+  margin-bottom: 5rem;
 }
 .service_sidenav {
   width: 22%;

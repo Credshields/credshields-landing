@@ -78,9 +78,20 @@ function setActiveServiceTab(hash) {
 }
 
 window.onload = function () {
-  setActiveServiceTab(window.location.hash);
+  const servicePageMap = {
+    "web-app-security.html": "#web_sec",
+    "blockchain-security.html": "#blockchain_sec",
+    "bug-bounty-management.html": "#bug_sec",
+    "smart-contract-audit.html": "#sc_sec",
+    "mobile-app-security.html": "#mobile_sec",
+    "external-network-testing.html": "#ext_net_sec",
+  };
+  let urlString = window.location.pathname;
+  let filename = urlString.substring(urlString.lastIndexOf("/") + 1);
+  const hash = servicePageMap[filename];
+  if (hash) setActiveServiceTab(hash);
 };
 
-window.onhashchange = function () {
-  setActiveServiceTab(window.location.hash);
-};
+// window.onhashchange = function () {
+//   setActiveServiceTab(window.location.hash);
+// };
