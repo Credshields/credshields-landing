@@ -11,26 +11,93 @@ const nextButton = document.getElementById("next");
 let totalPages = 1;
 let currentPage = 1;
 
-fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
-  .then((response) => response.json())
-  .then((data) => {
-    data.forEach((file) => {
-      const fileObj = {
-        imageSrc: "images/solidity_scan.png",
-        imageAlt: "a",
-        name: file.name,
-        type: "Web Security Audit",
-        date: "26 Feb 2024",
-        buttonText: "Report",
-        downloadUrl: file.download_url,
-      };
-      auditFilesList.push(fileObj);
-    });
-    totalPages = Math.ceil(auditFilesList.length / 6);
-    fillAuditTable(auditFilesList.slice(0, 6));
-    updatePagination();
-  })
-  .catch((error) => console.error("Error fetching files:", error));
+const auditData = [
+  {
+    imageSrc: "images/juno.svg",
+    imageAlt: "a",
+    name: "Juno Finance",
+    type: "Web Application Audit",
+    date: "23 Feb 2023",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Juno%20Web%20Application%20Audit%20Final%20Report.pdf",
+  },
+  {
+    imageSrc: "images/arcana.svg",
+    imageAlt: "a",
+    name: "Arcana Network",
+    type: "Smart Contract Audit",
+    date: "15 Apr 2024",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Arcana_Staking_Contract_Final_Audit_Report.pdf",
+  },
+  {
+    imageSrc: "images/lync.svg",
+    imageAlt: "a",
+    name: "Lync World",
+    type: "Smart Contract Audit",
+    date: "17 July 2023",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Lync%20Final%20Audit%20Report.pdf",
+  },
+  {
+    imageSrc: "images/capx.svg",
+    imageAlt: "a",
+    name: "CapX Global",
+    type: "Smart Contract Audit",
+    date: "21 Oct 2022",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Capx%20Smart%20Contract%20Audit.pdf",
+  },
+  {
+    imageSrc: "images/wasset.svg",
+    imageAlt: "a",
+    name: "Wasset",
+    type: "Smart Contract Audit",
+    date: "15 Feb 2024",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Wasset_Final_Audit_Report.pdf",
+  },
+  {
+    imageSrc: "images/inovatyv.svg",
+    imageAlt: "a",
+    name: "Inovatyv",
+    type: "Smart Contract Audit",
+    date: "08 Nov 2022",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/FoundersLabFinalReport.pdf",
+  },
+];
+
+fillAuditTable(auditData);
+updatePagination();
+
+// fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
+//   .then((response) => response.json())
+//   .then((data) => {
+//     data.forEach((file) => {
+//       const fileObj = {
+//         imageSrc: "images/solidity_scan.png",
+//         imageAlt: "a",
+//         name: file.name,
+//         type: "Web Security Audit",
+//         date: "26 Feb 2024",
+//         buttonText: "Report",
+//         downloadUrl: file.download_url,
+//       };
+//       console.log(file.download_url);
+//       auditFilesList.push(fileObj);
+//     });
+//     totalPages = Math.ceil(auditFilesList.length / 6);
+//     fillAuditTable(auditFilesList.slice(0, 6));
+//     updatePagination();
+//   })
+//   .catch((error) => console.error("Error fetching files:", error));
 
 function fillAuditTable(data) {
   const auditRows = document.querySelectorAll(".audit_row");
@@ -64,6 +131,9 @@ function fillAuditRow(data) {
   nameCol.setAttribute("data-aos-duration", "1000");
   nameCol.textContent = data.name;
 
+  const typeDateCol = document.createElement("div");
+  typeDateCol.classList.add("audit_col_tf");
+
   const typeCol = document.createElement("div");
   typeCol.classList.add("audit_col_three");
   typeCol.setAttribute("data-aos", "fade-zoom-in");
@@ -75,6 +145,9 @@ function fillAuditRow(data) {
   dateCol.setAttribute("data-aos", "fade-zoom-in");
   dateCol.setAttribute("data-aos-duration", "1000");
   dateCol.textContent = data.date;
+
+  typeDateCol.append(typeCol);
+  typeDateCol.append(dateCol);
 
   const buttonCol = document.createElement("div");
   buttonCol.classList.add("audit_col_five");
@@ -91,7 +164,7 @@ function fillAuditRow(data) {
 
   const downArrow = document.createElement("span");
   downArrow.classList.add("down-arrow");
-  downArrow.textContent = "↓";
+  downArrow.textContent = ` ↓`;
 
   link.appendChild(downArrow);
   buttonCol.appendChild(link);
@@ -100,8 +173,7 @@ function fillAuditRow(data) {
   // Append columns to the row
   auditRowContainer.appendChild(imgCol);
   auditRowContainer.appendChild(nameCol);
-  auditRowContainer.appendChild(typeCol);
-  auditRowContainer.appendChild(dateCol);
+  auditRowContainer.appendChild(typeDateCol);
   auditRowContainer.appendChild(buttonCol);
 
   auditTableContainer.appendChild(auditRowContainer);

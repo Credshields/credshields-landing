@@ -42,21 +42,45 @@ $(document).ready(function () {
   });
 });
 
-const serviceWrap = document.getElementById("blockchain_security");
-const gradient = document.getElementById("gradient");
+const serviceWraps = document.querySelectorAll(".service_wrap");
+serviceWraps.forEach((serviceWrap) => {
+  serviceWrap.addEventListener("mousemove", (e) => {
+    const rect = serviceWrap.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    const gradientStyle = `radial-gradient(circle at ${x}% ${y}%, #ACF0C6, #174AFF, #18181b80, #18181b80, #18181b80)`;
+    const gradient = serviceWrap.querySelector(".gradient");
+    gradient.style.background = gradientStyle;
+  });
 
-serviceWrap.addEventListener("mousemove", (e) => {
-  const rect = serviceWrap.getBoundingClientRect();
-  const x = ((e.clientX - rect.left) / rect.width) * 100; // Calculate x position relative to container width
-  const y = ((e.clientY - rect.top) / rect.height) * 100; // Calculate y position relative to container height
-  const gradientStyle = `radial-gradient(circle at ${x}% ${y}%, #ff0000, #00ff00, #0000ff, #ff0000)`;
-  gradient.style.background = gradientStyle;
+  serviceWrap.addEventListener("mouseenter", () => {
+    const gradient = serviceWrap.querySelector(".gradient");
+    gradient.style.opacity = "20%";
+    serviceWrap.style.scale = 1.05;
+  });
+
+  serviceWrap.addEventListener("mouseleave", () => {
+    const gradient = serviceWrap.querySelector(".gradient");
+    gradient.style.opacity = "0";
+    serviceWrap.style.scale = 1;
+  });
 });
 
-serviceWrap.addEventListener("mouseenter", () => {
-  gradient.style.opacity = "1"; // Show the gradient when mouse enters the container
-});
+function setActiveServiceTab(hash) {
+  var tab = document.querySelector(hash);
+  if (tab) {
+    var tabs = document.querySelectorAll(".service_tab");
+    tabs.forEach(function (tab) {
+      tab.classList.remove("service_active");
+    });
+    tab.classList.add("service_active");
+  }
+}
 
-serviceWrap.addEventListener("mouseleave", () => {
-  gradient.style.opacity = "0"; // Hide the gradient when mouse leaves the container
-});
+window.onload = function () {
+  setActiveServiceTab(window.location.hash);
+};
+
+window.onhashchange = function () {
+  setActiveServiceTab(window.location.hash);
+};

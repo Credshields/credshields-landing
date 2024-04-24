@@ -16,6 +16,9 @@ const servicesContainer = document.querySelector(".services_container");
 // const externalNetwork = document.getElementById("external_network");
 const servicesBox = document.getElementById("services_con");
 const servicesFocus = document.querySelector(".services_focus");
+const aboveFocusText = document.querySelector(".above_focus");
+const belowFocusText = document.querySelector(".below_focus");
+
 const logoPathElements = document.querySelectorAll(".logo_focus path");
 
 window.addEventListener("scroll", () => {
@@ -85,12 +88,16 @@ function scrollServices() {
           pathElement.style.fill = "white";
         });
         servicesContainer.style.boxShadow = "none";
+        aboveFocusText.style.display = "block";
+        belowFocusText.style.display = "block";
       } else {
         logoPathElements.forEach((pathElement) => {
           pathElement.style.fill = "#1E1E3A";
         });
         servicesContainer.style.boxShadow =
           "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
+        aboveFocusText.style.display = "none";
+        belowFocusText.style.display = "none";
       }
       servicesFocus.style.scale = innerCircleScale;
       servicesContainer.style.borderRadius = outerRadius + "%";
@@ -110,7 +117,17 @@ function scrollProduct() {
     currentOffset + 630 >= scrollPosition
   ) {
     const scrollOffset = scrollPosition - currentOffset;
-    let translateX = scrollOffset > 218 ? -40 : 0;
+    let translateX = scrollOffset > 218 ? -41 : 0;
+
+    if (currentOffset <= scrollPosition - 218) {
+      const imgComputedStyle = window.getComputedStyle(productImg);
+      const imgTransform = imgComputedStyle.getPropertyValue("transform");
+      const transformMatrix = imgTransform.match(/matrix.*\((.+)\)/);
+      if (transformMatrix) {
+        const matrixValues = transformMatrix[1].split(",").map(parseFloat);
+        translateX = matrixValues[4];
+      }
+    }
 
     if (imgX >= containerX && scrollOffset <= 218) {
       translateX = -scrollOffset * scaleFactorIncrement;
@@ -119,7 +136,8 @@ function scrollProduct() {
     const newTranslateY = Math.max(-415, translateY);
 
     requestAnimationFrame(() => {
-      productWrap.style.transform = `translate(0px, ${scrollOffset}px)`;
+      productWrap.style.position = "sticky";
+      productWrap.style.top = "100px";
       productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
     });
   }
