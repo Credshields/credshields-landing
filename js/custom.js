@@ -79,12 +79,12 @@ function setActiveServiceTab(hash) {
 
 window.onload = function () {
   const servicePageMap = {
-    "web-app-security.html": "#web_sec",
-    "blockchain-security.html": "#blockchain_sec",
-    "bug-bounty-management.html": "#bug_sec",
-    "smart-contract-audit.html": "#sc_sec",
-    "mobile-app-security.html": "#mobile_sec",
-    "external-network-testing.html": "#ext_net_sec",
+    "web-app-security": "#web_sec",
+    "blockchain-security": "#blockchain_sec",
+    "bug-bounty-management": "#bug_sec",
+    "smart-contract-audit": "#sc_sec",
+    "mobile-app-security": "#mobile_sec",
+    "external-network-testing": "#ext_net_sec",
   };
   let urlString = window.location.pathname;
   let filename = urlString.substring(urlString.lastIndexOf("/") + 1);
