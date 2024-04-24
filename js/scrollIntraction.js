@@ -8,12 +8,6 @@ const initialTranslateX = 0;
 const containerHeight = container.offsetHeight;
 
 const servicesContainer = document.querySelector(".services_container");
-// const blockchainSecurity = document.getElementById("blockchain_security");
-// const smart_Contract = document.getElementById("smart_contract");
-// const mobileApp = document.getElementById("mobile_app");
-// const bugBounty = document.getElementById("bug_bounty");
-// const webApp = document.getElementById("web_app");
-// const externalNetwork = document.getElementById("external_network");
 const servicesBox = document.getElementById("services_con");
 const servicesFocus = document.querySelector(".services_focus");
 const aboveFocusText = document.querySelector(".above_focus");
@@ -25,7 +19,6 @@ window.addEventListener("scroll", () => {
   throttledScrollServices();
   throttledScrollProducts();
 });
-// });
 
 const throttledScrollServices = throttle(scrollServices, 5);
 const throttledScrollProducts = throttle(scrollProduct, 5);
@@ -111,35 +104,40 @@ function scrollProduct() {
   const currentOffset = container.offsetTop;
   const imgX = productImg.getBoundingClientRect().left;
   const containerX = productWrap.getBoundingClientRect().left;
+  const displayStyle = window
+    .getComputedStyle(productImg)
+    .getPropertyValue("display");
 
-  if (
-    currentOffset <= scrollPosition &&
-    currentOffset + 630 >= scrollPosition
-  ) {
-    const scrollOffset = scrollPosition - currentOffset;
-    let translateX = scrollOffset > 218 ? -41 : 0;
+  if (displayStyle !== "none") {
+    if (
+      currentOffset <= scrollPosition &&
+      currentOffset + 630 >= scrollPosition
+    ) {
+      const scrollOffset = scrollPosition - currentOffset;
+      let translateX = scrollOffset > 218 ? -41 : 0;
 
-    if (currentOffset <= scrollPosition - 218) {
-      const imgComputedStyle = window.getComputedStyle(productImg);
-      const imgTransform = imgComputedStyle.getPropertyValue("transform");
-      const transformMatrix = imgTransform.match(/matrix.*\((.+)\)/);
-      if (transformMatrix) {
-        const matrixValues = transformMatrix[1].split(",").map(parseFloat);
-        translateX = matrixValues[4];
+      if (currentOffset <= scrollPosition - 218) {
+        const imgComputedStyle = window.getComputedStyle(productImg);
+        const imgTransform = imgComputedStyle.getPropertyValue("transform");
+        const transformMatrix = imgTransform.match(/matrix.*\((.+)\)/);
+        if (transformMatrix) {
+          const matrixValues = transformMatrix[1].split(",").map(parseFloat);
+          translateX = matrixValues[4];
+        }
       }
-    }
 
-    if (imgX >= containerX && scrollOffset <= 218) {
-      translateX = -scrollOffset * scaleFactorIncrement;
-    }
-    const translateY = initialTranslateY - scrollOffset;
-    const newTranslateY = Math.max(-415, translateY);
+      if (imgX >= containerX && scrollOffset <= 218) {
+        translateX = -scrollOffset * scaleFactorIncrement;
+      }
+      const translateY = initialTranslateY - scrollOffset;
+      const newTranslateY = Math.max(-415, translateY);
 
-    requestAnimationFrame(() => {
-      productWrap.style.position = "sticky";
-      productWrap.style.top = "100px";
-      productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
-    });
+      requestAnimationFrame(() => {
+        productWrap.style.position = "sticky";
+        productWrap.style.top = "100px";
+        productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
+      });
+    }
   }
 }
 

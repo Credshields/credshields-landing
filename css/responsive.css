@@ -79,8 +79,8 @@
   .products_head p {
     width: 100%;
   }
-  .products_one_wrap {
-    margin-bottom: 40px;
+  .product_one_stick {
+    display: none;
   }
   .serv_hero_txt h3,
   .contact_head h2,
@@ -168,6 +168,11 @@
   }
   .products_head .part_one {
     margin-right: 0;
+    margin-left: 1rem;
+  }
+  .products_head .part_two {
+    margin-right: 0;
+    margin-left: 1rem;
   }
   .products_head p {
     font-size: 14px;
@@ -179,6 +184,7 @@
   .audit_row {
     flex-direction: column;
     margin-bottom: 2rem;
+    padding-bottom: 0;
   }
   .audit_row > div {
     margin-bottom: 1rem;
@@ -236,6 +242,115 @@
     font-size: 14px;
     margin-top: 1rem;
     line-height: 20px;
+  }
+  .coming_soon_wrap {
+    flex-direction: column;
+  }
+  .product_two,
+  .product_three {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .product_three {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .company_wrap,
+  .team_wrap {
+    width: 92%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  .company_wrap p,
+  .team_wrap p {
+    font-size: 14px;
+  }
+  .discort_container {
+    margin-top: 2rem;
+  }
+  .custom_contact_bg {
+    padding: 1.5rem;
+  }
+  .contact_support {
+    justify-content: flex-start !important;
+  }
+  .footer_container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .footer_links,
+  .social_links {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .social_links {
+    justify-content: space-evenly;
+  }
+  .services_container,
+  .services_focus {
+    border-radius: 0 !important;
+  }
+  .service_wrap {
+    scale: 0.4;
+  }
+  #blockchain_security {
+    position: absolute;
+    top: 1rem;
+    left: 20%;
+  }
+  #smart_contract {
+    position: absolute;
+    top: 3rem;
+    left: -25px;
+  }
+  #mobile_app {
+    position: absolute;
+    top: 3rem;
+    left: 46%;
+  }
+  #bug_bounty {
+    position: absolute;
+    top: calc(1rem + 110px);
+    left: 20%;
+  }
+  #web_app {
+    position: absolute;
+    top: calc(3rem + 110px);
+    left: -25px;
+  }
+  #external_network {
+    position: absolute;
+    top: calc(3rem + 110px);
+    left: 46%;
+  }
+  .below_focus {
+    font-size: 15px;
+    bottom: 15%;
+  }
+  .above_focus {
+    font-size: 16px;
+    bottom: 40%;
+  }
+  .ftr_menu {
+    padding: 1rem;
+  }
+  .gradient_bg_tr,
+  .gradient_bg_br {
+    display: none;
+  }
+  .products_one_wrap {
+    height: 100%;
+  }
+  #product-img-mobile {
+    display: block;
+    margin-top: 2rem;
+  }
+  #product-img-mobile img {
+    border-radius: 20px;
+    width: 100%;
+  }
+  #productImg {
+    display: none;
   }
 }
 
