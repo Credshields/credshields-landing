@@ -28,7 +28,15 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <!-- Custom Css file Start -->
-
+    <style>
+        @font-face {
+            font-family: Monbloc;
+            src: url("fonts/Monbloc-Inst-Regular.eot");
+            src: url("fonts/Monbloc-Inst-Regular.ttf");
+            src: url("fonts/Monbloc-Inst-Regular.woff");
+            src: url("fonts/Monbloc-Inst-Regular.woff2");
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +48,7 @@
         <div class="container">
             <nav class="navbar px-0 navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.svg" alt="logo" class="img-fluid">
+                    <img src="images/logo.svg" alt="logo" class="img-fluid" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,27 +57,28 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav m-auto custom_scrl">
                         <li class="nav-item">
-                            <a class="nav-link" href="#pro_sec">
-                                <span>EXPLORE</span>
-                                <p>Our Products</p>
+                            <a class="nav-link" href="index.html#pro_sec">
+                                <p>Products</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html#services_sec">
-                                <span>VIEW ALL</span>
-                                <p>Our Services</p>
+                                <p>Services</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about_sec">
-                                <span>LEARN</span>
+                            <a class="nav-link" href="index.html#about_sec">
                                 <p>About Us</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact_sec">
-                                <span>Support</span>
+                            <a class="nav-link" href="index.html#contact_sec">
                                 <p>Contact Us</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#audit_sec">
+                                <p>View Audits</p>
                             </a>
                         </li>
                     </ul>
@@ -86,433 +95,553 @@
     </header>
     <!-- header section end -->
 
-    <!-- services hero start -->
-    <section class="service_hero_sec">
+    <section class="service_detail_sec">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="serv_hero_txt">
-                        <img src="images/mobile-app-security.png" alt="a" class="img-fluid">
-                        <h3>Mobile Application Security</h3>
+                <div class="service_sidenav">
+                    <h3>SERVICES</h3>
+                    <ul>
+                        <li id="blockchain_sec" class="service_tab">
+                            <a href="blockchain-security.html">BlockChain Security </a>
+                        </li>
+                        <li id="bug_sec" class="service_tab">
+                            <a href="bug-bounty-management.html">Bug Bounty
+                                Management
+                            </a>
+                        </li>
+                        <li id="sc_sec" class="service_tab">
+                            <a href="smart-contract-audit.html">Smart Contract Audit</a>
+                        </li>
+                        <li id="mobile_sec" class="service_tab">
+                            <a href="mobile-app-security.html">Mobile App Security</a>
+                        </li>
+                        <li id="ext_net_sec" class="service_tab">
+                            <a href="external-network-testing.html">External network Testing</a>
+                        </li>
+                        <li id="web_sec" class="service_tab">
+                            <a href="web-app-security.html">Web Application Security</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service_content">
+                    <!-- services hero start -->
+                    <div class="service_hero_con">
+                        <div class="row">
+                            <div class="serv_hero_txt">
+                                <img src="images/mobile-app-security.svg" alt="a" class="img-fluid">
+                                <h3>Mobile Application Security</h3>
 
-                        <p>Invest in building and deploying world-class mobile applications for your organization while
-                            we handle your mobile app security. Our team of security experts performs both dynamic and
-                            static testing of mobile applications for all platforms and environments.</p>
+                                <p>Invest in building and deploying world-class mobile applications for your
+                                    organization while
+                                    we handle your mobile app security. Our team of security experts performs
+                                    both dynamic and
+                                    static testing of mobile applications for all platforms and environments.
+                                </p>
 
-                        <div class="hero_btn">
-                            <a href=""
-                                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shashank-credshields/credshields'});return false;">Schedule
-                                a Meeting</a>
-                            <a href="#">Learn More</a>
+                                <div class="hero_btn">
+                                    <a href=""
+                                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/shashank-credshields/credshields'});return false;">Schedule
+                                        a Meeting</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- services hero end -->
+
+                    <!-- process section start -->
+                    <div class="service_process_con">
+                        <div class="row">
+                            <div class="products_head">
+                                <h6>PROCESS FLOW</h6>
+                                <!--<h2>Lorem Ipsum Dolor</h2> -->
+                                <p><br>Our process flow is smooth and simple.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="process_boxs_wrap">
+                                    <div class="process_box">
+                                        <img src="images/p_1.svg" alt="a" class="img-fluid">
+                                        <p>Schedule <br>
+                                            A Meeting </p>
+                                    </div>
+                                    <div class="process_box">
+                                        <img src="images/p_2.svg" alt="a" class="img-fluid">
+                                        <p>Scope Assessment <br>
+                                            And Timeline</p>
+                                    </div>
+                                    <div class="process_box">
+                                        <img src="images/p_3.svg" alt="a" class="img-fluid">
+                                        <p>Payment <br>
+                                            for Services </p>
+                                    </div>
+                                    <div class="process_box">
+                                        <img src="images/p_4.svg" alt="a" class="img-fluid">
+                                        <p>Security <br>
+                                            Audit </p>
+                                    </div>
+                                    <div class="process_box">
+                                        <img src="images/p_5.svg" alt="a" class="img-fluid">
+                                        <p>Draft <br>
+                                            Report </p>
+                                    </div>
+                                    <div class="process_box">
+                                        <img src="images/p_6.svg" alt="a" class="img-fluid">
+                                        <p>Retesting </p>
+                                    </div>
+                                    <div class="process_box">
+                                        <img src="images/p_7.svg" alt="a" class="img-fluid">
+                                        <p>Final <br>
+                                            Audit Report </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- process section end -->
+
+                    <!-- checklist section start -->
+                    <div class="checklist_section">
+                        <div class="row">
+                            <div class="check_list_head">
+                                <h4>Mobile Application Security</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="checklist_table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th width="10%">S.NO</th>
+                                            <th width="30%">Audit Category</th>
+                                            <th>Audit Category Checklist</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td rowspan="12">1</td>
+                                            <td rowspan="12">Data Storage and Privacy</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Testing Whether Sensitive Data Is Exposed via IPC Mechanisms
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing the Device-Access-Security Policy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Sensitive Information in Auto-Generated Screenshots
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Whether Sensitive Data Is Sent To Third Parties</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Sensitive Data Disclosure Through the User Interface
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing For Sensitive Data in Local Data Storage</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing For Sensitive Data in Logs</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Whether the Keyboard Cache Is Disabled for Text Input
+                                                Fields</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing user education</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Sensitive Data in Backups</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Sensitive Data in Memory</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="11">2</td>
+                                            <td rowspan="11">Resiliency Against Reverse Engineering</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Testing Debugging Defenses</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Jailbreak Detection, Testing Root Detection</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Device Binding</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Simple Emulator Detection</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Impede Comprehensive Analysis</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Run-Time Integrity Checks</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Detection of Reverse Engineering Tools</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Obfuscation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing File Integrity Checks</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Simple Obfuscation</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="7">3</td>
+                                            <td rowspan="7">Network Communication</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Testing Custom Certificate Stores and SSL Pinning</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Unencrypted Sensitive Data on the Network</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying that Critical Operations Use Secure Communication
+                                                Channels</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying the TLS Settings</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Endpoint Identify Verification</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying the Security Provider</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="10">4</td>
+                                            <td rowspan="10">Code Quality and Build Settings</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Testing for Weaknesses in Third Party Libraries</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Debugging Symbols</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Memory Management Bugs</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Debugging Code and Verbose Error Logging</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying That the App is Properly Signed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying usage of Free Security Features</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing If the App is Debuggable</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Error Handling in Security Controls</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Exception Handling</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="6">5</td>
+                                            <td rowspan="6">Cryptography</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Verifying the Configuration of Cryptographic Standard Algorithms
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Random Number Generation</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying Key Management</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Custom Implementations of Cryptography</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Insecure and/or Deprecated Cryptographic Algorithms
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="8">6</td>
+                                            <td rowspan="8">Platform Interaction</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Testing For Sensitive Functionality Exposure Through IPC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Input Validation and Sanitization</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing WebView Protocol Handlers</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing App Permissions</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Whether Java Objects Are Exposed Through WebViews</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing for Object (De-)Serialization</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Custom URL Schemes</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="12">7</td>
+                                            <td rowspan="12">Authentication and Session Management</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Testing 2-Factor Authentication</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing the Password Policy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Step-up Authentication</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Excessive Login Attempts</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Stateless Authentication</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing the Session Timeout</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Verifying that Users Are Properly Authenticated</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Session Management</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Biometric Authentication</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing the Logout Functionality</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Testing Login Activity and Device Blocking</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td rowspan="5">8</td>
+                                            <td rowspan="5">Architecture, design and threat modelling</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>All app components are identified and known to be needed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>A high-level architecture for the mobile app and all connected
+                                                remote services
+                                                has been defined and security has been addressed in that
+                                                architecture.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Security controls are never enforced only on the client side,
+                                                but on the
+                                                respective remote endpoints.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data considered sensitive in the context of the mobile app is
+                                                clearly
+                                                identified.</td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- checklist section end -->
+
                 </div>
             </div>
         </div>
     </section>
-    <!-- services hero end -->
 
-    <!-- process section start -->
-    <section class="process_section">
+
+    <!-- Contact section start -->
+    <section class="contact_section" id="contact_sec">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="products_head">
-                        <h6>PROCESS FLOW</h6>
-                        <!--<h2>Lorem Ipsum Dolor</h2> -->
-                        <p><br>Our process flow is smooth and simple.</p>
+                        <div class="row">
+                            <h2 class="part_one">JOIN OUR</h2>
+                            <h2 class="part_two">COMMUNITY</h2>
+                        </div>
+                        <p>Get exclusive updates on the latest security threats, innovative solutions, and industry
+                            news. Connect with fellow security enthusiasts, developers, and businesses building a secure
+                            Web3 future.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="process_boxs_wrap">
-                        <div class="process_box">
-                            <img src="images/p_1.svg" alt="a" class="img-fluid">
-                            <p>Schedule <br>
-                                A Meeting </p>
+
+            <div class="row col-lg-12">
+                <div class="social_wrap col-lg-6">
+                    <a href="https://t.me/solidityscan" target="_blank">
+                        <div class="telegram_container">
+                            <img src="images/telegram.png" width="40px" height="35px" alt="a" />
+                            <p>Join Telegram</p>
                         </div>
-                        <div class="process_box">
-                            <img src="images/p_2.svg" alt="a" class="img-fluid">
-                            <p>Scope Assessment <br>
-                                And Timeline</p>
+                    </a>
+                </div>
+                <div class="social_wrap col-lg-6">
+                    <a href="https://discord.com/invite/9HhV4hGENw" target="_blank">
+                        <div class="discort_container">
+                            <img src="images/discord.png" width="55px" height="55px" alt="a" />
+                            <p>Join Discord</p>
                         </div>
-                        <div class="process_box">
-                            <img src="images/p_3.svg" alt="a" class="img-fluid">
-                            <p>Payment <br>
-                                for Services </p>
-                        </div>
-                        <div class="process_box">
-                            <img src="images/p_4.svg" alt="a" class="img-fluid">
-                            <p>Security <br>
-                                Audit </p>
-                        </div>
-                        <div class="process_box">
-                            <img src="images/p_5.svg" alt="a" class="img-fluid">
-                            <p>Draft <br>
-                                Report </p>
-                        </div>
-                        <div class="process_box">
-                            <img src="images/p_6.svg" alt="a" class="img-fluid">
-                            <p>Retesting </p>
-                        </div>
-                        <div class="process_box">
-                            <img src="images/p_7.svg" alt="a" class="img-fluid">
-                            <p>Final <br>
-                                Audit Report </p>
-                        </div>
-                    </div>
+                    </a>
+
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- process section end -->
 
-    <!-- checklist section start -->
-    <section class="checklist_section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="check_list_head">
-                        <h4>Mobile Application Security</h4>
-                    </div>
+            <div class="row col-lg-12 custom_contact_bg">
+                <div class="gradient_bg_tr">
+                    <img src="images/primary_bg.svg" alt="bg" />
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="checklist_table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th width="10%">S.NO</th>
-                                    <th width="30%">Audit Category</th>
-                                    <th>Audit Category Checklist</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-
-                                <tr>
-                                    <td rowspan="12">1</td>
-                                    <td rowspan="12">Data Storage and Privacy</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Testing Whether Sensitive Data Is Exposed via IPC Mechanisms</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing the Device-Access-Security Policy</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Sensitive Information in Auto-Generated Screenshots</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Whether Sensitive Data Is Sent To Third Parties</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Sensitive Data Disclosure Through the User Interface</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing For Sensitive Data in Local Data Storage</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing For Sensitive Data in Logs</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Whether the Keyboard Cache Is Disabled for Text Input Fields</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing user education</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Sensitive Data in Backups</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Sensitive Data in Memory</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="11">2</td>
-                                    <td rowspan="11">Resiliency Against Reverse Engineering</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Testing Debugging Defenses</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Jailbreak Detection, Testing Root Detection</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Device Binding</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Simple Emulator Detection</td>
-                                </tr>
-                                <tr>
-                                    <td>Impede Comprehensive Analysis</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Run-Time Integrity Checks</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Detection of Reverse Engineering Tools</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Obfuscation</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing File Integrity Checks</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Simple Obfuscation</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="7">3</td>
-                                    <td rowspan="7">Network Communication</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Testing Custom Certificate Stores and SSL Pinning</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Unencrypted Sensitive Data on the Network</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying that Critical Operations Use Secure Communication Channels</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying the TLS Settings</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Endpoint Identify Verification</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying the Security Provider</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="10">4</td>
-                                    <td rowspan="10">Code Quality and Build Settings</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Testing for Weaknesses in Third Party Libraries</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Debugging Symbols</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Memory Management Bugs</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Debugging Code and Verbose Error Logging</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying That the App is Properly Signed</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying usage of Free Security Features</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing If the App is Debuggable</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Error Handling in Security Controls</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Exception Handling</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="6">5</td>
-                                    <td rowspan="6">Cryptography</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Verifying the Configuration of Cryptographic Standard Algorithms</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Random Number Generation</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying Key Management</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Custom Implementations of Cryptography</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Insecure and/or Deprecated Cryptographic Algorithms</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="8">6</td>
-                                    <td rowspan="8">Platform Interaction</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Testing For Sensitive Functionality Exposure Through IPC</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Input Validation and Sanitization</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing WebView Protocol Handlers</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing App Permissions</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Whether Java Objects Are Exposed Through WebViews</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing for Object (De-)Serialization</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Custom URL Schemes</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="12">7</td>
-                                    <td rowspan="12">Authentication and Session Management</td>
-                                </tr>
-
-                                <tr>
-                                    <td>Testing 2-Factor Authentication</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing the Password Policy</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Step-up Authentication</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Excessive Login Attempts</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Stateless Authentication</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing the Session Timeout</td>
-                                </tr>
-                                <tr>
-                                    <td>Verifying that Users Are Properly Authenticated</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Session Management</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Biometric Authentication</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing the Logout Functionality</td>
-                                </tr>
-                                <tr>
-                                    <td>Testing Login Activity and Device Blocking</td>
-                                </tr>
-
-                                <tr>
-                                    <td rowspan="5">8</td>
-                                    <td rowspan="5">Architecture, design and threat modelling</td>
-                                </tr>
-
-                                <tr>
-                                    <td>All app components are identified and known to be needed.</td>
-                                </tr>
-                                <tr>
-                                    <td>A high-level architecture for the mobile app and all connected remote services
-                                        has been defined and security has been addressed in that architecture.</td>
-                                </tr>
-                                <tr>
-                                    <td>Security controls are never enforced only on the client side, but on the
-                                        respective remote endpoints.</td>
-                                </tr>
-                                <tr>
-                                    <td>Data considered sensitive in the context of the mobile app is clearly
-                                        identified.</td>
-                                </tr>
-
-
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- checklist section end -->
-
-    <!-- contact section start -->
-    <section class="contact_section" id="contact_sec">
-        <div class="container">
-            <div class="row custom_contact_bg">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="contact_head">
-                        <h6>SUPPORT</h6>
-                        <h2>Contact Us</h2>
-                        <p>Please enter your Email ID. We promise not to spam.</p>
+                        <h3>Get In Touch</h3>
+                        <p>Let's discuss how we can help you achieve your goals.
+                        </p>
                     </div>
-                    <div class="contact_seach">
-                        <input type="text" placeholder="Your Email Address" class="form-control"><a href="#">Submit</a>
+                    <form class="contact_seach" action="https://formsubmit.co/info@credshields.com" method="POST">
+                        <input type="text" placeholder="Your Name" name="name" />
+                        <input type="text" placeholder="Your Email Address" name="email" />
+                        <input type="text" placeholder="Purpose of contact" name="purpose" />
+                        <textarea placeholder="Type your message here"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="col-lg-6 justify-content-center contact_support">
+                    <div class="contact_head">
+                        <h3>Support</h3>
+                        <div class="hstack">
+                            <img src="images/mail.png" width="24px" height="24px" alt="a" />
+                            <p>info@credshields.com
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="contact_wrap_boxs">
-                        <h6>Find Us</h6>
-                        <p>20A TANJONG PAGAR ROAD <br> SINGAPORE (088443)</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact_wrap_boxs">
-                        <h6>Get in Touch</h6>
-                        <p>info@credshields.com</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="contact_wrap_boxs">
-                        <h6>Let’s Talk</h6>
-                        <a href="#"> <img src="images/chat_icon.svg" alt="a" class="img-fluid"> Chat with Us</a>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="contact_social_menu">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                            <li><a href="#"><i class="fa fa-telegram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="contact_menu_wrap">
-                        <ul>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
-                            <li><a href="tos.html">Terms of Service</a></li>
-                            <li><a href="cookie.html">Cookie Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
     <!-- contact section end -->
 
-    <!-- footer section start -->
+    <!-- Footer section start -->
     <footer class="footer_section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="ftr_menu">
-                        <ul>
-                            <li><a href="#">Copyright &copy; 2021 CredShields. All Rights Reserved</a></li>
-                            <li><i class="fa fa-circle"></i></li>
-                            <li><a href="https://flamecloud.co.uk/">Designed by <img src="images/fc.svg" alt="FC"
-                                        class="img-fluid"></a></li>
-                        </ul>
+            <div class="footer_container">
+                <div class="gradient_bg_tl">
+                    <img src="images/primary_bg.svg" alt="bg" />
+                </div>
+                <div class="footer_logo">
+                    <img src="images/Logo.svg" alt="logo" /></a>
+                </div>
+                <div class="footer_links">
+                    <div class="quick_link">
+                        <h4>
+                            Quick Links
+                        </h4>
+                        <a href="#services_sec">
+                            <p>Services</p>
+                        </a>
+                        <a href="#about_sec">
+                            <p>About Us</p>
+                        </a>
+                        <a href="#contact_sec">
+                            <p>Contact Us</p>
+                        </a>
+                        <a href="#audit_sec">
+                            <p>View Audits</p>
+                        </a>
                     </div>
+                    <div class="discover_link">
+                        <h4>
+                            Discover
+                        </h4>
+                        <a href="https://blog.solidityscan.com/" target="_blank">
+                            <p>Blogs</p>
+                        </a>
+                        <a href="https://solidityscan.com/discover/" target="_blank">
+                            <p>Recent in News</p>
+                        </a>
+                    </div>
+                    <div class="product_link">
+                        <h4>
+                            Product
+                        </h4>
+                        <a href="https://solidityscan.com/quickscan" target="_blank">
+                            <p>QuickScan</p>
+                        </a>
+                        <a href="https://solidityscan.com/web3hackhub" target="_blank">
+                            <p>Web3 HackHub</p>
+                        </a>
+                        <a href="https://solidityscan.com/pricing" target="_blank">
+                            <p>Pricing</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="social_links">
+                    <a class="social_links_con" href="https://t.me/solidityscan">
+                        <img src="images/telegram_gray.svg" alt="telegram" class="img-fluid" />
+                    </a>
+                    <a class="social_links_con" href="https://discord.com/invite/9HhV4hGENw">
+                        <img src="images/discord_gray.svg" alt="discord" class="img-fluid" />
+                    </a>
+                    <a class="social_links_con" href="https://blog.solidityscan.com/">
+                        <img src="images/medium_gray.svg" alt="medium" class="img-fluid" />
+                    </a>
+                    <a class="social_links_con" href="https://twitter.com/CredShields">
+                        <img src="images/x.svg" alt="X" class="img-fluid" />
+                    </a>
+                    <a class="social_links_con" href="https://www.instagram.com/credshields/">
+                        <img src="images/instagram_gray.svg" alt="instagram" class="img-fluid" />
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ftr_menu">
+                    <a href="#">20A TANJONG PAGAR ROAD, SINGAPORE (088443)</a>
+                    <ul>
+                        <li><i class="fa fa-circle"></i></li>
+                        <li>
+                            <a href="#">Copyright © 2021 CredShields. All Rights Reserved</a>
+                        </li>
+                        <!-- <li><i class="fa fa-circle"></i></li>
+						<li>
+
+						</li> -->
+                    </ul>
                 </div>
             </div>
         </div>
