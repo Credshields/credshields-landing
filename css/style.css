@@ -503,7 +503,8 @@ img {
   display: unset;
 }
 .products_one_wrap {
-  position: relative;
+  position: sticky;
+  top: 100px;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -797,20 +798,22 @@ img {
 .above_focus {
   position: absolute;
   bottom: 46%;
-  display: none;
   font-size: 32px;
   font-weight: 700;
   line-height: 38.4px;
+  visibility: hidden;
   color: white;
+  transition: visibility 0.5s ease-in;
 }
 .below_focus {
   position: absolute;
   bottom: 10%;
-  display: none;
   color: white;
   font-size: 28px;
   font-weight: 500;
   line-height: 33.6px;
+  visibility: hidden;
+  transition: visibility 0.3s ease-in;
 }
 #blockchain_security {
   position: absolute;
@@ -1145,6 +1148,7 @@ img {
   flex-direction: column;
   border-radius: 16px;
   padding: 3rem;
+  padding-right: 2rem;
   width: 48%;
 }
 .team_wrap {
@@ -1179,6 +1183,9 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+.company_wrap span img {
+  margin-left: -4px;
 }
 .founder {
   display: flex;
@@ -1907,15 +1914,18 @@ img {
 }
 .service_sidenav li {
   margin-bottom: 2rem;
-  cursor: pointer;
   width: fit-content;
   padding: 1rem 0;
+}
+.service_sidenav li a:hover {
+  color: #979797;
 }
 .service_sidenav li a {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   color: #4a4a4a;
+  cursor: pointer;
 }
 .service_sidenav .service_active {
   color: white;

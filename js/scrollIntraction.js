@@ -23,19 +23,6 @@ window.addEventListener("scroll", () => {
 const throttledScrollServices = throttle(scrollServices, 5);
 const throttledScrollProducts = throttle(scrollProduct, 5);
 
-function getTranslateY(element) {
-  const transform = window
-    .getComputedStyle(element)
-    .getPropertyValue("transform");
-  if (transform && transform !== "none") {
-    const translateY = transform.match(/translateY\(([^)]+)\)/);
-    if (translateY) {
-      return parseFloat(translateY[1]);
-    }
-  }
-  return 0;
-}
-
 function scrollServices() {
   const scrollPosition = window.scrollY - 60;
   const translateYFactor = 1.8;
@@ -81,20 +68,45 @@ function scrollServices() {
           pathElement.style.fill = "white";
         });
         servicesContainer.style.boxShadow = "none";
-        aboveFocusText.style.display = "block";
-        belowFocusText.style.display = "block";
+        aboveFocusText.style.visibility = "visible";
+        belowFocusText.style.visibility = "visible";
       } else {
         logoPathElements.forEach((pathElement) => {
           pathElement.style.fill = "#1E1E3A";
         });
         servicesContainer.style.boxShadow =
           "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
-        aboveFocusText.style.display = "none";
-        belowFocusText.style.display = "none";
+        aboveFocusText.style.visibility = "hidden";
+        belowFocusText.style.visibility = "hidden";
       }
       servicesFocus.style.scale = innerCircleScale;
       servicesContainer.style.borderRadius = outerRadius + "%";
     });
+  } else if (currentOffset > scrollPosition) {
+    servicesFocus.style.scale = 1;
+    servicesContainer.style.borderRadius = "50%";
+    servicesBox.style.transform = `translate(0px, 0px)`;
+    servicesBox.style.scale = 1;
+    servicesBox.style.opacity = 1;
+    logoPathElements.forEach((pathElement) => {
+      pathElement.style.fill = "#1E1E3A";
+    });
+    servicesContainer.style.boxShadow =
+      "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
+    aboveFocusText.style.visibility = "hidden";
+    belowFocusText.style.visibility = "hidden";
+  } else if (scrollPosition > currentOffset + 600) {
+    servicesFocus.style.scale = 3.7;
+    servicesContainer.style.borderRadius = "0";
+    servicesBox.style.transform = `translate(0px, 1000px)`;
+    servicesBox.style.scale = 0.3;
+    servicesBox.style.opacity = 0;
+    logoPathElements.forEach((pathElement) => {
+      pathElement.style.fill = "white";
+    });
+    servicesContainer.style.boxShadow = "none";
+    aboveFocusText.style.visibility = "visible";
+    belowFocusText.style.visibility = "visible";
   }
 }
 
@@ -116,16 +128,6 @@ function scrollProduct() {
       const scrollOffset = scrollPosition - currentOffset;
       let translateX = scrollOffset > 218 ? -41 : 0;
 
-      if (currentOffset <= scrollPosition - 218) {
-        const imgComputedStyle = window.getComputedStyle(productImg);
-        const imgTransform = imgComputedStyle.getPropertyValue("transform");
-        const transformMatrix = imgTransform.match(/matrix.*\((.+)\)/);
-        if (transformMatrix) {
-          const matrixValues = transformMatrix[1].split(",").map(parseFloat);
-          translateX = matrixValues[4];
-        }
-      }
-
       if (imgX >= containerX && scrollOffset <= 218) {
         translateX = -scrollOffset * scaleFactorIncrement;
       }
@@ -133,10 +135,12 @@ function scrollProduct() {
       const newTranslateY = Math.max(-415, translateY);
 
       requestAnimationFrame(() => {
-        productWrap.style.position = "sticky";
-        productWrap.style.top = "100px";
         productImg.style.transform = `translate(${translateX}px, ${newTranslateY}px)`;
       });
+    } else if (currentOffset > scrollPosition) {
+      productImg.style.transform = `translate(0px, 216px)`;
+    } else if (scrollPosition > currentOffset + 630) {
+      productImg.style.transform = `translate(-41px, -415px)`;
     }
   }
 }
