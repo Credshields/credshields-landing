@@ -202,13 +202,13 @@ function generatePageButtons() {
     if (i === currentPage) {
       pageButton.classList.add("active");
     }
-    pageButton.addEventListener("click", () => {
-      currentPage = i;
-      console.log(i);
-      const startIndex = (i - 1) * 6;
-      fillAuditTable(auditFilesList.slice(startIndex, startIndex + 6));
-      updatePagination();
-    });
+    // pageButton.addEventListener("click", () => {
+    //   currentPage = i;
+    //   console.log(i);
+    //   const startIndex = (i - 1) * 6;
+    //   fillAuditTable(auditFilesList.slice(startIndex, startIndex + 6));
+    //   updatePagination();
+    // });
     pagesContainer.appendChild(pageButton);
   }
 

@@ -27,6 +27,9 @@
   br {
     display: none;
   }
+  .home_hero_section {
+    overflow-x: hidden;
+  }
   .hero_txt {
     padding-top: 30px;
     padding-left: 0;
@@ -97,7 +100,7 @@
     width: 100%;
   }
   .contact_seach input {
-    width: 70%;
+    width: 100%;
   }
   .contact_menu_wrap ul li a {
     font-size: 13.386px;
@@ -273,10 +276,15 @@
   }
   .contact_support {
     justify-content: flex-start !important;
+    margin-top: 2rem;
   }
   .footer_container {
     flex-direction: column;
     padding: 1rem;
+  }
+  .footer_links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer_links,
   .social_links {
@@ -285,6 +293,11 @@
   }
   .social_links {
     justify-content: space-evenly;
+  }
+  .quick_link,
+  .discover_link {
+    margin-right: 0;
+    margin-bottom: 2rem;
   }
   .services_container,
   .services_focus {
@@ -325,14 +338,20 @@
   }
   .below_focus {
     font-size: 15px;
-    bottom: 15%;
+    bottom: 12%;
+    width: 100%;
+    white-space: pre-line;
+    text-align: center;
   }
   .above_focus {
     font-size: 16px;
     bottom: 40%;
+    width: 100%;
+    text-align: center;
   }
   .ftr_menu {
-    padding: 1rem;
+    padding: 2rem 1rem;
+    flex-direction: column;
   }
   .gradient_bg_tr,
   .gradient_bg_br {
@@ -351,6 +370,16 @@
   }
   #productImg {
     display: none;
+  }
+  .about_us_section {
+    overflow-x: hidden;
+  }
+  .ftr_menu ul {
+    flex-direction: column;
+  }
+  .ftr_menu a {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
