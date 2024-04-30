@@ -8,6 +8,7 @@ const initialTranslateX = 0;
 const containerHeight = container.offsetHeight;
 
 const servicesContainer = document.querySelector(".services_container");
+const servicesOuterCircle = document.querySelector(".services_outer_circle");
 const servicesBox = document.getElementById("services_con");
 const servicesFocus = document.querySelector(".services_focus");
 const aboveFocusText = document.querySelector(".above_focus");
@@ -67,37 +68,32 @@ function scrollServices() {
         logoPathElements.forEach((pathElement) => {
           pathElement.style.fill = "white";
         });
-        servicesContainer.style.boxShadow = "none";
         aboveFocusText.style.visibility = "visible";
         belowFocusText.style.visibility = "visible";
       } else {
         logoPathElements.forEach((pathElement) => {
           pathElement.style.fill = "#1E1E3A";
         });
-        servicesContainer.style.boxShadow =
-          "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
         aboveFocusText.style.visibility = "hidden";
         belowFocusText.style.visibility = "hidden";
       }
       servicesFocus.style.scale = innerCircleScale;
-      servicesContainer.style.borderRadius = outerRadius + "%";
+      servicesOuterCircle.style.scale = innerCircleScale;
     });
   } else if (currentOffset > scrollPosition) {
     servicesFocus.style.scale = 1;
-    servicesContainer.style.borderRadius = "50%";
+    servicesOuterCircle.style.scale = 1;
     servicesBox.style.transform = `translate(0px, 0px)`;
     servicesBox.style.scale = 1;
     servicesBox.style.opacity = 1;
     logoPathElements.forEach((pathElement) => {
       pathElement.style.fill = "#1E1E3A";
     });
-    servicesContainer.style.boxShadow =
-      "0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a, 0px 0px 0px 0px #00000000";
     aboveFocusText.style.visibility = "hidden";
     belowFocusText.style.visibility = "hidden";
   } else if (scrollPosition > currentOffset + 600) {
     servicesFocus.style.scale = 3.7;
-    servicesContainer.style.borderRadius = "0";
+    servicesOuterCircle.style.scale = 3.7;
     servicesBox.style.transform = `translate(0px, 1000px)`;
     servicesBox.style.scale = 0.3;
     servicesBox.style.opacity = 0;

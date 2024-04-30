@@ -74,6 +74,12 @@ function setActiveServiceTab(hash) {
       tab.classList.remove("service_active");
     });
     tab.classList.add("service_active");
+    if (window.innerWidth <= 768) {
+      tab.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+      });
+    }
   }
 }
 
@@ -91,7 +97,3 @@ window.onload = function () {
   const hash = servicePageMap[filename];
   if (hash) setActiveServiceTab(hash);
 };
-
-// window.onhashchange = function () {
-//   setActiveServiceTab(window.location.hash);
-// };
