@@ -215,7 +215,10 @@
     border-top: 1px solid #333334;
     padding: 1rem;
   }
-
+  #chain-pop-lottie {
+    display: none;
+    visibility: hidden;
+  }
   #pagination {
     justify-content: center;
   }

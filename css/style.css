@@ -809,6 +809,10 @@ img {
   position: absolute;
   bottom: 20%;
 }
+#chain-pop-lottie {
+  position: absolute;
+  bottom: 5%;
+}
 .above_focus {
   position: absolute;
   bottom: 46%;
