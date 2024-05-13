@@ -54,7 +54,6 @@ function startAnimationWhenInView() {
         let end = parseInt(entry.target.getAttribute("data-end"));
         let addPlus = entry.target.getAttribute("show-plus") === "true";
         let duration = 800 + (index + 1) * 100;
-        console.log(duration);
         animateValueWhenInView(entry.target, start, end, duration, addPlus);
         observer.unobserve(entry.target);
       }

@@ -74,6 +74,12 @@ function setActiveServiceTab(hash) {
       tab.classList.remove("service_active");
     });
     tab.classList.add("service_active");
+    if (window.innerWidth <= 768) {
+      tab.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+      });
+    }
   }
 }
 
@@ -90,11 +96,4 @@ window.onload = function () {
   let filename = urlString.substring(urlString.lastIndexOf("/") + 1);
   const hash = servicePageMap[filename];
   if (hash) setActiveServiceTab(hash);
-
-  // var data =
-  var animationPath = "images/Chains Pop.json";
 };
-
-// window.onhashchange = function () {
-//   setActiveServiceTab(window.location.hash);
-// };

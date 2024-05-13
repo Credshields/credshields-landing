@@ -1,5 +1,8 @@
 /* Extra small devices (portrait phones, less than 576px) */
 @media (min-width: 320px) and (max-width: 575px) {
+  .navbar-brand img {
+    height: 40px;
+  }
   .navbar-light .navbar-toggler {
     border-color: transparent;
   }
@@ -26,6 +29,9 @@
   }
   br {
     display: none;
+  }
+  .home_hero_section {
+    overflow-x: hidden;
   }
   .hero_txt {
     padding-top: 30px;
@@ -97,7 +103,7 @@
     width: 100%;
   }
   .contact_seach input {
-    width: 70%;
+    width: 100%;
   }
   .contact_menu_wrap ul li a {
     font-size: 13.386px;
@@ -273,10 +279,15 @@
   }
   .contact_support {
     justify-content: flex-start !important;
+    margin-top: 2rem;
   }
   .footer_container {
     flex-direction: column;
     padding: 1rem;
+  }
+  .footer_links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .footer_links,
   .social_links {
@@ -286,53 +297,49 @@
   .social_links {
     justify-content: space-evenly;
   }
+  .quick_link,
+  .discover_link {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .services_container {
+    height: 100%;
+  }
   .services_container,
   .services_focus {
     border-radius: 0 !important;
   }
+  .services_focus,
+  .services_outer_circle {
+    display: none;
+  }
+  #services_con {
+    display: none;
+  }
+  #services_con_static {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+  }
+  #services_con_static a {
+    width: 100%;
+  }
   .service_wrap {
-    scale: 0.4;
+    margin: 1rem 0;
+    width: 90%;
+    max-width: 450px;
   }
-  #blockchain_security {
-    position: absolute;
-    top: 1rem;
-    left: 20%;
-  }
-  #smart_contract {
-    position: absolute;
-    top: 3rem;
-    left: -25px;
-  }
-  #mobile_app {
-    position: absolute;
-    top: 3rem;
-    left: 46%;
-  }
-  #bug_bounty {
-    position: absolute;
-    top: calc(1rem + 110px);
-    left: 20%;
-  }
-  #web_app {
-    position: absolute;
-    top: calc(3rem + 110px);
-    left: -25px;
-  }
-  #external_network {
-    position: absolute;
-    top: calc(3rem + 110px);
-    left: 46%;
-  }
-  .below_focus {
-    font-size: 15px;
-    bottom: 15%;
-  }
-  .above_focus {
-    font-size: 16px;
-    bottom: 40%;
+
+  .below_focus,
+  .above_focus,
+  .logo_focus {
+    display: none;
   }
   .ftr_menu {
-    padding: 1rem;
+    padding: 2rem 1rem;
+    flex-direction: column;
   }
   .gradient_bg_tr,
   .gradient_bg_br {
@@ -351,6 +358,59 @@
   }
   #productImg {
     display: none;
+  }
+  .about_us_section {
+    overflow: hidden;
+  }
+  .contact_section > div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_section {
+    overflow: hidden;
+  }
+  .ftr_menu ul {
+    flex-direction: column;
+  }
+  .ftr_menu a {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .service_detail_sec > .container > .row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .service_sidenav {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 1;
+    padding-top: 2rem;
+    top: 0;
+  }
+  .service_sidenav h3 {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  .service_sidenav ul {
+    text-decoration: none;
+    display: flex;
+    overflow-x: scroll;
+  }
+  .service_sidenav li {
+    margin-bottom: 2rem;
+    width: fit-content;
+    padding: 1rem;
+    white-space: nowrap;
+  }
+  .service_content {
+    width: 100%;
+    padding: 2rem;
+  }
+  .service_process_con h6 {
+    margin-bottom: 0.5rem;
   }
 }
 
