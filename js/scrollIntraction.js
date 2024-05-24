@@ -84,10 +84,10 @@ function scrollServices() {
         belowFocusText.style.visibility = "hidden";
         chainPopCon.style.display = "none";
         chainPopCon.classList.remove("animation_playing");
+        showCredAnimation = false;
       }
       servicesFocus.style.scale = innerCircleScale;
       servicesOuterCircle.style.scale = innerCircleScale;
-      showCredAnimation = false;
     });
   } else if (currentOffset > scrollPosition) {
     servicesFocus.style.scale = 1;

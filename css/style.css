@@ -808,6 +808,7 @@ img {
 .logo_focus {
   position: absolute;
   bottom: 20%;
+  z-index: 1;
 }
 #chain-pop-lottie {
   position: absolute;
