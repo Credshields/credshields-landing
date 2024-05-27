@@ -12,16 +12,6 @@ let currentPage = 1;
 
 const auditFilesList = [
   {
-    imageSrc: "images/juno.svg",
-    imageAlt: "a",
-    name: "Juno Finance",
-    type: "Web Application Audit",
-    date: "23 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Juno%20Web%20Application%20Audit%20Final%20Report.pdf",
-  },
-  {
     imageSrc: "images/arcana.svg",
     imageAlt: "a",
     name: "Arcana Network",
@@ -260,6 +250,16 @@ const auditFilesList = [
     buttonText: "Report",
     downloadUrl:
       "https://raw.githubusercontent.com/Credshields/audit-reports/master/Quest_Contract_final_audit_report.pdf",
+  },
+  {
+    imageSrc: "images/juno.svg",
+    imageAlt: "a",
+    name: "Juno Finance",
+    type: "Web Application Audit",
+    date: "23 Feb 2023",
+    buttonText: "Report",
+    downloadUrl:
+      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Juno%20Web%20Application%20Audit%20Final%20Report.pdf",
   },
   {
     imageSrc: "images/numa.svg",
