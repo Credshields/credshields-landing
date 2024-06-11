@@ -265,7 +265,8 @@
     margin-top: 2rem;
   }
   .company_wrap,
-  .team_wrap {
+  .team_wrap,
+  .investor_wrap {
     width: 92%;
     margin: 1rem;
     padding: 1.5rem;
@@ -273,6 +274,15 @@
   .company_wrap p,
   .team_wrap p {
     font-size: 14px;
+  }
+  .investor_list {
+    flex-direction: column;
+  }
+  .investor_con {
+    margin-bottom: 2rem;
+  }
+  .investor_divider {
+    display: none;
   }
   .discort_container {
     margin-top: 2rem;

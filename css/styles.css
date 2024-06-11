@@ -1205,6 +1205,34 @@ img {
   padding-right: 2rem;
   width: 48%;
 }
+.investor_wrap {
+  background: #18181b80;
+  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
+    0px 0px 0px 0px #00000000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 3rem;
+  padding-right: 2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+.investor_list {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+.investor_divider {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  width: 1px;
+  height: 130px;
+  background: linear-gradient(180deg, #333334 0%, #97979a 100%);
+  opacity: 50%;
+}
+.investor_con {
+  padding-top: 2.2rem;
+}
 .team_wrap {
   margin-left: 2rem;
 }
