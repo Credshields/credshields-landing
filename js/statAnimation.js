@@ -21,32 +21,39 @@ function formatNumber(number, addPlus = false) {
 function animateValueWhenInView(element, start, end, duration, addPlus) {
   let range = end - start;
   let current = start;
-  let increment = end > start ? 1 : -1;
   let startTime = performance.now();
+  let steps = 15;
+  let stepDuration = duration / steps;
+  let stepSize = range / steps;
+  let animationFrame;
 
-  function update() {
-    let elapsedTime = performance.now() - startTime;
-    let progress = Math.min(elapsedTime / duration, 1);
-    current = start + progress * range;
-    element.textContent = formatNumber(Math.round(current), addPlus);
-    if (progress < 1) {
-      requestAnimationFrame(update);
+  function update(timestamp) {
+    let elapsedTime = timestamp - startTime;
+    let currentStep = Math.floor(elapsedTime / stepDuration);
+    if (currentStep >= steps) {
+      current = end;
+      element.textContent = formatNumber(Math.round(current), addPlus);
+      cancelAnimationFrame(animationFrame);
+      return;
     }
+    current = Math.max(Math.min(start + currentStep * stepSize, end), start); // Ensure current value stays within the range
+    element.textContent = formatNumber(Math.round(current), addPlus);
+    animationFrame = requestAnimationFrame(update);
   }
 
-  requestAnimationFrame(update);
+  animationFrame = requestAnimationFrame(update);
 }
 
 function startAnimationWhenInView() {
   let elements = document.querySelectorAll(".animate-number");
 
   let observer = new IntersectionObserver(function (entries) {
-    entries.forEach((entry) => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         let start = 0;
         let end = parseInt(entry.target.getAttribute("data-end"));
         let addPlus = entry.target.getAttribute("show-plus") === "true";
-        let duration = 800;
+        let duration = 800 + (index + 1) * 100;
         animateValueWhenInView(entry.target, start, end, duration, addPlus);
         observer.unobserve(entry.target);
       }
@@ -58,5 +65,4 @@ function startAnimationWhenInView() {
   });
 }
 
-// Start animation when element is in view
 startAnimationWhenInView();
