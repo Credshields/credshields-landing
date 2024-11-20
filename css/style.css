@@ -1483,6 +1483,7 @@ img {
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+  z-index: 1;
 }
 .telegram_container {
   display: flex;
