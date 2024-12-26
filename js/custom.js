@@ -97,3 +97,27 @@ window.onload = function () {
   const hash = servicePageMap[filename];
   if (hash) setActiveServiceTab(hash);
 };
+
+function animateBars() {
+  const graph = document.getElementById("graph");
+  const bars = graph.querySelectorAll(".bar");
+
+  // Set actual widths for each bar
+  bars[0].style.width = "40%";
+  bars[1].style.width = "20%";
+  bars[2].style.width = "20%";
+  bars[3].style.width = "10%";
+  bars[4].style.width = "5%";
+  bars[5].style.width = "5%";
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      animateBars();
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+observer.observe(document.getElementById("graph"));
