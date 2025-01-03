@@ -12,299 +12,1150 @@ let currentPage = 1;
 
 const auditFilesList = [
   {
-    imageSrc: "images/arcana.svg",
-    imageAlt: "a",
-    name: "Arcana Network",
-    type: "Smart Contract Audit",
-    date: "15 Apr 2024",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Arcana_Staking_Contract_Final_Audit_Report.pdf",
+    company_name: "HoldPlatform",
+    logo: "holdplatform",
+    total_bugs: 7,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 3.0,
+    low: 1.0,
+    informational: 1.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/HoldPlatform_Final_Audit_Report.pdf",
+    date: "Nov 12th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/lync.svg",
-    imageAlt: "a",
-    name: "Lync World",
-    type: "Smart Contract Audit",
-    date: "17 July 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Lync%20Final%20Audit%20Report.pdf",
+    company_name: "UniCoinX",
+    logo: "unicoinx",
+    total_bugs: 2,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 0.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/UniCoinX_Final_Audit_Report.pdf",
+    date: "Nov 6th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/capx.svg",
-    imageAlt: "a",
-    name: "CapX Global",
-    type: "Smart Contract Audit",
-    date: "21 Oct 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Capx%20Smart%20Contract%20Audit.pdf",
+    company_name: "SPE Smart Contract",
+    logo: "spe",
+    total_bugs: 29,
+    crictal: 2.0,
+    high: 1.0,
+    medium: 2.0,
+    low: 4.0,
+    informational: 3.0,
+    gas: 17.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/SPE_Smart_Contract_Final_Audit_Report.pdf",
+    date: "Oct 30th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/wasset.svg",
-    imageAlt: "a",
-    name: "Wasset",
-    type: "Smart Contract Audit",
-    date: "15 Feb 2024",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Wasset_Final_Audit_Report.pdf",
+    company_name: "Lara Liquid Staking",
+    logo: "lara",
+    total_bugs: 13,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 5.0,
+    low: 4.0,
+    informational: 0.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Lara_Liquid_Staking_Final_Audit_Report.pdf",
+    date: "Oct 16th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/inovatyv.svg",
-    imageAlt: "a",
-    name: "Inovatyv",
-    type: "Smart Contract Audit",
-    date: "08 Nov 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/FoundersLabFinalReport.pdf",
+    company_name: "Protop Token",
+    logo: "protop",
+    total_bugs: 2,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 0.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Protop_Token_Contract_Final%20Report.pdf",
+    date: "Aug 27th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/capitalrock.svg",
-    imageAlt: "Capital Rock",
-    name: "Capital Rock",
-    type: "Smart Contract Audit",
-    date: "11 Sep 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Capital_Rock_Final_Audit_report.pdf",
+    company_name: "SAN",
+    logo: "san",
+    total_bugs: 22,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 4.0,
+    low: 6.0,
+    informational: 3.0,
+    gas: 8.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/SAN_Final_Report.pdf",
+    date: "Aug 20th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/coin-gabbar.svg",
-    imageAlt: "Coin Gabbar",
-    name: "Coin Gabbar",
-    type: "Smart Contract Audit",
-    date: "12 Jan 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/CoinGabbarAudit.pdf",
+    company_name: "Plutope",
+    logo: "plutope",
+    total_bugs: 12,
+    crictal: 2.0,
+    high: 0.0,
+    medium: 5.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Plutope_Final_Audit_Report.pdf",
+    date: "Aug 13th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/archethic.svg",
-    imageAlt: "Archethic Foundation",
-    name: "Archethic Foundation",
-    type: "Smart Contract Audit",
-    date: "16 Oct 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Archethic_Bridge_Contracts_SC_Final_Report.pdf",
+    company_name: "Kaku Smart Contract",
+    logo: "kaku",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Kaku_SmartContract_Final_Report.pdf",
+    date: "Aug 5th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/9mm.svg",
-    imageAlt: "9mm",
-    name: "9mm",
-    type: "Smart Contract Audit",
-    date: "15 Oct 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/9mm_audit_report.pdf",
+    company_name: "Kresus",
+    logo: "kresus",
+    total_bugs: 12,
+    crictal: 1.0,
+    high: 1.0,
+    medium: 1.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: 6.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Kresus_Final_Audit_Report.pdf",
+    date: "July 19th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/devo.svg",
-    imageAlt: "DEVO Protocol",
-    name: "DEVO Protocol",
-    type: "Smart Contract Audit",
-    date: "10 Nov 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/DeVoTokenFinalReport.pdf",
+    company_name: "Moby",
+    logo: "moby",
+    total_bugs: 1,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 0.0,
+    informational: 1.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Moby_Smart_Contract_Final_Report.pdf",
+    date: "June 28th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/spstake.svg",
-    imageAlt: "PStake Finance",
-    name: "PStake Finance",
-    type: "Smart Contract Audit",
-    date: "20 June 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Final%20Report%20pStake%20Smart%20Contract%20Audit.pdf",
+    company_name: "Asset Chain",
+    logo: "asset",
+    total_bugs: 1,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 0.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Asset_Chain_Final_Audit_Report.pdf",
+    date: "June 12th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/obius.svg",
-    imageAlt: "Obius",
-    name: "Obius",
-    type: "Smart Contract Audit",
-    date: "07 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Obius_SmartContract_audit.pdf",
+    company_name: "aUSD",
+    logo: "ausd",
+    total_bugs: 33,
+    crictal: 3.0,
+    high: 2.0,
+    medium: 11.0,
+    low: 6.0,
+    informational: 2.0,
+    gas: 9.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/aUSD_SC_Final_Audit_Report.pdf",
+    date: "Jun 5th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/jaypeggers.svg",
-    imageAlt: "JayPeggers",
-    name: "JayPeggers",
-    type: "Smart Contract Audit",
-    date: "24 Mar 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/JayPeggers%20Final%20Audit%20Report.pdf",
+    company_name: "Rex Exchange",
+    logo: "rex",
+    total_bugs: 25,
+    crictal: 1.0,
+    high: 5.0,
+    medium: 4.0,
+    low: 5.0,
+    informational: 3.0,
+    gas: 7.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Rex_Exchange_Final_Audit_Report.pdf",
+    date: "June 4th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/pepay.svg",
-    imageAlt: "PePay",
-    name: "PePay",
-    type: "Smart Contract Audit",
-    date: "21 June 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/PePay_SmartContract_Audit.pdf",
+    company_name: "Compad Coin",
+    logo: "compad",
+    total_bugs: 2,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 0.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Compad_Coin_Final_Audit_Report.pdf",
+    date: "May 9th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/rdgx.svg",
-    imageAlt: "RDGX Token",
-    name: "RDGX Token",
-    type: "Smart Contract Audit",
-    date: "04 Dec 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/RDGX_Final_Audit_report.pdf",
+    company_name: "LogX Token",
+    logo: "logx",
+    total_bugs: 19,
+    crictal: 3.0,
+    high: 2.0,
+    medium: 2.0,
+    low: 4.0,
+    informational: 1.0,
+    gas: 7.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/LogX_Token_Final_Report.pdf",
+    date: "April 15th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/swyp.svg",
-    imageAlt: "SWYP Foundation",
-    name: "SWYP Foundation",
-    type: "Smart Contract Audit",
-    date: "21 Sep 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/SWYP_Final_Audit_Report.pdf",
+    company_name: "Tribal Token",
+    logo: "tribal",
+    total_bugs: 4,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 4.0,
+    informational: 0.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Tribal_Token_Final_Report.pdf",
+    date: "April 15th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/solace.svg",
-    imageAlt: "Solace Protocol",
-    name: "Solace Protocol",
-    type: "Smart Contract Audit",
-    date: "30 Aug 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Solace%20Final%20Audit%20Report.pdf",
+    company_name: "Tribally Games",
+    logo: "tribally",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 0.0,
+    low: 4.0,
+    informational: 0.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Tribally_Games_Final_Report.pdf",
+    date: "April 15th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/stationx.svg",
-    imageAlt: "StationX",
-    name: "StationX",
-    type: "Smart Contract Audit",
-    date: "09 Oct 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/StationX_Claim_Contract_Final_Audit_Report.pdf",
+    company_name: "Vouch Contract",
+    logo: "vouch",
+    total_bugs: 12,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 1.0,
+    low: 5.0,
+    informational: 1.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Vouch_Contract_Final_Audit_Report.pdf",
+    date: "April 15th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/uniscrow.svg",
-    imageAlt: "Uniscrow",
-    name: "Uniscrow",
-    type: "Smart Contract Audit",
-    date: "27 Apr 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Uniscrow%20Final%20Audit%20Report.pdf",
+    company_name: "Factiiv Token",
+    logo: "factiiv",
+    total_bugs: 2,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 0.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Factiiv_Token_Final_Audit_Report.pdf",
+    date: "April 6th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/wahed.svg",
-    imageAlt: "Wahed Project",
-    name: "Wahed Project",
-    type: "Smart Contract Audit",
-    date: "24 Sep 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Wahed%20Token%20Final%20Report.pdf",
+    company_name: "ResearchHub",
+    logo: "researchhub",
+    total_bugs: 13,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 4.0,
+    low: 1.0,
+    informational: 4.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/ResearchHub_SmartContract_Final_Audit_Report.pdf",
+    date: "April 4th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/zdh.svg",
-    imageAlt: "ZHD Coin",
-    name: "ZHD Coin",
-    type: "Smart Contract Audit",
-    date: "22 Sep 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/ZHDCoin_Final_Audit_Report.pdf",
+    company_name: "Wasset",
+    logo: "wasset",
+    total_bugs: 17,
+    crictal: 2.0,
+    high: 0.0,
+    medium: 3.0,
+    low: 5.0,
+    informational: 3.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Wasset_Final_Audit_Report.pdf",
+    date: "Feb 19th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/zenland.svg",
-    imageAlt: "Zenland",
-    name: "Zenland",
-    type: "Smart Contract Audit",
-    date: "07 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Zenland_SmartContract_Audit.pdf",
+    company_name: "Numa",
+    logo: "numa",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Numa_Final_Audit_Report.pdf",
+    date: "Jan 30th 2024",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/zetachain.svg",
-    imageAlt: "Zetachain",
-    name: "Zetachain",
-    type: "Smart Contract Audit",
-    date: "14 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/ZetaSwap_Final_Audit-Report.pdf",
+    company_name: "RDGX",
+    logo: "rdgx",
+    total_bugs: 3,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/RDGX_Final_Audit_report.pdf",
+    date: "Dec 4th 2023",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/dapp.svg",
-    imageAlt: "DappRadar",
-    name: "DappRadar",
-    type: "Smart Contract Audit",
-    date: "23 Nov 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Quest_Contract_final_audit_report.pdf",
+    company_name: "Ideology",
+    logo: "ideology",
+    total_bugs: 3,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 1.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Ideology%20Final%20Audit%20Report.pdf",
+    date: "Nov 15th 2023",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/juno.svg",
-    imageAlt: "a",
-    name: "Juno Finance",
-    type: "Web Application Audit",
-    date: "23 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Juno%20Web%20Application%20Audit%20Final%20Report.pdf",
+    company_name: "9mm",
+    logo: "9mm",
+    total_bugs: 10,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 2.0,
+    gas: 6.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/9mm_audit_report.pdf",
+    date: "Oct 15th 2023",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/numa.svg",
-    imageAlt: "Numa Money",
-    name: "Numa Money",
-    type: "Smart Contract Audit",
-    date: "30 Jan 2024",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Numa_Final_Audit_Report.pdf",
+    company_name: "Arcana Sendit",
+    logo: "arcana",
+    total_bugs: 8,
+    crictal: 0.0,
+    high: 2.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 1.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Arcana_Sendit_SC_Final_Audit_report.pdf",
+    date: "Oct 13th 2023",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/noft.svg",
-    imageAlt: "Noft Games",
-    name: "Noft Games",
-    type: "Smart Contract Audit",
-    date: "05 Aug 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Noft%20Game%20Audit%20Report.pdf",
+    company_name: "Archethic Bridge",
+    logo: "archethic",
+    total_bugs: 10,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 3.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Archethic_Bridge_Contracts_SC_Final_Report.pdf",
+    date: "Oct 12th 2023",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/daikoku.svg",
-    imageAlt: "Daikoku",
-    name: "Daikoku",
-    type: "Smart Contract Audit",
-    date: "08 Aug 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/DaiKoKu_SC_Audit_final.pdf",
+    company_name: "StationX Claim",
+    logo: "stationx",
+    total_bugs: 11,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 1.0,
+    low: 4.0,
+    informational: 1.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/StationX_Claim_Contract_Final_Audit_Report.pdf",
+    date: "Oct 9th 2023",
+    platform: "",
+    language: "",
   },
   {
-    imageSrc: "images/bb.svg",
-    imageAlt: "Buscemi Beast NFT",
-    name: "Buscemi Beast NFT",
-    type: "Smart Contract Audit",
-    date: "31 Oct 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/BuscemiBeats-NFT.docx.pdf",
+    company_name: "Solace",
+    logo: "solace",
+    total_bugs: 9,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 3.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Solace%20Final%20Audit%20Report.pdf",
+    date: "Aug 30th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "DaiKoKu",
+    logo: "daikoku",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/DaiKoKu_SC_Audit_final.pdf",
+    date: "Aug 8th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "TRICE",
+    logo: "trice",
+    total_bugs: 9,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 3.0,
+    informational: 3.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/TRICE_SC-Audit.pdf",
+    date: "Aug 6th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Lync",
+    logo: "lync",
+    total_bugs: 26,
+    crictal: 1.0,
+    high: 0.0,
+    medium: 4.0,
+    low: 8.0,
+    informational: 4.0,
+    gas: 9.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Lync%20Final%20Audit%20Report.pdf",
+    date: "July 25th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "JayDeriv",
+    logo: "jayderiv",
+    total_bugs: 12,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 2.0,
+    gas: 7.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/JayDeriv_SC_Audit_report.pdf",
+    date: "July 19th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Juno AWS",
+    logo: "juno",
+    total_bugs: 42,
+    crictal: 1.0,
+    high: 8.0,
+    medium: 8.0,
+    low: 24.0,
+    informational: 1.0,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Juno_AWS_Audit_final.pdf",
+    date: "April 27th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Uniscrow",
+    logo: "uniscrow",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 2.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Uniscrow%20Final%20Audit%20Report.pdf",
+    date: "April 27th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Arcana - Staking",
+    logo: "arcana",
+    total_bugs: 11,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 2.0,
+    gas: 5.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Arcana_Staking_Contract_Final_Audit_Report.pdf",
+    date: "April 15th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "JayPeggers",
+    logo: "jaypeggers",
+    total_bugs: 13,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 2.0,
+    low: 5.0,
+    informational: 4.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/JayPeggers%20Final%20Audit%20Report.pdf",
+    date: "Mar 24th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Obius",
+    logo: "obius",
+    total_bugs: 10,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 1.0,
+    low: 3.0,
+    informational: 1.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Obius_SmartContract_audit.pdf",
+    date: "Feb 7th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Zenland",
+    logo: "zenland",
+    total_bugs: 15,
+    crictal: 0.0,
+    high: 2.0,
+    medium: 1.0,
+    low: 4.0,
+    informational: 2.0,
+    gas: 6.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Zenland_SmartContract_Audit.pdf",
+    date: "Feb 7th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "CoinGabbar",
+    logo: "coingabbar",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 3.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/CoinGabbarAudit.pdf",
+    date: "Jan 12th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "DeVo Token",
+    logo: "devo",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/DeVoTokenFinalReport.pdf",
+    date: "Nov 10th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Devo Whitelist",
+    logo: "devo",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 1.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/DevoWhiteListFinalReport.pdf",
+    date: "Nov 10th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "FoundersLab",
+    logo: "founderslab",
+    total_bugs: 12,
+    crictal: 2.0,
+    high: 2.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 3.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/FoundersLabFinalReport.pdf",
+    date: "Nov 10th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "BuscemiBeats-NFT",
+    logo: "buscemibeats-nft",
+    total_bugs: 12,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 3.0,
+    gas: 6.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/BuscemiBeats-NFT.docx.pdf",
+    date: "Oct 30th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Capx",
+    logo: "capx",
+    total_bugs: 0,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 0.0,
+    informational: 0.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Capx%20Smart%20Contract%20Audit.pdf",
+    date: "Oct 25th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "AssetMantle-WEB",
+    logo: "assetmantle-web",
+    total_bugs: 15,
+    crictal: 1.0,
+    high: 3.0,
+    medium: 5.0,
+    low: 6.0,
+    informational: 0.0,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/AssetMantleWEB.pdf",
+    date: "Oct 18th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Comdex",
+    logo: "comdex",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 2.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 1.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Comdex%20Audit.docx.pdf",
+    date: "Aug 15th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Noft Game",
+    logo: "noft",
+    total_bugs: 11,
+    crictal: 1.0,
+    high: 3.0,
+    medium: 4.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Noft%20Game%20Audit%20Report.pdf",
+    date: "Aug 5th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "pStake Smart Contract",
+    logo: "pstake_finance",
+    total_bugs: 13,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 5.0,
+    informational: 5.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Final%20Report%20pStake%20Smart%20Contract%20Audit.pdf",
+    date: "June 20th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "pStake Bridge",
+    logo: "pstake_finance",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 3.0,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/pStake%20Bridge%20Audit.docx.pdf",
+    date: "June 20th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Arcana Paymaster",
+    logo: "arcana",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Arcana_PayMaster_Final_Report.pdf",
+    date: "Mar 1st 2024",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Caliburland",
+    logo: "caliburland",
+    total_bugs: 0,
+    crictal: null,
+    high: null,
+    medium: null,
+    low: null,
+    informational: null,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Caliburland-SmartContractAudit.pdf",
+    date: null,
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Capital Rock",
+    logo: "capital",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 0.0,
+    informational: 2.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Capital_Rock_Final_Audit_report.pdf",
+    date: "Sept 11th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "CryptoFootball",
+    logo: "cryptofootball",
+    total_bugs: 0,
+    crictal: null,
+    high: null,
+    medium: null,
+    low: null,
+    informational: null,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/CryptoFootball%20Security%20Report%20for%20Developer.pdf",
+    date: null,
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "JustFarming",
+    logo: "justfarming",
+    total_bugs: 10,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 1.0,
+    informational: 3.0,
+    gas: 6.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/JustFarming_Final_audit_report.pdf",
+    date: "Sept 21st 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "PePay",
+    logo: "pepay",
+    total_bugs: 7,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 3.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/PePay_SmartContract_Audit.pdf",
+    date: "June 21st 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Protop Vesting",
+    logo: "protop",
+    total_bugs: 8,
+    crictal: 1.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Protop_Vesting_Contracts_Final_Report.pdf",
+    date: "Sept 6th 2024",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "DappRadar Quest ",
+    logo: "dappradar",
+    total_bugs: 9,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 2.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Quest_Contract_final_audit_report.pdf",
+    date: "Nov 23rd 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Nordek Rove Token",
+    logo: "nordek",
+    total_bugs: 8,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 1.0,
+    low: 1.0,
+    informational: 2.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Rove_Token_Final_Audit_Report.pdf",
+    date: "Sept 18th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "SWYP",
+    logo: "swyp",
+    total_bugs: 7,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 3.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/SWYP_Final_Audit_Report.pdf",
+    date: "Sept 21st 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Styleo Coin",
+    logo: "styleo",
+    total_bugs: 3,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 0.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Styleo%20Coin%20Final%20Audit%20Report.pdf",
+    date: "July 22nd 2024",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Wahed Token",
+    logo: "wahed",
+    total_bugs: 9,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 4.0,
+    informational: 1.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Wahed%20Token%20Final%20Report.pdf",
+    date: "Sept 24th 2022",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Pstake - Web",
+    logo: "pstake",
+    total_bugs: 0,
+    crictal: null,
+    high: null,
+    medium: null,
+    low: null,
+    informational: null,
+    gas: null,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Webapp%20Audit.pdf",
+    date: null,
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "ZHDCoin",
+    logo: "zhdcoin",
+    total_bugs: 4,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 0.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/ZHDCoin_Final_Audit_Report.pdf",
+    date: "Sept 22nd 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "ZetaSwap",
+    logo: "zetaswap",
+    total_bugs: 3,
+    crictal: 1.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 1.0,
+    informational: 0.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/ZetaSwap_Final_Audit-Report.pdf",
+    date: "Sept 14th 2023",
+    platform: "",
+    language: "",
   },
 ];
+
+const popularAudits = [
+  {
+    company_name: "Arcana Paymaster",
+    logo: "arcana",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Arcana_PayMaster_Final_Report.pdf",
+    date: "Mar 1st 2024",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Obius",
+    logo: "obius",
+    total_bugs: 10,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 1.0,
+    low: 3.0,
+    informational: 1.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Obius_SmartContract_audit.pdf",
+    date: "Feb 7th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Archethic Bridge",
+    logo: "archethic",
+    total_bugs: 10,
+    crictal: 0.0,
+    high: 1.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 3.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Archethic_Bridge_Contracts_SC_Final_Report.pdf",
+    date: "Oct 12th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Solace",
+    logo: "solace",
+    total_bugs: 9,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 3.0,
+    gas: 3.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Solace%20Final%20Audit%20Report.pdf",
+    date: "Aug 30th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "Uniscrow",
+    logo: "uniscrow",
+    total_bugs: 6,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 1.0,
+    low: 2.0,
+    informational: 2.0,
+    gas: 1.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Uniscrow%20Final%20Audit%20Report.pdf",
+    date: "April 27th 2023",
+    platform: "",
+    language: "",
+  },
+  {
+    company_name: "PePay",
+    logo: "pepay",
+    total_bugs: 7,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 2.0,
+    informational: 3.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/PePay_SmartContract_Audit.pdf",
+    date: "June 21st 2023",
+    platform: "",
+    language: "",
+  },
+];
+
 totalPages = Math.ceil(auditFilesList.length / 6);
 
 fillAuditTable(auditFilesList.slice(0, 6));
+fillPopularAudits();
 updatePagination();
 
 // fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
@@ -329,85 +1180,141 @@ updatePagination();
 //   })
 //   .catch((error) => console.error("Error fetching files:", error));
 
+function fillPopularAudits() {
+  popularAudits.forEach((obj) => {
+    const container = document.querySelector(".popular-audits");
+    fillAuditRow(obj, container);
+  });
+}
+
 function fillAuditTable(data) {
-  const auditRows = document.querySelectorAll(".audit_row");
+  const auditRows = document.querySelectorAll(".audit-card");
   auditRows.forEach((row) => {
     row.remove();
   });
 
   data.forEach((obj) => {
-    fillAuditRow(obj);
+    const container = document.querySelector(".recent-audits");
+    fillAuditRow(obj, container);
   });
 }
 
-function fillAuditRow(data) {
-  AOS.refresh();
-  const auditRowContainer = document.createElement("div");
-  auditRowContainer.classList.add("audit_row");
-  // Create elements for each column
-  const imgCol = document.createElement("div");
-  imgCol.classList.add("audit_col_one");
-  imgCol.setAttribute("data-aos", "fade-zoom-in");
-  imgCol.setAttribute("data-aos-duration", "1000");
-  const img = document.createElement("img");
-  img.src = data.imageSrc;
-  img.alt = data.imageAlt;
-  img.classList.add("img-fluid");
-  imgCol.appendChild(img);
+function fillAuditRow(audit, container) {
+  const auditCard = document.createElement("div");
+  auditCard.classList.add("audit-card");
 
-  const nameCol = document.createElement("div");
-  nameCol.classList.add("audit_col_two");
-  nameCol.setAttribute("data-aos", "fade-zoom-in");
-  nameCol.setAttribute("data-aos-duration", "1000");
-  nameCol.textContent = data.name;
+  // Creating inner HTML using template literals
+  auditCard.innerHTML = `
+    <div>
+      <div class="audit-name-detail">
+        <div class="audit_logo">
+          <img id="auditImage" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/${
+            audit.logo
+          }.svg" alt="" onerror="setRandomFallbackImage(this)" />
+        </div>
+        <div class="audit-name-stack">
+          <p>${audit.company_name}</p>
+          <p class="audit-type">${audit.type || ""}</p>
+        </div>
+      </div>
 
-  const typeDateCol = document.createElement("div");
-  typeDateCol.classList.add("audit_col_tf");
+      <div class="audit-detail" style="margin-left: auto;">
+        <p>Total Bugs Found</p>
+        <p>${audit.total_bugs}</p>
+      </div>
+      <div class="audit-detail">
+        <p>Date Audited</p>
+        <p>${audit.date}</p>
+      </div>
+      <div class="audit-detail">
+        <p>Language</p>
+        <p>${audit.language || "N/A"}</p>
+      </div>
+    </div>
 
-  const typeCol = document.createElement("div");
-  typeCol.classList.add("audit_col_three");
-  typeCol.setAttribute("data-aos", "fade-zoom-in");
-  typeCol.setAttribute("data-aos-duration", "1000");
-  typeCol.textContent = data.type;
+    <div class="audit-vulnerability">
+      <div class="divider"></div>
+      <div>
+        <div class="vuln critical-vuln">
+          <p>Critical</p>
+          <div class="critical-count">
+            <div></div>
+            <p>${audit.crictal}</p>
+          </div>
+        </div>
+        <div class="vuln high-vuln">
+          <p>High</p>
+          <div class="high-count">
+            <div></div>
+            <p>${audit.high}</p>
+          </div>
+        </div>
+        <div class="vuln medium-vuln">
+          <p>Medium</p>
+          <div class="medium-count">
+            <div></div>
+            <p>${audit.medium}</p>
+          </div>
+        </div>
+        <div class="vuln low-vuln">
+          <p>Low</p>
+          <div class="low-count">
+            <div></div>
+            <p>${audit.low}</p>
+          </div>
+        </div>
+        <div class="vuln infor-vuln">
+          <p>Infor</p>
+          <div class="infor-count">
+            <div></div>
+            <p>${audit.informational}</p>
+          </div>
+        </div>
+        <div class="vuln gas-vuln">
+          <p>Gas</p>
+          <div class="gas-count">
+            <div></div>
+            <p>${audit.gas || "N/A"}</p>
+          </div>
+        </div>
+        <a class="audit-link" href="${
+          audit.report_link
+        }" target="_blank">View Audit Report 
+          <img class="arrow-icon" src="images/arrow-up-right.svg" alt="link" />
+        </a>
+      </div>
+    </div>
+  `;
 
-  const dateCol = document.createElement("div");
-  dateCol.classList.add("audit_col_four");
-  dateCol.setAttribute("data-aos", "fade-zoom-in");
-  dateCol.setAttribute("data-aos-duration", "1000");
-  dateCol.textContent = data.date;
+  // Append the new audit card to the container
+  container.appendChild(auditCard);
+}
 
-  typeDateCol.append(typeCol);
-  typeDateCol.append(dateCol);
+function setRandomFallbackImage(imgElement) {
+  const fallbackImages = [
+    "default1.svg",
+    "default2.svg",
+    "default3.svg",
+    "default4.svg",
+    "default5.svg",
+    "default6.svg",
+    "default7.svg",
+    "default8.svg",
+    "default9.svg",
+    "default10.svg",
+    "default11.svg",
+    "default12.svg",
+    "default13.svg",
+    "default14.svg",
+    "default15.svg",
+    "default16.svg",
+    "default17.svg",
+  ];
 
-  const buttonCol = document.createElement("div");
-  buttonCol.classList.add("audit_col_five");
-  buttonCol.classList.add("aos-init");
-  buttonCol.classList.add("aos-animate");
-  buttonCol.setAttribute("data-aos", "fade-zoom-in");
-  buttonCol.setAttribute("data-aos-duration", "1000");
+  const randomIndex = Math.floor(Math.random() * fallbackImages.length);
+  const fallbackImage = `https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/${fallbackImages[randomIndex]}`;
 
-  const link = document.createElement("a");
-  const url = data.downloadUrl;
-  link.href = url;
-  link.download = url.substring(url.lastIndexOf("/") + 1);
-  link.textContent = `${data.buttonText} `;
-
-  const downArrow = document.createElement("span");
-  downArrow.classList.add("down-arrow");
-  downArrow.textContent = ` ↓`;
-
-  link.appendChild(downArrow);
-  buttonCol.appendChild(link);
-  buttonCol.appendChild(link);
-
-  // Append columns to the row
-  auditRowContainer.appendChild(imgCol);
-  auditRowContainer.appendChild(nameCol);
-  auditRowContainer.appendChild(typeDateCol);
-  auditRowContainer.appendChild(buttonCol);
-
-  auditTableContainer.appendChild(auditRowContainer);
-  AOS.init();
+  imgElement.src = fallbackImage;
 }
 
 // Function to generate page buttons

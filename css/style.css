@@ -474,12 +474,13 @@ img {
 .kyc-reports a {
   text-decoration: none;
   color: #c5c5c5;
+  width: 35%;
 }
 
 .kyc-reports a,
 .kyc-reports p {
   color: #c5c5c5;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
@@ -626,11 +627,21 @@ img {
   white-space: nowrap;
 }
 
-.audit-name-detail > div:first-child {
+.audit_logo {
   width: 49px;
   height: 49px;
+  min-width: 49px;
+  min-height: 49px;
   background: #2e2e2e;
   border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audit_logo > img {
+  width: 100%;
 }
 
 .audit-name-stack {
@@ -666,7 +677,7 @@ img {
   color: #8a94a6;
 }
 
-.audit-vulneability {
+.audit-vulnerability {
   padding: 1rem;
   padding-left: 5rem;
   width: 100%;
@@ -680,13 +691,13 @@ img {
   margin-bottom: 1rem;
 }
 
-.audit-vulneability > div {
+.audit-vulnerability > div {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.audit-vulneability > div > div > p {
+.audit-vulnerability > div > div > p {
   color: #8a94a6;
   font-size: 14px;
   font-weight: 500;
@@ -711,7 +722,7 @@ img {
   margin-left: 0.3rem;
 }
 
-.citical-count > div {
+.critical-count > div {
   background-color: #960d00;
 }
 
@@ -771,7 +782,7 @@ img {
   width: 100%;
   box-shadow: 0px 0px 0px 1px #f4f4f51a;
   border-radius: 16px;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem;
   margin-bottom: 0.8rem;
   background: #18181b80;
 }
@@ -779,7 +790,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 50px;
   padding: 0 1rem;
   padding-right: 2rem;
 }
@@ -787,7 +798,7 @@ img {
 .audit_col_two {
   display: flex;
   align-items: center;
-  width: 35%;
+  width: 20%;
   padding: 0 1rem;
   font-size: 18px;
   color: white;
@@ -796,12 +807,12 @@ img {
 }
 .audit_col_tf {
   display: flex;
-  width: 35%;
+  width: 60%;
 }
 .audit_col_three {
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 70%;
   padding: 0 1rem;
   font-size: 18px;
   font-weight: 400;
@@ -810,7 +821,7 @@ img {
 .audit_col_four {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 30%;
   padding: 0 1rem;
   font-size: 18px;
   font-weight: 400;
@@ -820,27 +831,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15%;
+  width: 25%;
   padding: 0 1rem;
-}
-.audit_col_five a {
-  background: transparent;
-  border: 1px solid #99eed5;
-  width: 165.67px;
-  height: 39px;
-  text-align: center;
-  padding: 0.3rem 0;
-  outline: 0;
-  border-radius: 6px;
-  color: #c5c5c5;
-}
-.audit_col_five a:hover {
-  background: linear-gradient(
-    127.09deg,
-    rgba(157, 255, 237, 0.93) 0.95%,
-    rgba(194, 255, 189, 0.93) 98.62%
-  );
-  color: black;
 }
 #pagination {
   display: flex;
