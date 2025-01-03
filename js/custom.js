@@ -103,12 +103,12 @@ function animateBars() {
   const bars = graph.querySelectorAll(".bar");
 
   // Set actual widths for each bar
-  bars[0].style.width = "40%";
-  bars[1].style.width = "20%";
-  bars[2].style.width = "20%";
-  bars[3].style.width = "10%";
-  bars[4].style.width = "5%";
-  bars[5].style.width = "5%";
+  bars[0].style.width = "42.22%";
+  bars[1].style.width = "23.10%";
+  bars[2].style.width = "11.96%";
+  bars[3].style.width = "11.71%";
+  bars[4].style.width = "11.01%";
+  bars[5].style.width = "07.08%";
 }
 
 const observer = new IntersectionObserver((entries) => {

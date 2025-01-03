@@ -30,7 +30,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   color: white;
 }
 h1,
@@ -347,7 +348,7 @@ img {
   margin-bottom: 4rem;
 }
 
-.audit_overview > div:not(:first-child) {
+.audit_overview > div:not(:first-child):not(:last-child) {
   width: calc(50% - 2rem);
   height: 465px;
   display: flex;
@@ -407,6 +408,7 @@ img {
 
 .graph-container {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   height: 12px;
   width: 100%;
@@ -437,6 +439,21 @@ img {
   background-color: #8a94a6;
 }
 
+.platform-audits > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.platform-audits p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.platform-audits p > span {
+  color: #8a94a6;
+}
 .kyc-reports {
   margin-top: 2rem;
   width: 100%;
@@ -448,7 +465,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 0.85rem 0;
+}
+.kyc-reports > div:not(:last-child) {
   border-bottom: 1px solid #333334;
 }
 
@@ -465,28 +484,289 @@ img {
   line-height: 21.6px;
   text-align: left;
 }
+.audit-name {
+  width: 40%;
+}
 
-.kyc-audit-name {
+.audit-name,
+.audit-name-detail {
   display: flex;
   align-items: center;
 }
-.kyc-audit-name > div {
+.audit-name > div:first-child {
   width: 32px;
   height: 32px;
+  min-width: 32px;
   background: #2e2e2e;
   border-radius: 50%;
 }
 
-.kyc-audit-name > p {
+.audit-name img {
+  width: 32px;
+}
+
+.audit-name p,
+.audit-name-detail p {
   font-size: 18px;
   font-weight: 500;
   line-height: 21.6px;
   text-align: left;
   color: white;
   margin-left: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.audit_row {
+.tabs {
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.tab-buttons {
+  display: flex;
+  color: #4a4a4a;
+  background: transparent;
+  gap: 3rem;
+  position: relative;
+  width: fit-content;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+  background: transparent;
+  color: #4a4a4a;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.tab-button:focus {
+  outline: none;
+}
+
+.tab-button.active {
+  color: white;
+}
+
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #9aeed3;
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.tab-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #9aeed3;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.tab-button.active::after {
+  transform: scaleX(1);
+}
+
+.tab-content {
+  display: none;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.audit-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
+    0px 0px 0px 0px #00000000;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in;
+  margin-bottom: 1rem;
+}
+
+.audit-card:hover {
+  background-image: linear-gradient(black, #010102),
+    linear-gradient(162deg, #9dffed 1.05%, rgba(102, 102, 102, 0) 35.95%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.audit-card > div:first-child {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.audit-card p {
+  white-space: nowrap;
+}
+
+.audit-name-detail > div:first-child {
+  width: 49px;
+  height: 49px;
+  background: #2e2e2e;
+  border-radius: 50%;
+}
+
+.audit-name-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.audit-name-stack .audit-type {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-align: left;
+  color: #c5c5c5;
+}
+
+.audit-detail {
+  margin-right: 3rem;
+}
+
+.audit-detail p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.audit-detail > p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 29px;
+  text-align: left;
+  color: #8a94a6;
+}
+
+.audit-vulneability {
+  padding: 1rem;
+  padding-left: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.divider {
+  background: #333334;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+
+.audit-vulneability > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.audit-vulneability > div > div > p {
+  color: #8a94a6;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 29px;
+  text-align: left;
+}
+
+.vuln > div {
+  display: flex;
+  align-items: center;
+}
+
+.vuln > div > div {
+  width: 3px;
+  height: 15px;
+}
+
+.vuln > div > p {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 0.3rem;
+}
+
+.citical-count > div {
+  background-color: #960d00;
+}
+
+.high-count > div {
+  background-color: #ff5630;
+}
+
+.medium-count > div {
+  background-color: #ffe600;
+}
+
+.low-count > div {
+  background-color: #38cb89;
+}
+
+.infor-count > div {
+  background-color: #a3aebe;
+}
+
+.gas-count > div {
+  background-color: #f795b4;
+}
+
+.audit-link {
+  display: flex;
+  background: #060606;
+  color: #99eed5;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  width: 227px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.audit-link:hover {
+  background: linear-gradient(
+    127.09deg,
+    rgba(157, 255, 237, 0.93) 0.95%,
+    rgba(194, 255, 189, 0.93) 98.62%
+  );
+  backdrop-filter: blur(12.199999809265137px);
+  color: #000000;
+}
+
+.audit-link .arrow-icon {
+  transition: all 0.3s ease;
+}
+
+.audit-link:hover .arrow-icon {
+  content: url("../images/arrow-up-right-black.svg");
+}
+
+.audit_row,
+.kyc_row {
   display: flex;
   width: 100%;
   box-shadow: 0px 0px 0px 1px #f4f4f51a;
