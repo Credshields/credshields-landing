@@ -349,7 +349,7 @@ img {
 }
 
 .audit_overview > div:not(:first-child):not(:last-child) {
-  width: calc(50% - 2rem);
+  width: calc(50% - 0.5rem);
   height: 465px;
   display: flex;
   flex-direction: column;
@@ -368,7 +368,7 @@ img {
 }
 
 .audit_numbers {
-  width: calc(50% - 2rem);
+  width: calc(50% - 0.5rem);
   height: 465px;
   background-color: transparent;
   display: flex;
