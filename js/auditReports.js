@@ -1218,63 +1218,67 @@ function fillAuditRow(audit, container) {
         </div>
       </div>
 
-      <div class="audit-detail" style="margin-left: auto;">
-        <p>Total Bugs Found</p>
-        <p>${audit.total_bugs}</p>
-      </div>
-      <div class="audit-detail">
-        <p>Date Audited</p>
-        <p>${audit.date}</p>
-      </div>
-      <div class="audit-detail">
-        <p>Language</p>
-        <p>${audit.language || "N/A"}</p>
+      <div class="audit-details">
+        <div class="audit-detail">
+          <p>Total Bugs Found</p>
+          <p>${audit.total_bugs}</p>
+        </div>
+        <div class="audit-detail">
+          <p>Date Audited</p>
+          <p>${audit.date}</p>
+        </div>
+        <div class="audit-detail">
+          <p>Language</p>
+          <p>${audit.language || "N/A"}</p>
+        </div>
       </div>
     </div>
 
     <div class="audit-vulnerability">
       <div class="divider"></div>
       <div>
-        <div class="vuln critical-vuln">
-          <p>Critical</p>
-          <div class="critical-count">
-            <div></div>
-            <p>${audit.crictal}</p>
+        <div>
+          <div class="vuln critical-vuln">
+            <p>Critical</p>
+            <div class="critical-count">
+              <div></div>
+              <p>${audit.crictal}</p>
+            </div>
           </div>
-        </div>
-        <div class="vuln high-vuln">
-          <p>High</p>
-          <div class="high-count">
-            <div></div>
-            <p>${audit.high}</p>
+          <div class="vuln high-vuln">
+            <p>High</p>
+            <div class="high-count">
+              <div></div>
+              <p>${audit.high}</p>
+            </div>
           </div>
-        </div>
-        <div class="vuln medium-vuln">
-          <p>Medium</p>
-          <div class="medium-count">
-            <div></div>
-            <p>${audit.medium}</p>
+          <div class="vuln medium-vuln">
+            <p>Medium</p>
+            <div class="medium-count">
+              <div></div>
+              <p>${audit.medium}</p>
+            </div>
           </div>
-        </div>
-        <div class="vuln low-vuln">
-          <p>Low</p>
-          <div class="low-count">
-            <div></div>
-            <p>${audit.low}</p>
+          <div class="vuln low-vuln">
+            <p>Low</p>
+            <div class="low-count">
+              <div></div>
+              <p>${audit.low}</p>
+            </div>
           </div>
-        </div>
-        <div class="vuln infor-vuln">
-          <p>Infor</p>
-          <div class="infor-count">
-            <div></div>
-            <p>${audit.informational}</p>
+          <div class="vuln infor-vuln">
+            <p>Infor</p>
+            <div class="infor-count">
+              <div></div>
+              <p>${audit.informational}</p>
+            </div>
           </div>
-        </div>
-        <div class="vuln gas-vuln">
-          <p>Gas</p>
-          <div class="gas-count">
-            <div></div>
-            <p>${audit.gas || "N/A"}</p>
+          <div class="vuln gas-vuln">
+            <p>Gas</p>
+            <div class="gas-count">
+              <div></div>
+              <p>${audit.gas || "N/A"}</p>
+            </div>
           </div>
         </div>
         <a class="audit-link" href="${
@@ -1283,6 +1287,8 @@ function fillAuditRow(audit, container) {
           <img class="arrow-icon" src="images/arrow-up-right.svg" alt="link" />
         </a>
       </div>
+    </div>
+    <div class="audit-mask">
     </div>
   `;
 

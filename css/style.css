@@ -649,10 +649,12 @@ img {
   border: 1px solid transparent;
   transition: all 0.5s ease-in;
   margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .audit-card:hover {
-  background-image: linear-gradient(black, #010102),
+  background-image: linear-gradient(black, #18181b80),
     linear-gradient(162deg, #9dffed 1.05%, rgba(102, 102, 102, 0) 35.95%);
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -699,8 +701,10 @@ img {
   color: #c5c5c5;
 }
 
-.audit-detail {
-  margin-right: 3rem;
+.audit-details {
+  display: flex;
+  margin-left: auto;
+  gap: 3rem;
 }
 
 .audit-detail p {
@@ -738,7 +742,13 @@ img {
   gap: 2rem;
 }
 
-.audit-vulnerability > div > div > p {
+.audit-vulnerability > div > div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.vuln > p {
   color: #8a94a6;
   font-size: 14px;
   font-weight: 500;
@@ -827,6 +837,40 @@ img {
   margin-bottom: 0.8rem;
   background: #18181b80;
 }
+.kyc_row:hover .audit-link,
+.audit-card:hover .audit-link {
+  background: linear-gradient(
+    127.09deg,
+    rgba(157, 255, 237, 0.93) 0.95%,
+    rgba(194, 255, 189, 0.93) 98.62%
+  );
+  backdrop-filter: blur(12.2px);
+  color: #000000;
+}
+
+.audit-card:hover .audit-mask {
+  background: linear-gradient(180deg, #acf0c6 0%, #174aff 100%);
+  filter: blur(200px);
+  width: 232.81px;
+  height: 330.31px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.kyc_row:hover .arrow-icon,
+.audit-card:hover .arrow-icon {
+  content: url("../images/arrow-up-right-black.svg");
+}
+
+.kyc_row_company {
+  display: flex;
+  width: 20%;
+}
+
 .audit_col_one {
   display: flex;
   align-items: center;
@@ -839,7 +883,6 @@ img {
 .audit_col_two {
   display: flex;
   align-items: center;
-  width: 20%;
   padding: 0 1rem;
   font-size: 18px;
   color: white;
