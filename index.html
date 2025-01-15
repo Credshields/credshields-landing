@@ -175,7 +175,7 @@
 								</a>
 							</div>
 							<a class="nav-link hero_footer stick_bottom" href="#pro_sec" data-aos="fade-down"
-								data-aos-offset="10" data-aos-duration="2000" da>
+								data-aos-offset="10" data-aos-duration="2000">
 								<p>View Products </p>
 								<div>
 									<svg width="141" height="46" viewBox="0 0 141 46" fill="none"
@@ -292,27 +292,343 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-12 audit_table">
-			</div>
-			<div id="pagination">
-				<button type="button" id="prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
-							stroke-linecap="round" stroke-linejoin="round" />
-						<path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg></button>
-				<div id="pages">
-					<!-- Page buttons will be added here dynamically -->
+			<div class="audit_overview">
+				<div class="audit_numbers">
+					<div>
+						<p>Total Projects Audited</p>
+						<h2><span class="animate-number" data-end="1384" show-plus="false">0</span></h2>
+					</div>
+					<div>
+						<p>Market Cap Evaluated</p>
+						<h2><span class="animate-number" data-end="173340000000" show-plus="false">0</span>
+						</h2>
+					</div>
+					<div>
+						<p>Total Vulnerablities found</p>
+						<h2><span class="animate-number" data-end="7739" show-plus="false">0</span></h2>
+					</div>
+					<div>
+						<p>Total Lines of Code Audited</p>
+						<h2><span class="animate-number" data-end="77000000" show-plus="false">0</span></h2>
+					</div>
 				</div>
-				<button type="button" id="next"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
-							stroke-linecap="round" stroke-linejoin="round" />
-						<path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
-							stroke-linejoin="round" />
-					</svg>
-				</button>
+				<div>
+					<h5>Platforms Audited</h5>
+					<div class="graph-container" id="graph">
+						<div class="bar bar-1" data-tooltip="Ethereum">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-2" data-tooltip="Binance">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-3" data-tooltip="Polygon">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-4" data-tooltip="Cosmos">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-5" data-tooltip="Solana">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-6" data-tooltip="Others">
+							<div class="bar-inner"></div>
+						</div>
+					</div>
+
+					<div class="platform-audits">
+						<div>
+							<div class="audit-name">
+								<div>
+									<img src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/ethereum.svg"
+										alt="Eth" />
+								</div>
+								<p>Ethereum</p>
+							</div>
+							<p>678<span> (42.22%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/binance.svg"
+										alt="Bsc" />
+								</div>
+								<p>Binance</p>
+							</div>
+							<p>371<span> (23.10%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/polygon.svg"
+										alt="Polygon" />
+								</div>
+								<p>Polygon</p>
+							</div>
+							<p>192<span> (11.96%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/cosmos.svg"
+										alt="Cosmos" />
+								</div>
+								<p>Cosmos</p>
+							</div>
+							<p>188<span> (11.71%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/solana.svg"
+										alt="Solana" />
+								</div>
+								<p>Solana</p>
+							</div>
+							<p>177<span> (11.02%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/other.svg"
+										alt="Other" />
+								</div>
+								<p>Others</p>
+							</div>
+							<p>56<span> (07.08%)</span></p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h5>Popular Projects</h5>
+					<div class="kyc-reports">
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/aUSD Stablejack.svg"
+										alt="Other" />
+								</div>
+								<p>aUSD</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>05 Jun 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Arcana.svg"
+										alt="Other" />
+								</div>
+								<p>Arcana Paymaster</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>01 Mar 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/ResearchHub.svg"
+										alt="Other" />
+								</div>
+								<p>ResearchHub</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>04 April 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Lync Network.svg"
+										alt="Other" />
+								</div>
+								<p>Lync</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>25 July 2023</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/LogX Token.svg"
+										alt="Other" />
+								</div>
+								<p>LogX Token</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>15 April 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Juno Finance.svg"
+										alt="Other" />
+								</div>
+								<p>Juno AWS</p>
+							</div>
+							<p>AWS</p>
+							<p>27 April 2023</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h5>KYC Reports</h5>
+					<div class="kyc-reports">
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg"
+										alt="Other" />
+								</div>
+								<p>Cybercentry</p>
+							</div>
+							<a href="https://cybercentry.co.uk" target="_blank">
+								cybercentry.co.uk
+								<img src="images/arrow-up-right.svg" alt="link" />
+							</a>
+							<p>16 Dec 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg"
+										alt="Other" />
+								</div>
+								<p>PultoPe</p>
+							</div>
+							<a href="https://plutope.io" target="_blank">
+								plutope.io
+								<img src="images/arrow-up-right.svg" alt="link" />
+							</a>
+							<p>04 July 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg"
+										alt="Other" />
+								</div>
+								<p>Helldiver</p>
+							</div>
+							<a href="https://helldiver.vip" target="_blank">
+								helldiver.vip
+								<img src="images/arrow-up-right.svg" alt="link" />
+							</a>
+							<p>05 May 2024</p>
+						</div>
+					</div>
+				</div>
+				<div class="gradient_bg_bl">
+					<img src="images/secondry_bg.svg" alt="bg" />
+				</div>
+			</div>
+			<div class="tabs">
+				<div class="gradient_bg_tr">
+					<img src="images/primary_bg.svg" alt="bg" />
+				</div>
+				<div class="tab-buttons">
+					<button class="tab-button active" onclick="openTab(event, 'Tab1')">Recently
+						Audited</button>
+					<button class="tab-button" onclick="openTab(event, 'Tab2')">Popular Projects</button>
+					<button class="tab-button" onclick="openTab(event, 'Tab3')">KYC Reports</button>
+				</div>
+
+				<div class="tab-content active" id="Tab1">
+					<div class="recent-audits"></div>
+					<div id="pagination">
+						<button type="button" id="prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg></button>
+						<div id="pages">
+							<!-- Page buttons will be added here dynamically -->
+						</div>
+						<button type="button" id="next"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="tab-content" id="Tab2">
+					<div class="popular-audits"></div>
+				</div>
+				<div class="tab-content" id="Tab3">
+					<!-- <div class="col-lg-12"> -->
+					<div class="kyc_row">
+						<div class="kyc_row_company">
+							<div class="audit_col_one">
+								<div class="audit_logo"><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg"
+										alt="Other" /></div>
+							</div>
+							<div class="audit_col_two">Cybercentry</div>
+						</div>
+						<div class="audit_col_tf">
+							<div class="audit_col_three"><a href="https://cybercentry.co.uk" target="_blank">
+									cybercentry.co.uk
+									<img src="images/arrow-up-right.svg" alt="link" />
+								</a></div>
+							<div class="audit_col_four">16 Dec 2024</div>
+						</div>
+						<div class="audit_col_five">
+							<a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.pdf"
+								download="Cybercentry.pdf" class="audit-link">View KYC Certificate <img
+									src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
+						</div>
+					</div>
+					<div class="kyc_row">
+						<div class="kyc_row_company">
+
+							<div class="audit_col_one">
+								<div class="audit_logo"><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg"
+										alt="Other" /></div>
+							</div>
+							<div class="audit_col_two">PultoPe</div>
+						</div>
+						<div class="audit_col_tf">
+							<div class="audit_col_three"><a href="https://plutope.io" target="_blank">
+									plutope.io
+									<img src="images/arrow-up-right.svg" alt="link" />
+								</a></div>
+							<div class="audit_col_four">04 July 2024</div>
+						</div>
+						<div class="audit_col_five">
+							<a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.pdf"
+								download="PultoPe.pdf" class="audit-link">View KYC Certificate <img
+									src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
+						</div>
+					</div>
+					<div class="kyc_row">
+						<div class="kyc_row_company">
+
+							<div class="audit_col_one">
+								<div class="audit_logo"><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg"
+										alt="Other" /></div>
+							</div>
+							<div class="audit_col_two">Helldiver</div>
+						</div>
+						<div class="audit_col_tf">
+							<div class="audit_col_three"><a href="https://helldiver.vip" target="_blank">
+									helldiver.vip
+									<img src="images/arrow-up-right.svg" alt="link" />
+								</a></div>
+							<div class="audit_col_four">05 May 2024</div>
+						</div>
+						<div class="audit_col_five">
+							<a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.pdf"
+								download="Helldiver.pdf" class="audit-link">View KYC Certificate <img
+									src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
+						</div>
+					</div>
+					<!-- </div> -->
+				</div>
 			</div>
 		</div>
 	</section>

@@ -187,12 +187,121 @@
     letter-spacing: -0.01em;
     margin: 1.5rem 0;
   }
-  .audit_row {
+  .audit_overview {
+    margin-bottom: 3rem;
+  }
+
+  .audit_overview > div:not(:first-child):not(:last-child) {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  .audit_overview h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .audit_numbers {
+    width: 100%;
+    height: 320px;
+  }
+
+  .audit_numbers p {
+    font-size: 14px;
+  }
+
+  .audit_numbers h2 {
+    font-size: 40px;
+  }
+
+  .audit_numbers > div {
+    height: 150px;
+    padding: 1rem;
+  }
+
+  .platform-audits p {
+    font-size: 16px;
+  }
+
+  .audit-name p {
+    font-size: 14px !important;
+  }
+
+  .kyc-reports a,
+  .kyc-reports p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .tab-buttons {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: unset;
+    z-index: 1;
+    background: black;
+    padding: 1rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+  }
+
+  .audit-card {
+    background: #18181b80;
+    margin-bottom: 2rem;
+  }
+
+  .audit-card > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .audit-details {
+    margin-left: 0;
+    margin-top: 1rem;
+    gap: 1.5rem;
+  }
+
+  .audit-detail {
+    width: 100%;
+  }
+
+  .audit-detail p {
+    font-size: 16px;
+  }
+
+  .audit-detail > p:first-child {
+    font-size: 12px;
+  }
+
+  .audit-vulnerability {
+    padding-left: 1rem;
+  }
+
+  .audit-vulnerability > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vuln > p {
+    font-size: 12px;
+  }
+
+  .audit-link {
+    margin-left: 0;
+    width: 100%;
+    background: #060606;
+  }
+
+  .kyc_row {
     flex-direction: column;
     margin-bottom: 2rem;
     padding-bottom: 0;
   }
-  .audit_row > div {
+  .kyc_row > div {
     margin-bottom: 1rem;
     width: 100%;
     justify-content: flex-start;
@@ -200,20 +309,26 @@
   .audit_col_one img {
     width: 180px;
   }
+  .audit_col_two {
+    width: 80%;
+  }
   .audit_col_tf {
-    margin-top: 1rem;
+    margin-top: 0;
   }
   .audit_col_three {
-    font-size: 12px;
-    width: 100%;
+    font-size: 14px;
+    width: 65%;
+    padding-left: 0;
   }
   .audit_col_four {
     font-size: 12px;
     justify-content: end;
+    margin-left: auto;
   }
   .audit_col_five {
     border-top: 1px solid #333334;
     padding: 1rem;
+    margin-bottom: 0 !important;
   }
   #chain-pop-lottie {
     display: none;
@@ -429,10 +544,51 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767px) {
+  .audit_overview > div:not(:first-child):not(:last-child) {
+    width: 100%;
+    height: 450px;
+    padding: 1rem;
+  }
+  .audit_overview h5 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .audit_numbers {
+    width: 100%;
+  }
+  .audit_numbers p {
+    font-size: 14px;
+  }
+
+  .audit_numbers h2 {
+    font-size: 40px;
+  }
+
+  .audit_numbers > div {
+    padding: 1rem;
+  }
+
+  .platform-audits p {
+    font-size: 16px;
+  }
+
+  .kyc-reports a,
+  .kyc-reports p {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
+  .audit_overview > div:not(:first-child):not(:last-child) {
+    width: 100%;
+    height: 450px;
+    padding: 1rem;
+  }
+  .audit_numbers {
+    width: 100%;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

@@ -10,404 +10,277 @@ const nextButton = document.getElementById("next");
 let totalPages = 1;
 let currentPage = 1;
 
-const auditFilesList = [
+const auditFilesList = [];
+
+const popularAudits = [
   {
-    imageSrc: "images/arcana.svg",
-    imageAlt: "a",
-    name: "Arcana Network",
-    type: "Smart Contract Audit",
-    date: "15 Apr 2024",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Arcana_Staking_Contract_Final_Audit_Report.pdf",
+    company_name: "aUSD",
+    logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/aUSD Stablejack.svg",
+    total_bugs: 33,
+    crictal: 3.0,
+    high: 2.0,
+    medium: 11.0,
+    low: 6.0,
+    informational: 2.0,
+    gas: 9.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/aUSD_SC_Final_Audit_Report.pdf",
+    date: "Jun 5th 2024",
+    platforms: ["Avlance"],
+    language: "Solidity",
   },
   {
-    imageSrc: "images/lync.svg",
-    imageAlt: "a",
-    name: "Lync World",
-    type: "Smart Contract Audit",
-    date: "17 July 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Lync%20Final%20Audit%20Report.pdf",
+    company_name: "Arcana Paymaster",
+    logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Arcana.svg",
+    total_bugs: 5,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 0.0,
+    low: 3.0,
+    informational: 0.0,
+    gas: 2.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Arcana_PayMaster_Final_Report.pdf",
+    date: "Mar 1st 2024",
+    platforms: ["ETH"],
+    language: "Solidity",
   },
   {
-    imageSrc: "images/capx.svg",
-    imageAlt: "a",
-    name: "CapX Global",
-    type: "Smart Contract Audit",
-    date: "21 Oct 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Capx%20Smart%20Contract%20Audit.pdf",
+    company_name: "ResearchHub",
+    logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/ResearchHub.svg",
+    total_bugs: 13,
+    crictal: 0.0,
+    high: 0.0,
+    medium: 4.0,
+    low: 1.0,
+    informational: 4.0,
+    gas: 4.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/ResearchHub_SmartContract_Final_Audit_Report.pdf",
+    date: "April 4th 2024",
+    platforms: ["ETH", "Base"],
+    language: "Solidity",
   },
   {
-    imageSrc: "images/wasset.svg",
-    imageAlt: "a",
-    name: "Wasset",
-    type: "Smart Contract Audit",
-    date: "15 Feb 2024",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Wasset_Final_Audit_Report.pdf",
+    company_name: "Lync",
+    logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Lync Network.svg",
+    total_bugs: 26,
+    crictal: 1.0,
+    high: 0.0,
+    medium: 4.0,
+    low: 8.0,
+    informational: 4.0,
+    gas: 9.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Lync%20Final%20Audit%20Report.pdf",
+    date: "July 25th 2023",
+    platforms: ["ETH"],
+    language: "Solidity",
   },
   {
-    imageSrc: "images/inovatyv.svg",
-    imageAlt: "a",
-    name: "Inovatyv",
-    type: "Smart Contract Audit",
-    date: "08 Nov 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/FoundersLabFinalReport.pdf",
+    company_name: "LogX Token",
+    logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/LogX Token.svg",
+    total_bugs: 19,
+    crictal: 3.0,
+    high: 2.0,
+    medium: 2.0,
+    low: 4.0,
+    informational: 1.0,
+    gas: 7.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/LogX_Token_Final_Report.pdf",
+    date: "April 15th 2024",
+    platforms: ["ETH"],
+    language: "Solidity",
   },
   {
-    imageSrc: "images/capitalrock.svg",
-    imageAlt: "Capital Rock",
-    name: "Capital Rock",
-    type: "Smart Contract Audit",
-    date: "11 Sep 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Capital_Rock_Final_Audit_report.pdf",
-  },
-  {
-    imageSrc: "images/coin-gabbar.svg",
-    imageAlt: "Coin Gabbar",
-    name: "Coin Gabbar",
-    type: "Smart Contract Audit",
-    date: "12 Jan 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/CoinGabbarAudit.pdf",
-  },
-  {
-    imageSrc: "images/archethic.svg",
-    imageAlt: "Archethic Foundation",
-    name: "Archethic Foundation",
-    type: "Smart Contract Audit",
-    date: "16 Oct 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Archethic_Bridge_Contracts_SC_Final_Report.pdf",
-  },
-  {
-    imageSrc: "images/9mm.svg",
-    imageAlt: "9mm",
-    name: "9mm",
-    type: "Smart Contract Audit",
-    date: "15 Oct 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/9mm_audit_report.pdf",
-  },
-  {
-    imageSrc: "images/devo.svg",
-    imageAlt: "DEVO Protocol",
-    name: "DEVO Protocol",
-    type: "Smart Contract Audit",
-    date: "10 Nov 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/DeVoTokenFinalReport.pdf",
-  },
-  {
-    imageSrc: "images/spstake.svg",
-    imageAlt: "PStake Finance",
-    name: "PStake Finance",
-    type: "Smart Contract Audit",
-    date: "20 June 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Final%20Report%20pStake%20Smart%20Contract%20Audit.pdf",
-  },
-  {
-    imageSrc: "images/obius.svg",
-    imageAlt: "Obius",
-    name: "Obius",
-    type: "Smart Contract Audit",
-    date: "07 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Obius_SmartContract_audit.pdf",
-  },
-  {
-    imageSrc: "images/jaypeggers.svg",
-    imageAlt: "JayPeggers",
-    name: "JayPeggers",
-    type: "Smart Contract Audit",
-    date: "24 Mar 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/JayPeggers%20Final%20Audit%20Report.pdf",
-  },
-  {
-    imageSrc: "images/pepay.svg",
-    imageAlt: "PePay",
-    name: "PePay",
-    type: "Smart Contract Audit",
-    date: "21 June 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/PePay_SmartContract_Audit.pdf",
-  },
-  {
-    imageSrc: "images/rdgx.svg",
-    imageAlt: "RDGX Token",
-    name: "RDGX Token",
-    type: "Smart Contract Audit",
-    date: "04 Dec 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/RDGX_Final_Audit_report.pdf",
-  },
-  {
-    imageSrc: "images/swyp.svg",
-    imageAlt: "SWYP Foundation",
-    name: "SWYP Foundation",
-    type: "Smart Contract Audit",
-    date: "21 Sep 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/SWYP_Final_Audit_Report.pdf",
-  },
-  {
-    imageSrc: "images/solace.svg",
-    imageAlt: "Solace Protocol",
-    name: "Solace Protocol",
-    type: "Smart Contract Audit",
-    date: "30 Aug 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Solace%20Final%20Audit%20Report.pdf",
-  },
-  {
-    imageSrc: "images/stationx.svg",
-    imageAlt: "StationX",
-    name: "StationX",
-    type: "Smart Contract Audit",
-    date: "09 Oct 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/StationX_Claim_Contract_Final_Audit_Report.pdf",
-  },
-  {
-    imageSrc: "images/uniscrow.svg",
-    imageAlt: "Uniscrow",
-    name: "Uniscrow",
-    type: "Smart Contract Audit",
-    date: "27 Apr 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Uniscrow%20Final%20Audit%20Report.pdf",
-  },
-  {
-    imageSrc: "images/wahed.svg",
-    imageAlt: "Wahed Project",
-    name: "Wahed Project",
-    type: "Smart Contract Audit",
-    date: "24 Sep 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Wahed%20Token%20Final%20Report.pdf",
-  },
-  {
-    imageSrc: "images/zdh.svg",
-    imageAlt: "ZHD Coin",
-    name: "ZHD Coin",
-    type: "Smart Contract Audit",
-    date: "22 Sep 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/ZHDCoin_Final_Audit_Report.pdf",
-  },
-  {
-    imageSrc: "images/zenland.svg",
-    imageAlt: "Zenland",
-    name: "Zenland",
-    type: "Smart Contract Audit",
-    date: "07 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Zenland_SmartContract_Audit.pdf",
-  },
-  {
-    imageSrc: "images/zetachain.svg",
-    imageAlt: "Zetachain",
-    name: "Zetachain",
-    type: "Smart Contract Audit",
-    date: "14 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/ZetaSwap_Final_Audit-Report.pdf",
-  },
-  {
-    imageSrc: "images/dapp.svg",
-    imageAlt: "DappRadar",
-    name: "DappRadar",
-    type: "Smart Contract Audit",
-    date: "23 Nov 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Quest_Contract_final_audit_report.pdf",
-  },
-  {
-    imageSrc: "images/juno.svg",
-    imageAlt: "a",
-    name: "Juno Finance",
-    type: "Web Application Audit",
-    date: "23 Feb 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Juno%20Web%20Application%20Audit%20Final%20Report.pdf",
-  },
-  {
-    imageSrc: "images/numa.svg",
-    imageAlt: "Numa Money",
-    name: "Numa Money",
-    type: "Smart Contract Audit",
-    date: "30 Jan 2024",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Numa_Final_Audit_Report.pdf",
-  },
-  {
-    imageSrc: "images/noft.svg",
-    imageAlt: "Noft Games",
-    name: "Noft Games",
-    type: "Smart Contract Audit",
-    date: "05 Aug 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/Noft%20Game%20Audit%20Report.pdf",
-  },
-  {
-    imageSrc: "images/daikoku.svg",
-    imageAlt: "Daikoku",
-    name: "Daikoku",
-    type: "Smart Contract Audit",
-    date: "08 Aug 2023",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/DaiKoKu_SC_Audit_final.pdf",
-  },
-  {
-    imageSrc: "images/bb.svg",
-    imageAlt: "Buscemi Beast NFT",
-    name: "Buscemi Beast NFT",
-    type: "Smart Contract Audit",
-    date: "31 Oct 2022",
-    buttonText: "Report",
-    downloadUrl:
-      "https://raw.githubusercontent.com/Credshields/audit-reports/master/BuscemiBeats-NFT.docx.pdf",
+    company_name: "Juno AWS",
+    logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Juno Finance.svg",
+    total_bugs: 42,
+    crictal: 1.0,
+    high: 8.0,
+    medium: 8.0,
+    low: 24.0,
+    informational: 1.0,
+    gas: 0.0,
+    report_link:
+      "https://github.com/Credshields/audit-reports/blob/master/Juno_AWS_Audit_final.pdf",
+    date: "April 27th 2023",
+    platforms: ["AWS"],
+    language: "AWS",
   },
 ];
-totalPages = Math.ceil(auditFilesList.length / 6);
 
-fillAuditTable(auditFilesList.slice(0, 6));
-updatePagination();
+async function fetchAuditData() {
+  try {
+    const response = await fetch(
+      "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/audit.json"
+    );
 
-// fetch(`https://api.github.com/repos/${owner}/${repo}/contents`)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     data.forEach((file) => {
-//       const fileObj = {
-//         imageSrc: "images/solidity_scan.png",
-//         imageAlt: "a",
-//         name: file.name,
-//         type: "Web Security Audit",
-//         date: "26 Feb 2024",
-//         buttonText: "Report",
-//         downloadUrl: file.download_url,
-//       };
-//       console.log(file.download_url);
-//       auditFilesList.push(fileObj);
-//     });
-//     totalPages = Math.ceil(auditFilesList.length / 6);
-//     fillAuditTable(auditFilesList.slice(0, 6));
-//     updatePagination();
-//   })
-//   .catch((error) => console.error("Error fetching files:", error));
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    // Parse the JSON data
+    const data = await response.json();
+    const audits = data?.audits || [];
+
+    auditFilesList.push(...audits);
+
+    totalPages = Math.ceil(auditFilesList.length / 6);
+
+    // Fill the audit table and popular audits
+    fillAuditTable(auditFilesList.slice(0, 6));
+    updatePagination();
+  } catch (error) {
+    console.error("Failed to fetch audit data:", error);
+  }
+}
+
+fillPopularAudits();
+fetchAuditData();
+
+function fillPopularAudits() {
+  popularAudits.forEach((obj) => {
+    const container = document.querySelector(".popular-audits");
+    fillAuditRow(obj, container);
+  });
+}
 
 function fillAuditTable(data) {
-  const auditRows = document.querySelectorAll(".audit_row");
+  const container = document.querySelector(".recent-audits");
+  const auditRows = container.querySelectorAll(".audit-card");
   auditRows.forEach((row) => {
     row.remove();
   });
 
   data.forEach((obj) => {
-    fillAuditRow(obj);
+    fillAuditRow(obj, container);
   });
 }
 
-function fillAuditRow(data) {
-  AOS.refresh();
-  const auditRowContainer = document.createElement("div");
-  auditRowContainer.classList.add("audit_row");
-  // Create elements for each column
-  const imgCol = document.createElement("div");
-  imgCol.classList.add("audit_col_one");
-  imgCol.setAttribute("data-aos", "fade-zoom-in");
-  imgCol.setAttribute("data-aos-duration", "1000");
-  const img = document.createElement("img");
-  img.src = data.imageSrc;
-  img.alt = data.imageAlt;
-  img.classList.add("img-fluid");
-  imgCol.appendChild(img);
+function fillAuditRow(audit, container) {
+  const auditCard = document.createElement("div");
+  auditCard.classList.add("audit-card");
 
-  const nameCol = document.createElement("div");
-  nameCol.classList.add("audit_col_two");
-  nameCol.setAttribute("data-aos", "fade-zoom-in");
-  nameCol.setAttribute("data-aos-duration", "1000");
-  nameCol.textContent = data.name;
+  // Creating inner HTML using template literals
+  auditCard.innerHTML = `
+    <div>
+      <div class="audit-name-detail">
+        <div class="audit_logo">
+          <img id="auditImage" src="${
+            audit.logo
+          }" alt="" onerror="setRandomFallbackImage(this)" />
+        </div>
+        <div class="audit-name-stack">
+          <p>${audit.company_name}</p>
+          <p class="audit-type">${audit.type || ""}</p>
+        </div>
+      </div>
 
-  const typeDateCol = document.createElement("div");
-  typeDateCol.classList.add("audit_col_tf");
+      <div class="audit-details">
+        <div class="audit-detail">
+          <p>Total Bugs Found</p>
+          <p>${audit.total_bugs}</p>
+        </div>
+        <div class="audit-detail">
+          <p>Date Audited</p>
+          <p>${audit.date}</p>
+        </div>
+        <div class="audit-detail">
+          <p>Language</p>
+          <p>${audit.language || "N/A"}</p>
+        </div>
+      </div>
+    </div>
 
-  const typeCol = document.createElement("div");
-  typeCol.classList.add("audit_col_three");
-  typeCol.setAttribute("data-aos", "fade-zoom-in");
-  typeCol.setAttribute("data-aos-duration", "1000");
-  typeCol.textContent = data.type;
+    <div class="audit-vulnerability">
+      <div class="divider"></div>
+      <div>
+        <div>
+          <div class="vuln critical-vuln">
+            <p>Critical</p>
+            <div class="critical-count">
+              <div></div>
+              <p>${audit.crictal}</p>
+            </div>
+          </div>
+          <div class="vuln high-vuln">
+            <p>High</p>
+            <div class="high-count">
+              <div></div>
+              <p>${audit.high}</p>
+            </div>
+          </div>
+          <div class="vuln medium-vuln">
+            <p>Medium</p>
+            <div class="medium-count">
+              <div></div>
+              <p>${audit.medium}</p>
+            </div>
+          </div>
+          <div class="vuln low-vuln">
+            <p>Low</p>
+            <div class="low-count">
+              <div></div>
+              <p>${audit.low}</p>
+            </div>
+          </div>
+          <div class="vuln infor-vuln">
+            <p>Infor</p>
+            <div class="infor-count">
+              <div></div>
+              <p>${audit.informational}</p>
+            </div>
+          </div>
+          <div class="vuln gas-vuln">
+            <p>Gas</p>
+            <div class="gas-count">
+              <div></div>
+              <p>${audit.gas || "N/A"}</p>
+            </div>
+          </div>
+        </div>
+        <a class="audit-link" href="${
+          audit.report_link
+        }" target="_blank">View Audit Report 
+          <img class="arrow-icon" src="images/arrow-up-right.svg" alt="link" />
+        </a>
+      </div>
+    </div>
+    <div class="audit-mask">
+    </div>
+  `;
 
-  const dateCol = document.createElement("div");
-  dateCol.classList.add("audit_col_four");
-  dateCol.setAttribute("data-aos", "fade-zoom-in");
-  dateCol.setAttribute("data-aos-duration", "1000");
-  dateCol.textContent = data.date;
+  // Append the new audit card to the container
+  container.appendChild(auditCard);
+}
 
-  typeDateCol.append(typeCol);
-  typeDateCol.append(dateCol);
+function setRandomFallbackImage(imgElement) {
+  const fallbackImages = [
+    "Default Profile  01.svg",
+    "Default Profile  02.svg",
+    "Default Profile  03.svg",
+    "Default Profile  04.svg",
+    "Default Profile  05.svg",
+    "Default Profile  06.svg",
+    "Default Profile  07.svg",
+    "Default Profile  08.svg",
+    "Default Profile  09.svg",
+    "Default Profile  10.svg",
+    "Default Profile  11.svg",
+    "Default Profile  12.svg",
+    "Default Profile  13.svg",
+    "Default Profile  14.svg",
+    "Default Profile  15.svg",
+    "Default Profile  16.svg",
+    "Default Profile  17.svg",
+  ];
 
-  const buttonCol = document.createElement("div");
-  buttonCol.classList.add("audit_col_five");
-  buttonCol.classList.add("aos-init");
-  buttonCol.classList.add("aos-animate");
-  buttonCol.setAttribute("data-aos", "fade-zoom-in");
-  buttonCol.setAttribute("data-aos-duration", "1000");
+  const randomIndex = Math.floor(Math.random() * fallbackImages.length);
+  const fallbackImage = `https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/${fallbackImages[randomIndex]}`;
 
-  const link = document.createElement("a");
-  const url = data.downloadUrl;
-  link.href = url;
-  link.download = url.substring(url.lastIndexOf("/") + 1);
-  link.textContent = `${data.buttonText} `;
-
-  const downArrow = document.createElement("span");
-  downArrow.classList.add("down-arrow");
-  downArrow.textContent = ` ↓`;
-
-  link.appendChild(downArrow);
-  buttonCol.appendChild(link);
-  buttonCol.appendChild(link);
-
-  // Append columns to the row
-  auditRowContainer.appendChild(imgCol);
-  auditRowContainer.appendChild(nameCol);
-  auditRowContainer.appendChild(typeDateCol);
-  auditRowContainer.appendChild(buttonCol);
-
-  auditTableContainer.appendChild(auditRowContainer);
-  AOS.init();
+  imgElement.src = fallbackImage;
 }
 
 // Function to generate page buttons
@@ -468,3 +341,18 @@ nextButton.addEventListener("click", () => {
     updatePagination();
   }
 });
+
+function openTab(evt, tabName) {
+  const tabContents = document.querySelectorAll(".tab-content");
+  tabContents.forEach((content) => {
+    content.classList.remove("active");
+  });
+
+  const tabButtons = document.querySelectorAll(".tab-button");
+  tabButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
