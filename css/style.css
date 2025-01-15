@@ -677,7 +677,7 @@ img {
   min-height: 49px;
   background: #2e2e2e;
   border-radius: 50%;
-  padding: 5px;
+  /* padding: 5px; */
   display: flex;
   align-items: center;
   justify-content: center;
