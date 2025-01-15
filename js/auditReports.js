@@ -123,7 +123,10 @@ async function fetchAuditData() {
 
     // Parse the JSON data
     const data = await response.json();
-    const audits = data?.audits || [];
+    let audits = data?.audits || [];
+
+    // Sort audits by date (latest first)
+    audits.sort((a, b) => parseCustomDate(b.date) - parseCustomDate(a.date));
 
     auditFilesList.push(...audits);
 
@@ -139,6 +142,13 @@ async function fetchAuditData() {
 
 fillPopularAudits();
 fetchAuditData();
+
+function parseCustomDate(dateStr) {
+  const formattedDateStr = dateStr
+    .replace(/(\d+)(st|nd|rd|th)/, "$1")
+    .replace(" ", "");
+  return new Date(formattedDateStr);
+}
 
 function fillPopularAudits() {
   popularAudits.forEach((obj) => {
@@ -185,7 +195,7 @@ function fillAuditRow(audit, container) {
         </div>
         <div class="audit-detail">
           <p>Date Audited</p>
-          <p>${audit.date}</p>
+          <p>${audit.date || "-"}</p>
         </div>
         <div class="audit-detail">
           <p>Language</p>
