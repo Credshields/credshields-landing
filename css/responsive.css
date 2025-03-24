@@ -354,6 +354,10 @@
     width: 180px;
     height: 25px;
   }
+  .product_two_title img:first-child, .product_three_title img:first-child {
+    width: 22px;
+    height: 22px;
+  }
   .product_title img:last-child {
     margin-top: -12px;
   }
