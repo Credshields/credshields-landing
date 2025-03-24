@@ -141,9 +141,6 @@ img {
 
 /* header css start */
 
-.container {
-  max-width: 90%;
-}
 .header_section {
   padding-top: 10px;
   width: 100vw;
@@ -1057,7 +1054,7 @@ img {
   padding-top: 2.5rem;
   padding-left: 2.5rem;
   z-index: 1;
-  width: 100%;
+  width: 99.5%;
   height: 800px;
   overflow: hidden;
 }
