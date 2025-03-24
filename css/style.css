@@ -728,7 +728,8 @@ img {
 .audit-details {
   display: flex;
   margin-left: auto;
-  gap: 3rem;
+  justify-content: space-between;
+  width: 400px;
 }
 
 .audit-detail p {
@@ -1167,6 +1168,14 @@ img {
 .coming_soon_wrap .gradient_bg_tl {
   top: -150px;
 }
+.product-tag {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+.product_three > .product-tag {
+  color: #8a94a6;
+}
 .product_two,
 .product_three {
   display: flex;
@@ -1178,6 +1187,7 @@ img {
     0px 0px 0px 0px #00000000;
   padding: 3rem;
   z-index: 1;
+  position: relative;
 }
 .product_two h3,
 .product_three h3 {
