@@ -142,7 +142,7 @@ img {
 /* header css start */
 
 .container {
-  max-width: 1200px;
+  max-width: 90%;
 }
 .header_section {
   padding-top: 10px;
