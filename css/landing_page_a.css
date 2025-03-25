@@ -1652,10 +1652,11 @@ img {
   );
   position: absolute;
   left: 0;
-  width: 30%;
+  width: 50%;
   height: 100%;
   z-index: 2;
   transform: rotate(180deg);
+  mask: linear-gradient(to bottom, transparent 0%, #fff 10%, #fff 90%, transparent 100%);
 }
 .testimonial_right_grad {
   background: linear-gradient(
@@ -1665,9 +1666,10 @@ img {
   );
   position: absolute;
   right: 0;
-  width: 30%;
+  width: 50%;
   height: 100%;
   z-index: 2;
+  mask: linear-gradient(to bottom, transparent 0%, #fff 10%, #fff 90%, transparent 100%);
 }
 .testimonial-header {
   width: "100%";
@@ -2259,6 +2261,7 @@ img {
 }
 .social_links_con {
   height: 50px;
+  width: 50px;
   border-radius: 50%;
   background: #0e0e0e;
   border: 2px solid #0e0e0e;
@@ -2266,10 +2269,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.social_links .social_links_con {
-  height: 40px;
-  min-width: 40px;
 }
 .ftr_menu {
   display: flex;
