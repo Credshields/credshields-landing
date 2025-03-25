@@ -135,6 +135,7 @@
   .hero_container h2 {
     font-size: 28px;
     line-height: 34px;
+    margin: 1%;
   }
   .hero_container p {
     font-size: 14px;
@@ -228,6 +229,9 @@
   .kyc-reports p {
     font-size: 12px;
     line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .tab-buttons {
@@ -583,23 +587,23 @@
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .footer_links {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   .social_links {
     width: 100%;
     margin-top: 3rem;
     justify-content: flex-start;
   }
-  
+
   .social_links .social_links_con {
     margin-right: 1.5rem;
   }
-  
+
   .quick_link,
   .discover_link,
   .product_link {
@@ -648,7 +652,7 @@
     font-size: 26px;
   }
 
-  .audit-details{
+  .audit-details {
     width: unset;
   }
 }
@@ -770,7 +774,6 @@
   .investor_divider {
     transform: rotate(90deg);
   }
-  
 }
 
 /* Medium to large devices service Animation */
@@ -820,5 +823,4 @@
   .social_wrap {
     margin-top: 3%;
   }
-  
 }
