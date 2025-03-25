@@ -189,7 +189,7 @@
     margin-bottom: 3rem;
   }
 
-  .audit_overview > div:not(:first-child):not(:last-child) {
+  .audit_overview > div:not(:first-child){
     width: 100%;
     height: auto;
     padding: 1rem;
@@ -238,9 +238,9 @@
     width: 100%;
     position: sticky;
     top: 0;
-    display: unset;
+    display: flex;
+    flex-wrap: wrap;
     z-index: 1;
-    background: black;
     padding: 1rem;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -628,7 +628,7 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
-  .audit_overview > div:not(:first-child):not(:last-child) {
+  .audit_overview > div:not(:first-child) {
     width: 100%;
     height: 450px;
     padding: 1rem;

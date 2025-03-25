@@ -381,7 +381,7 @@ img {
   margin-bottom: 4rem;
 }
 
-.audit_overview > div:not(:first-child):not(:last-child) {
+.audit_overview > div:not(:first-child) {
   width: calc(50% - 0.5rem);
   height: 465px;
   display: flex;
