@@ -1443,6 +1443,8 @@ img {
 #chain-pop-lottie {
   position: absolute;
   bottom: 5%;
+  height: 50%;
+  overflow: hidden;
 }
 .above_focus {
   position: absolute;
