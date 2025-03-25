@@ -578,116 +578,32 @@
   }
 }
 
-/* @media (min-width: 768px) and (max-width: 991px) {
-  .testimonial-card {
-    min-height: 500px;
+@media (min-width: 765px) and (max-width: 1200px) {
+  .footer_container {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-
-  .testimonial-text {
-    max-height: 320px;
-  }
-} */
-
-@media (min-width: 992px) {
-  .testimonial-card {
-    min-height: 550px;
-  }
-}
-
-/* Specific styles for testimonial carousel at 1200px breakpoint */
-@media (max-width: 1200px) {
-  .testimonial-carousel .slick-slide {
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.3s ease;
-    margin: 10px;
-  }
-
-  .testimonial-carousel .slick-center {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .testimonial-card {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-
-  .carousel .slick-prev,
-  .carousel .slick-next {
-    display: block;
-    z-index: 1;
-  }
-
-  .prev-btn,
-  .next-btn {
+  
+  .footer_links {
+    width: 70%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
   }
-
-  .company_wrap,
-  .team_wrap,
-  .investor_wrap {
-    width: 92%;
-    margin: 1rem;
-    padding: 1.5rem;
+  
+  .social_links {
+    width: 100%;
+    margin-top: 3rem;
+    justify-content: flex-start;
   }
-
-  .investor_list {
-    flex-direction: column;
+  
+  .social_links .social_links_con {
+    margin-right: 1.5rem;
   }
-  .investor_divider {
-    transform: rotate(90deg);
-  }
-}
-
-/* Medium to large devices service Animation */
-@media (min-width: 700px) and (max-width: 1460px) {
-  .service_wrap {
-    height: 240px;
-    width: 240px;
-    scale: unset !important;
-  }
-
-  #blockchain_security {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  #smart_contract {
-    left: calc(50% - 390px);
-  }
-
-  #bug_bounty {
-    left: calc(50% + 390px);
-    transform: translateX(-100%);
-  }
-
-  #mobile_app {
-    left: 50%;
-    transform: translateX(-50%);
-    top: calc(4rem + 231px + 2.2rem);
-  }
-
-  #web_app {
-    left: calc(50% - 390px);
-    top: calc(4rem + 231px + 214px);
-  }
-
-  #external_network {
-    left: calc(50% + 390px);
-    transform: translateX(-100%);
-    top: calc(4rem + 231px + 214px);
-  }
-
-  .services_container {
-    max-width: 100%;
-    width: 100vw;
-  }
-
-  .social_wrap {
-    margin-top: 3%;
+  
+  .quick_link,
+  .discover_link,
+  .product_link {
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -730,6 +646,10 @@
   .telegram_container p,
   .discort_container p {
     font-size: 26px;
+  }
+
+  .audit-details{
+    width: unset;
   }
 }
 
@@ -796,4 +716,109 @@
     margin: 1rem;
     padding: 1.5rem;
   }
+}
+
+@media (min-width: 992px) {
+  .testimonial-card {
+    min-height: 550px;
+  }
+}
+
+/* Specific styles for testimonial carousel at 1200px breakpoint */
+@media (max-width: 1200px) {
+  .testimonial-carousel .slick-slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    margin: 10px;
+  }
+
+  .testimonial-carousel .slick-center {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .testimonial-card {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .carousel .slick-prev,
+  .carousel .slick-next {
+    display: block;
+    z-index: 1;
+  }
+
+  .prev-btn,
+  .next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .company_wrap,
+  .team_wrap,
+  .investor_wrap {
+    width: 92%;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .investor_list {
+    flex-direction: column;
+  }
+  .investor_divider {
+    transform: rotate(90deg);
+  }
+  
+}
+
+/* Medium to large devices service Animation */
+@media (min-width: 700px) and (max-width: 1460px) {
+  .service_wrap {
+    height: 240px;
+    width: 240px;
+    scale: unset !important;
+  }
+
+  #blockchain_security {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #smart_contract {
+    left: calc(50% - 390px);
+  }
+
+  #bug_bounty {
+    left: calc(50% + 390px);
+    transform: translateX(-100%);
+  }
+
+  #mobile_app {
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(4rem + 231px + 2.2rem);
+  }
+
+  #web_app {
+    left: calc(50% - 390px);
+    top: calc(4rem + 231px + 214px);
+  }
+
+  #external_network {
+    left: calc(50% + 390px);
+    transform: translateX(-100%);
+    top: calc(4rem + 231px + 214px);
+  }
+
+  .services_container {
+    max-width: 100%;
+    width: 100vw;
+  }
+
+  .social_wrap {
+    margin-top: 3%;
+  }
+  
 }

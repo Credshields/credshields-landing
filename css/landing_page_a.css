@@ -2324,8 +2324,8 @@ img {
   justify-content: center;
 }
 .social_links .social_links_con {
-  width: 100%;
   height: 60px;
+  min-width: 60px;
 }
 .ftr_menu {
   display: flex;
