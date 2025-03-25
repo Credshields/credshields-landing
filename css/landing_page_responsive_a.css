@@ -538,39 +538,12 @@
     margin-bottom: 0.5rem;
   }
 
-  .testimonial-card {
-    margin-bottom: 20px;
-    height: auto;
-    min-height: 450px;
-  }
-
-  .testimonial-text {
-    max-height: 300px;
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .testimonial-footer {
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-
   .testimonial-name {
     font-size: 16px;
   }
 
   .testimonial-des {
     font-size: 12px;
-  }
-
-  .testimonial-header {
-    height: 40px;
-    max-height: 40px;
-    margin-bottom: 1rem;
-  }
-
-  .testimonial-header img {
-    max-width: 150px;
   }
 
   .social_wrap {
@@ -606,7 +579,6 @@
     margin-bottom: 1.5rem;
   }
 }
-
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -746,43 +718,8 @@
   }
 }
 
-@media (min-width: 992px) {
-  .testimonial-card {
-    min-height: 550px;
-  }
-}
-
 /* Specific styles for testimonial carousel at 1200px breakpoint */
 @media (max-width: 1200px) {
-  .testimonial-carousel .slick-slide {
-    opacity: 1;
-    transform: scale(1);
-    transition: all 0.3s ease;
-    margin: 10px;
-  }
-
-  .testimonial-carousel .slick-center {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .testimonial-card {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-
-  .carousel .slick-prev,
-  .carousel .slick-next {
-    display: block;
-    z-index: 1;
-  }
-
-  .prev-btn,
-  .next-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   .company_wrap,
   .team_wrap,
@@ -852,3 +789,7 @@
     margin-top: 3%;
   }
 }
+
+
+
+
