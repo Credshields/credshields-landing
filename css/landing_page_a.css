@@ -1652,11 +1652,18 @@ img {
   );
   position: absolute;
   left: 0;
-  width: 50%;
+  width: 35%;
   height: 100%;
   z-index: 2;
   transform: rotate(180deg);
-  mask: linear-gradient(to bottom, transparent 0%, #fff 10%, #fff 90%, transparent 100%);
+  -webkit-mask: 
+        linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%), /* More gradual top/bottom fade */
+        linear-gradient(to right, #fff 0%, #fff 70%, transparent 100%); /* More gradual right edge fade */
+    mask: 
+        linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%),
+        linear-gradient(to right, #fff 0%, #fff 70%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
 }
 .testimonial_right_grad {
   background: linear-gradient(
@@ -1666,10 +1673,17 @@ img {
   );
   position: absolute;
   right: 0;
-  width: 50%;
+  width: 35%;
   height: 100%;
   z-index: 2;
-  mask: linear-gradient(to bottom, transparent 0%, #fff 10%, #fff 90%, transparent 100%);
+  -webkit-mask: 
+  linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%), /* More gradual top/bottom fade */
+  linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%); /* More gradual left edge fade */
+mask: 
+  linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%),
+  linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%);
+-webkit-mask-composite: source-in;
+mask-composite: intersect;
 }
 .testimonial-header {
   width: "100%";
