@@ -223,9 +223,9 @@ img {
   justify-content: center;
   margin-top: 3.5rem;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 .hero_container .awards img {
-  margin-right: 4rem;
   height: 90px;
 }
 .hero_footer {
@@ -1175,8 +1175,7 @@ img {
     background-color: #d197ff;
   }
 }
-.products_one_container .gradient_bg_tr {
-  left: 650px;
+.products_one_container {
   right: 0;
 }
 .product_one_stick {
@@ -1193,9 +1192,6 @@ img {
   width: 100%;
   margin-top: 2.5rem;
   position: relative;
-}
-.coming_soon_wrap .gradient_bg_tl {
-  top: -150px;
 }
 .product-tag {
   position: absolute;
@@ -1382,10 +1378,6 @@ img {
 }
 #services_con_static {
   display: none;
-}
-.services_container .gradient_bg_tr {
-  top: -400px;
-  right: -500px;
 }
 .service_wrap {
   background: #18181b80;
@@ -1642,7 +1634,7 @@ img {
   width: 100vw;
   margin: 5rem 0;
 }
-.testimonial_section .gradient_bg_tr {
+.testimonial_section {
   z-index: 1;
   top: -400px;
   right: -550px;
@@ -1791,7 +1783,7 @@ img {
   width: 100vw;
   margin: 4rem 0;
 }
-.about_us_section .gradient_bg_bl {
+.about_us_section {
   bottom: -400px;
   left: -550px;
   opacity: 1;
@@ -1857,7 +1849,7 @@ img {
 .our_partners_section .col-lg-4 {
   height: 125px;
 }
-.our_partners_section .gradient_bg_tr {
+.our_partners_section {
   top: -600px;
 }
 .partner_company {
@@ -2022,9 +2014,6 @@ img {
   margin: 5rem 0;
   position: relative;
   z-index: 1;
-}
-.custom_contact_bg .gradient_bg_tr {
-  top: -250px;
 }
 .contact_seach {
   display: flex;
@@ -2234,28 +2223,6 @@ img {
 }
 /* contact css end */
 
-.gradient_bg_tr {
-  position: absolute;
-  top: -300px;
-  right: -600px;
-  pointer-events: none;
-}
-
-.gradient_bg_tl {
-  position: absolute;
-  top: -480px;
-  left: -360px;
-  opacity: 50%;
-  pointer-events: none;
-}
-.gradient_bg_bl {
-  position: absolute;
-  bottom: -200px;
-  left: -360px;
-  opacity: 50%;
-  pointer-events: none;
-}
-
 /* footer css start */
 .footer_section {
   padding: 20px 0px;
@@ -2271,7 +2238,7 @@ img {
   margin-top: 2rem;
   overflow: hidden;
 }
-.footer_container .gradient_bg_tl {
+.footer_container {
   opacity: 1;
   left: -450px;
   top: 0;
