@@ -264,6 +264,7 @@
     margin-left: 0;
     margin-top: 1rem;
     gap: 1.5rem;
+    width: 100%;
   }
 
   .audit-detail {
@@ -285,6 +286,7 @@
   .audit-vulnerability > div {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .vuln > p {
@@ -385,13 +387,6 @@
     margin-left: 0;
     margin-top: 2rem;
   }
-  .company_wrap,
-  .team_wrap,
-  .investor_wrap {
-    width: 92%;
-    margin: 1rem;
-    padding: 1.5rem;
-  }
   .company_wrap p,
   .team_wrap p {
     font-size: 14px;
@@ -400,7 +395,7 @@
     flex-direction: column;
   }
   .investor_con {
-    margin-bottom: 2rem;
+    padding-top: 1.2rem;
   }
   .investor_divider {
     transform: rotate(90deg);
@@ -549,6 +544,15 @@
   .social_wrap {
     margin-top: unset;
   }
+
+  .founder {
+    flex-wrap: wrap;
+  }
+
+  .founder > div {
+    margin-top: 2rem;
+    margin-left: 0px;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
@@ -619,10 +623,6 @@
   .telegram_container p,
   .discort_container p {
     font-size: 26px;
-  }
-
-  .audit-details {
-    width: unset;
   }
 }
 
@@ -720,13 +720,17 @@
 
 /* Specific styles for testimonial carousel at 1200px breakpoint */
 @media (max-width: 1200px) {
-
   .company_wrap,
   .team_wrap,
   .investor_wrap {
     width: 92%;
     margin: 1rem;
     padding: 1.5rem;
+  }
+
+  .investor_wrap {
+    padding-bottom: 5rem;
+    border: 1px solid white;
   }
 
   .investor_list {
@@ -789,7 +793,3 @@
     margin-top: 3%;
   }
 }
-
-
-
-

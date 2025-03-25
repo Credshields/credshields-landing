@@ -777,7 +777,7 @@ img {
 .audit-vulnerability > div > div {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .vuln > p {
@@ -1647,7 +1647,7 @@ img {
   );
   position: absolute;
   left: 0;
-  width: 50%;
+  width: 30%;
   height: 100%;
   z-index: 2;
   transform: rotate(180deg);
@@ -1660,7 +1660,7 @@ img {
   );
   position: absolute;
   right: 0;
-  width: 50%;
+  width: 30%;
   height: 100%;
   z-index: 2;
 }
