@@ -88,7 +88,7 @@
   .serv_hero_txt h3,
   .contact_head h2,
   .products_head h2 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 32px;
   }
   .contact_head h6,
@@ -133,7 +133,7 @@
     font-size: 12px;
   }
   .hero_container h2 {
-    font-size: 28px;
+    font-size: 35px;
     line-height: 34px;
     margin: 1%;
   }
@@ -166,13 +166,13 @@
   .products_head .row {
     align-items: center;
     justify-content: center;
+    gap: 0px;
   }
   .products_head h2 {
     margin-bottom: 0.5rem;
   }
   .products_head .part_one {
     margin-right: 0;
-    margin-left: 1rem;
   }
   .products_head .part_two {
     margin-right: 0;

@@ -52,6 +52,9 @@ a:hover {
 img {
   vertical-align: middle;
 }
+.white_text{
+  color: white;
+}
 
 @keyframes pulse-ring {
   0% {
@@ -1004,11 +1007,11 @@ img {
 
 .products_head .row {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   text-align: center;
+  gap: 2%;
 }
 
 .products_head .part_one {
