@@ -52,7 +52,7 @@ a:hover {
 img {
   vertical-align: middle;
 }
-.white_text{
+.white_text {
   color: white;
 }
 
@@ -2268,8 +2268,8 @@ img {
   justify-content: center;
 }
 .social_links .social_links_con {
-  height: 60px;
-  min-width: 60px;
+  height: 40px;
+  min-width: 40px;
 }
 .ftr_menu {
   display: flex;
@@ -2710,4 +2710,49 @@ section,
   background: transparent !important;
   opacity: 0 !important;
   visibility: hidden !important;
+}
+
+/* Gradient Background Elements */
+.fixed_bg_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gradient_bg_tr {
+  position: absolute;
+  top: -400px;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  opacity: 1;
+}
+
+.gradient_bg_tl {
+  position: absolute;
+  top: 100px;
+  left: -300px;
+  width: 600px;
+  height: 600px;
+  opacity: 1;
+}
+
+.gradient_bg_bl {
+  position: absolute;
+  bottom: 300px;
+  right: 209px;
+  width: 600px;
+  height: 600px;
+  opacity: 1;
+}
+
+.gradient_bg_tr img,
+.gradient_bg_tl img,
+.gradient_bg_bl img {
+  object-fit: cover;
 }
