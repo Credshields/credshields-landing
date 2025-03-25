@@ -572,6 +572,10 @@
   .testimonial-header img {
     max-width: 150px;
   }
+
+  .social_wrap {
+    margin-top: unset;
+  }
 }
 
 /* @media (min-width: 768px) and (max-width: 991px) {
@@ -681,6 +685,10 @@
     max-width: 100%;
     width: 100vw;
   }
+
+  .social_wrap {
+    margin-top: 3%;
+  }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -717,6 +725,11 @@
   .contact_sec,
   .footer_sec {
     padding: 60px 0;
+  }
+
+  .telegram_container p,
+  .discort_container p {
+    font-size: 26px;
   }
 }
 
