@@ -1644,28 +1644,9 @@ img {
   top: -400px;
   right: -550px;
 }
+
+.testimonial_right_grad,
 .testimonial_left_grad {
-  background: linear-gradient(
-    270.95deg,
-    #000000 6.68%,
-    rgba(0, 0, 0, 0) 103.81%
-  );
-  position: absolute;
-  left: 0;
-  width: 35%;
-  height: 100%;
-  z-index: 2;
-  transform: rotate(180deg);
-  -webkit-mask: 
-        linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%), /* More gradual top/bottom fade */
-        linear-gradient(to right, #fff 0%, #fff 70%, transparent 100%); /* More gradual right edge fade */
-    mask: 
-        linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%),
-        linear-gradient(to right, #fff 0%, #fff 70%, transparent 100%);
-    -webkit-mask-composite: source-in;
-    mask-composite: intersect;
-}
-.testimonial_right_grad {
   background: linear-gradient(
     270.95deg,
     #000000 6.68%,
@@ -1676,14 +1657,30 @@ img {
   width: 35%;
   height: 100%;
   z-index: 2;
-  -webkit-mask: 
-  linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%), /* More gradual top/bottom fade */
-  linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%); /* More gradual left edge fade */
-mask: 
-  linear-gradient(to bottom, transparent 0%, #fff 20%, #fff 80%, transparent 100%),
-  linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%);
--webkit-mask-composite: source-in;
-mask-composite: intersect;
+  -webkit-mask: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #fff 20%,
+      #fff 80%,
+      transparent 100%
+    ),
+    /* More gradual top/bottom fade */
+      linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%); /* More gradual left edge fade */
+  mask: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #fff 20%,
+      #fff 80%,
+      transparent 100%
+    ),
+    linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.testimonial_left_grad {
+  left: 0;
+  transform: rotate(180deg);
 }
 .testimonial-header {
   width: "100%";
