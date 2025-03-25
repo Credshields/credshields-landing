@@ -1,5 +1,5 @@
 /* Extra small devices (portrait phones, less than 576px) */
-@media (min-width: 320px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar-brand img {
     height: 40px;
   }
@@ -607,6 +607,7 @@
   }
 }
 
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   /* Ensure section headings are centered on mobile */
@@ -730,6 +731,18 @@
   }
   .numbers_sec p {
     margin-top: 0.5rem;
+  }
+
+  .navbar-light .navbar-toggler {
+    display: block;
+    border-color: transparent;
+  }
+  .navbar-light .navbar-toggler:focus {
+    outline: inherit;
+  }
+  .navbar-light .navbar-toggler span {
+    font-size: 30px;
+    color: white;
   }
 }
 
