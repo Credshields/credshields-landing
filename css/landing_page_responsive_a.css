@@ -765,6 +765,10 @@
     padding: 2rem 1rem;
     flex-direction: column;
   }
+
+  .header_section > .container {
+    max-width: 95%;
+  }
 }
 
 /* Medium to large devices service Animation */
