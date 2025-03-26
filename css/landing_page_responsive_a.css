@@ -558,6 +558,11 @@
     width: 20%;
     height: 30vh;
   }
+
+  .social_links_con{
+    height: 40px;
+    width: 40px;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
