@@ -194,7 +194,7 @@ img {
 }
 .hero_container {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: calc(75vh - 80px);
   padding-top: 120px;
   display: flex;
   flex-direction: column;

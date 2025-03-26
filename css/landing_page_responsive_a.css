@@ -771,6 +771,12 @@
   }
 }
 
+@media (min-width : 1200px){
+  .hero_container {
+    padding-top: 50px;
+  }
+}
+
 /* Medium to large devices service Animation */
 @media (min-width: 700px) and (max-width: 1460px) {
   .service_wrap {
