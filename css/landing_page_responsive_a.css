@@ -553,6 +553,11 @@
     margin-top: 2rem;
     margin-left: 0px;
   }
+
+  .gradient_bg_tr, .gradient_tl, .gradient_bl{
+    width: 20%;
+    height: 30vh;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {

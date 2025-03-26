@@ -1638,11 +1638,13 @@ img {
   padding: 100px 0px;
   width: 100vw;
   margin: 5rem 0;
-}
-.testimonial_section {
   z-index: 1;
   top: -400px;
   right: -550px;
+}
+
+.testimonial_section > .container {
+  position: relative;
 }
 
 .testimonial_right_grad,
@@ -1654,8 +1656,9 @@ img {
   );
   position: absolute;
   right: 0;
+  bottom: 84px;
   width: 35%;
-  height: 80%;
+  height: 68%;
   z-index: 2;
   -webkit-mask: linear-gradient(
       to bottom,
@@ -1681,6 +1684,7 @@ img {
 .testimonial_left_grad {
   left: 0;
   transform: rotate(180deg);
+  top: 200px;
 }
 .testimonial-header {
   width: "100%";
