@@ -3,18 +3,42 @@ $(document).ready(function () {
 
   $carousel.slick({
     centerMode: true,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    infinite: false,
-    arrows: true,
+    centerPadding: "30px",
+    slidesToShow: 1,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    cssEase: 'ease-in-out',
+    variableWidth: true,
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "30px",
+          slidesToShow: 1,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "30px",
+          slidesToShow: 1,
+          variableWidth: true,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
-          slidesToShow: 3,
+          centerPadding: "30px",
+          slidesToShow: 1,
+          variableWidth: true,
         },
       },
       {
@@ -22,15 +46,13 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "20px",
           slidesToShow: 1,
+          variableWidth: true,
         },
       },
     ],
   });
-
-  // Set initial slides to be 2, 3, and 4
-  $carousel.slick("slickGoTo", 2);
 
   // Click handlers for custom next and previous buttons
   $(".prev-btn").click(function () {
