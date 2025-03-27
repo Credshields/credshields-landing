@@ -194,14 +194,40 @@ img {
 }
 .hero_container {
   width: 100%;
-  height: calc(75vh - 80px);
-  padding-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-height: 1100px;
 }
+
+
+/* In case someone want to check horizontal and vertical line */
+/* 
+.testimonial-carousel::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: translateY(-50%);
+}
+
+
+.testimonial-carousel::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: white;
+  transform: translateX(-50%);
+} 
+ */
+
 .hero_container h2 {
   font-style: normal;
   font-weight: 400;
@@ -1655,10 +1681,11 @@ img {
     rgba(0, 0, 0, 0) 103.81%
   );
   position: absolute;
-  right: 0;
-  bottom: 84px;
+  right: 20px;
+  bottom: 90px;
   width: 35%;
-  height: 68%;
+  height: 66%;
+  border-radius: 30px;
   z-index: 2;
   -webkit-mask: linear-gradient(
       to bottom,
@@ -1682,7 +1709,7 @@ img {
 }
 
 .testimonial_left_grad {
-  left: 0;
+  left: 20px;
   transform: rotate(180deg);
   top: 200px;
 }
@@ -1708,7 +1735,7 @@ img {
   border-radius: 16px;
   border: 1px solid #2c2c2c;
   height: auto;
-  margin: 0 20px;
+  margin: 0 5px;
   box-sizing: border-box;
   width: 360px !important;
 }
@@ -2703,6 +2730,7 @@ section,
 
 .testimonial-carousel .slick-list {
   overflow: hidden;
+  border-radius: 20px;
 }
 
 /* Hide default slick arrow buttons text */
