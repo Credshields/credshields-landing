@@ -760,12 +760,6 @@
   .header_section > .container {
     max-width: 95%;
   }
-  .testimonial_right_grad {
-    right: 15px;
-  }
-  .testimonial_left_grad {
-    left: 15px;
-  }
 }
 
 @media (min-width: 1200px) {
