@@ -1675,43 +1675,21 @@ img {
 
 .testimonial_right_grad,
 .testimonial_left_grad {
-  background: linear-gradient(
-    270.95deg,
-    #000000 6.68%,
-    rgba(0, 0, 0, 0) 103.81%
-  );
+  background: linear-gradient(270deg, #000000 6.68%, rgba(0, 0, 0, 0) 103.81%);
   position: absolute;
-  right: 20px;
-  bottom: 90px;
-  width: 35%;
-  height: 66%;
-  border-radius: 30px;
+  right: -1px;
+  bottom: 94px;
+  width: 33%;
+  height: 84%;
+  border-radius: 16px;
   z-index: 2;
-  -webkit-mask: linear-gradient(
-      to bottom,
-      transparent 0%,
-      #fff 20%,
-      #fff 80%,
-      transparent 100%
-    ),
-    /* More gradual top/bottom fade */
-      linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%); /* More gradual left edge fade */
-  mask: linear-gradient(
-      to bottom,
-      transparent 0%,
-      #fff 20%,
-      #fff 80%,
-      transparent 100%
-    ),
-    linear-gradient(to left, #fff 0%, #fff 70%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
 }
 
 .testimonial_left_grad {
-  left: 20px;
+  left: -1px;
   transform: rotate(180deg);
-  top: 200px;
+  top: 19px;
+  height: 84%;
 }
 .testimonial-header {
   width: "100%";
