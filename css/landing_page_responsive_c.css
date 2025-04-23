@@ -565,6 +565,13 @@
     height: 40px;
     width: 40px;
   }
+
+  .manual_audit_section img{
+    display: none;
+  }
+  .manual_audit_section p{
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
@@ -729,6 +736,13 @@
   .header_section .form-inline a,
   .hero_btn {
     margin-left: 0px;
+  }
+  .manual_audit_section img{
+    display: none;
+  }
+
+  .manual_audit_section p{
+    max-width: 100%;
   }
 }
 
