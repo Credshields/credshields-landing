@@ -199,6 +199,7 @@ img {
   align-items: center;
   justify-content: center;
   max-height: 1100px;
+  margin-top: -20px;
 }
 
 
@@ -1409,6 +1410,8 @@ img {
   display: none;
 }
 .service_wrap {
+  position: relative; /* ensure hover works for child */
+
   background: #18181b80;
   box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
     0px 0px 0px 0px #00000000;
@@ -1432,11 +1435,16 @@ img {
   width: 200%;
   height: 200%;
 }
+.service_wrap:hover .view-details-link {
+  display: flex;
+  margin-top: 10px;
+}
+
 .service_wrap p {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 36px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   text-align: center;
   color: #8a94a6;
   z-index: 1;
@@ -1444,7 +1452,11 @@ img {
 }
 .service_wrap img {
   z-index: 1;
+  max-width: 60%;
 }
+
+
+
 .services_focus {
   position: absolute;
   top: calc(4rem + 215px);
@@ -1463,6 +1475,17 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.view-details-link {
+  display: none;
+  transition: opacity 0.3s;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.view-details-link > img {
+  margin-left: unset;
 }
 .logo_focus {
   position: absolute;
@@ -1508,7 +1531,7 @@ img {
   top: calc(4rem + 180px);
   left: 20%;
 }
-#smart_contract img {
+#smart_contract img :first-child {
   margin-left: 15px;
 }
 #mobile_app {
@@ -1516,7 +1539,7 @@ img {
   top: calc(4rem + 231px + 1.2rem);
   left: calc(50% - 138px);
 }
-#mobile_app img {
+#mobile_app img:first-child {
   margin-left: -18px;
 }
 #bug_bounty {
@@ -1524,7 +1547,7 @@ img {
   top: calc(4rem + 180px);
   left: calc(20% + 280px + 280px + 2.2rem);
 }
-#bug_bounty img {
+#bug_bounty img :first-child {
   margin-left: 15px;
 }
 #web_app {
@@ -1532,7 +1555,7 @@ img {
   top: calc(4rem + 231px + 200px);
   left: 20%;
 }
-#web_app img {
+#web_app img :first-child {
   margin-left: 20px;
 }
 #external_network {
@@ -1540,7 +1563,7 @@ img {
   top: calc(4rem + 231px + 200px);
   left: calc(20% + 280px + 280px + 2.2rem);
 }
-#external_network img {
+#external_network img :first-child {
   margin-left: 20px;
 }
 .serv_boxs_wrap {
@@ -2013,6 +2036,8 @@ img {
   margin: 5rem 0;
   position: relative;
   z-index: 1;
+  display: flex;
+  gap: 150px;
 }
 .contact_seach {
   display: flex;
@@ -2084,6 +2109,7 @@ img {
 }
 .contact_support {
   display: flex;
+  flex-direction: column;
 }
 .hstack {
   display: flex;
@@ -2092,6 +2118,68 @@ img {
 .hstack p {
   margin: 0.8rem;
 }
+
+/* Manual Audit Section Styles */
+.manual_audit_section {
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background: 
+    /* Blue gradient at top left - using the correct colors from Image 1 */
+    radial-gradient(circle at top left, rgba(24, 75, 255, 0.15) 0%, rgba(23, 74, 255, 0) 70%),
+    /* Green gradient at bottom right - using the correct color from Image 2 */
+    radial-gradient(circle at bottom right, rgba(172, 240, 198, 0.2) 0%, rgba(172, 240, 198, 0) 60%),
+    /* Main dark background */
+    black;
+}
+
+.manual_audit_section img{
+  max-width: 125px;
+}
+
+.manual_audit_section h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.manual_audit_section p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #B0B7C3;
+  margin-bottom: 2.5rem;
+  max-width: 80%;
+  margin-top: 1rem;
+}
+
+.audit_button_container {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.audit_button {
+  display: flex;
+  background: linear-gradient(127.09deg, rgba(157, 255, 237, 0.93) 0.95%, rgba(194, 255, 189, 0.93) 98.62%);
+  color: black;
+  align-items: center;
+  justify-content: center;
+  width: 227px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.audit_button:hover {
+  background: rgba(157, 255, 237, 0.3);
+}
+
 .contact_wrap_boxs {
   text-align: center;
   margin-top: 40px;
@@ -2226,8 +2314,7 @@ img {
 .footer_section {
   padding: 20px 0px;
   position: relative;
-  margin-top: -500px;
-  padding-top: 500px;
+  margin-top: 150px;
   overflow-y: hidden;
 }
 .footer_container {
