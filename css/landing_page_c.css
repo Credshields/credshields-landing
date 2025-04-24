@@ -199,6 +199,7 @@ img {
   align-items: center;
   justify-content: center;
   max-height: 1100px;
+  margin-top: -20px;
 }
 
 
@@ -1409,6 +1410,8 @@ img {
   display: none;
 }
 .service_wrap {
+  position: relative; /* ensure hover works for child */
+
   background: #18181b80;
   box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
     0px 0px 0px 0px #00000000;
@@ -1432,11 +1435,16 @@ img {
   width: 200%;
   height: 200%;
 }
+.service_wrap:hover .view-details-link {
+  display: flex;
+  margin-top: 10px;
+}
+
 .service_wrap p {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   line-height: 36px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   text-align: center;
   color: #8a94a6;
   z-index: 1;
@@ -1446,6 +1454,9 @@ img {
   z-index: 1;
   max-width: 60%;
 }
+
+
+
 .services_focus {
   position: absolute;
   top: calc(4rem + 215px);
@@ -1465,10 +1476,14 @@ img {
   align-items: center;
   justify-content: center;
 }
-.view-details-link{
+.view-details-link {
+  display: none;
+  transition: opacity 0.3s;
+
   font-size: 14px;
   cursor: pointer;
 }
+
 .view-details-link > img {
   margin-left: unset;
 }
@@ -2021,6 +2036,8 @@ img {
   margin: 5rem 0;
   position: relative;
   z-index: 1;
+  display: flex;
+  gap: 150px;
 }
 .contact_seach {
   display: flex;

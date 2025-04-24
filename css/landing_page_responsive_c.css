@@ -81,6 +81,9 @@
   .cookies_txt p {
     margin-bottom: 10px;
   }
+  .contact_head{
+    padding-left: 20px;
+  }
   .contact_head p,
   .products_head p {
     width: 100%;
@@ -566,11 +569,19 @@
     width: 40px;
   }
 
+  .manual_audit_section {
+    margin-top: 50px;
+  }
+
   .manual_audit_section img{
     display: none;
   }
   .manual_audit_section p{
     max-width: 100%;
+  }
+
+  .custom_contact_bg{
+    display: block;
   }
 }
 
@@ -743,6 +754,16 @@
 
   .manual_audit_section p{
     max-width: 100%;
+  }
+
+  .custom_contact_bg{
+    display: block;
+  }
+  .contact_head{
+    padding-left: 20px;
+  }
+  .manual_audit_section {
+    margin-top: 50px;
   }
 }
 
