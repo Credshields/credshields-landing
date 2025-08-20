@@ -393,6 +393,24 @@ img {
 }
 /* cookies css end */
 
+/* privacy policy list styling */
+.list_privacy {
+  list-style-type: disc !important;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.list_item_privacy {
+  color: #979797 !important;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 8px;
+  display: list-item;
+}
+
 .audits_sec {
   padding: 100px 0px;
   width: 100vw;
