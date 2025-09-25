@@ -102,6 +102,10 @@
   .company_wrapss {
     width: 100%;
   }
+  .company_wrapss img {
+    width: 90px;
+    height: 25px;
+  }
   .contact_seach input {
     width: 100%;
   }
@@ -849,5 +853,111 @@
 
   .social_wrap {
     margin-top: 3%;
+  }
+}
+
+/* Partners Section Responsive */
+@media (max-width: 1599px) {
+  .partners-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1399px) {
+  .partners-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1199px) {
+  .partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .partner-item {
+    height: 70px;
+  }
+  
+  .partner-logo {
+    max-height: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .partner-item {
+    height: 60px;
+    padding: 10px;
+  }
+  
+  .partner-logo {
+    max-height: 22px;
+  }
+  
+  .section-title h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .our_partners_section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .partner-item {
+    height: 50px;
+    padding: 8px;
+  }
+  
+  .partner-logo {
+    max-height: 18px;
+  }
+  
+  .section-title h2 {
+    font-size: 24px;
+  }
+  
+  .our_partners_section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 15px;
+  }
+  
+  .partner-item {
+    height: 45px;
+    padding: 5px;
+  }
+  
+  .partner-logo {
+    max-height: 16px;
+  }
+  
+  .section-title h2 {
+    font-size: 22px;
   }
 }
