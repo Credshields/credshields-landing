@@ -148,6 +148,8 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    padding-right: unset;
+    text-align: center;
   }
   .hero_container .awards {
     flex-direction: column;
@@ -587,6 +589,11 @@
   .custom_contact_bg{
     display: block;
   }
+
+  .hero_section_btn_container{
+    justify-content: center;
+    gap: 20px;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
@@ -647,6 +654,12 @@
   .discort_container p {
     font-size: 26px;
   }
+
+  .how_we_protect_card_img_box{
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+  
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -859,7 +872,7 @@
 /* Partners Section Responsive */
 @media (max-width: 1599px) {
   .partners-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
 }
 
