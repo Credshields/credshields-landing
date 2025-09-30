@@ -61,6 +61,8 @@
     <!-- Custom Css file Start -->
     <link rel="stylesheet" href="css/landing_page_d_upgrade.css" />
     <link rel="stylesheet" href="css/landing_page_responsive_d_upgrade.css" />
+    <link rel="stylesheet" href="css/landing_page_d.css" />
+    <link rel="stylesheet" href="css/landing_page_responsive_d.css" />
 
     <style>
         @font-face {
@@ -336,36 +338,20 @@
     <!-- header section end -->
 
     <!-- hero section start  -->
-    <section class="home_hero_section">
+    <section class="why_cres_shields_section" id="why_creshields_sec">
         <div class="container pos_relative">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="hero_container" id="hero_con">
-                            <h2 class="color_primary">
-                                Who We Are
-                            </h2>
-                            <img src="images/styled_divider_horizontal.svg" alt="styled_divider"
-                                class="display_none_768" />
+            <div class="non_hero_title">
+                <h2 class="part_one" style="color: white;">Who We Are</h2>
 
-                            <h4 style="margin-top: 100px;">Redefiners of Security for Web3 & Enterprises</h4>
-                            <p style="text-align: left;">
-                                At CredShields, we don’t just react to hacks, we predict and prevent them. Since 2021,
-                                our mission has been clear: to secure the future of digital innovation by combining AI
-                                intelligence, human expertise, and compliance-driven security frameworks.
-                            </p>
-                        </div>
-
-                        <div class="hero_section_btn_container" style="margin-top: 50px;">
-                            <button class="clean_btn_style">
-                                <img src="images/explore_our_solution_btn.svg" alt="hero_btn_1" class="img-fluid">
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <h3 style="width: 100%; text-align: left; margin-top: 50px;">Redefiners of Security for Web3 & Enterprises</h3>
+                <p>
+                    At CredShields, we don’t just react to hacks, we predict and prevent them. Since 2021, our mission has been clear: to secure the future of digital innovation by combining AI intelligence, human expertise, and compliance-driven security frameworks.
+                </p>
             </div>
-        </div>
+            <button class="clean_btn_style">
+                <img src="images/explore_our_solution_btn.svg" alt="hero_btn_1" class="img-fluid">
+            </button>
         </div>
     </section>
     <!-- hero section end  -->
@@ -448,70 +434,15 @@
     <section class="about_us_section" id="about_sec">
 		<div class="container pos_relative">
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="products_head">
-						<div class="row">
-							<h2 class="part_one">About <span class="white_text">Us</span></h2>
-						</div>
-						<p>Our Journey, Our Promise</p>
-					</div>
-				</div>
-			</div>
+			<div class="non_hero_title">
+                <h2 class="part_one" style="color: white;">The Founders</h2>
+
+                <p>
+                    Driven by expertise in cybersecurity and entrepreneurship, our founders bring together a decade of experience in ethical hacking, audits, and scaling Web3 security solutions.
+                </p>
+            </div>
 			<div class="row">
 				<div class="company_wrap aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
-					<div class="contact_head">
-						<h3>The Company</h3>
-					</div>
-					<div>
-						<img src="images/logo.svg" width="165px" alt="logo" class="img-fluid">
-					</div>
-					<div>
-						<p>We are CredShields, a passionate team of security experts on a mission to build trust in the
-							Web3 world. Since 2021, we've been empowering developers and businesses with a comprehensive
-							suite of security solutions. From bulletproof smart contract audits to robust wallet
-							protection, we help safeguard digital assets and foster a more secure Web3 ecosystem. We
-							believe security shouldn't be an afterthought, which is why we integrate it throughout the
-							development process. Join us in building a future for Web3 where innovation and trust go
-							hand in hand.
-							<span>
-								<a class="theme_color" href="/blockchain-security">
-									See Services
-									<img src="images/arrow-up-right.svg" alt="link">
-								</a>
-							</span>
-						</p>
-					</div>
-					<div>
-						<h5>In the news</h5>
-						<p>News Flash: Don't miss the latest coverage of CredShields in the Web3 space. See what the
-							industry is saying about our latest funding rounds, insightful events, and groundbreaking
-							work. Stay in the loop and explore the latest coverage.
-							<span>
-								<a href="https://solidityscan.com/discover/category/partnerships/" target="_blank" class="theme_color">
-									Read More
-									<img src="images/arrow-up-right.svg" alt="link">
-								</a>
-							</span>
-						</p>
-					</div>
-					<div>
-						<h5>Achievements</h5>
-						<p>CredShields goes beyond recognition – we consistently deliver groundbreaking achievements in
-							the security space. Learn more about some of our recent milestones.
-							<span class="theme_color">
-								<a href="#hero_con" class="theme_color">
-									Visit Now
-									<img src="images/arrow-up-right.svg" alt="link">
-								</a>
-							</span>
-						</p>
-					</div>
-				</div>
-				<div class="team_wrap aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
-					<div class="contact_head">
-						<h3>The Founders</h3>
-					</div>
 					<div class="founder">
 						<img src="images/shashank.jpeg" width="128px" height="128px" alt="profile">
 						<div>
@@ -534,6 +465,8 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="team_wrap aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
 					<div class="founder">
 						<img src="images/indranil.jpeg" width="128px" height="128px" alt="profile">
 						<div>
@@ -590,47 +523,20 @@
         <div class="container pos_relative">
 
             <div class="non_hero_title">
-                <h2 class="part_one">Why It<span class="part_two" style="color: white;"> Matters</span></h2>
-
-                <ul class="custom-bullet-list">
-                    <li>$3B+ lost in blockchain exploits in 2023</li>
-                    <li>One compromised wallet or bridge can affect the entire ecosystem</li>
-                    <li>Exchanges and protocols must meet compliance standards for listings</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="why_cres_shields_section" id="why_creshields_sec">
-        <div class="container pos_relative">
-
-            <div class="non_hero_title">
-                <h2 class="part_one">Our <span class="part_two" style="color: white;">Process</span></h2>
-
-                <ul class="custom-bullet-list">
-                    <li>Initial Assessment & Threat Modeling</li>
-                    <li>AI-Powered Automated Scanning (via SolidityScan)</li>
-                    <li>Manual Line-by-Line Code Review</li>
-                    <li>Remediation Support + Retesting</li>
-                    <li>Final Audit Report + Certification</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="why_cres_shields_section" id="why_creshields_sec">
-        <div class="container pos_relative">
-
-            <div class="non_hero_title">
-                <h2 class="part_one">Case <span class="part_two" style="color: white;">Study</span></h2>
+                <h2 class="part_one" style="color: white;">Ready to Build Security Into Your Future?</h2>
 
                 <p>
-                    A DeFi protocol with $500M TVL prevented potential $20M loss after CredShields uncovered access
-                    control flaws pre-launch.
+                    Whether you’re launching a project or scaling globally, our expert led enterprise grade audits and AI-powered tools ensure security at every stage. Start protecting your future today.
             </div>
-            <button class="clean_btn_style">
-                <img src="images/request_smart_contract_audit_btn.svg" alt="hero_btn_1" class="img-fluid">
-            </button>
+            <div class="hero_section_btn_container">
+                <button class="clean_btn_style">
+                    <img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
+                </button>
+                <button class="clean_btn_style">
+                    <img src="images/hero_btn_2.svg" alt="hero_btn_1" class="img-fluid">
+                </button>
+
+            </div>
         </div>
     </section>
     <footer class="footer_updated">

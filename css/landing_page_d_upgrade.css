@@ -1810,6 +1810,17 @@ img {
   gap: 20px;
   flex-grow: 0;
 }
+.about_us_section .products_head a {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 21px;
+  color: #242424;
+  opacity: 0.7;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 3rem;
+}
 
 .testimonial-user {
   text-align: start;
