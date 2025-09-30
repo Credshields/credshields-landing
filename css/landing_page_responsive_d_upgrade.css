@@ -654,6 +654,12 @@
   .discort_container p {
     font-size: 26px;
   }
+
+  .how_we_protect_card_img_box{
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+  
 }
 
 /* Medium devices (tablets, 768px and up) */
