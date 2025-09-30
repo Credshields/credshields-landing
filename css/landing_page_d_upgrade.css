@@ -3411,6 +3411,67 @@ section,
   transform: translateX(2px);
 }
 
+.dropdown-menu {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-nav-custom{
+  padding-top: 6px;
+}
+
+.dropdown-nav-custom p{
+  text-align: center;
+}
+
+/* smart contract audit */
+
+.custom-bullet-list {
+  margin: 20px 0;
+  padding-left: 25px;
+  width: 100%;
+  text-align: left;
+}
+
+.custom-bullet-list li {
+  position: relative;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: Barlow;
+  line-height: 1.6;
+  color: #8A94A6;
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.custom-bullet-list li:before {
+  content: "";
+  background-image: url("../images/custom_bullet_point.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 24px;  /* Adjust based on your SVG size */
+  height: 24px; /* Adjust based on your SVG size */
+  position: absolute;
+  left: -25px;
+  top: 6px;
+  transform: translateY(25%);
+}
+
+.custom-bullet-list li:last-child {
+  margin-bottom: 0;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer_updated {
