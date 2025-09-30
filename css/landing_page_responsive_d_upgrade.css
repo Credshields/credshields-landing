@@ -594,6 +594,12 @@
     justify-content: center;
     gap: 20px;
   }
+  .solution-card {
+    width: 100%;
+  }
+  .solutions-grid{
+    padding: unset;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
@@ -659,6 +665,14 @@
     flex-direction: column-reverse;
     align-items: baseline;
   }
+  .non_hero_title h2{
+    font-size: 28px;
+  }
+
+  .non_hero_title p,
+.subtle_text{
+  margin: unset;
+}
   
 }
 

@@ -1903,6 +1903,7 @@ img {
 
 .quickscan_container_section {
   padding: 80px 0;
+  background: linear-gradient(180deg, #060606 -45.59%, #414141 255.55%) ;
 }
 
 .feature_diff_section {
