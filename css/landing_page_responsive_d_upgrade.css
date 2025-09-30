@@ -600,6 +600,13 @@
   .solutions-grid{
     padding: unset;
   }
+  .custom-bullet-list li{
+    font-size: 18px;
+  }
+
+  .custom-bullet-list li:before {
+    top: 0px;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
