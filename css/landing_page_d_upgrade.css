@@ -1097,7 +1097,6 @@ img {
   margin: 2rem 0;
 }
 
-
 .non_hero_small_title {
   display: flex;
   flex-direction: column;
@@ -1851,7 +1850,6 @@ img {
   gap: 2%;
 }
 
-
 .prev-btn:hover,
 .next-btn:hover {
   background: rgba(24, 24, 27, 0.9);
@@ -1979,10 +1977,8 @@ img {
 
 .quickscan_container_section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #060606 -45.59%, #414141 255.55%) ;
+  background: linear-gradient(180deg, #060606 -45.59%, #414141 255.55%);
 }
-
-
 
 .feature_diff_section {
   padding: 80px 0;
@@ -2075,7 +2071,7 @@ img {
   .section-title h2 {
     font-size: 32px;
   }
-  .display_none_991{
+  .display_none_991 {
     display: none;
   }
 }
@@ -2097,7 +2093,7 @@ img {
   .section-title h2 {
     font-size: 28px;
   }
-  .numbers_sec{
+  .numbers_sec {
     margin: unset;
   }
 }
@@ -3095,7 +3091,6 @@ section,
   margin-bottom: 20px;
 }
 
-
 .solution-card h3 {
   font-size: 20px;
   font-weight: 600;
@@ -3488,24 +3483,23 @@ section,
 }
 
 .dropdown-menu {
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: black !important;
 }
-
+.dropdown-item {
+  color: white;
+}
 .dropdown-item:hover {
-  background-color: #f8f9fa;
-  color: #007bff;
+  background-color: #f8f9fa6a;
 }
 .dropdown-toggle::after {
   display: none;
 }
 
-.dropdown-nav-custom{
+.dropdown-nav-custom {
   padding-top: 6px;
 }
 
-.dropdown-nav-custom p{
+.dropdown-nav-custom p {
   text-align: center;
 }
 
@@ -3525,7 +3519,7 @@ section,
   font-weight: 500;
   font-family: Barlow;
   line-height: 1.6;
-  color: #8A94A6;
+  color: #8a94a6;
   list-style-type: none;
   padding-left: 20px;
 }
@@ -3535,7 +3529,7 @@ section,
   background-image: url("../images/custom_bullet_point.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 24px;  /* Adjust based on your SVG size */
+  width: 24px; /* Adjust based on your SVG size */
   height: 24px; /* Adjust based on your SVG size */
   position: absolute;
   left: -25px;
@@ -3547,11 +3541,11 @@ section,
   margin-bottom: 0;
 }
 
-.custom_ladning_font{
+.custom_ladning_font {
   font-size: 72px;
 }
 
-.display_above_997{
+.display_above_997 {
   display: none;
 }
 
@@ -3588,66 +3582,64 @@ section,
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-  .display_none_768{
+  .display_none_768 {
     display: none;
 
-  .hero_container p  {
-    padding-right: unset;
-    text-align: center;
+    .hero_container p {
+      padding-right: unset;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer_updated_links {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .footer_updated .container {
+      padding: 0 15px;
+    }
+    .row {
+      margin-right: unset !important;
+      margin-left: unset !important;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .subscription-form {
+      flex-direction: column;
+    }
+
+    .email-input,
+    .subscribe-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .feature_diff_section_th,
+    .feature_diff_section_td,
+    .feature_diff_section_feature_label {
+      padding: 16px 12px;
+      font-size: 12px;
+    }
+
+    .feature_diff_section_th {
+      font-size: 11px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .solution-card {
+      padding: 24px 20px;
+    }
   }
 }
-
-@media (max-width: 480px) {
-  .footer_updated_links {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .footer_updated .container {
-    padding: 0 15px;
-  }
-  .row{
-    margin-right: unset !important;
-    margin-left: unset !important;
-
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .subscription-form {
-    flex-direction: column;
-  }
-
-  .email-input,
-  .subscribe-btn {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 1024px) {
-  .feature_diff_section_th,
-  .feature_diff_section_td,
-  .feature_diff_section_feature_label {
-    padding: 16px 12px;
-    font-size: 12px;
-  }
-
-  .feature_diff_section_th {
-    font-size: 11px;
-  }
-}
-
-@media (max-width: 640px) {
-  .section-title {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-
-  .solution-card {
-    padding: 24px 20px;
-  }
-}
-}
-

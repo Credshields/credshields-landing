@@ -925,6 +925,13 @@
   .section-title h2 {
     font-size: 32px;
   }
+
+  .dropdown-nav-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6px;
+  }
 }
 
 @media (max-width: 767px) {
