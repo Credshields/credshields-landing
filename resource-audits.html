@@ -61,6 +61,8 @@
     <!-- Custom Css file Start -->
     <link rel="stylesheet" href="css/landing_page_d_upgrade.css" />
     <link rel="stylesheet" href="css/landing_page_responsive_d_upgrade.css" />
+    <link rel="stylesheet" href="css/landing_page_d.css" />
+    <link rel="stylesheet" href="css/landing_page_responsive_d.css" />
 
     <style>
         @font-face {
@@ -275,7 +277,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">
+                            <a class="nav-link" href="#services_sec">
                                 <p>About</p>
                             </a>
                         </li>
@@ -336,226 +338,362 @@
     <!-- header section end -->
 
     <!-- hero section start  -->
-    <section class="home_hero_section">
+    <section class="why_cres_shields_section" id="why_creshields_sec">
         <div class="container pos_relative">
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="hero_container" id="hero_con">
-                            <h2 class="color_primary">
-                                External Network Penetration Testing
-                            </h2>
-                            <h2 class="theme_color">
-                                Enterprise Cybersecurity
-                            </h2>
-                            <img src="images/styled_divider_horizontal.svg" alt="styled_divider"
-                                class="display_none_768" />
-                            <p style="text-align: left;">Simulate real-world external attacks on your networks, APIs, and cloud endpoints. Strengthen defenses before hackers strike.
-                            </p>
+            <div class="non_hero_title">
+                <h2 class="part_one" style="color: white;">Explore our Most Popular Audits</h2>
 
-                            <h4 style="margin-top: 100px;">Test Like Hackers. Fix Before They Do</h4>
-                            <p style="text-align: left;">
-                                CredShields penetration testing simulates real-world attack scenarios on web apps, mobile apps, APIs, networks, and cloud environments to reveal vulnerabilities before attackers exploit them. </p>
-                        </div>
-
-                        <div class="hero_section_btn_container" style="margin-top: 50px;">
-                            <button class="clean_btn_style">
-                                <img src="images/get_pan_test_btn.svg" alt="hero_btn_1" class="img-fluid">
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <p>
+                    150+ completed audits to understand the comprehensive security assessments Credshields offers.
+                </p>
             </div>
-        </div>
         </div>
     </section>
     <!-- hero section end  -->
 
-    <!-- cookies section start -->
-    <!-- <section class="cookies_section">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="cookies_txt">
-						<p>
-							This website uses cookies to ensure you get the best experience
-							on our website. <a href="cookie.html">Cookies Policy</a>
-						</p>
 
-						<a href="javascript:void(0)" class="ckies_btn" id="clsee2">Got It</a>
 
-						<a href="javascript:void(0)" id="clsee"><i class="fa fa-close"></i></a>
+    <section class="audits_sec" id="audit_sec">
+		<div class="container pos_relative">
+			<div class="audit_overview">
+				<div class="audit_numbers">
+					<div>
+						<p>Total Projects Audited</p>
+						<h2><span class="animate-number" data-end="1384" show-plus="false">0</span></h2>
 					</div>
+					<div>
+						<p>Market Cap Evaluated</p>
+						<h2><span class="animate-number" data-end="173340000000" show-plus="false">0</span>
+						</h2>
+					</div>
+					<div>
+						<p>Total Vulnerablities found</p>
+						<h2><span class="animate-number" data-end="7739" show-plus="false">0</span></h2>
+					</div>
+					<div>
+						<p>Total Lines of Code Audited</p>
+						<h2><span class="animate-number" data-end="77000000" show-plus="false">0</span></h2>
+					</div>
+				</div>
+				<div>
+					<h5>Platforms Audited</h5>
+					<div class="graph-container" id="graph">
+						<div class="bar bar-1" data-tooltip="Ethereum">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-2" data-tooltip="Binance">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-3" data-tooltip="Polygon">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-4" data-tooltip="Cosmos">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-5" data-tooltip="Solana">
+							<div class="bar-inner"></div>
+						</div>
+						<div class="bar bar-6" data-tooltip="Others">
+							<div class="bar-inner"></div>
+						</div>
+					</div>
+
+					<div class="platform-audits">
+						<div>
+							<div class="audit-name">
+								<div>
+									<img src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/ethereum.svg"
+										alt="Eth" />
+								</div>
+								<p>Ethereum</p>
+							</div>
+							<p>678<span> (42.22%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/binance.svg"
+										alt="Bsc" />
+								</div>
+								<p>Binance</p>
+							</div>
+							<p>371<span> (23.10%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/polygon.svg"
+										alt="Polygon" />
+								</div>
+								<p>Polygon</p>
+							</div>
+							<p>192<span> (11.96%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/cosmos.svg"
+										alt="Cosmos" />
+								</div>
+								<p>Cosmos</p>
+							</div>
+							<p>188<span> (11.71%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/solana.svg"
+										alt="Solana" />
+								</div>
+								<p>Solana</p>
+							</div>
+							<p>177<span> (11.02%)</span></p>
+						</div>
+						<div>
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/blockscan/other.svg"
+										alt="Other" />
+								</div>
+								<p>Others</p>
+							</div>
+							<p>56<span> (07.08%)</span></p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h5>Popular Projects</h5>
+					<div class="kyc-reports">
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/aUSD Stablejack.svg"
+										alt="Other" />
+								</div>
+								<p>aUSD</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>05 Jun 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Arcana.svg"
+										alt="Other" />
+								</div>
+								<p>Arcana Paymaster</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>01 Mar 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/ResearchHub.svg"
+										alt="Other" />
+								</div>
+								<p>ResearchHub</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>04 April 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Lync Network.svg"
+										alt="Other" />
+								</div>
+								<p>Lync</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>25 July 2023</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/LogX Token.svg"
+										alt="Other" />
+								</div>
+								<p>LogX Token</p>
+							</div>
+							<p>Smart Contract Audit</p>
+							<p>15 April 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Juno Finance.svg"
+										alt="Other" />
+								</div>
+								<p>Juno AWS</p>
+							</div>
+							<p>AWS</p>
+							<p>27 April 2023</p>
+						</div>
+					</div>
+				</div>
+				<div>
+					<h5>KYC Reports</h5>
+					<div class="kyc-reports">
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg"
+										alt="Other" />
+								</div>
+								<p>Cybercentry</p>
+							</div>
+							<a href="https://cybercentry.co.uk" target="_blank">
+								cybercentry.co.uk
+								<img src="images/arrow-up-right.svg" alt="link" />
+							</a>
+							<p>16 Dec 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg"
+										alt="Other" />
+								</div>
+								<p>PultoPe</p>
+							</div>
+							<a href="https://plutope.io" target="_blank">
+								plutope.io
+								<img src="images/arrow-up-right.svg" alt="link" />
+							</a>
+							<p>04 July 2024</p>
+						</div>
+						<div data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-offset="50">
+							<div class="audit-name">
+								<div><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg"
+										alt="Other" />
+								</div>
+								<p>Helldiver</p>
+							</div>
+							<a href="https://helldiver.vip" target="_blank">
+								helldiver.vip
+								<img src="images/arrow-up-right.svg" alt="link" />
+							</a>
+							<p>05 May 2024</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="tabs">
+
+				<div class="tab-buttons">
+					<button class="tab-button active" onclick="openTab(event, 'Tab1')">Recently
+						Audited</button>
+					<button class="tab-button" onclick="openTab(event, 'Tab2')">Popular Projects</button>
+					<button class="tab-button" onclick="openTab(event, 'Tab3')">KYC Reports</button>
+				</div>
+
+				<div class="tab-content active" id="Tab1">
+					<div class="recent-audits"></div>
+					<div id="pagination">
+						<button type="button" id="prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg></button>
+						<div id="pages">
+							<!-- Page buttons will be added here dynamically -->
+						</div>
+						<button type="button" id="next"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="tab-content" id="Tab2">
+					<div class="popular-audits"></div>
+				</div>
+				<div class="tab-content" id="Tab3">
+					<!-- <div class="col-lg-12"> -->
+					<div class="kyc_row">
+						<div class="kyc_row_company">
+							<div class="audit_col_one">
+								<div class="audit_logo"><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg"
+										alt="Other" /></div>
+							</div>
+							<div class="audit_col_two">Cybercentry</div>
+						</div>
+						<div class="audit_col_tf">
+							<div class="audit_col_three"><a href="https://cybercentry.co.uk" target="_blank">
+									cybercentry.co.uk
+									<img src="images/arrow-up-right.svg" alt="link" />
+								</a></div>
+							<div class="audit_col_four">16 Dec 2024</div>
+						</div>
+						<div class="audit_col_five">
+							<a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.pdf"
+								download="Cybercentry.pdf" class="audit-link">View KYC Certificate <img
+									src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
+						</div>
+					</div>
+					<div class="kyc_row">
+						<div class="kyc_row_company">
+
+							<div class="audit_col_one">
+								<div class="audit_logo"><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg"
+										alt="Other" /></div>
+							</div>
+							<div class="audit_col_two">PultoPe</div>
+						</div>
+						<div class="audit_col_tf">
+							<div class="audit_col_three"><a href="https://plutope.io" target="_blank">
+									plutope.io
+									<img src="images/arrow-up-right.svg" alt="link" />
+								</a></div>
+							<div class="audit_col_four">04 July 2024</div>
+						</div>
+						<div class="audit_col_five">
+							<a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.pdf"
+								download="PultoPe.pdf" class="audit-link">View KYC Certificate <img
+									src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
+						</div>
+					</div>
+					<div class="kyc_row">
+						<div class="kyc_row_company">
+
+							<div class="audit_col_one">
+								<div class="audit_logo"><img
+										src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg"
+										alt="Other" /></div>
+							</div>
+							<div class="audit_col_two">Helldiver</div>
+						</div>
+						<div class="audit_col_tf">
+							<div class="audit_col_three"><a href="https://helldiver.vip" target="_blank">
+									helldiver.vip
+									<img src="images/arrow-up-right.svg" alt="link" />
+								</a></div>
+							<div class="audit_col_four">05 May 2024</div>
+						</div>
+						<div class="audit_col_five">
+							<a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.pdf"
+								download="Helldiver.pdf" class="audit-link">View KYC Certificate <img
+									src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
+						</div>
+					</div>
+					<!-- </div> -->
 				</div>
 			</div>
 		</div>
-	</section> -->
-    <!-- cookies section end -->
+	</section>
 
 
-
-
-    <section class="why_cres_shields_section" id="why_creshields_sec">
-        <div class="container pos_relative">
-
-            <div class="non_hero_title">
-                <h2 class="part_one"><span class="part_two" style="color: white;">Why It Matters</span></h2>
-
-                <ul class="custom-bullet-list">
-                    <li>60% of breaches start with exposed external endpoints</li>
-                    <li>Network vulnerabilities are exploited for lateral movement</li>
-                    <li>Enterprises must prove resilience to regulators & investors</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="why_cres_shields_section" id="why_creshields_sec">
-        <div class="container pos_relative">
-
-            <div class="non_hero_title">
-                <h2 class="part_one"> <span class="part_two" style="color: white;">Our Process</span></h2>
-
-                <ul class="custom-bullet-list">
-                    <li>Reconnaissance & mapping external assets</li>
-                    <li>Vulnerability scanning & exploit attempts</li>
-                    <li>Firewall & endpoint testing</li>
-                    <li>Social engineering simulations (optional)</li>
-                    <li>Executive reports & remediation roadmap</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="feature_diff_section">
-        <div class="container pos_relative">
-            <div class="feature_diff_section_container">
-                <table class="feature_diff_section_table">
-                    <thead>
-                        <tr>
-                            <th class="feature_diff_section_th">S.No</th>
-                            <th class="feature_diff_section_th"> Audit Category</th>
-                            <th class="feature_diff_section_th">Audit Category Checklist</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="feature_diff_section_tr">
-                            <td class="feature_diff_section_feature_label">1</td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Perimeter</span>
-                                </div>
-                            </td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Firewall bypass, open ports, misconfigs
-                                    </span>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <tr class="feature_diff_section_tr">
-                            <td class="feature_diff_section_feature_label">2</td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">APIs</span>
-                                </div>
-                            </td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Authentication, input validation, brute force
-                                    </span>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <tr class="feature_diff_section_tr">
-                            <td class="feature_diff_section_feature_label">3</td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">VPN & Remote</span>
-                                </div>
-                            </td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Credential stuffing, weak encryption
-                                    </span>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <tr class="feature_diff_section_tr">
-                            <td class="feature_diff_section_feature_label">4</td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Email & Web Servers</span>
-                                </div>
-                            </td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Spoofing, misconfigured headers
-                                    </span>
-                                </div>
-
-                            </td>
-
-                        </tr>
-                        <tr class="feature_diff_section_tr">
-                            <td class="feature_diff_section_feature_label">5</td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">DNS & Routing</span>
-                                </div>
-                            </td>
-                            <td class="feature_diff_section_td">
-                                <div class="feature_diff_section_check_item">
-                                    <span class="feature_diff_section_text">Hijacking, misrouting vulnerabilities
-                                    </span>
-                                </div>
-
-                            </td>
-
-                        </tr>
-
-
-
-
-                    </tbody>
-                </table>
-
-            </div>
-            <!-- <div class="hero_section_btn_container" style="margin-top: 5rem;">
-				<button class="clean_btn_style">
-					<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
-				</button>
-				<button class="clean_btn_style">
-					<img src="images/hero_btn_2.svg" alt="hero_btn_1" class="img-fluid">
-				</button>
-
-			</div> -->
-
-        </div>
-
-    </section>
-
-    <section class="why_cres_shields_section" id="why_creshields_sec">
-        <div class="container pos_relative">
-
-            <div class="non_hero_title">
-                <h2 class="part_one">Case <span class="part_two" style="color: white;">Study</span></h2>
-
-                <p>
-                    A financial services firm avoided a major breach after CredShields detected exposed admin ports in their network perimeter. Fixes were applied before attackers could exploit them. </p>
-            </div>
-            <button class="clean_btn_style">
-                <img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
-            </button>
-        </div>
-    </section>
     <footer class="footer_updated">
         <div class="container">
             <!-- Top section with newsletter and social links -->
