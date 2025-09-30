@@ -995,3 +995,13 @@
     font-size: 22px;
   }
 }
+
+
+@media (min-width: 991px) {
+    .custom_ladning_font{
+      font-size: 72px !important;
+    }
+    .display_above_997{
+      display: block;
+    }
+}

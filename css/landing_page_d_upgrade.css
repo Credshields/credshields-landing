@@ -3547,6 +3547,13 @@ section,
   margin-bottom: 0;
 }
 
+.custom_ladning_font{
+  font-size: 72px;
+}
+
+.display_above_997{
+  display: none;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -3643,3 +3650,4 @@ section,
   }
 }
 }
+
