@@ -3388,7 +3388,7 @@ section,
 }
 
 .footer_updated_newsletter {
-  display: flex;
+  display: none;
   align-items: flex-end;
   gap: 40px;
   flex-wrap: wrap;
