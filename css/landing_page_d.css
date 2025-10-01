@@ -2343,7 +2343,7 @@ img {
   top: 0;
 }
 .footer_logo {
-  width: 22%;
+  width: 30%;
 }
 .footer_links {
   width: 45%;
@@ -2376,7 +2376,6 @@ img {
 }
 .social_links {
   display: flex;
-  width: 35%;
   justify-content: flex-end;
 }
 .social_links_con {
