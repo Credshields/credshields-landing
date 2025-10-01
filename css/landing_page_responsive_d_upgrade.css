@@ -607,6 +607,11 @@
   .custom-bullet-list li:before {
     top: 0px;
   }
+
+  .text_align_center_below_767{
+    text-align: center !important;
+    width: 100%;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {

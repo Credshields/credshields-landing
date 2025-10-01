@@ -85,14 +85,7 @@ img {
   color: #8a94a6;
 }
 .theme_color {
-  background-image: linear-gradient(
-    127.09deg,
-    rgba(157, 255, 237, 0.93) 0.95%,
-    rgba(194, 255, 189, 0.93) 98.62%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #C2FFBD;
 }
 .stick_bottom {
   margin-top: auto;
