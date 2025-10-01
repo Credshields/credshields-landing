@@ -940,7 +940,7 @@
 					onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
 					<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
 				</button>
-				<button class="clean_btn_style">
+				<button class="clean_btn_style" id="run_free_quickscan_2">
 					<img src="images/hero_btn_2.svg" alt="hero_btn_1" class="img-fluid">
 				</button>
 
@@ -1440,6 +1440,12 @@
 		});
 
 		document.getElementById('run_free_quickscan').addEventListener('click', function () {
+			document.getElementById('quickscan_container_sec').scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+
+		document.getElementById('run_free_quickscan_2').addEventListener('click', function () {
 			document.getElementById('quickscan_container_sec').scrollIntoView({
 				behavior: 'smooth'
 			});
