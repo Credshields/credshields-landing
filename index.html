@@ -468,7 +468,7 @@
 							show-plus="true">0</span>
 					</h1>
 					<p class="numbers_sec_subtitle">Run a QuickScan for your code</p>
-					<button class="numbers_sec_nav" onclick="window.location.href = 'resource-audits.html';" aria-label="View more">
+					<button class="numbers_sec_nav" id="run_free_quickscan_3" aria-label="View more">
 						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 							style="opacity: 0.5;">
 							<path fill-rule="evenodd" clip-rule="evenodd"
@@ -967,7 +967,7 @@
 						<p>Predict flaws before launch</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more">
+						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more" onclick="window.location.href = 'smart-contract-audit.html';">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -991,7 +991,7 @@
 						<p>Simulate economic & governance attacks</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more">
+						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more" onclick="window.location.href = 'dapp-protocol.html';">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1015,7 +1015,7 @@
 						<p>Cloud, mobile & SaaS defenses</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more">
+						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more" onclick="window.location.href = 'enterprise-web.html';">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1039,7 +1039,7 @@
 						<p>Prevent Forced Attacks</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more">
+						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more" onclick="window.location.href = 'penetration-testing.html';">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1063,7 +1063,7 @@
 						<p>Instant predictive scanning for devs</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more">
+						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more" onclick="window.location.href = 'https://solidityscan.com/';">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1331,9 +1331,9 @@
 				<div class="footer_updated_column">
 					<h4>Resources</h4>
 					<ul>
-						<li><a href="resource-audits.html">Recently Audited</a></li>
-						<li><a href="resource-audits.html">Popular Projects</a></li>
-						<li><a href="resource-audits.html">KYC Reports</a></li>
+						<li><a href="resource-audits.html?tab=tab1">Recently Audited</a></li>
+						<li><a href="resource-audits.html?tab=tab2">Popular Projects</a></li>
+						<li><a href="resource-audits.html?tab=tab3">KYC Reports</a></li>
 
 
 					</ul>
@@ -1446,6 +1446,12 @@
 		});
 
 		document.getElementById('run_free_quickscan_2').addEventListener('click', function () {
+			document.getElementById('quickscan_container_sec').scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+
+		document.getElementById('run_free_quickscan_3').addEventListener('click', function () {
 			document.getElementById('quickscan_container_sec').scrollIntoView({
 				behavior: 'smooth'
 			});
