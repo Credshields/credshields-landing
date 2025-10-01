@@ -3549,6 +3549,10 @@ section,
   display: none;
 }
 
+.quickscan_container_section iframe{
+  height: 600px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer_updated {

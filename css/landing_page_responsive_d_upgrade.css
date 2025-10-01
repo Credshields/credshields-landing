@@ -932,6 +932,11 @@
     align-items: center;
     margin: 6px;
   }
+
+  .quickscan_container_section iframe{
+    height: 800px;
+  }
+  
 }
 
 @media (max-width: 767px) {
