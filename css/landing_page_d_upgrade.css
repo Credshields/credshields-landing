@@ -2994,11 +2994,13 @@ section,
   font-size: 16px;
   transition: all 0.3s ease;
   overflow: hidden;
+  opacity: 0.4;
 }
 
 .numbers_sec_nav:hover {
   background: rgba(194, 255, 189, 0.1);
   transform: translateY(-2px);
+  opacity: 1;
 }
 
 .numbers_sec_subtitle {
