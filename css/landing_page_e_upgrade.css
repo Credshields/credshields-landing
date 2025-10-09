@@ -85,7 +85,7 @@ img {
   color: #8a94a6;
 }
 .theme_color {
-  color: #C2FFBD;
+  color: #c2ffbd;
 }
 .stick_bottom {
   margin-top: auto;
@@ -1815,7 +1815,6 @@ img {
   text-align: center;
   padding: 2rem 3rem;
   background: #18181b80;
-  border-radius: 16px;
   border: 1px solid #2c2c2c;
   height: auto;
   margin: 0 5px;
@@ -2473,11 +2472,11 @@ img {
   justify-content: flex-end;
 }
 .social_links_con {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+  height: 39px;
+  width: 43px;
+  /* border-radius: 50%; */
   background: #0e0e0e;
-  border: 2px solid #0e0e0e;
+  border: 1px solid #a6a6a666;
   margin-right: 1rem;
   display: flex;
   align-items: center;
@@ -2979,7 +2978,7 @@ section,
 .numbers_sec_nav {
   border: 0.5px solid #c2ffbd7c;
   background: transparent;
-  max-width: 64px;
+  width: 64px;
   height: 32px;
   color: white;
   display: flex;
@@ -2993,12 +2992,88 @@ section,
   transition: all 0.3s ease;
   overflow: hidden;
   opacity: 0.4;
+  gap: 2px;
 }
 
 .numbers_sec_nav:hover {
-  background: rgba(194, 255, 189, 0.1);
-  transform: translateY(-2px);
   opacity: 1;
+  border-color: #c2ffbd;
+  box-shadow: 0 0 20px rgba(194, 255, 189, 0.3);
+  cursor: pointer;
+  background-color: #c2ffbd1a;
+}
+
+.numbers_sec_nav svg {
+  transition: all 0.3s ease;
+}
+
+/* First chevron - lower opacity in normal state */
+.numbers_sec_nav svg:first-child {
+  opacity: 0.5;
+}
+
+/* Second chevron - full opacity in normal state */
+.numbers_sec_nav svg:last-child {
+  opacity: 1;
+}
+
+/* Hover state - both at full opacity with glow */
+.numbers_sec_nav:hover svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
+    drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
+}
+
+/* Pulsing animation on hover */
+@keyframes pulse-chevron {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
+      drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
+  }
+  50% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px rgba(194, 255, 189, 0.5))
+      drop-shadow(0 0 4px rgba(194, 255, 189, 0.3));
+  }
+}
+
+.numbers_sec_nav:hover svg:first-child {
+  animation: pulse-chevron 1.5s ease-in-out infinite;
+}
+
+.numbers_sec_nav:hover svg:last-child {
+  animation: pulse-chevron 1.5s ease-in-out infinite 0.3s;
+}
+
+/* Optional: Add a subtle background glow on hover */
+.numbers_sec_nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(194, 255, 189, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.numbers_sec_nav:hover::before {
+  opacity: 1;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
 }
 
 .numbers_sec_subtitle {
@@ -3020,15 +3095,14 @@ section,
   flex-wrap: wrap;
 }
 
-
-.hero_section_btn_container_main{
+.hero_section_btn_container_main {
   display: flex;
   width: 100%;
   justify-content: space-between;
   position: relative;
 }
 
-.hero_section_btn_container_main > *:first-child{
+.hero_section_btn_container_main > *:first-child {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -3036,18 +3110,17 @@ section,
   width: 50%;
 }
 
-
-.hero_section_btn_container_main > *:first-child > div{
+.hero_section_btn_container_main > *:first-child > div {
   display: flex;
   gap: 5%;
   flex-wrap: wrap;
 }
 
-.hero_section_btn_container_main > *:nth-child(2){
+.hero_section_btn_container_main > *:nth-child(2) {
   margin-top: -77px;
 }
 
-.hero_section_btn_container_main > *:first-child > div > button{
+.hero_section_btn_container_main > *:first-child > div > button {
   margin-top: 20px;
 }
 
@@ -3278,8 +3351,8 @@ section,
 
 .how_we_protect_card:hover {
   transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 /* Newsletter Subscription */
@@ -3572,28 +3645,116 @@ section,
   display: none;
 }
 
-.display_below_997{
+.display_below_997 {
   display: none;
 }
 
-.quickscan_container_section iframe{
+.quickscan_container_section iframe {
   height: 850px;
 }
 
-.get_in_touch_card{
+.get_in_touch_card {
   width: 42%;
 }
 
 .get_in_touch_card > form > input:focus {
   border: 1px solid #c2ffbd7e;
-  background: #C2FFBD1A;
+  background: #c2ffbd1a;
 }
 
 .get_in_touch_card > form > textarea:focus {
   border: 1px solid #c2ffbd7e;
-  background: #C2FFBD1A;
+  background: #c2ffbd1a;
 }
 
+.clean_btn_style_animated {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.clean_btn_style_animated svg {
+  display: block;
+}
+
+/* Target ONLY the arrow paths (3rd and 4th path elements) */
+/* Left arrow - starts with lower opacity */
+.clean_btn_style_animated svg path:nth-child(5) {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Right arrow - starts with full opacity */
+.clean_btn_style_animated svg path:nth-child(4) {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Hover state - both arrows at full opacity with glow */
+.clean_btn_style_animated:hover svg path:nth-child(4),
+.clean_btn_style_animated:hover svg path:nth-child(5) {
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
+    drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
+}
+
+/* Pulsing animation keyframes */
+@keyframes pulse-arrow {
+  0%,
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
+      drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
+  }
+  50% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 2px rgba(194, 255, 189, 0.5))
+      drop-shadow(0 0 4px rgba(194, 255, 189, 0.3));
+  }
+}
+
+/* Apply staggered animation on hover - LEFT arrow first */
+.clean_btn_style_animated:hover svg path:nth-child(5) {
+  animation: pulse-arrow 1.5s ease-in-out infinite;
+}
+
+/* RIGHT arrow animates with 0.3s delay */
+.clean_btn_style_animated:hover svg path:nth-child(4) {
+  animation: pulse-arrow 1.5s ease-in-out infinite 0.3s;
+}
+
+/* Optional: Add background glow effect to button */
+.clean_btn_style_animated::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(194, 255, 189, 0.05) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.clean_btn_style_animated:hover::before {
+  opacity: 1;
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
