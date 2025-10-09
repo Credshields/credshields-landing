@@ -2152,7 +2152,6 @@ img {
 .contact_seach input {
   background: #161616;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
   border: none;
   color: #4a4a4a;
   height: 45px;
@@ -2169,7 +2168,6 @@ img {
 .contact_seach textarea {
   background: #161616;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
   border: none;
   color: #4a4a4a;
   height: 120px;
@@ -3586,6 +3584,15 @@ section,
   width: 42%;
 }
 
+.get_in_touch_card > form > input:focus {
+  border: 1px solid #c2ffbd7e;
+  background: #C2FFBD1A;
+}
+
+.get_in_touch_card > form > textarea:focus {
+  border: 1px solid #c2ffbd7e;
+  background: #C2FFBD1A;
+}
 
 
 /* Responsive Design */
