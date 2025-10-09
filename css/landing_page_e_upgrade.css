@@ -2981,7 +2981,7 @@ section,
 .numbers_sec_nav {
   border: 0.5px solid #c2ffbd7c;
   background: transparent;
-  min-width: 64px;
+  max-width: 64px;
   height: 32px;
   color: white;
   display: flex;
@@ -3245,8 +3245,6 @@ section,
 }
 
 .how_we_protect_card {
-  width: 395px;
-  height: 326px;
   border: 1px solid #ffffff26;
   padding: 20px;
   transition: all 0.3s ease;
@@ -3277,13 +3275,7 @@ section,
 
 .how_we_protect_card_img_box {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.how_we_protect_nav_btn {
-  position: relative;
-  bottom: 20px;
+  flex-direction: column;
 }
 
 .how_we_protect_card:hover {
@@ -3588,6 +3580,10 @@ section,
 
 .quickscan_container_section iframe{
   height: 850px;
+}
+
+.get_in_touch_card{
+  width: 42%;
 }
 
 

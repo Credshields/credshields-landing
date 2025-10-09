@@ -677,10 +677,6 @@
     font-size: 26px;
   }
 
-  .how_we_protect_card_img_box{
-    flex-direction: column-reverse;
-    align-items: baseline;
-  }
   .non_hero_title h2{
     font-size: 28px;
   }
@@ -858,6 +854,9 @@
   .header_section > .container {
     max-width: 95%;
   }
+  .get_in_touch_card{
+    width: unset;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -970,6 +969,10 @@
   }
   .hero_section_btn_container_main > *:first-child > div{
     justify-content: center;
+  }
+
+  .text_align_center_below_991{
+    text-align: center;
   }
 }
 
