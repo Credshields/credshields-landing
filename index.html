@@ -405,8 +405,8 @@
 								</div>
 
 							</div>
-							<div class="display_above_997">
-								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid">
+							<div class="hero_desktop_banner">
+								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid" style="max-width: 90%;">
 							</div>
 
 						</div>
@@ -446,11 +446,11 @@
 
 			<div class="number_container">
 				<div class="stat_container">
-					<p>Audits</p>
 					<h1>
 						<span id="web3Count" class="animate-number theme_color font_aldrich" data-end="200"
 							show-plus="true">0</span>
 					</h1>
+					<p>Audits</p>
 					<p class="numbers_sec_subtitle">Check Our Popular Audits</p>
 					<button class="numbers_sec_nav"
 						onclick="window.location.href = 'resource-audits.html?tab=recent-audits';"
@@ -470,11 +470,12 @@
 				</div>
 				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
 				<div class="stat_container">
-					<p>Protected</p>
 					<h1 class="font_aldrich theme_color">
 						$<span id="amountSecured" class="animate-number theme_color font_aldrich" data-end="10000000000"
 							show-plus="true">0</span>
 					</h1>
+					<p>Protected</p>
+					
 					<p class="numbers_sec_subtitle">Check Recently Audited Projects</p>
 					<button class="numbers_sec_nav"
 						onclick="window.location.href = 'resource-audits.html?tab=recent-audits';"
@@ -495,11 +496,12 @@
 				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
 
 				<div class="stat_container">
-					<p>Post-Audit Exploits</p>
 					<h1>
 						<span id="amountSecured" class="animate-number theme_color font_aldrich" data-end="0"
 							show-plus="true">0</span>
 					</h1>
+					<p>Post-Audit Exploits</p>
+					
 					<p class="numbers_sec_subtitle">Run a QuickScan for your code</p>
 					<button class="numbers_sec_nav" id="run_free_quickscan_3" aria-label="View more">
 						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -518,10 +520,11 @@
 				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
 
 				<div class="stat_container">
-					<p>Projects Audited</p>
 					<h1>
 						<span id="linesOfCode" class="animate-number theme_color font_aldrich" data-end="384">0</span>
 					</h1>
+					<p>Projects Audited</p>
+					
 					<p class="numbers_sec_subtitle">Check KYC Reports</p>
 					<button class="numbers_sec_nav"
 						onclick="window.location.href = 'resource-audits.html?tab=kyc-reports';" aria-label="View more">
@@ -657,8 +660,12 @@
 
 
 	<section class="quickscan_container_section" id="quickscan_container_sec">
+		<div class="container pos_relative quickscan_solidityscan_logo_container">
+			<img src="images/credshields_solidityscan_logo.svg" alt="quickscan_solidityscan_logo" class="quickscan_solidityscan_logo">
+
+		</div>
 		<div class="container pos_relative">
-			<iframe src="https://solidityscan.com/quickscan-widget" style="width:100%; border:unset; overflow: hidden;"
+			<iframe src="http://127.0.0.1:3001/quickscan-widget" style="width:100%; border:unset; overflow: hidden;"
 				title="CredShields QuickScan" scrolling="no">
 			</iframe>
 		</div>

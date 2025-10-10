@@ -1969,7 +1969,7 @@ img {
 
 .quickscan_container_section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #060606 -45.59%, #414141 255.55%);
+  background: black;
 }
 
 .feature_diff_section {
@@ -2131,11 +2131,7 @@ img {
   margin: 1rem 0;
 }
 .custom_contact_bg {
-  background: #18181b80;
   border-radius: 16px;
-  padding: 3rem 3rem;
-  box-shadow: 0px 0px 0px 0px #ffffff, 0px 0px 0px 1px #f4f4f51a,
-    0px 0px 0px 0px #00000000;
   margin: 5rem 0;
   position: relative;
   z-index: 1;
@@ -2197,7 +2193,6 @@ img {
   line-height: 20.07px;
   color: black;
   border-radius: 10px;
-  padding: 10px 20px;
   width: 208px;
   margin-top: 2rem;
   transition: all linear 0.2s;
@@ -3092,7 +3087,6 @@ section,
   width: 100%;
   justify-content: flex-start;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
 .hero_section_btn_container_main {
@@ -3164,7 +3158,6 @@ section,
 
 .solution-card {
   background: #18181b80;
-  border-radius: 12px;
   padding: 32px 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: unset;
@@ -3311,7 +3304,7 @@ section,
 .how_we_protect_card_container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
   justify-content: center;
 }
 
@@ -3353,6 +3346,34 @@ section,
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  border-color: #c2ffbd83;
+}
+
+.how_we_protect_card:hover .how_we_protect_nav_btn {
+  opacity: 1;
+  border-color: #c2ffbd;
+  box-shadow: 0 0 20px rgba(194, 255, 189, 0.3);
+  cursor: pointer;
+  background-color: #c2ffbd1a;
+}
+
+.how_we_protect_card:hover .how_we_protect_nav_btn svg {
+  opacity: 1;
+  filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
+    drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
+}
+
+.how_we_protect_card:hover .how_we_protect_nav_btn svg:first-child {
+  animation: pulse-chevron 1.5s ease-in-out infinite;
+}
+
+.how_we_protect_card:hover .how_we_protect_nav_btn svg:last-child {
+  animation: pulse-chevron 1.5s ease-in-out infinite 0.3s;
+}
+
+.how_we_protect_card:hover .how_we_protect_nav_btn::before {
+  opacity: 1;
+  animation: glow-pulse 2s ease-in-out infinite;
 }
 
 /* Newsletter Subscription */
@@ -3641,7 +3662,7 @@ section,
   font-size: 72px;
 }
 
-.display_above_997 {
+.hero_desktop_banner {
   display: none;
 }
 
@@ -3654,7 +3675,7 @@ section,
 }
 
 .get_in_touch_card {
-  width: 42%;
+  width: 44%;
 }
 
 .get_in_touch_card > form > input:focus {
@@ -3684,6 +3705,12 @@ section,
 .run_quickscan_btn:hover {
   background-color: transparent;
   box-shadow: none;
+}
+
+.quickscan_solidityscan_logo_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 /* Responsive Design */

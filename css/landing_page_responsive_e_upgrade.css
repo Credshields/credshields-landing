@@ -81,9 +81,7 @@
   .cookies_txt p {
     margin-bottom: 10px;
   }
-  .contact_head{
-    padding-left: 20px;
-  }
+
   .contact_head p,
   .products_head p {
     width: 100%;
@@ -823,9 +821,6 @@
   .custom_contact_bg{
     display: block;
   }
-  .contact_head{
-    padding-left: 20px;
-  }
   .manual_audit_section {
     margin-top: 50px;
   }
@@ -1031,6 +1026,9 @@
     bottom: 2px;
     padding-right: 21px;
   }
+  .hero_section_btn_container{
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1059,7 +1057,8 @@
     .custom_ladning_font{
       font-size: 72px !important;
     }
-    .display_above_997{
-      display: block;
+    .hero_desktop_banner{
+      display: flex;
+      justify-content: flex-end;
     }
 }
