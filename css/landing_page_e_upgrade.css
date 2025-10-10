@@ -3033,7 +3033,7 @@ section,
       drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.3;
     filter: drop-shadow(0 0 2px rgba(194, 255, 189, 0.5))
       drop-shadow(0 0 4px rgba(194, 255, 189, 0.3));
   }
