@@ -3667,93 +3667,23 @@ section,
   background: #c2ffbd1a;
 }
 
-.clean_btn_style_animated {
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: transparent;
-  border: none;
-  padding: 0;
+.run_quickscan_btn_container {
   position: relative;
 }
-
-.clean_btn_style_animated svg {
-  display: block;
-}
-
-/* Target ONLY the arrow paths (3rd and 4th path elements) */
-/* Left arrow - starts with lower opacity */
-.clean_btn_style_animated svg path:nth-child(5) {
-  opacity: 0.5;
-  transition: all 0.3s ease;
-}
-
-/* Right arrow - starts with full opacity */
-.clean_btn_style_animated svg path:nth-child(4) {
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-/* Hover state - both arrows at full opacity with glow */
-.clean_btn_style_animated:hover svg path:nth-child(4),
-.clean_btn_style_animated:hover svg path:nth-child(5) {
-  opacity: 1;
-  filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
-    drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
-}
-
-/* Pulsing animation keyframes */
-@keyframes pulse-arrow {
-  0%,
-  100% {
-    opacity: 1;
-    filter: drop-shadow(0 0 4px rgba(194, 255, 189, 0.8))
-      drop-shadow(0 0 8px rgba(194, 255, 189, 0.6));
-  }
-  50% {
-    opacity: 0.6;
-    filter: drop-shadow(0 0 2px rgba(194, 255, 189, 0.5))
-      drop-shadow(0 0 4px rgba(194, 255, 189, 0.3));
-  }
-}
-
-/* Apply staggered animation on hover - LEFT arrow first */
-.clean_btn_style_animated:hover svg path:nth-child(5) {
-  animation: pulse-arrow 1.5s ease-in-out infinite;
-}
-
-/* RIGHT arrow animates with 0.3s delay */
-.clean_btn_style_animated:hover svg path:nth-child(4) {
-  animation: pulse-arrow 1.5s ease-in-out infinite 0.3s;
-}
-
-/* Optional: Add background glow effect to button */
-.clean_btn_style_animated::before {
-  content: "";
+.run_quickscan_btn {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    rgba(194, 255, 189, 0.05) 0%,
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
+  right: 14px;
+  border: unset;
+  bottom: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
 }
 
-.clean_btn_style_animated:hover::before {
-  opacity: 1;
-  animation: glow-pulse 2s ease-in-out infinite;
-}
-
-@keyframes glow-pulse {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
+.run_quickscan_btn:hover {
+  background-color: transparent;
+  box-shadow: none;
 }
 
 /* Responsive Design */
