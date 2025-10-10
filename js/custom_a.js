@@ -64,7 +64,7 @@ $(document).ready(function () {
   });
 });
 
-const serviceWraps = document.querySelectorAll(".service_wrap");
+const serviceWraps = document.querySelectorAll(".how_we_protect_card");
 serviceWraps.forEach((serviceWrap) => {
   serviceWrap.addEventListener("mousemove", (e) => {
     const rect = serviceWrap.getBoundingClientRect();
