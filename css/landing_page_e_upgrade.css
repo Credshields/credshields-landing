@@ -1988,21 +1988,30 @@ img {
   font-family: "Aldrich", sans-serif;
 }
 
-.partners-grid {
+/* .partners-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 5px;
   max-width: 1600px;
   margin: 0 auto;
   padding: 0 20px;
+} */
+
+.partners-grid {
+  display: flex;
+  flex-shrink: 0;
+  display: flex;
+  flex-shrink: 0;
+  gap: 4px;
 }
 
 .partner-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  padding: 15px;
+  height: 94px;
+  width: 146px;
+  padding: 33px 21px;
   transition: all 0.3s ease;
   position: relative;
   background-color: #18181b80;
@@ -2040,6 +2049,31 @@ img {
 
 .partner-item:hover .partner-logo.hover {
   opacity: 1;
+}
+
+.partners-track {
+  display: flex;
+  gap: 4px;
+  animation: scroll 30s linear infinite;
+  width: fit-content;
+}
+
+.trusted_by_header {
+  color: white;
+  margin-bottom: 50px !important;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* The animation keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Responsive Styles */
@@ -3110,10 +3144,6 @@ section,
   flex-wrap: wrap;
 }
 
-.hero_section_btn_container_main > *:nth-child(2) {
-  margin-top: -140px;
-}
-
 .hero_section_btn_container_main > *:first-child > div > button {
   margin-top: 20px;
 }
@@ -3711,6 +3741,40 @@ section,
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.partners-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.partners-track {
+  display: flex;
+  gap: 4px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.partner-item {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.partner-item:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 2));
+    /* This will make it scroll by half the width of the track */
+  }
 }
 
 /* Responsive Design */
