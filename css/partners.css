@@ -1,0 +1,63 @@
+/* Partners Section Infinite Scroll */
+.partners-track {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background: #000;
+}
+
+.partners-grid {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.partners-grid:hover {
+  animation-play-state: paused;
+}
+
+.partner-item {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.partner-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+  filter: grayscale(100%) brightness(0.7);
+}
+
+.partner-item img.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: none;
+}
+
+.partner-item:hover img:not(.hover) {
+  opacity: 0;
+}
+
+.partner-item:hover img.hover {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-180px * 8 - 40px * 8)); /* Adjust based on item width and gap */
+  }
+}

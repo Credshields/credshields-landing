@@ -81,9 +81,7 @@
   .cookies_txt p {
     margin-bottom: 10px;
   }
-  .contact_head{
-    padding-left: 20px;
-  }
+
   .contact_head p,
   .products_head p {
     width: 100%;
@@ -616,6 +614,11 @@
   .hero_section_btn_container_main > *:first-child > div > button{
     width: 255px;
   }
+
+  .run_quickscan_btn{
+    bottom: 6px;
+    padding-right: 24px;
+  }
 }
 
 @media (min-width: 765px) and (max-width: 1200px) {
@@ -677,10 +680,6 @@
     font-size: 26px;
   }
 
-  .how_we_protect_card_img_box{
-    flex-direction: column-reverse;
-    align-items: baseline;
-  }
   .non_hero_title h2{
     font-size: 28px;
   }
@@ -822,9 +821,6 @@
   .custom_contact_bg{
     display: block;
   }
-  .contact_head{
-    padding-left: 20px;
-  }
   .manual_audit_section {
     margin-top: 50px;
   }
@@ -857,6 +853,9 @@
 
   .header_section > .container {
     max-width: 95%;
+  }
+  .get_in_touch_card{
+    width: unset;
   }
 }
 
@@ -971,6 +970,10 @@
   .hero_section_btn_container_main > *:first-child > div{
     justify-content: center;
   }
+
+  .text_align_center_below_991{
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1019,6 +1022,13 @@
   .our_partners_section {
     padding: 50px 0;
   }
+  .run_quickscan_btn{
+    bottom: 2px;
+    padding-right: 21px;
+  }
+  .hero_section_btn_container{
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1047,7 +1057,8 @@
     .custom_ladning_font{
       font-size: 72px !important;
     }
-    .display_above_997{
-      display: block;
+    .hero_desktop_banner{
+      display: flex;
+      justify-content: flex-end;
     }
 }

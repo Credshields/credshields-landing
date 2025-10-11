@@ -64,13 +64,13 @@ $(document).ready(function () {
   });
 });
 
-const serviceWraps = document.querySelectorAll(".service_wrap");
+const serviceWraps = document.querySelectorAll(".how_we_protect_card");
 serviceWraps.forEach((serviceWrap) => {
   serviceWrap.addEventListener("mousemove", (e) => {
     const rect = serviceWrap.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
-    const gradientStyle = `radial-gradient(circle at ${x}% ${y}%, #ACF0C6, #174AFF, #18181b80, #18181b80, #18181b80)`;
+    const gradientStyle = `radial-gradient(circle at ${x}% ${y}%,rgba(172, 240, 198, 0.56),rgba(23, 73, 255, 0.68), #18181b80, #18181b80, #18181b80)`;
     const gradient = serviceWrap.querySelector(".gradient");
     gradient.style.background = gradientStyle;
   });
