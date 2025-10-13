@@ -19,6 +19,29 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/slick.css" />
 	<link rel="stylesheet" href="css/aos.css" />
+	<style>
+		/* Hover dropdown for desktop */
+		@media (min-width: 992px) {
+			.dropdown-hover-expand .dropdown-menu {
+				display: block;
+				top: 100%;
+				left: 0;
+				visibility: hidden;
+				top: 100%;
+				transform: translateY(10px);
+				transition: all 0.1s ease;
+				top: 100%;
+				top: 100%;
+				top: 100%;
+			}
+			.dropdown-hover-expand:hover .dropdown-menu {
+				display: block;
+				visibility: visible;
+				top: 100%;
+				transform: translateY(0);
+			}
+		}
+	</style>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -279,9 +302,9 @@
 								<p>About</p>
 							</a>
 						</li>
-						<li class="nav-item dropdown dropdown-nav-custom">
-							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
 								<p style="margin: 0 12px; cursor: pointer;">Solutions <img src="images/down_arrow.svg"
 										alt="down" class="img-fluid" /></p>
 							</a>
@@ -306,9 +329,9 @@
 									Soon)</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown dropdown-nav-custom">
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
 							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
 								<p style="margin: 0 12px; cursor: pointer;">Industries <img src="images/down_arrow.svg"
 										alt="down" class="img-fluid" /></p>
 							</a>
@@ -319,9 +342,9 @@
 								<a class="dropdown-item" href="gamin-digital-assets.html">Gaming & Digital Assets</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown dropdown-nav-custom">
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
 							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
 								<p style="margin: 0 12px; cursor: pointer;">Resources <img src="images/down_arrow.svg"
 										alt="down" class="img-fluid" /></p>
 							</a>
