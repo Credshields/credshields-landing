@@ -2170,7 +2170,8 @@ img {
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 150px;
+  gap: 50px;
+  justify-content: space-between;
 }
 .contact_seach {
   display: flex;
@@ -2181,7 +2182,7 @@ img {
 .contact_seach input {
   background: #161616;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
-  border: none;
+  border: 1px solid #a6a6a654;
   color: #4a4a4a;
   height: 45px;
   width: 100%;
@@ -2197,7 +2198,7 @@ img {
 .contact_seach textarea {
   background: #161616;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
-  border: none;
+  border: 1px solid #a6a6a654;
   color: #4a4a4a;
   height: 120px;
   width: 100%;
