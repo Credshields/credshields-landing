@@ -3643,13 +3643,15 @@ section,
 }
 
 .dropdown-menu {
-  background: black !important;
+  background: #161516 !important;
+  padding: 30px !important;
 }
 .dropdown-item {
-  color: white;
+  color: #979797;
 }
 .dropdown-item:hover {
-  background-color: #f8f9fa6a;
+  color: #C2FFBD;
+  background-color: transparent !important;
 }
 .dropdown-toggle::after {
   display: none;
