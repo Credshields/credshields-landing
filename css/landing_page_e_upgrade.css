@@ -3406,6 +3406,18 @@ section,
   animation: glow-pulse 2s ease-in-out infinite;
 }
 
+.how_we_protect_card_img_box > .card-hover {
+  display: none;
+}
+
+.how_we_protect_card:hover .how_we_protect_card_img_box > .card-hover {
+  display: block;
+}
+
+.how_we_protect_card:hover .how_we_protect_card_img_box > .card-image {
+  display: none;
+}
+
 /* Newsletter Subscription */
 .newsletter-subscription {
   max-width: 600px;
