@@ -3964,6 +3964,12 @@ section,
   gap: 17px;
 }
 
+.partner-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: 1px solid #c2ffbd8f;
+}
+
 .partners-card-list {
   margin-top: 44px;
   display: flex;
