@@ -3954,6 +3954,23 @@ section,
   display: block;
   width: 100% !important;
 }
+
+.partner-card {
+  display: flex;
+  height: 166px;
+  max-width: 400px;
+  padding: 20px 27px;
+  background: #18181b80;
+  gap: 17px;
+}
+
+.partners-card-list {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
