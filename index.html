@@ -291,7 +291,7 @@
 					<span class="fa fa-bars"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav m-auto custom_scrl">
+					<ul class="navbar-nav m-auto custom_scrl desktop-menu">
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">
 								<p>Home</p>
@@ -360,7 +360,7 @@
 							</a>
 						</li>
 					</ul>
-					<nav class="navbar navbar-light cart_drp_clk">
+					<nav class="navbar navbar-light desktop-menu">
 						<form class="form-inline">
 							<a href=""
 								onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
@@ -368,6 +368,131 @@
 							</a>
 						</form>
 					</nav>
+					<div class="mobile-overlay-menu" id="navbarNav">
+						<div class="mobile-overlay-content">
+							<div class="mobile-overlay-menu-item">
+								<a href="index.html">
+									Home
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item">
+								<a href="about.html">
+									About
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+								<span>Solutions</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="smart-contract-audit.html">Smart Contract Audits</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="dapp-protocol.html">DApp & Protocol Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="enterprise-web.html">Enterprise Web & Mobile Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="penetration-testing.html">Penetration Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="block-chain-security.html">Blockchain Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="external-network-testing-new.html">External Network Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="cloud-infra.html">Cloud Infrastructure</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="wallet-security-new.html">Wallet Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="mobile-app-testing.html">Mobile App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web-app-testing.html">Web App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="ai-security-tools.html">AI Security Tools</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/">SolidityScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://rustscan.com/">RustScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+								<span>Industries</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="finance-fintech.html">Finance & Fintech</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="saas-enterprise.html">SaaS & Enterprise</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web3-protocol.html">Web3 Protocols & Exchanges</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="gamin-digital-assets.html">Gaming & Digital Assets</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+								<span>Resources</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">Recently Audited</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">Popular Projects</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">KYC Reports</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item">
+								<a href="https://scs.owasp.org/sctop10/" target="_blank">Owasp Top 10</a>
+							</div>
+						</div>
+
+						<div class="mobile-overlay-footer">
+							<nav class="navbar navbar-light cart_drp_clk">
+								<form class="form-inline">
+									<a href=""
+										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+										<img src="images/book_security_audit_btn.svg" alt="clip_path_btn"
+											class="img-fluid">
+									</a>
+								</form>
+							</nav>
+						</div>
+					</div>
 				</div>
 			</nav>
 		</div>
@@ -783,7 +908,8 @@
 
 			<div class="trusted_by_header" style="margin-top: 60px; color: #8A94A6;">
 				View All Partners and Ecosystem</div>
-			<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more" style="z-index: 9999; margin: auto;">
+			<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
+				style="z-index: 9999; margin: auto;">
 				<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 					style="opacity: 0.5;">
 					<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1689,6 +1815,21 @@
 	<!-- 5. HubSpot script (async) -->
 	<script type="text/javascript" id="hs-script-loader" async defer
 		src="https://js-eu1.hs-scripts.com/24889894.js"></script>
+
+
+	<script>
+		function toggleSubmenu(id) {
+			const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+			const menuItem = submenu.previousElementSibling;
+
+			submenu.classList.toggle('mobile-overlay-open');
+			menuItem.classList.toggle('mobile-overlay-expanded');
+		}
+
+		function closeMenu() {
+			alert('Menu closed! In a real implementation, this would hide the overlay.');
+		}
+	</script>
 </body>
 
 </html>

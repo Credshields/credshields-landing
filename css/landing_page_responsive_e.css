@@ -766,6 +766,11 @@
 }
 
 /* Specific styles for testimonial carousel at 1200px breakpoint */
+@media (max-width: 991) {
+ .desktop-menu{
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   .company_wrap,
   .team_wrap,

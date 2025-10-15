@@ -3650,7 +3650,7 @@ section,
   color: #979797;
 }
 .dropdown-item:hover {
-  color: #C2FFBD;
+  color: #c2ffbd;
   background-color: transparent !important;
 }
 .dropdown-toggle::after {
@@ -3782,6 +3782,178 @@ section,
   transform: translateY(-5px);
 }
 
+/* mobile overlay */
+
+.mobile-overlay-menu {
+  display: none;
+}
+
+.mobile-overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.mobile-overlay-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mobile-overlay-logo-icon {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-overlay-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.mobile-overlay-close-btn:hover {
+  opacity: 0.7;
+}
+
+.mobile-overlay-content {
+  flex: 1;
+  padding: 24px 15px;
+  width: 100%;
+  max-height: 100%;
+  overflow: scroll;
+}
+
+.mobile-overlay-menu-item {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.mobile-overlay-menu-item:hover {
+  opacity: 0.8;
+}
+
+.mobile-overlay-menu-item:last-child {
+  border-bottom: none;
+}
+
+.mobile-overlay-chevron {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+
+.mobile-overlay-menu-item.mobile-overlay-expanded .mobile-overlay-chevron {
+  transform: rotate(180deg);
+}
+
+.mobile-overlay-submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-overlay-submenu.mobile-overlay-open {
+  max-height: 800px;
+}
+
+.mobile-overlay-submenu-item {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  padding: 12px 0 12px 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.mobile-overlay-submenu-item:hover {
+  color: white;
+}
+
+.mobile-overlay-footer {
+  padding: 24px 0px;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.mobile-overlay-btn {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  text-align: center;
+}
+
+.mobile-overlay-btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.mobile-overlay-btn-outline:hover {
+  border-color: white;
+}
+
+.mobile-overlay-btn-primary {
+  background: linear-gradient(135deg, #6b4ce6 0%, #8b5cf6 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-overlay-btn-primary::after {
+  content: "💬";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.mobile-overlay-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.mobile-overlay-menu-item > a {
+  width: 100% !important;
+}
+
+.mobile-overlay-submenu-item > a {
+  display: block;
+  width: 100% !important;
+}
 @keyframes scroll {
   0% {
     transform: translateX(0);

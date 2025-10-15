@@ -942,6 +942,17 @@
 }
 
 @media (max-width: 991px) {
+  .mobile-overlay-menu {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
   .partners-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -973,6 +984,9 @@
 
   .text_align_center_below_991 {
     text-align: center;
+  }
+  .desktop-menu{
+    display: none;
   }
 }
 

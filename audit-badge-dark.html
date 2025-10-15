@@ -20,5 +20,19 @@
     <a href="https://credshields.com/" target="_blank">
       <img src="images/badge-dark.svg" style="width: 100%;" />
     </a>
-  </body>
+  <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+            const menuItem = submenu.previousElementSibling;
+
+            submenu.classList.toggle('mobile-overlay-open');
+            menuItem.classList.toggle('mobile-overlay-expanded');
+        }
+
+        function closeMenu() {
+            alert('Menu closed! In a real implementation, this would hide the overlay.');
+        }
+    </script>
+   <!-- Custom js file end -->
+</body>
 </html>

@@ -1410,6 +1410,20 @@
 	<!-- 5. HubSpot script (async) -->
 	<script type="text/javascript" id="hs-script-loader" async defer
 		src="https://js-eu1.hs-scripts.com/24889894.js"></script>
+<script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+            const menuItem = submenu.previousElementSibling;
+
+            submenu.classList.toggle('mobile-overlay-open');
+            menuItem.classList.toggle('mobile-overlay-expanded');
+        }
+
+        function closeMenu() {
+            alert('Menu closed! In a real implementation, this would hide the overlay.');
+        }
+    </script>
+   <!-- Custom js file end -->
 </body>
 
 </html>
