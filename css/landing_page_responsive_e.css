@@ -81,9 +81,7 @@
   .cookies_txt p {
     margin-bottom: 10px;
   }
-  .contact_head{
-    padding-left: 20px;
-  }
+
   .contact_head p,
   .products_head p {
     width: 100%;
@@ -192,7 +190,7 @@
     margin-bottom: 3rem;
   }
 
-  .audit_overview > div:not(:first-child){
+  .audit_overview > div:not(:first-child) {
     width: 100%;
     height: auto;
     padding: 1rem;
@@ -573,14 +571,14 @@
     margin-top: 50px;
   }
 
-  .manual_audit_section img{
+  .manual_audit_section img {
     display: none;
   }
-  .manual_audit_section p{
+  .manual_audit_section p {
     max-width: 100%;
   }
 
-  .custom_contact_bg{
+  .custom_contact_bg {
     display: block;
   }
 }
@@ -748,18 +746,18 @@
   .hero_btn {
     margin-left: 0px;
   }
-  .manual_audit_section img{
+  .manual_audit_section img {
     display: none;
   }
 
-  .manual_audit_section p{
+  .manual_audit_section p {
     max-width: 100%;
   }
 
-  .custom_contact_bg{
+  .custom_contact_bg {
     display: block;
   }
-  .contact_head{
+  .contact_head {
     padding-left: 20px;
   }
   .manual_audit_section {
@@ -767,7 +765,18 @@
   }
 }
 
+
 /* Specific styles for testimonial carousel at 1200px breakpoint */
+@media (max-width: 991px) {
+  .desktop-menu {
+    display: none;
+  }
+
+ .partners-card-list {
+    justify-content: center !important;
+  }
+ 
+}
 @media (max-width: 1200px) {
   .company_wrap,
   .team_wrap,

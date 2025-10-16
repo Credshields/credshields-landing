@@ -19,6 +19,29 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/slick.css" />
 	<link rel="stylesheet" href="css/aos.css" />
+	<style>
+		/* Hover dropdown for desktop */
+		@media (min-width: 992px) {
+			.dropdown-hover-expand .dropdown-menu {
+				display: block;
+				top: 100%;
+				left: 0;
+				visibility: hidden;
+				top: 100%;
+				transform: translateY(10px);
+				transition: all 0.1s ease;
+				top: 100%;
+				top: 100%;
+				top: 100%;
+			}
+			.dropdown-hover-expand:hover .dropdown-menu {
+				display: block;
+				visibility: visible;
+				top: 100%;
+				transform: translateY(0);
+			}
+		}
+	</style>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1410,6 +1433,20 @@
 	<!-- 5. HubSpot script (async) -->
 	<script type="text/javascript" id="hs-script-loader" async defer
 		src="https://js-eu1.hs-scripts.com/24889894.js"></script>
+<script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+            const menuItem = submenu.previousElementSibling;
+
+            submenu.classList.toggle('mobile-overlay-open');
+            menuItem.classList.toggle('mobile-overlay-expanded');
+        }
+
+        function closeMenu() {
+            alert('Menu closed! In a real implementation, this would hide the overlay.');
+        }
+    </script>
+   <!-- Custom js file end -->
 </body>
 
 </html>

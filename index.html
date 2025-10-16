@@ -19,6 +19,29 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/slick.css" />
 	<link rel="stylesheet" href="css/aos.css" />
+	<style>
+		/* Hover dropdown for desktop */
+		@media (min-width: 992px) {
+			.dropdown-hover-expand .dropdown-menu {
+				display: block;
+				top: 100%;
+				left: 0;
+				visibility: hidden;
+				top: 100%;
+				transform: translateY(10px);
+				transition: all 0.1s ease;
+				top: 100%;
+				top: 100%;
+				top: 100%;
+			}
+			.dropdown-hover-expand:hover .dropdown-menu {
+				display: block;
+				visibility: visible;
+				top: 100%;
+				transform: translateY(0);
+			}
+		}
+	</style>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -268,7 +291,7 @@
 					<span class="fa fa-bars"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav m-auto custom_scrl">
+					<ul class="navbar-nav m-auto custom_scrl desktop-menu">
 						<li class="nav-item">
 							<a class="nav-link" href="index.html">
 								<p>Home</p>
@@ -279,9 +302,9 @@
 								<p>About</p>
 							</a>
 						</li>
-						<li class="nav-item dropdown dropdown-nav-custom">
-							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
 								<p style="margin: 0 12px; cursor: pointer;">Solutions <img src="images/down_arrow.svg"
 										alt="down" class="img-fluid" /></p>
 							</a>
@@ -306,9 +329,9 @@
 									Soon)</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown dropdown-nav-custom">
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
 							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
 								<p style="margin: 0 12px; cursor: pointer;">Industries <img src="images/down_arrow.svg"
 										alt="down" class="img-fluid" /></p>
 							</a>
@@ -319,9 +342,9 @@
 								<a class="dropdown-item" href="gamin-digital-assets.html">Gaming & Digital Assets</a>
 							</div>
 						</li>
-						<li class="nav-item dropdown dropdown-nav-custom">
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
 							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
 								<p style="margin: 0 12px; cursor: pointer;">Resources <img src="images/down_arrow.svg"
 										alt="down" class="img-fluid" /></p>
 							</a>
@@ -337,7 +360,7 @@
 							</a>
 						</li>
 					</ul>
-					<nav class="navbar navbar-light cart_drp_clk">
+					<nav class="navbar navbar-light desktop-menu">
 						<form class="form-inline">
 							<a href=""
 								onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
@@ -345,6 +368,131 @@
 							</a>
 						</form>
 					</nav>
+					<div class="mobile-overlay-menu" id="navbarNav">
+						<div class="mobile-overlay-content">
+							<div class="mobile-overlay-menu-item">
+								<a href="index.html">
+									Home
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item">
+								<a href="about.html">
+									About
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+								<span>Solutions</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="smart-contract-audit.html">Smart Contract Audits</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="dapp-protocol.html">DApp & Protocol Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="enterprise-web.html">Enterprise Web & Mobile Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="penetration-testing.html">Penetration Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="block-chain-security.html">Blockchain Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="external-network-testing-new.html">External Network Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="cloud-infra.html">Cloud Infrastructure</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="wallet-security-new.html">Wallet Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="mobile-app-testing.html">Mobile App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web-app-testing.html">Web App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="ai-security-tools.html">AI Security Tools</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/">SolidityScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://rustscan.com/">RustScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+								<span>Industries</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="finance-fintech.html">Finance & Fintech</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="saas-enterprise.html">SaaS & Enterprise</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web3-protocol.html">Web3 Protocols & Exchanges</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="gamin-digital-assets.html">Gaming & Digital Assets</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+								<span>Resources</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">Recently Audited</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">Popular Projects</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">KYC Reports</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item">
+								<a href="https://scs.owasp.org/sctop10/" target="_blank">Owasp Top 10</a>
+							</div>
+						</div>
+
+						<div class="mobile-overlay-footer">
+							<nav class="navbar navbar-light cart_drp_clk">
+								<form class="form-inline">
+									<a href=""
+										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+										<img src="images/book_security_audit_btn.svg" alt="clip_path_btn"
+											class="img-fluid">
+									</a>
+								</form>
+							</nav>
+						</div>
+					</div>
 				</div>
 			</nav>
 		</div>
@@ -372,24 +520,41 @@
 						</div>
 						<div class="hero_section_btn_container_main">
 							<div>
-								<p>We secure smart contracts, protocols, and enterprise applications with AI-powered
+								<p style="color: #979797;">We secure smart contracts, protocols, and enterprise
+									applications with AI-powered
 									audits
 									and global compliance standards.
 								</p>
-								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid display_below_997">
+								<img src="images/landing_page_graphic.svg" alt="hero_img"
+									class="img-fluid display_below_997">
 								<div>
 									<button class="clean_btn_style"
 										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
 										<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
 									</button>
-									<button class="clean_btn_style" id="run_free_quickscan">
-										<img src="images/hero_btn_2.svg" alt="hero_btn_1" class="img-fluid">
+									<button class="clean_btn_style run_quickscan_btn_container" id="run_free_quickscan">
+										<img src="images/hero_btn_2.svg" alt="hero_btn_2" class="img-fluid">
+										<div class="numbers_sec_nav run_quickscan_btn" aria-label="View more">
+											<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+												xmlns="http://www.w3.org/2000/svg" style="opacity: 0.5;">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+													fill="#C2FFBD" />
+											</svg>
+											<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd"
+													d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+													fill="#C2FFBD" />
+											</svg>
+										</div>
 									</button>
 								</div>
 
 							</div>
-							<div class="display_above_997">
-								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid">
+							<div class="hero_desktop_banner">
+								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid"
+									style="max-width: 90%;">
 							</div>
 
 						</div>
@@ -429,14 +594,14 @@
 
 			<div class="number_container">
 				<div class="stat_container">
-					<p>Audits</p>
 					<h1>
 						<span id="web3Count" class="animate-number theme_color font_aldrich" data-end="200"
 							show-plus="true">0</span>
 					</h1>
+					<p>Audits</p>
 					<p class="numbers_sec_subtitle">Check Our Popular Audits</p>
 					<button class="numbers_sec_nav"
-						onclick="window.location.href = 'resource-audits.html?tab=popular-projects';"
+						onclick="window.location.href = 'resource-audits.html?tab=recent-audits';"
 						aria-label="View more">
 						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 							style="opacity: 0.5;">
@@ -453,11 +618,12 @@
 				</div>
 				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
 				<div class="stat_container">
-					<p>Protected</p>
 					<h1 class="font_aldrich theme_color">
 						$<span id="amountSecured" class="animate-number theme_color font_aldrich" data-end="10000000000"
 							show-plus="true">0</span>
 					</h1>
+					<p>Protected</p>
+
 					<p class="numbers_sec_subtitle">Check Recently Audited Projects</p>
 					<button class="numbers_sec_nav"
 						onclick="window.location.href = 'resource-audits.html?tab=recent-audits';"
@@ -478,11 +644,12 @@
 				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
 
 				<div class="stat_container">
-					<p>Post-Audit Exploits</p>
 					<h1>
 						<span id="amountSecured" class="animate-number theme_color font_aldrich" data-end="0"
 							show-plus="true">0</span>
 					</h1>
+					<p>Post-Audit Exploits</p>
+
 					<p class="numbers_sec_subtitle">Run a QuickScan for your code</p>
 					<button class="numbers_sec_nav" id="run_free_quickscan_3" aria-label="View more">
 						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -501,10 +668,11 @@
 				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
 
 				<div class="stat_container">
-					<p>Projects Audited</p>
 					<h1>
 						<span id="linesOfCode" class="animate-number theme_color font_aldrich" data-end="384">0</span>
 					</h1>
+					<p>Projects Audited</p>
+
 					<p class="numbers_sec_subtitle">Check KYC Reports</p>
 					<button class="numbers_sec_nav"
 						onclick="window.location.href = 'resource-audits.html?tab=kyc-reports';" aria-label="View more">
@@ -530,108 +698,230 @@
 	<section class="our_partners_section" id="partner_sec">
 		<div class="container pos_relative">
 
-			<div style="color:#8A94A6 !important; margin-bottom: 50px !important;">Trusted by</div>
-			<div class="partners-grid">
-				<!-- Row 1 -->
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000">
-					<a href="https://www.arthera.net/" target="_blank">
-						<img src="images/arthera_gray.svg" alt="Arthera" class="partner-logo" />
-						<img src="images/arthera.svg" alt="Arthera" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-					<a href="https://rootstock.io/" target="_blank">
-						<img src="images/rootstock_gray.svg" alt="Rootstock" class="partner-logo" />
-						<img src="images/rootstock.svg" alt="Rootstock" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-					<a href="https://developers.iotex.io/" target="_blank">
-						<img src="images/iotex_gray.svg" alt="IoTeX" class="partner-logo" />
-						<img src="images/iotex.svg" alt="IoTeX" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
-					<a href="https://www.avax.network/" target="_blank">
-						<img src="images/avalanche_gray.svg" alt="Avalanche" class="partner-logo" />
-						<img src="images/avalanche.svg" alt="Avalanche" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-					<a href="https://immunefi.com/" target="_blank">
-						<img src="images/immunefi_gray.svg" alt="Immunefi" class="partner-logo" />
-						<img src="images/immunefi.svg" alt="Immunefi" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
-					<a href="https://www.blockscout.com/" target="_blank">
-						<img src="images/blockscout_gray.svg" alt="Blockscout" class="partner-logo" />
-						<img src="images/blockscout.svg" alt="Blockscout" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-					<a href="https://www.gnosis.io/" target="_blank">
-						<img src="images/gnosis_gray.svg" alt="Gnosis" class="partner-logo" />
-						<img src="images/gnosis.svg" alt="Gnosis" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
-					<a href="https://www.nordek.io/" target="_blank">
-						<img src="images/nordek_gray.svg" alt="Nordek" class="partner-logo" />
-						<img src="images/nordek.svg" alt="Nordek" class="partner-logo hover" />
-					</a>
-				</div>
+			<div class="trusted_by_header">
+				Trusted By Banks, Blockchain and Fortune 500 Companies</div>
 
-				<!-- Row 2 -->
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
-					<a href="https://xdc.org/" target="_blank">
-						<img src="images/xdc_gray.svg" alt="XDC" class="partner-logo" />
-						<img src="images/xdc.svg" alt="XDC" class="partner-logo hover" />
-					</a>
+			<div class="partners-track">
+				<div class="partners-grid">
+					<!-- Row 1 -->
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000">
+						<a href="https://www.arthera.net/" target="_blank">
+							<img src="images/arthera_gray.svg" alt="Arthera" class="partner-logo" />
+							<img src="images/arthera.svg" alt="Arthera" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+						<a href="https://rootstock.io/" target="_blank">
+							<img src="images/rootstock_gray.svg" alt="Rootstock" class="partner-logo" />
+							<img src="images/rootstock.svg" alt="Rootstock" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+						<a href="https://developers.iotex.io/" target="_blank">
+							<img src="images/iotex_gray.svg" alt="IoTeX" class="partner-logo" />
+							<img src="images/iotex.svg" alt="IoTeX" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+						<a href="https://www.avax.network/" target="_blank">
+							<img src="images/avalanche_gray.svg" alt="Avalanche" class="partner-logo" />
+							<img src="images/avalanche.svg" alt="Avalanche" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+						<a href="https://immunefi.com/" target="_blank">
+							<img src="images/immunefi_gray.svg" alt="Immunefi" class="partner-logo" />
+							<img src="images/immunefi.svg" alt="Immunefi" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+						<a href="https://www.blockscout.com/" target="_blank">
+							<img src="images/blockscout_gray.svg" alt="Blockscout" class="partner-logo" />
+							<img src="images/blockscout.svg" alt="Blockscout" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+						<a href="https://www.gnosis.io/" target="_blank">
+							<img src="images/gnosis_gray.svg" alt="Gnosis" class="partner-logo" />
+							<img src="images/gnosis.svg" alt="Gnosis" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+						<a href="https://www.nordek.io/" target="_blank">
+							<img src="images/nordek_gray.svg" alt="Nordek" class="partner-logo" />
+							<img src="images/nordek.svg" alt="Nordek" class="partner-logo hover" />
+						</a>
+					</div>
+
+					<!-- Row 2 -->
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+						<a href="https://xdc.org/" target="_blank">
+							<img src="images/xdc_gray.svg" alt="XDC" class="partner-logo" />
+							<img src="images/xdc.svg" alt="XDC" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+						<a href="https://www.resonance.security/" target="_blank">
+							<img src="images/resonance_gray.svg" alt="Resonance" class="partner-logo" />
+							<img src="images/resonance.svg" alt="Resonance" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+						<a href="https://gitopia.com/" target="_blank">
+							<img src="images/gitopia_gray.svg" alt="Gitopia" class="partner-logo" />
+							<img src="images/gitopia.svg" alt="Gitopia" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+						<a href="https://www.dojima.network/" target="_blank">
+							<img src="images/dojima_gray.svg" alt="Dojima" class="partner-logo" />
+							<img src="images/dojima.svg" alt="Dojima" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+						<a href="https://www.buildbear.io/" target="_blank">
+							<img src="images/buildbear_gray.svg" alt="BuildBear" class="partner-logo" />
+							<img src="images/buildbear.svg" alt="BuildBear" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+						<a href="https://guildaudits.com/" target="_blank">
+							<img src="images/guild_audits_gray.svg" alt="Guild Audits" class="partner-logo" />
+							<img src="images/guild_audits.svg" alt="Guild Audits" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+						<a href="https://hackenproof.com/" target="_blank">
+							<img src="images/hackenproof_gray.svg" alt="HackenProof" class="partner-logo" />
+							<img src="images/hackenproof.svg" alt="HackenProof" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+						<a href="https://hackenproof.com/" target="_blank">
+							<img src="images/blockchair_grey.svg" alt="HackenProof" class="partner-logo" />
+							<img src="images/blockchair.svg" alt="HackenProof" class="partner-logo hover" />
+						</a>
+					</div>
 				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-					<a href="https://www.resonance.security/" target="_blank">
-						<img src="images/resonance_gray.svg" alt="Resonance" class="partner-logo" />
-						<img src="images/resonance.svg" alt="Resonance" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
-					<a href="https://gitopia.com/" target="_blank">
-						<img src="images/gitopia_gray.svg" alt="Gitopia" class="partner-logo" />
-						<img src="images/gitopia.svg" alt="Gitopia" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-					<a href="https://www.dojima.network/" target="_blank">
-						<img src="images/dojima_gray.svg" alt="Dojima" class="partner-logo" />
-						<img src="images/dojima.svg" alt="Dojima" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
-					<a href="https://www.buildbear.io/" target="_blank">
-						<img src="images/buildbear_gray.svg" alt="BuildBear" class="partner-logo" />
-						<img src="images/buildbear.svg" alt="BuildBear" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-					<a href="https://guildaudits.com/" target="_blank">
-						<img src="images/guild_audits_gray.svg" alt="Guild Audits" class="partner-logo" />
-						<img src="images/guild_audits.svg" alt="Guild Audits" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
-					<a href="https://hackenproof.com/" target="_blank">
-						<img src="images/hackenproof_gray.svg" alt="HackenProof" class="partner-logo" />
-						<img src="images/hackenproof.svg" alt="HackenProof" class="partner-logo hover" />
-					</a>
-				</div>
-				<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
-					<a href="https://hackenproof.com/" target="_blank">
-						<img src="images/blockchair_grey.svg" alt="HackenProof" class="partner-logo" />
-						<img src="images/blockchair.svg" alt="HackenProof" class="partner-logo hover" />
-					</a>
+				<div class="partners-grid">
+					<!-- Row 1 -->
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000">
+						<a href="https://www.arthera.net/" target="_blank">
+							<img src="images/arthera_gray.svg" alt="Arthera" class="partner-logo" />
+							<img src="images/arthera.svg" alt="Arthera" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+						<a href="https://rootstock.io/" target="_blank">
+							<img src="images/rootstock_gray.svg" alt="Rootstock" class="partner-logo" />
+							<img src="images/rootstock.svg" alt="Rootstock" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+						<a href="https://developers.iotex.io/" target="_blank">
+							<img src="images/iotex_gray.svg" alt="IoTeX" class="partner-logo" />
+							<img src="images/iotex.svg" alt="IoTeX" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+						<a href="https://www.avax.network/" target="_blank">
+							<img src="images/avalanche_gray.svg" alt="Avalanche" class="partner-logo" />
+							<img src="images/avalanche.svg" alt="Avalanche" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+						<a href="https://immunefi.com/" target="_blank">
+							<img src="images/immunefi_gray.svg" alt="Immunefi" class="partner-logo" />
+							<img src="images/immunefi.svg" alt="Immunefi" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+						<a href="https://www.blockscout.com/" target="_blank">
+							<img src="images/blockscout_gray.svg" alt="Blockscout" class="partner-logo" />
+							<img src="images/blockscout.svg" alt="Blockscout" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+						<a href="https://www.gnosis.io/" target="_blank">
+							<img src="images/gnosis_gray.svg" alt="Gnosis" class="partner-logo" />
+							<img src="images/gnosis.svg" alt="Gnosis" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+						<a href="https://www.nordek.io/" target="_blank">
+							<img src="images/nordek_gray.svg" alt="Nordek" class="partner-logo" />
+							<img src="images/nordek.svg" alt="Nordek" class="partner-logo hover" />
+						</a>
+					</div>
+
+					<!-- Row 2 -->
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+						<a href="https://xdc.org/" target="_blank">
+							<img src="images/xdc_gray.svg" alt="XDC" class="partner-logo" />
+							<img src="images/xdc.svg" alt="XDC" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+						<a href="https://www.resonance.security/" target="_blank">
+							<img src="images/resonance_gray.svg" alt="Resonance" class="partner-logo" />
+							<img src="images/resonance.svg" alt="Resonance" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
+						<a href="https://gitopia.com/" target="_blank">
+							<img src="images/gitopia_gray.svg" alt="Gitopia" class="partner-logo" />
+							<img src="images/gitopia.svg" alt="Gitopia" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+						<a href="https://www.dojima.network/" target="_blank">
+							<img src="images/dojima_gray.svg" alt="Dojima" class="partner-logo" />
+							<img src="images/dojima.svg" alt="Dojima" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+						<a href="https://www.buildbear.io/" target="_blank">
+							<img src="images/buildbear_gray.svg" alt="BuildBear" class="partner-logo" />
+							<img src="images/buildbear.svg" alt="BuildBear" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+						<a href="https://guildaudits.com/" target="_blank">
+							<img src="images/guild_audits_gray.svg" alt="Guild Audits" class="partner-logo" />
+							<img src="images/guild_audits.svg" alt="Guild Audits" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+						<a href="https://hackenproof.com/" target="_blank">
+							<img src="images/hackenproof_gray.svg" alt="HackenProof" class="partner-logo" />
+							<img src="images/hackenproof.svg" alt="HackenProof" class="partner-logo hover" />
+						</a>
+					</div>
+					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
+						<a href="https://hackenproof.com/" target="_blank">
+							<img src="images/blockchair_grey.svg" alt="HackenProof" class="partner-logo" />
+							<img src="images/blockchair.svg" alt="HackenProof" class="partner-logo hover" />
+						</a>
+					</div>
 				</div>
 			</div>
+
+			<!-- <div class="trusted_by_header" style="margin-top: 60px; color: #8A94A6;">
+				View All Partners and Ecosystem</div>
+			<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
+				style="z-index: 9999; margin: auto;" onclick="window.open('ecosystem.html', '_blank')">
+				<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+					style="opacity: 0.5;">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+						fill="#C2FFBD" />
+				</svg>
+				<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+						fill="#C2FFBD" />
+				</svg>
+			</button> -->
 		</div>
 	</section>
 	<!-- Trusted Partener Section End-->
@@ -963,8 +1253,21 @@
 					onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
 					<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
 				</button>
-				<button class="clean_btn_style" id="run_free_quickscan_2">
-					<img src="images/hero_btn_2.svg" alt="hero_btn_1" class="img-fluid">
+				<button class="clean_btn_style run_quickscan_btn_container" id="run_free_quickscan_2">
+					<img src="images/hero_btn_2.svg" alt="hero_btn_2" class="img-fluid">
+					<div class="numbers_sec_nav run_quickscan_btn" aria-label="View more">
+						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+							style="opacity: 0.5;">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+								fill="#C2FFBD" />
+						</svg>
+						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+								fill="#C2FFBD" />
+						</svg>
+					</div>
 				</button>
 
 			</div>
@@ -992,8 +1295,12 @@
 						<p>Predict flaws before launch</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
+						<img src="images/protect_card_1.svg" alt="hero_btn_2" class="img-fluid card-image"
+							style="align-self: end;">
+						<img src="images/protect_card_1_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
+							style="align-self: end;">
 						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							style="position: relative; top: 10px;">
+							style="z-index: 9999;">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1007,9 +1314,8 @@
 									fill="#C2FFBD" />
 							</svg>
 						</button>
-						<img src="images/protect_card_1.svg" alt="hero_btn_2" class="img-fluid"
-							style="align-self: end;">
 					</div>
+					<div class="gradient"></div>
 				</div>
 				<div class="how_we_protect_card" onclick="window.location.href = 'dapp-protocol.html';">
 					<div>
@@ -1017,8 +1323,12 @@
 						<p>Simulate economic & governance attacks</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
+						<img src="images/protect_card_2.svg" alt="hero_btn_2" class="img-fluid card-image"
+							style="align-self: end;">
+						<img src="images/protect_card_2_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
+							style="align-self: end;">
 						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'dapp-protocol.html';">
+							onclick="window.location.href = 'dapp-protocol.html';" style="z-index: 9999;">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1032,9 +1342,8 @@
 									fill="#C2FFBD" />
 							</svg>
 						</button>
-						<img src="images/protect_card_2.svg" alt="hero_btn_2" class="img-fluid"
-							style="align-self: end;">
 					</div>
+					<div class="gradient"></div>
 				</div>
 				<div class="how_we_protect_card" onclick="window.location.href = 'enterprise-web.html';">
 					<div>
@@ -1042,8 +1351,12 @@
 						<p>Cloud, mobile & SaaS defenses</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
+						<img src="images/protect_card_3.svg" alt="hero_btn_2" class="img-fluid card-image"
+							style="align-self: end;">
+						<img src="images/protect_card_3_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
+							style="align-self: end;">
 						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'enterprise-web.html';">
+							onclick="window.location.href = 'enterprise-web.html';" style="z-index: 9999;">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1057,9 +1370,8 @@
 									fill="#C2FFBD" />
 							</svg>
 						</button>
-						<img src="images/protect_card_3.svg" alt="hero_btn_2" class="img-fluid"
-							style="align-self: end;">
 					</div>
+					<div class="gradient"></div>
 				</div>
 				<div class="how_we_protect_card" onclick="window.location.href = 'penetration-testing.html';">
 					<div>
@@ -1067,8 +1379,12 @@
 						<p>Prevent Forced Attacks</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
+						<img src="images/protect_card_4.svg" alt="hero_btn_2" class="img-fluid card-image"
+							style="align-self: end;">
+						<img src="images/protect_card_4_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
+							style="align-self: end;">
 						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'penetration-testing.html';">
+							onclick="window.location.href = 'penetration-testing.html';" style="z-index: 9999;">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1082,9 +1398,8 @@
 									fill="#C2FFBD" />
 							</svg>
 						</button>
-						<img src="images/protect_card_4.svg" alt="hero_btn_2" class="img-fluid"
-							style="align-self: end;">
 					</div>
+					<div class="gradient"></div>
 				</div>
 				<div class="how_we_protect_card" onclick="window.location.href = 'ai-security-tools.html';">
 					<div>
@@ -1092,8 +1407,12 @@
 						<p>Instant predictive scanning for devs</p>
 					</div>
 					<div class="how_we_protect_card_img_box">
+						<img src="images/protect_card_5.svg" alt="hero_btn_2" class="img-fluid card-image"
+							style="align-self: end;">
+						<img src="images/protect_card_5_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
+							style="align-self: end;">
 						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'ai-security-tools.html';">
+							onclick="window.location.href = 'ai-security-tools.html';" style="z-index: 9999;">
 							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
 								style="opacity: 0.5;">
 								<path fill-rule="evenodd" clip-rule="evenodd"
@@ -1107,9 +1426,8 @@
 									fill="#C2FFBD" />
 							</svg>
 						</button>
-						<img src="images/protect_card_5.svg" alt="hero_btn_2" class="img-fluid"
-							style="align-self: end; position: relative; top: 20px;">
 					</div>
+					<div class="gradient"></div>
 				</div>
 
 
@@ -1256,7 +1574,7 @@
 
 			<div class="row col-lg-12 custom_contact_bg">
 
-				<div>
+				<div class="get_in_touch_card">
 					<div class="contact_head">
 						<h3>Get In Touch</h3>
 						<p>We appreciate each customer and we are proud that 60% of clients come back to work with us
@@ -1273,7 +1591,7 @@
 						</button>
 					</form>
 				</div>
-				<div>
+				<div class="get_in_touch_card">
 					<div class="contact_head">
 						<h3>Join the Community</h3>
 						<p>
@@ -1497,6 +1815,21 @@
 	<!-- 5. HubSpot script (async) -->
 	<script type="text/javascript" id="hs-script-loader" async defer
 		src="https://js-eu1.hs-scripts.com/24889894.js"></script>
+
+
+	<script>
+		function toggleSubmenu(id) {
+			const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+			const menuItem = submenu.previousElementSibling;
+
+			submenu.classList.toggle('mobile-overlay-open');
+			menuItem.classList.toggle('mobile-overlay-expanded');
+		}
+
+		function closeMenu() {
+			alert('Menu closed! In a real implementation, this would hide the overlay.');
+		}
+	</script>
 </body>
 
 </html>

@@ -19,6 +19,29 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/aos.css" />
+	<style>
+		/* Hover dropdown for desktop */
+		@media (min-width: 992px) {
+			.dropdown-hover-expand .dropdown-menu {
+				display: block;
+				top: 100%;
+				left: 0;
+				visibility: hidden;
+				top: 100%;
+				transform: translateY(10px);
+				transition: all 0.1s ease;
+				top: 100%;
+				top: 100%;
+				top: 100%;
+			}
+			.dropdown-hover-expand:hover .dropdown-menu {
+				display: block;
+				visibility: visible;
+				top: 100%;
+				transform: translateY(0);
+			}
+		}
+	</style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -260,93 +283,222 @@
 
     <!-- header section start -->
     <header class="header_section">
-        <div class="container">
-            <nav class="navbar px-0 navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.svg" alt="logo" class="img-fluid" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav m-auto custom_scrl">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                <p>Home</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">
-                                <p>About</p>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-nav-custom">
-                            <a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <p style="margin: 0 12px; cursor: pointer;">Solutions <img src="images/down_arrow.svg" alt="down" class="img-fluid" /></p>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                                <a class="dropdown-item" href="smart-contract-audit.html">Smart Contract Audits</a>
-                                <a class="dropdown-item" href="dapp-protocol.html">DApp & Protocol Security</a>
-                                <a class="dropdown-item" href="enterprise-web.html">Enterprise Web & Mobile Security</a>
-                                <a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
-                                <a class="dropdown-item" href="block-chain-security.html">Blockchain Security</a>
-                                <a class="dropdown-item" href="external-network-testing-new.html">External Network Testing</a>
-                                <a class="dropdown-item" href="cloud-infra.html">Cloud Infrastructure</a>
-                                <a class="dropdown-item" href="wallet-security-new.html">Wallet Security</a>
-                                <a class="dropdown-item" href="mobile-app-testing.html">Mobile App Security</a>
-                                <a class="dropdown-item" href="web-app-testing.html">Web App Security</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
-                                <a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
-                                <a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
-                                <a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
-                                <a class="dropdown-item" href="#wallet_tracker">Wallet Tracker (Coming
-                                    Soon)</a>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown dropdown-nav-custom">
-                            <a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <p style="margin: 0 12px; cursor: pointer;">Industries <img src="images/down_arrow.svg" alt="down" class="img-fluid" /></p>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                                <a class="dropdown-item" href="finance-fintech.html">Finance & Fintech</a>
-                                <a class="dropdown-item" href="saas-enterprise.html">SaaS & Enterprise</a>
-                                <a class="dropdown-item" href="web3-protocol.html">Web3 Protocols & Exchanges</a>                 
-                                <a class="dropdown-item" href="gamin-digital-assets.html">Gaming & Digital Assets</a>                 
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown dropdown-nav-custom">
-                            <a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <p style="margin: 0 12px; cursor: pointer;">Resources <img src="images/down_arrow.svg" alt="down" class="img-fluid" /></p>
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                                <a class="dropdown-item" href="resource-audits.html">Recently Audited</a>
-                                <a class="dropdown-item" href="resource-audits.html">Popular Projects</a>
-                                <a class="dropdown-item" href="resource-audits.html">KYC Reports</a>                 
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://scs.owasp.org/sctop10/" target="_blank">
-                                <p>Owasp Top 10</p>
-                            </a>
-                        </li>
-                    </ul>
-                    <nav class="navbar navbar-light cart_drp_clk">
-                        <form class="form-inline">
-                            <a href=""
-                                onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-                                <img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid">
-                            </a>
-                        </form>
-                    </nav>
-                </div>
-            </nav>
-        </div>
-    </header>
+		<div class="container">
+			<nav class="navbar px-0 navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.svg" alt="logo" class="img-fluid" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav m-auto custom_scrl desktop-menu">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">
+								<p>About</p>
+							</a>
+						</li>
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+								<p style="margin: 0 12px; cursor: pointer;">Solutions <img src="images/down_arrow.svg"
+										alt="down" class="img-fluid" /></p>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+								<a class="dropdown-item" href="smart-contract-audit.html">Smart Contract Audits</a>
+								<a class="dropdown-item" href="dapp-protocol.html">DApp & Protocol Security</a>
+								<a class="dropdown-item" href="enterprise-web.html">Enterprise Web & Mobile Security</a>
+								<a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
+								<a class="dropdown-item" href="block-chain-security.html">Blockchain Security</a>
+								<a class="dropdown-item" href="external-network-testing-new.html">External Network
+									Testing</a>
+								<a class="dropdown-item" href="cloud-infra.html">Cloud Infrastructure</a>
+								<a class="dropdown-item" href="wallet-security-new.html">Wallet Security</a>
+								<a class="dropdown-item" href="mobile-app-testing.html">Mobile App Security</a>
+								<a class="dropdown-item" href="web-app-testing.html">Web App Security</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
+								<a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
+								<a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+								<a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
+								<a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming
+									Soon)</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+								<p style="margin: 0 12px; cursor: pointer;">Industries <img src="images/down_arrow.svg"
+										alt="down" class="img-fluid" /></p>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+								<a class="dropdown-item" href="finance-fintech.html">Finance & Fintech</a>
+								<a class="dropdown-item" href="saas-enterprise.html">SaaS & Enterprise</a>
+								<a class="dropdown-item" href="web3-protocol.html">Web3 Protocols & Exchanges</a>
+								<a class="dropdown-item" href="gamin-digital-assets.html">Gaming & Digital Assets</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+								<p style="margin: 0 12px; cursor: pointer;">Resources <img src="images/down_arrow.svg"
+										alt="down" class="img-fluid" /></p>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+								<a class="dropdown-item" href="resource-audits.html">Recently Audited</a>
+								<a class="dropdown-item" href="resource-audits.html">Popular Projects</a>
+								<a class="dropdown-item" href="resource-audits.html">KYC Reports</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://scs.owasp.org/sctop10/" target="_blank">
+								<p>Owasp Top 10</p>
+							</a>
+						</li>
+					</ul>
+					<nav class="navbar navbar-light desktop-menu">
+						<form class="form-inline">
+							<a href=""
+								onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+								<img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid">
+							</a>
+						</form>
+					</nav>
+					<div class="mobile-overlay-menu" id="navbarNav">
+						<div class="mobile-overlay-content">
+							<div class="mobile-overlay-menu-item">
+								<a href="index.html">
+									Home
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item">
+								<a href="about.html">
+									About
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+								<span>Solutions</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="smart-contract-audit.html">Smart Contract Audits</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="dapp-protocol.html">DApp & Protocol Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="enterprise-web.html">Enterprise Web & Mobile Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="penetration-testing.html">Penetration Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="block-chain-security.html">Blockchain Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="external-network-testing-new.html">External Network Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="cloud-infra.html">Cloud Infrastructure</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="wallet-security-new.html">Wallet Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="mobile-app-testing.html">Mobile App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web-app-testing.html">Web App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="ai-security-tools.html">AI Security Tools</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/">SolidityScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://rustscan.com/">RustScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+								<span>Industries</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="finance-fintech.html">Finance & Fintech</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="saas-enterprise.html">SaaS & Enterprise</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web3-protocol.html">Web3 Protocols & Exchanges</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="gamin-digital-assets.html">Gaming & Digital Assets</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+								<span>Resources</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">Recently Audited</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">Popular Projects</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html">KYC Reports</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item">
+								<a href="https://scs.owasp.org/sctop10/" target="_blank">Owasp Top 10</a>
+							</div>
+						</div>
+
+						<div class="mobile-overlay-footer">
+							<nav class="navbar navbar-light cart_drp_clk">
+								<form class="form-inline">
+									<a href=""
+										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+										<img src="images/book_security_audit_btn.svg" alt="clip_path_btn"
+											class="img-fluid">
+									</a>
+								</form>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
 
     <!-- header section end -->
 
@@ -357,12 +509,16 @@
             <div class="non_hero_title">
                 <h2 class="part_one" style="color: white;">Who We Are</h2>
 
-                <h3 style="width: 100%; text-align: left; margin-top: 50px;">Redefiners of Security for Web3 & Enterprises</h3>
+                <h3 style="width: 100%; text-align: left; margin-top: 50px;">Redefiners of Security for Web3 &
+                    Enterprises</h3>
                 <p>
-                    At CredShields, we don’t just react to hacks, we predict and prevent them. Since 2021, our mission has been clear: to secure the future of digital innovation by combining AI intelligence, human expertise, and compliance-driven security frameworks.
+                    At CredShields, we don’t just react to hacks, we predict and prevent them. Since 2021, our mission
+                    has been clear: to secure the future of digital innovation by combining AI intelligence, human
+                    expertise, and compliance-driven security frameworks.
                 </p>
             </div>
-            <button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+            <button class="clean_btn_style"
+                onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
                 <img src="images/explore_our_solution_btn.svg" alt="hero_btn_1" class="img-fluid">
             </button>
         </div>
@@ -445,92 +601,95 @@
     </section>
 
     <section class="about_us_section" id="about_sec">
-		<div class="container pos_relative">
+        <div class="container pos_relative">
 
-			<div class="non_hero_title">
+            <div class="non_hero_title">
                 <h2 class="part_one" style="color: white;">The Founders</h2>
 
                 <p>
-                    Driven by expertise in cybersecurity and entrepreneurship, our founders bring together a decade of experience in ethical hacking, audits, and scaling Web3 security solutions.
+                    Driven by expertise in cybersecurity and entrepreneurship, our founders bring together a decade of
+                    experience in ethical hacking, audits, and scaling Web3 security solutions.
                 </p>
             </div>
-			<div class="row">
-				<div class="company_wrap aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
-					<div class="founder">
-						<img src="images/shashank.jpeg" width="128px" height="128px" alt="profile">
-						<div>
-							<h4 class="theme_color">Shashank </h4>
-							<h6 class="color_primary designation">Co-Founder &amp; CEO</h6>
-							<p class="detail_color">Shashank brings over a decade of expertise in uncovering
-								vulnerabilities, reporting them to reputable institutions, conducting pentests , and
-								overseeing responsible disclosure and bug bounty initiatives.
-							</p>
-							<div class="founder_social_links">
-								<a class="social_links_con" href="https://www.linkedin.com/in/shashank-in/" target="_blank">
-									<img src="images/linkdin.svg" alt="linkedin" class="img-fluid">
-								</a>
-								<a class="social_links_con" href="https://credshields.medium.com/" target="_blank">
-									<img src="images/medium_gray.svg" alt="medium" class="img-fluid">
-								</a>
-								<a class="social_links_con" href="https://twitter.com/cyberboyIndia" target="_blank">
-									<img src="images/x.svg" alt="X" class="img-fluid">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="team_wrap aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
-					<div class="founder">
-						<img src="images/indranil.jpeg" width="128px" height="128px" alt="profile">
-						<div>
-							<h4 class="theme_color">Indranil Roy</h4>
-							<h6 class="color_primary designation">Co-Founder &amp; CBO</h6>
-							<p class="detail_color">Indranil, a computer science graduate and self-made entrepreneur,
-								co-founded CredShields, a company dedicated to securing the Web3 frontier. His passion
-								for cybersecurity blossomed during his college days at the Vellore Institute of
-								Technology, where he honed his skills in ethical hacking and bug bounty hunting.
-							</p>
-							<div class="founder_social_links">
-								<a class="social_links_con" href="https://www.linkedin.com/in/itsmeroy2012/" target="_blank">
-									<img src="images/linkdin.svg" alt="linkdin" class="img-fluid">
-								</a>
-								<a class="social_links_con" href="https://twitter.com/itsmeroy2012" target="_blank">
-									<img src="images/x.svg" alt="X" class="img-fluid">
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="investor_wrap">
-					<div class="contact_head">
-						<h3>The Investors</h3>
-					</div>
+            <div class="row">
+                <div class="company_wrap aos-init aos-animate" data-aos="fade-right" data-aos-duration="1500">
+                    <div class="founder">
+                        <img src="images/shashank.jpeg" width="128px" height="128px" alt="profile">
+                        <div>
+                            <h4 class="theme_color">Shashank </h4>
+                            <h6 class="color_primary designation">Co-Founder &amp; CEO</h6>
+                            <p class="detail_color">Shashank brings over a decade of expertise in uncovering
+                                vulnerabilities, reporting them to reputable institutions, conducting pentests , and
+                                overseeing responsible disclosure and bug bounty initiatives.
+                            </p>
+                            <div class="founder_social_links">
+                                <a class="social_links_con" href="https://www.linkedin.com/in/shashank-in/"
+                                    target="_blank">
+                                    <img src="images/linkdin.svg" alt="linkedin" class="img-fluid">
+                                </a>
+                                <a class="social_links_con" href="https://credshields.medium.com/" target="_blank">
+                                    <img src="images/medium_gray.svg" alt="medium" class="img-fluid">
+                                </a>
+                                <a class="social_links_con" href="https://twitter.com/cyberboyIndia" target="_blank">
+                                    <img src="images/x.svg" alt="X" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="team_wrap aos-init aos-animate" data-aos="fade-left" data-aos-duration="1500">
+                    <div class="founder">
+                        <img src="images/indranil.jpeg" width="128px" height="128px" alt="profile">
+                        <div>
+                            <h4 class="theme_color">Indranil Roy</h4>
+                            <h6 class="color_primary designation">Co-Founder &amp; CBO</h6>
+                            <p class="detail_color">Indranil, a computer science graduate and self-made entrepreneur,
+                                co-founded CredShields, a company dedicated to securing the Web3 frontier. His passion
+                                for cybersecurity blossomed during his college days at the Vellore Institute of
+                                Technology, where he honed his skills in ethical hacking and bug bounty hunting.
+                            </p>
+                            <div class="founder_social_links">
+                                <a class="social_links_con" href="https://www.linkedin.com/in/itsmeroy2012/"
+                                    target="_blank">
+                                    <img src="images/linkdin.svg" alt="linkdin" class="img-fluid">
+                                </a>
+                                <a class="social_links_con" href="https://twitter.com/itsmeroy2012" target="_blank">
+                                    <img src="images/x.svg" alt="X" class="img-fluid">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="investor_wrap">
+                    <div class="contact_head">
+                        <h3>The Investors</h3>
+                    </div>
 
-					<div class="investor_list justify-content-center">
-						<div class="investor_con">
-							<a href="https://www.boost.vc/" target="_blank">
-								<img src="images/boostVc.svg" alt="a">
-							</a>
-						</div>
-						<div class="investor_divider"></div>
-						<div class="investor_con">
-							<a href="https://www.draper.vc/" target="_blank">
-								<img src="images/draper.svg" alt="a">
-							</a>
-						</div>
-						<div class="investor_divider"></div>
-						<div class="investor_con">
-							<a href="https://www.artemiscapital.io/" target="_blank">
-								<img src="images/artemis.svg" alt="a">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                    <div class="investor_list justify-content-center">
+                        <div class="investor_con">
+                            <a href="https://www.boost.vc/" target="_blank">
+                                <img src="images/boostVc.svg" alt="a">
+                            </a>
+                        </div>
+                        <div class="investor_divider"></div>
+                        <div class="investor_con">
+                            <a href="https://www.draper.vc/" target="_blank">
+                                <img src="images/draper.svg" alt="a">
+                            </a>
+                        </div>
+                        <div class="investor_divider"></div>
+                        <div class="investor_con">
+                            <a href="https://www.artemiscapital.io/" target="_blank">
+                                <img src="images/artemis.svg" alt="a">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="why_cres_shields_section" id="why_creshields_sec">
         <div class="container pos_relative">
@@ -539,14 +698,35 @@
                 <h2 class="part_one" style="color: white;">Ready to Build Security Into Your Future?</h2>
 
                 <p>
-                    Whether you’re launching a project or scaling globally, our expert led enterprise grade audits and AI-powered tools ensure security at every stage. Start protecting your future today.
+                    Whether you’re launching a project or scaling globally, our expert led enterprise grade audits and
+                    AI-powered tools ensure security at every stage. Start protecting your future today.
             </div>
             <div class="hero_section_btn_container">
-                <button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-                    <img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid" onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+                <button class="clean_btn_style"
+                    onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+                    <img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid"
+                        onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
                 </button>
-                <button class="clean_btn_style">
-                    <img src="images/hero_btn_2.svg" onclick="window.location.href = 'index.html#quickscan_container_sec';" onclick="window.location.href = 'index.html#quickscan_container_sec';" alt="hero_btn_1" class="img-fluid">
+                <!-- <button class="clean_btn_style">
+                    <img src="images/hero_btn_2.svg" onclick="window.location.href = 'index.html#quickscan_container_sec';"  alt="hero_btn_1" class="img-fluid">
+                </button> -->
+
+                <button class="clean_btn_style run_quickscan_btn_container"
+                    onclick="window.location.href = 'index.html#quickscan_container_sec';">
+                    <img src="images/hero_btn_2.svg" alt="hero_btn_2" class="img-fluid">
+                    <div class="numbers_sec_nav run_quickscan_btn" aria-label="View more">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            style="opacity: 0.5;">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+                                fill="#C2FFBD" />
+                        </svg>
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+                                fill="#C2FFBD" />
+                        </svg>
+                    </div>
                 </button>
 
             </div>
@@ -589,7 +769,8 @@
                     </div>
                 </div>
 
-                <button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;"
+                <button class="clean_btn_style"
+                    onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;"
                     onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank')">
                     <img src="images/subscribe_btn.svg" alt="hero_btn_1" class="img-fluid">
                 </button>
@@ -602,8 +783,8 @@
                         <li><a href="resource-audits.html">Recently Audited</a></li>
                         <li><a href="resource-audits.html">Popular Projects</a></li>
                         <li><a href="resource-audits.html">KYC Reports</a></li>
-                        
-                        
+
+
                     </ul>
                 </div>
 
@@ -711,6 +892,21 @@
     <!-- 5. HubSpot script (async) -->
     <script type="text/javascript" id="hs-script-loader" async defer
         src="https://js-eu1.hs-scripts.com/24889894.js"></script>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+            const menuItem = submenu.previousElementSibling;
+
+            submenu.classList.toggle('mobile-overlay-open');
+            menuItem.classList.toggle('mobile-overlay-expanded');
+        }
+
+        function closeMenu() {
+            alert('Menu closed! In a real implementation, this would hide the overlay.');
+        }
+    </script>
+   <!-- Custom js file end -->
 </body>
 
 </html>

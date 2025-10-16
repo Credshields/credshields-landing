@@ -657,6 +657,20 @@
     <script src="js/smooth-naigate.js"></script>
     <script src="js/custom_a.js"></script>
     <!-- Custom js file end -->
+<script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+            const menuItem = submenu.previousElementSibling;
+
+            submenu.classList.toggle('mobile-overlay-open');
+            menuItem.classList.toggle('mobile-overlay-expanded');
+        }
+
+        function closeMenu() {
+            alert('Menu closed! In a real implementation, this would hide the overlay.');
+        }
+    </script>
+   <!-- Custom js file end -->
 </body>
 
 </html>
