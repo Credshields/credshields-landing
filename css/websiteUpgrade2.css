@@ -292,12 +292,15 @@
   line-height: 1.6;
 }
 
+.success_story_section {
+  padding: 100px;
+}
+
 .success_story_container {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
-  padding: 100px;
 }
 
 .success_story_card {
@@ -603,8 +606,9 @@
 }
 
 .security_team_members {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
   margin-bottom: 50px;
 }
@@ -612,6 +616,7 @@
 .security_team_member {
   text-align: center;
   transition: transform 0.3s ease;
+  max-width: 208px;
 }
 
 .security_team_member:hover {
@@ -799,7 +804,6 @@
 
 .enterprise_grade_cert_icon {
   width: 100%;
-  height: 160px;
   background: linear-gradient(135deg, #1a2c23 0%, #0f1713 100%);
   border-radius: 12px;
   margin-bottom: 28px;
@@ -1063,6 +1067,153 @@
   line-height: 1.6;
 }
 
+.footer_new_container {
+  background: linear-gradient(180deg, #0a1612 0%, #050a08 100%);
+  color: #a0b0a8;
+  padding: 60px 100px 30px;
+}
+
+.footer_new_content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer_new_main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer_new_brand {
+  max-width: 350px;
+}
+
+.footer_new_logo {
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.footer_new_tagline {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #c0d0c8;
+  margin-bottom: 24px;
+}
+
+.footer_new_social_icons {
+  display: flex;
+  gap: 12px;
+}
+
+.footer_new_social_placeholder {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  transition: all 0.3s ease;
+}
+
+.footer_new_social_placeholder:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.footer_new_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_new_column_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.footer_new_links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer_new_link {
+  color: #a0b0a8;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.footer_new_link:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.footer_new_divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  margin: 40px 0;
+}
+
+.footer_new_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer_new_address {
+  font-size: 14px;
+  color: #708078;
+}
+
+.footer_new_legal {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer_new_legal_link {
+  color: #708078;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer_new_legal_link:hover {
+  color: #ffffff;
+}
+
+.footer_new_separator {
+  color: #405048;
+}
+
+.footer_new_copyright {
+  font-size: 14px;
+  color: #708078;
+}
+
 @media (max-width: 1024px) {
   .secure_your_protocol_card {
     padding: 60px 40px;
@@ -1074,6 +1225,15 @@
 
   .secure_your_protocol_features {
     gap: 40px;
+  }
+
+  .footer_new_main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer_new_brand {
+    max-width: 100%;
   }
 }
 
@@ -1090,18 +1250,18 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .battle_tested_container{
+  .battle_tested_container {
     flex-wrap: wrap;
   }
 
-  .battle_tested_container_graphic{
+  .battle_tested_container_graphic {
     margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .battle_tested_title{
+  .battle_tested_title {
     text-align: center;
   }
 }
@@ -1117,12 +1277,24 @@
     grid-template-columns: 1fr;
   }
 
-  .enterprise_grade_title {
-    font-size: 1.75rem;
+  .security_coverage_container {
+    padding: 15px;
   }
 
-  .enterprise_grade_cert_icon {
-    height: 140px;
+  .battle_tested_container {
+    padding: 5px 15px;
+  }
+
+  .advance_security_container {
+    padding: 15px;
+  }
+
+  .success_story_section {
+    padding: 15px;
+  }
+
+  .enterprise_grade_title {
+    font-size: 1.75rem;
   }
 
   .secure_your_protocol_card {
@@ -1137,6 +1309,10 @@
     font-size: 1rem;
   }
 
+  .security_team_container {
+    padding: 15px;
+  }
+
   .secure_your_protocol_btn {
     padding: 16px 32px;
     font-size: 1rem;
@@ -1145,12 +1321,36 @@
   .secure_your_protocol_feature_title {
     font-size: 1.25rem;
   }
+
+  .secure_your_protocol_container {
+    padding: 20px;
+  }
+
+  .enterprise_grade_container {
+    padding: 15px;
+  }
+
+  .footer_new_container {
+    padding: 30px 15px 15px;
+  }
+
+  .footer_new_tagline {
+    font-size: 14px;
+  }
+
+  .footer_new_link {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 768px) {
   .security_coverage_grid {
     grid-template-columns: 1fr;
     gap: 24px;
+  }
+
+  .security_coverage_container {
+    padding: 20px;
   }
 
   .security_coverage_card {
@@ -1182,12 +1382,20 @@
     font-size: 20px;
   }
 
+  .success_story_section {
+    padding: 20px;
+  }
+
   .success_story_container {
     grid-template-columns: 1fr;
   }
 
   .success_story_card {
     padding: 30px;
+  }
+
+  .advance_security_container {
+    padding: 20px;
   }
 
   .advance_security_title {
@@ -1209,6 +1417,10 @@
 
   .advance_security_platform_image {
     height: 250px;
+  }
+
+  .security_team_container {
+    padding: 20px;
   }
 
   .security_team_title {
@@ -1234,6 +1446,10 @@
     font-size: 2.5rem;
   }
 
+  .enterprise_grade_container {
+    padding: 20px;
+  }
+
   .enterprise_grade_title {
     font-size: 2rem;
   }
@@ -1249,6 +1465,10 @@
 
   .enterprise_grade_expertise {
     padding: 35px 24px;
+  }
+
+  .secure_your_protocol_container {
+    padding: 20px;
   }
 
   .secure_your_protocol_card {
@@ -1291,5 +1511,46 @@
   .secure_your_protocol_wave:nth-child(4) {
     width: 500px;
     height: 250px;
+  }
+  .footer_new_container {
+    padding: 40px 20px 20px;
+  }
+
+  .footer_new_main {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .footer_new_brand {
+    text-align: center;
+  }
+
+  .footer_new_logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer_new_social_icons {
+    justify-content: center;
+  }
+
+  .footer_new_column_title {
+    font-size: 16px;
+  }
+
+  .footer_new_bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer_new_legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer_new_separator {
+    display: none;
   }
 }
