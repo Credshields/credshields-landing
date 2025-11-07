@@ -114,6 +114,14 @@
 			opacity: 0.3;
 			z-index: -1;
 			pointer-events: none;
+			-webkit-mask-image: linear-gradient(to bottom,
+					black 0%,
+					black 20%,
+					transparent 70%);
+			mask-image: linear-gradient(to bottom,
+					black 0%,
+					black 20%,
+					transparent 70%);
 		}
 
 		@keyframes AnimationName {
@@ -1229,74 +1237,82 @@
 		</div>
 	</section>
 
-	<div class="battle_tested_container">
-		<div class="battle_tested_header">
-			<h1 class="battle_tested_title">Our Battle-Tested Methodology</h1>
-			<p class="battle_tested_subtitle">
-				Every audit follows our proprietary 7-phase security assessment framework, combining automated tools
-				with manual expertise.
-			</p>
+
+	<section class="battle_tested_container">
+		<div class="battle_tested_container_content">
+			<div class="battle_tested_header">
+				<h1 class="battle_tested_title">Our Battle-Tested Methodology</h1>
+				<p class="battle_tested_subtitle">
+					Every audit follows our proprietary 7-phase security assessment framework, combining automated tools
+					with manual expertise.
+				</p>
+			</div>
+
+			<div class="battle_tested_phases">
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+
+						<img src="images/battle_rec_scoping.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Reconnaissance & Scoping</h3>
+						<p class="battle_tested_phase_description">
+							Comprehensive analysis of architecture, dependencies, and attack surface mapping.
+						</p>
+					</div>
+				</div>
+
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+						<img src="images/battle_automated_security.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Automated Security Scanning</h3>
+						<p class="battle_tested_phase_description">
+							Industry-leading tools combined with custom security scanners and fuzzers.
+						</p>
+					</div>
+				</div>
+
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+						<img src="images/battle_manual_code.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Manual Code Review</h3>
+						<p class="battle_tested_phase_description">
+							Line-by-line analysis by senior security engineers with deep Web3 expertise.
+						</p>
+					</div>
+				</div>
+
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+						<img src="images/battle_economic_attack.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Economic Attack Modeling</h3>
+						<p class="battle_tested_phase_description">
+							Advanced game theory and economic incentive analysis for DeFi protocols.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="battle_tested_container_graphic">
+			<img src="images/battle_tested_graphic.svg" alt="">
 		</div>
 
-		<div class="battle_tested_phases">
-			<div class="battle_tested_phase">
-				<div class="battle_tested_icon_wrapper">
-					<!-- Replace with your icon -->
+	</section>
 
-					<img src="images/battle_rec_scoping.svg" alt="Battle Rec Scoping Icon">
-
-				</div>
-				<div class="battle_tested_content">
-					<h3 class="battle_tested_phase_title">Reconnaissance & Scoping</h3>
-					<p class="battle_tested_phase_description">
-						Comprehensive analysis of architecture, dependencies, and attack surface mapping.
-					</p>
-				</div>
-			</div>
-
-			<div class="battle_tested_phase">
-				<div class="battle_tested_icon_wrapper">
-					<!-- Replace with your icon -->
-					<img src="images/battle_automated_security.svg" alt="Battle Rec Scoping Icon">
-
-				</div>
-				<div class="battle_tested_content">
-					<h3 class="battle_tested_phase_title">Automated Security Scanning</h3>
-					<p class="battle_tested_phase_description">
-						Industry-leading tools combined with custom security scanners and fuzzers.
-					</p>
-				</div>
-			</div>
-
-			<div class="battle_tested_phase">
-				<div class="battle_tested_icon_wrapper">
-					<!-- Replace with your icon -->
-					<img src="images/battle_manual_code.svg" alt="Battle Rec Scoping Icon">
-
-				</div>
-				<div class="battle_tested_content">
-					<h3 class="battle_tested_phase_title">Manual Code Review</h3>
-					<p class="battle_tested_phase_description">
-						Line-by-line analysis by senior security engineers with deep Web3 expertise.
-					</p>
-				</div>
-			</div>
-
-			<div class="battle_tested_phase">
-				<div class="battle_tested_icon_wrapper">
-					<!-- Replace with your icon -->
-					<img src="images/battle_economic_attack.svg" alt="Battle Rec Scoping Icon">
-
-				</div>
-				<div class="battle_tested_content">
-					<h3 class="battle_tested_phase_title">Economic Attack Modeling</h3>
-					<p class="battle_tested_phase_description">
-						Advanced game theory and economic incentive analysis for DeFi protocols.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<section>
 		<div class="trusted_by_header">
@@ -1436,7 +1452,9 @@
 		<div class="advance_security_grid">
 			<!-- Card 1 -->
 			<div class="advance_security_card">
-				<div class="advance_security_card_image">Image Placeholder</div>
+				<!-- <div class="advance_security_card_image">Image Placeholder</div> -->
+				<img class="advance_security_card_image" src="images/advance_security_static.svg"
+					alt="Advance Security Static">
 				<h3 class="advance_security_card_title">Static Analysis</h3>
 				<p class="advance_security_card_tools">Slither, Mythril, Securify</p>
 				<p class="advance_security_card_description">Advanced pattern matching for vulnerability detection</p>
@@ -1444,7 +1462,8 @@
 
 			<!-- Card 2 -->
 			<div class="advance_security_card">
-				<div class="advance_security_card_image">Image Placeholder</div>
+				<img class="advance_security_card_image" src="images/advance_security_dynamic.svg"
+					alt="Advance Security Dynamic">
 				<h3 class="advance_security_card_title">Dynamic Testing</h3>
 				<p class="advance_security_card_tools">Echidna, Manticore, Foundry</p>
 				<p class="advance_security_card_description">Property-based testing and symbolic execution</p>
@@ -1452,7 +1471,8 @@
 
 			<!-- Card 3 -->
 			<div class="advance_security_card">
-				<div class="advance_security_card_image">Image Placeholder</div>
+				<img class="advance_security_card_image" src="images/advance_security_ai_powered.svg"
+					alt="Advance Security AI">
 				<h3 class="advance_security_card_title">AI-Powered Analysis</h3>
 				<p class="advance_security_card_tools">Custom ML Models</p>
 				<p class="advance_security_card_description">Machine learning for anomaly detection</p>
@@ -1460,7 +1480,8 @@
 
 			<!-- Card 4 -->
 			<div class="advance_security_card">
-				<div class="advance_security_card_image">Image Placeholder</div>
+				<img class="advance_security_card_image" src="images/advance_security_formal.svg"
+					alt="Advance Security Formal">
 				<h3 class="advance_security_card_title">Formal Verification</h3>
 				<p class="advance_security_card_tools">K Framework, TLA+</p>
 				<p class="advance_security_card_description">Mathematical proof of contract correctness</p>
@@ -1631,28 +1652,28 @@
 		<div class="enterprise_grade_certifications">
 			<!-- Certification 1 -->
 			<div class="enterprise_grade_cert_card">
-				<div class="enterprise_grade_cert_icon">SOC 2 Type II Logo</div>
+				<img src="images/enterprise_grade_soc.svg" class="enterprise_grade_cert_icon" alt="">
 				<h3 class="enterprise_grade_cert_title">SOC 2 Type II</h3>
 				<p class="enterprise_grade_cert_description">Audited security controls and processes</p>
 			</div>
 
 			<!-- Certification 2 -->
 			<div class="enterprise_grade_cert_card">
-				<div class="enterprise_grade_cert_icon">ISO 27001 Logo</div>
+				<img src="images/enterprise_grade_iso.svg" class="enterprise_grade_cert_icon" alt="">
 				<h3 class="enterprise_grade_cert_title">ISO 27001</h3>
 				<p class="enterprise_grade_cert_description">Information security management certified</p>
 			</div>
 
 			<!-- Certification 3 -->
 			<div class="enterprise_grade_cert_card">
-				<div class="enterprise_grade_cert_icon">GDPR Logo</div>
+				<img src="images/enterprise_grade_gdpr.svg" class="enterprise_grade_cert_icon" alt="">
 				<h3 class="enterprise_grade_cert_title">GDPR Compliant</h3>
 				<p class="enterprise_grade_cert_description">European data protection standards</p>
 			</div>
 
 			<!-- Certification 4 -->
 			<div class="enterprise_grade_cert_card">
-				<div class="enterprise_grade_cert_icon">NIST Logo</div>
+				<img src="images/enterprise_grade_nist.svg" class="enterprise_grade_cert_icon" alt="">
 				<h3 class="enterprise_grade_cert_title">NIST Framework</h3>
 				<p class="enterprise_grade_cert_description">Cybersecurity framework alignment</p>
 			</div>

@@ -27,7 +27,7 @@
 .security_coverage_container {
   background: linear-gradient(135deg, #0a0f0d 0%, #1a2f1a 100%);
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 60px 100px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
 }
@@ -195,10 +195,12 @@
 .battle_tested_container {
   margin: 0 auto;
   background: rgba(15, 40, 40, 0.6);
-  padding: 60px;
+  padding: 60px 100px;
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
 }
 
 .battle_tested_container::before {
@@ -235,12 +237,11 @@
   font-size: 18px;
   color: #94a3b8;
   line-height: 1.6;
-  max-width: 600px;
 }
 
 .battle_tested_phases {
   display: grid;
-  gap: 24px;
+  gap: 18px;
   margin-top: 48px;
   position: relative;
   z-index: 1;
@@ -250,7 +251,8 @@
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  padding: 28px;
+  padding: 10px;
+  padding-right: 80px;
   transition: all 0.3s ease;
 }
 
@@ -291,11 +293,11 @@
 }
 
 .success_story_container {
-  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
+  padding: 100px;
 }
 
 .success_story_card {
@@ -433,8 +435,8 @@
 }
 
 .advance_security_container {
-  max-width: 1200px;
   margin: 0 auto;
+  padding: 100px;
 }
 
 .advance_security_header {
@@ -481,7 +483,7 @@
 
 .advance_security_card_image {
   width: 100%;
-  height: 140px;
+  height: 166px;
   background: linear-gradient(135deg, #1a2c23 0%, #0f1713 100%);
   border-radius: 12px;
   margin-bottom: 24px;
@@ -490,7 +492,6 @@
   justify-content: center;
   color: #4a5f54;
   font-size: 0.9rem;
-  border: 1px dashed #2d4a3e;
 }
 
 .advance_security_card_title {
@@ -556,16 +557,10 @@
 
 .advance_security_feature_item::before {
   content: "✓";
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background: #10b981;
-  color: #fff;
-  border-radius: 6px;
-  margin-right: 12px;
+  color: #65da00;
   font-weight: bold;
+  font-size: 18px;
+  margin-right: 12px;
   flex-shrink: 0;
 }
 
@@ -583,8 +578,8 @@
 }
 
 .security_team_container {
-  max-width: 1300px;
   margin: 0 auto;
+  padding: 100px;
 }
 
 .security_team_header {
@@ -755,8 +750,8 @@
 }
 
 .enterprise_grade_container {
-  max-width: 1300px;
   margin: 0 auto;
+  padding: 100px;
 }
 
 .enterprise_grade_header {
@@ -887,7 +882,6 @@
   flex-shrink: 0;
   width: 24px;
   height: 24px;
-  background: #10b981;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -897,7 +891,7 @@
 
 .enterprise_grade_feature_icon::before {
   content: "✓";
-  color: #fff;
+  color: #65da00;
   font-weight: bold;
   font-size: 14px;
 }
@@ -909,9 +903,8 @@
 }
 
 .secure_your_protocol_container {
-  max-width: 1400px;
-  width: 100%;
   margin: 0 auto;
+  padding: 100px;
 }
 
 .secure_your_protocol_outer_box {
@@ -1095,6 +1088,21 @@
 
   .enterprise_grade_features_grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .battle_tested_container{
+    flex-wrap: wrap;
+  }
+
+  .battle_tested_container_graphic{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .battle_tested_title{
+    text-align: center;
   }
 }
 
