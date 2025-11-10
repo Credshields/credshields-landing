@@ -466,8 +466,6 @@
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  border-radius: 24px;
-  width: 95%;
 }
 
 .battle_tested_container::before {
@@ -850,8 +848,6 @@
   margin: 0 auto;
   padding: 100px;
   background: linear-gradient(180deg, #0d1c13 0%, #0a160f 100%);
-  width: 94%;
-  border-radius: 24px;
 }
 
 .security_team_header {
@@ -1845,6 +1841,8 @@
 
   .battle_tested_container {
     padding: 30px 15px;
+    width: 95%;
+    border-radius: 24px;
   }
 
   .battle_tested_phase {
@@ -1895,6 +1893,8 @@
   .security_team_container {
     padding: 15px;
     padding-top: 60px;
+    width: 94%;
+    border-radius: 24px;
   }
 
   .secure_your_protocol_btn {
