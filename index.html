@@ -34,6 +34,7 @@
 				top: 100%;
 				top: 100%;
 			}
+
 			.dropdown-hover-expand:hover .dropdown-menu {
 				display: block;
 				visibility: visible;
@@ -84,6 +85,7 @@
 	<!-- Custom Css file Start -->
 	<link rel="stylesheet" href="css/landing_page_f_upgrade.css" />
 	<link rel="stylesheet" href="css/landing_page_responsive_f_upgrade.css" />
+	<link rel="stylesheet" href="css/websiteUpgrade2.css" />
 
 	<style>
 		@font-face {
@@ -92,6 +94,49 @@
 			src: url("fonts/Monbloc-Inst-Regular.ttf");
 			src: url("fonts/Monbloc-Inst-Regular.woff");
 			src: url("fonts/Monbloc-Inst-Regular.woff2");
+		}
+
+		body {
+			position: relative;
+			min-height: 100vh;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		body::before {
+			content: '';
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(274deg, transparent, #78ff04, transparent);
+			background-size: 400% 400%;
+			animation: AnimationName 20s ease infinite;
+			opacity: 0.3;
+			z-index: -1;
+			pointer-events: none;
+			-webkit-mask-image: linear-gradient(to bottom,
+					black 0%,
+					black 20%,
+					transparent 70%);
+			mask-image: linear-gradient(to bottom,
+					black 0%,
+					black 20%,
+					transparent 70%);
+		}
+
+		@keyframes AnimationName {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0% 50%;
+			}
 		}
 
 		/* Notification Banner Styles */
@@ -122,7 +167,6 @@
 		}
 
 		.notification_banner .banner_content p {
-			font-family: 'Barlow', sans-serif;
 			font-weight: 600;
 			font-size: 16px;
 			line-height: 150%;
@@ -131,7 +175,6 @@
 		}
 
 		.notification_banner .download_btn {
-			font-family: 'Barlow', sans-serif;
 			font-weight: 600;
 			font-size: 14px;
 			color: white;
@@ -202,6 +245,238 @@
 				gap: 8px;
 			}
 		}
+
+
+		/* stack card animation*/
+
+		.stack_card_spacer {
+			height: 100vh;
+		}
+
+		.stack_card_container {
+			position: relative;
+		}
+
+		.stack_card_cards-container {
+			position: relative;
+		}
+
+		.stack_card_card {
+			position: sticky;
+			width: 100%;
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			padding: 20px;
+		}
+
+		.stack_card_card:nth-child(1) {
+			top: 0;
+		}
+
+		.stack_card_card:nth-child(2) {
+			top: 280px;
+		}
+
+		.stack_card_card:nth-child(3) {
+			top: 300px;
+		}
+
+		.stack_card_card:nth-child(4) {
+			top: 320px;
+		}
+
+		.stack_card_card:nth-child(5) {
+			top: 340px;
+		}
+
+		.stack_card_card:nth-child(6) {
+			top: 360px;
+		}
+
+		.stack_card_title_card {
+			width: 100%;
+			padding: 25px 60px 30px;
+			text-align: center;
+			background: transparent;
+		}
+
+		.stack_card_title_card h2 {
+			font-size: 52px;
+			font-weight: 400;
+			margin-bottom: 24px;
+			line-height: 1.1;
+		}
+
+		.stack_card_title_card .stack_card_part_one {
+			color: #888;
+		}
+
+		.stack_card_title_card .stack_card_part_two {
+			color: white;
+		}
+
+		.stack_card_title_card p {
+			font-size: 20px;
+			line-height: 1.6;
+			color: #aaa;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		.stack_card_card-content {
+			width: 100%;
+			height: 600px;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			border-radius: 30px;
+			padding: 60px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+			opacity: 0;
+			transform: translateY(100px);
+			transition: opacity 0.6s ease, transform 0.6s ease;
+		}
+
+		.stack_card_card.stack_card_visible .stack_card_card-content {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.stack_card_card:nth-child(2) .stack_card_card-content {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		}
+
+		.stack_card_card:nth-child(3) .stack_card_card-content {
+			background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+		}
+
+		.stack_card_card:nth-child(4) .stack_card_card-content {
+			background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+		}
+
+		.stack_card_card:nth-child(5) .stack_card_card-content {
+			background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+		}
+
+		.stack_card_card:nth-child(6) .stack_card_card-content {
+			background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+		}
+
+		.stack_card_card-number {
+			font-size: 120px;
+			font-weight: 900;
+			opacity: 0.15;
+			line-height: 1;
+			margin-bottom: 20px;
+		}
+
+		.stack_card_card-title {
+			font-size: 64px;
+			font-weight: 800;
+			margin-bottom: 24px;
+			line-height: 1.1;
+		}
+
+		.stack_card_card-description {
+			font-size: 24px;
+			line-height: 1.6;
+			opacity: 0.9;
+			max-width: 600px;
+		}
+
+		.stack_card_end-spacer {
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 48px;
+			font-weight: 800;
+		}
+
+		@media (max-width: 768px) {
+			.stack_card_title_card h2 {
+				font-size: 48px;
+			}
+
+			.stack_card_title_card p {
+				font-size: 18px;
+			}
+
+			.stack_card_title_card {
+				padding: 60px 20px 40px;
+			}
+
+			.stack_card_card-content {
+				padding: 40px;
+				height: 500px;
+			}
+
+			.stack_card_card-number {
+				font-size: 80px;
+			}
+
+			.stack_card_card-title {
+				font-size: 40px;
+			}
+
+			.stack_card_card-description {
+				font-size: 18px;
+			}
+
+			.stack_card_card:nth-child(2) {
+				top: 200px;
+			}
+
+			.stack_card_card:nth-child(3) {
+				top: 220px;
+			}
+
+			.stack_card_card:nth-child(4) {
+				top: 240px;
+			}
+
+			.stack_card_card:nth-child(5) {
+				top: 260px;
+			}
+
+			.stack_card_card:nth-child(6) {
+				top: 280px;
+			}
+		}
+
+		/* Gradient Background Animation */
+		@keyframes gradientMove {
+			0% {
+				transform: translateX(-100px);
+			}
+
+			100% {
+				transform: translateX(calc(100vw + 100px));
+			}
+		}
+
+		.gradient_bg_tr img,
+		.gradient_bg_tl img,
+		.gradient_bg_bl img {
+			animation: gradientMove 30s linear infinite;
+			will-change: transform;
+			position: relative;
+			left: -100px;
+			/* Start off-screen */
+		}
+
+		.gradient_bg_tl img {
+			animation-delay: -10s;
+		}
+
+		.gradient_bg_bl img {
+			animation-delay: -20s;
+		}
 	</style>
 	<!-- Custom Css file Start -->
 </head>
@@ -209,7 +484,7 @@
 <body>
 	<!-- Gradients -->
 
-	<div class="fixed_bg_container">
+	<!-- <div class="fixed_bg_container">
 		<div class="gradient_bg_tr">
 			<img src="images/primary_bg.svg" alt="bg" />
 		</div>
@@ -219,7 +494,7 @@
 		<div class="gradient_bg_bl">
 			<img src="images/primary_bg.svg" alt="bg" />
 		</div>
-	</div>
+	</div> -->
 
 	<!-- notification banner start -->
 	<div class="notification_banner">
@@ -364,7 +639,8 @@
 						<form class="form-inline">
 							<a href=""
 								onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-								<img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid">
+								<button class="book_security_audit_btn">Book Security Audit</button>
+								<!-- <img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid"> -->
 							</a>
 						</form>
 					</nav>
@@ -486,8 +762,7 @@
 								<form class="form-inline">
 									<a href=""
 										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-										<img src="images/book_security_audit_btn.svg" alt="clip_path_btn"
-											class="img-fluid">
+										<button class="book_security_audit_btn">Book Security Audit</button>
 									</a>
 								</form>
 							</nav>
@@ -501,205 +776,87 @@
 	<!-- header section end -->
 
 	<!-- hero section start  -->
-	<section class="home_hero_section">
-		<div class="container pos_relative">
+	<section class="upgraded_hero_section">
+		<div class="upgraded_hero_container">
+			<!-- Badge -->
+			<div class="upgraded_hero_badge">
+				<!-- <span class="upgraded_hero_badge_icon">✓</span> -->
+				<img src="images/upgraded_hero_section_badge.svg" alt="upgraded_hero_section_badge" class="img-fluid">
+				Trusted by 200+ institutions and protocols worldwide
+			</div>
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="row">
-						<div class="hero_container" id="hero_con">
-							<h2 class="color_primary custom_ladning_font text_align_center_below_767">
-								Security That Institutions &
-							</h2>
-							<h2 class="theme_color custom_ladning_font text_align_center_below_767">
-								Protocols Trust
-							</h2>
-							<img src="images/styled_divider_horizontal.svg" alt="styled_divider"
-								class="display_none_768" />
+			<!-- Main Content -->
+			<div class="upgraded_hero_content_wrapper">
+				<!-- Left Content -->
+				<div class="upgraded_hero_left">
+					<h1 class="upgraded_hero_title">
+						<span class="upgraded_hero_title_green">Security</span> That Institutions <br>& Protocols <span class="upgraded_hero_title_green">Trust</span>
+						<!-- <span class="upgraded_hero_title_green">Security</span>&nbsp;
+						<span class="upgraded_hero_title_white">That<br>&nbsp;Institutions &<br>&nbsp;Protocols</span>&nbsp;
+						<span class="upgraded_hero_title_green">Trust</span> -->
+					</h1>
 
-						</div>
-						<div class="hero_section_btn_container_main">
-							<div>
-								<p style="color: #979797;">We secure smart contracts, protocols, and enterprise
-									applications with AI-powered
-									audits
-									and global compliance standards.
-								</p>
-								<img src="images/landing_page_graphic.svg" alt="hero_img"
-									class="img-fluid display_below_997">
-								<div>
-									<button class="clean_btn_style"
-										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-										<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
-									</button>
-									<button class="clean_btn_style run_quickscan_btn_container" id="run_free_quickscan">
-										<img src="images/hero_btn_2.svg" alt="hero_btn_2" class="img-fluid">
-										<div class="numbers_sec_nav run_quickscan_btn" aria-label="View more">
-											<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-												xmlns="http://www.w3.org/2000/svg" style="opacity: 0.5;">
-												<path fill-rule="evenodd" clip-rule="evenodd"
-													d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-													fill="#C2FFBD" />
-											</svg>
-											<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-												xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" clip-rule="evenodd"
-													d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-													fill="#C2FFBD" />
-											</svg>
-										</div>
-									</button>
-								</div>
+					<p class="upgraded_hero_description">
+						We secure smart contracts, protocols, and enterprise applications with AI-powered audits and
+						global compliance standards.
+					</p>
 
-							</div>
-							<div class="hero_desktop_banner">
-								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid"
-									style="max-width: 90%;">
-							</div>
-
-						</div>
+					<div class="upgraded_hero_buttons display_above_768">
+						<button class="book_security_audit_btn">Book Security Audit</button>
+						<button class="book_security_audit_btn run_free_ai_scan_btn"> <span
+								style="color: #FFFFFF; font-weight: 700; margin-right: 1px;">Run Free</span>
+							<img src="images/ai_icon_magic.svg" alt="ai_icon_magic" class="img-fluid"> <span
+								style="color: #38FF7E; font-weight: 700; margin-left: 1px;">AI
+								Scan</span></button>
 					</div>
 				</div>
 
-			</div>
-		</div>
-		</div>
-	</section>
-	<!-- hero section end  -->
-
-	<!-- cookies section start -->
-	<!-- <section class="cookies_section">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="cookies_txt">
-						<p>
-							This website uses cookies to ensure you get the best experience
-							on our website. <a href="cookie.html">Cookies Policy</a>
-						</p>
-
-						<a href="javascript:void(0)" class="ckies_btn" id="clsee2">Got It</a>
-
-						<a href="javascript:void(0)" id="clsee"><i class="fa fa-close"></i></a>
+				<!-- Right Content: Graphic + Stats -->
+				<div class="upgraded_hero_right">
+					<!-- Graphic Placeholder -->
+					<div class="upgraded_hero_graphic_placeholder">
+						<img src="images/landing_page_graphic.svg" alt="hero_graphic" class="img-fluid">
 					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!-- cookies section end -->
 
-	<!-- numbers section start -->
-	<section class="numbers_sec" id="num_sec">
-		<div class="container pos_relative">
+					<div class="upgraded_hero_buttons display_below_768">
+						<button class="book_security_audit_btn">Book Security Audit</button>
+						<button class="book_security_audit_btn run_free_ai_scan_btn"> <span
+								style="color: #FFFFFF; font-weight: 700; margin-right: 1px;">Run Free</span>
+							<img src="images/ai_icon_magic.svg" alt="ai_icon_magic" class="img-fluid"> <span
+								style="color: #38FF7E; font-weight: 700; margin-left: 1px;">AI
+								Scan</span></button>
+					</div>
 
-			<div class="number_container">
-				<div class="stat_container">
-					<h1>
-						<span id="web3Count" class="animate-number theme_color font_aldrich" data-end="200"
-							show-plus="true">0</span>
-					</h1>
-					<p>Audits</p>
-					<p class="numbers_sec_subtitle">Check Our Popular Audits</p>
-					<button class="numbers_sec_nav"
-						onclick="window.location.href = 'resource-audits.html?tab=recent-audits';"
-						aria-label="View more">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-					</button>
-				</div>
-				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
-				<div class="stat_container">
-					<h1 class="font_aldrich theme_color">
-						$<span id="amountSecured" class="animate-number theme_color font_aldrich" data-end="10000000000"
-							show-plus="true">0</span>
-					</h1>
-					<p>Protected</p>
-
-					<p class="numbers_sec_subtitle">Check Recently Audited Projects</p>
-					<button class="numbers_sec_nav"
-						onclick="window.location.href = 'resource-audits.html?tab=recent-audits';"
-						aria-label="View more">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-					</button>
-				</div>
-				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
-
-				<div class="stat_container">
-					<h1>
-						<span id="amountSecured" class="animate-number theme_color font_aldrich" data-end="0"
-							show-plus="true">0</span>
-					</h1>
-					<p>Post-Audit Exploits</p>
-
-					<p class="numbers_sec_subtitle">Run a QuickScan for your code</p>
-					<button class="numbers_sec_nav" id="run_free_quickscan_3" aria-label="View more">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-					</button>
-				</div>
-				<img src="images/styled_divider.svg" alt="styled_divider" class="display_none_991" />
-
-				<div class="stat_container">
-					<h1>
-						<span id="linesOfCode" class="animate-number theme_color font_aldrich" data-end="384">0</span>
-					</h1>
-					<p>Projects Audited</p>
-
-					<p class="numbers_sec_subtitle">Check KYC Reports</p>
-					<button class="numbers_sec_nav"
-						onclick="window.location.href = 'resource-audits.html?tab=kyc-reports';" aria-label="View more">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-					</button>
+					<!-- Stats Section -->
+					<div class="upgraded_hero_stats">
+						<div class="upgraded_hero_stat_item">
+							<span class="upgraded_hero_stat_number" data-target="10.5" data-suffix="B+">$0</span>
+							<span class="upgraded_hero_stat_label">Protected</span>
+						</div>
+						<div class="upgraded_hero_stat_item">
+							<span class="upgraded_hero_stat_number" data-target="200" data-suffix="+">0</span>
+							<span class="upgraded_hero_stat_label">Audits Completed</span>
+						</div>
+						<div class="upgraded_hero_stat_item">
+							<span class="upgraded_hero_stat_number" data-target="99.9" data-suffix="%">0</span>
+							<span class="upgraded_hero_stat_label">Uptime SLA</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- numbers section end -->
+	<!-- hero section end  -->
 
 	<!-- Trusted Partener Section Start-->
 	<section class="our_partners_section" id="partner_sec">
 		<div class="container pos_relative">
 
 			<div class="trusted_by_header">
-				Trusted By Banks, Blockchain and Fortune 500 Companies</div>
+				Trusted by Industry Leaders
+				<p class="trusted_by_sub_header">Comprehensive security solutions delivered to Web3 protocols and
+					enterprise infrastructure</p>
+			</div>
 
 			<div class="partners-track">
 				<div class="partners-grid">
@@ -911,7 +1068,7 @@
 					</div>
 					<div class="partner-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
 						<a href="https://web3paymentsolutions.io/" target="_blank">
-							<img src="images/web3paymentsolutions_grey.svg" alt="HackenProof" class="partner-logo"/>
+							<img src="images/web3paymentsolutions_grey.svg" alt="HackenProof" class="partner-logo" />
 							<img src="images/web3paymentsolutions.svg" alt="HackenProof" class="partner-logo hover" />
 						</a>
 					</div>
@@ -938,6 +1095,659 @@
 	</section>
 	<!-- Trusted Partener Section End-->
 
+	<section class="security_coverage_container">
+		<div class="trusted_by_header">
+			360° Security Coverage
+			<p class="trusted_by_sub_header">From smart contract audits to enterprise penetration testing, we provide
+				end-to- end security solutions for the modern digital landscape.</p>
+		</div>
+		<div class="security_coverage_grid">
+			<!-- Smart Contract Audits -->
+			<div class="security_coverage_card">
+				<div class="security_coverage_icon_wrapper">
+					<img src="images/magic_highlight.svg" class="security_coverage_icon_magic" alt="Magic Highlight">
+					<div class="security_coverage_icon_container">
+						<img src="images/security_smart_contract_audit_icon.svg" alt="Smart Contract Audit Icon">
+					</div>
+				</div>
+				<h3 class="security_coverage_title">Smart Contract Audits</h3>
+				<p class="security_coverage_description">
+					Comprehensive manual code review and automated testing for Ethereum, Solana, and other blockchain
+					protocols.
+				</p>
+				<ul class="security_coverage_features">
+					<li class="security_coverage_feature_item">Line-by-line code analysis</li>
+					<li class="security_coverage_feature_item">Economic attack modeling</li>
+					<li class="security_coverage_feature_item">Gas optimization review</li>
+					<li class="security_coverage_feature_item">Formal verification</li>
+				</ul>
+				<button class="security_coverage_button">Learn More</button>
+			</div>
+
+			<!-- Penetration Testing -->
+			<div class="security_coverage_card">
+				<div class="security_coverage_icon_wrapper">
+					<img src="images/magic_highlight.svg" class="security_coverage_icon_magic" alt="Magic Highlight">
+
+					<div class="security_coverage_icon_container">
+						<img src="images/security_penetration_testing_icon.svg" alt="Penetration Testing Icon">
+					</div>
+				</div>
+				<h3 class="security_coverage_title">Penetration Testing</h3>
+				<p class="security_coverage_description">
+					Advanced ethical hacking and vulnerability assessment for web and mobile applications, APIs, and
+					cloud infrastructure.
+				</p>
+				<ul class="security_coverage_features">
+					<li class="security_coverage_feature_item">OWASP Top 10 testing</li>
+					<li class="security_coverage_feature_item">API security assessment</li>
+					<li class="security_coverage_feature_item">Infrastructure scanning</li>
+					<li class="security_coverage_feature_item">Social engineering tests</li>
+				</ul>
+				<button class="security_coverage_button">Learn More</button>
+			</div>
+
+			<!-- Continuous Monitoring -->
+			<div class="security_coverage_card">
+				<div class="security_coverage_icon_wrapper">
+					<img src="images/magic_highlight.svg" class="security_coverage_icon_magic" alt="Magic Highlight">
+
+					<div class="security_coverage_icon_container">
+						<img src="images/security_continous_monitoring.svg" alt="Continuous Monitoring Icon">
+					</div>
+				</div>
+				<h3 class="security_coverage_title">Continuous Monitoring</h3>
+				<p class="security_coverage_description">
+					24/7 security monitoring and threat detection for your critical systems and smart contracts.
+				</p>
+				<ul class="security_coverage_features">
+					<li class="security_coverage_feature_item">Real-time threat detection</li>
+					<li class="security_coverage_feature_item">Automated incident response</li>
+					<li class="security_coverage_feature_item">Compliance monitoring</li>
+					<li class="security_coverage_feature_item">Custom alert systems</li>
+				</ul>
+				<button class="security_coverage_button">Learn More</button>
+			</div>
+
+			<!-- Security Consulting -->
+			<div class="security_coverage_card">
+				<div class="security_coverage_icon_wrapper">
+					<img src="images/magic_highlight.svg" class="security_coverage_icon_magic" alt="Magic Highlight">
+
+					<div class="security_coverage_icon_container">
+						<img src="images/security_consulting.svg" alt="Security Consulting Icon">
+					</div>
+				</div>
+				<h3 class="security_coverage_title">Security Consulting</h3>
+				<p class="security_coverage_description">
+					Strategic security guidance and architecture review for enterprise and Web3 organizations.
+				</p>
+				<ul class="security_coverage_features">
+					<li class="security_coverage_feature_item">Security architecture design</li>
+					<li class="security_coverage_feature_item">Compliance frameworks</li>
+					<li class="security_coverage_feature_item">Risk assessment</li>
+					<li class="security_coverage_feature_item">Team training programs</li>
+				</ul>
+				<button class="security_coverage_button">Learn More</button>
+			</div>
+
+			<!-- Incident Response -->
+			<div class="security_coverage_card">
+				<div class="security_coverage_icon_wrapper">
+					<img src="images/magic_highlight.svg" class="security_coverage_icon_magic" alt="Magic Highlight">
+
+					<div class="security_coverage_icon_container">
+						<img src="images/security_incident_response.svg" alt="Security Consulting Icon">
+
+					</div>
+				</div>
+				<h3 class="security_coverage_title">Incident Response</h3>
+				<p class="security_coverage_description">
+					Rapid response and forensic analysis for security breaches and smart contract exploits.
+				</p>
+				<ul class="security_coverage_features">
+					<li class="security_coverage_feature_item">24/7 emergency response</li>
+					<li class="security_coverage_feature_item">Forensic investigation</li>
+					<li class="security_coverage_feature_item">Damage mitigation</li>
+					<li class="security_coverage_feature_item">Recovery planning</li>
+				</ul>
+				<button class="security_coverage_button">Learn More</button>
+			</div>
+
+			<!-- Security Training (Highlighted) -->
+			<div class="security_coverage_card">
+				<div class="security_coverage_icon_wrapper">
+					<img src="images/magic_highlight.svg" class="security_coverage_icon_magic" alt="Magic Highlight">
+
+					<div class="security_coverage_icon_container">
+						<img src="images/security_training.svg" alt="Security Training Icon">
+
+					</div>
+				</div>
+				<h3 class="security_coverage_title">Security Training</h3>
+				<p class="security_coverage_description">
+					Comprehensive security education for development teams and security professionals.
+				</p>
+				<ul class="security_coverage_features">
+					<li class="security_coverage_feature_item">Secure coding practices</li>
+					<li class="security_coverage_feature_item">Web3 security fundamentals</li>
+					<li class="security_coverage_feature_item">Hands-on workshops</li>
+					<li class="security_coverage_feature_item">Certification programs</li>
+				</ul>
+				<button class="security_coverage_button">Learn More</button>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="battle_tested_container">
+		<div class="battle_tested_container_content">
+			<div class="battle_tested_header">
+				<h1 class="battle_tested_title">Our Battle-Tested Methodology</h1>
+				<p class="battle_tested_subtitle">
+					Every audit follows our proprietary 7-phase security assessment framework, combining automated tools
+					with manual expertise.
+				</p>
+			</div>
+
+			<div class="battle_tested_phases">
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+
+						<img src="images/battle_rec_scoping.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Reconnaissance & Scoping</h3>
+						<p class="battle_tested_phase_description">
+							Comprehensive analysis of architecture, dependencies, and attack surface mapping.
+						</p>
+					</div>
+				</div>
+
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+						<img src="images/battle_automated_security.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Automated Security Scanning</h3>
+						<p class="battle_tested_phase_description">
+							Industry-leading tools combined with custom security scanners and fuzzers.
+						</p>
+					</div>
+				</div>
+
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+						<img src="images/battle_manual_code.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Manual Code Review</h3>
+						<p class="battle_tested_phase_description">
+							Line-by-line analysis by senior security engineers with deep Web3 expertise.
+						</p>
+					</div>
+				</div>
+
+				<div class="battle_tested_phase">
+					<div class="battle_tested_icon_wrapper">
+						<!-- Replace with your icon -->
+						<img src="images/battle_economic_attack.svg" alt="Battle Rec Scoping Icon">
+
+					</div>
+					<div class="battle_tested_content">
+						<h3 class="battle_tested_phase_title">Economic Attack Modeling</h3>
+						<p class="battle_tested_phase_description">
+							Advanced game theory and economic incentive analysis for DeFi protocols.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="battle_tested_container_graphic">
+			<img src="images/battle_tested_graphic.svg" alt="">
+		</div>
+
+	</section>
+
+
+	<section class="success_story_section">
+		<div class="trusted_by_header">
+			360° Security Coverage
+			<p class="trusted_by_sub_header">From smart contract audits to enterprise penetration testing, we provide
+				end-to- end security solutions for the modern digital landscape.</p>
+		</div>
+		<div class="success_story_container">
+			<!-- Card 1: DeFi Protocol -->
+			<div class="success_story_card">
+				<div class="success_story_header">
+					<div class="success_story_icon">
+						<img src="images/success_story_defi_protocol.svg" alt="Success Story Icon">
+					</div>
+					<div class="success_story_title_wrapper">
+						<div class="success_story_title">DeFi Protocol</div>
+						<div class="success_story_subtitle">$500M TVL</div>
+					</div>
+				</div>
+
+				<h3 class="success_story_heading">Critical Flash Loan Vulnerability</h3>
+
+				<p class="success_story_description">
+					Discovered a critical reentrancy vulnerability in their lending protocol that could have drained the
+					entire treasury through flash loan manipulation.
+				</p>
+
+				<div class="success_story_metrics">
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Potential Loss</span>
+						<span class="success_story_metric_value">$500M</span>
+					</div>
+
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Detection Time</span>
+						<span class="success_story_metric_value">48 hours</span>
+					</div>
+
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Status</span>
+						<span class="success_story_metric_value success_story_status_fixed">Fixed</span>
+					</div>
+				</div>
+
+				<a href="#" class="success_story_button">Read Full Case Study →</a>
+			</div>
+
+			<!-- Card 2: Fintech Startup -->
+			<div class="success_story_card">
+				<div class="success_story_header">
+					<div class="success_story_icon">
+						<img src="images/success_story_fintech_startup.svg" alt="Success Story Icon">
+					</div>
+					<div class="success_story_title_wrapper">
+						<div class="success_story_title">Fintech Startup</div>
+						<div class="success_story_subtitle">Series B Company</div>
+					</div>
+				</div>
+
+				<h3 class="success_story_heading">API Security Overhaul</h3>
+
+				<p class="success_story_description">
+					Complete security assessment revealed multiple API vulnerabilities and helped achieve SOC 2 Type II
+					compliance for their funding round.
+				</p>
+
+				<div class="success_story_metrics">
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Issues Found</span>
+						<span class="success_story_metric_value">23</span>
+					</div>
+
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Timeline</span>
+						<span class="success_story_metric_value">3 weeks</span>
+					</div>
+
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Status</span>
+						<span class="success_story_metric_value success_story_status_certified">SOC 2 Certified</span>
+					</div>
+				</div>
+
+				<a href="#" class="success_story_button">Read Full Case Study →</a>
+			</div>
+
+			<!-- Card 3: NFT Marketplace -->
+			<div class="success_story_card">
+				<div class="success_story_header">
+					<div class="success_story_icon">
+						<img src="images/success_story_nft_marketplace.svg" alt="Success Story Icon">
+					</div>
+					<div class="success_story_title_wrapper">
+						<div class="success_story_title">NFT Marketplace</div>
+						<div class="success_story_subtitle">Gaming Platform</div>
+					</div>
+				</div>
+
+				<h3 class="success_story_heading">Smart Contract Optimization</h3>
+
+				<p class="success_story_description">
+					Optimized gas usage and fixed multiple security issues in their NFT minting and trading contracts,
+					reducing transaction costs by 40%.
+				</p>
+
+				<div class="success_story_metrics">
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Gas Savings</span>
+						<span class="success_story_metric_value">40%</span>
+					</div>
+
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Users Impacted</span>
+						<span class="success_story_metric_value">50k+</span>
+					</div>
+
+					<div class="success_story_metric">
+						<span class="success_story_metric_label">Performance</span>
+						<span class="success_story_metric_value success_story_status_faster">2x Faster</span>
+					</div>
+				</div>
+
+				<a href="#" class="success_story_button">Read Full Case Study →</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="advance_security_container">
+		<!-- Header -->
+		<div class="advance_security_header">
+			<h1 class="advance_security_title">Advanced Security Arsenal</h1>
+			<p class="advance_security_subtitle">Next-gen tools and proprietary technology stack for comprehensive
+				security assessment.</p>
+		</div>
+
+		<!-- Cards Grid -->
+		<div class="advance_security_grid">
+			<!-- Card 1 -->
+			<div class="advance_security_card">
+				<!-- <div class="advance_security_card_image">Image Placeholder</div> -->
+				<img class="advance_security_card_image" src="images/advance_security_static.svg"
+					alt="Advance Security Static">
+				<h3 class="advance_security_card_title">Static Analysis</h3>
+				<p class="advance_security_card_tools">Slither, Mythril, Securify</p>
+				<p class="advance_security_card_description">Advanced pattern matching for vulnerability detection</p>
+			</div>
+
+			<!-- Card 2 -->
+			<div class="advance_security_card">
+				<img class="advance_security_card_image" src="images/advance_security_dynamic.svg"
+					alt="Advance Security Dynamic">
+				<h3 class="advance_security_card_title">Dynamic Testing</h3>
+				<p class="advance_security_card_tools">Echidna, Manticore, Foundry</p>
+				<p class="advance_security_card_description">Property-based testing and symbolic execution</p>
+			</div>
+
+			<!-- Card 3 -->
+			<div class="advance_security_card">
+				<img class="advance_security_card_image" src="images/advance_security_ai_powered.svg"
+					alt="Advance Security AI">
+				<h3 class="advance_security_card_title">AI-Powered Analysis</h3>
+				<p class="advance_security_card_tools">Custom ML Models</p>
+				<p class="advance_security_card_description">Machine learning for anomaly detection</p>
+			</div>
+
+			<!-- Card 4 -->
+			<div class="advance_security_card">
+				<img class="advance_security_card_image" src="images/advance_security_formal.svg"
+					alt="Advance Security Formal">
+				<h3 class="advance_security_card_title">Formal Verification</h3>
+				<p class="advance_security_card_tools">K Framework, TLA+</p>
+				<p class="advance_security_card_description">Mathematical proof of contract correctness</p>
+			</div>
+		</div>
+
+		<!-- Platform Section -->
+		<div class="advance_security_platform">
+			<div class="advance_security_platform_content">
+				<h2 class="advance_security_platform_title">Proprietary Security Platform</h2>
+				<p class="advance_security_platform_description">
+					Our custom-built security platform combines the best open-source tools with proprietary analysis
+					engines, providing unprecedented visibility into your security posture.
+				</p>
+				<ul class="advance_security_features">
+					<li class="advance_security_feature_item">Real-time vulnerability scanning</li>
+					<li class="advance_security_feature_item">Automated report generation</li>
+					<li class="advance_security_feature_item">Integration with CI/CD pipelines</li>
+					<li class="advance_security_feature_item">Custom rule engine</li>
+				</ul>
+			</div>
+			<div class="advance_security_platform_image">Platform Image Placeholder</div>
+		</div>
+	</section>
+
+
+	<div class="security_team_glow"></div>
+
+	<div class="security_team_container">
+		<!-- Header -->
+		<div class="security_team_header">
+			<h1 class="security_team_title">World-Class Security Team</h1>
+			<p class="security_team_subtitle">Our team combines decades of cybersecurity experience with deep Web3
+				expertise.</p>
+		</div>
+
+		<!-- Team Members Grid -->
+		<div class="security_team_members">
+			<!-- Member 1 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Haylie Ekstrom</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 2 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Kaylynn Culhane</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 3 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Alfonso Passaquindici</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 4 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Jakob Passaquindici</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 5 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Abram Ekstrom</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 6 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Ryan Dorwart</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 7 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Jakob Philips</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 8 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Randy Workman</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+
+			<!-- Member 9 -->
+			<div class="security_team_member">
+				<div class="security_team_avatar_wrapper">
+					<div class="security_team_avatar">Photo</div>
+				</div>
+				<h3 class="security_team_name">Hanna Workman</h3>
+				<p class="security_team_role">Chief Security Officer</p>
+				<p class="security_team_description">Former Google Security, PhD in Cryptography</p>
+			</div>
+		</div>
+
+		<!-- Stats Section -->
+		<div class="security_team_stats">
+			<!-- Stat 1 -->
+			<div class="security_team_stat_card">
+				<div class="security_team_stat_number">10+</div>
+				<h3 class="security_team_stat_label">Security Engineers</h3>
+				<p class="security_team_stat_description">Elite team of security professionals with diverse backgrounds
+					in cybersecurity and blockchain technology.</p>
+			</div>
+
+			<!-- Stat 2 -->
+			<div class="security_team_stat_card">
+				<div class="security_team_stat_number">24/7</div>
+				<h3 class="security_team_stat_label">Global Coverage</h3>
+				<p class="security_team_stat_description">Teams across Americas, Europe, and Asia ensuring
+					round-the-clock security monitoring and support.</p>
+			</div>
+
+			<!-- Stat 3 -->
+			<div class="security_team_stat_card">
+				<div class="security_team_stat_number">10+</div>
+				<h3 class="security_team_stat_label">Years Average Experience</h3>
+				<p class="security_team_stat_description">Deep expertise across traditional cybersecurity, blockchain,
+					and emerging Web3 technologies.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<section class="enterprise_grade_container">
+		<!-- Header -->
+		<div class="enterprise_grade_header">
+			<h1 class="enterprise_grade_title">Enterprise-Grade Compliance</h1>
+			<p class="enterprise_grade_subtitle">Meeting the highest industry standards for security, privacy, and
+				compliance across global markets.</p>
+		</div>
+
+		<!-- Certifications Grid -->
+		<div class="enterprise_grade_certifications">
+			<!-- Certification 1 -->
+			<div class="enterprise_grade_cert_card">
+				<img src="images/enterprise_grade_soc.svg" class="enterprise_grade_cert_icon" alt="">
+				<h3 class="enterprise_grade_cert_title">SOC 2 Type II</h3>
+				<p class="enterprise_grade_cert_description">Audited security controls and processes</p>
+			</div>
+
+			<!-- Certification 2 -->
+			<div class="enterprise_grade_cert_card">
+				<img src="images/enterprise_grade_iso.svg" class="enterprise_grade_cert_icon" alt="">
+				<h3 class="enterprise_grade_cert_title">ISO 27001</h3>
+				<p class="enterprise_grade_cert_description">Information security management certified</p>
+			</div>
+
+			<!-- Certification 3 -->
+			<div class="enterprise_grade_cert_card">
+				<img src="images/enterprise_grade_gdpr.svg" class="enterprise_grade_cert_icon" alt="">
+				<h3 class="enterprise_grade_cert_title">GDPR Compliant</h3>
+				<p class="enterprise_grade_cert_description">European data protection standards</p>
+			</div>
+
+			<!-- Certification 4 -->
+			<div class="enterprise_grade_cert_card">
+				<img src="images/enterprise_grade_nist.svg" class="enterprise_grade_cert_icon" alt="">
+				<h3 class="enterprise_grade_cert_title">NIST Framework</h3>
+				<p class="enterprise_grade_cert_description">Cybersecurity framework alignment</p>
+			</div>
+		</div>
+
+		<!-- Regulatory Expertise Section -->
+		<div class="enterprise_grade_expertise">
+			<h2 class="enterprise_grade_expertise_title">Regulatory Expertise</h2>
+
+			<div class="enterprise_grade_features_grid">
+				<!-- Column 1 -->
+				<div class="enterprise_grade_feature_column">
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Real-time vulnerability scanning</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Automated report generation</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Integration with CI/CD pipelines</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Custom rule engine</p>
+					</div>
+				</div>
+
+				<!-- Column 2 -->
+				<div class="enterprise_grade_feature_column">
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Real-time vulnerability scanning</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Automated report generation</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Integration with CI/CD pipelines</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Custom rule engine</p>
+					</div>
+				</div>
+
+				<!-- Column 3 -->
+				<div class="enterprise_grade_feature_column">
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Real-time vulnerability scanning</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Automated report generation</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Integration with CI/CD pipelines</p>
+					</div>
+					<div class="enterprise_grade_feature_item">
+						<div class="enterprise_grade_feature_icon"></div>
+						<p class="enterprise_grade_feature_text">Custom rule engine</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 	<section class="quickscan_container_section" id="quickscan_container_sec">
@@ -948,828 +1758,142 @@
 		</div>
 	</section>
 
-	<section class="why_cres_shields_section" id="why_creshields_sec">
-		<div class="container pos_relative">
-
-			<div class="non_hero_title">
-				<h2 class="part_one">Why <span class="part_two" style="color: white;">CredShields?</span></h2>
-
-				<p>
-					Trusted by 250+ projects, CredShields blends AI automation with expert auditors to deliver faster
-					and reliable security. We safeguard billions with enterprise-grade compliance and zero post-audit
-					exploits.
-			</div>
-		</div>
-
-		<div class="solutions-grid">
-			<div class="solution-card">
-				<div class="solution-icon">
-					<img src="images/solution_card_1.svg" alt="Smart Contract Audits">
+	<section class="secure_your_protocol_container">
+		<div class="secure_your_protocol_outer_box">
+			<div class="secure_your_protocol_card">
+				<!-- Background Wave Effects -->
+				<div class="secure_your_protocol_background">
+					<img src="images/secure_your_protocol_wave.svg" class="secure_your_protocol_wave" alt="">
 				</div>
-				<h3>AI + Human Expertise</h3>
-				<p>Faster audits without compromising depth.</p>
-			</div>
 
-			<div class="solution-card">
-				<div class="solution-icon">
-					<img src="images/solution_card_2.svg" alt="Web3 Security">
-				</div>
-				<h3>Compliance Aligned</h3>
-				<p>SO, OWASP, PCI DSS, SOC 2</p>
-			</div>
+				<!-- Main Content -->
+				<div class="secure_your_protocol_content">
+					<h1 class="secure_your_protocol_title">Secure Your Protocol Today</h1>
+					<p class="secure_your_protocol_description">
+						Don't wait for a security incident to happen. Get your comprehensive security audit from the
+						team trusted by leading fortune 500 companies.
+					</p>
 
-			<div class="solution-card">
-				<div class="solution-icon">
-					<img src="images/solution_card_3.svg" alt="Wallet Security">
-				</div>
-				<h3>Proven Track Record</h3>
-				<p>$10B+ TVL protected, 0 post-audit exploits</p>
-			</div>
-
-			<div class="solution-card">
-				<div class="solution-icon">
-					<img src="images/solution_card_4.svg" alt="Blockchain Security">
-				</div>
-				<h3>Enterprise + Web3 Ready</h3>
-				<p>Bridging both worlds</p>
-			</div>
-		</div>
-	</section>
-
-	<section class="feature_diff_section">
-		<div class="container pos_relative">
-			<div class="feature_diff_section_container">
-				<table class="feature_diff_section_table">
-					<thead>
-						<tr>
-							<th class="feature_diff_section_th">Feature / Differentiator</th>
-							<th class="feature_diff_section_th">CredShields</th>
-							<th class="feature_diff_section_th">Traditional Auditors</th>
-							<th class="feature_diff_section_th">AI-First Tools</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">AI-Powered Predictive Security</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Proprietary AI (SolidityScan, predictive
-										engine) that flags exploits before mainnet</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Manual-heavy, lagging on predictive
-										tooling</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Fast scans, but shallow & miss deeper logic
-										flaws</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">OWASP-Style Standardization</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Introduced Smart Contract OWASP Top 10 for
-										clarity & industry adoption</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">No common framework, each audit =
-										silo</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Ruleset-driven, no standardized risk
-										framework</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">End-to-End Audit + Tooling</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Hybrid: manual senior-expert audits + AI +
-										monitoring</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Strong manual audits</span>
-								</div>
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Weak on dev tooling</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Tooling</span>
-								</div>
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">No deep manual expertise</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Time to Audit / Speed</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Faster with AI-augmented pipeline (days vs.
-										weeks)</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Slow (2-6 weeks average)</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Instant scans</span>
-								</div>
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">low depth</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Cost-Effectiveness</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">AI-driven scale lowers audit costs</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Expensive ($30k-$150k+)</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Cheap</span>
-								</div>
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Misses critical issues</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Continuous Monitoring / Post-Audit</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Ongoing security monitoring & alerts</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">One-time audit only</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">No post-deployment checks</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Developer-Focused Workflow</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Plugins, dashboards, dev-first
-										experience</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Static PDF reports, poor UX</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Dev-friendly,</span>
-								</div>
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">lacks depth</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Community Ecosystem</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Active security evangelism (Shielded Spaces,
-										Web3HackHub, open standards)</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Limited public engagement</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Crowdsourced</span>
-								</div>
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Inconsistent quality</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Track Record</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Proven audits across DeFi, RWAs, infra
-										protocols</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Big names, but mostly DeFi/NFTs</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Newer, Inconsistent</span>
-								</div>
-							</td>
-						</tr>
-						<tr class="feature_diff_section_tr">
-							<td class="feature_diff_section_feature_label">Innovation Edge</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_check_item">
-									<span class="feature_diff_section_icon feature_diff_section_check">✓</span>
-									<span class="feature_diff_section_text">Building "next-gen security rails" for RWAs
-										& enterprises</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Still Web3-native only, not
-										infra-focused</span>
-								</div>
-							</td>
-							<td class="feature_diff_section_td">
-								<div class="feature_diff_section_cross_item">
-									<span class="feature_diff_section_icon feature_diff_section_cross">✕</span>
-									<span class="feature_diff_section_text">Point solutions, not full-stack</span>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-
-			</div>
-			<div class="hero_section_btn_container" style="margin-top: 5rem;">
-				<button class="clean_btn_style"
-					onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-					<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid">
-				</button>
-				<button class="clean_btn_style run_quickscan_btn_container" id="run_free_quickscan_2">
-					<img src="images/hero_btn_2.svg" alt="hero_btn_2" class="img-fluid">
-					<div class="numbers_sec_nav run_quickscan_btn" aria-label="View more">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
+					<!-- CTA Buttons -->
+					<div class="secure_your_protocol_buttons">
+						<a href="#" class="secure_your_protocol_btn secure_your_protocol_btn_primary">
+							Request Manual Audit
+						</a>
+						<a href="#" class="secure_your_protocol_btn secure_your_protocol_btn_secondary">
+							Book Security Review
+						</a>
 					</div>
-				</button>
 
+					<!-- Features -->
+					<div class="secure_your_protocol_features">
+						<div class="secure_your_protocol_feature">
+							<h3 class="secure_your_protocol_feature_title">Fast Turnaround</h3>
+							<p class="secure_your_protocol_feature_description">Get your audit results within 1 week*
+							</p>
+						</div>
+						<div class="secure_your_protocol_feature">
+							<h3 class="secure_your_protocol_feature_title">Proven Track Record</h3>
+							<p class="secure_your_protocol_feature_description">200+ successful audits completed</p>
+						</div>
+						<div class="secure_your_protocol_feature">
+							<h3 class="secure_your_protocol_feature_title">Expert Support</h3>
+							<p class="secure_your_protocol_feature_description">Direct access to our security team</p>
+						</div>
+					</div>
+				</div>
 			</div>
-
 		</div>
 
 	</section>
 
-
-	<section class="how_we_protect_section" id="how_we_protect_sec">
-		<div class="container pos_relative">
-
-			<div class="non_hero_title">
-				<h2 class="part_one">How <span class="part_two" style="color: white;">We Protect You</span></h2>
-
-				<p>
-					From smart contract to protocol, enterprise, and web infra audits, we secure every layer of Web3.
-					With AI-powered tools like SolidityScan and contributions to OWASP security standards, we set global
-					benchmarks in predictive protection.
-			</div>
-			<div class="how_we_protect_card_container">
-				<div class="how_we_protect_card" onclick="window.location.href = 'smart-contract-audit.html';">
-					<div>
-						<h3>Smart Contract Audits</h3>
-						<p>Predict flaws before launch</p>
-					</div>
-					<div class="how_we_protect_card_img_box">
-						<img src="images/protect_card_1.svg" alt="hero_btn_2" class="img-fluid card-image"
-							style="align-self: end;">
-						<img src="images/protect_card_1_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
-							style="align-self: end;">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							style="z-index: 9999;">
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-								style="opacity: 0.5;">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-						</button>
-					</div>
-					<div class="gradient"></div>
-				</div>
-				<div class="how_we_protect_card" onclick="window.location.href = 'dapp-protocol.html';">
-					<div>
-						<h3>DApp & Protocol Security</h3>
-						<p>Simulate economic & governance attacks</p>
-					</div>
-					<div class="how_we_protect_card_img_box">
-						<img src="images/protect_card_2.svg" alt="hero_btn_2" class="img-fluid card-image"
-							style="align-self: end;">
-						<img src="images/protect_card_2_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
-							style="align-self: end;">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'dapp-protocol.html';" style="z-index: 9999;">
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-								style="opacity: 0.5;">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-						</button>
-					</div>
-					<div class="gradient"></div>
-				</div>
-				<div class="how_we_protect_card" onclick="window.location.href = 'enterprise-web.html';">
-					<div>
-						<h3>Enterprise Web & Mobile Security</h3>
-						<p>Cloud, mobile & SaaS defenses</p>
-					</div>
-					<div class="how_we_protect_card_img_box">
-						<img src="images/protect_card_3.svg" alt="hero_btn_2" class="img-fluid card-image"
-							style="align-self: end;">
-						<img src="images/protect_card_3_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
-							style="align-self: end;">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'enterprise-web.html';" style="z-index: 9999;">
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-								style="opacity: 0.5;">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-						</button>
-					</div>
-					<div class="gradient"></div>
-				</div>
-				<div class="how_we_protect_card" onclick="window.location.href = 'penetration-testing.html';">
-					<div>
-						<h3>Penetration Testing</h3>
-						<p>Prevent Forced Attacks</p>
-					</div>
-					<div class="how_we_protect_card_img_box">
-						<img src="images/protect_card_4.svg" alt="hero_btn_2" class="img-fluid card-image"
-							style="align-self: end;">
-						<img src="images/protect_card_4_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
-							style="align-self: end;">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'penetration-testing.html';" style="z-index: 9999;">
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-								style="opacity: 0.5;">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-						</button>
-					</div>
-					<div class="gradient"></div>
-				</div>
-				<div class="how_we_protect_card" onclick="window.location.href = 'ai-security-tools.html';">
-					<div>
-						<h3>SolidityScan (AI Tools)</h3>
-						<p>Instant predictive scanning for devs</p>
-					</div>
-					<div class="how_we_protect_card_img_box">
-						<img src="images/protect_card_5.svg" alt="hero_btn_2" class="img-fluid card-image"
-							style="align-self: end;">
-						<img src="images/protect_card_5_hover.svg" alt="hero_btn_2" class="img-fluid card-hover"
-							style="align-self: end;">
-						<button class="numbers_sec_nav how_we_protect_nav_btn" aria-label="View more"
-							onclick="window.location.href = 'ai-security-tools.html';" style="z-index: 9999;">
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-								style="opacity: 0.5;">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-							<svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-								xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd"
-									d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-									fill="#C2FFBD" />
-							</svg>
-						</button>
-					</div>
-					<div class="gradient"></div>
-				</div>
-
-
-			</div>
-		</div>
-
-
-	</section>
-
-	<section class="proof_impact_section" id="how_we_protect_sec">
-		<div class="container pos_relative">
-
-			<div class="non_hero_title">
-				<h2 class="part_one">Proof <span class="part_two" style="color: white;">Of Impact</span></h2>
-				<p>
-					From smart contract to protocol, enterprise, and web infra audits, we secure every layer of Web3.
-					With AI-powered tools like SolidityScan and contributions to OWASP security standards, we set global
-					benchmarks in predictive protection.
-				</p>
-			</div>
-			<div class="testimonial-carousel">
-				<div class="testimonial_left_grad">
-					<button class="numbers_sec_nav how_we_protect_nav_btn prev-btn" aria-label="View more"
-						style="position: relative; top: 18px;" type="button" id="prev">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-					</button>
-				</div>
-				<div class="testimonial_right_grad">
-					<button class="numbers_sec_nav how_we_protect_nav_btn next-btn" aria-label="View more" type="button"
-						id="next">
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-							style="opacity: 0.5;">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path fill-rule="evenodd" clip-rule="evenodd"
-								d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-								fill="#C2FFBD" />
-						</svg>
-					</button>
-				</div>
-				<div class="carousel">
-					<!-- <div class="testimonial-card placeholder"></div> -->
-					<div class="testimonial-card">
-						<div class="testimonial-header">
-							<img src="images/rex.svg" width="180px" alt="REXProtocol" />
+	<footer class="footer_new_container">
+		<div class="footer_new_content">
+			<div class="footer_new_main">
+				<!-- Brand Section -->
+				<div class="footer_new_brand">
+					<img src="images/Logo.svg" class="footer_new_logo" alt="">
+					<p class="footer_new_tagline">
+						Protecting the future of Web3 and enterprise technology with world-class security audits and
+						consulting services.
+					</p>
+					<div class="footer_new_social_icons">
+						<div class="footer_new_social_placeholder">
+							<img src="images/telegram_gray.svg" alt="telegram" class="img-fluid" />
 						</div>
-						<p class="testimonial-text">We are thoroughly impressed with Credshields' meticulous and
-							professional approach during the audit of Evo Exchange’s decentralized exchange contracts.
-							Their expertise not only enhanced our system's security but also provided valuable insights
-							that have greatly contributed to our platform's reliability. Credshields is a trusted
-							partner in the crypto space, and we highly recommend their services to anyone seeking
-							top-notch security solutions </p>
-						<div class="testimonial-footer">
-							<div class="testimonial-image">
-								<img src="images/constantino.svg" alt="Constantino" />
-							</div>
-							<div class="testimonial-user">
-								<p class="testimonial-name">Constantino Heredia</p>
-								<p class="testimonial-des">CEO at REXProtocol</p>
-							</div>
+						<div class="footer_new_social_placeholder">
+							<img src="images/discord_gray.svg" alt="discord" class="img-fluid" />
 						</div>
-					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-header">
-							<img src="images/arcana.svg" alt="Arcana" />
+						<div class="footer_new_social_placeholder">
+							<img src="images/medium_gray.svg" alt="medium" class="img-fluid" />
 						</div>
-						<p class="testimonial-text">Arcana Network's smart contract audits by CredShields was a great
-							experience and very reassuring. Their expertise and active communication helped secure our
-							code every time. We were impressed by their overall quality, timeliness, flexibility,
-							responsiveness, and how they covered most known & unknown edge cases. Highly recommend!</p>
-						<div class="testimonial-footer">
-							<div class="testimonial-image">
-								<img src="images/ajay.svg" alt="Ajay" />
-
-							</div>
-							<div class="testimonial-user">
-								<p class="testimonial-name">Ajay Shetty</p>
-								<p class="testimonial-des">COO at Arcana</p>
-							</div>
+						<div class="footer_new_social_placeholder">
+							<img src="images/x.svg" alt="X" class="img-fluid" />
 						</div>
-					</div>
-					<div class="testimonial-card">
-						<div class="testimonial-header">
-							<img src="images/wasset.svg" alt="Wasset" />
-						</div>
-						<p class="testimonial-text">At Wasset, we understand the importance of security in ensuring the
-							long-term sustainability of a protocol like ours. Ensuring that our apps and smart contracts
-							are built with the best team, framework, and tool is not just enough.<br />
-							Working with Credshields, we were able to identify issues our development team couldn't
-							identify at the early stages which could have led to serious issues. Working with them has
-							been valuable in ensuring what we build and will stand the test of the black hat folks.
-						</p>
-						<div class="testimonial-footer">
-							<div class="testimonial-image">
-								<img src="images/oluwafemi.svg" alt="Oluwafemi" />
-							</div>
-							<div class="testimonial-user">
-								<p class="testimonial-name">Oluwafemi</p>
-								<p class="testimonial-des">Co-founder at Wasset</p>
-							</div>
+						<div class="footer_new_social_placeholder">
+							<img src="images/instagram_gray.svg" alt="instagram" class="img-fluid" />
 						</div>
 					</div>
 				</div>
-				<!-- <div class="custom-prev-next">
-					<button type="button" id="prev" class="prev-btn">
-						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
-								stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
-								stroke-linejoin="round" />
-						</svg></button>
-					<button type="button" id="next" class="next-btn">
-						<svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
-								stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
-								stroke-linejoin="round" />
-						</svg>
-					</button>
-				</div> -->
-			</div>
-		</div>
 
-
-	</section>
-
-	<!-- Contact section start -->
-	<section class="contact_section" id="contact_sec">
-		<div class="container">
-
-
-			<div class="row col-lg-12 custom_contact_bg">
-
-				<div class="get_in_touch_card">
-					<div class="contact_head">
-						<h3>Get In Touch</h3>
-						<p>We appreciate each customer and we are proud that 60% of clients come back to work with us
-							again
-						</p>
-					</div>
-					<form class="contact_seach" action="https://formsubmit.co/info@credshields.com" method="POST">
-						<input type="text" placeholder="Your Name" name="name" />
-						<input type="text" placeholder="Your Email Address" name="email" />
-						<input type="text" placeholder="Purpose of contact" name="purpose" />
-						<textarea placeholder="Type your message here" name="message"></textarea>
-						<button type="submit" class="clean_btn_style">
-							<img src="images/submit_details_btn.svg" alt="hero_btn_1" class="img-fluid">
-						</button>
-					</form>
-				</div>
-				<div class="get_in_touch_card">
-					<div class="contact_head">
-						<h3>Join the Community</h3>
-						<p>
-							More than 75% of our clients return for repeat engagements, because security is not a
-							one-time job. Connect with us today and let’s build a safer Web3 together.
-						</p>
-					</div>
-					<div class="hero_section_btn_container">
-						<button class="clean_btn_style" onclick="window.open('https://t.me/solidityscan', '_blank')">
-							<img src="images/join_telegram_btn.svg" alt="hero_btn_1" class="img-fluid">
-						</button>
-						<button class="clean_btn_style"
-							onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank')">
-							<img src="images/join_discord_btn.svg" alt="hero_btn_1" class="img-fluid">
-						</button>
-
+				<!-- Services Column -->
+				<div class="footer_new_column">
+					<h3 class="footer_new_column_title">Services</h3>
+					<div class="footer_new_links">
+						<a href="#" class="footer_new_link">Smart Contract Audits</a>
+						<a href="#" class="footer_new_link">Penetration Testing</a>
+						<a href="#" class="footer_new_link">Security Consulting</a>
+						<a href="#" class="footer_new_link">Incident Response</a>
+						<a href="#" class="footer_new_link">Continuous Monitoring</a>
 					</div>
 				</div>
-				<!-- <div class="row col-lg-12">
-						<div class="social_wrap col-lg-6">
-							<a href="https://t.me/solidityscan" target="_blank">
-								<div class="telegram_container">
-									<img src="images/telegram.png" alt="a" />
-									<p>Join Telegram</p>
-								</div>
-							</a>
-						</div>
-						<div class="social_wrap col-lg-6">
-							<a href="https://discord.com/invite/9HhV4hGENw" target="_blank">
-								<div class="discort_container">
-									<img src="images/discord.png"  alt="a" />
-									<p>Join Discord</p>
-								</div>
-							</a>
-		
-						</div>
-					</div> -->
 
-			</div>
-		</div>
-	</section>
-	<!-- contact section end -->
-
-	<!-- Footer section start -->
-
-	<footer class="footer_updated">
-		<div class="container">
-			<!-- Top section with newsletter and social links -->
-			<div class="footer_updated_top">
-				<div class="footer_updated_left">
-					<div class="footer_logo">
-						<img src="images/Logo.svg" alt="logo" />
+				<!-- Industries Column -->
+				<div class="footer_new_column">
+					<h3 class="footer_new_column_title">Industries</h3>
+					<div class="footer_new_links">
+						<a href="#" class="footer_new_link">DeFi Protocols</a>
+						<a href="#" class="footer_new_link">NFT Marketplaces</a>
+						<a href="#" class="footer_new_link">Gaming Platforms</a>
+						<a href="#" class="footer_new_link">Fintech Companies</a>
+						<a href="#" class="footer_new_link">Enterprise Software</a>
 					</div>
-					<div class="footer_updated_right">
-						<div class="social_links">
-							<a class="social_links_con" href="https://t.me/solidityscan">
-								<img src="images/telegram_gray.svg" alt="telegram" class="img-fluid" />
-							</a>
-							<a class="social_links_con" href="https://discord.com/invite/9HhV4hGENw">
-								<img src="images/discord_gray.svg" alt="discord" class="img-fluid" />
-							</a>
-							<a class="social_links_con" href="https://blog.solidityscan.com/">
-								<img src="images/medium_gray.svg" alt="medium" class="img-fluid" />
-							</a>
-							<a class="social_links_con" href="https://twitter.com/CredShields">
-								<img src="images/x.svg" alt="X" class="img-fluid" />
-							</a>
-							<a class="social_links_con" href="https://www.instagram.com/credshields/">
-								<img src="images/instagram_gray.svg" alt="instagram" class="img-fluid" />
-							</a>
-						</div>
+				</div>
+
+				<!-- Resources Column -->
+				<div class="footer_new_column">
+					<h3 class="footer_new_column_title">Resources</h3>
+					<div class="footer_new_links">
+						<a href="#" class="footer_new_link">Security Blog</a>
+						<a href="#" class="footer_new_link">Vulnerability Database</a>
+						<a href="#" class="footer_new_link">Security Best Practices</a>
+						<a href="#" class="footer_new_link">Case Studies</a>
+						<a href="#" class="footer_new_link">Documentation</a>
 					</div>
 				</div>
 			</div>
-			<div class="footer_updated_newsletter">
-				<div style="min-width: 400px;">
-					<h3>Subscribe to Newsletter</h3>
-					<div class="footer_updated_newsletter_form">
-						<input type="email" placeholder="Type Your Email" class="footer_updated_email_input">
-					</div>
+
+			<!-- Divider -->
+			<div class="footer_new_divider"></div>
+
+			<!-- Bottom Section -->
+			<div class="footer_new_bottom">
+				<div class="footer_new_address">
+					20A TANJONG PAGAR ROAD, SINGAPORE (088443)
 				</div>
-
-				<button class="clean_btn_style"
-					onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank')">
-					<img src="images/subscribe_btn.svg" alt="hero_btn_1" class="img-fluid">
-				</button>
-			</div>
-			<!-- Middle section with link columns -->
-			<div class="footer_updated_links">
-				<div class="footer_updated_column">
-					<h4>Resources</h4>
-					<ul>
-						<li><a href="resource-audits.html?tab=recent-audits">Recently Audited</a></li>
-						<li><a href="resource-audits.html?tab=popular-projects">Popular Projects</a></li>
-						<li><a href="resource-audits.html?tab=kyc-reports">KYC Reports</a></li>
-
-
-					</ul>
-				</div>
-
-				<div class="footer_updated_column">
-					<h4>Solutions</h4>
-					<ul>
-						<li><a href="smart-contract-audit.html">Smart Contract Audits</a></li>
-						<li><a href="dapp-protocol.html">DApp & Protocol Security</a></li>
-						<li><a href="enterprise-web.html">Enterprise Web & Mobile Security</a></li>
-						<li><a href="penetration-testing.html">Penetration Testing</a></li>
-						<li><a href="block-chain-security.html">Blockchain Security</a></li>
-						<li><a href="external-network-testing-new.html">External Network Testing</a></li>
-						<li><a href="cloud-infra.html">Cloud Infrastructure</a></li>
-						<li><a href="wallet-security-new.html">Wallet Security</a></li>
-						<li><a href="mobile-app-testing.html">Mobile App Security</a></li>
-						<li><a href="web-app-testing.html">Web App Security</a></li>
-						<li><a href="ai-security-tools.html">AI Security Tools</a></li>
-						<li><a href="https://solidityscan.com/">SolidityScan</a></li>
-						<li><a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a></li>
-						<li><a href="https://rustscan.com/">RustScan</a></li>
-						<li><a href="#">Wallet Tracker (Coming Soon)</a></li>
-					</ul>
-				</div>
-
-				<div class="footer_updated_column">
-					<h4>Industries</h4>
-					<ul>
-						<li><a href="finance-fintech.html">Finance & Fintech</a></li>
-						<li><a href="saas-enterprise.html">SaaS & Enterprises</a></li>
-						<li><a href="web3-protocol.html">Web3 Protocols & Exchanges</a></li>
-						<li><a href="gamin-digital-assets.html">Gaming & Digital Assets</a></li>
-					</ul>
-				</div>
-
-				<div class="footer_updated_column">
-					<h4>About Credshields</h4>
-					<ul>
-						<li><a href="about.html">About</a></li>
-						<li><a href="https://scs.owasp.org/sctop10/">OWASP TOP 10</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<!-- Bottom section -->
-			<div class="row">
-				<div class="ftr_menu">
-					<a href="#">20A TANJONG PAGAR ROAD, SINGAPORE (088443)</a>
-					<ul>
-						<li>
-							<a href="tos.html">Terms & Conditions</a>
-						</li>
-						<li><i class="fa fa-circle"></i></li>
-						<li>
-							<a href="privacy.html">Privacy Policy</a>
-						</li>
-						<li><i class="fa fa-circle"></i></li>
-						<li>
-							<a href="#">Copyright
-								<script>document.write(new Date().getFullYear());</script> CredShields. All Rights
-								Reserved
-							</a>
-						</li>
-					</ul>
+				<div class="footer_new_legal">
+					<a href="#" class="footer_new_legal_link">Terms & Conditions</a>
+					<span class="footer_new_separator">•</span>
+					<a href="#" class="footer_new_legal_link">Privacy Policy</a>
+					<span class="footer_new_separator">•</span>
+					<span class="footer_new_copyright">Copyright © 2025 CredShields. All Rights Reserved</span>
 				</div>
 			</div>
 		</div>
 	</footer>
 
 	<!-- footer section end -->
+
+
 
 	<!-- JavaScript Libraries in the correct loading order -->
 	<!-- 1. jQuery first (from CDN with local fallback) -->
@@ -1794,6 +1918,72 @@
 	<script src="js/statAnimation.js"></script>
 	<script src="js/audits.js"></script>
 	<script src="js/scrollIntraction.js"></script>
+
+	<script>
+		// Counter Animation Function
+		function animateCounter(element, target, suffix, duration = 2000) {
+			const start = 0;
+			const increment = target / (duration / 16); // 60 FPS
+			let current = start;
+
+			const timer = setInterval(() => {
+				current += increment;
+
+				if (current >= target) {
+					current = target;
+					clearInterval(timer);
+				}
+
+				// Format the number
+				let displayValue = current.toFixed(1);
+
+				// Add $ for the first stat
+				const prefix = element.parentElement.querySelector('.upgraded_hero_stat_label').textContent === 'Protected' ? '$' : '';
+
+				element.textContent = prefix + displayValue + suffix;
+			}, 16);
+		}
+
+		// Initialize counters when page loads
+		window.addEventListener('load', () => {
+			const counters = document.querySelectorAll('.upgraded_hero_stat_number');
+
+			// Delay the animation slightly for better effect
+			setTimeout(() => {
+				counters.forEach(counter => {
+					const target = parseFloat(counter.getAttribute('data-target'));
+					const suffix = counter.getAttribute('data-suffix') || '';
+					animateCounter(counter, target, suffix);
+				});
+			}, 500);
+		});
+
+		// Intersection Observer for animation on scroll (if stats are below fold)
+		const observerOptions = {
+			threshold: 0.5,
+			rootMargin: '0px'
+		};
+
+		const observer_hero = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const counters = entry.target.querySelectorAll('.upgraded_hero_stat_number');
+					counters.forEach(counter => {
+						if (counter.textContent === '0' || counter.textContent.includes('$0')) {
+							const target = parseFloat(counter.getAttribute('data-target'));
+							const suffix = counter.getAttribute('data-suffix') || '';
+							animateCounter(counter, target, suffix);
+						}
+					});
+				}
+			});
+		}, observerOptions);
+
+		const statsSection = document.querySelector('.upgraded_hero_stats');
+		if (statsSection) {
+			observer_hero.observe(statsSection);
+		}
+	</script>
 
 	<!-- Banner functionality -->
 	<script>
@@ -1841,6 +2031,45 @@
 		function closeMenu() {
 			alert('Menu closed! In a real implementation, this would hide the overlay.');
 		}
+	</script>
+	<script>
+		function updateCards() {
+			const cards = document.querySelectorAll('.stack_card_card');
+
+			cards.forEach((card, index) => {
+				// Skip the title card (first card)
+				if (index === 0) return;
+
+				const rect = card.getBoundingClientRect();
+				const cardTop = rect.top;
+
+				// Calculate the stacked position based on card index
+				let stackPosition;
+				if (index === 1) stackPosition = 280;
+				else if (index === 2) stackPosition = 300;
+				else if (index === 3) stackPosition = 320;
+				else if (index === 4) stackPosition = 340;
+				else if (index === 5) stackPosition = 360;
+
+				// Show card when it's about to reach its stacked position
+				const triggerPoint = stackPosition + 200;
+
+				if (cardTop <= triggerPoint) {
+					card.classList.add('stack_card_visible');
+				} else {
+					card.classList.remove('stack_card_visible');
+				}
+			});
+		}
+
+		// Update on scroll
+		window.addEventListener('scroll', updateCards);
+
+		// Update on load
+		window.addEventListener('load', updateCards);
+
+		// Initial update
+		updateCards();
 	</script>
 </body>
 
