@@ -99,6 +99,7 @@
 		body {
 			position: relative;
 			min-height: 100vh;
+			font-family: 'Open Sans', sans-serif;
 		}
 
 		body::before {
@@ -110,7 +111,7 @@
 			bottom: 0;
 			background: linear-gradient(274deg, transparent, #78ff04, transparent);
 			background-size: 400% 400%;
-			animation: AnimationName 6s ease infinite;
+			animation: AnimationName 20s ease infinite;
 			opacity: 0.3;
 			z-index: -1;
 			pointer-events: none;
@@ -166,7 +167,6 @@
 		}
 
 		.notification_banner .banner_content p {
-			font-family: 'Barlow', sans-serif;
 			font-weight: 600;
 			font-size: 16px;
 			line-height: 150%;
@@ -175,7 +175,6 @@
 		}
 
 		.notification_banner .download_btn {
-			font-family: 'Barlow', sans-serif;
 			font-weight: 600;
 			font-size: 14px;
 			color: white;
@@ -777,71 +776,74 @@
 	<!-- header section end -->
 
 	<!-- hero section start  -->
-	<section class="home_hero_section">
-		<div class="container pos_relative">
+	<section class="upgraded_hero_section">
+		<div class="upgraded_hero_container">
+			<!-- Badge -->
+			<div class="upgraded_hero_badge">
+				<!-- <span class="upgraded_hero_badge_icon">✓</span> -->
+				<img src="images/upgraded_hero_section_badge.svg" alt="upgraded_hero_section_badge" class="img-fluid">
+				Trusted by 200+ institutions and protocols worldwide
+			</div>
 
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="row">
-						<div class="hero_section_btn_container_main">
-							<div>
-								<h2 class="color_primary custom_ladning_font text_align_center_below_767">
-									<span style="color: #78FF04;">Security </span>That Institutions & Protocols <span
-										style="color: #78FF04;"> Trust</span>
-								</h2>
-								<p style="color: #F0F2F5; font-size: 24px; margin-top: 55px;">We secure smart contracts,
-									protocols, and enterprise
-									applications with AI-powered
-									audits
-									and global compliance standards.
-								</p>
-								<img src="images/landing_page_graphic.svg" alt="hero_img"
-									class="img-fluid display_below_997">
-								<div style="margin-top: 55px;">
-									<button class="book_security_audit_btn">Book Security Audit</button>
-									<button class="book_security_audit_btn run_free_ai_scan_btn"> <span
-											style="color: #FFFFFF; font-weight: 700; margin-right: 1px;">Run Free</span>
-										<img src="images/ai_icon_magic.svg" alt="ai_icon_magic" class="img-fluid"> <span
-											style="color: #38FF7E; font-weight: 700; margin-left: 1px;">AI
-											Scan</span></button>
-								</div>
+			<!-- Main Content -->
+			<div class="upgraded_hero_content_wrapper">
+				<!-- Left Content -->
+				<div class="upgraded_hero_left">
+					<h1 class="upgraded_hero_title">
+						<span class="upgraded_hero_title_green">Security</span> That Institutions <br>& Protocols <span class="upgraded_hero_title_green">Trust</span>
+						<!-- <span class="upgraded_hero_title_green">Security</span>&nbsp;
+						<span class="upgraded_hero_title_white">That<br>&nbsp;Institutions &<br>&nbsp;Protocols</span>&nbsp;
+						<span class="upgraded_hero_title_green">Trust</span> -->
+					</h1>
 
-							</div>
-							<div class="hero_desktop_banner">
-								<img src="images/landing_page_graphic.svg" alt="hero_img" class="img-fluid"
-									style="max-width: 90%;">
-								<div class="number_container">
-									<div class="stat_container">
-										<h1 class="font_aldrich theme_color">
-											$<span id="amountSecured" class="animate-number theme_color font_aldrich"
-												data-end="10000000000" show-plus="true">0</span>
-										</h1>
-										<p>Protected</p>
-									</div>
+					<p class="upgraded_hero_description">
+						We secure smart contracts, protocols, and enterprise applications with AI-powered audits and
+						global compliance standards.
+					</p>
 
-									<div class="stat_container">
-										<h1>
-											<span id="linesOfCode" class="animate-number theme_color font_aldrich"
-												data-end="384">0</span>
-										</h1>
-										<p>Audits Completed</p>
-									</div>
-									<div class="stat_container">
-										<h1>
-											<span id="linesOfCode" class="animate-number theme_color font_aldrich"
-												data-end="99.99">0</span>%
-										</h1>
-										<p>Uptime SLA</p>
-									</div>
-								</div>
-							</div>
-
-						</div>
+					<div class="upgraded_hero_buttons display_above_768">
+						<button class="book_security_audit_btn">Book Security Audit</button>
+						<button class="book_security_audit_btn run_free_ai_scan_btn"> <span
+								style="color: #FFFFFF; font-weight: 700; margin-right: 1px;">Run Free</span>
+							<img src="images/ai_icon_magic.svg" alt="ai_icon_magic" class="img-fluid"> <span
+								style="color: #38FF7E; font-weight: 700; margin-left: 1px;">AI
+								Scan</span></button>
 					</div>
 				</div>
 
+				<!-- Right Content: Graphic + Stats -->
+				<div class="upgraded_hero_right">
+					<!-- Graphic Placeholder -->
+					<div class="upgraded_hero_graphic_placeholder">
+						<img src="images/landing_page_graphic.svg" alt="hero_graphic" class="img-fluid">
+					</div>
+
+					<div class="upgraded_hero_buttons display_below_768">
+						<button class="book_security_audit_btn">Book Security Audit</button>
+						<button class="book_security_audit_btn run_free_ai_scan_btn"> <span
+								style="color: #FFFFFF; font-weight: 700; margin-right: 1px;">Run Free</span>
+							<img src="images/ai_icon_magic.svg" alt="ai_icon_magic" class="img-fluid"> <span
+								style="color: #38FF7E; font-weight: 700; margin-left: 1px;">AI
+								Scan</span></button>
+					</div>
+
+					<!-- Stats Section -->
+					<div class="upgraded_hero_stats">
+						<div class="upgraded_hero_stat_item">
+							<span class="upgraded_hero_stat_number" data-target="10.5" data-suffix="B+">$0</span>
+							<span class="upgraded_hero_stat_label">Protected</span>
+						</div>
+						<div class="upgraded_hero_stat_item">
+							<span class="upgraded_hero_stat_number" data-target="200" data-suffix="+">0</span>
+							<span class="upgraded_hero_stat_label">Audits Completed</span>
+						</div>
+						<div class="upgraded_hero_stat_item">
+							<span class="upgraded_hero_stat_number" data-target="99.9" data-suffix="%">0</span>
+							<span class="upgraded_hero_stat_label">Uptime SLA</span>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
 		</div>
 	</section>
 	<!-- hero section end  -->
@@ -1761,10 +1763,7 @@
 			<div class="secure_your_protocol_card">
 				<!-- Background Wave Effects -->
 				<div class="secure_your_protocol_background">
-					<div class="secure_your_protocol_wave"></div>
-					<div class="secure_your_protocol_wave"></div>
-					<div class="secure_your_protocol_wave"></div>
-					<div class="secure_your_protocol_wave"></div>
+					<img src="images/secure_your_protocol_wave.svg" class="secure_your_protocol_wave" alt="">
 				</div>
 
 				<!-- Main Content -->
@@ -1894,6 +1893,8 @@
 
 	<!-- footer section end -->
 
+
+
 	<!-- JavaScript Libraries in the correct loading order -->
 	<!-- 1. jQuery first (from CDN with local fallback) -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -1917,6 +1918,72 @@
 	<script src="js/statAnimation.js"></script>
 	<script src="js/audits.js"></script>
 	<script src="js/scrollIntraction.js"></script>
+
+	<script>
+		// Counter Animation Function
+		function animateCounter(element, target, suffix, duration = 2000) {
+			const start = 0;
+			const increment = target / (duration / 16); // 60 FPS
+			let current = start;
+
+			const timer = setInterval(() => {
+				current += increment;
+
+				if (current >= target) {
+					current = target;
+					clearInterval(timer);
+				}
+
+				// Format the number
+				let displayValue = current.toFixed(1);
+
+				// Add $ for the first stat
+				const prefix = element.parentElement.querySelector('.upgraded_hero_stat_label').textContent === 'Protected' ? '$' : '';
+
+				element.textContent = prefix + displayValue + suffix;
+			}, 16);
+		}
+
+		// Initialize counters when page loads
+		window.addEventListener('load', () => {
+			const counters = document.querySelectorAll('.upgraded_hero_stat_number');
+
+			// Delay the animation slightly for better effect
+			setTimeout(() => {
+				counters.forEach(counter => {
+					const target = parseFloat(counter.getAttribute('data-target'));
+					const suffix = counter.getAttribute('data-suffix') || '';
+					animateCounter(counter, target, suffix);
+				});
+			}, 500);
+		});
+
+		// Intersection Observer for animation on scroll (if stats are below fold)
+		const observerOptions = {
+			threshold: 0.5,
+			rootMargin: '0px'
+		};
+
+		const observer_hero = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const counters = entry.target.querySelectorAll('.upgraded_hero_stat_number');
+					counters.forEach(counter => {
+						if (counter.textContent === '0' || counter.textContent.includes('$0')) {
+							const target = parseFloat(counter.getAttribute('data-target'));
+							const suffix = counter.getAttribute('data-suffix') || '';
+							animateCounter(counter, target, suffix);
+						}
+					});
+				}
+			});
+		}, observerOptions);
+
+		const statsSection = document.querySelector('.upgraded_hero_stats');
+		if (statsSection) {
+			observer_hero.observe(statsSection);
+		}
+	</script>
 
 	<!-- Banner functionality -->
 	<script>
