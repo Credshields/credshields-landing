@@ -3720,3 +3720,604 @@
     padding: 18px 0px;
   }
 }
+
+/* About Us Title Cards Styles */
+.about_us_title_cards_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 200px;
+}
+
+.about_us_title_card {
+  position: relative;
+  width: 100%;
+  height: 175px;
+  background: linear-gradient(
+    195.08deg,
+    rgba(13, 26, 19, 1) 0%,
+    rgba(8, 17, 12, 1) 21.62%,
+    rgba(3, 11, 6, 1) 60.16%,
+    rgba(3, 11, 6, 1) 80.91%
+  );
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  padding: 32px 35px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.about_us_title_card_icon {
+  flex-shrink: 0;
+  width: 115px;
+  height: 111px;
+  background: rgba(29, 45, 36, 1);
+  border-radius: 25px;
+}
+
+.about_us_title_card_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 12px;
+}
+
+.about_us_title_card_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.about_us_title_card_description {
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(216, 254, 229, 1) 0%,
+    rgba(192, 228, 205, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  max-width: 387px;
+}
+
+/* Responsive Styles for About Us Title Cards */
+@media (max-width: 1200px) {
+  .about_us_title_card {
+    height: auto;
+    min-height: 175px;
+    padding: 28px 30px;
+  }
+
+  .about_us_title_card_icon {
+    width: 100px;
+    height: 96px;
+  }
+
+  .about_us_title_card_description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about_us_title_cards_wrapper {
+    gap: 16px;
+  }
+
+  .about_us_title_card {
+    padding: 24px 28px;
+    gap: 24px;
+  }
+
+  .about_us_title_card_icon {
+    width: 90px;
+    height: 86px;
+  }
+
+  .about_us_title_card_title {
+    font-size: 18px;
+  }
+
+  .about_us_title_card_description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_us_title_cards_wrapper {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 100px;
+  }
+
+  .about_us_title_card {
+    height: auto;
+    min-height: auto;
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .about_us_title_card_icon {
+    width: 80px;
+    height: 76px;
+    border-radius: 20px;
+  }
+
+  .about_us_title_card_content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about_us_title_card_title {
+    font-size: 18px;
+  }
+
+  .about_us_title_card_description {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_us_title_card {
+    padding: 20px 16px;
+    gap: 16px;
+    border-radius: 20px;
+  }
+
+  .about_us_title_card_icon {
+    width: 70px;
+    height: 66px;
+    border-radius: 18px;
+  }
+
+  .about_us_title_card_title {
+    font-size: 16px;
+  }
+
+  .about_us_title_card_description {
+    font-size: 13px;
+  }
+  .about_us_title_cards_wrapper{
+    margin-top: 50px;
+  }
+}
+
+/* About Us Investors Section Styles */
+.about_us_investors_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  max-width: 730px;
+  height: 105.8px;
+  margin: 60px auto 0;
+}
+
+.about_us_investors_powered_by {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 180px;
+  height: 37.5px;
+  position: relative;
+}
+
+.about_us_investors_powered_by_text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.about_us_investors_powered_by_text::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  width: 25px;
+  height: 100%;
+  background: rgba(252, 156, 38, 1);
+  z-index: -1;
+}
+
+.about_us_investors_separator {
+  width: 1px;
+  height: 105.8px;
+  background: linear-gradient(
+    180deg,
+    rgba(51, 51, 52, 1) 0%,
+    rgba(151, 151, 154, 1) 100%
+  );
+  margin: 0 30px;
+  flex-shrink: 0;
+}
+
+.about_us_investors_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about_us_investors_logo_img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about_us_investors_logo:first-of-type .about_us_investors_logo_img {
+  max-width: 187.2px;
+  max-height: 50.7px;
+}
+
+.about_us_investors_logo:last-of-type .about_us_investors_logo_img {
+  max-width: 167.7px;
+  max-height: 67.2px;
+}
+
+/* Responsive Styles for Investors Section */
+@media (max-width: 1024px) {
+  .about_us_investors_wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+    height: auto;
+    min-height: 105.8px;
+  }
+
+  .about_us_investors_powered_by {
+    width: 160px;
+  }
+
+  .about_us_investors_separator {
+    margin: 0 20px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_us_investors_wrapper {
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .about_us_investors_powered_by {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .about_us_investors_separator {
+    display: none;
+  }
+
+  .about_us_investors_logo {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .about_us_investors_logo:first-of-type .about_us_investors_logo_img {
+    max-width: 150px;
+    max-height: 40px;
+  }
+
+  .about_us_investors_logo:last-of-type .about_us_investors_logo_img {
+    max-width: 130px;
+    max-height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_us_investors_wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .about_us_investors_powered_by {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .about_us_investors_logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about_us_investors_logo:first-of-type .about_us_investors_logo_img {
+    max-width: 140px;
+  }
+
+  .about_us_investors_logo:last-of-type .about_us_investors_logo_img {
+    max-width: 120px;
+  }
+}
+
+/* About Us Achievements Section Styles */
+.about_us_achivements_container_section {
+  padding: 80px 100px;
+  width: 100%;
+}
+
+.about_us_achivements_container {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+.about_us_achivements_header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.about_us_achivements_title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.about_us_achivements_subtitle {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about_us_achivements_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+}
+
+.about_us_achivements_card {
+  position: relative;
+  width: 100%;
+  height: 244px;
+  background: linear-gradient(
+    195.08deg,
+    rgba(13, 26, 19, 1) 0%,
+    rgba(8, 17, 12, 1) 21.62%,
+    rgba(3, 11, 6, 1) 60.16%,
+    rgba(3, 11, 6, 1) 80.91%
+  );
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  padding: 33px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.about_us_achivements_card_header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.about_us_achivements_card_icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(49, 71, 58, 1);
+  border-radius: 15px;
+}
+
+.about_us_achivements_card_title_wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about_us_achivements_card_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.about_us_achivements_card_subtitle {
+  font-size: 14px;
+  line-height: 1.43;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+}
+
+.about_us_achivements_card_description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 64px;
+}
+
+.about_us_achivements_card_button {
+  width: 315px;
+  height: 48px;
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 400;
+  background: transparent;
+  background-image: linear-gradient(
+    180deg,
+    rgba(216, 254, 229, 1) 0%,
+    rgba(192, 228, 205, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.28);
+  z-index: 1;
+}
+
+.about_us_achivements_card_button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    rgba(19, 33, 25, 1) 0%,
+    rgba(9, 18, 13, 1) 100%
+  );
+  z-index: -1;
+  box-shadow: 
+    inset 0px 1px 0px rgba(33, 58, 44, 1),
+    0px 0px 0px 1px rgba(16, 33, 24, 1);
+}
+
+.about_us_achivements_card_button:hover {
+  transform: translateY(-1px);
+}
+
+.about_us_achivements_card_button:hover::before {
+  box-shadow: 
+    inset 0px 1px 0px rgba(33, 58, 44, 1),
+    0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles for Achievements Section */
+@media (max-width: 1200px) {
+  .about_us_achivements_container_section {
+    padding: 60px 60px;
+  }
+
+  .about_us_achivements_cards {
+    gap: 24px;
+  }
+
+  .about_us_achivements_card {
+    height: auto;
+    min-height: 244px;
+    padding: 28px;
+  }
+
+  .about_us_achivements_card_button {
+    width: 100%;
+    max-width: 315px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about_us_achivements_container_section {
+    padding: 60px 40px;
+  }
+
+  .about_us_achivements_cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about_us_achivements_card {
+    height: auto;
+    min-height: 244px;
+  }
+
+  .about_us_achivements_title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_us_achivements_container_section {
+    padding: 40px 20px;
+  }
+
+  .about_us_achivements_header {
+    margin-bottom: 40px;
+  }
+
+  .about_us_achivements_title {
+    font-size: 28px;
+  }
+
+  .about_us_achivements_subtitle {
+    font-size: 14px;
+  }
+
+  .about_us_achivements_cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about_us_achivements_card {
+    height: auto;
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .about_us_achivements_card_description {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .about_us_achivements_card_button {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_us_achivements_container_section {
+    padding: 30px 16px;
+  }
+
+  .about_us_achivements_title {
+    font-size: 24px;
+  }
+
+  .about_us_achivements_subtitle {
+    font-size: 13px;
+  }
+
+  .about_us_achivements_card {
+    padding: 20px;
+  }
+
+  .about_us_achivements_card_title {
+    font-size: 18px;
+  }
+
+  .about_us_achivements_card_description,
+  .about_us_achivements_card_subtitle {
+    font-size: 13px;
+  }
+
+  .about_us_achivements_card_button {
+    height: 44px;
+    font-size: 14px;
+  }
+}
