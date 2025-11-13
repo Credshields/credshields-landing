@@ -247,7 +247,7 @@ function fillAuditRow(audit, container) {
             <p>Gas</p>
             <div class="gas-count">
               <div></div>
-              <p>${audit.gas || "N/A"}</p>
+              <p>${audit.gas}</p>
             </div>
           </div>
         </div>
