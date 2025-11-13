@@ -465,6 +465,10 @@
   transform: translateY(-2px);
 }
 
+.section_padding_define{
+  padding: 60px 100px;
+}
+
 .battle_tested_container {
   margin: 0 auto;
   background: linear-gradient(180deg, #0d1c13 0%, #0a160f 100%);
@@ -3241,6 +3245,10 @@
     font-size: 22px;
   }
 
+  .section_padding_define{
+    padding: 40px 24px;
+  }
+
   .battle_tested_container {
     padding: 40px 24px;
   }
@@ -3519,6 +3527,10 @@
     margin-top: 100px;
   }
 
+  .section_padding_define{
+    padding: 30px 15px;
+  }
+
   .battle_tested_container {
     padding: 30px 15px;
     width: 95%;
@@ -3758,6 +3770,12 @@
   border-radius: 25px;
 }
 
+.fintech_risk_title_card_icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+}
+
 .about_us_title_card_content {
   flex: 1;
   display: flex;
@@ -3804,6 +3822,11 @@
     height: 96px;
   }
 
+  .fintech_risk_title_card_icon{
+    width: 48px;
+    height: 48px;
+  }
+
   .about_us_title_card_description {
     max-width: 100%;
   }
@@ -3822,6 +3845,10 @@
   .about_us_title_card_icon {
     width: 90px;
     height: 86px;
+  }
+  .fintech_risk_title_card_icon{
+    width: 48px;
+    height: 48px;
   }
 
   .about_us_title_card_title {
@@ -3853,6 +3880,11 @@
     border-radius: 20px;
   }
 
+  .fintech_risk_title_card_icon{
+    width: 48px;
+    height: 48px;
+  }
+
   .about_us_title_card_content {
     align-items: flex-start;
     text-align: left;
@@ -3880,6 +3912,11 @@
     width: 70px;
     height: 66px;
     border-radius: 18px;
+  }
+
+  .fintech_risk_title_card_icon{
+    width: 48px;
+    height: 48px;
   }
 
   .about_us_title_card_title {
@@ -4319,5 +4356,472 @@
   .about_us_achivements_card_button {
     height: 44px;
     font-size: 14px;
+  }
+}
+
+/* Fintech Case Study Bullets Styles */
+.fintech_case_study_bullets_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  max-width: 646px;
+}
+
+.fintech_case_study_bullet_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.fintech_case_study_bullet_indicator {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  background: rgba(116, 247, 5, 1);
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.fintech_case_study_bullet_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  flex: 1;
+}
+
+/* Responsive Styles for Fintech Case Study Bullets */
+@media (max-width: 1024px) {
+  .fintech_case_study_bullets_wrapper {
+    max-width: 100%;
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .fintech_case_study_bullet_text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fintech_case_study_bullets_wrapper {
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .fintech_case_study_bullet_item {
+    gap: 14px;
+  }
+
+  .fintech_case_study_bullet_indicator {
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+  }
+
+  .fintech_case_study_bullet_text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fintech_case_study_bullets_wrapper {
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .fintech_case_study_bullet_item {
+    gap: 12px;
+  }
+
+  .fintech_case_study_bullet_indicator {
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+  }
+
+  .fintech_case_study_bullet_text {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
+/* Fintech Risk Section Styles */
+.fintech_risk_container {
+  width: 100%;
+}
+
+.fintech_risk_wrapper {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+.fintech_risk_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.fintech_risk_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.fintech_risk_subtitle {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+  max-width: 762px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fintech_risk_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+  align-items: stretch;
+}
+
+.fintech_risk_card {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(
+    195.08deg,
+    rgba(13, 26, 19, 1) 0%,
+    rgba(8, 17, 12, 1) 21.62%,
+    rgba(3, 11, 6, 1) 60.16%,
+    rgba(3, 11, 6, 1) 80.91%
+  );
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  padding: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  min-height: 244px;
+}
+
+.fintech_risk_card:nth-child(4) {
+  grid-column: 1;
+}
+
+.fintech_risk_card:nth-child(5) {
+  grid-column: 2;
+}
+
+.fintech_risk_card_icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(49, 71, 58, 1);
+  border-radius: 15px;
+}
+
+.fintech_risk_card_content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fintech_risk_card_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.fintech_risk_card_description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+  flex: 1;
+}
+
+/* Responsive Styles for Fintech Risk Section */
+@media (max-width: 1200px) {
+  .fintech_risk_cards {
+    gap: 24px;
+  }
+
+  .fintech_risk_card {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fintech_risk_wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .fintech_risk_title {
+    font-size: 32px;
+  }
+
+  .fintech_risk_cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .fintech_risk_card {
+    min-height: auto;
+  }
+
+  .fintech_risk_card:nth-child(4),
+  .fintech_risk_card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .fintech_risk_header {
+    margin-bottom: 30px;
+  }
+
+  .fintech_risk_title {
+    font-size: 28px;
+  }
+
+  .fintech_risk_subtitle {
+    font-size: 14px;
+  }
+
+  .fintech_risk_cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .fintech_risk_card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .fintech_risk_card_title {
+    font-size: 18px;
+  }
+
+  .fintech_risk_card_description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fintech_risk_title {
+    font-size: 24px;
+  }
+
+  .fintech_risk_subtitle {
+    font-size: 13px;
+  }
+
+  .fintech_risk_card {
+    padding: 20px;
+  }
+
+  .fintech_risk_card_title {
+    font-size: 16px;
+  }
+
+  .fintech_risk_card_description {
+    font-size: 12px;
+  }
+}
+
+/* Fintech Security Process Section Styles */
+.fintech_security_process_container {
+  width: 100%;
+}
+
+.fintech_security_process_wrapper {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+.fintech_security_process_header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.fintech_security_process_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.fintech_security_process_subtitle {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+  max-width: 762px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fintech_security_process_steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+.fintech_security_process_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.fintech_security_process_step_number {
+  width: 64px;
+  height: 64px;
+  background: rgba(29, 45, 36, 1);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.fintech_security_process_step_number_text {
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(117, 249, 4, 1);
+  line-height: 1;
+}
+
+.fintech_security_process_step_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.fintech_security_process_step_description {
+  font-size: 14px;
+  line-height: 1.43;
+  color: rgba(163, 163, 163, 1);
+  margin: 0;
+  flex: 1;
+}
+
+/* Responsive Styles for Security Process Section */
+@media (max-width: 1200px) {
+  .fintech_security_process_steps {
+    gap: 16px;
+  }
+
+  .fintech_security_process_step {
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .fintech_security_process_wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .fintech_security_process_title {
+    font-size: 32px;
+  }
+
+  .fintech_security_process_steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .fintech_security_process_header {
+    margin-bottom: 30px;
+  }
+
+  .fintech_security_process_title {
+    font-size: 28px;
+  }
+
+  .fintech_security_process_subtitle {
+    font-size: 14px;
+  }
+
+  .fintech_security_process_steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .fintech_security_process_step_number {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 14px;
+  }
+
+  .fintech_security_process_step_number_text {
+    font-size: 24px;
+  }
+
+  .fintech_security_process_step_title {
+    font-size: 18px;
+  }
+
+  .fintech_security_process_step_description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fintech_security_process_title {
+    font-size: 24px;
+  }
+
+  .fintech_security_process_subtitle {
+    font-size: 13px;
+  }
+
+  .fintech_security_process_steps {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .fintech_security_process_step {
+    padding: 0;
+  }
+
+  .fintech_security_process_step_number {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 12px;
+  }
+
+  .fintech_security_process_step_number_text {
+    font-size: 22px;
+  }
+
+  .fintech_security_process_step_title {
+    font-size: 16px;
+  }
+
+  .fintech_security_process_step_description {
+    font-size: 12px;
   }
 }
