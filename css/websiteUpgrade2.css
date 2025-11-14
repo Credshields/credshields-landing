@@ -4275,7 +4275,7 @@ section {
 .about_us_achivements_subtitle {
   font-size: 16px;
   line-height: 1.75;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
   max-width: 680px;
   margin-left: auto;
@@ -4341,14 +4341,14 @@ section {
 .about_us_achivements_card_subtitle {
   font-size: 14px;
   line-height: 1.43;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
 }
 
 .about_us_achivements_card_description {
   font-size: 14px;
   line-height: 1.71;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
   margin-top: 8px;
   margin-left: 64px;
@@ -4633,7 +4633,7 @@ section {
 .fintech_risk_subtitle {
   font-size: 16px;
   line-height: 1.75;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
   max-width: 762px;
   margin-left: auto;
@@ -4702,7 +4702,7 @@ section {
 .fintech_risk_card_description {
   font-size: 14px;
   line-height: 1.71;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
   flex: 1;
 }
@@ -4825,7 +4825,7 @@ section {
 .fintech_security_process_subtitle {
   font-size: 16px;
   line-height: 1.75;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
   max-width: 762px;
   margin-left: auto;
@@ -4877,7 +4877,7 @@ section {
 .fintech_security_process_step_description {
   font-size: 14px;
   line-height: 1.43;
-  color: rgba(163, 163, 163, 1);
+  color: #737373;
   margin: 0;
   flex: 1;
 }
@@ -5321,6 +5321,16 @@ section {
 
 .explore_related_solution_footer_button:hover .explore_related_solution_footer_arrow {
   transform: translateX(4px);
+}
+
+.web_app_testing_bullet_list{
+  list-style: disc;
+}
+
+.web_app_testing_bullet_list li{
+  font-size: 14px;
+  margin-left: 20px;
+  color: #737373;
 }
 
 @media (max-width: 768px) {
