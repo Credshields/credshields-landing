@@ -1268,7 +1268,7 @@
 }
 
 .secure_your_protocol_title {
-  font-size: 3.25rem;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 24px;
   letter-spacing: -1px;
@@ -1276,7 +1276,7 @@
 }
 
 .secure_your_protocol_description {
-  font-size: 1.25rem;
+  font-size: 20px;
   color: #d1d5db;
   line-height: 1.7;
   max-width: 900px;
@@ -3294,7 +3294,7 @@
   }
 
   .secure_your_protocol_title {
-    font-size: 2.5rem;
+    font-size: 36px;
   }
 
   .secure_your_protocol_features {
@@ -3533,11 +3533,11 @@
   }
 
   .secure_your_protocol_title {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
   .secure_your_protocol_description {
-    font-size: 1.1rem;
+    font-size: 18px;
     margin-bottom: 40px;
   }
 
@@ -3747,11 +3747,11 @@
   }
 
   .secure_your_protocol_title {
-    font-size: 1.75rem;
+    font-size: 18px;
   }
 
   .secure_your_protocol_description {
-    font-size: 1rem;
+    font-size: 14px;
   }
 
   .security_team_container {
