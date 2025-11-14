@@ -2,6 +2,10 @@
   opacity: 0;
 }
 
+section {
+  margin-top: 100px;
+}
+
 .upgraded_hero_section {
   padding: 80px 100px 60px;
   position: relative;
@@ -465,7 +469,7 @@
   transform: translateY(-2px);
 }
 
-.section_padding_define{
+.section_padding_define {
   padding: 60px 100px;
 }
 
@@ -1820,6 +1824,159 @@
   background: linear-gradient(180deg, #0d1c13 0%, #0a160f 100%);
 }
 
+.smart_contracts_audit_why_it_matter_section {
+  margin-top: 200px;
+}
+
+/* Success Story Section */
+.smart_contracts_audit_success_story_content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 590px;
+}
+
+.success_story_header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.success_story_icon {
+  width: 48px;
+  height: 48px;
+  background-color: #30473a;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.success_story_header_text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.success_story_header_title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.success_story_header_subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a2a2a2;
+  line-height: 1.4;
+}
+
+.success_story_title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+  background: linear-gradient(180deg, #d8fde5 0%, #c0e5cd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.success_story_description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7ea18a;
+  margin: 0;
+  max-width: 590px;
+}
+
+.success_story_stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.success_story_stat_card {
+  flex: 1;
+  padding: 17px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid;
+}
+
+.success_story_stat_card_red {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.1) 0%,
+    rgba(220, 38, 38, 0.1) 100%
+  );
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.success_story_stat_card_green {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.1) 0%,
+    rgba(22, 163, 74, 0.1) 100%
+  );
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.success_story_stat_value {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.success_story_stat_card_red .success_story_stat_value {
+  color: #f87171;
+}
+
+.success_story_stat_card_green .success_story_stat_value {
+  color: #4ade80;
+}
+
+.success_story_stat_label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a2a2a2;
+  line-height: 1.43;
+  text-align: center;
+}
+
+/* Responsive Styles for Success Story */
+@media (max-width: 768px) {
+  .smart_contracts_audit_success_story_content {
+    max-width: 100%;
+  }
+
+  .success_story_title {
+    font-size: 18px;
+  }
+
+  .success_story_description {
+    font-size: 14px;
+  }
+
+  .success_story_stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .success_story_stat_card {
+    width: 100%;
+  }
+
+  section {
+    margin-top: 60px;
+  }
+}
+
 .owasp_about_the_initiative_container {
   max-width: 1400px;
   margin: 0 auto;
@@ -2210,8 +2367,8 @@
   );
 }
 
-.owasp_why_risks_matters_source_separator{
-  background-color: #1C3125;
+.owasp_why_risks_matters_source_separator {
+  background-color: #1c3125;
 }
 
 /* Responsive Styles for OWASP Top 10 Risks */
@@ -2280,6 +2437,10 @@
 
   .owasp_top_10_risks_card_criticality_text {
     font-size: 14px;
+  }
+
+  .smart_contracts_audit_why_it_matter_section {
+    margin-top: 100px;
   }
 }
 
@@ -3245,7 +3406,7 @@
     font-size: 22px;
   }
 
-  .section_padding_define{
+  .section_padding_define {
     padding: 40px 24px;
   }
 
@@ -3527,7 +3688,7 @@
     margin-top: 100px;
   }
 
-  .section_padding_define{
+  .section_padding_define {
     padding: 30px 15px;
   }
 
@@ -3770,7 +3931,7 @@
   border-radius: 25px;
 }
 
-.fintech_risk_title_card_icon{
+.fintech_risk_title_card_icon {
   width: 48px;
   height: 48px;
   border-radius: 15px;
@@ -3822,7 +3983,7 @@
     height: 96px;
   }
 
-  .fintech_risk_title_card_icon{
+  .fintech_risk_title_card_icon {
     width: 48px;
     height: 48px;
   }
@@ -3846,7 +4007,7 @@
     width: 90px;
     height: 86px;
   }
-  .fintech_risk_title_card_icon{
+  .fintech_risk_title_card_icon {
     width: 48px;
     height: 48px;
   }
@@ -3880,7 +4041,7 @@
     border-radius: 20px;
   }
 
-  .fintech_risk_title_card_icon{
+  .fintech_risk_title_card_icon {
     width: 48px;
     height: 48px;
   }
@@ -3914,7 +4075,7 @@
     border-radius: 18px;
   }
 
-  .fintech_risk_title_card_icon{
+  .fintech_risk_title_card_icon {
     width: 48px;
     height: 48px;
   }
@@ -3926,7 +4087,7 @@
   .about_us_title_card_description {
     font-size: 13px;
   }
-  .about_us_title_cards_wrapper{
+  .about_us_title_cards_wrapper {
     margin-top: 50px;
   }
 }
@@ -4231,8 +4392,7 @@
     rgba(9, 18, 13, 1) 100%
   );
   z-index: -1;
-  box-shadow: 
-    inset 0px 1px 0px rgba(33, 58, 44, 1),
+  box-shadow: inset 0px 1px 0px rgba(33, 58, 44, 1),
     0px 0px 0px 1px rgba(16, 33, 24, 1);
 }
 
@@ -4241,8 +4401,7 @@
 }
 
 .about_us_achivements_card_button:hover::before {
-  box-shadow: 
-    inset 0px 1px 0px rgba(33, 58, 44, 1),
+  box-shadow: inset 0px 1px 0px rgba(33, 58, 44, 1),
     0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -4723,6 +4882,453 @@
   flex: 1;
 }
 
+.solution_badge_container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 20px;
+  background: #ffffff0f;
+  border-radius: 60px;
+  position: relative;
+}
+
+.solution_badge_icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.solution_badge_icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.solution_badge_text {
+  color: rgb(56, 255, 126);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.dapp_case_study_pointers_container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 413px;
+}
+
+.dapp_case_study_pointers_alert {
+  border-radius: 8px;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dapp_case_study_pointers_alert:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dapp_case_study_pointers_alert_error {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.dapp_case_study_pointers_alert_success {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.2);
+}
+
+.dapp_case_study_pointers_alert_info {
+  background: rgba(64, 224, 208, 0.1);
+  border-color: rgba(64, 224, 208, 0.2);
+}
+
+.dapp_case_study_pointers_icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dapp_case_study_pointers_text {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* Error Icon - Alert Circle */
+.dapp_case_study_pointers_icon_error {
+  color: #f87171;
+}
+
+/* Success Icon - Checkmark */
+.dapp_case_study_pointers_icon_success {
+  color: #4ade80;
+}
+
+/* Info Icon - Info Circle with Gradient */
+.dapp_case_study_pointers_icon_info {
+  position: relative;
+}
+
+.dapp_case_study_pointers_gradient_icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* SVG Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.dapp_case_study_pointers_alert:hover .dapp_case_study_pointers_icon svg {
+  animation: pulse 2s infinite;
+}
+
+.explore_related_solution_container {
+  width: 100%;
+}
+
+.explore_related_solution_header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.explore_related_solution_title {
+  font-size: 44px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.explore_related_solution_subtitle {
+  font-size: 18px;
+  color: #a3a3a3;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.explore_related_solution_card {
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    #021b0e 14.21%,
+    #02210f 41.02%,
+    #021e0d 59.76%,
+    #021e0d 100%
+  );
+  border-radius: 12px;
+  padding: 45px 55px;
+  position: relative;
+  overflow: hidden;
+  background-clip: padding-box;
+  border: 0.21px solid #38ff7e8c
+}
+
+.explore_related_solution_card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(36, 74, 50, 1) 0%,
+    rgba(23, 47, 33, 1) 3.19%,
+    rgba(23, 47, 33, 1) 97.43%,
+    rgba(36, 74, 49, 1) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.explore_related_solution_content {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.explore_related_solution_left {
+  flex: 1;
+  max-width: 500px;
+}
+
+.explore_related_solution_card_title {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(
+    180deg,
+    rgba(216, 254, 229, 1) 0%,
+    rgba(192, 228, 205, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 24px;
+}
+
+.explore_related_solution_description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7ea18a;
+  margin-bottom: 40px;
+}
+
+.explore_related_solution_features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.explore_related_solution_feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.explore_related_solution_check {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.explore_related_solution_check svg {
+  width: 100%;
+  height: 100%;
+}
+
+.explore_related_solution_feature_text {
+  font-size: 14px;
+  background: linear-gradient(
+    180deg,
+    rgba(216, 254, 229, 1) 0%,
+    rgba(192, 228, 205, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.explore_related_solution_button {
+  display: inline-block;
+  padding: 17.5px 22px;
+  background: #78ff04;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 15px;
+  text-decoration: none;
+  border: 1px solid #65db00;
+  box-shadow: 0 0 25px rgba(101, 219, 0, 0.12),
+    inset 0 0 1px rgba(101, 219, 0, 1), inset 0 4px 12px rgba(101, 219, 0, 0.3),
+    inset 0 0 25px rgba(101, 219, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.explore_related_solution_button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(101, 219, 0, 0.25),
+    inset 0 0 1px rgba(101, 219, 0, 1), inset 0 4px 12px rgba(101, 219, 0, 0.4),
+    inset 0 0 25px rgba(101, 219, 0, 0.4);
+}
+
+.explore_related_solution_button:active {
+  transform: translateY(0);
+}
+
+.explore_related_solution_right {
+  flex: 1;
+  background: #1c2d22;
+  border-radius: 15px;
+  min-height: 359px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore_related_solution_placeholder {
+  color: #4a6d53;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@media (max-width: 968px) {
+  .explore_related_solution_content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .explore_related_solution_left {
+    max-width: 100%;
+  }
+
+  .explore_related_solution_right {
+    width: 100%;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .explore_related_solution_title {
+    font-size: 32px;
+  }
+
+  .explore_related_solution_subtitle {
+    font-size: 16px;
+  }
+
+  .explore_related_solution_card_title {
+    font-size: 24px;
+  }
+
+  .explore_related_solution_card {
+    padding: 20px;
+  }
+}
+
+.explore_related_solution_footer_container {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.explore_related_solution_footer_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 38px;
+}
+
+.explore_related_solution_footer_card {
+  background: linear-gradient(180deg, 
+      rgb(13, 26, 19) 0%, 
+      rgb(8, 17, 12) 21.6%, 
+      rgb(3, 11, 7) 60.2%, 
+      rgb(3, 11, 7) 80.9%);
+  border: 1px solid rgb(28, 48, 35);
+  border-radius: 24px;
+  padding: 33px 37px 39px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore_related_solution_footer_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.explore_related_solution_footer_icon_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 35px;
+}
+
+.explore_related_solution_footer_icon {
+  width: 48px;
+  height: 48px;
+  background: rgb(49, 72, 58);
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.explore_related_solution_footer_title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.explore_related_solution_footer_button {
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(135deg, 
+      rgb(19, 33, 25) 0%, 
+      rgb(9, 18, 13) 100%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 
+      inset 0 1px 0 rgb(33, 58, 44),
+      0 0 0 1px rgb(16, 33, 24);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.explore_related_solution_footer_button:hover {
+  background: linear-gradient(135deg, 
+      rgb(24, 40, 30) 0%, 
+      rgb(12, 22, 16) 100%);
+  transform: translateY(-1px);
+  box-shadow: 
+      inset 0 1px 0 rgb(33, 58, 44),
+      0 0 0 1px rgb(16, 33, 24),
+      0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.explore_related_solution_footer_button:active {
+  transform: translateY(0);
+}
+
+.explore_related_solution_footer_button_text {
+  background: linear-gradient(180deg, 
+      rgb(216, 254, 229) 0%, 
+      rgb(192, 228, 205) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 6px;
+}
+
+.explore_related_solution_footer_arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.explore_related_solution_footer_button:hover .explore_related_solution_footer_arrow {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .explore_related_solution_footer_grid {
+      grid-template-columns: 1fr;
+  }
+}
+
 /* Responsive Styles for Security Process Section */
 @media (max-width: 1200px) {
   .fintech_security_process_steps {
@@ -4823,5 +5429,118 @@
 
   .fintech_security_process_step_description {
     font-size: 12px;
+  }
+
+  .smart_contracts_audit_why_it_matter_section {
+    margin-top: 60px;
+  }
+
+  section {
+    margin-top: 40px;
+  }
+}
+
+/* Audit Checklist Table Styles */
+.audit_checklist_container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 33px;
+  background: linear-gradient(
+    165deg,
+    rgba(13, 26, 19, 1) 0%,
+    rgba(8, 17, 12, 1) 21.62%,
+    rgba(10, 24, 16, 1) 60.16%,
+    rgba(18, 27, 22, 1) 80.91%
+  );
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: scroll;
+}
+
+.audit_checklist_table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.audit_checklist_table thead {
+  border-bottom: 1px solid rgba(229, 231, 235, 1);
+}
+
+.audit_checklist_table thead tr {
+  border-bottom: 1px solid #0b8b2f;
+}
+
+.audit_checklist_table thead th {
+  padding: 16px;
+  text-align: left;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(119, 255, 5, 1);
+  background: transparent;
+}
+
+.audit_checklist_table thead th:first-child {
+  width: 90px;
+}
+
+.audit_checklist_table thead th:nth-child(2) {
+  width: 289px;
+}
+
+.audit_checklist_table thead th:last-child {
+  width: auto;
+  border-right: none;
+}
+
+.audit_checklist_table tbody tr {
+  border-bottom: 1px solid rgba(21, 44, 29, 1);
+}
+
+.audit_checklist_table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.audit_checklist_table tbody td {
+  padding: 16px;
+  text-align: left;
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(212, 212, 212, 1);
+  background: transparent;
+  vertical-align: top;
+}
+
+.audit_checklist_table tbody td:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .audit_checklist_container {
+    padding: 20px;
+    margin: 0 20px;
+  }
+
+  .audit_checklist_table {
+    font-size: 14px;
+  }
+
+  .audit_checklist_table thead th,
+  .audit_checklist_table tbody td {
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+
+  .audit_checklist_table thead th:first-child {
+    width: 60px;
+  }
+
+  .audit_checklist_table thead th:nth-child(2) {
+    width: 150px;
   }
 }
