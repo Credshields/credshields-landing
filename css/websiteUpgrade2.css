@@ -877,7 +877,7 @@ section {
 
 .security_team_container {
   margin: auto;
-  padding: 100px;
+  padding: 50px 100px;
   background: linear-gradient(180deg, #0d1c13 0%, #0a160f 100%);
   max-width: 1400px;
 }
@@ -919,6 +919,14 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 5px;
+}
+
+.about_us_founder_description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a3a3a3;
+  min-height: 150px
 }
 
 .security_team_member:hover {
