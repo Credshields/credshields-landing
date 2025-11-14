@@ -6,6 +6,10 @@ section {
   margin-top: 100px;
 }
 
+.section_content_wrapper {
+  max-width: 1400px;
+}
+
 .upgraded_hero_section {
   padding: 80px 100px 60px;
   position: relative;
@@ -482,6 +486,7 @@ section {
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  max-width: 1400px;
 }
 
 .battle_tested_container::before {
@@ -574,6 +579,8 @@ section {
 }
 
 .success_story_section {
+  max-width: 1400px;
+  margin: auto;
   padding: 100px;
 }
 
@@ -722,7 +729,8 @@ section {
 }
 
 .advance_security_container {
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: auto;
   padding: 100px;
 }
 
@@ -868,9 +876,10 @@ section {
 }
 
 .security_team_container {
-  margin: 0 auto;
+  margin: auto;
   padding: 100px;
   background: linear-gradient(180deg, #0d1c13 0%, #0a160f 100%);
+  max-width: 1400px;
 }
 
 .security_team_header {
@@ -1035,8 +1044,9 @@ section {
 }
 
 .enterprise_grade_container {
-  margin: 0 auto;
   padding: 100px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .enterprise_grade_header {
@@ -1186,6 +1196,7 @@ section {
 }
 
 .secure_your_protocol_container {
+  max-width: 1400px;
   margin: 0 auto;
   padding: 100px;
 }
@@ -1537,7 +1548,6 @@ section {
   top: 3%;
   right: 5%;
 }
-
 
 .eco_system_new_container {
   max-width: 1400px;
@@ -4976,6 +4986,8 @@ section {
 }
 
 .explore_related_solution_container {
+  max-width: 1400px;
+  margin: auto;
   width: 100%;
 }
 
@@ -5014,7 +5026,7 @@ section {
   position: relative;
   overflow: hidden;
   background-clip: padding-box;
-  border: 0.21px solid #38ff7e8c
+  border: 0.21px solid #38ff7e8c;
 }
 
 .explore_related_solution_card::before {
@@ -5196,11 +5208,13 @@ section {
 }
 
 .explore_related_solution_footer_card {
-  background: linear-gradient(180deg, 
-      rgb(13, 26, 19) 0%, 
-      rgb(8, 17, 12) 21.6%, 
-      rgb(3, 11, 7) 60.2%, 
-      rgb(3, 11, 7) 80.9%);
+  background: linear-gradient(
+    180deg,
+    rgb(13, 26, 19) 0%,
+    rgb(8, 17, 12) 21.6%,
+    rgb(3, 11, 7) 60.2%,
+    rgb(3, 11, 7) 80.9%
+  );
   border: 1px solid rgb(28, 48, 35);
   border-radius: 24px;
   padding: 33px 37px 39px;
@@ -5239,14 +5253,10 @@ section {
 .explore_related_solution_footer_button {
   width: 100%;
   height: 48px;
-  background: linear-gradient(135deg, 
-      rgb(19, 33, 25) 0%, 
-      rgb(9, 18, 13) 100%);
+  background: linear-gradient(135deg, rgb(19, 33, 25) 0%, rgb(9, 18, 13) 100%);
   border: none;
   border-radius: 15px;
-  box-shadow: 
-      inset 0 1px 0 rgb(33, 58, 44),
-      0 0 0 1px rgb(16, 33, 24);
+  box-shadow: inset 0 1px 0 rgb(33, 58, 44), 0 0 0 1px rgb(16, 33, 24);
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
@@ -5254,14 +5264,10 @@ section {
 }
 
 .explore_related_solution_footer_button:hover {
-  background: linear-gradient(135deg, 
-      rgb(24, 40, 30) 0%, 
-      rgb(12, 22, 16) 100%);
+  background: linear-gradient(135deg, rgb(24, 40, 30) 0%, rgb(12, 22, 16) 100%);
   transform: translateY(-1px);
-  box-shadow: 
-      inset 0 1px 0 rgb(33, 58, 44),
-      0 0 0 1px rgb(16, 33, 24),
-      0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgb(33, 58, 44), 0 0 0 1px rgb(16, 33, 24),
+    0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .explore_related_solution_footer_button:active {
@@ -5269,9 +5275,11 @@ section {
 }
 
 .explore_related_solution_footer_button_text {
-  background: linear-gradient(180deg, 
-      rgb(216, 254, 229) 0%, 
-      rgb(192, 228, 205) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(216, 254, 229) 0%,
+    rgb(192, 228, 205) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -5290,15 +5298,16 @@ section {
   transition: transform 0.3s ease;
 }
 
-.explore_related_solution_footer_button:hover .explore_related_solution_footer_arrow {
+.explore_related_solution_footer_button:hover
+  .explore_related_solution_footer_arrow {
   transform: translateX(4px);
 }
 
-.web_app_testing_bullet_list{
+.web_app_testing_bullet_list {
   list-style: disc;
 }
 
-.web_app_testing_bullet_list li{
+.web_app_testing_bullet_list li {
   font-size: 14px;
   margin-left: 20px;
   color: #737373;
@@ -5306,7 +5315,7 @@ section {
 
 @media (max-width: 768px) {
   .explore_related_solution_footer_grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
