@@ -1299,7 +1299,7 @@ section {
 }
 
 .secure_your_protocol_btn_primary {
-  background: #84cc16;
+  background: #78ff04;
   color: #0a0f0d;
   box-shadow: 0 4px 20px rgba(132, 204, 22, 0.3);
 }
@@ -1743,7 +1743,6 @@ section {
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .eco_system_new_card_badge {
@@ -4103,7 +4102,7 @@ section {
   width: 100%;
   max-width: 730px;
   height: 105.8px;
-  margin: 60px auto 0;
+  margin: 30px auto 0;
 }
 
 .about_us_investors_powered_by {
