@@ -4687,6 +4687,9 @@
   height: 48px;
   background: rgba(49, 71, 58, 1);
   border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .fintech_risk_card_content {
