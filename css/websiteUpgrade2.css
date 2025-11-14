@@ -2077,8 +2077,12 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.solution_success_story_right{
+  padding: 0px;
+}
+
 .owasp_about_the_initiative_sources_title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
@@ -2171,6 +2175,10 @@
   .owasp_about_the_initiative_sources_box {
     padding: 35px;
   }
+
+  .solution_success_story_right{
+    padding: 0px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2190,6 +2198,10 @@
   .owasp_about_the_initiative_sources_box {
     padding: 30px 20px;
     gap: 25px;
+  }
+
+  .solution_success_story_right{
+    padding: 0px;
   }
 
   .owasp_about_the_initiative_source_item {
