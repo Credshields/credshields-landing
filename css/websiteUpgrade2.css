@@ -1101,6 +1101,10 @@
   margin-bottom: 50px;
 }
 
+.enterprise_grade_certifications_grid_3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .enterprise_grade_cert_card {
   background: linear-gradient(135deg, #0f1713 0%, #0a0f0d 100%);
   border: 1px solid #1a2c23;
@@ -1501,6 +1505,7 @@
 .owasp_about_the_initiative_source_icon_placeholder {
   width: 103px !important;
   height: 103px !important;
+  display: flex;
 }
 
 @media (max-width: 1200px) {
