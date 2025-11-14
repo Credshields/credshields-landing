@@ -1020,14 +1020,20 @@
       </div>
 
       <div class="eco_system_new_controls">
-        <select class="eco_system_new_dropdown">
-          <option>All Partnerships</option>
-          <option>Partners</option>
-          <option>Audited</option>
+        <select class="eco_system_new_dropdown" id="categoryFilter">
+          <option value="all">All Partnerships</option>
+          <option value="Infrastructure">Infrastructure</option>
+          <option value="RWA">RWA</option>
+          <option value="Security">Security</option>
+          <option value="Analytics">Analytics</option>
+          <option value="Interoperability">Interoperability</option>
+          <option value="Research">Research</option>
+          <option value="Developer Tools">Developer Tools</option>
         </select>
         <input
           type="text"
           class="eco_system_new_search"
+          id="searchFilter"
           placeholder="Search by Name"
         />
       </div>
@@ -1993,6 +1999,50 @@
 
       // Initial update
       updateCards();
+    </script>
+
+    <!-- Ecosystem filtering script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const categoryFilter = document.getElementById('categoryFilter');
+        const searchFilter = document.getElementById('searchFilter');
+        const cards = document.querySelectorAll('.eco_system_new_card');
+
+        function filterCards() {
+          const selectedCategory = categoryFilter.value;
+          const searchTerm = searchFilter.value.toLowerCase().trim();
+
+          cards.forEach(card => {
+            // Get the badge text (category)
+            const badge = card.querySelector('.eco_system_new_card_badge');
+            const cardCategory = badge ? badge.textContent.trim() : '';
+            
+            // Get the card title for search
+            const cardTitle = card.querySelector('.eco_system_new_card_title');
+            const titleText = cardTitle ? cardTitle.textContent.toLowerCase() : '';
+
+            // Check category filter
+            const categoryMatch = selectedCategory === 'all' || cardCategory === selectedCategory;
+            
+            // Check search filter
+            const searchMatch = searchTerm === '' || titleText.includes(searchTerm);
+
+            // Show or hide card based on both filters
+            if (categoryMatch && searchMatch) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        }
+
+        // Add event listeners
+        categoryFilter.addEventListener('change', filterCards);
+        searchFilter.addEventListener('input', filterCards);
+
+        // Initial filter (in case there's a default selection)
+        filterCards();
+      });
     </script>
   </body>
 </html>

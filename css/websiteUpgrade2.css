@@ -1515,7 +1515,6 @@ section {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1525,48 +1524,20 @@ section {
 .eco_system_new_icon_1 {
   top: 5%;
   left: 2%;
-  background: rgba(255, 255, 255, 0.15);
 }
 .eco_system_new_icon_2 {
   top: 8%;
   left: 20%;
-  background: rgba(255, 59, 59, 0.8);
 }
 .eco_system_new_icon_3 {
   top: 5%;
   right: 20%;
-  background: rgba(255, 255, 255, 0.15);
 }
 .eco_system_new_icon_4 {
   top: 3%;
   right: 5%;
-  background: rgba(100, 100, 255, 0.3);
 }
-.eco_system_new_icon_5 {
-  top: 35%;
-  left: 5%;
-  background: rgba(100, 200, 255, 0.3);
-}
-.eco_system_new_icon_6 {
-  top: 40%;
-  left: 3%;
-  background: rgba(255, 100, 180, 0.8);
-}
-.eco_system_new_icon_7 {
-  top: 45%;
-  left: 15%;
-  background: rgba(150, 150, 200, 0.3);
-}
-.eco_system_new_icon_8 {
-  top: 35%;
-  right: 5%;
-  background: rgba(100, 150, 255, 0.8);
-}
-.eco_system_new_icon_9 {
-  top: 40%;
-  right: 2%;
-  background: rgba(255, 255, 255, 0.15);
-}
+
 
 .eco_system_new_container {
   max-width: 1400px;
