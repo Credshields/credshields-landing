@@ -906,7 +906,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 109px;
+  row-gap: 70px;
   margin-bottom: 50px;
 }
 
@@ -914,6 +915,10 @@ section {
   text-align: center;
   transition: transform 0.3s ease;
   max-width: 208px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .security_team_member:hover {
@@ -922,8 +927,8 @@ section {
 
 .security_team_avatar_wrapper {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 96px;
+  height: 96px;
   margin: 0 auto 20px;
 }
 
@@ -942,6 +947,14 @@ section {
   transition: border-color 0.3s ease;
 }
 
+.security_team_avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
 .security_team_member:hover .security_team_avatar {
   border-color: #10b981;
 }
@@ -958,6 +971,14 @@ section {
   color: #38ff7e;
   margin-bottom: 8px;
   font-weight: 500;
+  min-height: 3.6em;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: center;
 }
 
 .security_team_description {
@@ -5311,6 +5332,50 @@ section {
   font-size: 14px;
   margin-left: 20px;
   color: #737373;
+}
+
+.security_team_social_links_container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.security_team_social_links_icon {
+  width: 40px;
+  height: 40px;
+  background: #262626;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.security_team_social_links_icon:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.security_team_social_links_icon svg {
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
+}
+
+/* LinkedIn Icon */
+.security_team_social_links_linkedin svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Twitter/X Icon */
+.security_team_social_links_twitter svg {
+  width: 14px;
+  height: 16px;
 }
 
 @media (max-width: 768px) {
