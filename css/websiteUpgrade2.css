@@ -1,3 +1,10 @@
+
+.header_section{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 .display_below_768 {
   opacity: 0;
 }
@@ -178,6 +185,10 @@
 .upgraded_hero_stats_owasp {
   justify-content: center;
   bottom: 0px !important;
+  justify-content: space-between;
+  bottom: 0px !important;
+  width: 70%;
+  margin: auto;
 }
 .upgraded_hero_stat_item {
   text-align: center;
@@ -282,7 +293,7 @@
 }
 
 .header_section {
-  background-color: rgba(19, 19, 19, 0.5) !important;
+  background-color: rgba(19, 19, 19, 0.8) !important;
 }
 
 .run_free_ai_scan_btn {
