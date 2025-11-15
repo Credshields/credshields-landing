@@ -4547,6 +4547,216 @@
   }
 }
 
+/* Careers Section Styles */
+.about_us_career_section {
+  padding: 80px 100px;
+  width: 100%;
+}
+
+.about_us_career_container {
+  max-width: 1232px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about_us_career_title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.about_us_career_subtitle {
+  font-size: 30px;
+  font-weight: 400;
+  color: #38ff7e;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+}
+
+.about_us_career_description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #a3a3a3;
+  margin: 0 0 40px 0;
+  max-width: 896px;
+}
+
+.about_us_career_roles_card {
+  width: 100%;
+  max-width: 896px;
+  background: linear-gradient(
+    195.08deg,
+    rgba(13, 26, 19, 1) 0%,
+    rgba(8, 17, 12, 1) 21.62%,
+    rgba(3, 11, 6, 1) 60.16%,
+    rgba(3, 11, 6, 1) 80.91%
+  );
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  padding: 41px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about_us_career_roles_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.about_us_career_roles_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.about_us_career_role_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(38, 38, 38, 0.5);
+  border-radius: 8px;
+  min-height: 56px;
+  cursor: pointer;
+}
+
+.about_us_career_role_text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.5;
+  flex: 1;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.about_us_career_role_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #4ade80;
+}
+
+.about_us_career_role_icon svg {
+  width: 14px;
+  height: 16px;
+}
+
+/* Responsive Styles for Careers Section */
+@media (max-width: 1200px) {
+  .about_us_career_section {
+    padding: 60px 60px;
+  }
+
+  .about_us_career_roles_card {
+    padding: 32px;
+  }
+
+  .about_us_career_roles_grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about_us_career_section {
+    padding: 60px 40px;
+  }
+
+  .about_us_career_title {
+    font-size: 36px;
+  }
+
+  .about_us_career_subtitle {
+    font-size: 26px;
+  }
+
+  .about_us_career_description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_us_career_section {
+    padding: 40px 20px;
+  }
+
+  .about_us_career_title {
+    font-size: 32px;
+  }
+
+  .about_us_career_subtitle {
+    font-size: 22px;
+  }
+
+  .about_us_career_description {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .about_us_career_roles_card {
+    padding: 24px;
+  }
+
+  .about_us_career_roles_title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about_us_career_roles_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about_us_career_role_item {
+    min-height: 52px;
+    padding: 14px;
+  }
+
+  .about_us_career_role_text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about_us_career_section {
+    padding: 30px 16px;
+  }
+
+  .about_us_career_title {
+    font-size: 28px;
+  }
+
+  .about_us_career_subtitle {
+    font-size: 20px;
+  }
+
+  .about_us_career_description {
+    font-size: 14px;
+  }
+
+  .about_us_career_roles_card {
+    padding: 20px;
+  }
+
+  .about_us_career_roles_title {
+    font-size: 18px;
+  }
+
+  .about_us_career_role_text {
+    font-size: 14px;
+  }
+}
+
 /* Fintech Case Study Bullets Styles */
 .fintech_case_study_bullets_wrapper {
   display: flex;
