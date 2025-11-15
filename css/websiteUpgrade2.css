@@ -2063,7 +2063,7 @@
 /* Right Section: Research Data Sources */
 .owasp_about_the_initiative_right {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .owasp_about_the_initiative_sources_box {
