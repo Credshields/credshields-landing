@@ -3978,6 +3978,12 @@
   border-radius: 25px;
 }
 
+.about_us_title_card_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .fintech_risk_title_card_icon {
   width: 48px;
   height: 48px;
@@ -5849,5 +5855,158 @@
 
   .audit_checklist_table thead th:nth-child(2) {
     width: 150px;
+  }
+}
+
+
+
+/* secirity team */
+
+
+.security_team_new_container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.security_team_new_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.security_team_new_card {
+  background: linear-gradient(180deg, 
+      rgba(13, 26, 19, 1) 0%, 
+      rgba(8, 18, 13, 1) 22%, 
+      rgba(3, 11, 7, 1) 60%, 
+      rgba(3, 11, 7, 1) 100%);
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.security_team_new_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.security_team_new_avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.security_team_new_avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.security_team_new_avatar_placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #7CBCE7 0%, #5890C5 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: white;
+}
+
+.security_team_new_info {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.security_team_new_name {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.security_team_new_role {
+  font-size: 14px;
+  font-weight: 500;
+  color: #38FF7F;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.security_team_new_description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 16px;
+}
+
+.security_team_new_social {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.security_team_new_social_link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.security_team_new_social_link:hover {
+  background: #3a3a3a;
+}
+
+.security_team_new_social_icon {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+@media (max-width: 768px) {
+  .security_team_new_grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+  }
+
+  .security_team_new_card {
+      padding: 28px 24px;
+  }
+
+  .security_team_new_name {
+      font-size: 20px;
+  }
+
+  .security_team_new_description {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .security_team_new_card {
+      padding: 24px 20px;
+  }
+
+  .security_team_new_avatar {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 24px;
   }
 }
