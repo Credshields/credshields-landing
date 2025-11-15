@@ -4420,11 +4420,6 @@
   position: absolute;
   inset: 0;
   border-radius: 15px;
-  background: linear-gradient(
-    135deg,
-    rgba(19, 33, 25, 1) 0%,
-    rgba(9, 18, 13, 1) 100%
-  );
   z-index: -1;
   box-shadow: inset 0px 1px 0px rgba(33, 58, 44, 1),
     0px 0px 0px 1px rgba(16, 33, 24, 1);
