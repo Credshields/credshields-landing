@@ -2083,6 +2083,7 @@
 .owasp_about_the_initiative_right {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .owasp_about_the_initiative_sources_box {
