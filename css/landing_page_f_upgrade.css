@@ -1941,8 +1941,6 @@ img {
 /* about css end */
 
 .our_partners_section {
-  padding: 80px 0;
-  /* background: #0F111A; */
   position: relative;
   z-index: 1;
 }
@@ -2887,20 +2885,6 @@ img {
 .service_content {
   width: 78%;
   padding-left: 4rem;
-}
-
-/* Section spacing - consistent for all sections */
-section,
-.our_product_sec,
-.numbers_sec,
-.services_container,
-.testimonial_section,
-.about_us_section,
-.contact_sec,
-.footer_sec {
-  padding: 100px 0;
-  width: 100%;
-  overflow: hidden;
 }
 
 /* Fix for specific sections that had different padding */
