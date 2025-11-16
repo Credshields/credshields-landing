@@ -1328,7 +1328,7 @@ a {
 
 .secure_your_protocol_btn_primary {
   background: #78ff04;
-  color: #0a0f0d;
+  color: #0a0f0d !important;
   box-shadow: 0 4px 20px rgba(132, 204, 22, 0.3);
   font-weight: 700 !important;
 }
