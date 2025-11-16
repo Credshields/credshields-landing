@@ -1943,6 +1943,7 @@ img {
 .our_partners_section {
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .why_cres_shields_section {

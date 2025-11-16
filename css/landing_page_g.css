@@ -1871,6 +1871,7 @@ img {
   padding: 100px 0px;
   width: 100vw;
   margin-bottom: 3rem;
+  overflow: hidden;
 }
 .our_partners_section .col-lg-4 {
   height: 125px;
