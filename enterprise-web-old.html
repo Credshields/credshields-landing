@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home - CredShields</title>
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- favicon Start -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- favicon end -->
+
+    <!-- Default Css file Start -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+	<style>
+		/* Hover dropdown for desktop */
+		@media (min-width: 992px) {
+			.dropdown-hover-expand .dropdown-menu {
+				display: block;
+				top: 100%;
+				left: 0;
+				visibility: hidden;
+				top: 100%;
+				transform: translateY(10px);
+				transition: all 0.1s ease;
+				top: 100%;
+				top: 100%;
+				top: 100%;
+			}
+			.dropdown-hover-expand:hover .dropdown-menu {
+				display: block;
+				visibility: visible;
+				top: 100%;
+				transform: translateY(0);
+			}
+		}
+	</style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/90cf9f1e5e.js" crossorigin="anonymous"></script>
+    <!-- Default Css file end -->
+
+    <!-- Plugin Css file Start -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Plugin Css file end -->
+
+    <!--MS Clarity-->
+    <script async type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "ko6w13w47q");
+    </script>
+    <!--gtag-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBZQ6FE87P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KBZQ6FE87P');
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- Custom Css file Start -->
+    <link rel="stylesheet" href="css/landing_page_g_upgrade.css" />
+    <link rel="stylesheet" href="css/landing_page_responsive_g_upgrade.css" />
+
+    <style>
+        @font-face {
+            font-family: Monbloc;
+            src: url("fonts/Monbloc-Inst-Regular.eot");
+            src: url("fonts/Monbloc-Inst-Regular.ttf");
+            src: url("fonts/Monbloc-Inst-Regular.woff");
+            src: url("fonts/Monbloc-Inst-Regular.woff2");
+        }
+
+        /* Notification Banner Styles */
+        .notification_banner {
+            background-color: #531EAC;
+            padding: 8px 0;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .banner_box_flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .banner_action {
+            color: white;
+        }
+
+        .vertical-divider {
+            width: 1px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            align-self: center;
+        }
+
+        .notification_banner .banner_content p {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: -0.01em;
+            color: white;
+        }
+
+        .notification_banner .download_btn {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: white;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+
+        .notification_banner .download_btn:hover {
+            color: white;
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .close_banner {
+            position: absolute;
+            right: 15px;
+            bottom: 20%;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            color: white;
+        }
+
+        .notification_banner .close_banner:hover {
+            opacity: 0.7;
+        }
+
+        .download-report-banner-btn {
+            background: linear-gradient(127.09deg, rgba(157, 255, 237, 0.93) 0.95%, rgba(194, 255, 189, 0.93) 98.62%);
+            border: none;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 755px) {
+            .close_banner {
+                bottom: 7%;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 865px) {
+            .notification_banner .banner_content p {
+                font-size: 14px;
+            }
+
+            .banner_action {
+                font-size: 14px;
+            }
+
+            .vertical-divider {
+                display: none;
+            }
+
+            .notification_banner .download_btn {
+                font-size: 12px;
+            }
+
+            .banner_box_flex {
+                justify-content: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+    <!-- Custom Css file Start -->
+</head>
+
+<body>
+    <!-- Gradients -->
+
+    <div class="fixed_bg_container">
+        <div class="gradient_bg_tr">
+            <img src="images/primary_bg.svg" alt="bg" />
+        </div>
+        <div class="gradient_bg_tl">
+            <img src="images/primary_bg.svg" alt="bg" />
+        </div>
+        <div class="gradient_bg_bl">
+            <img src="images/primary_bg.svg" alt="bg" />
+        </div>
+    </div>
+
+    <!-- notification banner start -->
+    <div class="notification_banner">
+        <div class="container-fluid">
+            <div class="banner_box_flex">
+
+                <div class="banner_content">
+                    <p class="mb-0">More than $2.5B Lost in H1 2025 - Our Report reveals How It Happened & How to Stay
+                        Secure</p>
+                </div>
+
+                <div class="vertical-divider" style="background-color: black;"></div>
+
+                <div class="banner_action d-flex align-items-center justify-content-end">
+                    Download Report here
+                    <button type="button" class="download-report-banner-btn"
+                        onclick="window.open('https://docsend.com/view/kayzby5vp3ga8pe8', '_blank')">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+                                fill="#04080D" />
+                        </svg>
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+        <button class="close_banner btn-close btn-close-white" id="closeBanner" aria-label="Close">&#10005;</button>
+    </div>
+    <!-- notification banner end -->
+
+    <!-- announcement start -->
+    <!-- <div class="announcment_wrap">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-11 ordr_2">
+					<div class="text_center">
+						<h6>ANNOUNCEMENT : &nbsp;</h6>
+						<p>
+							We have launched our cloud based Smart Contract vulnerability
+							scanner SolidityScan. Check out
+							<a href="https://solidityscan.com/" target="_blank"
+								style="color: white">SolidityScan.com</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-1 ordr_1">
+					<div class="text-right">
+						<a href="#" class="clse" id="clsoe">
+							<img src="images/clse_icon.svg" alt="x" class="img-fluid" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+    <!-- announcement end -->
+
+    <!-- header section start -->
+    <header class="header_section">
+		<div class="container">
+			<nav class="navbar px-0 navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.svg" alt="logo" class="img-fluid" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="fa fa-bars"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav m-auto custom_scrl desktop-menu">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">
+								<p>Home</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">
+								<p>About</p>
+							</a>
+						</li>
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+								<p style="margin: 0 12px; cursor: pointer;">Solutions <img src="images/down_arrow.svg"
+										alt="down" class="img-fluid" /></p>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+								<a class="dropdown-item" href="smart-contract-audit.html">Smart Contract Audits</a>
+								<a class="dropdown-item" href="dapp-protocol.html">DApp & Protocol Security</a>
+								<a class="dropdown-item" href="enterprise-web.html">Enterprise Web & Mobile Security</a>
+								<a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
+								<a class="dropdown-item" href="block-chain-security.html">Blockchain Security</a>
+								<a class="dropdown-item" href="external-network-testing-new.html">External Network
+									Testing</a>
+								<a class="dropdown-item" href="cloud-infra.html">Cloud Infrastructure</a>
+								<a class="dropdown-item" href="wallet-security-new.html">Wallet Security</a>
+								<a class="dropdown-item" href="mobile-app-testing.html">Mobile App Security</a>
+								<a class="dropdown-item" href="web-app-testing.html">Web App Security</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
+								<a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
+								<a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+								<a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
+								<a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming
+									Soon)</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+								<p style="margin: 0 12px; cursor: pointer;">Industries <img src="images/down_arrow.svg"
+										alt="down" class="img-fluid" /></p>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+								<a class="dropdown-item" href="finance-fintech.html">Finance & Fintech</a>
+								<a class="dropdown-item" href="saas-enterprise.html">SaaS & Enterprise</a>
+								<a class="dropdown-item" href="web3-protocol.html">Web3 Protocols & Exchanges</a>
+								<a class="dropdown-item" href="gamin-digital-assets.html">Gaming & Digital Assets</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+								<p style="margin: 0 12px; cursor: pointer;">Resources <img src="images/down_arrow.svg"
+										alt="down" class="img-fluid" /></p>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+								<a class="dropdown-item" href="resource-audits.html">Recently Audited</a>
+								<a class="dropdown-item" href="resource-audits.html">Popular Projects</a>
+								<a class="dropdown-item" href="resource-audits.html">KYC Reports</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://scs.owasp.org/sctop10/" target="_blank">
+								<p>Owasp Top 10</p>
+							</a>
+						</li>
+					</ul>
+					<nav class="navbar navbar-light desktop-menu">
+						<form class="form-inline">
+							<a href=""
+								onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+								<img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid">
+							</a>
+						</form>
+					</nav>
+					<div class="mobile-overlay-menu" id="navbarNav">
+						<div class="mobile-overlay-content">
+							<div class="mobile-overlay-menu-item">
+								<a href="index.html">
+									Home
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item">
+								<a href="about.html">
+									About
+								</a>
+							</div>
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+								<span>Solutions</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="smart-contract-audit.html">Smart Contract Audits</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="dapp-protocol.html">DApp & Protocol Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="enterprise-web.html">Enterprise Web & Mobile Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="penetration-testing.html">Penetration Testing</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="block-chain-security.html">Blockchain Security</a>
+								</div>
+								
+								<div class="mobile-overlay-submenu-item">
+									<a href="cloud-infra.html">Cloud Infrastructure</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="wallet-security-new.html">Wallet Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="mobile-app-testing.html">Mobile App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web-app-testing.html">Web App Security</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="ai-security-tools.html">AI Security Tools</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/">SolidityScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="https://rustscan.com/">RustScan</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+								<span>Industries</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="finance-fintech.html">Finance & Fintech</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="saas-enterprise.html">SaaS & Enterprise</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="web3-protocol.html">Web3 Protocols & Exchanges</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="gamin-digital-assets.html">Gaming & Digital Assets</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+								<span>Resources</span>
+								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
+									stroke="currentColor" stroke-width="2">
+									<path d="M6 9l6 6 6-6" />
+								</svg>
+							</div>
+							<div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html?tab-name=recent">Recently Audited</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html?tab-name=popular">Popular Projects</a>
+								</div>
+								<div class="mobile-overlay-submenu-item">
+									<a href="resource-audits.html?tab-name=kyc">KYC Reports</a>
+								</div>
+							</div>
+
+							<div class="mobile-overlay-menu-item">
+								<a href="https://scs.owasp.org/sctop10/" target="_blank">Owasp Top 10</a>
+							</div>
+						</div>
+
+						<div class="mobile-overlay-footer">
+							<nav class="navbar navbar-light cart_drp_clk">
+								<form class="form-inline">
+									<a href=""
+										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+										<img src="images/book_security_audit_btn.svg" alt="clip_path_btn"
+											class="img-fluid">
+									</a>
+								</form>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+    <!-- header section end -->
+
+    <!-- hero section start  -->
+    <section class="home_hero_section">
+        <div class="container pos_relative">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="hero_container" id="hero_con">
+                            <h2 class="color_primary">
+                                Enterprise Web & Mobile Security |
+                            </h2>
+                            <h2 class="theme_color">
+                                SaaS & Fintech Protection
+                            </h2>
+                            <img src="images/styled_divider_horizontal.svg" alt="styled_divider"
+                                class="display_none_768" />
+                            <p style="text-align: left;">Secure SaaS, fintech & enterprise apps with penetration
+                                testing, mobile security & cloud audits. Stay ISO, SOC 2 & PCI compliant.
+                            </p>
+
+                            <h4 style="margin-top: 100px;">Enterprise-Grade Protection for Apps & Infrastructure</h4>
+                            <p style="text-align: left;">
+                                From SaaS platforms to banks and fintechs, enterprises face evolving cyber threats and
+                                compliance obligations.
+                            </p>
+                            <p style="text-align: left;">
+                                CredShields delivers penetration testing, mobile app security reviews, and web
+                                application audits aligned with global standards like OWASP, ISO 27001, PCI DSS, and SOC
+                                2. </p>
+
+                        </div>
+
+                        <div class="hero_section_btn_container" style="margin-top: 50px;">
+                            <button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+                                <img src="images/book_consultaion_btn.svg" alt="hero_btn_1" class="img-fluid">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- hero section end  -->
+
+    <!-- cookies section start -->
+    <!-- <section class="section_alignment_website cookies_section">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="cookies_txt">
+						<p>
+							This website uses cookies to ensure you get the best experience
+							on our website. <a href="cookie.html">Cookies Policy</a>
+						</p>
+
+						<a href="javascript:void(0)" class="ckies_btn" id="clsee2">Got It</a>
+
+						<a href="javascript:void(0)" id="clsee"><i class="fa fa-close"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> -->
+    <!-- cookies section end -->
+
+
+
+
+    <section class="section_alignment_website why_cres_shields_section" id="why_creshields_sec">
+        <div class="container pos_relative">
+
+            <div class="non_hero_title">
+                <h2 class="part_one"><span class="part_two" style="color: white;">Risks Covered</span></h2>
+
+                <ul class="custom-bullet-list">
+                    <li>OWASP Top 10 vulnerabilities</li>
+                    <li>Cloud misconfigurations (AWS, Azure, GCP)</li>
+                    <li>Mobile app data leakage</li>
+                    <li>Insider threats & unauthorized access</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_alignment_website why_cres_shields_section" id="why_creshields_sec">
+        <div class="container pos_relative">
+
+            <div class="non_hero_title">
+                <h2 class="part_one"> <span class="part_two" style="color: white;">Our Approach</span></h2>
+
+                <ul class="custom-bullet-list">
+                    <li>Web & Mobile App Threat Modeling</li>
+                    <li>OWASP-Aligned Testing for APIs & Applications</li>
+                    <li>Mobile Reverse Engineering & Data Flow Analysis</li>
+                    <li>Cloud Infra Review (AWS, Azure, GCP)</li>
+                    <li>Exploit Simulation + Remediation Roadmap</li>
+                    <li>Compliance-Ready Executive Reporting</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section_alignment_website feature_diff_section">
+        <div class="container pos_relative">
+            <div class="feature_diff_section_container">
+                <table class="feature_diff_section_table">
+                    <thead>
+                        <tr>
+                            <th class="feature_diff_section_th">S.No</th>
+                            <th class="feature_diff_section_th"> Audit Category</th>
+                            <th class="feature_diff_section_th">Audit Category Checklist</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="feature_diff_section_tr">
+                            <td class="feature_diff_section_feature_label">1</td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Web Apps</span>
+                                </div>
+                            </td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">OWASP Top 10, injection flaws, session management
+                                    </span>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                        <tr class="feature_diff_section_tr">
+                            <td class="feature_diff_section_feature_label">2</td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Mobile Apps</span>
+                                </div>
+                            </td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Data leakage, insecure storage, API calls
+                                    </span>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                        <tr class="feature_diff_section_tr">
+                            <td class="feature_diff_section_feature_label">3</td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Cloud Infra</span>
+                                </div>
+                            </td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Misconfigurations, IAM policies, exposed buckets
+                                    </span>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                        <tr class="feature_diff_section_tr">
+                            <td class="feature_diff_section_feature_label">4</td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Network Security</span>
+                                </div>
+                            </td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Port scanning, lateral movement, privilege escalation
+                                    </span>
+                                </div>
+
+                            </td>
+
+                        </tr>
+                        <tr class="feature_diff_section_tr">
+                            <td class="feature_diff_section_feature_label">5</td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">Compliance Alignment</span>
+                                </div>
+                            </td>
+                            <td class="feature_diff_section_td">
+                                <div class="feature_diff_section_check_item">
+                                    <span class="feature_diff_section_text">PCI DSS, SOC 2, ISO 27001, HIPAA
+                                    </span>
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- <div class="hero_section_btn_container" style="margin-top: 5rem;">
+				<button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+					<img src="images/hero_btn_1.svg" alt="hero_btn_1" class="img-fluid" onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+				</button>
+				<button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+					<img src="images/hero_btn_2.svg" onclick="window.location.href = 'index.html#quickscan_container_sec';" alt="hero_btn_1" class="img-fluid">
+				</button>
+
+			</div> -->
+
+        </div>
+
+    </section>
+
+    <section class="section_alignment_website why_cres_shields_section" id="why_creshields_sec">
+        <div class="container pos_relative">
+
+            <div class="non_hero_title">
+                <h2 class="part_one">Case <span class="part_two" style="color: white;">Study</span></h2>
+
+                <p>
+                    A SaaS platform serving 50,000+ enterprise users passed SOC 2 audit after CredShields remediated API flaws. We uncovered API flaws, enabling them to achieve certification with zero critical findings.
+                </p>
+            </div>
+            <button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
+                <img src="images/book_enterprise_security_btn.svg" alt="hero_btn_1" class="img-fluid">
+            </button>
+        </div>
+    </section>
+    <footer class="footer_updated">
+        <div class="container">
+            <!-- Top section with newsletter and social links -->
+            <div class="footer_updated_top">
+                <div class="footer_updated_left">
+                    <div class="footer_logo">
+                        <img src="images/Logo.svg" alt="logo" />
+                    </div>
+                    <div class="footer_updated_right">
+                        <div class="social_links">
+                            <a class="social_links_con" href="https://t.me/solidityscan">
+                                <img src="images/telegram_gray.svg" alt="telegram" class="img-fluid" />
+                            </a>
+                            <a class="social_links_con" href="https://discord.com/invite/9HhV4hGENw">
+                                <img src="images/discord_gray.svg" alt="discord" class="img-fluid" />
+                            </a>
+                            <a class="social_links_con" href="https://blog.solidityscan.com/">
+                                <img src="images/medium_gray.svg" alt="medium" class="img-fluid" />
+                            </a>
+                            <a class="social_links_con" href="https://twitter.com/CredShields">
+                                <img src="images/x.svg" alt="X" class="img-fluid"  onclick="window.open('https://x.com/CredShields', '_blank');"/>
+                            </a>
+                            <a class="social_links_con" href="https://www.instagram.com/credshields/">
+                                <img src="images/instagram_gray.svg" alt="instagram" class="img-fluid" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_updated_newsletter">
+                <div style="width: 40%;">
+                    <h3>Subscribe to Newsletter</h3>
+                    <div class="footer_updated_newsletter_form">
+                        <input type="email" placeholder="Type Your Email" class="footer_updated_email_input">
+                    </div>
+                </div>
+
+                <button class="clean_btn_style"  onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;"
+                    onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank')">
+                    <img src="images/subscribe_btn.svg" alt="hero_btn_1" class="img-fluid">
+                </button>
+            </div>
+            <!-- Middle section with link columns -->
+            <div class="footer_updated_links">
+                <div class="footer_updated_column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resource-audits.html?tab-name=recent">Recently Audited</a></li>
+                        <li><a href="resource-audits.html?tab-name=popular">Popular Projects</a></li>
+                        <li><a href="resource-audits.html?tab-name=kyc">KYC Reports</a></li>
+                        
+                        
+                    </ul>
+                </div>
+
+                <div class="footer_updated_column">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="smart-contract-audit.html">Smart Contract Audits</a></li>
+                        <li><a href="dapp-protocol.html">DApp & Protocol Security</a></li>
+                        <li><a href="enterprise-web.html">Enterprise Web & Mobile Security</a></li>
+                        <li><a href="penetration-testing.html">Penetration Testing</a></li>
+                        <li><a href="block-chain-security.html">Blockchain Security</a></li>
+                        
+                        <li><a href="cloud-infra.html">Cloud Infrastructure</a></li>
+                        <li><a href="wallet-security-new.html">Wallet Security</a></li>
+                        <li><a href="mobile-app-testing.html">Mobile App Security</a></li>
+                        <li><a href="web-app-testing.html">Web App Security</a></li>
+                        <li><a href="ai-security-tools.html">AI Security Tools</a></li>
+                        <li><a href="https://solidityscan.com/">SolidityScan</a></li>
+                        <li><a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a></li>
+                        <li><a href="https://rustscan.com/">RustScan</a></li>
+                        <li><a href="#">Wallet Tracker (Coming Soon)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_updated_column">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="finance-fintech.html">Finance & Fintech</a></li>
+                        <li><a href="saas-enterprise.html">SaaS & Enterprises</a></li>
+                        <li><a href="web3-protocol.html">Web3 Protocols & Exchanges</a></li>
+                        <li><a href="gamin-digital-assets.html">Gaming & Digital Assets</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_updated_column">
+                    <h4>About Credshields</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="https://scs.owasp.org/sctop10/">OWASP TOP 10</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom section -->
+            <div class="row">
+                <div class="ftr_menu">
+                    <a href="#">20A TANJONG PAGAR ROAD, SINGAPORE (088443)</a>
+                    <ul>
+                        <li>
+                            <a href="tos.html">Terms & Conditions</a>
+                        </li>
+                        <li><i class="fa fa-circle"></i></li>
+                        <li>
+                            <a href="privacy.html">Privacy Policy</a>
+                        </li>
+                        <li><i class="fa fa-circle"></i></li>
+                        <li>
+                            <a href="#">Copyright
+                                <script>document.write(new Date().getFullYear());</script> CredShields. All Rights
+                                Reserved
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer section end -->
+
+    <!-- JavaScript Libraries in the correct loading order -->
+    <!-- 1. jQuery first (from CDN with local fallback) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+
+    <!-- 2. Other core libraries -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <!-- 3. Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- 4. Custom scripts -->
+    <script src="js/smooth-naigate.js"></script>
+    <script src="js/custom_a.js"></script>
+    <script src="js/statAnimation.js"></script>
+    <script src="js/audits.js"></script>
+    <script src="js/scrollIntraction.js"></script>
+
+    <!-- Banner functionality -->
+    <script>
+        $(document).ready(function () {
+            // Close banner functionality
+            $('#closeBanner').click(function () {
+                $('.notification_banner').fadeOut(300);
+            });
+        });
+    </script>
+
+    <!-- 5. HubSpot script (async) -->
+    <script type="text/javascript" id="hs-script-loader" async defer
+        src="https://js-eu1.hs-scripts.com/24889894.js"></script>
+<script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById('mobile-overlay-' + id + '-submenu');
+            const menuItem = submenu.previousElementSibling;
+
+            submenu.classList.toggle('mobile-overlay-open');
+            menuItem.classList.toggle('mobile-overlay-expanded');
+        }
+
+        function closeMenu() {
+            alert('Menu closed! In a real implementation, this would hide the overlay.');
+        }
+    </script>
+   <!-- Custom js file end -->
+</body>
+
+</html>
