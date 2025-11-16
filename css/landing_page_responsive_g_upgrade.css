@@ -1012,6 +1012,7 @@
   .our_partners_section {
     padding: 60px 0;
     margin-top: 10px;
+    overflow: hidden;
   }
 }
 
