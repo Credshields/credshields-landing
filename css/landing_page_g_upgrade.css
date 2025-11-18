@@ -896,7 +896,7 @@ img {
     rgba(194, 255, 189, 0.93) 98.62%
   );
   backdrop-filter: blur(12.199999809265137px);
-  color: #000000;
+  color: #000000 !important;
 }
 
 .audit-link .arrow-icon {
@@ -921,7 +921,7 @@ img {
 .audit-card:hover .audit-link {
   background: #78FF04;
   backdrop-filter: blur(12.2px);
-  color: #000000;
+  color: #000000 !important;
 }
 
 .audit-card:hover .audit-mask {
