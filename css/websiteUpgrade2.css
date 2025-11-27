@@ -6498,3 +6498,148 @@ a {
       font-size: 20px;
   }
 }
+
+.continous_monitoring_list_card_container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.continous_monitoring_list_card_flex_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+
+.continous_monitoring_list_card {
+  flex: 0 0 355px;
+  width: 355px;
+  background: linear-gradient(180deg, 
+      rgba(13, 26, 19, 1) 0%,
+      rgba(8, 17, 12, 1) 21.62%,
+      rgba(3, 11, 7, 1) 60.16%,
+      rgba(3, 11, 7, 1) 80.91%
+  );
+  border: 1px solid rgba(28, 48, 35, 1);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.continous_monitoring_list_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(120, 254, 5, 0.1);
+}
+
+.continous_monitoring_list_card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.continous_monitoring_list_card_icon_wrapper {
+  width: 48px;
+  height: 48px;
+  background: rgba(49, 72, 58, 1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.continous_monitoring_list_card_icon {
+  width: 28px;
+  height: 28px;
+  stroke: rgba(120, 254, 5, 1);
+  stroke-width: 2.63px;
+  fill: none;
+}
+
+.continous_monitoring_list_card_title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  background: linear-gradient(180deg, 
+      rgba(216, 254, 229, 1) 0%,
+      rgba(192, 228, 205, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-height: 56px;
+}
+
+.continous_monitoring_list_card_description {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  min-height: 60px;
+  font-weight: 400;
+}
+
+.continous_monitoring_list_card_features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 4px;
+}
+
+.continous_monitoring_list_card_feature_item {
+  font-size: 14px;
+  line-height: 30px;
+  color: rgba(94, 214, 137, 1);
+  position: relative;
+  padding-left: 16px;
+}
+
+.continous_monitoring_list_card_feature_item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: rgba(94, 214, 137, 1);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1300px) {
+  .continous_monitoring_list_card_flex_wrapper {
+      gap: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .continous_monitoring_list_card{
+    flex: none;
+  }
+
+  .continous_monitoring_list_card{
+    width: 100% !important;
+  }
+  .continous_monitoring_list_card_flex_wrapper {
+      gap: 24px;
+  }
+
+  body {
+      padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .continous_monitoring_list_card {
+      flex: 0 0 100%;
+      width: 100%;
+      padding: 24px;
+  }
+
+  .continous_monitoring_list_card_title {
+      font-size: 18px;
+      line-height: 26px;
+  }
+
+  .continous_monitoring_list_card_description {
+      font-size: 13px;
+  }
+}
