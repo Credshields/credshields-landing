@@ -596,6 +596,7 @@ a {
   max-width: 1400px;
   margin: auto;
   padding: 100px;
+  position: relative;
 }
 
 .success_story_container {
@@ -3858,6 +3859,7 @@ a {
 
   .success_story_button {
     font-size: 16px;
+    width: 100%;
   }
 
   .success_story_icon {
@@ -3947,6 +3949,11 @@ a {
   .owasp_chart_content {
     padding: 18px 0px;
   }
+
+  .security_coverage_button{
+    width: 100%;
+  }
+
 }
 
 /* About Us Title Cards Styles */
@@ -6620,10 +6627,6 @@ a {
   }
   .continous_monitoring_list_card_flex_wrapper {
       gap: 24px;
-  }
-
-  body {
-      padding: 20px 16px;
   }
 }
 
