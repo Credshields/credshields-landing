@@ -846,7 +846,52 @@
         <div class="upgraded_hero_right">
           <!-- Graphic Placeholder -->
           <div class="upgraded_hero_graphic_placeholder">
-            <img src="images/landing_page_graphic_new.svg" alt="hero_graphic" class="img-fluid" />
+            <!-- Terminal Interface -->
+            <div class="terminal-container">
+              <!-- Terminal Header -->
+              <div class="terminal-header">
+                <div class="terminal-controls">
+                  <span class="terminal-dot terminal-dot-red"></span>
+                  <span class="terminal-dot terminal-dot-yellow"></span>
+                  <span class="terminal-dot terminal-dot-green"></span>
+                </div>
+              </div>
+              <div class="terminal-divider"></div>
+            
+              <!-- Terminal Body -->
+              <div class="terminal-body">
+                <div class="terminal-content-wrapper">
+                  <!-- Line Numbers -->
+                  <div class="terminal-line-numbers">
+                    <div class="line-number">1</div>
+                    <div class="line-number">2</div>
+                    <div class="line-number">3</div>
+                    <div class="line-number">4</div>
+                    <div class="line-number">5</div>
+                    <div class="line-number">6</div>
+                    <div class="line-number">7</div>
+                    <div class="line-number">8</div>
+                    <div class="line-number">9</div>
+                    <div class="line-number">10</div>
+                  </div>
+            
+                  <!-- Terminal Output -->
+                  <div class="terminal-output" id="terminalOutput">
+                    <div class="terminal-line terminal-command"
+                      data-text="$ credshields --audit --protocol=defi --depth=comprehensive"></div>
+                    <div class="terminal-line terminal-info" data-text="Initializing security audit..."></div>
+                    <div class="terminal-line terminal-success" data-text="✓ Smart contract analysis complete"></div>
+                    <div class="terminal-line terminal-success" data-text="✓ Access control verification passed"></div>
+                    <div class="terminal-line terminal-success" data-text="✓ Economic attack vectors analyzed"></div>
+                    <div class="terminal-line terminal-warning" data-text="⚠ 5 medium-risk vulnerabilities found"></div>
+                    <div class="terminal-line terminal-error" data-text="2 critical vulnerability detected"
+                      data-type="error-with-dot"></div>
+                    <div class="terminal-line terminal-white" data-text="Generating comprehensive report..."></div>
+                    <div class="terminal-line terminal-report" data-text="Report saved: audit_report_2025.pdf"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="upgraded_hero_buttons display_below_768">
@@ -2317,6 +2362,120 @@
     // Initial update
     updateCards();
   </script>
+<!-- Terminal Typing Animation Script -->
+<script>
+  (function () {
+    const terminalOutput = document.getElementById('terminalOutput');
+    if (!terminalOutput) return;
+
+    const lines = Array.from(terminalOutput.querySelectorAll('.terminal-line'));
+    let isAnimating = false;
+
+    // Typing speed in milliseconds per character
+    const TYPING_SPEED = 20;
+    const WAIT_AFTER_FIRST_LINE = 3000; // 3 seconds
+    const WAIT_BETWEEN_LINES = 1000; // 1 second
+    const WAIT_AFTER_COMPLETE = 4000; // 4 seconds
+
+    // Type a single character
+    async function typeCharacter(element, char) {
+      return new Promise(resolve => {
+        element.textContent += char;
+        setTimeout(resolve, TYPING_SPEED);
+      });
+    }
+
+      // Type a complete line
+      async function typeLine(lineElement, text, lineIndex) {
+        // Remove cursor from all previous lines
+        const allCursors = terminalOutput.querySelectorAll('.terminal-cursor');
+        allCursors.forEach(cursor => cursor.remove());
+        
+        // Clear the line
+        lineElement.innerHTML = '';
+        
+        // Create cursor
+        const cursor = document.createElement('span');
+        cursor.className = 'terminal-cursor';
+        lineElement.appendChild(cursor);
+
+        // Check if this is an error line with dot
+        const hasErrorDot = lineElement.dataset.type === 'error-with-dot';
+        
+        if (hasErrorDot) {
+          // Add the error dot first
+          const dot = document.createElement('span');
+          dot.className = 'terminal-error-dot';
+          lineElement.insertBefore(dot, cursor);
+        }
+
+        // Determine typing speed based on line index
+        // Lines 2-5 (index 1-4) have speed 10ms, rest have 20ms
+        const speed = (lineIndex >= 1 && lineIndex <= 4) ? 10 : 20;
+
+        // Type each character
+        for (let char of text) {
+          // Insert character before cursor
+          const textNode = document.createTextNode(char);
+          lineElement.insertBefore(textNode, cursor);
+          await new Promise(resolve => setTimeout(resolve, speed));
+        }
+
+        // Keep cursor visible on this line during wait time
+        // It will be removed when the next line starts typing
+      }
+
+    // Clear all lines
+    function clearAllLines() {
+      lines.forEach(line => {
+        line.innerHTML = '';
+      });
+    }
+
+    // Main animation function
+    async function runAnimation() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      // Clear all lines first
+      clearAllLines();
+
+      // Type each line with proper delays
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const text = line.dataset.text;
+
+        if (text) {
+          await typeLine(line, text, i);
+
+          // Wait after typing
+          if (i === 0) {
+            // Wait 3 seconds after first line
+            await new Promise(resolve => setTimeout(resolve, WAIT_AFTER_FIRST_LINE));
+          } else if (i < lines.length - 1) {
+            // Wait 1 second between other lines
+            await new Promise(resolve => setTimeout(resolve, WAIT_BETWEEN_LINES));
+          }
+        }
+      }
+
+      // Wait 4 seconds after all lines are complete
+      await new Promise(resolve => setTimeout(resolve, WAIT_AFTER_COMPLETE));
+
+      isAnimating = false;
+
+      // Restart the animation
+      runAnimation();
+    }
+
+    // Start the animation when the page loads
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', runAnimation);
+    } else {
+      runAnimation();
+    }
+  })();
+</script>
 </body>
 
 </html>

@@ -7305,3 +7305,412 @@ a {
 .brand_guidelines_typography_row:hover .brand_guidelines_typography_size {
   animation: brand_guidelines_typography_glow 2s ease-in-out infinite;
 }
+
+/* ============================= */
+/* Terminal Interface Styles     */
+/* ============================= */
+
+.terminal-container {
+  width: 100%;
+  max-width: 639px;
+  background: #000000;
+  border-radius: 25px;
+  border: 1px solid transparent;
+  background-image: 
+    linear-gradient(#000000, #000000),
+    linear-gradient(to bottom, rgba(101, 218, 0, 1), rgba(101, 218, 0, 0));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+
+.terminal-header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-dot-red {
+  background-color: #FF5F57;
+}
+
+.terminal-dot-yellow {
+  background-color: #FEBC2E;
+}
+
+.terminal-dot-green {
+  background-color: #28C840;
+}
+
+.terminal-divider {
+  height: 1px;
+  background-color: #262626;
+  margin: 0 20px;
+}
+
+.terminal-body {
+  padding: 30px 20px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-size: 14px;
+  line-height: 2.5;
+  overflow-x: auto;
+}
+
+.terminal-content-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  min-width: 580px;
+  width: 100%;
+}
+
+.terminal-line-numbers {
+  display: flex;
+  flex-direction: column;
+  min-width: 20px;
+  flex-shrink: 0;
+  color: #262626;
+  font-size: 14px;
+  line-height: 2.5;
+  user-select: none;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.line-number {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.terminal-output {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.terminal-line {
+  white-space: nowrap;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.terminal-command {
+  color: #DBDBDB;
+}
+
+.terminal-info {
+  color: #9DC1DA;
+}
+
+.terminal-success {
+  color: #9DC1DA;
+}
+
+.terminal-warning {
+  color: #E9FF67;
+}
+
+.terminal-error {
+  color: #FC3A3E;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.terminal-error-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FC3A3E;
+  flex-shrink: 0;
+}
+
+.terminal-white {
+  color: #FFFFFF;
+}
+
+.terminal-report {
+  color: #4ADE80;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .terminal-container {
+    max-width: 550px;
+  }
+  
+  .terminal-body {
+    font-size: 13px;
+    line-height: 2.4;
+  }
+  
+  .terminal-line-numbers {
+    font-size: 13px;
+    line-height: 2.4;
+  }
+  
+  .line-number {
+    height: 31.2px;
+  }
+  
+  .terminal-line {
+    height: 31.2px;
+  }
+}
+
+@media (max-width: 992px) {
+  .terminal-container {
+    max-width: 480px;
+  }
+  
+  .terminal-header {
+    padding: 16px;
+  }
+  
+  .terminal-body {
+    padding: 25px 16px;
+    font-size: 12px;
+    line-height: 2.3;
+  }
+  
+  .terminal-divider {
+    margin: 0 16px;
+  }
+  
+  .terminal-line-numbers {
+    font-size: 12px;
+    line-height: 2.3;
+  }
+  
+  .line-number {
+    height: 27.6px;
+  }
+  
+  .terminal-line {
+    height: 27.6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-container {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .terminal-header {
+    padding: 14px;
+  }
+  
+  .terminal-controls {
+    gap: 8px;
+  }
+  
+  .terminal-dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .terminal-body {
+    padding: 20px 14px;
+    font-size: 11px;
+    line-height: 2.2;
+  }
+  
+  .terminal-divider {
+    margin: 0 14px;
+  }
+  
+  .terminal-content-wrapper {
+    gap: 12px;
+    min-width: 450px;
+  }
+  
+  .terminal-line-numbers {
+    min-width: 16px;
+    font-size: 11px;
+    line-height: 2.2;
+    padding-right: 8px;
+  }
+  
+  .line-number {
+    height: 24.2px;
+  }
+  
+  .terminal-line {
+    height: 24.2px;
+  }
+  
+  .terminal-error-dot {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .terminal-container {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+  
+  .terminal-header {
+    padding: 12px;
+  }
+  
+  .terminal-controls {
+    gap: 6px;
+  }
+  
+  .terminal-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .terminal-body {
+    padding: 16px 12px;
+    font-size: 10px;
+    line-height: 2.1;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .terminal-divider {
+    margin: 0 12px;
+  }
+  
+  .terminal-content-wrapper {
+    gap: 10px;
+    min-width: 350px;
+  }
+  
+  .terminal-line-numbers {
+    min-width: 14px;
+    font-size: 10px;
+    line-height: 2.1;
+    padding-right: 6px;
+  }
+  
+  .line-number {
+    height: 21px;
+  }
+  
+  .terminal-line {
+    height: 21px;
+  }
+  
+  .terminal-error-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .terminal-container {
+    border-radius: 12px;
+  }
+  
+  .terminal-header {
+    padding: 10px;
+  }
+  
+  .terminal-controls {
+    gap: 5px;
+  }
+  
+  .terminal-dot {
+    width: 7px;
+    height: 7px;
+  }
+  
+  .terminal-body {
+    padding: 14px 10px;
+    font-size: 9px;
+    line-height: 2.0;
+  }
+  
+  .terminal-divider {
+    margin: 0 10px;
+  }
+  
+  .terminal-content-wrapper {
+    gap: 8px;
+    min-width: 300px;
+  }
+  
+  .terminal-line-numbers {
+    min-width: 12px;
+    font-size: 9px;
+    line-height: 2.0;
+    padding-right: 5px;
+  }
+  
+  .line-number {
+    height: 18px;
+  }
+  
+  .terminal-line {
+    height: 18px;
+  }
+  
+  .terminal-error-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Ensure overflow scrolling on small screens */
+@media (max-width: 576px) {
+  .terminal-body::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .terminal-body::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  .terminal-body::-webkit-scrollbar-thumb {
+    background: #333333;
+    border-radius: 2px;
+  }
+  
+  .terminal-body::-webkit-scrollbar-thumb:hover {
+    background: #444444;
+  }
+}
+
+/* Terminal Typing Cursor */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #00ff88;
+  margin-left: 2px;
+  animation: cursorBlink 0.7s infinite;
+  vertical-align: middle;
+}
+
+@keyframes cursorBlink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
