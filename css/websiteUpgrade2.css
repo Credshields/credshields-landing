@@ -7365,8 +7365,8 @@ a {
 
 .terminal-body {
   padding: 30px 20px;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
-  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   line-height: 2.5;
   overflow-x: auto;
 }
@@ -7414,18 +7414,22 @@ a {
 
 .terminal-command {
   color: #DBDBDB;
+  font-weight: 600;
 }
 
 .terminal-info {
   color: #9DC1DA;
+  font-weight: 600;
 }
 
 .terminal-success {
   color: #9DC1DA;
+  font-weight: 600;
 }
 
 .terminal-warning {
   color: #E9FF67;
+  font-weight: 600;
 }
 
 .terminal-error {
@@ -7445,10 +7449,12 @@ a {
 
 .terminal-white {
   color: #FFFFFF;
+  font-weight: 600;
 }
 
 .terminal-report {
   color: #4ADE80;
+  font-weight: 600;
 }
 
 /* Responsive Design */
