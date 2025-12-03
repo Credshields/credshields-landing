@@ -1480,7 +1480,25 @@ onclick="window.open('https://blog.solidityscan.com/', '_blank');"
       (function() {
         // Get URL parameters
         const urlParams = new URLSearchParams(window.location.search);
+
+        // Handle URL redirections for alternative parameter names
+        const tab = urlParams.get('tab');
         const tabName = urlParams.get('tab-name');
+        
+        // Redirect if using alternative parameter names
+        if (tab === 'recent-audits' || tabName === 'recently-audited') {
+          // Redirect to the canonical URL for Recent Audits
+          window.location.replace('recently-audited.html?tab-name=recent');
+          return;
+        } else if (tab === 'popular-projects') {
+          // Redirect to the canonical URL for Popular Projects
+          window.location.replace('recently-audited.html?tab-name=popular');
+          return;
+        } else if (tab === 'kyc-reports') {
+          // Redirect to the canonical URL for KYC Reports
+          window.location.replace('recently-audited.html?tab-name=kyc');
+          return;
+        }
 
         // Map tab-name values to tab IDs
         const tabMap = {
