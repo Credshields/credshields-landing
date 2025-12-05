@@ -2374,9 +2374,10 @@
 
     // Typing speed in milliseconds per character
     const TYPING_SPEED = 20;
-    const WAIT_AFTER_FIRST_LINE = 3000; // 3 seconds
-    const WAIT_BETWEEN_LINES = 0; // 1 second
-    const WAIT_AFTER_COMPLETE = 4000; // 4 seconds
+    const WAIT_AFTER_FIRST_LINE = 2000; // 3 seconds
+    const WAIT_BETWEEN_LINES = 1000; // 1 second
+    const TWO_SECONDS = 2000; // 2 seconds
+    const WAIT_AFTER_COMPLETE = 6000; // 4 seconds
 
     // Type a single character
     async function typeCharacter(element, char) {
@@ -2453,10 +2454,16 @@
           if (i === 0) {
             // Wait 3 seconds after first line
             await new Promise(resolve => setTimeout(resolve, WAIT_AFTER_FIRST_LINE));
-          } else if (i < lines.length - 1) {
+          } else if (i >= 1 && i <= 4) {
             // Wait 1 second between other lines
             await new Promise(resolve => setTimeout(resolve, WAIT_BETWEEN_LINES));
-          }
+          }else if (i >= 5 && i <= 7) {
+            // Wait 1 second between other lines
+            await new Promise(resolve => setTimeout(resolve, TWO_SECONDS));
+          }else if (i >= 8) {
+            // Wait 1 second between other lines
+            await new Promise(resolve => setTimeout(resolve, WAIT_BETWEEN_LINES));
+          }         
         }
       }
 

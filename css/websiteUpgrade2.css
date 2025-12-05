@@ -7437,6 +7437,7 @@ a {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-weight: 600;
 }
 
 .terminal-error-dot {
