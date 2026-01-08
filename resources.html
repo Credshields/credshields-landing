@@ -756,14 +756,10 @@
                   aria-expanded="false"
                   data-hover="dropdown"
                 >
-                  <p style="margin: 0 12px; cursor: pointer">
+                  <a style="margin: 0 12px; cursor: pointer" href="resources.html">
                     Resources
-                    <img
-                      src="images/down_arrow.svg"
-                      alt="down"
-                      class="img-fluid"
-                    />
-                  </p>
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                  </a>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
                   <a class="dropdown-item" href="recently-audited.html?tab-name=recent"
@@ -777,7 +773,6 @@
                   >
                   <a class="dropdown-item" href="brand-guidlines.html">Brand Guidelines</a>
                 <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
-                <a class="dropdown-item" href="resources.html">Resources</a>
                   <a class="dropdown-item" href="https://discover.credshields.com/" target="_blank">Blog</a>
 
                 </div>
@@ -982,23 +977,6 @@
       </div>
     </header>
 
-    <!-- header section end -->
-
-    <div class="eco_system_new_floating_icons">
-      <div class="eco_system_new_icon_float eco_system_new_icon_1">
-        <img src="images/arthera_icon.svg" alt="eco_system_new_icon_1" class="img-fluid">
-      </div>
-      <div class="eco_system_new_icon_float eco_system_new_icon_2">
-        <img src="images/camino_icon.svg" alt="eco_system_new_icon_2" class="img-fluid">
-      </div>
-      <div class="eco_system_new_icon_float eco_system_new_icon_3">
-        <img src="images/iotex_icon.svg" alt="eco_system_new_icon_3" class="img-fluid">
-      </div>
-      <div class="eco_system_new_icon_float eco_system_new_icon_4">
-        <img src="images/avalanche_icon.svg" alt="eco_system_new_icon_4" class="img-fluid">
-      </div>
-    </div>
-
     <section class="eco_system_new_container">
       <div class="eco_system_new_header">
         <h1 class="eco_system_new_title">
@@ -1010,21 +988,14 @@
           and tools.
         </p>
         <div class="eco_system_new_buttons">
-          <button class="eco_system_new_btn eco_system_new_btn_primary" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y'});return false;" style="cursor: pointer;">
-            Submit Project
+          <button class="eco_system_new_btn eco_system_new_btn_primary" onclick="window.location.href = '#resourcesGridSection'"
+            style="cursor: pointer;">
+            Browse Resources
           </button>
-          <button class="book_security_audit_btn run_free_ai_scan_btn" onclick="window.location.href = './index.html#quickscan_container_sec'" style="cursor: pointer;">
-            <span style="color: #ffffff; font-weight: 700; margin-right: 1px"
-              >Run Free</span
-            >
-            <img
-              src="images/ai_icon_magic.svg"
-              alt="ai_icon_magic"
-              class="img-fluid"
-            />
-            <span style="color: #38ff7e; font-weight: 700; margin-left: 1px"
-              >AI Scan</span
-            >
+          <button class="book_security_audit_btn run_free_ai_scan_btn"
+            onclick="window.open(' https://youtube.com/playlist?list=PLvUdBj6B_rh0qDFaH90mCgUkEZ1lXdMmB&si=0Ne75ggLa49ZjlRBen', '_blank');;return false;"
+            style="cursor: pointer;">
+            View Demo
           </button>
         </div>
       </div>
@@ -1032,7 +1003,7 @@
       
 
       <!-- Security Resources Section -->
-      <section class="security_resources_section">
+      <section class="security_resources_section" id="resourcesGridSection">
         <!-- Header -->
          <div class="eco_system_new_controls">
         <select class="eco_system_new_dropdown" id="categoryFilter">
@@ -1311,12 +1282,10 @@
             <!-- Main Content -->
             <div class="secure_your_protocol_content">
               <h1 class="secure_your_protocol_title">
-                Secure Your Protocol Today
+                Stay Updated with New Resources
               </h1>
               <p class="secure_your_protocol_description">
-                Don't wait for a security incident to happen. Get your
-                comprehensive security audit from the team trusted by leading
-                fortune 500 companies.
+                Subscribe to our newsletter and get notified when we publish new security resources, guides, and industry insights.
               </p>
   
               <!-- CTA Buttons -->
@@ -1324,16 +1293,16 @@
                 <a
                   href="#"
                   class="secure_your_protocol_btn secure_your_protocol_btn_primary"
-                  onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;"
+                  onclick="window.location.href = '#resourcesGridSection'"
                 >
-                  Request Manual Audit
+                  Browse Resources
                 </a>
                 <a
                   href="#"
                   class="secure_your_protocol_btn secure_your_protocol_btn_secondary"
-                  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/koda-credshields/30min'});return false;"
-                >
-                  Book Security Review
+                  onclick="window.open(' https://youtube.com/playlist?list=PLvUdBj6B_rh0qDFaH90mCgUkEZ1lXdMmB&si=0Ne75ggLa49ZjlRBen', '_blank');;return false;"
+                  >
+                  View Demo
                 </a>
               </div>
   
