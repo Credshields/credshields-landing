@@ -1866,12 +1866,20 @@ onclick="window.open('https://blog.solidityscan.com/', '_blank');"
         if (e.key === 'Escape') closeResourceFormModal();
       });
 
-      // Resource button hidden field sync
-      document.querySelectorAll('.resource-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-          const v = this.getAttribute('data-resource');
-          const field = document.querySelector('input[name="requested_resource"]');
-          if (field) field.value = v;
+      function setRequestedResource(value) {
+        // HubSpot may name it like "0-1/requested_resource"
+        const field =
+          document.querySelector('input[name="0-1/requested_resource"]') ||
+          [...document.querySelectorAll('input[type="hidden"]')].find(
+            (i) => i.name && i.name.includes('requested_resource')
+          );
+
+        if (field) field.value = value;
+      }
+
+      document.querySelectorAll('.resource-btn').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          setRequestedResource(this.getAttribute('data-resource'));
         });
       });
 
