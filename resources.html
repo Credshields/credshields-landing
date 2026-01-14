@@ -1722,7 +1722,7 @@ onclick="window.open('https://blog.solidityscan.com/', '_blank');"
                   <span>${resource.createdAt ? formatDate(resource.createdAt) : 'N/A'}</span>
                 </div>
               </div>
-              <button class="security_resource_download_btn resource-btn" data-resource="${generateResourceId(resource.title)}" onclick="openResourceFormModal(this)">
+              <button class="security_resource_download_btn resource-btn" data-resource="${generateResourceId(resource.title)}" data-form-url="${resource.resource_form || ''}" onclick="openResourceForm(this)">
                 Download Now
               </button>
             </div>
@@ -1803,6 +1803,18 @@ onclick="window.open('https://blog.solidityscan.com/', '_blank');"
         // Fetch resources on page load
         fetchResources();
       });
+
+      // Open the resource form URL in Calendly popup
+      function openResourceForm(btn) {
+        const formUrl = btn.getAttribute('data-form-url');
+        if (formUrl) {
+          Calendly.initPopupWidget({url: formUrl});
+          return false;
+        } else {
+          // Fallback to modal if no form URL provided
+          openResourceFormModal(btn);
+        }
+      }
 
       // Generate a URL-safe resource identifier from title
       function generateResourceId(title) {
