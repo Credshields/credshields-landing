@@ -1789,20 +1789,32 @@
         const modal = document.getElementById('resourceFormModal');
         const formContainer = document.getElementById('hubspotFormContainer');
         const successMessage = document.getElementById('formSuccessMessage');
+        const header = document.querySelector('.resource_form_modal_header');
 
         // Reset to show form, hide success message
-        formContainer.style.display = 'block';
         successMessage.style.display = 'none';
+        if (header) header.style.display = 'block';
+        formContainer.style.display = 'block';
+
+        // Reinitialize HubSpot form to reset its state (clears "Form submitted" message)
+        formContainer.innerHTML = `
+          <script src="https://js-eu1.hsforms.net/forms/embed/24889894.js" defer><\/script>
+          <div class="hs-form-frame" data-region="eu1" data-form-id="6050bbc4-2a09-422a-92c1-184d8b4f9518"
+            data-portal-id="24889894"></div>
+        `;
 
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
 
-        // Set the hidden field value
+        // Set the hidden field value after form reinitializes
         const resourceId = btn.getAttribute('data-resource');
         setTimeout(() => {
-          const field = document.querySelector('input[name="requested_resource"]');
+          const field = document.querySelector('input[name="requested_resource"]') ||
+            [...document.querySelectorAll('input[type="hidden"]')].find(
+              (i) => i.name && i.name.includes('requested_resource')
+            );
           if (field) field.value = resourceId;
-        }, 500);
+        }, 1000);
       }
 
       // Close the resource form modal
