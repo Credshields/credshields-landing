@@ -1950,8 +1950,6 @@ a {
   background-clip: text;
   margin-bottom: 9px;
   line-height: 1.3;
-  height: 62px;
-  overflow: hidden;
 }
 
 .security_resource_description {
@@ -1959,23 +1957,6 @@ a {
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 0;
-  height: 72px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(56, 255, 126, 0.3) transparent;
-}
-
-.security_resource_description::-webkit-scrollbar {
-  width: 4px;
-}
-
-.security_resource_description::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.security_resource_description::-webkit-scrollbar-thumb {
-  background: rgba(56, 255, 126, 0.3);
-  border-radius: 2px;
 }
 
 .security_resource_meta {
@@ -1983,7 +1964,8 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  margin-top: 57px;
+  margin-top: auto;
+  padding-top: 30px;
 }
 
 .security_resource_meta_item {
