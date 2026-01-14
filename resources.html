@@ -1112,9 +1112,9 @@
           position: relative;
           background: linear-gradient(195deg, #0d1a12 0%, #08110c 40%, #030b06 100%);
           border: 1px solid rgba(56, 255, 126, 0.2);
-          border-radius: 24px;
-          padding: 40px;
-          max-width: 480px;
+          border-radius: 20px;
+          padding: 28px 32px;
+          max-width: 420px;
           width: 90%;
           max-height: 90vh;
           overflow-y: auto;
@@ -1137,35 +1137,35 @@
         }
         .resource_form_modal_header {
           text-align: center;
-          margin-bottom: 30px;
+          margin-bottom: 20px;
         }
         .resource_form_modal_icon {
-          margin-bottom: 16px;
+          margin-bottom: 12px;
         }
         .resource_form_modal_title {
-          font-size: 24px;
+          font-size: 22px;
           font-weight: 700;
           background: linear-gradient(180deg, #d8fde5 0%, #c0e5cd 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
         }
         .resource_form_modal_subtitle {
           color: #8A94A6;
-          font-size: 14px;
-          line-height: 1.5;
+          font-size: 13px;
+          line-height: 1.4;
         }
 
         /* HubSpot Form Styling */
         .resource_form_modal_content .hs-form-frame {
-          margin-top: 10px;
+          margin-top: 0;
         }
         .resource_form_modal_content .hs-form-frame label {
           color: #fff !important;
-          font-size: 14px !important;
+          font-size: 13px !important;
           font-weight: 500 !important;
-          margin-bottom: 8px !important;
+          margin-bottom: 6px !important;
           display: block !important;
         }
         .resource_form_modal_content .hs-form-frame input[type="text"],
@@ -1175,9 +1175,9 @@
           width: 100% !important;
           background: rgba(255, 255, 255, 0.05) !important;
           border: 1px solid rgba(255, 255, 255, 0.15) !important;
-          border-radius: 12px !important;
+          border-radius: 10px !important;
           color: #fff !important;
-          padding: 14px 16px !important;
+          padding: 12px 14px !important;
           font-size: 14px !important;
           box-sizing: border-box !important;
           transition: border-color 0.3s ease !important;
@@ -1197,13 +1197,13 @@
           background: linear-gradient(135deg, #38ff7e 0%, #2ed665 100%) !important;
           color: #000 !important;
           border: none !important;
-          border-radius: 12px !important;
-          padding: 16px 24px !important;
-          font-size: 16px !important;
+          border-radius: 10px !important;
+          padding: 14px 20px !important;
+          font-size: 15px !important;
           font-weight: 600 !important;
           cursor: pointer !important;
           transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-          margin-top: 16px !important;
+          margin-top: 12px !important;
         }
         .resource_form_modal_content .hs-form-frame .hs-button:hover,
         .resource_form_modal_content .hs-form-frame input[type="submit"]:hover {
@@ -1804,16 +1804,9 @@ onclick="window.open('https://blog.solidityscan.com/', '_blank');"
         fetchResources();
       });
 
-      // Open the resource form URL in Calendly popup
+      // Open the resource form in custom themed modal
       function openResourceForm(btn) {
-        const formUrl = btn.getAttribute('data-form-url');
-        if (formUrl) {
-          Calendly.initPopupWidget({url: formUrl});
-          return false;
-        } else {
-          // Fallback to modal if no form URL provided
-          openResourceFormModal(btn);
-        }
+        openResourceFormModal(btn);
       }
 
       // Generate a URL-safe resource identifier from title
