@@ -2284,29 +2284,32 @@
       });
     });
 
-    document
-      .getElementById("run_free_quickscan")
-      .addEventListener("click", function () {
+      const quickscan1 = document.getElementById("run_free_quickscan");
+      if (quickscan1) {
+        quickscan1.addEventListener("click", function () {
         document.getElementById("quickscan_container_sec").scrollIntoView({
           behavior: "smooth",
         });
       });
+    }
 
-    document
-      .getElementById("run_free_quickscan_2")
-      .addEventListener("click", function () {
+      const quickscan2 = document.getElementById("run_free_quickscan_2");
+      if (quickscan2) {
+        quickscan2.addEventListener("click", function () {
         document.getElementById("quickscan_container_sec").scrollIntoView({
           behavior: "smooth",
         });
       });
+    }
 
-    document
-      .getElementById("run_free_quickscan_3")
-      .addEventListener("click", function () {
+      const quickscan3 = document.getElementById("run_free_quickscan_3");
+      if (quickscan3) {
+        quickscan3.addEventListener("click", function () {
         document.getElementById("quickscan_container_sec").scrollIntoView({
           behavior: "smooth",
         });
       });
+    }
   </script>
 
   <!-- 5. HubSpot script (async) -->

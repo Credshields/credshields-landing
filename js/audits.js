@@ -151,14 +151,16 @@ function parseCustomDate(dateStr) {
 }
 
 function fillPopularAudits() {
+  const container = document.querySelector(".popular-audits");
+  if (!container) return;
   popularAudits.forEach((obj) => {
-    const container = document.querySelector(".popular-audits");
     fillAuditRow(obj, container);
   });
 }
 
 function fillAuditTable(data) {
   const container = document.querySelector(".recent-audits");
+  if (!container) return;
   const auditRows = container.querySelectorAll(".audit-card");
   auditRows.forEach((row) => {
     row.remove();
@@ -295,6 +297,7 @@ function setRandomFallbackImage(imgElement) {
 
 // Function to generate page buttons
 function generatePageButtons() {
+  if (!pagesContainer) return;
   pagesContainer.innerHTML = "";
 
   let startPage = Math.max(1, currentPage - 1);
@@ -321,9 +324,8 @@ function generatePageButtons() {
     pagesContainer.appendChild(pageButton);
   }
 
-  prevButton.disabled = currentPage === 1;
-
-  nextButton.disabled = currentPage === totalPages;
+  if (prevButton) prevButton.disabled = currentPage === 1;
+  if (nextButton) nextButton.disabled = currentPage === totalPages;
 }
 
 // Function to update pagination
@@ -332,25 +334,29 @@ function updatePagination() {
 }
 
 // Previous button click event
-prevButton.addEventListener("click", () => {
-  if (currentPage > 1) {
-    const startIndex = (currentPage - 2) * 6;
-    fillAuditTable(auditFilesList.slice(startIndex, startIndex + 6));
-    currentPage--;
-    updatePagination();
-  }
-});
+if (prevButton) {
+  prevButton.addEventListener("click", () => {
+    if (currentPage > 1) {
+      const startIndex = (currentPage - 2) * 6;
+      fillAuditTable(auditFilesList.slice(startIndex, startIndex + 6));
+      currentPage--;
+      updatePagination();
+    }
+  });
+}
 
 // Next button click event
-nextButton.addEventListener("click", () => {
-  if (currentPage < totalPages) {
-    const startIndex = currentPage * 6;
-    fillAuditTable(auditFilesList.slice(startIndex, startIndex + 6));
+if (nextButton) {
+  nextButton.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      const startIndex = currentPage * 6;
+      fillAuditTable(auditFilesList.slice(startIndex, startIndex + 6));
 
-    currentPage++;
-    updatePagination();
-  }
-});
+      currentPage++;
+      updatePagination();
+    }
+  });
+}
 
 function openTab(evt, tabName) {
   const tabContents = document.querySelectorAll(".tab-content");

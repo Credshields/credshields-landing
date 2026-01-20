@@ -142,4 +142,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-observer.observe(document.getElementById("graph"));
+const graphElement = document.getElementById("graph");
+if (graphElement) {
+  observer.observe(graphElement);
+}
