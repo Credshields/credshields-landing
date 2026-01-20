@@ -85,17 +85,16 @@
       y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "ko6w13w47q");
   </script>
-  <!--gtag-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KBZQ6FE87P"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-KBZQ6FE87P");
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PN6ZFK2F');</script>
+  <!-- End Google Tag Manager -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <!-- Custom Css file Start -->
   <link rel="stylesheet" href="css/landing_page_i_upgrade.css" />
@@ -498,6 +497,10 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+
   <!-- Gradients -->
 
   <!-- <div class="fixed_bg_container">
@@ -2281,29 +2284,32 @@
       });
     });
 
-    document
-      .getElementById("run_free_quickscan")
-      .addEventListener("click", function () {
+      const quickscan1 = document.getElementById("run_free_quickscan");
+      if (quickscan1) {
+        quickscan1.addEventListener("click", function () {
         document.getElementById("quickscan_container_sec").scrollIntoView({
           behavior: "smooth",
         });
       });
+    }
 
-    document
-      .getElementById("run_free_quickscan_2")
-      .addEventListener("click", function () {
+      const quickscan2 = document.getElementById("run_free_quickscan_2");
+      if (quickscan2) {
+        quickscan2.addEventListener("click", function () {
         document.getElementById("quickscan_container_sec").scrollIntoView({
           behavior: "smooth",
         });
       });
+    }
 
-    document
-      .getElementById("run_free_quickscan_3")
-      .addEventListener("click", function () {
+      const quickscan3 = document.getElementById("run_free_quickscan_3");
+      if (quickscan3) {
+        quickscan3.addEventListener("click", function () {
         document.getElementById("quickscan_container_sec").scrollIntoView({
           behavior: "smooth",
         });
       });
+    }
   </script>
 
   <!-- 5. HubSpot script (async) -->

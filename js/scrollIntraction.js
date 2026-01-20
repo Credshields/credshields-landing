@@ -2,6 +2,12 @@
 const productImg = document.getElementById("productImg");
 const container = document.querySelector(".products_one_container");
 const productWrap = document.querySelector(".products_one_wrap");
+
+// Guard clause: exit early if required elements don't exist
+if (!container || !productWrap || !productImg) {
+  // Elements not found, skip scroll interaction setup
+} else {
+
 const initialOffset = container.offsetTop;
 const initialTranslateY = 216;
 const initialTranslateX = 0;
@@ -3339,3 +3345,5 @@ function showChainPopAnimation() {
     var anim = lottie.loadAnimation(options);
   }
 }
+
+} // End of guard clause else block
