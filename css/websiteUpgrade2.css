@@ -7969,3 +7969,214 @@ a {
     opacity: 0;
   }
 }
+
+/* ================================
+   Logo Card Action Buttons
+   ================================ */
+
+.brand_guidelines_logo_card {
+  position: relative;
+}
+
+.brand_guidelines_logo_actions {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 8px 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.brand_guidelines_logo_card:hover .brand_guidelines_logo_actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brand_guidelines_logo_action_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.brand_guidelines_logo_action_btn:hover {
+  background: rgba(120, 255, 4, 0.15);
+  color: #000;
+}
+
+.brand_guidelines_logo_action_btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Dark variant for light background cards */
+.brand_guidelines_logo_action_btn_dark {
+  color: #333;
+}
+
+.brand_guidelines_logo_action_btn_dark:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+/* ================================
+   Logo Download Modal
+   ================================ */
+
+.logo_download_modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.logo_download_modal_overlay.logo_download_modal_visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo_download_modal_content {
+  background: linear-gradient(135deg, #0d1b13 0%, #0a1610 100%);
+  border: 1px solid #1c3023;
+  border-radius: 24px;
+  padding: 40px 48px;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.logo_download_modal_overlay.logo_download_modal_visible .logo_download_modal_content {
+  transform: scale(1) translateY(0);
+}
+
+.logo_download_modal_close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #7EA18A;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_download_modal_close:hover {
+  background: rgba(120, 255, 4, 0.1);
+  color: #78FF04;
+}
+
+.logo_download_modal_title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.logo_download_modal_subtitle {
+  color: #7EA18A;
+  font-size: 14px;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.logo_download_modal_buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.logo_download_modal_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 32px;
+  border-radius: 16px;
+  border: 1px solid #1c3023;
+  background: linear-gradient(135deg, #132115 0%, #091209 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.logo_download_modal_btn svg {
+  color: #78FF04;
+  transition: transform 0.3s ease;
+}
+
+.logo_download_modal_btn span {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo_download_modal_btn small {
+  color: #7EA18A;
+  font-size: 12px;
+}
+
+.logo_download_modal_btn:hover {
+  border-color: #78FF04;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(120, 255, 4, 0.2);
+}
+
+.logo_download_modal_btn:hover svg {
+  transform: scale(1.1);
+}
+
+.logo_download_modal_btn:active {
+  transform: translateY(-2px);
+}
+
+/* Responsive styles for modal */
+@media (max-width: 480px) {
+  .logo_download_modal_content {
+    padding: 32px 24px;
+  }
+
+  .logo_download_modal_buttons {
+    flex-direction: column;
+  }
+
+  .logo_download_modal_btn {
+    min-width: 100%;
+    padding: 20px 24px;
+  }
+
+  .logo_download_modal_title {
+    font-size: 20px;
+  }
+}
