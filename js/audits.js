@@ -239,7 +239,7 @@ function fillAuditRow(audit, container) {
             </div>
           </div>
           <div class="vuln infor-vuln">
-            <p>Infor</p>
+            <p>Informational</p>
             <div class="infor-count">
               <div></div>
               <p>${audit.informational}</p>
