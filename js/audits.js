@@ -123,7 +123,7 @@ async function fetchAuditData() {
 
     // Parse the JSON data
     const data = await response.json();
-    let audits = data?.audits || [];
+    let audits = data?.audits?.filter((item) => item.date !== "") || [];
 
     // Sort audits by date (latest first)
     audits.sort((a, b) => parseCustomDate(b.date) - parseCustomDate(a.date));
