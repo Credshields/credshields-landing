@@ -1505,18 +1505,17 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              A list of the 10 most critical smart contract vulnerabilities, adapted from OWASP's traditional Top 10,
-              using Web3-specific exploit data.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              The OWASP Smart Contract Top 10 is a risk prioritization framework that identifies the most prevalent and high-impact vulnerability classes observed in production smart contracts.
+              It translates real incident data, audit learnings, and practitioner feedback into an actionable reference for developers, auditors, and security teams.
+            </div>
           </div>
         </div>
 
         <div class="owasp_freq_asked_accordion">
           <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
             <h3 class="owasp_freq_asked_accordion_title">
-              How does CredShields contribute to the OWASP Smart Contract Top
-              10?
+              How is this different from traditional OWASP Top 10?
             </h3>
             <button class="owasp_freq_asked_accordion_button">
               <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
@@ -1532,17 +1531,25 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              Access control issues, reentrancy, and front-running are among the top. Our data shows access control
-              vulnerabilities alone accounted for 67% of losses in 2024.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              The traditional OWASP Top 10 focuses on web application security risks such as injection and broken authentication.
+              The Smart Contract Top 10 addresses execution-layer risks unique to blockchain systems, including:
+              <ul>
+                <li>Privileged role abuse</li>
+                <li>Arbitrary call paths</li>
+                <li>Flash-loan driven manipulation</li>
+                <li>Upgradeability risks</li>
+                <li>Oracle dependencies</li>
+              </ul>
+              It reflects how decentralized systems fail, not how web servers fail.
+            </div>
           </div>
         </div>
 
         <div class="owasp_freq_asked_accordion">
           <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
             <h3 class="owasp_freq_asked_accordion_title">
-              What are Access Control Vulnerabilities?
+              Who should use the Smart Contract Top 10?
             </h3>
             <button class="owasp_freq_asked_accordion_button">
               <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
@@ -1558,17 +1565,25 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              Use automated scanning tools like SolidityScan, conduct manual audits, and follow secure coding best
-              practices based on the OWASP Smart Contract Top 10.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              It is designed for:
+              <ul>
+                <li>Smart contract developers</li>
+                <li>Security auditors</li>
+                <li>Protocol architects</li>
+                <li>Exchanges & custodians</li>
+                <li>Web3 security product builders</li>
+                <li>Enterprise blockchain teams</li>
+              </ul>
+              If your system can move value without human intervention, this framework is relevant.
+            </div>
           </div>
         </div>
 
         <div class="owasp_freq_asked_accordion">
           <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
             <h3 class="owasp_freq_asked_accordion_title">
-              How can I check if my smart contract is vulnerable?
+              Is the Smart Contract Top 10 based on theory or real incidents?
             </h3>
             <button class="owasp_freq_asked_accordion_button">
               <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
@@ -1584,10 +1599,151 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              It sets a global, recognized standard for risk awareness and prevention, critical for developer trust and
-              enterprise adoption in the Web3 space.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              It is empirically grounded.
+              The categories are derived from:
+              <ul>
+                <li>Documented security incidents</li>
+                <li>Onchain exploit patterns</li>
+                <li>Audit findings</li>
+                <li>Practitioner surveys</li>
+                <li>Post-mortem analysis of high-profile breaches</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Does the Top 10 replace a full security audit?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              No.
+              The Smart Contract Top 10 is an awareness and prioritization layer, not a substitute for:
+              <ul>
+                <li>Manual audits</li>
+                <li>Formal verification</li>
+                <li>Runtime monitoring</li>
+                <li>Secure SDLC processes</li>
+              </ul>
+              It helps teams ask better questions earlier in the lifecycle.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              How should development teams use it in practice?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              It can be embedded into:
+              <ul>
+                <li>Threat modeling exercises</li>
+                <li>Secure coding checklists</li>
+                <li>Pre-deployment review gates</li>
+                <li>CI/CD static analysis baselines</li>
+                <li>Auditor scoping discussions</li>
+              </ul>
+              Many teams map their controls against each category to ensure systematic coverage.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Is this only for DeFi protocols?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              No.
+              While DeFi incidents heavily inform the dataset, the risk classes apply to:
+              <ul>
+                <li>Token contracts</li>
+                <li>NFT platforms</li>
+                <li>DAO governance systems</li>
+                <li>Bridges and cross-chain systems</li>
+                <li>RWA tokenization platforms</li>
+                <li>Institutional custody systems</li>
+              </ul>
+              Any smart contract that manages value inherits systemic risk.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Can security tools map to the Top 10?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Yes.
+              Static analyzers, AI-based scanners, fuzzers, and manual review methodologies can map findings to the Top 10 categories.
+              This enables:
+              <ul>
+                <li>Standardized reporting</li>
+                <li>Risk scoring alignment</li>
+                <li>Better communication with stakeholders</li>
+                <li>Board-level risk articulation</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
