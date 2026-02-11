@@ -649,10 +649,18 @@
                   <a class="dropdown-item" href="https://discover.credshields.com/" target="_blank">Blog</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./owasp-smart-contract-top-10.html">
-                <p>OWASP Top 10</p>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+                <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" data-hover="dropdown">
+                  <a style="margin: 0 12px; cursor: pointer" href="#">
+                    OWASP Top 10
+                    <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
               </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2025.html">2025</a>
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2026.html">2026</a>
+              </div>
             </li>
           </ul>
           <nav class="navbar navbar-light desktop-menu">
@@ -807,6 +815,7 @@
           Smart Contract<br />
 
           <span class="eco_system_new_title_ecosystem">Top 10</span>
+          2026
         </h1>
         <p class="eco_system_new_subtitle">
           Our research with the OWASP Foundation helped shape the first-ever
@@ -965,10 +974,9 @@
   <section class="section_alignment_website owasp_top_10_risks_section">
     <div class="owasp_top_10_risks_container">
       <div class="owasp_top_10_risks_header">
-        <h2 class="owasp_top_10_risks_title">OWASP Smart Contract Top 10</h2>
+        <h2 class="owasp_top_10_risks_title">OWASP Smart Contract Top 10 2026</h2>
         <p class="owasp_top_10_risks_subtitle">
-          The most critical security risks facing smart contracts and Web3
-          applications in 2025.
+          The most critical security risks facing smart contracts and Web3 applications in 2026.
         </p>
       </div>
 
@@ -976,16 +984,15 @@
         <!-- SC01:2025 Access Control Vulnerabilities -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC01</span>:2025 Access Control Vulnerabilities
+            <span>SC01</span>:2026 Access Control Vulnerabilities
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Improper access controls allowing unauthorized users to execute
-            privileged functions.
+            Unauthorized access to privileged functions or critical protocol state.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">Poly Network Bridge Exploit - $611M</span>
+              <span class="owasp_top_10_risks_card_example_detail">UPCX Exploit — $70 million</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -998,16 +1005,15 @@
         <!-- SC02:2025 Reentrancy Attacks -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC02</span>:2025 Reentrancy Attacks
+            <span>SC02</span>:2026 Business Logic Vulnerabilities
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            External calls that allow attackers to recursively call functions
-            before state updates.
+            Flawed protocol logic enabling economic exploits despite correct checks
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">The DAO Hack - $60M</span>
+              <span class="owasp_top_10_risks_card_example_detail">Balancer V2 Composable Stable Pools Exploit — $95–121 M</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1020,16 +1026,15 @@
         <!-- SC03:2025 Integer Overflow/Underflow -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC03</span>:2025 Integer Overflow/Underflow
+            <span>SC03</span>:2026 Price Oracle Manipulation
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Mathematical operations that exceed variable limits causing
-            unexpected behavior.
+            Manipulable oracles skew prices enabling undercollateralized exploits
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">BEC Token Overflow - $900M Market Cap Loss</span>
+              <span class="owasp_top_10_risks_card_example_detail">Loopscale Oracle Price Exploit (Solana) — $5.8 million</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_high"></span>
@@ -1041,15 +1046,14 @@
         <!-- SC04:2025 Unchecked External Calls -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC04</span>:2025 Unchecked External Calls
+            <span>SC04</span>:2026 Flash Loan–Facilitated Attacks
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Failed external calls that don't properly handle return values or
-            exceptions.
+            Flash loans amplify bugs into large single-transaction drains.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
-              <span class="owasp_top_10_risks_card_example_label">King of Ether DoS Attack</span>
+              <span class="owasp_top_10_risks_card_example_label">Cetus Protocol Exploit — $223 M</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_high"></span>
@@ -1061,16 +1065,15 @@
         <!-- SC05:2025 Denial of Service -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC05</span>:2025 Denial of Service
+            <span>SC05</span>:2026 Lack of Input Validation
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Contract states or gas limit exploits that prevent normal
-            operation.
+            Insufficient input validation allows unsafe parameters into core logic.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">GovernMental Ponzi Scheme Gas Limit</span>
+              <span class="owasp_top_10_risks_card_example_detail">Bybit Infrastructure Compromise — $1.4 B</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_high"></span>
@@ -1082,16 +1085,15 @@
         <!-- SC06:2025 Bad Randomness -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC06</span>:2025 Bad Randomness
+            <span>SC06</span>:Unchecked External Calls
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Predictable random number generation that can be exploited by
-            attackers.
+            Unchecked external calls cause reentrancy or inconsistent state.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">SmartBillions Lottery Hack - $400K</span>
+              <span class="owasp_top_10_risks_card_example_detail">GMX V1 Reentrancy/External Call Exploit — $40 M</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1104,16 +1106,15 @@
         <!-- SC07:2025 Front-running -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC07</span>:2025 Front-running
+            <span>SC07</span>:2026 Arithmetic Errors
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Transaction ordering manipulation in mempool for financial
-            advantage.
+            Math and rounding bugs leak value through repeated exploitation.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">MEV Bot Sandwich Attacks</span>
+              <span class="owasp_top_10_risks_card_example_detail">Cetus Protocol Overflow — $223 M</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1126,16 +1127,15 @@
         <!-- SC08:2025 Time Manipulation -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC08</span>:2025 Time Manipulation
+            <span>SC08</span>:2026 Reentrancy Attack
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Reliance on block timestamps that miners can manipulate within
-            limits.
+            External callbacks reenter functions before state updates complete.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">SpankChain Payment Channel Exploit</span>
+              <span class="owasp_top_10_risks_card_example_detail">EraLend — $3.4 million</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1148,16 +1148,15 @@
         <!-- SC09:2025 Short Address Attack -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC09</span>:2025 Short Address Attack
+            <span>SC09</span>:2026 Integer Overflow and Underflow
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            EVM padding behavior exploited through malformed address
-            parameters.
+            Overflow or underflow breaks invariants and accounting.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">ERC20 Token Transfer Manipulation</span>
+              <span class="owasp_top_10_risks_card_example_detail">Cetus Protocol — $220–224 million</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_low"></span>
@@ -1169,16 +1168,15 @@
         <!-- SC10:2025 Unchecked Return Values -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC10</span>:2025 Unchecked Return Values
+            <span>SC10</span>:2026 Proxy & Upgradeability Vulnerabilities
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Silent failures from external calls that don't validate return
-            values.
+            Weak proxy or upgrade controls allow takeover or reinitialization.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">Etherdelta Smart Contract Bug</span>
+              <span class="owasp_top_10_risks_card_example_detail">Kinto Protocol Proxy Backdoor Exploit — $1.55 M</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_low"></span>
@@ -1193,10 +1191,9 @@
   <section class="section_alignment_website owasp_chart_section">
     <div class="owasp_chart_container">
       <div class="owasp_chart_header">
-        <h2 class="owasp_chart_title">$1,420,399,790 Lost in 2024</h2>
+        <h2 class="owasp_chart_title">$3,670,000,000 Lost in 2025</h2>
         <p class="owasp_chart_summary">
-          ~1.42 Billion USD lost across 149 security incidents. Here's the
-          breakdown by vulnerability type:
+          ~3.67 Billion USD lost across 134 security incidents. Here's the breakdown <br/> by vulnerability type:
         </p>
       </div>
 
@@ -1211,8 +1208,8 @@
               losses.
             </p>
             <div class="owasp_chart_info_box_amount_wrapper">
-              <div class="owasp_chart_info_box_amount">$953,204,089</div>
-              <div class="owasp_chart_info_box_percentage">67%</div>
+              <div class="owasp_chart_info_box_amount">$1,578,100,000</div>
+              <div class="owasp_chart_info_box_percentage">43%</div>
             </div>
           </div>
           <!-- <div class="owasp_chart_info_box">
@@ -1234,7 +1231,7 @@
           <div class="owasp_chart_left">
             <div class="owasp_chart_pie_chart_wrapper">
               <div class="owasp_chart_pie_chart_placeholder">
-                <img src="images/owasp_pie_chart.svg" alt="Pie Chart" class="owasp_chart_pie_chart_svg" />
+                <img src="images/owasp_pie_chart_2026.svg" alt="Pie Chart" class="owasp_chart_pie_chart_svg" />
               </div>
             </div>
           </div>
@@ -1244,45 +1241,45 @@
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_purple"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Access Control Vulnerabilities</span>
+                  <span class="owasp_chart_list_item_name">Access Control / Privileged Abuse</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$953.2 Million</span>
+                    <span class="owasp_chart_list_item_amount">$1.578 billion</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">67%</span>
+                <span class="owasp_chart_list_item_percentage">43%</span>
               </div>
 
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_orange"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Logic Errors</span>
+                  <span class="owasp_chart_list_item_name">Infrastructure / Hot Wallets</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$63.8 Million</span>
+                    <span class="owasp_chart_list_item_amount">$1.468 billion</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">4.5%</span>
+                <span class="owasp_chart_list_item_percentage">40%</span>
               </div>
 
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_yellow"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Reentrancy</span>
+                  <span class="owasp_chart_list_item_name">Logic & Accounting Errors</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$35.7 million</span>
+                    <span class="owasp_chart_list_item_amount">$440.4 million</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">2.5%</span>
+                <span class="owasp_chart_list_item_percentage">12%</span>
               </div>
 
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_light_blue"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Flash Loan Attacks</span>
+                  <span class="owasp_chart_list_item_name">User-Layer / Phishing</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$33.8 million</span>
+                    <span class="owasp_chart_list_item_amount">$146.8 million</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">2.4%</span>
+                <span class="owasp_chart_list_item_percentage">4%</span>
               </div>
 
               <div class="owasp_chart_list_item">
@@ -1290,10 +1287,10 @@
                 <div class="owasp_chart_list_item_content">
                   <span class="owasp_chart_list_item_name">Other Vulnerabilities</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$28.9 million</span>
+                    <span class="owasp_chart_list_item_amount">$40.37 million</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">23.6%</span>
+                <span class="owasp_chart_list_item_percentage">1%</span>
               </div>
             </div>
           </div>
