@@ -17,7 +17,7 @@ const popularAudits = [
     company_name: "aUSD",
     logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/aUSD Stablejack.svg",
     total_bugs: 33,
-    crictal: 3.0,
+    critical: 3.0,
     high: 2.0,
     medium: 11.0,
     low: 6.0,
@@ -33,7 +33,7 @@ const popularAudits = [
     company_name: "Arcana Paymaster",
     logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Arcana.svg",
     total_bugs: 5,
-    crictal: 0.0,
+    critical: 0.0,
     high: 0.0,
     medium: 0.0,
     low: 3.0,
@@ -49,7 +49,7 @@ const popularAudits = [
     company_name: "ResearchHub",
     logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/ResearchHub.svg",
     total_bugs: 13,
-    crictal: 0.0,
+    critical: 0.0,
     high: 0.0,
     medium: 4.0,
     low: 1.0,
@@ -65,7 +65,7 @@ const popularAudits = [
     company_name: "Lync",
     logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Lync Network.svg",
     total_bugs: 26,
-    crictal: 1.0,
+    critical: 1.0,
     high: 0.0,
     medium: 4.0,
     low: 8.0,
@@ -81,7 +81,7 @@ const popularAudits = [
     company_name: "LogX Token",
     logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/LogX Token.svg",
     total_bugs: 19,
-    crictal: 3.0,
+    critical: 3.0,
     high: 2.0,
     medium: 2.0,
     low: 4.0,
@@ -97,7 +97,7 @@ const popularAudits = [
     company_name: "Juno AWS",
     logo: "https://raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/AuditLogos/Juno Finance.svg",
     total_bugs: 42,
-    crictal: 1.0,
+    critical: 1.0,
     high: 8.0,
     medium: 8.0,
     low: 24.0,
@@ -214,7 +214,7 @@ function fillAuditRow(audit, container) {
             <p>Critical</p>
             <div class="critical-count">
               <div></div>
-              <p>${audit.crictal}</p>
+              <p>${audit.critical || audit.crictal}</p>
             </div>
           </div>
           <div class="vuln high-vuln">

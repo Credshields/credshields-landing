@@ -649,10 +649,18 @@
                   <a class="dropdown-item" href="https://discover.credshields.com/" target="_blank">Blog</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./owasp-smart-contract-top-10.html">
-                <p>OWASP Top 10</p>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+                <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false" data-hover="dropdown">
+                  <a style="margin: 0 12px; cursor: pointer" href="#">
+                    OWASP Top 10
+                    <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
               </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2025.html">2025</a>
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2026.html">2026</a>
+              </div>
             </li>
           </ul>
           <nav class="navbar navbar-light desktop-menu">
@@ -807,6 +815,7 @@
           Smart Contract<br />
 
           <span class="eco_system_new_title_ecosystem">Top 10</span>
+          2026
         </h1>
         <p class="eco_system_new_subtitle">
           Our research with the OWASP Foundation helped shape the first-ever
@@ -825,7 +834,7 @@
             <span style="color: #38ff7e; font-weight: 700; margin-left: 1px">AI Scan</span>
           </button>
         </div>
-        <div class="upgraded_hero_stats upgraded_hero_stats_owasp">
+        <!-- <div class="upgraded_hero_stats upgraded_hero_stats_owasp">
           <div class="upgraded_hero_stat_item">
             <span class="upgraded_hero_stat_number" data-target="10.5" data-suffix="B+">$0</span>
             <span class="upgraded_hero_stat_label">Protected</span>
@@ -838,7 +847,7 @@
             <span class="upgraded_hero_stat_number" data-target="99.9" data-suffix="%">0</span>
             <span class="upgraded_hero_stat_label">Uptime SLA</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -885,6 +894,9 @@
               <span class="owasp_about_the_initiative_logo_text">CredShields</span>
             </div>
           </div>
+          <a href="https://owasp.org/www-project-smart-contract-top-10/"  style="max-width: 400px;" target="_blank" class="partner_btn_secondary">
+          Visit SC Top 10 on OWASP →
+        </a>
         </div>
 
         <!-- Right Section: Research Data Sources -->
@@ -965,10 +977,9 @@
   <section class="section_alignment_website owasp_top_10_risks_section">
     <div class="owasp_top_10_risks_container">
       <div class="owasp_top_10_risks_header">
-        <h2 class="owasp_top_10_risks_title">OWASP Smart Contract Top 10</h2>
+        <h2 class="owasp_top_10_risks_title">OWASP Smart Contract Top 10 2026</h2>
         <p class="owasp_top_10_risks_subtitle">
-          The most critical security risks facing smart contracts and Web3
-          applications in 2025.
+          The most critical security risks facing smart contracts and Web3 applications in 2026.
         </p>
       </div>
 
@@ -976,16 +987,15 @@
         <!-- SC01:2025 Access Control Vulnerabilities -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC01</span>:2025 Access Control Vulnerabilities
+            <span>SC01</span>:2026 Access Control Vulnerabilities
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Improper access controls allowing unauthorized users to execute
-            privileged functions.
+            Unauthorized access to privileged functions or critical protocol state.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">Poly Network Bridge Exploit - $611M</span>
+              <span class="owasp_top_10_risks_card_example_detail">Balancer V2 (November 2025, ~$128M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -998,16 +1008,15 @@
         <!-- SC02:2025 Reentrancy Attacks -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC02</span>:2025 Reentrancy Attacks
+            <span>SC02</span>:2026 Business Logic Vulnerabilities
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            External calls that allow attackers to recursively call functions
-            before state updates.
+            Flawed protocol logic enabling economic exploits despite correct checks
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">The DAO Hack - $60M</span>
+              <span class="owasp_top_10_risks_card_example_detail">Abracadabra (March 2025, $12.9M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1020,16 +1029,15 @@
         <!-- SC03:2025 Integer Overflow/Underflow -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC03</span>:2025 Integer Overflow/Underflow
+            <span>SC03</span>:2026 Price Oracle Manipulation
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Mathematical operations that exceed variable limits causing
-            unexpected behavior.
+            Manipulable oracles skew prices enabling undercollateralized exploits
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">BEC Token Overflow - $900M Market Cap Loss</span>
+              <span class="owasp_top_10_risks_card_example_detail">NGP Token (September 2025, ~$2M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_high"></span>
@@ -1041,15 +1049,15 @@
         <!-- SC04:2025 Unchecked External Calls -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC04</span>:2025 Unchecked External Calls
+            <span>SC04</span>:2026 Flash Loan–Facilitated Attacks
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Failed external calls that don't properly handle return values or
-            exceptions.
+            Flash loans amplify bugs into large single-transaction drains.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
-              <span class="owasp_top_10_risks_card_example_label">King of Ether DoS Attack</span>
+              <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
+              <span class="owasp_top_10_risks_card_example_detail">Bunni (September 2025, $8.4M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_high"></span>
@@ -1061,16 +1069,15 @@
         <!-- SC05:2025 Denial of Service -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC05</span>:2025 Denial of Service
+            <span>SC05</span>:2026 Lack of Input Validation
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Contract states or gas limit exploits that prevent normal
-            operation.
+            Insufficient input validation allows unsafe parameters into core logic.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">GovernMental Ponzi Scheme Gas Limit</span>
+              <span class="owasp_top_10_risks_card_example_detail">Cetus (May 2025, $223M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_high"></span>
@@ -1082,16 +1089,15 @@
         <!-- SC06:2025 Bad Randomness -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC06</span>:2025 Bad Randomness
+            <span>SC06</span>:Unchecked External Calls
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Predictable random number generation that can be exploited by
-            attackers.
+            Unchecked external calls cause reentrancy or inconsistent state.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">SmartBillions Lottery Hack - $400K</span>
+              <span class="owasp_top_10_risks_card_example_detail">GMX (July 2025, $42M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1104,16 +1110,15 @@
         <!-- SC07:2025 Front-running -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC07</span>:2025 Front-running
+            <span>SC07</span>:2026 Arithmetic Errors
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Transaction ordering manipulation in mempool for financial
-            advantage.
+            Math and rounding bugs leak value through repeated exploitation.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">MEV Bot Sandwich Attacks</span>
+              <span class="owasp_top_10_risks_card_example_detail">zkLend (February 2025, $9.5M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1126,16 +1131,15 @@
         <!-- SC08:2025 Time Manipulation -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC08</span>:2025 Time Manipulation
+            <span>SC08</span>:2026 Reentrancy Attack
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Reliance on block timestamps that miners can manipulate within
-            limits.
+            External callbacks reenter functions before state updates complete.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">SpankChain Payment Channel Exploit</span>
+              <span class="owasp_top_10_risks_card_example_detail">GMX (July 2025, $42M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span
@@ -1148,16 +1152,15 @@
         <!-- SC09:2025 Short Address Attack -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC09</span>:2025 Short Address Attack
+            <span>SC09</span>:2026 Integer Overflow and Underflow
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            EVM padding behavior exploited through malformed address
-            parameters.
+            Overflow or underflow breaks invariants and accounting.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">ERC20 Token Transfer Manipulation</span>
+              <span class="owasp_top_10_risks_card_example_detail">Cetus (May 2025, $223M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_low"></span>
@@ -1169,16 +1172,15 @@
         <!-- SC10:2025 Unchecked Return Values -->
         <div class="owasp_top_10_risks_card">
           <h3 class="owasp_top_10_risks_card_title">
-            <span>SC10</span>:2025 Unchecked Return Values
+            <span>SC10</span>:2026 Proxy & Upgradeability Vulnerabilities
           </h3>
           <p class="owasp_top_10_risks_card_description">
-            Silent failures from external calls that don't validate return
-            values.
+            Weak proxy or upgrade controls allow takeover or reinitialization.
           </p>
           <div class="owasp_top_10_risks_card_example_box">
             <div class="owasp_top_10_risks_card_example_content">
               <span class="owasp_top_10_risks_card_example_label">Real-world Example</span>
-              <span class="owasp_top_10_risks_card_example_detail">Etherdelta Smart Contract Bug</span>
+              <span class="owasp_top_10_risks_card_example_detail">Kinto Protocol (July 2025, $1.55M loss)</span>
             </div>
             <div class="owasp_top_10_risks_card_criticality">
               <span class="owasp_top_10_risks_card_criticality_dot owasp_top_10_risks_card_criticality_dot_low"></span>
@@ -1190,13 +1192,28 @@
     </div>
   </section>
 
+  <section style="margin-top: 100px;">
+    <div style="text-align: center; margin-bottom: 40px; padding: 0 100px;">
+      <h2 class="fintech_risk_title">How Our Data Informed OWASP</h2>
+      <p class="owasp_chart_summary">At CredShields, thousands of contracts are scanned via SolidityScan and monitored
+        through Web3HackHub. Our comprehensive reports were key inputs for the OWASP
+        Smart Contract Top 10.</p>
+    </div>
+  
+    <div style="margin-top: 50px;">
+      <iframe src="https://solidityscan.com/web3hackhub/credshields"
+        style="width: 100%; height: 800px; min-height: 800px; border: none; overflow: hidden; display: block;"
+        title="CredShields QuickScan" scrolling="no">
+      </iframe>
+    </div>
+  </section>
+
   <section class="section_alignment_website owasp_chart_section">
     <div class="owasp_chart_container">
       <div class="owasp_chart_header">
-        <h2 class="owasp_chart_title">$1,420,399,790 Lost in 2024</h2>
+        <h2 class="owasp_chart_title">$3,670,000,000 Lost in 2025</h2>
         <p class="owasp_chart_summary">
-          ~1.42 Billion USD lost across 149 security incidents. Here's the
-          breakdown by vulnerability type:
+          ~3.67 Billion USD lost across 134 security incidents. Here's the breakdown <br/> by vulnerability type:
         </p>
       </div>
 
@@ -1211,8 +1228,8 @@
               losses.
             </p>
             <div class="owasp_chart_info_box_amount_wrapper">
-              <div class="owasp_chart_info_box_amount">$953,204,089</div>
-              <div class="owasp_chart_info_box_percentage">67%</div>
+              <div class="owasp_chart_info_box_amount">$1,578,100,000</div>
+              <div class="owasp_chart_info_box_percentage">43%</div>
             </div>
           </div>
           <!-- <div class="owasp_chart_info_box">
@@ -1234,7 +1251,7 @@
           <div class="owasp_chart_left">
             <div class="owasp_chart_pie_chart_wrapper">
               <div class="owasp_chart_pie_chart_placeholder">
-                <img src="images/owasp_pie_chart.svg" alt="Pie Chart" class="owasp_chart_pie_chart_svg" />
+                <img src="images/owasp_pie_chart_2026.svg" alt="Pie Chart" class="owasp_chart_pie_chart_svg" />
               </div>
             </div>
           </div>
@@ -1244,45 +1261,45 @@
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_purple"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Access Control Vulnerabilities</span>
+                  <span class="owasp_chart_list_item_name">Access Control / Privileged Abuse</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$953.2 Million</span>
+                    <span class="owasp_chart_list_item_amount">$1.578 billion</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">67%</span>
+                <span class="owasp_chart_list_item_percentage">43%</span>
               </div>
 
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_orange"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Logic Errors</span>
+                  <span class="owasp_chart_list_item_name">Infrastructure / Hot Wallets</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$63.8 Million</span>
+                    <span class="owasp_chart_list_item_amount">$1.468 billion</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">4.5%</span>
+                <span class="owasp_chart_list_item_percentage">40%</span>
               </div>
 
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_yellow"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Reentrancy</span>
+                  <span class="owasp_chart_list_item_name">Logic & Accounting Errors</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$35.7 million</span>
+                    <span class="owasp_chart_list_item_amount">$440.4 million</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">2.5%</span>
+                <span class="owasp_chart_list_item_percentage">12%</span>
               </div>
 
               <div class="owasp_chart_list_item">
                 <span class="owasp_chart_list_item_indicator owasp_chart_list_item_indicator_light_blue"></span>
                 <div class="owasp_chart_list_item_content">
-                  <span class="owasp_chart_list_item_name">Flash Loan Attacks</span>
+                  <span class="owasp_chart_list_item_name">User-Layer / Phishing</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$33.8 million</span>
+                    <span class="owasp_chart_list_item_amount">$146.8 million</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">2.4%</span>
+                <span class="owasp_chart_list_item_percentage">4%</span>
               </div>
 
               <div class="owasp_chart_list_item">
@@ -1290,10 +1307,10 @@
                 <div class="owasp_chart_list_item_content">
                   <span class="owasp_chart_list_item_name">Other Vulnerabilities</span>
                   <div class="owasp_chart_list_item_details">
-                    <span class="owasp_chart_list_item_amount">$28.9 million</span>
+                    <span class="owasp_chart_list_item_amount">$40.37 million</span>
                   </div>
                 </div>
-                <span class="owasp_chart_list_item_percentage">23.6%</span>
+                <span class="owasp_chart_list_item_percentage">1%</span>
               </div>
             </div>
           </div>
@@ -1301,6 +1318,8 @@
       </div>
     </div>
   </section>
+
+  <
 
   <section class="section_alignment_website fintech_risk_container section_padding_define">
     <div class="fintech_risk_wrapper">
@@ -1505,18 +1524,17 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              A list of the 10 most critical smart contract vulnerabilities, adapted from OWASP's traditional Top 10,
-              using Web3-specific exploit data.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              The OWASP Smart Contract Top 10 is a risk prioritization framework that identifies the most prevalent and high-impact vulnerability classes observed in production smart contracts.
+              It translates real incident data, audit learnings, and practitioner feedback into an actionable reference for developers, auditors, and security teams.
+            </div>
           </div>
         </div>
 
         <div class="owasp_freq_asked_accordion">
           <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
             <h3 class="owasp_freq_asked_accordion_title">
-              How does CredShields contribute to the OWASP Smart Contract Top
-              10?
+              How is this different from traditional OWASP Top 10?
             </h3>
             <button class="owasp_freq_asked_accordion_button">
               <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
@@ -1532,17 +1550,25 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              Access control issues, reentrancy, and front-running are among the top. Our data shows access control
-              vulnerabilities alone accounted for 67% of losses in 2024.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              The traditional OWASP Top 10 focuses on web application security risks such as injection and broken authentication.
+              The Smart Contract Top 10 addresses execution-layer risks unique to blockchain systems, including:
+              <ul>
+                <li>Privileged role abuse</li>
+                <li>Arbitrary call paths</li>
+                <li>Flash-loan driven manipulation</li>
+                <li>Upgradeability risks</li>
+                <li>Oracle dependencies</li>
+              </ul>
+              It reflects how decentralized systems fail, not how web servers fail.
+            </div>
           </div>
         </div>
 
         <div class="owasp_freq_asked_accordion">
           <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
             <h3 class="owasp_freq_asked_accordion_title">
-              What are Access Control Vulnerabilities?
+              Who should use the Smart Contract Top 10?
             </h3>
             <button class="owasp_freq_asked_accordion_button">
               <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
@@ -1558,17 +1584,25 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              Use automated scanning tools like SolidityScan, conduct manual audits, and follow secure coding best
-              practices based on the OWASP Smart Contract Top 10.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              It is designed for:
+              <ul>
+                <li>Smart contract developers</li>
+                <li>Security auditors</li>
+                <li>Protocol architects</li>
+                <li>Exchanges & custodians</li>
+                <li>Web3 security product builders</li>
+                <li>Enterprise blockchain teams</li>
+              </ul>
+              If your system can move value without human intervention, this framework is relevant.
+            </div>
           </div>
         </div>
 
         <div class="owasp_freq_asked_accordion">
           <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
             <h3 class="owasp_freq_asked_accordion_title">
-              How can I check if my smart contract is vulnerable?
+              Is the Smart Contract Top 10 based on theory or real incidents?
             </h3>
             <button class="owasp_freq_asked_accordion_button">
               <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
@@ -1584,10 +1618,151 @@
             </button>
           </div>
           <div class="owasp_freq_asked_accordion_content">
-            <p class="owasp_freq_asked_accordion_text">
-              It sets a global, recognized standard for risk awareness and prevention, critical for developer trust and
-              enterprise adoption in the Web3 space.
-            </p>
+            <div class="owasp_freq_asked_accordion_text">
+              It is empirically grounded.
+              The categories are derived from:
+              <ul>
+                <li>Documented security incidents</li>
+                <li>Onchain exploit patterns</li>
+                <li>Audit findings</li>
+                <li>Practitioner surveys</li>
+                <li>Post-mortem analysis of high-profile breaches</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Does the Top 10 replace a full security audit?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              No.
+              The Smart Contract Top 10 is an awareness and prioritization layer, not a substitute for:
+              <ul>
+                <li>Manual audits</li>
+                <li>Formal verification</li>
+                <li>Runtime monitoring</li>
+                <li>Secure SDLC processes</li>
+              </ul>
+              It helps teams ask better questions earlier in the lifecycle.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              How should development teams use it in practice?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              It can be embedded into:
+              <ul>
+                <li>Threat modeling exercises</li>
+                <li>Secure coding checklists</li>
+                <li>Pre-deployment review gates</li>
+                <li>CI/CD static analysis baselines</li>
+                <li>Auditor scoping discussions</li>
+              </ul>
+              Many teams map their controls against each category to ensure systematic coverage.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Is this only for DeFi protocols?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              No.
+              While DeFi incidents heavily inform the dataset, the risk classes apply to:
+              <ul>
+                <li>Token contracts</li>
+                <li>NFT platforms</li>
+                <li>DAO governance systems</li>
+                <li>Bridges and cross-chain systems</li>
+                <li>RWA tokenization platforms</li>
+                <li>Institutional custody systems</li>
+              </ul>
+              Any smart contract that manages value inherits systemic risk.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Can security tools map to the Top 10?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Yes.
+              Static analyzers, AI-based scanners, fuzzers, and manual review methodologies can map findings to the Top 10 categories.
+              This enables:
+              <ul>
+                <li>Standardized reporting</li>
+                <li>Risk scoring alignment</li>
+                <li>Better communication with stakeholders</li>
+                <li>Board-level risk articulation</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
