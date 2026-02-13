@@ -487,6 +487,135 @@
     .gradient_bg_bl img {
       animation-delay: -20s;
     }
+
+
+    /* ESP Grant Support Banner */
+    .esp_banner_section {
+      display: flex;
+      justify-content: center;
+      padding: 30px 20px 0;
+    }
+
+    .esp_banner_link {
+      text-decoration: none;
+      max-width: 820px;
+      width: 100%;
+    }
+
+    .esp_banner_card {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #141a2a 0%, #1a2236 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 12px 36px;
+      gap: 40px;
+      max-width: 820px;
+      width: 100%;
+      animation: esp-glow 3s ease-in-out infinite;
+    }
+
+    @keyframes esp-glow {
+      0% {
+        box-shadow: rgba(27, 73, 158, 0.125) 0px 8px 20.5109px 0px, rgba(73, 159, 255, 0.14) 0px 0px 0px 0.510928px;
+      }
+
+      50% {
+        box-shadow: rgba(27, 73, 158, 0.18) 0px 8px 25.8333px 0px, rgba(73, 159, 255, 0.082) 0px 0px 0px 5.83333px;
+      }
+
+      100% {
+        box-shadow: rgba(27, 73, 158, 0.12) 0px 8px 20.1748px 0px, rgba(73, 159, 255, 0.145) 0px 0px 0px 0.174779px;
+      }
+    }
+
+    .esp_banner_logo {
+      flex-shrink: 0;
+    }
+
+    .esp_banner_logo img {
+      height: 144px;
+      width: auto;
+    }
+
+    .esp_banner_info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .esp_banner_label {
+      font-size: 0.78em;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: #9fbdff;
+      text-transform: uppercase;
+    }
+
+    .esp_banner_title {
+      font-size: 1em;
+      font-weight: 500;
+      color: #e6f0ff;
+      line-height: 1.5;
+    }
+
+    .esp_banner_readmore {
+      font-size: 14px;
+      font-weight: 500;
+      color: #e6f0ff;
+      align-self: flex-end;
+      margin-top: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .esp_banner_card {
+        flex-direction: column;
+        padding: 24px 20px;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .esp_banner_logo img {
+        height: 80px;
+      }
+
+      .esp_banner_info {
+        align-items: center;
+      }
+
+      .esp_banner_readmore {
+        align-self: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .esp_banner_section {
+        padding: 20px 12px 0;
+      }
+
+      .esp_banner_card {
+        padding: 20px 16px;
+        gap: 16px;
+        border-radius: 12px;
+      }
+
+      .esp_banner_logo img {
+        height: 64px;
+      }
+
+      .esp_banner_title {
+        font-size: 0.9em;
+      }
+
+      .esp_banner_label {
+        font-size: 0.7em;
+      }
+
+      .esp_banner_readmore {
+        font-size: 12px;
+      }
+    }
   </style>
   <!-- Custom Css file Start -->
 </head>
@@ -515,16 +644,16 @@
       <div class="banner_box_flex">
         <div class="banner_content">
           <p class="mb-0">
-            More than $3.6B Lost in 2025 | The Mistakes That Cost Billions
+            OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart Contract Security.
           </p>
         </div>
 
         <div class="vertical-divider" style="background-color: black"></div>
 
         <div class="banner_action d-flex align-items-center justify-content-end">
-          Download Report here
+          Explore
           <button type="button" class="download-report-banner-btn"
-            onclick="window.open('https://credshields.com/resources#state-of-web3-security-2025', '_blank')">
+            onclick="window.open('https://scs.owasp.org/sctop10/', '_blank')">
             <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
@@ -652,7 +781,7 @@
             <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
                 <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false" data-hover="dropdown">
-                  <a style="margin: 0 12px; cursor: pointer" href="#">
+                  <a style="margin: 0 12px; cursor: pointer" href="./owasp-smart-contract-top-10-2026.html">
                     OWASP Top 10
                     <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
                 </a>
@@ -862,6 +991,24 @@
         </div> -->
       </div>
     </div>
+  </section>
+
+  <!-- ESP Grant Support Banner -->
+  <section class="esp_banner_section">
+    <a href="https://blog.ethereum.org/2025/12/02/allocation-q3-25" target="_blank" class="esp_banner_link">
+      <div class="esp_banner_card">
+        <!-- Left: ESP Logo -->
+        <div class="esp_banner_logo">
+          <img src="https://scs.owasp.org/assets/esp-logo-main.svg" alt="Ecosystem Support Program" />
+        </div>
+        <!-- Right: Grant Info -->
+        <div class="esp_banner_info">
+          <span class="esp_banner_label">Grant Support · 2025</span>
+          <span class="esp_banner_title">Supported by Ethereum Foundation's Ecosystem Support Program (ESP)</span>
+          <span class="esp_banner_readmore">Read more…</span>
+        </div>
+      </div>
+    </a>
   </section>
 
   <section class="section_alignment_website owasp_about_the_initiative_section">
