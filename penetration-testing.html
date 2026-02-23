@@ -248,10 +248,20 @@
         margin-left: 10px;
       }
 
+      .footer_new_soc_badge{
+        justify-content: left;
+        margin-top: 150px;
+      }
+
       @media (max-width: 755px) {
         .close_banner {
           bottom: 7%;
         }
+
+         .footer_new_soc_badge{
+        justify-content: center;
+        margin-top: 60px;
+      }
       }
 
       /* Responsive adjustments */
@@ -1527,9 +1537,11 @@ onclick="window.open('https://blog.solidityscan.com/', '_blank');"
                 />
               </div>
             </div>
-            <div class="footer_new_soc_badge" style="margin-top: 20px; cursor: pointer;"
-              onclick="window.open('https://www.aicpa-cima.com/', '_blank')">
-              <img src="images/soc_badge.svg" alt="SOC 2 Certified" class="img-fluid" />
+            <div class="footer_new_soc_badge" style=" display: flex; align-items: center; gap: 30px; cursor: pointer;">
+              <img src="images/soc_badge.svg" alt="SOC 2 Certified" style="width: 80px;" class="img-fluid"
+                onclick="window.open('https://www.aicpa-cima.com/', '_blank')" />
+              <img src="images/owasp_badge.svg" alt="OWASP" style="width: 140px;" class="img-fluid"
+                onclick="window.open('https://owasp.org/www-project-smart-contract-top-10/', '_blank')" />
             </div>
           </div>
 
