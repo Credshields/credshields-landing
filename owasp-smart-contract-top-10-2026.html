@@ -615,6 +615,18 @@
         font-size: 12px;
       }
     }
+
+    .footer_new_soc_badge{
+        justify-content: left;
+        margin-top: 150px;
+      }
+
+      @media (max-width: 755px) {
+         .footer_new_soc_badge{
+        justify-content: center;
+        margin-top: 60px;
+      }
+      }
   </style>
   <!-- Custom Css file Start -->
 </head>
@@ -2002,6 +2014,9 @@
             Protecting the future of Web3 and enterprise technology with
             world-class security audits and consulting services.
           </p>
+          <a class="partner_btn_primary font_color_black" style="margin-bottom: 20px;" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y'});return false;">
+          Partner with us
+        </a>
           <div class="footer_new_social_icons">
             <div class="footer_new_social_placeholder">
               <img src="images/telegram_gray.svg" alt="telegram" class="img-fluid"
@@ -2024,9 +2039,11 @@
                 onclick="window.open('https://www.instagram.com/credshields/', '_blank');" />
             </div>
           </div>
-          <div class="footer_new_soc_badge" style="margin-top: 20px; cursor: pointer;"
-            onclick="window.open('https://www.aicpa-cima.com/', '_blank')">
-            <img src="images/soc_badge.svg" alt="SOC 2 Certified" class="img-fluid" />
+          <div class="footer_new_soc_badge" style=" display: flex; align-items: center; gap: 30px; cursor: pointer;">
+            <img src="images/soc_badge.svg" alt="SOC 2 Certified" style="width: 80px;" class="img-fluid"
+              onclick="window.open('https://www.aicpa-cima.com/', '_blank')" />
+            <img src="images/owasp_badge.svg" alt="OWASP" style="width: 140px;" class="img-fluid"
+              onclick="window.open('https://owasp.org/www-project-smart-contract-top-10/', '_blank')" />
           </div>
         </div>
 
