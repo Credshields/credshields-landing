@@ -1,1 +1,0 @@
-/Users/vishalchauhan/Documents/claude-workspace/credshields/claude-frontend-workspace-config/repo-configs/credshields-landing/CLAUDE.md
