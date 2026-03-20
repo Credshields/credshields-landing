@@ -1257,6 +1257,7 @@
             : '';
 
           var applyHref = job.application_form || '#';
+          var applyFormUrl = 'https://form.jotform.com/260766620240048?role=' + encodeURIComponent(job.title);
 
           inner.innerHTML =
             '<div class="job_detail_hero">' +
@@ -1267,7 +1268,7 @@
                 '<span class="job_detail_meta_item">' + pinSVG + escapeHtml(job.location) + '</span>' +
                 salaryBadge +
               '</div>' +
-              '<a href="' + escapeHtml(applyHref) + '" target="_blank" rel="noopener" class="job_detail_apply_btn">Apply Now</a>' +
+              '<a href="javascript:void(0)" onclick="window.open(\'' + applyFormUrl + '\',\'blank\',\'scrollbars=yes,toolbar=no,width=700,height=500\')" class="job_detail_apply_btn">Apply Now</a>' +
             '</div>' +
             '<div class="job_detail_card">' +
               '<div class="job_detail_card_section">' +
