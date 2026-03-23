@@ -2,3 +2,8 @@ package-lock.json
 package.json
 node_modules
 .DS_Store
+credshields-blog-theme
+CLAUDE.md
+.claude/
+CLAUDE.md.pre-claude-config.bak
+sync-nav-footer.js

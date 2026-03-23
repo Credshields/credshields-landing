@@ -39,7 +39,7 @@ h2 {
   font-weight: 700;
 }
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: "Open Sans", sans-serif;
   width: 100vw;
   overflow-x: hidden;
   background: #000000;
@@ -320,7 +320,7 @@ img {
   margin: 4rem 0;
 }
 .numbers_sec h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 53px;
   font-weight: 800;
 }
@@ -403,7 +403,7 @@ img {
 
 .list_item_privacy {
   color: #979797 !important;
-  font-family: "Barlow", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -3224,7 +3224,7 @@ img {
   border-collapse: collapse;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(100, 120, 160, 0.2);
-  font-family: "Barlow", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #a8b2d1;
 }
 
