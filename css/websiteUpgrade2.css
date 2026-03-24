@@ -4922,6 +4922,27 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.about_us_career_roles_grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.about_us_career_roles_grid::-webkit-scrollbar-track {
+  background: rgba(38, 38, 38, 0.3);
+  border-radius: 3px;
+}
+
+.about_us_career_roles_grid::-webkit-scrollbar-thumb {
+  background: rgba(120, 255, 4, 0.4);
+  border-radius: 3px;
+}
+
+.about_us_career_roles_grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 255, 4, 0.6);
 }
 
 .about_us_career_role_item {
@@ -6079,7 +6100,7 @@ a {
 .audit_checklist_table thead th {
   padding: 16px;
   text-align: left;
-  font-family: "Barlow", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: rgba(119, 255, 5, 1);
@@ -6110,7 +6131,7 @@ a {
 .audit_checklist_table tbody td {
   padding: 16px;
   text-align: left;
-  font-family: "Barlow", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: rgba(212, 212, 212, 1);
