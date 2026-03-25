@@ -1286,6 +1286,17 @@ a {
   text-align: center;
 }
 
+.secure_your_protocol_badge {
+  display: inline-block;
+  background: #0a0f0d;
+  color: #78ff04;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
 .secure_your_protocol_title {
   font-size: 36px;
   font-weight: 700;
