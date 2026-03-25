@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="CredShields provides independent security audits for cross-border payment infrastructure — covering FX oracle security, liquidity pool safety, on-chain compliance architecture, and cross-chain settlement. Purpose-built for institutional payment programmes.">
+    <title>Payment Infrastructure Security Audit | CredShields</title>
+    <!-- Calendly link widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <!-- favicon Start -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- favicon end -->
+
+    <!-- Default Css file Start -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <style>
+      /* Hover dropdown for desktop */
+      @media (min-width: 992px) {
+        .dropdown-hover-expand .dropdown-menu {
+          display: block;
+          top: 100%;
+          left: 0;
+          visibility: hidden;
+          top: 100%;
+          transform: translateY(10px);
+          transition: all 0.1s ease;
+          top: 100%;
+          top: 100%;
+          top: 100%;
+        }
+
+        .dropdown-hover-expand:hover .dropdown-menu {
+          display: block;
+          visibility: visible;
+          top: 100%;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/90cf9f1e5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Default Css file end -->
+
+    <!-- Plugin Css file Start -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Plugin Css file end -->
+
+    <!--MS Clarity-->
+    <script async type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "ko6w13w47q");
+    </script>
+    <!--gtag-->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PN6ZFK2F');</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- Custom Css file Start -->
+    <link rel="stylesheet" href="css/landing_page_i_upgrade.css" />
+    <link rel="stylesheet" href="css/landing_page_responsive_i_upgrade.css" />
+    <link rel="stylesheet" href="css/websiteUpgrade2.css" />
+
+    <style>
+      @font-face {
+        font-family: Monbloc;
+        src: url("fonts/Monbloc-Inst-Regular.eot");
+        src: url("fonts/Monbloc-Inst-Regular.ttf");
+        src: url("fonts/Monbloc-Inst-Regular.woff");
+        src: url("fonts/Monbloc-Inst-Regular.woff2");
+      }
+
+      body {
+        position: relative;
+        min-height: 100vh;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(274deg, transparent, #78ff04, transparent);
+        background-size: 400% 400%;
+        animation: AnimationName 20s ease infinite;
+        opacity: 0.3;
+        z-index: -1;
+        pointer-events: none;
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          black 0%,
+          black 20%,
+          transparent 70%
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          black 0%,
+          black 20%,
+          transparent 70%
+        );
+      }
+
+      @keyframes AnimationName {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Notification Banner Styles */
+      .notification_banner {
+        background-color: rgb(19, 104, 44);
+        padding: 8px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .banner_box_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .banner_action {
+        color: white;
+      }
+
+      .vertical-divider {
+        width: 1px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        align-self: center;
+      }
+
+      .notification_banner .banner_content p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: white;
+      }
+
+      .notification_banner .download_btn {
+        font-weight: 600;
+        font-size: 14px;
+        color: white;
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+      }
+
+      .notification_banner .download_btn:hover {
+        color: white;
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      .close_banner {
+        position: absolute;
+        right: 15px;
+        bottom: 20%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        color: white;
+      }
+
+      .notification_banner .close_banner:hover {
+        opacity: 0.7;
+      }
+
+      .download-report-banner-btn {
+        background: linear-gradient(
+          127.09deg,
+          rgba(157, 255, 237, 0.93) 0.95%,
+          rgba(194, 255, 189, 0.93) 98.62%
+        );
+        border: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+      }
+
+      .footer_new_soc_badge{
+        justify-content: left;
+        margin-top: 150px;
+      }
+
+      @media (max-width: 755px) {
+        .close_banner {
+          bottom: 7%;
+        }
+
+         .footer_new_soc_badge{
+        justify-content: center;
+        margin-top: 60px;
+      }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 865px) {
+        .notification_banner .banner_content p {
+          font-size: 14px;
+        }
+
+        .banner_action {
+          font-size: 14px;
+        }
+
+        .vertical-divider {
+          display: none;
+        }
+
+        .notification_banner .download_btn {
+          font-size: 12px;
+        }
+
+        .banner_box_flex {
+          justify-content: flex-start;
+          gap: 8px;
+        }
+      }
+
+      /* stack card animation*/
+
+      .stack_card_spacer {
+        height: 100vh;
+      }
+
+      .stack_card_container {
+        position: relative;
+      }
+
+      .stack_card_cards-container {
+        position: relative;
+      }
+
+      .stack_card_card {
+        position: sticky;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .stack_card_card:nth-child(1) {
+        top: 0;
+      }
+
+      .stack_card_card:nth-child(2) {
+        top: 280px;
+      }
+
+      .stack_card_card:nth-child(3) {
+        top: 300px;
+      }
+
+      .stack_card_card:nth-child(4) {
+        top: 320px;
+      }
+
+      .stack_card_card:nth-child(5) {
+        top: 340px;
+      }
+
+      .stack_card_card:nth-child(6) {
+        top: 360px;
+      }
+
+      .stack_card_title_card {
+        width: 100%;
+        padding: 25px 60px 30px;
+        text-align: center;
+        background: transparent;
+      }
+
+      .stack_card_title_card h2 {
+        font-size: 52px;
+        font-weight: 400;
+        margin-bottom: 24px;
+        line-height: 1.1;
+      }
+
+      .stack_card_title_card .stack_card_part_one {
+        color: #888;
+      }
+
+      .stack_card_title_card .stack_card_part_two {
+        color: white;
+      }
+
+      .stack_card_title_card p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #aaa;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .stack_card_card-content {
+        width: 100%;
+        height: 600px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 30px;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .stack_card_card.stack_card_visible .stack_card_card-content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stack_card_card:nth-child(2) .stack_card_card-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .stack_card_card:nth-child(3) .stack_card_card-content {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+
+      .stack_card_card:nth-child(4) .stack_card_card-content {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      }
+
+      .stack_card_card:nth-child(5) .stack_card_card-content {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      }
+
+      .stack_card_card:nth-child(6) .stack_card_card-content {
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      }
+
+      .stack_card_card-number {
+        font-size: 120px;
+        font-weight: 900;
+        opacity: 0.15;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+
+      .stack_card_card-title {
+        font-size: 64px;
+        font-weight: 800;
+        margin-bottom: 24px;
+        line-height: 1.1;
+      }
+
+      .stack_card_card-description {
+        font-size: 24px;
+        line-height: 1.6;
+        opacity: 0.9;
+        max-width: 600px;
+      }
+
+      .stack_card_end-spacer {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      @media (max-width: 768px) {
+        .stack_card_title_card h2 {
+          font-size: 48px;
+        }
+
+        .stack_card_title_card p {
+          font-size: 18px;
+        }
+
+        .stack_card_title_card {
+          padding: 60px 20px 40px;
+        }
+
+        .stack_card_card-content {
+          padding: 40px;
+          height: 500px;
+        }
+
+        .stack_card_card-number {
+          font-size: 80px;
+        }
+
+        .stack_card_card-title {
+          font-size: 40px;
+        }
+
+        .stack_card_card-description {
+          font-size: 18px;
+        }
+
+        .stack_card_card:nth-child(2) {
+          top: 200px;
+        }
+
+        .stack_card_card:nth-child(3) {
+          top: 220px;
+        }
+
+        .stack_card_card:nth-child(4) {
+          top: 240px;
+        }
+
+        .stack_card_card:nth-child(5) {
+          top: 260px;
+        }
+
+        .stack_card_card:nth-child(6) {
+          top: 280px;
+        }
+      }
+
+      /* Gradient Background Animation */
+      @keyframes gradientMove {
+        0% {
+          transform: translateX(-100px);
+        }
+
+        100% {
+          transform: translateX(calc(100vw + 100px));
+        }
+      }
+
+      .gradient_bg_tr img,
+      .gradient_bg_tl img,
+      .gradient_bg_bl img {
+        animation: gradientMove 30s linear infinite;
+        will-change: transform;
+        position: relative;
+        left: -100px;
+        /* Start off-screen */
+      }
+
+      .gradient_bg_tl img {
+        animation-delay: -10s;
+      }
+
+      .gradient_bg_bl img {
+        animation-delay: -20s;
+      }
+    </style>
+    <!-- Custom Css file Start -->
+  </head>
+
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Gradients -->
+
+    <!-- <div class="fixed_bg_container">
+		<div class="gradient_bg_tr">
+			<img src="images/primary_bg.svg" alt="bg" />
+		</div>
+		<div class="gradient_bg_tl">
+			<img src="images/primary_bg.svg" alt="bg" />
+		</div>
+		<div class="gradient_bg_bl">
+			<img src="images/primary_bg.svg" alt="bg" />
+		</div>
+	</div> -->
+
+    <!-- notification banner start -->
+    <div class="notification_banner">
+    <div class="container-fluid">
+      <div class="banner_box_flex">
+        <div class="banner_content">
+          <p class="mb-0">
+            OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart Contract Security.
+            </p>
+            </div>
+
+        <div class="vertical-divider" style="background-color: black"></div>
+
+        <div class="banner_action d-flex align-items-center justify-content-end">
+          Explore
+          <button type="button" class="download-report-banner-btn"
+            onclick="window.open('https://scs.owasp.org/sctop10/', '_blank')">
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+                fill="#04080D" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="close_banner btn-close btn-close-white" id="closeBanner" aria-label="Close">
+      &#10005;
+    </button>
+    </div>
+    <!-- notification banner end -->
+
+    <!-- announcement start -->
+    <!-- <div class="announcment_wrap">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-11 ordr_2">
+					<div class="text_center">
+						<h6>ANNOUNCEMENT : &nbsp;</h6>
+						<p>
+							We have launched our cloud based Smart Contract vulnerability
+							scanner SolidityScan. Check out
+							<a href="https://solidityscan.com/" target="_blank"
+								style="color: white">SolidityScan.com</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-1 ordr_1">
+					<div class="text-right">
+						<a href="#" class="clse" id="clsoe">
+							<img src="images/clse_icon.svg" alt="x" class="img-fluid" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+    <!-- announcement end -->
+
+    <!-- header section start -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar px-0 navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto custom_scrl desktop-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <p>Home</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <p>About</p>
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <p style="margin: 0 12px; cursor: pointer">
+                  Solutions
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </p>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="smart-contract-audits.html">Smart Contract Audits</a>
+                <a class="dropdown-item" href="dapp-protocol-security.html">DApp & Protocol Security</a>
+                <a class="dropdown-item" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+                <a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
+                <a class="dropdown-item" href="blockchain-security.html">Blockchain Security</a>
+
+                <a class="dropdown-item" href="cloud-security.html">Cloud Infrastructure</a>
+                <a class="dropdown-item" href="wallet-security.html">Wallet Security</a>
+                <a class="dropdown-item" href="mobile-app-security.html">Mobile App Security</a>
+                <a class="dropdown-item" href="web-app-security.html">Web App Security</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
+                <a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
+                <a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+                <a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
+                <a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <p style="margin: 0 12px; cursor: pointer">
+                  Industries
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </p>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="fintech-security.html">Finance & Fintech</a>
+                <a class="dropdown-item" href="saas-security.html">SaaS & Enterprise</a>
+                <a class="dropdown-item" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+                <a class="dropdown-item" href="gaming-security.html">Gaming & Digital Assets</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="resources.html">
+                  Resources
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="recently-audited.html?tab-name=recent">Recently Audited</a>
+                <a class="dropdown-item" href="recently-audited.html?tab-name=popular">Popular Projects</a>
+                <a class="dropdown-item" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+                <a class="dropdown-item" href="brand-guidelines.html">Brand Guidelines</a>
+                <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                <a class="dropdown-item" href="https://discover.credshields.com/">Blog</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="./owasp-smart-contract-top-10-2026.html">
+                  OWASP Top 10
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2025.html">2025</a>
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2026.html">2026</a>
+              </div>
+            </li>
+          </ul>
+          <nav class="navbar navbar-light desktop-menu">
+            <form class="form-inline">
+              <a href="" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+                <button class="book_security_audit_btn">
+                  Book Security Audit
+                </button>
+                <!-- <img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid"> -->
+              </a>
+            </form>
+          </nav>
+          <div class="mobile-overlay-menu" id="navbarNav">
+            <div class="mobile-overlay-content">
+              <div class="mobile-overlay-menu-item">
+                <a href="index.html"> Home </a>
+              </div>
+              <div class="mobile-overlay-menu-item">
+                <a href="about.html"> About </a>
+              </div>
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+                <span>Solutions</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="smart-contract-audits.html">Smart Contract Audits</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="dapp-protocol-security.html">DApp & Protocol Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="penetration-testing.html">Penetration Testing</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="blockchain-security.html">Blockchain Security</a>
+                </div>
+
+                <div class="mobile-overlay-submenu-item">
+                  <a href="cloud-security.html">Cloud Infrastructure</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="wallet-security.html">Wallet Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="mobile-app-security.html">Mobile App Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="web-app-security.html">Web App Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="ai-security-tools.html">AI Security Tools</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://solidityscan.com/">SolidityScan</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://rustscan.com/">RustScan</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+                <span>Industries</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="fintech-security.html">Finance & Fintech</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="saas-security.html">SaaS & Enterprise</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="gaming-security.html">Gaming & Digital Assets</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+                <span>Resources</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=recent">Recently Audited</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=popular">Popular Projects</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="brand-guidelines.html">Brand Guidelines</a>
+                  </div>
+                  <div class="mobile-overlay-submenu-item">
+                  <a href="https://discover.credshields.com/">Blog</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
+                <span>OWASP Top 10</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              
+              <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="owasp-smart-contract-top-10-2025.html">2025</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="owasp-smart-contract-top-10-2026.html">2026</a>
+                </div>
+              
+              </div>
+              
+              <!--<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
+                              <span>OWASP Top 10</span>
+                              <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                              </svg>
+                            </div>
+              
+                             <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
+                              <div class="mobile-overlay-submenu-item">
+                                <a href="owasp-smart-contract-top-10-2025.html">2025</a>
+                              </div>
+                              <div class="mobile-overlay-submenu-item">
+                                <a href="owasp-smart-contract-top-10-2026.html">2026</a>
+                              </div>
+                </div> -->
+            </div>
+
+            <div class="mobile-overlay-footer">
+              <nav class="navbar navbar-light cart_drp_clk">
+                <form class="form-inline">
+                  <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+                    <button class="book_security_audit_btn">
+                      Book Security Audit
+                    </button>
+                  </a>
+                </form>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header section end -->
+
+    <section class="eco_system_new_container eco_system_new_container_owasp">
+      <div class="owasp_main_icon_wrapper">
+        <div class="solution_badge_container">
+          
+          <div class="solution_badge_text">Cross-Border Payment Infrastructure</div>
+        </div>
+        <div
+          class="eco_system_new_header eco_system_new_header_owasp"
+          style="row-gap: 60px"
+        >
+          <h1 class="eco_system_new_title">
+            Replacing SWIFT With Smart Contracts
+            <span class="eco_system_new_title_explore">Requires Sovereign Security.</span>
+          </h1>
+          <p class="eco_system_new_subtitle">
+            Banks and payment institutions building on-chain cross-border settlement rails are replacing correspondent banking infrastructure that moves trillions of dollars annually. Smart contracts that execute FX, clear payments, and enforce compliance across jurisdictions must be flawless. A single vulnerability does not affect one transaction — it affects every payment that flows through the protocol.
+          </p>
+          
+          <div class="eco_system_new_buttons">
+            <button class="eco_system_new_btn eco_system_new_btn_primary" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+              Request Security Briefing
+            </button>
+            <button class="book_security_audit_btn run_free_ai_scan_btn" onclick="window.location.href = './index.html#quickscan_container_sec'" style="cursor: pointer;">
+              <span style="color: #ffffff; font-weight: 700; margin-right: 1px"
+                >Run Free</span
+              >
+              <img
+                src="images/ai_icon_magic.svg"
+                alt="ai_icon_magic"
+                class="img-fluid"
+              />
+              <span style="color: #38ff7e; font-weight: 700; margin-left: 1px"
+                >AI Scan</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: stats_bar — auto-generated by figma-html-sync -->
+    <section class="fm_section" data-section="stats_bar" style="padding: 40px 0; background: linear-gradient(180deg, #091410 0%, #0A1610 100%); border-bottom: 1px solid rgba(28,48,35,0.6);">
+      <div class="fm_container">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;">
+          <div style="padding: 24px 16px; border-right: 1px solid rgba(28,48,35,0.7);">
+            <div style="font-size: 48px; font-weight: 800; color: #78FF04; line-height: 1; margin-bottom: 8px;">$150T+</div>
+            <div style="font-size: 13px; color: #7EA18A; text-transform: uppercase; letter-spacing: 0.08em;">Annual cross-border payment volume</div>
+          </div>
+          <div style="padding: 24px 16px; border-right: 1px solid rgba(28,48,35,0.7);">
+            <div style="font-size: 48px; font-weight: 800; color: #78FF04; line-height: 1; margin-bottom: 8px;">$3.7B+</div>
+            <div style="font-size: 13px; color: #7EA18A; text-transform: uppercase; letter-spacing: 0.08em;">Web3 exploit losses in 2025</div>
+          </div>
+          <div style="padding: 24px 16px; border-right: 1px solid rgba(28,48,35,0.7);">
+            <div style="font-size: 48px; font-weight: 800; color: #78FF04; line-height: 1; margin-bottom: 8px;">T+0</div>
+            <div style="font-size: 13px; color: #7EA18A; text-transform: uppercase; letter-spacing: 0.08em;">On-chain settlement: irreversible</div>
+          </div>
+          <div style="padding: 24px 16px;">
+            <div style="font-size: 48px; font-weight: 800; color: #78FF04; line-height: 1; margin-bottom: 8px;">7 days</div>
+            <div style="font-size: 13px; color: #7EA18A; text-transform: uppercase; letter-spacing: 0.08em;">Standard audit turnaround</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fund Multiplier Sections -->
+    <style>
+      /* ── Fund Multiplier palette ── */
+      :root {
+        --fm-bg-dark:   #0A1610;
+        --fm-card-bg:   #0D1912;
+        --fm-card-bg2:  #030A06;
+        --fm-border:    #1C3023;
+        --fm-lime:      #78FF04;
+        --fm-green:     #38FF7E;
+        --fm-text-main: #D8FFE5;
+        --fm-text-sub:  #C1E5CD;
+        --fm-gray:      #A3A3A3;
+        --fm-muted:     #7EA18A;
+      }
+
+      /* ── shared section ── */
+      .fm_section {
+        background: linear-gradient(180deg, #0D1B13 0%, #0A1610 100%);
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .fm_section + .fm_section { border-top: 1px solid rgba(28,48,35,0.5); }
+
+      .fm_container {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      /* ── pill badge ── */
+      .fm_pill_badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 22px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, #0D1912 0%, #030A06 100%);
+        border: 1px solid #1C3023;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        margin-bottom: 28px;
+      }
+      .fm_pill_badge .fm_dot {
+        width: 7px; height: 7px;
+        border-radius: 50%;
+        background: #78FF04;
+        box-shadow: 0 0 6px #78FF04;
+      }
+      .fm_pill_badge span {
+        color: #78FF04;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      /* ── gradient heading ── */
+      .fm_gradient_heading {
+        background: linear-gradient(180deg, #D8FFE5 0%, #C1E5CD 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+      }
+
+      /* ────────────────────────────────────────
+         SECTION 1 — Fund Multiplier Intro
+      ──────────────────────────────────────── */
+      .fm_intro_grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .fm_intro_heading {
+        font-size: 40px;
+        line-height: 1.18;
+        margin: 0 0 32px;
+        color: #ffffff;
+        font-weight: 700;
+      }
+      .fm_intro_quote {
+        font-size: 18px;
+        line-height: 1.65;
+        color: #78FF04;
+        margin: 0;
+        font-style: normal;
+        font-weight: 400;
+      }
+      .fm_feature_list { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+      .fm_feature_item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+      .fm_feature_item:first-child { padding-top: 0; }
+      .fm_feature_item:last-child { border-bottom: none; padding-bottom: 0; }
+      .fm_feature_icon_wrap {
+        flex-shrink: 0;
+        width: 56px; height: 56px;
+        border-radius: 14px;
+        background: #162819;
+        border: 1px solid #1C3023;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .fm_feature_icon_wrap svg { width: 26px; height: 26px; }
+      .fm_feature_text h4 {
+        margin: 0 0 8px;
+        font-size: 17px;
+        font-weight: 700;
+        color: #ffffff;
+        font-family: 'Barlow', sans-serif;
+        line-height: 1.3;
+      }
+      .fm_feature_text p {
+        margin: 0;
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: #7EA18A;
+      }
+
+      /* ────────────────────────────────────────
+         SECTION 2 — When You Need Us
+      ──────────────────────────────────────── */
+      .fm_section_header {
+        text-align: center;
+        margin-bottom: 52px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .fm_section_title {
+        font-size: 52px;
+        line-height: 1.12;
+        max-width: 760px;
+        margin: 0 0 20px;
+        font-weight: 700;
+        color: #ffffff;
+        -webkit-text-fill-color: #ffffff;
+        background: none;
+      }
+      .fm_section_subtitle {
+        font-size: 16px;
+        line-height: 1.65;
+        color: #7EA18A;
+        max-width: 600px;
+        text-align: center;
+        margin: 0;
+      }
+      .fm_cards_grid_3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .fm_service_card {
+        background: linear-gradient(160deg, #0D1912 0%, #0A1208 40%, #030A06 100%);
+        border: 1px solid #1C3023;
+        border-radius: 20px;
+        padding: 40px 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+        transition: border-color 0.25s, box-shadow 0.25s;
+      }
+      .fm_service_card:hover {
+        border-color: rgba(120,255,4,0.35);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      }
+      .fm_card_number {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #78FF04;
+      }
+      .fm_card_title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.25;
+        font-family: 'Barlow', sans-serif;
+        color: #ffffff;
+        margin: 0;
+      }
+      .fm_card_desc {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #7EA18A;
+        margin: 14px 0 0;
+      }
+      .fm_check_list { list-style: none; margin: 16px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; border-top: 1px solid #1C3023; padding-top: 24px; }
+      .fm_check_list li {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        font-size: 14px;
+        color: #C1E5CD;
+        line-height: 1.5;
+      }
+      .fm_check_list li .fm_chk {
+        flex-shrink: 0;
+        margin-top: 1px;
+        color: #38FF7E;
+      }
+
+      /* ────────────────────────────────────────
+         SECTION 3 — What We Deliver
+      ──────────────────────────────────────── */
+      .fm_cards_grid_4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+      .fm_deliver_card {
+        background: linear-gradient(160deg, #0D1912 0%, #030A06 100%);
+        border: 1px solid #1C3023;
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: border-color 0.25s, box-shadow 0.25s;
+      }
+      .fm_deliver_card:hover {
+        border-color: rgba(120,255,4,0.35);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      }
+      .fm_deliver_card_body { padding: 28px 24px 24px; flex: 1; }
+      .fm_stage_badge {
+        display: inline-block;
+        color: #78FF04;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        margin-bottom: 14px;
+        background: none;
+        border: none;
+        padding: 0;
+        line-height: 1.75;
+      }
+      .fm_deliver_card_title {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.28;
+        font-family: 'Barlow', sans-serif;
+        color: #ffffff;
+        margin: 0 0 14px;
+      }
+      .fm_deliver_card_desc {
+        font-size: 13px;
+        line-height: 1.7;
+        color: #A3A3A3;
+        margin: 0;
+      }
+      .fm_deliver_card_footer {
+        background:  linear-gradient(180deg, #0D1B13 0%, #0A1610 100%);
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      .fm_deliver_card_footer ul {
+        list-style: none; margin: 0; padding: 0;
+        display: flex; flex-direction: column;
+      }
+      .fm_deliver_card_footer li {
+        font-size: 13.5px;
+        border-bottom: 1px solid #152C1D;
+        padding: 14px 24px;
+        color: #D8FEE5;
+        line-height: 1.4;
+      }
+      .fm_deliver_card_footer li:last-child { border-bottom: none; }
+      .fm_deliver_card_footer li:nth-child(even) { background: #0C130F; }
+
+      /* ────────────────────────────────────────
+         SECTION 4 — What You Receive
+      ──────────────────────────────────────── */
+      .fm_receive_header {
+        text-align: center;
+        margin-bottom: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .fm_receive_title {
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 1.12;
+        color: #ffffff;
+        max-width: 720px;
+        margin: 0 0 20px;
+        font-family: 'Barlow', sans-serif;
+      }
+      .fm_receive_subtitle {
+        font-size: 16px;
+        line-height: 1.65;
+        color: #7EA18A;
+        max-width: 640px;
+        margin: 0;
+      }
+      .fm_receive_grid {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        gap: 72px;
+        align-items: center;
+      }
+      /* feature list with dividers */
+      .fm_feat_list { list-style: none; margin: 0; padding: 0; }
+      .fm_feat_item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        padding: 28px 0;
+        border-bottom: 1px solid #1C3023;
+      }
+      .fm_feat_item:first-child { padding-top: 0; }
+      .fm_feat_item:last-child { border-bottom: none; }
+      .fm_feat_icon {
+        flex-shrink: 0;
+        width: 48px; height: 48px;
+        border-radius: 14px;
+        background: #0D1912;
+        border: 1px solid #1C3023;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .fm_feat_icon svg { width: 22px; height: 22px; }
+      .fm_feat_body h4 {
+        margin: 0 0 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #ffffff;
+        font-family: 'Barlow', sans-serif;
+        line-height: 1.3;
+      }
+      .fm_feat_body p {
+        margin: 0;
+        font-size: 13.5px;
+        line-height: 1.65;
+        color: #7EA18A;
+      }
+      /* report card */
+      .fm_report_card {
+        background: #111c15;
+        border: 1px solid #1C3023;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+      }
+      .fm_report_header {
+        padding: 20px 24px;
+        border-bottom: 1px solid #1C3023;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .fm_report_header_title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #D8FFE5;
+        font-family: 'Barlow', sans-serif;
+      }
+      .fm_certified_badge {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #38FF7E;
+      }
+      .fm_report_meta {
+        padding: 20px 24px;
+        border-bottom: 1px solid #1C3023;
+      }
+      .fm_report_meta table { width: 100%; border-collapse: collapse; }
+      .fm_report_meta td {
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.4;
+        vertical-align: top;
+        font-family: 'DM Mono', 'Courier New', monospace;
+      }
+      .fm_report_meta td:first-child { color: #7EA18A; width: 42%; }
+      .fm_report_meta td:last-child { color: #C1E5CD; text-align: right; }
+      /* finding rows */
+      .fm_report_findings { padding: 4px 0; }
+      .fm_finding_row {
+        padding: 14px 24px;
+        border-bottom: 1px solid rgba(28,48,35,0.6);
+      }
+      .fm_finding_row:last-child { border-bottom: none; }
+      .fm_finding_severity {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 11.5px;
+        color: #7EA18A;
+        margin-bottom: 4px;
+      }
+      .fm_sev_dot {
+        width: 8px; height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .fm_sev_dot.critical { background: #FF4444; }
+      .fm_sev_dot.high     { background: #FF8C00; }
+      .fm_sev_dot.medium   { background: #FFD700; }
+      .fm_sev_dot.success  { background: #38FF7E; }
+      .fm_finding_row_inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .fm_finding_name {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: #D8FFE5;
+      }
+      .fm_badge_remediated {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 10px;
+        border-radius: 6px;
+        background: rgba(56,255,126,0.08);
+        border: 1px solid rgba(56,255,126,0.2);
+        font-size: 10.5px;
+        font-weight: 700;
+        color: #38FF7E;
+        white-space: nowrap;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .fm_badge_complete {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 3px 10px;
+        border-radius: 6px;
+        background: rgba(56,255,126,0.08);
+        border: 1px solid rgba(56,255,126,0.2);
+        font-size: 10.5px;
+        font-weight: 700;
+        color: #38FF7E;
+        white-space: nowrap;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      /* ────────────────────────────────────────
+         Responsive
+      ──────────────────────────────────────── */
+      @media (max-width: 1200px) {
+        .fm_cards_grid_4 { grid-template-columns: repeat(2, 1fr); }
+        .fm_intro_heading { font-size: 34px; }
+      }
+      @media (max-width: 992px) {
+        .fm_intro_grid,
+        .fm_receive_grid { grid-template-columns: 1fr; gap: 48px; }
+        .fm_receive_title { font-size: 34px; }
+        .fm_cards_grid_3 { grid-template-columns: 1fr; }
+        .fm_section_title { font-size: 28px; }
+        .fm_container { padding: 0 24px; }
+        .fm_section { padding: 60px 0; }
+      }
+      @media (max-width: 576px) {
+        .fm_cards_grid_4 { grid-template-columns: 1fr; }
+        .fm_intro_heading,
+        .fm_receive_heading { font-size: 26px; }
+      }
+
+      /* ────────────────────────────────────────
+         SECTION — Institutional Payment Stack
+      ──────────────────────────────────────── */
+      .fm_stack_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .fm_stack_card {
+        background: linear-gradient(145deg, #0D1A12 0%, #080F0C 40%, #030806 100%);
+        border: 1px solid #1C3023;
+        border-radius: 18px;
+        padding: 28px 32px 32px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .fm_stack_card_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .fm_stack_layer_label {
+        font-size: 13px;
+        line-height: 1;
+        font-family: 'Barlow', sans-serif;
+      }
+      .fm_layer_num {
+        color: #78FF04;
+        font-weight: 500;
+      }
+      .fm_layer_cat {
+        color: #ffffff;
+        font-weight: 700;
+      }
+      .fm_severity_badge {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .fm_severity_dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .fm_severity_dot--critical { background: #FF0000; }
+      .fm_severity_dot--high { background: #FF8000; }
+      .fm_severity_label {
+        font-size: 12px;
+        font-weight: 400;
+        color: #D4D4D4;
+        font-family: 'Barlow', sans-serif;
+      }
+      .fm_stack_card_title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0;
+        font-family: 'Barlow', sans-serif;
+        color: #ffffff;
+      }
+      .fm_stack_card_desc {
+        font-size: 13.5px;
+        line-height: 1.7;
+        color: #7EA18A;
+        margin: 0;
+      }
+      .fm_why_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: center;
+      }
+      @media (max-width: 992px) {
+        .fm_stack_grid { grid-template-columns: 1fr; }
+        .fm_why_grid { grid-template-columns: 1fr; gap: 48px; }
+      }
+      @media (max-width: 576px) {
+        .fm_stack_card { padding: 22px 20px; }
+        .fm_stack_card_title { font-size: 18px; }
+      }
+    </style>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 1 — The Institutional Stakes
+    ══════════════════════════════════════════ -->
+    <section class="fm_section">
+      <div class="fm_container">
+        <div class="fm_intro_grid">
+
+          <!-- LEFT: badge + heading + quote + body -->
+          <div>
+            <div class="fm_pill_badge" style="background:transparent; box-shadow:none;">
+              <span>The Institutional Stakes</span>
+            </div>
+            <h2 class="fm_intro_heading">On-Chain Payments Are Not DeFi. The Security Standard Must Reflect That.</h2>
+            <p class="fm_intro_quote">"SWIFT moves $150 trillion a year through a closed, permissioned network with decades of security hardening. Moving that volume on-chain requires security infrastructure SWIFT took forty years to build in months."</p>
+            <p style="font-size:14px; line-height:1.7; color:#7EA18A; margin-top:20px;">Institutional cross-border payment infrastructure on blockchain is categorically different from DeFi protocols. The participants are regulated financial institutions. The volumes are systemic. The regulatory oversight is stringent. The consequences of a security failure extend well beyond protocol TVL — they affect the payment flows of banks and their customers.</p>
+            <p style="font-size:14px; line-height:1.7; color:#7EA18A; margin-top:16px;">CredShields brings the institutional security depth that cross-border payment infrastructure demands — covering the smart contract layer, the FX settlement mechanism, the liquidity pool architecture, the compliance and sanctions screening integration, and the multi-party authorisation logic that governs institutional payment flows.</p>
+          </div>
+
+          <!-- RIGHT: 5 feature items -->
+          <ul class="fm_feature_list">
+            <li class="fm_feature_item">
+              <div class="fm_feature_icon_wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="19,20 9,12 19,4 19,20"/><line x1="5" y1="19" x2="5" y2="5"/>
+                </svg>
+              </div>
+              <div class="fm_feature_text">
+                <h4>Irreversibility</h4>
+                <p>On-chain payments cannot be reversed. Unlike SWIFT, there is no recall mechanism, no nostro/vostro correction, no central counterparty to unwind a fraudulent transfer.</p>
+              </div>
+            </li>
+            <li class="fm_feature_item">
+              <div class="fm_feature_icon_wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"/>
+                  <path d="M14.5 9a3.5 3.5 0 0 0-5 0v.5a3 3 0 0 0 3 3 3 3 0 0 1 3 3v.5a3.5 3.5 0 0 1-5 0"/>
+                  <line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/>
+                </svg>
+              </div>
+              <div class="fm_feature_text">
+                <h4>FX settlement</h4>
+                <p>Atomic FX settlement via smart contract introduces oracle price feed dependency, the same manipulation vector responsible for the majority of DeFi protocol losses.</p>
+              </div>
+            </li>
+            <li class="fm_feature_item">
+              <div class="fm_feature_icon_wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+              </div>
+              <div class="fm_feature_text">
+                <h4>Sanctions screening</h4>
+                <p>On-chain sanctions screening and compliance logic must be cryptographically enforced at the contract level, not reliant on off-chain checks that can be circumvented.</p>
+              </div>
+            </li>
+            <li class="fm_feature_item">
+              <div class="fm_feature_icon_wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="2"/>
+                  <line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="14" x2="10" y2="14"/>
+                </svg>
+              </div>
+              <div class="fm_feature_text">
+                <h4>Liquidity pools</h4>
+                <p>Pre-funded liquidity pools supporting instant cross-border settlement are direct targets for flash loan attacks and liquidity drain exploits.</p>
+              </div>
+            </li>
+            <li class="fm_feature_item">
+              <div class="fm_feature_icon_wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14,2 14,8 20,8"/>
+                  <line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="12" y2="17"/>
+                </svg>
+              </div>
+              <div class="fm_feature_text">
+                <h4>Regulatory</h4>
+                <p>BIS CPMI, FATF, FSB, and PSD3 frameworks all have explicit requirements for the security and resilience of cross-border payment infrastructure.</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION — Institutional Payment Stack
+    ══════════════════════════════════════════ -->
+    <section class="fm_section">
+      <div class="fm_container">
+        <div class="fm_section_header">
+          <div class="fm_pill_badge">
+            <span class="fm_dot"></span>
+            <span>Institutional Payment Stack</span>
+          </div>
+          <h2 class="fm_section_title">Every Layer of On-Chain Payment Infrastructure Is a Security Surface</h2>
+          <p class="fm_section_subtitle">Institutional cross-border payment infrastructure operates across multiple interdependent layers each with distinct attack vectors. A security failure in any one layer compromises the entire payment rail.</p>
+        </div>
+
+        <div class="fm_stack_grid">
+
+          <!-- Card 1 -->
+          <div class="fm_stack_card">
+            <div class="fm_stack_card_header">
+              <div class="fm_stack_layer_label">
+                <span class="fm_layer_num">Layer 01</span><span class="fm_layer_cat"> &middot; Settlement</span>
+              </div>
+              <div class="fm_severity_badge">
+                <span class="fm_severity_dot fm_severity_dot--critical"></span>
+                <span class="fm_severity_label">Critical</span>
+              </div>
+            </div>
+            <h3 class="fm_stack_card_title">Payment Settlement Contract</h3>
+            <p class="fm_stack_card_desc">The core smart contract executing atomic cross-border settlement encoding the payment logic, release conditions, multi-party authorisation, and final settlement confirmation.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="fm_stack_card">
+            <div class="fm_stack_card_header">
+              <div class="fm_stack_layer_label">
+                <span class="fm_layer_num">Layer 02</span><span class="fm_layer_cat"> &middot; FX</span>
+              </div>
+              <div class="fm_severity_badge">
+                <span class="fm_severity_dot fm_severity_dot--critical"></span>
+                <span class="fm_severity_label">Critical</span>
+              </div>
+            </div>
+            <h3 class="fm_stack_card_title">FX Rate Oracle &amp; Conversion Logic</h3>
+            <p class="fm_stack_card_desc">The oracle feeding real-time FX rates into the settlement contract and the conversion logic determining the destination currency amount received by the beneficiary institution.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="fm_stack_card">
+            <div class="fm_stack_card_header">
+              <div class="fm_stack_layer_label">
+                <span class="fm_layer_num">Layer 03</span><span class="fm_layer_cat"> &middot; Liquidity</span>
+              </div>
+              <div class="fm_severity_badge">
+                <span class="fm_severity_dot fm_severity_dot--critical"></span>
+                <span class="fm_severity_label">Critical</span>
+              </div>
+            </div>
+            <h3 class="fm_stack_card_title">Pre-Funded Liquidity Pool Infrastructure</h3>
+            <p class="fm_stack_card_desc">The pre-funded liquidity pools enabling instant cross-border settlement without correspondent bank delays including pool management, rebalancing logic, and access controls.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="fm_stack_card">
+            <div class="fm_stack_card_header">
+              <div class="fm_stack_layer_label">
+                <span class="fm_layer_num">Layer 04</span><span class="fm_layer_cat"> &middot; Compliance</span>
+              </div>
+              <div class="fm_severity_badge">
+                <span class="fm_severity_dot fm_severity_dot--high"></span>
+                <span class="fm_severity_label">High</span>
+              </div>
+            </div>
+            <h3 class="fm_stack_card_title">On-Chain Compliance &amp; Sanctions</h3>
+            <p class="fm_stack_card_desc">Smart contract-enforced OFAC, UN, and EU sanctions screening including the logic that blocks or flags payments to sanctioned addresses and the governance controlling the sanctions list.</p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="fm_stack_card">
+            <div class="fm_stack_card_header">
+              <div class="fm_stack_layer_label">
+                <span class="fm_layer_num">Layer 05</span><span class="fm_layer_cat"> &middot; Authorisation</span>
+              </div>
+              <div class="fm_severity_badge">
+                <span class="fm_severity_dot fm_severity_dot--high"></span>
+                <span class="fm_severity_label">High</span>
+              </div>
+            </div>
+            <h3 class="fm_stack_card_title">Multi-Party Payment Authorisation</h3>
+            <p class="fm_stack_card_desc">The multi-signature and threshold authorisation logic governing large-value payment release including the key management architecture and the quorum rules for institutional payment approval.</p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="fm_stack_card">
+            <div class="fm_stack_card_header">
+              <div class="fm_stack_layer_label">
+                <span class="fm_layer_num">Layer 06</span><span class="fm_layer_cat"> &middot; Interop</span>
+              </div>
+              <div class="fm_severity_badge">
+                <span class="fm_severity_dot fm_severity_dot--high"></span>
+                <span class="fm_severity_label">High</span>
+              </div>
+            </div>
+            <h3 class="fm_stack_card_title">Cross-Chain &amp; Network Interoperability</h3>
+            <p class="fm_stack_card_desc">Infrastructure enabling payment flows between different blockchain networks or between on-chain and traditional banking systems including message validation, bridge security, and ISO 20022 integration.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 2 — Critical Risk Vectors
+    ══════════════════════════════════════════ -->
+    <section class="fm_section">
+      <div class="fm_container">
+        <div class="fm_section_header">
+          <div class="fm_pill_badge">
+            <span class="fm_dot"></span>
+            <span>Critical Risk Vectors</span>
+          </div>
+          <h2 class="fm_section_title">Where Institutional Payment Infrastructure Is Most Vulnerable</h2>
+          <p class="fm_section_subtitle">Every payment protocol has a unique security surface. These are the vectors attackers target first and what CredShields audits first.</p>
+        </div>
+
+        <div class="fm_cards_grid_3">
+
+          <!-- Card 1: FX Oracle Manipulation -->
+          <div class="fm_service_card">
+            <div>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FF4444; display:block; margin-bottom:12px;">Critical &middot; FX settlement</span>
+              <h3 class="fm_card_title">FX Oracle Manipulation &amp; Rate Exploitation</h3>
+              <p class="fm_card_desc">Payment protocols that settle cross-currency transactions on-chain depend on FX rate oracles. Manipulation of these feeds allows attackers to alter the exchange rate at the moment of settlement — extracting value from every payment that flows through the protocol.</p>
+            </div>
+            <ul class="fm_check_list">
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Single-source FX feed manipulation at settlement
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Flash loan-powered rate distortion
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                TWAP window manipulation across currency corridors
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Multi-hop route exploitation through thin liquidity
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Liquidity Pool Drain -->
+          <div class="fm_service_card">
+            <div>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FF4444; display:block; margin-bottom:12px;">Critical &middot; Liquidity</span>
+              <h3 class="fm_card_title">Liquidity Pool Drain &amp; Flash Loan Attack</h3>
+              <p class="fm_card_desc">Payment protocols routing settlements through AMM liquidity pools introduce flash loan and price manipulation vectors. An attacker who drains settlement reserves does not just steal funds — they halt the entire payment rail.</p>
+            </div>
+            <ul class="fm_check_list">
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Flash loan attack on settlement liquidity reserves
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Pool drain via reentrancy in settlement callback
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Slippage parameter manipulation to extract pool value
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Sandwich attack targeting high-value payment flows
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Sanctions Screening Bypass -->
+          <div class="fm_service_card">
+            <div>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FF8C00; display:block; margin-bottom:12px;">High &middot; Compliance</span>
+              <h3 class="fm_card_title">Sanctions Screening Bypass &amp; Compliance Exploit</h3>
+              <p class="fm_card_desc">On-chain compliance logic enforcing AML screening, sanctions lists, and payment corridor restrictions must be cryptographically enforced at the contract level. Any bypass constitutes both a security failure and a regulatory breach.</p>
+            </div>
+            <ul class="fm_check_list">
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Blocklist validation bypass in payment routing
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Jurisdiction restriction circumvention via multi-hop
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Role escalation enabling compliance module override
+              </li>
+              <li>
+                <svg class="fm_chk" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#38FF7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Cross-chain compliance enforcement gap at bridge layer
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         SECTION 3 — Our Services
+    ══════════════════════════════════════════ -->
+    <section class="fm_section">
+      <div class="fm_container">
+        <div class="fm_section_header">
+          <div class="fm_pill_badge">
+            <span class="fm_dot"></span>
+            <span>Our Services</span>
+          </div>
+          <h2 class="fm_section_title">Security Coverage Across the Full Payment Infrastructure Stack</h2>
+          <p class="fm_section_subtitle">Every engagement is scoped to your payment architecture, currency corridors, regulatory jurisdiction, and go-live timeline.</p>
+        </div>
+
+        <div class="fm_cards_grid_4">
+
+          <!-- Card 1: Core Audit -->
+          <div class="fm_deliver_card">
+            <div class="fm_deliver_card_body">
+              <div class="fm_stage_badge">Core Audit</div>
+              <h3 class="fm_deliver_card_title">Payment Settlement Contract Audit</h3>
+              <p class="fm_deliver_card_desc">Full audit of your payment settlement smart contracts — covering payment routing logic, currency conversion, finality enforcement, and settlement guarantees. Structured for regulatory and institutional disclosure.</p>
+            </div>
+            <div class="fm_deliver_card_footer">
+              <ul>
+                <li>Payment routing logic audit</li>
+                <li>Settlement finality enforcement</li>
+                <li>Currency conversion security</li>
+                <li>Governance mechanism review</li>
+                <li>Access control architecture</li>
+                <li>Regulatory-ready audit report</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Compliance -->
+          <div class="fm_deliver_card">
+            <div class="fm_deliver_card_body">
+              <div class="fm_stage_badge">Compliance</div>
+              <h3 class="fm_deliver_card_title">On-Chain Compliance Architecture</h3>
+              <p class="fm_deliver_card_desc">Full review of the on-chain compliance architecture enforcing AML screening, sanctions lists, payment corridor restrictions, and travel rule compliance across all supported jurisdictions.</p>
+            </div>
+            <div class="fm_deliver_card_footer">
+              <ul>
+                <li>Sanctions screening enforcement audit</li>
+                <li>AML logic &amp; blocklist security</li>
+                <li>Payment corridor restriction review</li>
+                <li>Travel rule compliance architecture</li>
+                <li>Compliance module access controls</li>
+                <li>BIS · FATF · PSD3 alignment</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: FX & Liquidity -->
+          <div class="fm_deliver_card">
+            <div class="fm_deliver_card_body">
+              <div class="fm_stage_badge">FX &amp; Liquidity</div>
+              <h3 class="fm_deliver_card_title">FX Oracle &amp; Liquidity Pool Security</h3>
+              <p class="fm_deliver_card_desc">Specialist review of every FX rate oracle and liquidity pool integration in your payment protocol — covering manipulation resistance, flash loan attack surfaces, and settlement reserve security.</p>
+            </div>
+            <div class="fm_deliver_card_footer">
+              <ul>
+                <li>FX oracle manipulation resistance</li>
+                <li>Flash loan attack surface review</li>
+                <li>TWAP configuration audit</li>
+                <li>Liquidity pool drain protection</li>
+                <li>Slippage parameter security</li>
+                <li>Settlement reserve safeguards</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: Interoperability -->
+          <div class="fm_deliver_card">
+            <div class="fm_deliver_card_body">
+              <div class="fm_stage_badge">Interoperability</div>
+              <h3 class="fm_deliver_card_title">Cross-Chain &amp; Banking System Integration</h3>
+              <p class="fm_deliver_card_desc">For payment rails bridging on-chain and off-chain banking systems or settling across multiple chains, we audit the full integration architecture covering the vectors most commonly exploited in bridge and settlement hacks.</p>
+            </div>
+            <div class="fm_deliver_card_footer">
+              <ul>
+                <li>Cross-chain bridge message validation</li>
+                <li>Banking API integration security</li>
+                <li>Replay attack protection</li>
+                <li>Cross-chain compliance enforcement</li>
+                <li>Bridge admin access controls</li>
+                <li>Multi-chain deployment review</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- End Fund Multiplier Sections -->
+
+
+    <section class="fm_section">
+      <div class="fm_container">
+        <div class="fm_section_header">
+          <div class="fm_pill_badge" style="background:transparent; box-shadow:none;">
+            <span>Regulatory Alignment</span>
+          </div>
+          <h2 class="fm_section_title">Documentation Your Regulators and Correspondent Banks Require</h2>
+          <p class="fm_section_subtitle">Every engagement delivers structured documentation aligned to the payment infrastructure regulatory frameworks your institution operates under.</p>
+        </div>
+
+        <div style="background:#0D1912; border:1px solid #1C3023; border-radius:18px; overflow:hidden; margin-top:16px;">
+          <table style="width:100%; border-collapse:collapse; font-family:'Barlow',sans-serif;">
+            <thead>
+              <tr>
+                <th style="padding:24px 32px; text-align:left; color:#78FF04; font-size:15px; font-weight:700; border-bottom:1px solid rgba(120,255,4,0.2); width:60%;">Framework</th>
+                <th style="padding:24px 24px; text-align:left; color:#78FF04; font-size:15px; font-weight:700; border-bottom:1px solid rgba(120,255,4,0.2); width:25%;">Checklist</th>
+                <th style="padding:24px 32px 24px 0; text-align:left; color:#78FF04; font-size:15px; font-weight:700; border-bottom:1px solid rgba(120,255,4,0.2); width:15%;">Coverage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding:20px 32px; border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#78FF04; font-weight:700;">BIS CPMI</span><span style="color:#ffffff; font-weight:700;"> - Payment infrastructure principles</span></td>
+                <td style="padding:20px 24px; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Jurisdiction</td>
+                <td style="padding:20px 32px 20px 0; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Full</td>
+              </tr>
+              <tr>
+                <td style="padding:20px 32px; border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#78FF04; font-weight:700;">FATF Rec</span><span style="color:#ffffff; font-weight:700;"> - 15 Virtual asset payment security</span></td>
+                <td style="padding:20px 24px; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">International</td>
+                <td style="padding:20px 32px 20px 0; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Full</td>
+              </tr>
+              <tr>
+                <td style="padding:20px 32px; border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#78FF04; font-weight:700;">PSD3 / PSD2</span><span style="color:#ffffff; font-weight:700;"> - Payment service security</span></td>
+                <td style="padding:20px 24px; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">European Union</td>
+                <td style="padding:20px 32px 20px 0; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Full</td>
+              </tr>
+              <tr>
+                <td style="padding:20px 32px; border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#78FF04; font-weight:700;">MAS PS Act</span><span style="color:#ffffff; font-weight:700;"> - Payment systems technology risk</span></td>
+                <td style="padding:20px 24px; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Singapore</td>
+                <td style="padding:20px 32px 20px 0; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Full</td>
+              </tr>
+              <tr>
+                <td style="padding:20px 32px; border-bottom:1px solid rgba(255,255,255,0.06);"><span style="color:#78FF04; font-weight:700;">FSB Framework</span><span style="color:#ffffff; font-weight:700;"> - Cross-border payment security</span></td>
+                <td style="padding:20px 24px; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">G20 / International</td>
+                <td style="padding:20px 32px 20px 0; border-bottom:1px solid rgba(255,255,255,0.06); color:#ffffff; font-weight:700; font-size:14px;">Full</td>
+              </tr>
+              <tr>
+                <td style="padding:20px 32px;"><span style="color:#78FF04; font-weight:700;">ISO 20022</span><span style="color:#ffffff; font-weight:700;"> - Cross-border payment security</span></td>
+                <td style="padding:20px 24px; color:#ffffff; font-weight:700; font-size:14px;">International</td>
+                <td style="padding:20px 32px 20px 0; color:#ffffff; font-weight:700; font-size:14px;">Aligned</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: why_credshields -->
+    <section class="fm_section" data-section="why_credshields">
+      <div class="fm_container">
+        <div class="fm_why_grid">
+
+          <!-- LEFT: badge + heading + body + bullet list -->
+          <div>
+            <div class="fm_pill_badge" style="background:transparent; box-shadow:none; margin-bottom:28px; display:inline-flex;">
+              <span>Why CredShields</span>
+            </div>
+            <h2 style="font-size:40px; font-weight:700; color:#ffffff; line-height:1.18; margin:0 0 24px; font-family:'Barlow',sans-serif;">Institutional Payment Infrastructure Requires Specialist Depth</h2>
+            <p style="font-size:14px; line-height:1.75; color:#7EA18A; margin:0 0 32px;">Generic smart contract auditors review token contracts. CredShields understands the institutional payment context — the regulatory constraints, the counterparty risk architecture, the FX settlement mechanics, and the compliance obligations that generic Web3 security firms have never encountered.</p>
+            <ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:16px;">
+              <li style="display:flex; align-items:flex-start; gap:14px;">
+                <svg style="flex-shrink:0; margin-top:2px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <span style="font-size:14px; color:#78FF04; font-weight:500; line-height:1.5;">FX oracle and liquidity pool specialist review not generic oracle audit</span>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:14px;">
+                <svg style="flex-shrink:0; margin-top:2px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <span style="font-size:14px; color:#78FF04; font-weight:500; line-height:1.5;">On-chain compliance and sanctions screening expertise</span>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:14px;">
+                <svg style="flex-shrink:0; margin-top:2px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <span style="font-size:14px; color:#78FF04; font-weight:500; line-height:1.5;">BIS CPMI, FATF, FSB, PSD3 regulatory framework fluency</span>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:14px;">
+                <svg style="flex-shrink:0; margin-top:2px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <span style="font-size:14px; color:#78FF04; font-weight:500; line-height:1.5;">Multi-party institutional authorisation architecture review</span>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:14px;">
+                <svg style="flex-shrink:0; margin-top:2px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <span style="font-size:14px; color:#78FF04; font-weight:500; line-height:1.5;">ISO 20022 and legacy banking system integration security</span>
+              </li>
+              <li style="display:flex; align-items:flex-start; gap:14px;">
+                <svg style="flex-shrink:0; margin-top:2px;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg>
+                <span style="font-size:14px; color:#78FF04; font-weight:500; line-height:1.5;">Board and regulator-ready documentation as standard</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RIGHT: dark card -->
+          <div style="background:#0D1912; border:1px solid #1C3023; border-radius:18px; min-height:480px; position:relative; overflow:hidden;">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/credshields/security-briefing?hide_gdpr_banner=1&background_color=0D1912&text_color=ffffff&primary_color=78FF04" style="min-width:100%; height:480px;"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section_alignment_website secure_your_protocol_container">
+      <div class="secure_your_protocol_outer_box">
+        <div class="secure_your_protocol_card">
+          <!-- Background Wave Effects -->
+          <div class="secure_your_protocol_background">
+            <img
+              src="images/secure_your_protocol_wave.svg"
+              class="secure_your_protocol_wave"
+              alt=""
+            />
+          </div>
+
+          <!-- Main Content -->
+          <div class="secure_your_protocol_content">
+            <h1 class="secure_your_protocol_title">
+              Replacing Correspondent Banking Demands Correspondent-Grade Security.
+            </h1>
+            <p class="secure_your_protocol_description">
+              Request a private infrastructure briefing. We will scope the right security programme for your payment architecture, currency corridors, regulatory jurisdiction, and go-live timeline. NDA available as standard.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="secure_your_protocol_buttons">
+              <a
+                class="secure_your_protocol_btn secure_your_protocol_btn_primary"
+                onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;"
+              >
+              Request Security Briefing
+              </a>
+              <button class="book_security_audit_btn run_free_ai_scan_btn" onclick="window.location.href = './index.html#quickscan_container_sec'" style="cursor: pointer;">
+                <span style="color: #ffffff; font-weight: 700; margin-right: 1px"
+                  >Run Free</span
+                >
+                <img
+                  src="images/ai_icon_magic.svg"
+                  alt="ai_icon_magic"
+                  class="img-fluid"
+                />
+                <span style="color: #38ff7e; font-weight: 700; margin-left: 1px"
+                  >AI Scan</span
+                >
+              </button>
+            </div>
+
+            <!-- Features -->
+            <div class="secure_your_protocol_features">
+              <div class="secure_your_protocol_feature">
+                <h3 class="secure_your_protocol_feature_title">
+                  NDA available
+                </h3>
+                <p class="secure_your_protocol_feature_description">
+                  BIS &middot; FATF &middot; PSD3 aligned
+                </p>
+              </div>
+              <div class="secure_your_protocol_feature">
+                <h3 class="secure_your_protocol_feature_title">
+                  FX &amp; liquidity specialist depth
+                </h3>
+                <p class="secure_your_protocol_feature_description">
+                  Results within 7 days
+                </p>
+              </div>
+              <div class="secure_your_protocol_feature">
+                <h3 class="secure_your_protocol_feature_title">
+                  Named security lead
+                </h3>
+                <p class="secure_your_protocol_feature_description">
+                  Dedicated payment infrastructure specialist
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="footer_new_container">
+    <div class="footer_new_content">
+      <div class="footer_new_main">
+        <!-- Brand Section -->
+        <div class="footer_new_brand">
+          <img src="images/Logo.svg" class="footer_new_logo" alt="" />
+          <p class="footer_new_tagline">
+            Protecting the future of Web3 and enterprise technology with
+            world-class security audits and consulting services.
+          </p>
+          <a class="partner_btn_primary font_color_black" style="margin-bottom: 20px;" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y'});return false;">
+          Partner with us
+        </a>
+          <div class="footer_new_social_icons">
+            <div class="footer_new_social_placeholder">
+              <img src="images/telegram_gray.svg" alt="telegram" class="img-fluid"
+                onclick="window.open('https://t.me/solidityscan', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/discord_gray.svg" alt="discord" class="img-fluid"
+                onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/medium_gray.svg" alt="medium" class="img-fluid"
+                onclick="window.open('https://blog.solidityscan.com/', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/x.svg" alt="X" class="img-fluid"
+                onclick="window.open('https://x.com/CredShields', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/instagram_gray.svg" alt="instagram" class="img-fluid"
+                onclick="window.open('https://www.instagram.com/credshields/', '_blank');" />
+            </div>
+          </div>
+          <div class="footer_new_soc_badge" style=" display: flex; align-items: center; gap: 30px; cursor: pointer;">
+              <img src="images/soc_badge.svg" alt="SOC 2 Certified" style="width: 80px;" class="img-fluid"
+                onclick="window.open('https://www.aicpa-cima.com/', '_blank')" />
+              <img src="images/owasp_badge.svg" alt="OWASP" style="width: 140px;" class="img-fluid"
+                onclick="window.open('https://owasp.org/www-project-smart-contract-top-10/', '_blank')" />
+            </div>
+          
+        </div>
+
+        <!-- Services Column -->
+        <div class="footer_new_column">
+          <h3 class="footer_new_column_title">Solutions</h3>
+          <div class="footer_new_links">
+            <a class="footer_new_link" href="smart-contract-audits.html">Smart Contract Audits</a>
+            <a class="footer_new_link" href="dapp-protocol-security.html">DApp & Protocol Security</a>
+            <a class="footer_new_link" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+            <a class="footer_new_link" href="penetration-testing.html">Penetration Testing</a>
+            <a class="footer_new_link" href="blockchain-security.html">Blockchain Security</a>
+
+            <a class="footer_new_link" href="cloud-security.html">Cloud Infrastructure</a>
+            <a class="footer_new_link" href="wallet-security.html">Wallet Security</a>
+            <a class="footer_new_link" href="mobile-app-security.html">Mobile App Security</a>
+            <a class="footer_new_link" href="web-app-security.html">Web App Security</a>
+            <a class="footer_new_link" href="ai-security-tools.html">AI Security Tools</a>
+            <a class="footer_new_link" href="https://solidityscan.com/">SolidityScan</a>
+            <a class="footer_new_link" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+            <a class="footer_new_link" href="https://rustscan.com/">RustScan</a>
+            <a class="footer_new_link" href="#">Wallet Tracker (Coming Soon)</a>
+          </div>
+        </div>
+
+        <!-- Industries Column -->
+        <div class="footer_new_column">
+          <h3 class="footer_new_column_title">Industries</h3>
+          <div class="footer_new_links">
+            <a class="footer_new_link" href="fintech-security.html">Finance & Fintech</a>
+            <a class="footer_new_link" href="saas-security.html">SaaS & Enterprises</a>
+            <a class="footer_new_link" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+            <a class="footer_new_link" href="gaming-security.html">Gaming & Digital Assets</a>
+          </div>
+        </div>
+
+        <!-- Resources Column -->
+        <div class="footer_new_column">
+          <h3 class="footer_new_column_title">Resources</h3>
+          <div class="footer_new_links">
+            <a href="https://discover.credshields.com/" class="footer_new_link">Blog</a>
+            <a class="footer_new_link" href="recently-audited.html?tab-name=recent">Recently Audited</a>
+            <a class="footer_new_link" href="recently-audited.html?tab-name=popular">Popular Projects</a>
+            <a class="footer_new_link" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+            <a class="footer_new_link" href="brand-guidelines.html">Brand Guidelines</a>
+            <a class="footer_new_link" href="ecosystem.html">Ecosystem</a>
+            <a class="footer_new_link" href="careers.html">Careers</a>
+
+          
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="footer_new_divider"></div>
+
+      <!-- Bottom Section -->
+      <div class="footer_new_bottom">
+        <div class="footer_new_address">
+          20A TANJONG PAGAR ROAD, SINGAPORE (088443)
+        </div>
+        <div class="footer_new_legal">
+          <a href="./tos.html" class="footer_new_legal_link">Terms & Conditions</a>
+          <span class="footer_new_separator">•</span>
+          <a href="./privacy.html" class="footer_new_legal_link">Privacy Policy</a>
+          <span class="footer_new_separator">•</span>
+          <span class="footer_new_copyright">Copyright © 2025 CredShields. All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- footer section end -->
+
+    <!-- JavaScript Libraries in the correct loading order -->
+    <!-- 1. jQuery first (from CDN with local fallback) -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/jquery.min.js"><\/script>');
+    </script>
+
+    <!-- 2. Other core libraries -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <!-- 3. Initialize AOS -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- 4. Custom scripts -->
+    <script src="js/smooth-naigate.js"></script>
+    <script src="js/custom_a.js"></script>
+    <script src="js/statAnimation.js"></script>
+    <script src="js/audits.js"></script>
+    <script src="js/scrollIntraction.js"></script>
+
+    <script>
+      // Counter Animation Function
+      function animateCounter(element, target, suffix, duration = 2000) {
+        const start = 0;
+        const increment = target / (duration / 16); // 60 FPS
+        let current = start;
+
+        const timer = setInterval(() => {
+          current += increment;
+
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+
+          // Format the number
+          let displayValue = current.toFixed(1);
+
+          // Add $ for the first stat
+          const prefix =
+            element.parentElement.querySelector(".upgraded_hero_stat_label")
+              .textContent === "Protected"
+              ? "$"
+              : "";
+
+          element.textContent = prefix + displayValue + suffix;
+        }, 16);
+      }
+
+      // Initialize counters when page loads
+      window.addEventListener("load", () => {
+        const counters = document.querySelectorAll(
+          ".upgraded_hero_stat_number"
+        );
+
+        // Delay the animation slightly for better effect
+        setTimeout(() => {
+          counters.forEach((counter) => {
+            const target = parseFloat(counter.getAttribute("data-target"));
+            const suffix = counter.getAttribute("data-suffix") || "";
+            animateCounter(counter, target, suffix);
+          });
+        }, 500);
+      });
+
+      // Intersection Observer for animation on scroll (if stats are below fold)
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: "0px",
+      };
+
+      const observer_hero = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll(
+              ".upgraded_hero_stat_number"
+            );
+            counters.forEach((counter) => {
+              if (
+                counter.textContent === "0" ||
+                counter.textContent.includes("$0")
+              ) {
+                const target = parseFloat(counter.getAttribute("data-target"));
+                const suffix = counter.getAttribute("data-suffix") || "";
+                animateCounter(counter, target, suffix);
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      const statsSection = document.querySelector(".upgraded_hero_stats");
+      if (statsSection) {
+        observer_hero.observe(statsSection);
+      }
+    </script>
+
+    <!-- Banner functionality -->
+    <script>
+      $(document).ready(function () {
+        // Close banner functionality
+        $("#closeBanner").click(function () {
+          $(".notification_banner").fadeOut(300);
+        });
+      });
+
+      document
+        .getElementById("run_free_quickscan")
+        .addEventListener("click", function () {
+          document.getElementById("quickscan_container_sec").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+
+      document
+        .getElementById("run_free_quickscan_2")
+        .addEventListener("click", function () {
+          document.getElementById("quickscan_container_sec").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+
+      document
+        .getElementById("run_free_quickscan_3")
+        .addEventListener("click", function () {
+          document.getElementById("quickscan_container_sec").scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+    </script>
+
+    <!-- 5. HubSpot script (async) -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="https://js-eu1.hs-scripts.com/24889894.js"
+    ></script>
+
+    <script>
+      function toggleOwaspAccordion(header) {
+        const accordion = header.closest(".owasp_freq_asked_accordion");
+        const isActive = accordion.classList.contains(
+          "owasp_freq_asked_accordion_active"
+        );
+
+        // Close all accordions
+        document
+          .querySelectorAll(".owasp_freq_asked_accordion")
+          .forEach((acc) => {
+            acc.classList.remove("owasp_freq_asked_accordion_active");
+          });
+
+        // Toggle the clicked accordion
+        if (!isActive) {
+          accordion.classList.add("owasp_freq_asked_accordion_active");
+        }
+      }
+
+      function toggleSubmenu(id) {
+        const submenu = document.getElementById(
+          "mobile-overlay-" + id + "-submenu"
+        );
+        const menuItem = submenu.previousElementSibling;
+
+        submenu.classList.toggle("mobile-overlay-open");
+        menuItem.classList.toggle("mobile-overlay-expanded");
+      }
+
+      function closeMenu() {
+        alert(
+          "Menu closed! In a real implementation, this would hide the overlay."
+        );
+      }
+    </script>
+    <script>
+      function updateCards() {
+        const cards = document.querySelectorAll(".stack_card_card");
+
+        cards.forEach((card, index) => {
+          // Skip the title card (first card)
+          if (index === 0) return;
+
+          const rect = card.getBoundingClientRect();
+          const cardTop = rect.top;
+
+          // Calculate the stacked position based on card index
+          let stackPosition;
+          if (index === 1) stackPosition = 280;
+          else if (index === 2) stackPosition = 300;
+          else if (index === 3) stackPosition = 320;
+          else if (index === 4) stackPosition = 340;
+          else if (index === 5) stackPosition = 360;
+
+          // Show card when it's about to reach its stacked position
+          const triggerPoint = stackPosition + 200;
+
+          if (cardTop <= triggerPoint) {
+            card.classList.add("stack_card_visible");
+          } else {
+            card.classList.remove("stack_card_visible");
+          }
+        });
+      }
+
+      // Update on scroll
+      window.addEventListener("scroll", updateCards);
+
+      // Update on load
+      window.addEventListener("load", updateCards);
+
+      // Initial update
+      updateCards();
+    </script>
+  </body>
+</html>
