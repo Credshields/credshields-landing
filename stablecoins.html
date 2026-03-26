@@ -879,9 +879,10 @@
         >
           <h1 class="eco_system_new_title">
             Billions in Pegged Value
-            <span class="eco_system_new_title_explore">One Contract Flaw</span>
-            Breaks the Peg
+            <p class="eco_system_new_subtitle_2" >One Contract Flaw
+            Breaks the Peg</p>
           </h1>
+          
           <p class="eco_system_new_subtitle">
             Fiat-backed, algorithmic, and collateralised stablecoins are the most targeted smart contracts in DeFi. CredShields provides the independent security assurance regulators and exchanges demand before any stablecoin goes live.
           </p>
@@ -982,7 +983,7 @@
         display: grid;
         grid-template-columns: 1fr 1.1fr;
         gap: 80px;
-        align-items: start;
+        align-items: center;
       }
       .fm_intro_heading {
         font-size: 40px;
@@ -1460,7 +1461,6 @@
       <div class="fm_container">
         <div class="fm_section_header">
           <div class="fm_pill_badge">
-            <span class="fm_dot"></span>
             <span>Attack Surface</span>
           </div>
           <h2 class="fm_section_title">Critical Vulnerabilities Specific to This Product</h2>
@@ -1472,7 +1472,7 @@
           <!-- Card 1: Uncapped Minting -->
           <div class="fm_service_card">
             <div>
-              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FF4444; display:block; margin-bottom:12px;">Critical &middot; Minting logic</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#78FF04; display:block; margin-bottom:12px;">Critical &middot; Minting logic</span>
               <h3 class="fm_card_title">Uncapped Minting via Access Control Bypass</h3>
               <p class="fm_card_desc">A flaw in the minting function access controls allows an attacker to mint unlimited stablecoin supply — instantly destroying the peg and draining reserves.</p>
             </div>
@@ -1499,7 +1499,7 @@
           <!-- Card 2: Oracle Manipulation -->
           <div class="fm_service_card">
             <div>
-              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FF4444; display:block; margin-bottom:12px;">Critical &middot; Peg mechanism</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#78FF04; display:block; margin-bottom:12px;">Critical &middot; Peg mechanism</span>
               <h3 class="fm_card_title">Oracle Price Feed Manipulation</h3>
               <p class="fm_card_desc">Stablecoins relying on on-chain price feeds for peg maintenance are vulnerable to flash loan-powered oracle manipulation — forcing de-peg without touching reserve logic.</p>
             </div>
@@ -1526,7 +1526,7 @@
           <!-- Card 3: Reserve Drain -->
           <div class="fm_service_card">
             <div>
-              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#FF8C00; display:block; margin-bottom:12px;">High &middot; Reserve logic</span>
+              <span style="font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:#78FF04; display:block; margin-bottom:12px;">High &middot; Reserve logic</span>
               <h3 class="fm_card_title">Reserve Drain &amp; Redemption Exploits</h3>
               <p class="fm_card_desc">Reentrancy vulnerabilities in redemption flows and flash loan attacks on collateral pools allow attackers to drain reserves faster than circuit breakers can respond.</p>
             </div>
@@ -1561,7 +1561,6 @@
       <div class="fm_container">
         <div class="fm_section_header">
           <div class="fm_pill_badge">
-            <span class="fm_dot"></span>
             <span>Our Services</span>
           </div>
           <h2 class="fm_section_title">What a CredShields Engagement Covers</h2>
@@ -1698,32 +1697,18 @@
             </div>
 
             <!-- Features -->
-            <div class="secure_your_protocol_features">
-              <div class="secure_your_protocol_feature">
-                <h3 class="secure_your_protocol_feature_title">
-                  Results within 7 days
-                </h3>
-                <p class="secure_your_protocol_feature_description">
-                  NDA available on request
-                </p>
+            <div class="secure_your_protocol_pills">
+              <div class="secure_your_protocol_pills_row">
+                <span class="secure_your_protocol_pill">NDA available on request</span>
+                <span class="secure_your_protocol_pill">MiCA · MAS · OCC aligned</span>
+                <span class="secure_your_protocol_pill">Named security lead</span>
               </div>
-              <div class="secure_your_protocol_feature">
-                <h3 class="secure_your_protocol_feature_title">
-                  200+ audits completed
-                </h3>
-                <p class="secure_your_protocol_feature_description">
-                  MiCA &middot; MAS &middot; OCC aligned
-                </p>
-              </div>
-              <div class="secure_your_protocol_feature">
-                <h3 class="secure_your_protocol_feature_title">
-                  Named security lead
-                </h3>
-                <p class="secure_your_protocol_feature_description">
-                  Dedicated stablecoin security specialist
-                </p>
+              <div class="secure_your_protocol_pills_row">
+                <span class="secure_your_protocol_pill">Results within 7 days</span>
+                <span class="secure_your_protocol_pill">200+ audits completed</span>
               </div>
             </div>
+
           </div>
         </div>
       </div>

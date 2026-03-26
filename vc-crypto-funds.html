@@ -878,20 +878,15 @@
           style="row-gap: 60px"
         >
           <h1 class="eco_system_new_title">
-            <span class="eco_system_new_title_explore">Smart Contract</span>
-            Audits That
-            <span class="eco_system_new_title_explore">Prevent</span> Exploits
-            Before They Happen
+            Secure Your Entire Portfolio
           </h1>
           <p class="eco_system_new_subtitle">
-            Billions in assets are locked in smart contracts, and one line of
-            code can expose them to attackers. CredShields blends AI-powered
-            scans and expert manual reviews to deliver comprehensive audits.
+            Every protocol your fund backs will need a security audit before launch, before listing, and before the next raise. CredShields is the institutional standard one relationship that scales across your entire deal flow.
           </p>
           
           <div class="eco_system_new_buttons">
             <button class="eco_system_new_btn eco_system_new_btn_primary" onclick="window.open('index.html#security_coverage_360', '_self'); return false;">
-              Explore Our Solutions
+              Request Fund Briefing
             </button>
             <button class="book_security_audit_btn run_free_ai_scan_btn" onclick="window.location.href = './index.html#quickscan_container_sec'" style="cursor: pointer;">
               <span style="color: #ffffff; font-weight: 700; margin-right: 1px"
@@ -1151,7 +1146,7 @@
         line-height: 1.75;
       }
       .fm_deliver_card_title {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 700;
         line-height: 1.28;
         font-family: 'Barlow', sans-serif;
@@ -1159,7 +1154,7 @@
         margin: 0 0 14px;
       }
       .fm_deliver_card_desc {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.7;
         color: #A3A3A3;
         margin: 0;
@@ -1251,71 +1246,101 @@
       }
       /* report card */
       .fm_report_card {
-        background: #111c15;
+        background: linear-gradient(155deg, #0D1A12 0%, #071008 22%, #030A06 60%, #030A06 81%);
         border: 1px solid #1C3023;
-        border-radius: 16px;
+        border-radius: 24px;
         overflow: hidden;
-        box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.25), 0 24px 64px rgba(0,0,0,0.45);
       }
       .fm_report_header {
-        padding: 20px 24px;
-        border-bottom: 1px solid #1C3023;
+        padding: 22px 33px;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
       .fm_report_header_title {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 700;
-        color: #D8FFE5;
+        color: #ffffff;
         font-family: 'Barlow', sans-serif;
       }
       .fm_certified_badge {
         display: flex;
         align-items: center;
-        gap: 7px;
+        gap: 6px;
         font-size: 13px;
         font-weight: 700;
-        color: #38FF7E;
+      }
+      .fm_certified_badge .fm_star_icon {
+        color: #51FF00;
+        font-size: 20px;
+        line-height: 1;
+        filter: drop-shadow(0 0 4px rgba(81,255,0,0.5));
+      }
+      .fm_certified_badge .fm_cert_check {
+        flex-shrink: 0;
+      }
+      .fm_certified_text {
+        background: linear-gradient(180deg, #D8FFE5 0%, #C1E5CC 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 13px;
+        font-weight: 700;
       }
       .fm_report_meta {
-        padding: 20px 24px;
-        border-bottom: 1px solid #1C3023;
+        padding: 0 33px 22px;
       }
       .fm_report_meta table { width: 100%; border-collapse: collapse; }
       .fm_report_meta td {
-        padding: 6px 0;
-        font-size: 12px;
+        padding: 11px 0;
+        font-size: 14px;
         line-height: 1.4;
-        vertical-align: top;
-        font-family: 'DM Mono', 'Courier New', monospace;
+        vertical-align: middle;
+        border-bottom: 1px solid rgba(28,48,35,0.5);
       }
-      .fm_report_meta td:first-child { color: #7EA18A; width: 42%; }
-      .fm_report_meta td:last-child { color: #C1E5CD; text-align: right; }
+      .fm_report_meta tr:last-child td { border-bottom: none; }
+      .fm_report_meta td:first-child {
+        color: #8A95A6;
+        width: 45%;
+        font-family: 'Barlow', sans-serif;
+      }
+      .fm_report_meta .fm_meta_val {
+        background: linear-gradient(180deg, #D8FFE5 0%, #C1E5CC 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        text-align: right;
+      }
       /* finding rows */
-      .fm_report_findings { padding: 4px 0; }
+      .fm_report_findings { padding: 0; }
       .fm_finding_row {
-        padding: 14px 24px;
-        border-bottom: 1px solid rgba(28,48,35,0.6);
+        padding: 14px 33px 16px;
+        background: #131E18;
+        border-top: 1px solid #15251E;
+        position: relative;
       }
       .fm_finding_row:last-child { border-bottom: none; }
       .fm_finding_severity {
         display: flex;
         align-items: center;
-        gap: 7px;
-        font-size: 11.5px;
-        color: #7EA18A;
-        margin-bottom: 4px;
+        gap: 8px;
+        font-size: 13px;
+        color: #D4D4D4;
+        margin-bottom: 7px;
+        font-family: 'Barlow', sans-serif;
       }
       .fm_sev_dot {
-        width: 8px; height: 8px;
+        width: 10px; height: 10px;
         border-radius: 50%;
         flex-shrink: 0;
       }
-      .fm_sev_dot.critical { background: #FF4444; }
-      .fm_sev_dot.high     { background: #FF8C00; }
-      .fm_sev_dot.medium   { background: #FFD700; }
-      .fm_sev_dot.success  { background: #38FF7E; }
+      .fm_sev_dot.critical { background: #FF0000; }
+      .fm_sev_dot.high     { background: #FF8000; }
+      .fm_sev_dot.medium   { background: #FFEE00; }
+      .fm_sev_dot.success  { background: #38FF7E; box-shadow: 0 0 5px rgba(56,255,126,0.4); }
       .fm_finding_row_inner {
         display: flex;
         align-items: center;
@@ -1323,39 +1348,39 @@
         gap: 12px;
       }
       .fm_finding_name {
-        font-size: 13.5px;
+        font-size: 15px;
         font-weight: 600;
-        color: #D8FFE5;
+        color: #ffffff;
+        font-family: 'Barlow', sans-serif;
       }
       .fm_badge_remediated {
         display: inline-flex;
         align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        border-radius: 6px;
-        background: rgba(56,255,126,0.08);
-        border: 1px solid rgba(56,255,126,0.2);
-        font-size: 10.5px;
+        gap: 8px;
+        padding: 4px 14px 4px 10px;
+        border-radius: 17px;
+        background: #1C3023;
+        font-size: 12px;
         font-weight: 700;
         color: #38FF7E;
         white-space: nowrap;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
+        flex-shrink: 0;
       }
       .fm_badge_complete {
         display: inline-flex;
         align-items: center;
-        gap: 5px;
-        padding: 3px 10px;
-        border-radius: 6px;
-        background: rgba(56,255,126,0.08);
-        border: 1px solid rgba(56,255,126,0.2);
-        font-size: 10.5px;
+        gap: 8px;
+        padding: 4px 14px 4px 10px;
+        border-radius: 17px;
+        background: #1C3023;
+        font-size: 12px;
         font-weight: 700;
         color: #38FF7E;
         white-space: nowrap;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        flex-shrink: 0;
       }
 
       /* ────────────────────────────────────────
@@ -1394,7 +1419,7 @@
               <span>The Fund Multiplier</span>
             </div>
             <h2 class="fm_intro_heading">Why Security Is the Highest-Leverage Decision a Fund Makes</h2>
-            <p class="fm_intro_quote">" A fund that mandates CredShields audits across its portfolio doesn't just protect investments. It creates a compounding trust signal that every portfolio company inherits. "</p>
+            <p class="fm_intro_quote">“ A fund that mandates CredShields audits across its portfolio doesn't just protect investments. It creates a compounding trust signal that every portfolio company inherits. ”</p>
           </div>
 
           <!-- RIGHT: 3 feature items -->
@@ -1548,7 +1573,6 @@
       <div class="fm_container">
         <div class="fm_section_header">
           <div class="fm_pill_badge">
-            <span class="fm_dot"></span>
             <span>What We Deliver</span>
           </div>
           <h2 class="fm_section_title">Security Services Designed Around Fund Operations</h2>
@@ -1642,134 +1666,406 @@
          SECTION 4 — What You Receive
     ══════════════════════════════════════════ -->
     <section class="fm_section">
-      <div class="fm_container">
-        <!-- Centered header -->
-        <div class="fm_receive_header">
-          <div class="fm_pill_badge">
-            <span class="fm_dot"></span>
-            <span>What You Receive</span>
+      <style>
+        /* ── SECTION 4 — What You Receive ── */
+        .fm_s4_layout {
+          max-width: 1240px;
+          margin: 0 auto;
+          padding: 0 40px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 59px;
+        }
+
+        .fm_s4_left {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          width: 607px;
+          flex-shrink: 0;
+          padding-top: 115px;
+        }
+
+        .fm_s4_feature {
+          display: flex;
+          align-items: flex-start;
+          gap: 30px;
+          padding: 44px 0;
+          border-top: 1px solid var(--fm-border, #152C1D);
+        }
+        .fm_s4_feature:first-child { border-top: none; padding-top: 0; }
+        .fm_s4_feature:last-child { padding-bottom: 0; }
+
+        .fm_s4_icon_box {
+          width: 65px;
+          height: 63px;
+          border-radius: 14px;
+          background: rgb(29, 45, 36);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .fm_s4_feature_content { flex: 1; }
+
+        .fm_s4_feature_title {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 28px;
+          margin-bottom: 12px;
+          font-family: 'Barlow', sans-serif;
+          background: linear-gradient(180deg, rgb(216, 254, 229) 0%, rgb(192, 228, 205) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .fm_s4_feature_desc {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          color: #A3A3A3;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        /* Right side card */
+        .fm_s4_card {
+          width: 584px;
+          border-radius: 24px;
+          border: 1px solid rgb(28, 48, 35);
+          background: linear-gradient(160deg, rgb(13, 26, 18) 0%, rgb(8, 17, 12) 21.6%, rgb(3, 11, 6) 60.2%, rgb(3, 11, 6) 80.9%);
+          box-shadow: 0 2px 4px rgba(0,0,0,0.25), 0 24px 64px rgba(0,0,0,0.45);
+          overflow: hidden;
+          flex-shrink: 0;
+        }
+
+        .fm_s4_card_header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 33px 33px 28px 33px;
+        }
+
+        .fm_s4_card_title {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 28px;
+          color: #ffffff;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        .fm_s4_certified {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          flex-shrink: 0;
+        }
+
+        .fm_s4_certified_text {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 16px;
+          font-family: 'Barlow', sans-serif;
+          background: linear-gradient(180deg, rgb(216, 254, 229) 0%, rgb(192, 228, 205) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        .fm_s4_star {
+          filter: drop-shadow(0 0 6px rgba(82, 255, 0, 0.5));
+        }
+
+        /* Metadata rows */
+        .fm_s4_meta_row {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 33px;
+          min-height: 42px;
+        }
+
+        .fm_s4_meta_label {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 25px;
+          color: rgb(138, 148, 166);
+          width: 164px;
+          flex-shrink: 0;
+          font-family: 'mono', monospace;
+        }
+
+        .fm_s4_meta_value {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 25px;
+          flex: 1;
+          text-align: right;
+          font-family: 'mono', monospace;
+          background: linear-gradient(180deg, rgb(216, 254, 229) 0%, rgb(192, 228, 205) 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
+        /* Finding rows */
+        .fm_s4_finding {
+          background: rgb(19, 30, 24);
+          border-top: 1px solid rgb(21, 44, 29);
+          padding: 14px 33px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 80px;
+        }
+        .fm_s4_finding:last-child {
+          min-height: 90px;
+          border-radius: 0 0 24px 24px;
+        }
+
+        .fm_s4_finding_left {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .fm_s4_finding_cat {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        .fm_s4_dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
+        .fm_s4_dot--critical { background: rgb(255, 0, 0); }
+        .fm_s4_dot--high { background: rgb(255, 128, 0); }
+        .fm_s4_dot--medium { background: rgb(255, 238, 0); }
+        .fm_s4_dot--reaudit { background: rgb(56, 255, 126); }
+
+        .fm_s4_cat_label {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 23px;
+          color: rgb(212, 212, 212);
+          font-family: 'Barlow', sans-serif;
+        }
+
+        .fm_s4_finding_issue {
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 22px;
+          color: #ffffff;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        .fm_s4_badge {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background: rgb(28, 48, 35);
+          border-radius: 17px;
+          padding: 0 12px 0 10px;
+          height: 19px;
+          flex-shrink: 0;
+          white-space: nowrap;
+        }
+
+        .fm_s4_badge_text {
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 19px;
+          color: rgb(56, 255, 126);
+          letter-spacing: 0.5px;
+          font-family: 'Barlow', sans-serif;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+          .fm_s4_layout {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+          }
+          .fm_s4_left {
+            width: 100%;
+            padding-top: 0;
+          }
+          .fm_s4_card {
+            width: 100%;
+            max-width: 584px;
+          }
+        }
+        @media (max-width: 600px) {
+          .fm_s4_layout { padding: 0 20px; }
+          .fm_s4_feature { gap: 16px; }
+          .fm_s4_card_header { padding: 24px 20px 20px; }
+          .fm_s4_meta_row { padding: 12px 20px; }
+          .fm_s4_finding { padding: 12px 20px; }
+        }
+      </style>
+
+      <div class="fm_s4_layout">
+        <!-- LEFT SIDE: Feature Cards -->
+        <div class="fm_s4_left">
+          <!-- Feature 1 -->
+          <div class="fm_s4_feature">
+            <div class="fm_s4_icon_box">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M5 8.333C5 8.333 8.333 5 18.333 5C18.333 5 21.667 13.333 15 18.333M5 8.333V18.333C5 18.333 5 25 13.333 31.667M5 8.333H15M35 31.667C35 31.667 31.667 28.333 31.667 21.667C31.667 15 28.333 11.667 25 8.333" stroke="rgb(120, 255, 4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25 25L30 30" stroke="rgb(120, 255, 4)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="fm_s4_feature_content">
+              <div class="fm_s4_feature_title">IC Summary - Plain Language Risk Assessment</div>
+              <div class="fm_s4_feature_desc">Every report includes an executive summary written for non-technical investment committee members. Risk severity is mapped to financial exposure in language your LPs and board understand.</div>
+            </div>
           </div>
-          <h2 class="fm_receive_title">Reports Your Investment Committee Can Actually Use</h2>
-          <p class="fm_receive_subtitle">Our findings are structured for two audiences: the technical team that fixes them, and the investment committee that needs to understand the risk they represent.</p>
+
+          <!-- Feature 2 -->
+          <div class="fm_s4_feature">
+            <div class="fm_s4_icon_box">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M5 8.333H25M5 16.667H35M5 25H20M5 31.667H15" stroke="rgb(120, 255, 4)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="fm_s4_feature_content">
+              <div class="fm_s4_feature_title">Technical Findings - Severity-Classified &amp; Mapped</div>
+              <div class="fm_s4_feature_desc">The technical report gives your portfolio company's engineering team specific, actionable findings with fix guidance, severity classifications, and remediation confirmation.</div>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="fm_s4_feature">
+            <div class="fm_s4_icon_box">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M8.333 3.333V23.333C8.333 24.217 8.684 25.065 9.309 25.69C9.934 26.315 10.782 26.667 11.667 26.667H21.667M8.333 3.333H21.667L33.333 15V33.333C33.333 34.217 32.982 35.065 32.357 35.69C31.732 36.315 30.884 36.667 30 36.667H17.5" stroke="rgb(120, 255, 4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21.667 3.333V15H33.333" stroke="rgb(120, 255, 4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="10" cy="33.333" r="5" stroke="rgb(120, 255, 4)" stroke-width="2" fill="none"/>
+                <path d="M8 33.333L10 35.333L12.5 31.333" stroke="rgb(120, 255, 4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="fm_s4_feature_content">
+              <div class="fm_s4_feature_title">Public Certification - A Verifiable Trust Signal</div>
+              <div class="fm_s4_feature_desc">A CredShields certification badge is a publicly verifiable trust signal. It tells exchanges, LPs, and users that the protocol has been independently reviewed and passed. That signal has direct market value.</div>
+            </div>
+          </div>
         </div>
 
-        <div class="fm_receive_grid">
-
-          <!-- LEFT: 3 feature items with dividers -->
-          <ul class="fm_feat_list">
-            <li class="fm_feat_item">
-              <div class="fm_feat_icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="m9 11 2 2 4-4"/>
-                </svg>
-              </div>
-              <div class="fm_feat_body">
-                <h4>IC Summary - Plain Language Risk Assessment</h4>
-                <p>Every report includes an executive summary written for non-technical investment committee members. Risk severity is mapped to financial exposure in language your LPs and board understand.</p>
-              </div>
-            </li>
-            <li class="fm_feat_item">
-              <div class="fm_feat_icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/>
-                  <circle cx="3" cy="6" r="1" fill="#78FF04"/><circle cx="3" cy="12" r="1" fill="#78FF04"/><circle cx="3" cy="18" r="1" fill="#78FF04"/>
-                </svg>
-              </div>
-              <div class="fm_feat_body">
-                <h4>Technical Findings - Severity-Classified &amp; Mapped</h4>
-                <p>The technical report gives your portfolio company's engineering team specific, actionable findings with fix guidance, severity classifications, and remediation confirmation.</p>
-              </div>
-            </li>
-            <li class="fm_feat_item">
-              <div class="fm_feat_icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#78FF04" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/>
-                  <path d="M9 15l2 2 4-4"/>
-                </svg>
-              </div>
-              <div class="fm_feat_body">
-                <h4>Public Certification - A Verifiable Trust Signal</h4>
-                <p>A CredShields certification badge is a publicly verifiable trust signal. It tells exchanges, LPs, and users that the protocol has been independently reviewed and passed. That signal has direct market value.</p>
-              </div>
-            </li>
-          </ul>
-
-          <!-- RIGHT: redesigned report card -->
-          <div class="fm_report_card">
-            <div class="fm_report_header">
-              <span class="fm_report_header_title">Security Due Diligence Report</span>
-              <div class="fm_certified_badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2l2.4 5.2 5.6.8-4 4 .9 5.7L12 15l-4.9 2.7.9-5.7-4-4 5.6-.8z" fill="#38FF7E" stroke="#38FF7E" stroke-width="1" stroke-linejoin="round"/>
-                  <path d="M9 12l2 2 4-4" stroke="#0A1610" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Certified
-              </div>
-            </div>
-
-            <div class="fm_report_meta">
-              <table>
-                <tr><td>Protocol</td><td>DeFi Staking Protocol v2.1</td></tr>
-                <tr><td>TVL at Audit</td><td>$500,000,000</td></tr>
-                <tr><td>Scope</td><td>7 contracts · 4,200 lines</td></tr>
-                <tr><td>Critical Findings</td><td>1 identified, remediated</td></tr>
-                <tr><td>High Findings</td><td>2 identified, remediated</td></tr>
-                <tr><td>Re-audit Status</td><td>Completed, zero outstanding</td></tr>
-              </table>
-            </div>
-
-            <div class="fm_report_findings">
-              <div class="fm_finding_row">
-                <div class="fm_finding_severity">
-                  <span class="fm_sev_dot critical"></span>Critical
-                </div>
-                <div class="fm_finding_row_inner">
-                  <span class="fm_finding_name">Access control bypass</span>
-                  <span class="fm_badge_remediated">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#38FF7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Remediated
-                  </span>
-                </div>
-              </div>
-              <div class="fm_finding_row">
-                <div class="fm_finding_severity">
-                  <span class="fm_sev_dot high"></span>High
-                </div>
-                <div class="fm_finding_row_inner">
-                  <span class="fm_finding_name">Flash loan treasury drain path</span>
-                  <span class="fm_badge_remediated">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#38FF7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Remediated
-                  </span>
-                </div>
-              </div>
-              <div class="fm_finding_row">
-                <div class="fm_finding_severity">
-                  <span class="fm_sev_dot medium"></span>Medium
-                </div>
-                <div class="fm_finding_row_inner">
-                  <span class="fm_finding_name">Input validation in staking</span>
-                  <span class="fm_badge_remediated">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#38FF7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Remediated
-                  </span>
-                </div>
-              </div>
-              <div class="fm_finding_row">
-                <div class="fm_finding_severity">
-                  <span class="fm_sev_dot success"></span>Re-audit complete
-                </div>
-                <div class="fm_finding_row_inner">
-                  <span class="fm_finding_name">Zero critical issues · Certified</span>
-                  <span class="fm_badge_complete">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="#38FF7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    Completed
-                  </span>
-                </div>
-              </div>
+        <!-- RIGHT SIDE: Report Card -->
+        <div class="fm_s4_card">
+          <div class="fm_s4_card_header">
+            <span class="fm_s4_card_title">Security Due Diligence Report</span>
+            <div class="fm_s4_certified">
+              <svg class="fm_s4_star" viewBox="0 0 34 34" width="34" height="34">
+                <polygon points="17,2 21,12 32,12 23,19 26,30 17,23 8,30 11,19 2,12 13,12" fill="rgb(82, 255, 0)"/>
+                <path d="M12 17 L15.5 20.5 L22 13.5" stroke="rgb(3, 11, 6)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              <span class="fm_s4_certified_text">Certified</span>
             </div>
           </div>
 
+          <div>
+            <div class="fm_s4_meta_row">
+              <span class="fm_s4_meta_label">Protocol</span>
+              <span class="fm_s4_meta_value">DeFi Staking Protocol v2.1</span>
+            </div>
+            <div class="fm_s4_meta_row">
+              <span class="fm_s4_meta_label">TVL at Audit</span>
+              <span class="fm_s4_meta_value">$500,000,000</span>
+            </div>
+            <div class="fm_s4_meta_row">
+              <span class="fm_s4_meta_label">Scope</span>
+              <span class="fm_s4_meta_value">7 contracts · 4,200 lines</span>
+            </div>
+            <div class="fm_s4_meta_row">
+              <span class="fm_s4_meta_label">Critical Findings</span>
+              <span class="fm_s4_meta_value">1 identified, remediated</span>
+            </div>
+            <div class="fm_s4_meta_row">
+              <span class="fm_s4_meta_label">High Findings</span>
+              <span class="fm_s4_meta_value">2 identified, remediated</span>
+            </div>
+            <div class="fm_s4_meta_row">
+              <span class="fm_s4_meta_label">Re-audit Status</span>
+              <span class="fm_s4_meta_value">Completed, zero outstanding</span>
+            </div>
+          </div>
+
+          <div>
+            <!-- Critical -->
+            <div class="fm_s4_finding">
+              <div class="fm_s4_finding_left">
+                <div class="fm_s4_finding_cat">
+                  <div class="fm_s4_dot fm_s4_dot--critical"></div>
+                  <span class="fm_s4_cat_label">Critical</span>
+                </div>
+                <div class="fm_s4_finding_issue">Access control bypass</div>
+              </div>
+              <div class="fm_s4_badge">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none">
+                  <path d="M1 3.5L3.5 6L9 1" stroke="rgb(56, 255, 126)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="fm_s4_badge_text">REMEDIATED</span>
+              </div>
+            </div>
+
+            <!-- High -->
+            <div class="fm_s4_finding">
+              <div class="fm_s4_finding_left">
+                <div class="fm_s4_finding_cat">
+                  <div class="fm_s4_dot fm_s4_dot--high"></div>
+                  <span class="fm_s4_cat_label">High</span>
+                </div>
+                <div class="fm_s4_finding_issue">Flash loan treasury drain path</div>
+              </div>
+              <div class="fm_s4_badge">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none">
+                  <path d="M1 3.5L3.5 6L9 1" stroke="rgb(56, 255, 126)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="fm_s4_badge_text">REMEDIATED</span>
+              </div>
+            </div>
+
+            <!-- Medium -->
+            <div class="fm_s4_finding">
+              <div class="fm_s4_finding_left">
+                <div class="fm_s4_finding_cat">
+                  <div class="fm_s4_dot fm_s4_dot--medium"></div>
+                  <span class="fm_s4_cat_label">Medium</span>
+                </div>
+                <div class="fm_s4_finding_issue">Input validation in staking</div>
+              </div>
+              <div class="fm_s4_badge">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none">
+                  <path d="M1 3.5L3.5 6L9 1" stroke="rgb(56, 255, 126)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="fm_s4_badge_text">REMEDIATED</span>
+              </div>
+            </div>
+
+            <!-- Re-audit complete -->
+            <div class="fm_s4_finding">
+              <div class="fm_s4_finding_left">
+                <div class="fm_s4_finding_cat">
+                  <div class="fm_s4_dot fm_s4_dot--reaudit"></div>
+                  <span class="fm_s4_cat_label">Re-audit complete</span>
+                </div>
+                <div class="fm_s4_finding_issue">Zero critical issues · Certified</div>
+              </div>
+              <div class="fm_s4_badge">
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none">
+                  <path d="M1 3.5L3.5 6L9 1" stroke="rgb(56, 255, 126)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="fm_s4_badge_text">Completed</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1822,32 +2118,18 @@
             </div>
 
             <!-- Features -->
-            <div class="secure_your_protocol_features">
-              <div class="secure_your_protocol_feature">
-                <h3 class="secure_your_protocol_feature_title">
-                  Fast Turnaround
-                </h3>
-                <p class="secure_your_protocol_feature_description">
-                  Get your audit results within 1 week*
-                </p>
+            <div class="secure_your_protocol_pills">
+              <div class="secure_your_protocol_pills_row">
+                <span class="secure_your_protocol_pill">Portfolio retainer available</span>
+                <span class="secure_your_protocol_pill">Preferred fund pricing</span>
+                <span class="secure_your_protocol_pill">IC-ready report format</span>
               </div>
-              <div class="secure_your_protocol_feature">
-                <h3 class="secure_your_protocol_feature_title">
-                  Proven Track Record
-                </h3>
-                <p class="secure_your_protocol_feature_description">
-                  200+ successful audits completed
-                </p>
-              </div>
-              <div class="secure_your_protocol_feature">
-                <h3 class="secure_your_protocol_feature_title">
-                  Expert Support
-                </h3>
-                <p class="secure_your_protocol_feature_description">
-                  Direct access to our security team
-                </p>
+              <div class="secure_your_protocol_pills_row">
+                <span class="secure_your_protocol_pill">Results within 7 days</span>
+                <span class="secure_your_protocol_pill">200+ audits completed</span>
               </div>
             </div>
+
           </div>
         </div>
       </div>
