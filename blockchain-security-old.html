@@ -68,222 +68,284 @@
 
 
    <!-- header section start -->
-   <header class="header_section">
-		<div class="container">
-			<nav class="navbar px-0 navbar-expand-lg navbar-light">
-				<a class="navbar-brand" href="index.html">
-					<img src="images/logo.svg" alt="logo" class="img-fluid" />
-				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="fa fa-bars"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav m-auto custom_scrl desktop-menu">
-						<li class="nav-item">
-							<a class="nav-link" href="index.html">
-								<p>Home</p>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">
-								<p>About</p>
-							</a>
-						</li>
-						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-							<a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-								<p style="margin: 0 12px; cursor: pointer;">Solutions <img src="images/down_arrow.svg"
-										alt="down" class="img-fluid" /></p>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-								<a class="dropdown-item" href="smart-contract-audits.html">Smart Contract Audits</a>
-								<a class="dropdown-item" href="dapp-protocol-security.html">DApp & Protocol Security</a>
-								<a class="dropdown-item" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
-								<a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
-								<a class="dropdown-item" href="blockchain-security.html">Blockchain Security</a>
-								<a class="dropdown-item" href="external-network-testing-new.html">External Network
-									Testing</a>
-								<a class="dropdown-item" href="cloud-security.html">Cloud Infrastructure</a>
-								<a class="dropdown-item" href="wallet-security.html">Wallet Security</a>
-								<a class="dropdown-item" href="mobile-app-security.html">Mobile App Security</a>
-								<a class="dropdown-item" href="web-app-security.html">Web App Security</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
-								<a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
-								<a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
-								<a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
-								<a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming
-									Soon)</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-								<p style="margin: 0 12px; cursor: pointer;">Industries <img src="images/down_arrow.svg"
-										alt="down" class="img-fluid" /></p>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-								<a class="dropdown-item" href="fintech-security.html">Finance & Fintech</a>
-								<a class="dropdown-item" href="saas-security.html">SaaS & Enterprise</a>
-								<a class="dropdown-item" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
-								<a class="dropdown-item" href="gaming-security.html">Gaming & Digital Assets</a>
-							</div>
-						</li>
-						<li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-							<a class=" dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-								<p style="margin: 0 12px; cursor: pointer;">Resources <img src="images/down_arrow.svg"
-										alt="down" class="img-fluid" /></p>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-								<a class="dropdown-item" href="recently-audited.html">Recently Audited</a>
-								<a class="dropdown-item" href="recently-audited.html">Popular Projects</a>
-								<a class="dropdown-item" href="recently-audited.html">KYC Reports</a>
-							</div>
-						</li>
-						<li class="nav-item">
-                     <a class="nav-link" href="./owasp-smart-contract-top-10.html">
-								<p>OWASP Top 10</p>
-							</a>
-						</li>
-					</ul>
-					<nav class="navbar navbar-light desktop-menu">
-						<form class="form-inline">
-							<a href=""
-								onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-								<img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid">
-							</a>
-						</form>
-					</nav>
-					<div class="mobile-overlay-menu" id="navbarNav">
-						<div class="mobile-overlay-content">
-							<div class="mobile-overlay-menu-item">
-								<a href="index.html">
-									Home
-								</a>
-							</div>
-							<div class="mobile-overlay-menu-item">
-								<a href="about.html">
-									About
-								</a>
-							</div>
-							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
-								<span>Solutions</span>
-								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
-									stroke="currentColor" stroke-width="2">
-									<path d="M6 9l6 6 6-6" />
-								</svg>
-							</div>
-							<div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
-								<div class="mobile-overlay-submenu-item">
-									<a href="smart-contract-audits.html">Smart Contract Audits</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="dapp-protocol-security.html">DApp & Protocol Security</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="enterprise-security.html">Enterprise Web & Mobile Security</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="penetration-testing.html">Penetration Testing</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="blockchain-security.html">Blockchain Security</a>
-								</div>
-								
-								<div class="mobile-overlay-submenu-item">
-									<a href="cloud-security.html">Cloud Infrastructure</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="wallet-security.html">Wallet Security</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="mobile-app-security.html">Mobile App Security</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="web-app-security.html">Web App Security</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="ai-security-tools.html">AI Security Tools</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="https://solidityscan.com/">SolidityScan</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="https://rustscan.com/">RustScan</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
-								</div>
-							</div>
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar px-0 navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto custom_scrl desktop-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <p>About</p>
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <p style="margin: 0 12px; cursor: pointer">
+                  Solutions
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </p>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="smart-contract-audits.html">Smart Contract Audits</a>
+                <a class="dropdown-item" href="dapp-protocol-security.html">DApp & Protocol Security</a>
+                <a class="dropdown-item" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+                <a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
+                <a class="dropdown-item" href="blockchain-security.html">Blockchain Security</a>
 
-							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
-								<span>Industries</span>
-								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
-									stroke="currentColor" stroke-width="2">
-									<path d="M6 9l6 6 6-6" />
-								</svg>
-							</div>
-							<div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
-								<div class="mobile-overlay-submenu-item">
-									<a href="fintech-security.html">Finance & Fintech</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="saas-security.html">SaaS & Enterprise</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="gaming-security.html">Gaming & Digital Assets</a>
-								</div>
-							</div>
+                <a class="dropdown-item" href="cloud-security.html">Cloud Infrastructure</a>
+                <a class="dropdown-item" href="wallet-security.html">Wallet Security</a>
+                <a class="dropdown-item" href="mobile-app-security.html">Mobile App Security</a>
+                <a class="dropdown-item" href="web-app-security.html">Web App Security</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
+                <a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
+                <a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+                <a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
+                <a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <p style="margin: 0 12px; cursor: pointer">
+                  Industries
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </p>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="fintech-security.html">Finance & Fintech</a>
+                <a class="dropdown-item" href="saas-security.html">SaaS & Enterprise</a>
+                <a class="dropdown-item" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+                <a class="dropdown-item" href="gaming-security.html">Gaming & Digital Assets</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="resources.html">
+                  Resources
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="recently-audited.html?tab-name=recent">Recently Audited</a>
+                <a class="dropdown-item" href="recently-audited.html?tab-name=popular">Popular Projects</a>
+                <a class="dropdown-item" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+                <a class="dropdown-item" href="brand-guidelines.html">Brand Guidelines</a>
+                <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                <a class="dropdown-item" href="https://discover.credshields.com/">Blog</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="Institutions.html">
+                  Institutions
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="vc-crypto-funds.html">VCs & Crypto Funds</a>
+                <a class="dropdown-item" href="stablecoins.html">Stablecoins</a>
+                <a class="dropdown-item" href="crosschainbridge.html">Cross-Chain Bridge Infrastructure</a>
+                <a class="dropdown-item" href="realwordassets.html">Real World Assets</a>
+                <a class="dropdown-item" href="payments.html">Payments</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="./owasp-smart-contract-top-10-2026.html">
+                  OWASP Top 10
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2025.html">2025</a>
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2026.html">2026</a>
+              </div>
+            </li>
+          </ul>
+          <nav class="navbar navbar-light desktop-menu">
+            <form class="form-inline">
+              <a href="" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+                <button class="book_security_audit_btn">
+                  Book Security Audit
+                </button>
+                <!-- <img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid"> -->
+              </a>
+            </form>
+          </nav>
+          <div class="mobile-overlay-menu" id="navbarNav">
+            <div class="mobile-overlay-content">
+              <div class="mobile-overlay-menu-item">
+                <a href="index.html"> Home </a>
+              </div>
+              <div class="mobile-overlay-menu-item">
+                <a href="about.html"> About </a>
+              </div>
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+                <span>Solutions</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="smart-contract-audits.html">Smart Contract Audits</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="dapp-protocol-security.html">DApp & Protocol Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="penetration-testing.html">Penetration Testing</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="blockchain-security.html">Blockchain Security</a>
+                </div>
 
-							<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
-								<span>Resources</span>
-								<svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none"
-									stroke="currentColor" stroke-width="2">
-									<path d="M6 9l6 6 6-6" />
-								</svg>
-							</div>
-							<div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
-								<div class="mobile-overlay-submenu-item">
-									<a href="recently-audited.html?tab-name=recent">Recently Audited</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="recently-audited.html?tab-name=popular">Popular Projects</a>
-								</div>
-								<div class="mobile-overlay-submenu-item">
-									<a href="recently-audited.html?tab-name=kyc">KYC Reports</a>
-								</div>
-							</div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="cloud-security.html">Cloud Infrastructure</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="wallet-security.html">Wallet Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="mobile-app-security.html">Mobile App Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="web-app-security.html">Web App Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="ai-security-tools.html">AI Security Tools</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://solidityscan.com/">SolidityScan</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://rustscan.com/">RustScan</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+                </div>
+              </div>
 
-							<div class="mobile-overlay-menu-item">
-                        <a href="./owasp-smart-contract-top-10.html">OWASP Top 10</a>
-							</div>
-						</div>
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+                <span>Industries</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="fintech-security.html">Finance & Fintech</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="saas-security.html">SaaS & Enterprise</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="gaming-security.html">Gaming & Digital Assets</a>
+                </div>
+              </div>
 
-						<div class="mobile-overlay-footer">
-							<nav class="navbar navbar-light cart_drp_clk">
-								<form class="form-inline">
-									<a href=""
-										onclick="Calendly.initPopupWidget({url: 'https://forms.gle/W92yCey4MYMZefzt7'});return false;">
-										<img src="images/book_security_audit_btn.svg" alt="clip_path_btn"
-											class="img-fluid">
-									</a>
-								</form>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-   <!-- header section end -->
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+                <span>Resources</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=recent">Recently Audited</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=popular">Popular Projects</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="brand-guidelines.html">Brand Guidelines</a>
+                  </div>
+                  <div class="mobile-overlay-submenu-item">
+                  <a href="https://discover.credshields.com/">Blog</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
+                <span>OWASP Top 10</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              
+              <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="owasp-smart-contract-top-10-2025.html">2025</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="owasp-smart-contract-top-10-2026.html">2026</a>
+                </div>
+              
+              </div>
+              
+              <!--<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
+                              <span>OWASP Top 10</span>
+                              <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                              </svg>
+                            </div>
+              
+                             <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
+                              <div class="mobile-overlay-submenu-item">
+                                <a href="owasp-smart-contract-top-10-2025.html">2025</a>
+                              </div>
+                              <div class="mobile-overlay-submenu-item">
+                                <a href="owasp-smart-contract-top-10-2026.html">2026</a>
+                              </div>
+                </div> -->
+            </div>
+
+            <div class="mobile-overlay-footer">
+              <nav class="navbar navbar-light cart_drp_clk">
+                <form class="form-inline">
+                  <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+                    <button class="book_security_audit_btn">
+                      Book Security Audit
+                    </button>
+                  </a>
+                </form>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header section end -->
 
    <section class="service_detail_sec">
       <div class="container">

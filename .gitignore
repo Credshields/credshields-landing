@@ -8,3 +8,8 @@ CLAUDE.md
 .claude/
 CLAUDE.md.pre-claude-config.bak
 sync-nav-footer.js
+.playwright-mcp
+screenshots
+scripts
+setup-skill.sh
+
