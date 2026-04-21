@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DAML Smart Contract Audits | CredShields</title>
+    <meta name="description" content="Expert DAML smart contract audits covering authorization logic, workflow completeness, privacy model, Canton topology, and upgrade safety for financial institutions and enterprises.">
+    <!-- Calendly link widget begin -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <!-- favicon Start -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- favicon end -->
+
+    <!-- Default Css file Start -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <style>
+      /* Hover dropdown for desktop */
+      @media (min-width: 992px) {
+        .dropdown-hover-expand .dropdown-menu {
+          display: block;
+          top: 100%;
+          left: 0;
+          visibility: hidden;
+          top: 100%;
+          transform: translateY(10px);
+          transition: all 0.1s ease;
+          top: 100%;
+          top: 100%;
+          top: 100%;
+        }
+
+        .dropdown-hover-expand:hover .dropdown-menu {
+          display: block;
+          visibility: visible;
+          top: 100%;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/90cf9f1e5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Default Css file end -->
+
+    <!-- Plugin Css file Start -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Plugin Css file end -->
+
+    <!--MS Clarity-->
+    <script async type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "ko6w13w47q");
+    </script>
+    <!--gtag-->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PN6ZFK2F');</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <!-- Custom Css file Start -->
+    <link rel="stylesheet" href="css/landing_page_i_upgrade.css" />
+    <link rel="stylesheet" href="css/landing_page_responsive_i_upgrade.css" />
+    <link rel="stylesheet" href="css/websiteUpgrade3.css" />
+
+    <style>
+      @font-face {
+        font-family: Monbloc;
+        src: url("fonts/Monbloc-Inst-Regular.eot");
+        src: url("fonts/Monbloc-Inst-Regular.ttf");
+        src: url("fonts/Monbloc-Inst-Regular.woff");
+        src: url("fonts/Monbloc-Inst-Regular.woff2");
+      }
+
+      body {
+        position: relative;
+        min-height: 100vh;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(274deg, transparent, #78ff04, transparent);
+        background-size: 400% 400%;
+        animation: AnimationName 20s ease infinite;
+        opacity: 0.3;
+        z-index: -1;
+        pointer-events: none;
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          black 0%,
+          black 20%,
+          transparent 70%
+        );
+        mask-image: linear-gradient(
+          to bottom,
+          black 0%,
+          black 20%,
+          transparent 70%
+        );
+      }
+
+      @keyframes AnimationName {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Notification Banner Styles */
+      .notification_banner {
+        background-color: rgb(19, 104, 44);
+        padding: 8px 0;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .banner_box_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .banner_action {
+        color: white;
+      }
+
+      .vertical-divider {
+        width: 1px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.3);
+        align-self: center;
+      }
+
+      .notification_banner .banner_content p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: white;
+      }
+
+      .notification_banner .download_btn {
+        font-weight: 600;
+        font-size: 14px;
+        color: white;
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+      }
+
+      .notification_banner .download_btn:hover {
+        color: white;
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      .close_banner {
+        position: absolute;
+        right: 15px;
+        bottom: 20%;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        color: white;
+      }
+
+      .notification_banner .close_banner:hover {
+        opacity: 0.7;
+      }
+
+      .download-report-banner-btn {
+        background: linear-gradient(
+          127.09deg,
+          rgba(157, 255, 237, 0.93) 0.95%,
+          rgba(194, 255, 189, 0.93) 98.62%
+        );
+        border: none;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+      }
+
+      .footer_new_soc_badge{
+        justify-content: left;
+        margin-top: 150px;
+      }
+
+      @media (max-width: 755px) {
+        .close_banner {
+          bottom: 7%;
+        }
+
+         .footer_new_soc_badge{
+        justify-content: center;
+        margin-top: 60px;
+      }
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 865px) {
+        .notification_banner .banner_content p {
+          font-size: 14px;
+        }
+
+        .banner_action {
+          font-size: 14px;
+        }
+
+        .vertical-divider {
+          display: none;
+        }
+
+        .notification_banner .download_btn {
+          font-size: 12px;
+        }
+
+        .banner_box_flex {
+          justify-content: flex-start;
+          gap: 8px;
+        }
+      }
+
+      /* stack card animation*/
+
+      .stack_card_spacer {
+        height: 100vh;
+      }
+
+      .stack_card_container {
+        position: relative;
+      }
+
+      .stack_card_cards-container {
+        position: relative;
+      }
+
+      .stack_card_card {
+        position: sticky;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .stack_card_card:nth-child(1) {
+        top: 0;
+      }
+
+      .stack_card_card:nth-child(2) {
+        top: 280px;
+      }
+
+      .stack_card_card:nth-child(3) {
+        top: 300px;
+      }
+
+      .stack_card_card:nth-child(4) {
+        top: 320px;
+      }
+
+      .stack_card_card:nth-child(5) {
+        top: 340px;
+      }
+
+      .stack_card_card:nth-child(6) {
+        top: 360px;
+      }
+
+      .stack_card_title_card {
+        width: 100%;
+        padding: 25px 60px 30px;
+        text-align: center;
+        background: transparent;
+      }
+
+      .stack_card_title_card h2 {
+        font-size: 52px;
+        font-weight: 400;
+        margin-bottom: 24px;
+        line-height: 1.1;
+      }
+
+      .stack_card_title_card .stack_card_part_one {
+        color: #888;
+      }
+
+      .stack_card_title_card .stack_card_part_two {
+        color: white;
+      }
+
+      .stack_card_title_card p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #aaa;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .stack_card_card-content {
+        width: 100%;
+        height: 600px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 30px;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .stack_card_card.stack_card_visible .stack_card_card-content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .stack_card_card:nth-child(2) .stack_card_card-content {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .stack_card_card:nth-child(3) .stack_card_card-content {
+        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      }
+
+      .stack_card_card:nth-child(4) .stack_card_card-content {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      }
+
+      .stack_card_card:nth-child(5) .stack_card_card-content {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      }
+
+      .stack_card_card:nth-child(6) .stack_card_card-content {
+        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      }
+
+      .stack_card_card-number {
+        font-size: 120px;
+        font-weight: 900;
+        opacity: 0.15;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+
+      .stack_card_card-title {
+        font-size: 64px;
+        font-weight: 800;
+        margin-bottom: 24px;
+        line-height: 1.1;
+      }
+
+      .stack_card_card-description {
+        font-size: 24px;
+        line-height: 1.6;
+        opacity: 0.9;
+        max-width: 600px;
+      }
+
+      .stack_card_end-spacer {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      @media (max-width: 768px) {
+        .stack_card_title_card h2 {
+          font-size: 48px;
+        }
+
+        .stack_card_title_card p {
+          font-size: 18px;
+        }
+
+        .stack_card_title_card {
+          padding: 60px 20px 40px;
+        }
+
+        .stack_card_card-content {
+          padding: 40px;
+          height: 500px;
+        }
+
+        .stack_card_card-number {
+          font-size: 80px;
+        }
+
+        .stack_card_card-title {
+          font-size: 40px;
+        }
+
+        .stack_card_card-description {
+          font-size: 18px;
+        }
+
+        .stack_card_card:nth-child(2) {
+          top: 200px;
+        }
+
+        .stack_card_card:nth-child(3) {
+          top: 220px;
+        }
+
+        .stack_card_card:nth-child(4) {
+          top: 240px;
+        }
+
+        .stack_card_card:nth-child(5) {
+          top: 260px;
+        }
+
+        .stack_card_card:nth-child(6) {
+          top: 280px;
+        }
+      }
+
+      /* Gradient Background Animation */
+      @keyframes gradientMove {
+        0% {
+          transform: translateX(-100px);
+        }
+
+        100% {
+          transform: translateX(calc(100vw + 100px));
+        }
+      }
+
+      .gradient_bg_tr img,
+      .gradient_bg_tl img,
+      .gradient_bg_bl img {
+        animation: gradientMove 30s linear infinite;
+        will-change: transform;
+        position: relative;
+        left: -100px;
+        /* Start off-screen */
+      }
+
+      .gradient_bg_tl img {
+        animation-delay: -10s;
+      }
+
+      .gradient_bg_bl img {
+        animation-delay: -20s;
+      }
+
+      /* ── The Problem Section ── */
+      .daml-problem-container {
+        position: relative;
+        max-width: 1240px;
+        margin: 0 auto;
+        background: linear-gradient(180deg, #000000 0%, #030905 14.2%, #030A06 41%, #030905 60%, #030905 100%);
+        border-radius: 12px;
+        padding: 77px 55px 61px;
+        box-shadow: 0 0 0 2px rgb(23, 41, 30);
+        overflow: visible;
+      }
+      .daml-problem-container::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 12px;
+        padding: 1px;
+        background: linear-gradient(180deg, #244A32 0%, #172F21 3.2%, #172F21 97.4%, #244A32 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .daml-problem-content {
+        position: relative;
+        z-index: 2;
+      }
+      .daml-problem-heading {
+        display: inline-block;
+        background: linear-gradient(180deg, rgba(216,254,229,1) 0%, rgba(192,229,205,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 24px;
+      }
+      .daml-problem-subtitle {
+        color: rgb(126, 161, 138);
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 926px;
+        margin-bottom: 58px;
+      }
+      .daml-problem-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .daml-problem-card {
+        height: 190px;
+        background: #1c2d2382;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        padding: 26px 16px 20px;
+      }
+      .daml-problem-icon {
+        width: 78px;
+        height: 79px;
+        background: #1d2d247d;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 21px;
+      }
+      .daml-problem-icon img {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+      }
+      .daml-problem-card-label {
+        background: linear-gradient(180deg, rgba(216,254,229,1) 0%, rgba(192,229,205,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+        text-align: center;
+      }
+    </style>
+    <!-- Custom Css file Start -->
+  </head>
+
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Gradients -->
+
+    <!-- <div class="fixed_bg_container">
+		<div class="gradient_bg_tr">
+			<img src="images/primary_bg.svg" alt="bg" />
+		</div>
+		<div class="gradient_bg_tl">
+			<img src="images/primary_bg.svg" alt="bg" />
+		</div>
+		<div class="gradient_bg_bl">
+			<img src="images/primary_bg.svg" alt="bg" />
+		</div>
+	</div> -->
+
+    <!-- notification banner start -->
+    <div class="notification_banner">
+    <div class="container-fluid">
+      <div class="banner_box_flex">
+        <div class="banner_content">
+          <p class="mb-0">
+            OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart Contract Security.
+            </p>
+            </div>
+
+        <div class="vertical-divider" style="background-color: black"></div>
+
+        <div class="banner_action d-flex align-items-center justify-content-end">
+          Explore
+          <button type="button" class="download-report-banner-btn"
+            onclick="window.open('https://scs.owasp.org/sctop10/', '_blank')">
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
+                fill="#04080D" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <button class="close_banner btn-close btn-close-white" id="closeBanner" aria-label="Close">
+      &#10005;
+    </button>
+    </div>
+    <!-- notification banner end -->
+
+    <!-- announcement start -->
+    <!-- <div class="announcment_wrap">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-11 ordr_2">
+					<div class="text_center">
+						<h6>ANNOUNCEMENT : &nbsp;</h6>
+						<p>
+							We have launched our cloud based Smart Contract vulnerability
+							scanner SolidityScan. Check out
+							<a href="https://solidityscan.com/" target="_blank"
+								style="color: white">SolidityScan.com</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-1 ordr_1">
+					<div class="text-right">
+						<a href="#" class="clse" id="clsoe">
+							<img src="images/clse_icon.svg" alt="x" class="img-fluid" />
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+    <!-- announcement end -->
+
+    <!-- header section start -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar px-0 navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto custom_scrl desktop-menu">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <p>About</p>
+              </a>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <p style="margin: 0 12px; cursor: pointer">
+                  Solutions
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </p>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="smart-contract-audits.html">Smart Contract Audits</a>
+                <a class="dropdown-item" href="dapp-protocol-security.html">DApp & Protocol Security</a>
+                <a class="dropdown-item" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+                <a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
+                <a class="dropdown-item" href="blockchain-security.html">Blockchain Security</a>
+
+                <a class="dropdown-item" href="cloud-security.html">Cloud Infrastructure</a>
+                <a class="dropdown-item" href="wallet-security.html">Wallet Security</a>
+                <a class="dropdown-item" href="mobile-app-security.html">Mobile App Security</a>
+                <a class="dropdown-item" href="web-app-security.html">Web App Security</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
+                <a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
+                <a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+                <a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
+                <a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <p style="margin: 0 12px; cursor: pointer">
+                  Industries
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </p>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="fintech-security.html">Finance & Fintech</a>
+                <a class="dropdown-item" href="saas-security.html">SaaS & Enterprise</a>
+                <a class="dropdown-item" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+                <a class="dropdown-item" href="gaming-security.html">Gaming & Digital Assets</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="resources.html">
+                  Resources
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="recently-audited.html?tab-name=recent">Recently Audited</a>
+                <a class="dropdown-item" href="recently-audited.html?tab-name=popular">Popular Projects</a>
+                <a class="dropdown-item" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+                <a class="dropdown-item" href="brand-guidelines.html">Brand Guidelines</a>
+                <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
+                <a class="dropdown-item" href="https://discover.credshields.com/">Blog</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="Institutions.html">
+                  Institutions
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="vc-crypto-funds.html">VCs & Crypto Funds</a>
+                <a class="dropdown-item" href="stablecoins.html">Stablecoins</a>
+                <a class="dropdown-item" href="crosschainbridge.html">Cross-Chain Bridge Infrastructure</a>
+                <a class="dropdown-item" href="realwordassets.html">Real World Assets</a>
+                <a class="dropdown-item" href="payments.html">Payments</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
+              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                <a style="margin: 0 12px; cursor: pointer" href="./owasp-smart-contract-top-10-2026.html">
+                  OWASP Top 10
+                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
+                </a>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2025.html">2025</a>
+                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2026.html">2026</a>
+              </div>
+            </li>
+          </ul>
+          <nav class="navbar navbar-light desktop-menu">
+            <form class="form-inline">
+              <a href="" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+                <button class="book_security_audit_btn">
+                  Book Security Audit
+                </button>
+                <!-- <img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid"> -->
+              </a>
+            </form>
+          </nav>
+          <div class="mobile-overlay-menu" id="navbarNav">
+            <div class="mobile-overlay-content">
+              <div class="mobile-overlay-menu-item">
+                <a href="index.html"> Home </a>
+              </div>
+              <div class="mobile-overlay-menu-item">
+                <a href="about.html"> About </a>
+              </div>
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
+                <span>Solutions</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="smart-contract-audits.html">Smart Contract Audits</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="dapp-protocol-security.html">DApp & Protocol Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="penetration-testing.html">Penetration Testing</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="blockchain-security.html">Blockchain Security</a>
+                </div>
+
+                <div class="mobile-overlay-submenu-item">
+                  <a href="cloud-security.html">Cloud Infrastructure</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="wallet-security.html">Wallet Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="mobile-app-security.html">Mobile App Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="web-app-security.html">Web App Security</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="ai-security-tools.html">AI Security Tools</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://solidityscan.com/">SolidityScan</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="https://rustscan.com/">RustScan</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
+                <span>Industries</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="fintech-security.html">Finance & Fintech</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="saas-security.html">SaaS & Enterprise</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="gaming-security.html">Gaming & Digital Assets</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
+                <span>Resources</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              <div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=recent">Recently Audited</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=popular">Popular Projects</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="brand-guidelines.html">Brand Guidelines</a>
+                  </div>
+                  <div class="mobile-overlay-submenu-item">
+                  <a href="https://discover.credshields.com/">Blog</a>
+                </div>
+              </div>
+
+              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
+                <span>OWASP Top 10</span>
+                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </div>
+              
+              <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
+                <div class="mobile-overlay-submenu-item">
+                  <a href="owasp-smart-contract-top-10-2025.html">2025</a>
+                </div>
+                <div class="mobile-overlay-submenu-item">
+                  <a href="owasp-smart-contract-top-10-2026.html">2026</a>
+                </div>
+              
+              </div>
+              
+              <!--<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
+                              <span>OWASP Top 10</span>
+                              <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 9l6 6 6-6" />
+                              </svg>
+                            </div>
+              
+                             <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
+                              <div class="mobile-overlay-submenu-item">
+                                <a href="owasp-smart-contract-top-10-2025.html">2025</a>
+                              </div>
+                              <div class="mobile-overlay-submenu-item">
+                                <a href="owasp-smart-contract-top-10-2026.html">2026</a>
+                              </div>
+                </div> -->
+            </div>
+
+            <div class="mobile-overlay-footer">
+              <nav class="navbar navbar-light cart_drp_clk">
+                <form class="form-inline">
+                  <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+                    <button class="book_security_audit_btn">
+                      Book Security Audit
+                    </button>
+                  </a>
+                </form>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header section end -->
+
+    <section class="eco_system_new_container eco_system_new_container_owasp">
+      <div class="owasp_main_icon_wrapper">
+        <div class="solution_badge_container">
+          <div class="solution_badge_text">Daml Smart Contract </div>
+        </div>
+        <div
+          class="eco_system_new_header eco_system_new_header_owasp"
+          style="row-gap: 60px"
+        >
+          <h1 class="eco_system_new_title">
+            DAML Smart Contract Audits<br />You Can Trust
+          </h1>
+          <p class="eco_system_new_subtitle">
+            We review, stress-test, and certify your DAML contracts before they
+            go live, so your counterparties, regulators, and stakeholders can
+            trust every transaction.
+          </p>
+          <div class="eco_system_new_buttons">
+            <button class="eco_system_new_btn eco_system_new_btn_primary" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
+              Request an Audit
+            </button>
+            <button class="book_security_audit_btn" onclick="document.getElementById('daml_audit_process').scrollIntoView({behavior:'smooth'})" style="cursor: pointer; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 15px;">
+              See Our Process
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section class="section_alignment_website section_padding_define">
+      <div class="daml-problem-container">
+        <div class="daml-problem-glow"></div>
+        <div class="daml-problem-content">
+          <h2 class="daml-problem-heading">The Problem</h2>
+          <p class="daml-problem-subtitle">
+            DAML abstracts away many blockchain risks — but it doesn't eliminate business logic errors, authorization gaps, or workflow vulnerabilities. A flawed contract governing trade settlement, asset issuance, or multi-party agreements can result in irreversible damage.
+            Most DAML bugs aren't syntax errors. They're logic errors — and they're invisible until it's too late.
+          </p>
+          <div class="daml-problem-cards">
+            <div class="daml-problem-card">
+              <div class="daml-problem-icon">
+                <img src="images/daml_problem_1.svg" alt="Unauthorized asset transfers" />
+              </div>
+              <span class="daml-problem-card-label">Unauthorized asset transfers</span>
+            </div>
+            <div class="daml-problem-card">
+              <div class="daml-problem-icon">
+                <img src="images/daml_problem_2.svg" alt="Compliance violations and regulatory exposure" />
+              </div>
+              <span class="daml-problem-card-label">Compliance violations and regulatory exposure</span>
+            </div>
+            <div class="daml-problem-card">
+              <div class="daml-problem-icon">
+                <img src="images/daml_problem_3.svg" alt="Irreversible financial losses" />
+              </div>
+              <span class="daml-problem-card-label">Irreversible financial losses</span>
+            </div>
+            <div class="daml-problem-card">
+              <div class="daml-problem-icon">
+                <img src="images/daml_problem_4.svg" alt="Reputational damage across all parties on the ledger" />
+              </div>
+              <span class="daml-problem-card-label">Reputational damage across all parties on the ledger</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="padding: 55px; font-size: 16px; color: #7EA18A;">Most Daml bugs aren't syntax errors. They're logic errors and they're invisible until it's too late.</p>
+    </section>
+
+    <!-- What We Audit Section -->
+    <section class="section_alignment_website section_padding_define">
+      <div class="fintech_risk_wrapper">
+        <div class="fintech_risk_header">
+          <h2 class="fintech_risk_title">What We Audit</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px;">
+          <div class="fintech_risk_card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; min-height: auto; grid-column: auto !important;">
+            <img src="images/daml_what_we_audit_1.svg" />
+            <div>
+              <h3 class="fintech_risk_card_title" style="margin-bottom: 8px;">Authorization & Signatory Logic</h3>
+              <p class="fintech_risk_card_description">We verify that every choice, action, and data access is correctly gated — ensuring no party can act beyond their entitled rights.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; min-height: auto; grid-column: auto !important;">
+            <img src="images/daml_what_we_audit_2.svg" />
+            <div>
+              <h3 class="fintech_risk_card_title" style="margin-bottom: 8px;">Workflow Completeness</h3>
+              <p class="fintech_risk_card_description">We map every path through your contract lifecycle: creation, exercise, archival — and identify dead ends, missing transitions, or exploitable states.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; min-height: auto; grid-column: auto !important;">
+            <img src="images/daml_what_we_audit_3.svg" />
+            <div>
+              <h3 class="fintech_risk_card_title" style="margin-bottom: 8px;">Privacy Model Review</h3>
+              <p class="fintech_risk_card_description">We confirm that observers, signatories, and stakeholders are scoped correctly and that sensitive data isn't inadvertently disclosed across participants.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; min-height: auto; grid-column: auto !important;">
+            <img src="images/daml_what_we_audit_4.svg" />
+            <div>
+              <h3 class="fintech_risk_card_title" style="margin-bottom: 8px;">Divulgence & Fetch Vulnerabilities</h3>
+              <p class="fintech_risk_card_description">We audit for unintended data exposure through contract fetches, lookups, and key-based queries.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; min-height: auto; grid-column: auto !important;">
+            <img src="images/daml_what_we_audit_5.svg" />
+            <div>
+              <h3 class="fintech_risk_card_title" style="margin-bottom: 8px;">Upgrade & Migration Risk</h3>
+              <p class="fintech_risk_card_description">We assess the safety of contract upgrades and data migrations — one of the most error-prone phases of any DAML deployment.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 28px; min-height: auto; grid-column: auto !important;">
+            <img src="images/daml_what_we_audit_6.svg" />
+            <div>
+              <h3 class="fintech_risk_card_title" style="margin-bottom: 8px;">Canton & Ledger-Specific Risks</h3>
+              <p class="fintech_risk_card_description">We review topology, domain trust assumptions, and synchronization logic for Canton-based deployments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section_alignment_website fintech_risk_container section_padding_define" id="daml_audit_process">
+      <div class="fintech_risk_wrapper">
+        <div class="fintech_risk_header">
+          <h2 class="fintech_risk_title">Our Audit Process</h2>
+        </div>
+
+        <div class="fintech_risk_cards">
+          <div class="fintech_risk_card fintech_risk_card_tall">
+            <div class="fintech_risk_step_badge">
+              <span class="fintech_risk_step_badge_text">Step - 1</span>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Scoping Call</h3>
+              <p class="fintech_risk_card_description">
+                We understand your business workflow, deployment target, and
+                risk surface before writing a single audit note.
+              </p>
+            </div>
+          </div>
+
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_step_badge">
+              <span class="fintech_risk_step_badge_text">Step - 2</span>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Static Review</h3>
+              <p class="fintech_risk_card_description">
+                We map every path through your contract lifecycle: creation,
+                exercise, archival — and identify dead ends, missing
+                transitions, or exploitable states.
+              </p>
+            </div>
+          </div>
+
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_step_badge">
+              <span class="fintech_risk_step_badge_text">Step - 3</span>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Scenario Modeling</h3>
+              <p class="fintech_risk_card_description">
+                We confirm that observers, signatories, and stakeholders are
+                scoped correctly and that sensitive data isn't inadvertently
+                disclosed across participants.
+              </p>
+            </div>
+          </div>
+
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_step_badge">
+              <span class="fintech_risk_step_badge_text">Step - 4</span>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Automated Testing</h3>
+              <p class="fintech_risk_card_description">
+                We audit for unintended data exposure through contract fetches,
+                lookups, and key-based queries using DAML Script test suites.
+              </p>
+            </div>
+          </div>
+
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_step_badge">
+              <span class="fintech_risk_step_badge_text">Step - 5</span>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Findings Report</h3>
+              <p class="fintech_risk_card_description">
+                We assess the safety of contract upgrades and data migrations —
+                one of the most error-prone phases of any DAML deployment.
+              </p>
+            </div>
+          </div>
+
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_step_badge">
+              <span class="fintech_risk_step_badge_text">Step - 6</span>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Remediation Review</h3>
+              <p class="fintech_risk_card_description">
+                We review topology, domain trust assumptions, and
+                synchronization logic for Canton-based deployments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section
+      class="owasp_about_the_initiative_section smart_contracts_audit_why_it_matter_section"
+    >
+      <div class="owasp_about_the_initiative_container">
+        <div class="owasp_about_the_initiative_content" style="display: block;">
+          <div
+            class="owasp_about_the_initiative_right"
+            style="background-color: transparent; width: 100%; max-width: 700px; margin: 0 auto;"
+          >
+            <div
+              class="owasp_about_the_initiative_sources_box owasp_why_risks_matters_sources_box"
+              style="gap: 10px; background: transparent; border: unset"
+            >
+              <h2
+                class="owasp_about_the_initiative_sources_title"
+                style="margin-bottom: 50px"
+              >
+                Who We Work With
+              </h2>
+
+              <div class="owasp_about_the_initiative_source_item">
+                <div class="owasp_about_the_initiative_source_icon">
+                  <div
+                    class="owasp_about_the_initiative_source_icon_placeholder owasp_why_risks_matters_icon_placeholder"
+                    style="max-width: 65px !important; max-height: 65px !important;"
+                  >
+                  <!-- ICON PLACEHOLDER: Financial Institutions -->
+                  <div style="width:70%;height:70%;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:6px;margin:auto;"></div>
+                </div>
+                </div>
+                <div class="owasp_about_the_initiative_source_content">
+                  <h3 class="owasp_about_the_initiative_source_name">
+                    Financial Institutions
+                  </h3>
+                  <p class="owasp_about_the_initiative_source_description">
+                    Deploying DAML for settlement, repo, and derivatives.
+                  </p>
+                </div>
+              </div>
+
+              <hr class="owasp_why_risks_matters_source_separator" />
+
+              <div class="owasp_about_the_initiative_source_item">
+                <div class="owasp_about_the_initiative_source_icon">
+                  <div
+                    class="owasp_about_the_initiative_source_icon_placeholder owasp_why_risks_matters_icon_placeholder"
+                    style="max-width: 65px !important; max-height: 65px !important;"
+                  >
+                  <!-- ICON PLACEHOLDER: Fintech -->
+                  <div style="width:70%;height:70%;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:6px;margin:auto;"></div>
+                </div>
+                </div>
+                <div class="owasp_about_the_initiative_source_content">
+                  <h3 class="owasp_about_the_initiative_source_name">
+                    Fintech Startups
+                  </h3>
+                  <p class="owasp_about_the_initiative_source_description">
+                    Building on Canton or other DAML-supported ledgers.
+                  </p>
+                </div>
+              </div>
+
+              <hr class="owasp_why_risks_matters_source_separator" />
+
+              <div class="owasp_about_the_initiative_source_item">
+                <div class="owasp_about_the_initiative_source_icon">
+                  <div
+                    class="owasp_about_the_initiative_source_icon_placeholder owasp_why_risks_matters_icon_placeholder"
+                    style="max-width: 65px !important; max-height: 65px !important;"
+                  >
+                  <!-- ICON PLACEHOLDER: Exchanges -->
+                  <div style="width:70%;height:70%;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:6px;margin:auto;"></div>
+                  </div>
+                </div>
+                <div class="owasp_about_the_initiative_source_content">
+                  <h3 class="owasp_about_the_initiative_source_name">
+                    Exchanges & CCPs
+                  </h3>
+                  <p class="owasp_about_the_initiative_source_description">
+                    Tokenizing assets or digitizing clearing workflows.
+                  </p>
+                </div>
+              </div>
+
+              <hr class="owasp_why_risks_matters_source_separator" />
+
+              <div class="owasp_about_the_initiative_source_item">
+                <div class="owasp_about_the_initiative_source_icon">
+                  <div
+                    class="owasp_about_the_initiative_source_icon_placeholder owasp_why_risks_matters_icon_placeholder"
+                    style="max-width: 65px !important; max-height: 65px !important;"
+                  >
+                  <!-- ICON PLACEHOLDER: Enterprise -->
+                  <div style="width:70%;height:70%;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:6px;margin:auto;"></div>
+                  </div>
+                </div>
+                <div class="owasp_about_the_initiative_source_content">
+                  <h3 class="owasp_about_the_initiative_source_name">
+                    Enterprise Teams
+                  </h3>
+                  <p class="owasp_about_the_initiative_source_description">
+                    Using DAML for internal multi-party process automation.
+                  </p>
+                </div>
+              </div>
+
+              <hr class="owasp_why_risks_matters_source_separator" />
+
+              <div class="owasp_about_the_initiative_source_item">
+                <div class="owasp_about_the_initiative_source_icon">
+                  <div
+                    class="owasp_about_the_initiative_source_icon_placeholder owasp_why_risks_matters_icon_placeholder"
+                    style="max-width: 65px !important; max-height: 65px !important;"
+                  >
+                  <!-- ICON PLACEHOLDER: Legal -->
+                  <div style="width:70%;height:70%;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:6px;margin:auto;"></div>
+                  </div>
+                </div>
+                <div class="owasp_about_the_initiative_source_content">
+                  <h3 class="owasp_about_the_initiative_source_name">
+                    Legal & Compliance Teams
+                  </h3>
+                  <p class="owasp_about_the_initiative_source_description">
+                    Who need an independent technical opinion before contract execution.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="smart_contracts_audit_checklist_section section_padding_define"
+    >
+      <div class="fintech_risk_header">
+        <h2 class="fintech_risk_title">Why a DAML-Specific Auditor?</h2>
+        <p class="fintech_risk_subtitle">
+          General smart contract auditors know Solidity. DAML is a different paradigm — functional, strongly typed, with a unique authorization and privacy model that has no equivalent in EVM-based systems.
+        </p>
+      </div>
+      <div class="audit_checklist_container">
+        <table class="audit_checklist_table">
+          <colgroup>
+            <col style="width: 60%;">
+            <col style="width: 20%;">
+            <col style="width: 20%;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th style="text-align:center;">CredShields</th>
+              <th style="text-align:center;">General Auditor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>DAML type system expertise</td>
+              <td style="text-align:center; color: #38ff7e; font-size: 20px;">&#10003;</td>
+              <td style="text-align:center; color: #ff4d4d; font-size: 20px;">&#10007;</td>
+            </tr>
+            <tr>
+              <td>Canton topology review</td>
+              <td style="text-align:center; color: #38ff7e; font-size: 20px;">&#10003;</td>
+              <td style="text-align:center; color: #ff4d4d; font-size: 20px;">&#10007;</td>
+            </tr>
+            <tr>
+              <td>Multi-party workflow modeling</td>
+              <td style="text-align:center; color: #38ff7e; font-size: 20px;">&#10003;</td>
+              <td style="text-align:center; color: #ff4d4d; font-size: 20px;">&#10007;</td>
+            </tr>
+            <tr>
+              <td>DAML Script test coverage</td>
+              <td style="text-align:center; color: #38ff7e; font-size: 20px;">&#10003;</td>
+              <td style="text-align:center; color: #ff4d4d; font-size: 20px;">&#10007;</td>
+            </tr>
+            <tr>
+              <td>Financial domain knowledge</td>
+              <td style="text-align:center; color: #38ff7e; font-size: 20px;">&#10003;</td>
+              <td style="text-align:center; color: #ff4d4d; font-size: 20px;">&#10007;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Deliverables Section -->
+    <section class="section_alignment_website section_padding_define">
+      <div class="fintech_risk_wrapper">
+        <div class="fintech_risk_header">
+          <h2 class="fintech_risk_title">Deliverables</h2>
+          <p class="fintech_risk_subtitle">
+            Every DAML audit engagement produces a complete set of artifacts designed for both technical teams and business leadership.
+          </p>
+        </div>
+        <div class="fintech_risk_cards" style="grid-template-columns: repeat(3, 1fr); margin-top: 48px;">
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_card_icon">
+              <div style="width:48px;height:48px;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);font-family:monospace;">icon</div>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Executive Summary</h3>
+              <p class="fintech_risk_card_description">Risk overview for non-technical stakeholders and leadership.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_card_icon">
+              <div style="width:48px;height:48px;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);font-family:monospace;">icon</div>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Remediation Guidance</h3>
+              <p class="fintech_risk_card_description">Concrete fixes, not just problem statements.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_card_icon">
+              <div style="width:48px;height:48px;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);font-family:monospace;">icon</div>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Technical Findings Report</h3>
+              <p class="fintech_risk_card_description">Severity-classified issues (Critical / High / Medium / Low / Informational).</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_card_icon">
+              <div style="width:48px;height:48px;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);font-family:monospace;">icon</div>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Audit Certificate</h3>
+              <p class="fintech_risk_card_description">A signed attestation you can share with regulators, counterparties, and investors.</p>
+            </div>
+          </div>
+          <div class="fintech_risk_card">
+            <div class="fintech_risk_card_icon">
+              <div style="width:48px;height:48px;background:rgba(255,255,255,0.06);border:1px dashed rgba(255,255,255,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:9px;color:rgba(255,255,255,0.3);font-family:monospace;">icon</div>
+            </div>
+            <div class="fintech_risk_card_content">
+              <h3 class="fintech_risk_card_title">Attack Scenario Documentation</h3>
+              <p class="fintech_risk_card_description">How each vulnerability could be exploited and by whom.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section_alignment_website owasp_freq_asked_section">
+    <div class="owasp_freq_asked_container">
+      <div class="owasp_freq_asked_header">
+        <h2 class="owasp_freq_asked_title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="owasp_freq_asked_accordions">
+        <div class="owasp_freq_asked_accordion owasp_freq_asked_accordion_active">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              What is a DAML smart contract audit?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              A DAML smart contract audit is a systematic security review of your DAML contracts, templates, and workflows by an independent expert. It covers authorization logic, privacy model correctness, workflow completeness, and ledger-specific risks before your application goes live on any supported runtime including Canton and Hyperledger Fabric.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Why do I need a DAML-specific auditor rather than a general smart contract auditor?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              DAML is fundamentally different from EVM-based languages like Solidity. It has a unique authorization model, a fine-grained privacy layer, that general auditors simply aren't trained to review. An auditor who doesn't understand DAML's signatory/observer distinction, divulgence mechanics, or functional evaluation model will miss the vulnerabilities that matter most in your deployment.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              What are the most common vulnerabilities found in DAML contracts?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              The most critical issues we find are: incorrectly scoped signatories allowing unauthorized contract creation; overly permissive controllers enabling unintended asset transfers; divulgence patterns that leak sensitive data to unintended parties; incomplete workflow modeling leaving contracts in exploitable intermediate states; and unsafe upgrade paths that introduce inconsistencies during migration.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              How long does a DAML smart contract audit take?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Timelines depend on the size, complexity, and deployment target of your contract set; a focused single-workflow engagement will take meaningfully less time than a full application with multiple templates, choices, and a Canton topology review. Remediation review adds additional time on top of the initial audit. We provide a firm timeline estimate after the scoping call.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              What do I receive at the end of an audit?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              You receive a full written report including an executive summary for leadership, a severity-ranked findings list (Critical / High / Medium / Low / Informational), detailed attack scenario documentation, concrete remediation guidance, and a signed audit certificate you can share with counterparties, regulators, or investors.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Do you audit Canton-specific deployments?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Yes. We review Canton topology configuration, domain trust assumptions, participant node authorization, and synchronization logic risks that don't exist in single-ledger deployments and require specialist knowledge.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              When in the development lifecycle should I get an audit?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Ideally before your first production deployment, but after your contracts are functionally complete. If you're iterating rapidly, a mid-development review can also catch structural issues early when they're cheapest to fix. We also audit post-deployment contracts ahead of major upgrades or migrations.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Is DAML inherently secure because of its type system?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              DAML's type system eliminates entire categories of bugs including double-spends and unauthorized state mutations that plague Solidity contracts. However, it cannot prevent business logic errors, incorrect party scoping, flawed workflow design, or misconfigured ledger topology. These require human expert review, not just a compiler.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Do you sign NDAs and work with confidential financial contracts?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Yes. All engagements are covered by a mutual NDA. We regularly work with financial institutions on highly sensitive contracts governing trade settlement, asset issuance, and clearing confidentiality is standard practice for us.
+            </div>
+          </div>
+        </div>
+
+        <div class="owasp_freq_asked_accordion">
+          <div class="owasp_freq_asked_accordion_header" onclick="toggleOwaspAccordion(this)">
+            <h3 class="owasp_freq_asked_accordion_title">
+              Can you help us fix the issues you find, or only identify them?
+            </h3>
+            <button class="owasp_freq_asked_accordion_button">
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_right" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              <svg class="owasp_freq_asked_accordion_icon owasp_freq_asked_accordion_icon_down" width="20" height="20"
+                viewBox="0 0 20 20" fill="none">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="owasp_freq_asked_accordion_content">
+            <div class="owasp_freq_asked_accordion_text">
+              Our primary role is independent auditing, which means we provide detailed remediation guidance but do not write the fixes ourselves; this preserves the independence of the audit. However, we do offer a remediation review pass to verify that your team's fixes correctly address each finding before sign-off.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section class="section_alignment_website secure_your_protocol_container">
+      <div class="secure_your_protocol_outer_box">
+        <div class="secure_your_protocol_card">
+          <!-- Background Wave Effects -->
+          <div class="secure_your_protocol_background">
+            <img
+              src="images/secure_your_protocol_wave.svg"
+              class="secure_your_protocol_wave"
+              alt=""
+            />
+          </div>
+
+          <!-- Main Content -->
+          <div class="secure_your_protocol_content">
+            <h1 class="secure_your_protocol_title">
+              Ready to Secure Your DAML Contracts?
+            </h1>
+            <p class="secure_your_protocol_description">
+              Don't let logic errors, authorization gaps, or workflow
+              vulnerabilities put your deployment at risk. Get a comprehensive
+              DAML audit from CredShields — trusted by financial institutions,
+              exchanges, and enterprise teams.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="secure_your_protocol_buttons">
+              <a
+                href="#"
+                class="secure_your_protocol_btn secure_your_protocol_btn_primary"
+                onclick="Calendly.initPopupWidget({url: ' https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;"
+              >
+                Request Consultation
+              </a>
+              <button class="book_security_audit_btn run_free_ai_scan_btn" onclick="window.location.href = './index.html#quickscan_container_sec'" style="cursor: pointer;">
+                <span
+                  style="color: #ffffff; font-weight: 700; margin-right: 1px"
+                  >Run Free</span
+                >
+                <img
+                  src="images/ai_icon_magic.svg"
+                  alt="ai_icon_magic"
+                  class="img-fluid"
+                />
+                <span style="color: #38ff7e; font-weight: 700; margin-left: 1px"
+                  >AI Scan</span
+                >
+              </button>
+            </div>
+
+            <!-- Features -->
+            <div class="secure_your_protocol_features">
+              <div class="secure_your_protocol_feature">
+                <h3 class="secure_your_protocol_feature_title">
+                  Fast Turnaround
+                </h3>
+                <p class="secure_your_protocol_feature_description">
+                  Get your audit results within 1 week*
+                </p>
+              </div>
+              <div class="secure_your_protocol_feature">
+                <h3 class="secure_your_protocol_feature_title">
+                  Proven Track Record
+                </h3>
+                <p class="secure_your_protocol_feature_description">
+                  200+ successful audits completed
+                </p>
+              </div>
+              <div class="secure_your_protocol_feature">
+                <h3 class="secure_your_protocol_feature_title">
+                  Expert Support
+                </h3>
+                <p class="secure_your_protocol_feature_description">
+                  Direct access to our security team
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer class="footer_new_container">
+    <div class="footer_new_content">
+      <div class="footer_new_main">
+        <!-- Brand Section -->
+        <div class="footer_new_brand">
+          <img src="images/Logo.svg" class="footer_new_logo" alt="" />
+          <p class="footer_new_tagline">
+            Protecting the future of Web3 and enterprise technology with
+            world-class security audits and consulting services.
+          </p>
+          <a class="partner_btn_primary font_color_black" style="margin-bottom: 20px;" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y'});return false;">
+          Partner with us
+        </a>
+          <div class="footer_new_social_icons">
+            <div class="footer_new_social_placeholder">
+              <img src="images/telegram_gray.svg" alt="telegram" class="img-fluid"
+                onclick="window.open('https://t.me/solidityscan', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/discord_gray.svg" alt="discord" class="img-fluid"
+                onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/medium_gray.svg" alt="medium" class="img-fluid"
+                onclick="window.open('https://blog.solidityscan.com/', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/x.svg" alt="X" class="img-fluid"
+                onclick="window.open('https://x.com/CredShields', '_blank');" />
+            </div>
+            <div class="footer_new_social_placeholder">
+              <img src="images/instagram_gray.svg" alt="instagram" class="img-fluid"
+                onclick="window.open('https://www.instagram.com/credshields/', '_blank');" />
+            </div>
+          </div>
+          <div class="footer_new_soc_badge" style=" display: flex; align-items: center; gap: 30px; cursor: pointer;">
+              <img src="images/soc_badge.svg" alt="SOC 2 Certified" style="width: 80px;" class="img-fluid"
+                onclick="window.open('https://www.aicpa-cima.com/', '_blank')" />
+              <img src="images/owasp_badge.svg" alt="OWASP" style="width: 140px;" class="img-fluid"
+                onclick="window.open('https://owasp.org/www-project-smart-contract-top-10/', '_blank')" />
+            </div>
+          
+        </div>
+
+        <!-- Services Column -->
+        <div class="footer_new_column">
+          <h3 class="footer_new_column_title">Solutions</h3>
+          <div class="footer_new_links">
+            <a class="footer_new_link" href="smart-contract-audits.html">Smart Contract Audits</a>
+            <a class="footer_new_link" href="dapp-protocol-security.html">DApp & Protocol Security</a>
+            <a class="footer_new_link" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
+            <a class="footer_new_link" href="penetration-testing.html">Penetration Testing</a>
+            <a class="footer_new_link" href="blockchain-security.html">Blockchain Security</a>
+
+            <a class="footer_new_link" href="cloud-security.html">Cloud Infrastructure</a>
+            <a class="footer_new_link" href="wallet-security.html">Wallet Security</a>
+            <a class="footer_new_link" href="mobile-app-security.html">Mobile App Security</a>
+            <a class="footer_new_link" href="web-app-security.html">Web App Security</a>
+            <a class="footer_new_link" href="ai-security-tools.html">AI Security Tools</a>
+            <a class="footer_new_link" href="https://solidityscan.com/">SolidityScan</a>
+            <a class="footer_new_link" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
+            <a class="footer_new_link" href="https://rustscan.com/">RustScan</a>
+            <a class="footer_new_link" href="#">Wallet Tracker (Coming Soon)</a>
+          </div>
+        </div>
+
+        <!-- Industries Column -->
+        <div class="footer_new_column">
+          <h3 class="footer_new_column_title">Industries</h3>
+          <div class="footer_new_links">
+            <a class="footer_new_link" href="fintech-security.html">Finance & Fintech</a>
+            <a class="footer_new_link" href="saas-security.html">SaaS & Enterprises</a>
+            <a class="footer_new_link" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
+            <a class="footer_new_link" href="gaming-security.html">Gaming & Digital Assets</a>
+          </div>
+        </div>
+
+        <!-- Resources Column -->
+        <div class="footer_new_column">
+          <h3 class="footer_new_column_title">Resources</h3>
+          <div class="footer_new_links">
+            <a href="https://discover.credshields.com/" class="footer_new_link">Blog</a>
+            <a class="footer_new_link" href="recently-audited.html?tab-name=recent">Recently Audited</a>
+            <a class="footer_new_link" href="recently-audited.html?tab-name=popular">Popular Projects</a>
+            <a class="footer_new_link" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
+            <a class="footer_new_link" href="brand-guidelines.html">Brand Guidelines</a>
+            <a class="footer_new_link" href="ecosystem.html">Ecosystem</a>
+            <a class="footer_new_link" href="careers.html">Careers</a>
+
+          
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="footer_new_divider"></div>
+
+      <!-- Bottom Section -->
+      <div class="footer_new_bottom">
+        <div class="footer_new_address">
+          20A TANJONG PAGAR ROAD, SINGAPORE (088443)
+        </div>
+        <div class="footer_new_legal">
+          <a href="./tos.html" class="footer_new_legal_link">Terms & Conditions</a>
+          <span class="footer_new_separator">•</span>
+          <a href="./privacy.html" class="footer_new_legal_link">Privacy Policy</a>
+          <span class="footer_new_separator">•</span>
+          <span class="footer_new_copyright">Copyright © 2025 CredShields. All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- footer section end -->
+
+    <!-- JavaScript Libraries in the correct loading order -->
+    <!-- 1. jQuery first (from CDN with local fallback) -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="js/jquery.min.js"><\/script>');
+    </script>
+
+    <!-- 2. Other core libraries -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/aos.js"></script>
+
+    <!-- 3. Initialize AOS -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- 4. Custom scripts -->
+    <script src="js/smooth-naigate.js"></script>
+    <script src="js/custom_a.js"></script>
+    <script src="js/statAnimation.js"></script>
+    <script src="js/audits.js"></script>
+    <script src="js/scrollIntraction.js"></script>
+
+    <script>
+      // Counter Animation Function
+      function animateCounter(element, target, suffix, duration = 2000) {
+        const start = 0;
+        const increment = target / (duration / 16); // 60 FPS
+        let current = start;
+
+        const timer = setInterval(() => {
+          current += increment;
+
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+
+          // Format the number
+          let displayValue = current.toFixed(1);
+
+          // Add $ for the first stat
+          const prefix =
+            element.parentElement.querySelector(".upgraded_hero_stat_label")
+              .textContent === "Protected"
+              ? "$"
+              : "";
+
+          element.textContent = prefix + displayValue + suffix;
+        }, 16);
+      }
+
+      // Initialize counters when page loads
+      window.addEventListener("load", () => {
+        const counters = document.querySelectorAll(
+          ".upgraded_hero_stat_number"
+        );
+
+        // Delay the animation slightly for better effect
+        setTimeout(() => {
+          counters.forEach((counter) => {
+            const target = parseFloat(counter.getAttribute("data-target"));
+            const suffix = counter.getAttribute("data-suffix") || "";
+            animateCounter(counter, target, suffix);
+          });
+        }, 500);
+      });
+
+      // Intersection Observer for animation on scroll (if stats are below fold)
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: "0px",
+      };
+
+      const observer_hero = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const counters = entry.target.querySelectorAll(
+              ".upgraded_hero_stat_number"
+            );
+            counters.forEach((counter) => {
+              if (
+                counter.textContent === "0" ||
+                counter.textContent.includes("$0")
+              ) {
+                const target = parseFloat(counter.getAttribute("data-target"));
+                const suffix = counter.getAttribute("data-suffix") || "";
+                animateCounter(counter, target, suffix);
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      const statsSection = document.querySelector(".upgraded_hero_stats");
+      if (statsSection) {
+        observer_hero.observe(statsSection);
+      }
+    </script>
+
+    <!-- Banner functionality -->
+    <script>
+      $(document).ready(function () {
+        // Close banner functionality
+        $("#closeBanner").click(function () {
+          $(".notification_banner").fadeOut(300);
+        });
+      });
+
+      // quickscan listeners removed (elements not present on this page)
+    </script>
+
+    <!-- 5. HubSpot script (async) -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="https://js-eu1.hs-scripts.com/24889894.js"
+    ></script>
+
+    <script>
+      function toggleOwaspAccordion(header) {
+        const accordion = header.closest(".owasp_freq_asked_accordion");
+        const isActive = accordion.classList.contains(
+          "owasp_freq_asked_accordion_active"
+        );
+
+        // Close all accordions
+        document
+          .querySelectorAll(".owasp_freq_asked_accordion")
+          .forEach((acc) => {
+            acc.classList.remove("owasp_freq_asked_accordion_active");
+          });
+
+        // Toggle the clicked accordion
+        if (!isActive) {
+          accordion.classList.add("owasp_freq_asked_accordion_active");
+        }
+      }
+
+      function toggleSubmenu(id) {
+        const submenu = document.getElementById(
+          "mobile-overlay-" + id + "-submenu"
+        );
+        const menuItem = submenu.previousElementSibling;
+
+        submenu.classList.toggle("mobile-overlay-open");
+        menuItem.classList.toggle("mobile-overlay-expanded");
+      }
+
+      function closeMenu() {
+        alert(
+          "Menu closed! In a real implementation, this would hide the overlay."
+        );
+      }
+    </script>
+    <script>
+      function updateCards() {
+        const cards = document.querySelectorAll(".stack_card_card");
+
+        cards.forEach((card, index) => {
+          // Skip the title card (first card)
+          if (index === 0) return;
+
+          const rect = card.getBoundingClientRect();
+          const cardTop = rect.top;
+
+          // Calculate the stacked position based on card index
+          let stackPosition;
+          if (index === 1) stackPosition = 280;
+          else if (index === 2) stackPosition = 300;
+          else if (index === 3) stackPosition = 320;
+          else if (index === 4) stackPosition = 340;
+          else if (index === 5) stackPosition = 360;
+
+          // Show card when it's about to reach its stacked position
+          const triggerPoint = stackPosition + 200;
+
+          if (cardTop <= triggerPoint) {
+            card.classList.add("stack_card_visible");
+          } else {
+            card.classList.remove("stack_card_visible");
+          }
+        });
+      }
+
+      // Update on scroll
+      window.addEventListener("scroll", updateCards);
+
+      // Update on load
+      window.addEventListener("load", updateCards);
+
+      // Initial update
+      updateCards();
+    </script>
+  </body>
+</html>
