@@ -1,0 +1,34 @@
+/* gaming-security.html — page-specific overrides only.
+   Base patterns (hero, section, ai-card, pipeline, case-study, dossier) live in main.v1.css.
+   Tokens used: --fg, --fg-2, --fg-3, --lime, --em-color, --border, --border-lt, --r-sm. */
+
+/* Tighten the 5-up risk grid so the trailing odd card doesn't read as orphaned. */
+.section--raised .card-grid-3 {
+  gap: 18px;
+}
+
+/* Slightly denser body copy on risk + why cards (5 + 4 grids run long otherwise). */
+.section--raised .ai-card .card-body,
+.section--plain .ai-card .card-body {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* Field-report dossier title: nudge the em accent so it reads as a stamp callout. */
+.case-study-split .dossier-card-title em {
+  color: var(--em-color);
+  font-style: italic;
+}
+
+/* Gaming/NFT case-study stat values run shorter (120k, 90%) — nudge tracking. */
+.case-study-stat-val {
+  letter-spacing: -0.01em;
+}
+
+/* Pipeline-grid-5: keep step bodies legible at narrow viewports without
+   touching the canonical .pipeline-step layout. */
+@media (max-width: 960px) {
+  .pipeline-grid.pipeline-grid-5 .pipeline-step-body {
+    font-size: 0.9rem;
+  }
+}

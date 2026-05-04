@@ -1,0 +1,17 @@
+/* web3-protocol-security.css — page-specific overrides only */
+/* Base classes (.ai-card, .case-card, .pipeline-grid, etc.) live in main.v1.css */
+
+/* Tighten hero ticker spacing for the longer issue label */
+.hero-ticker .ticker-item {
+  letter-spacing: 0.08em;
+}
+
+/* Lede under section-head — slight max-width for the two longer ledes */
+.section-head .lede {
+  max-width: 720px;
+}
+
+/* Dossier KV labels stay aligned even when values wrap */
+.dossier-kv-grid .dossier-kv-label {
+  white-space: nowrap;
+}

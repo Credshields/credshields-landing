@@ -1,0 +1,178 @@
+/* =========================================================
+   CredShields — About page-specific overrides
+   Base styles → main.v1.css · page-components.css
+   ========================================================= */
+
+/* ── Hero dossier card: tighter kv-grid for 4-row layout ── */
+.hero-aside .dossier-kv-grid {
+  row-gap: 10px;
+}
+
+/* ── § 01 & § 02: 4-card grid wraps into 2×2 on wide viewports ── */
+.section--raised .card-grid-3,
+.section--plain .card-grid-3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 900px) {
+  .section--raised .card-grid-3,
+  .section--plain .card-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section--raised .card-grid-3,
+  .section--plain .card-grid-3 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── § 03 Founders: 2-column card grid ─────────────────── */
+.founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.founder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-surface);
+}
+
+.founder-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 2px solid var(--border-lt);
+}
+
+.founder-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fg);
+  margin-bottom: 4px;
+}
+
+.founder-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--em-color);
+  font-family: var(--font-mono);
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.founder-desc {
+  font-size: 14px;
+  color: var(--fg-2);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.founder-social {
+  display: flex;
+  gap: 12px;
+}
+
+.founder-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--fg-3);
+  transition: color 150ms, border-color 150ms;
+}
+
+.founder-social a:hover {
+  color: var(--fg);
+  border-color: var(--fg-2);
+}
+
+/* ── § 03 Backed by: investor logos ────────────────────── */
+.backed-by {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.backed-by-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-mono);
+  margin-bottom: 24px;
+}
+
+.backed-by-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: #0a0f0c;
+  border-radius: var(--r-lg);
+  padding: 28px 40px;
+  border: 1px solid var(--border);
+}
+
+.backed-by-logo img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity 150ms;
+}
+
+.backed-by-logo img:hover {
+  opacity: 1;
+}
+
+.backed-by-sep {
+  width: 1px;
+  height: 28px;
+  background: var(--border);
+}
+
+@media (max-width: 700px) {
+  .founders-grid {
+    grid-template-columns: 1fr;
+  }
+  .backed-by-sep {
+    display: none;
+  }
+}
+
+/* ── § 04 Achievements: pipeline-grid-6 time strap colour ── */
+.pipeline-step-time strong {
+  color: var(--em-color);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* ── stats-strip: $10B+ value doesn't truncate on mobile ── */
+@media (max-width: 480px) {
+  .stats-strip-val {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+}

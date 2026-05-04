@@ -1,1455 +1,689 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Recent Audits & Case Studies | CredShields Security Portfolio</title>
-    <meta name="description" content="Explore CredShields' latest audits and security assessments across Web3 protocols, fintech products, and enterprise platforms.">
-    
-    <!-- Calendly link widget begin -->
-    <link
-      href="https://assets.calendly.com/assets/external/widget.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://assets.calendly.com/assets/external/widget.js"
-      type="text/javascript"
-      async
-    ></script>
-    <!-- favicon Start -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!-- favicon end -->
-
-    <!-- Default Css file Start -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/slick.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <style>
-      /* Hover dropdown for desktop */
-      @media (min-width: 992px) {
-        .dropdown-hover-expand .dropdown-menu {
-          display: block;
-          top: 100%;
-          left: 0;
-          visibility: hidden;
-          top: 100%;
-          transform: translateY(10px);
-          transition: all 0.1s ease;
-          top: 100%;
-          top: 100%;
-          top: 100%;
-        }
-
-        .dropdown-hover-expand:hover .dropdown-menu {
-          display: block;
-          visibility: visible;
-          top: 100%;
-          transform: translateY(0);
-        }
-      }
-    </style>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/90cf9f1e5e.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Default Css file end -->
-
-    <!-- Plugin Css file Start -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Plugin Css file end -->
-
-    <!--MS Clarity-->
-    <script async type="text/javascript">
-      (function (c, l, a, r, i, t, y) {
-        c[a] =
-          c[a] ||
-          function () {
-            (c[a].q = c[a].q || []).push(arguments);
-          };
-        t = l.createElement(r);
-        t.async = 1;
-        t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t, y);
-      })(window, document, "clarity", "script", "ko6w13w47q");
-    </script>
-    <!--gtag-->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PN6ZFK2F');</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-    <!-- Custom Css file Start -->
-    <link rel="stylesheet" href="css/landing_page_i_upgrade.css" />
-    <link rel="stylesheet" href="css/landing_page_responsive_i_upgrade.css" />
-    <link rel="stylesheet" href="css/websiteUpgrade3.css" />
-
-    <style>
-      @font-face {
-        font-family: Monbloc;
-        src: url("fonts/Monbloc-Inst-Regular.eot");
-        src: url("fonts/Monbloc-Inst-Regular.ttf");
-        src: url("fonts/Monbloc-Inst-Regular.woff");
-        src: url("fonts/Monbloc-Inst-Regular.woff2");
-      }
-
-      body {
-        position: relative;
-        min-height: 100vh;
-        font-family: "Open Sans", sans-serif;
-      }
-
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(274deg, transparent, #78ff04, transparent);
-        background-size: 400% 400%;
-        animation: AnimationName 20s ease infinite;
-        opacity: 0.3;
-        z-index: -1;
-        pointer-events: none;
-        -webkit-mask-image: linear-gradient(
-          to bottom,
-          black 0%,
-          black 20%,
-          transparent 70%
-        );
-        mask-image: linear-gradient(
-          to bottom,
-          black 0%,
-          black 20%,
-          transparent 70%
-        );
-      }
-
-      @keyframes AnimationName {
-        0% {
-          background-position: 0% 50%;
-        }
-
-        50% {
-          background-position: 100% 50%;
-        }
-
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-
-      /* Notification Banner Styles */
-      .notification_banner {
-        background-color: rgb(19, 104, 44);
-        padding: 8px 0;
-        position: relative;
-        z-index: 1000;
-      }
-
-      .banner_box_flex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .banner_action {
-        color: white;
-      }
-
-      .vertical-divider {
-        width: 1px;
-        height: 20px;
-        background-color: rgba(255, 255, 255, 0.3);
-        align-self: center;
-      }
-
-      .notification_banner .banner_content p {
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: -0.01em;
-        color: white;
-      }
-
-      .notification_banner .download_btn {
-        font-weight: 600;
-        font-size: 14px;
-        color: white;
-        text-decoration: underline;
-        transition: opacity 0.3s ease;
-      }
-
-      .notification_banner .download_btn:hover {
-        color: white;
-        opacity: 0.8;
-        text-decoration: underline;
-      }
-
-      .close_banner {
-        position: absolute;
-        right: 15px;
-        bottom: 20%;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-        color: white;
-      }
-
-      .notification_banner .close_banner:hover {
-        opacity: 0.7;
-      }
-
-      .download-report-banner-btn {
-        background: linear-gradient(
-          127.09deg,
-          rgba(157, 255, 237, 0.93) 0.95%,
-          rgba(194, 255, 189, 0.93) 98.62%
-        );
-        border: none;
-        cursor: pointer;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-left: 10px;
-      }
-
-      .footer_new_soc_badge{
-        justify-content: left;
-        margin-top: 150px;
-      }
-
-      @media (max-width: 755px) {
-        .close_banner {
-          bottom: 7%;
-        }
-
-         .footer_new_soc_badge{
-        justify-content: center;
-        margin-top: 60px;
-      }
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 865px) {
-        .notification_banner .banner_content p {
-          font-size: 14px;
-        }
-
-        .banner_action {
-          font-size: 14px;
-        }
-
-        .vertical-divider {
-          display: none;
-        }
-
-        .notification_banner .download_btn {
-          font-size: 12px;
-        }
-
-        .banner_box_flex {
-          justify-content: flex-start;
-          gap: 8px;
-        }
-      }
-
-      /* stack card animation*/
-
-      .stack_card_spacer {
-        height: 100vh;
-      }
-
-      .stack_card_container {
-        position: relative;
-      }
-
-      .stack_card_cards-container {
-        position: relative;
-      }
-
-      .stack_card_card {
-        position: sticky;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 20px;
-      }
-
-      .stack_card_card:nth-child(1) {
-        top: 0;
-      }
-
-      .stack_card_card:nth-child(2) {
-        top: 280px;
-      }
-
-      .stack_card_card:nth-child(3) {
-        top: 300px;
-      }
-
-      .stack_card_card:nth-child(4) {
-        top: 320px;
-      }
-
-      .stack_card_card:nth-child(5) {
-        top: 340px;
-      }
-
-      .stack_card_card:nth-child(6) {
-        top: 360px;
-      }
-
-      .stack_card_title_card {
-        width: 100%;
-        padding: 25px 60px 30px;
-        text-align: center;
-        background: transparent;
-      }
-
-      .stack_card_title_card h2 {
-        font-size: 52px;
-        font-weight: 400;
-        margin-bottom: 24px;
-        line-height: 1.1;
-      }
-
-      .stack_card_title_card .stack_card_part_one {
-        color: #888;
-      }
-
-      .stack_card_title_card .stack_card_part_two {
-        color: white;
-      }
-
-      .stack_card_title_card p {
-        font-size: 20px;
-        line-height: 1.6;
-        color: #aaa;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .stack_card_card-content {
-        width: 100%;
-        height: 600px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 30px;
-        padding: 60px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        opacity: 0;
-        transform: translateY(100px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-
-      .stack_card_card.stack_card_visible .stack_card_card-content {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .stack_card_card:nth-child(2) .stack_card_card-content {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      }
-
-      .stack_card_card:nth-child(3) .stack_card_card-content {
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      }
-
-      .stack_card_card:nth-child(4) .stack_card_card-content {
-        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      }
-
-      .stack_card_card:nth-child(5) .stack_card_card-content {
-        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-      }
-
-      .stack_card_card:nth-child(6) .stack_card_card-content {
-        background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-      }
-
-      .stack_card_card-number {
-        font-size: 120px;
-        font-weight: 900;
-        opacity: 0.15;
-        line-height: 1;
-        margin-bottom: 20px;
-      }
-
-      .stack_card_card-title {
-        font-size: 64px;
-        font-weight: 800;
-        margin-bottom: 24px;
-        line-height: 1.1;
-      }
-
-      .stack_card_card-description {
-        font-size: 24px;
-        line-height: 1.6;
-        opacity: 0.9;
-        max-width: 600px;
-      }
-
-      .stack_card_end-spacer {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 48px;
-        font-weight: 800;
-      }
-
-      @media (max-width: 768px) {
-        .stack_card_title_card h2 {
-          font-size: 48px;
-        }
-
-        .stack_card_title_card p {
-          font-size: 18px;
-        }
-
-        .stack_card_title_card {
-          padding: 60px 20px 40px;
-        }
-
-        .stack_card_card-content {
-          padding: 40px;
-          height: 500px;
-        }
-
-        .stack_card_card-number {
-          font-size: 80px;
-        }
-
-        .stack_card_card-title {
-          font-size: 40px;
-        }
-
-        .stack_card_card-description {
-          font-size: 18px;
-        }
-
-        .stack_card_card:nth-child(2) {
-          top: 200px;
-        }
-
-        .stack_card_card:nth-child(3) {
-          top: 220px;
-        }
-
-        .stack_card_card:nth-child(4) {
-          top: 240px;
-        }
-
-        .stack_card_card:nth-child(5) {
-          top: 260px;
-        }
-
-        .stack_card_card:nth-child(6) {
-          top: 280px;
-        }
-      }
-
-      /* Gradient Background Animation */
-      @keyframes gradientMove {
-        0% {
-          transform: translateX(-100px);
-        }
-
-        100% {
-          transform: translateX(calc(100vw + 100px));
-        }
-      }
-
-      .gradient_bg_tr img,
-      .gradient_bg_tl img,
-      .gradient_bg_bl img {
-        animation: gradientMove 30s linear infinite;
-        will-change: transform;
-        position: relative;
-        left: -100px;
-        /* Start off-screen */
-      }
-
-      .gradient_bg_tl img {
-        animation-delay: -10s;
-      }
-
-      .gradient_bg_bl img {
-        animation-delay: -20s;
-      }
-    </style>
-    <!-- Custom Css file Start -->
-  </head>
-
-  <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- Gradients -->
-
-    <!-- <div class="fixed_bg_container">
-		<div class="gradient_bg_tr">
-			<img src="images/primary_bg.svg" alt="bg" />
-		</div>
-		<div class="gradient_bg_tl">
-			<img src="images/primary_bg.svg" alt="bg" />
-		</div>
-		<div class="gradient_bg_bl">
-			<img src="images/primary_bg.svg" alt="bg" />
-		</div>
-	</div> -->
-
-    <!-- notification banner start -->
-    <div class="notification_banner">
-    <div class="container-fluid">
-      <div class="banner_box_flex">
-        <div class="banner_content">
-          <p class="mb-0">
-            OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart Contract Security.
-            </p>
-            </div>
-
-        <div class="vertical-divider" style="background-color: black"></div>
-
-        <div class="banner_action d-flex align-items-center justify-content-end">
-          Explore
-          <button type="button" class="download-report-banner-btn"
-            onclick="window.open('https://scs.owasp.org/sctop10/', '_blank')">
-            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M0.292893 0.292894C-0.0976314 0.683418 -0.0976313 1.31658 0.292894 1.70711L5.58579 7L0.292894 12.2929C-0.0976303 12.6834 -0.0976303 13.3166 0.292895 13.7071C0.683419 14.0976 1.31658 14.0976 1.70711 13.7071L7.70711 7.70711C8.09763 7.31658 8.09763 6.68342 7.70711 6.29289L1.70711 0.292894C1.31658 -0.0976305 0.683417 -0.0976305 0.292893 0.292894Z"
-                fill="#04080D" />
-            </svg>
-          </button>
+<html lang="en" data-mode="chain">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Recent Audits &amp; Case Studies | CredShields Security Portfolio</title>
+  <meta name="description" content="Explore CredShields' latest audits and security assessments across Web3 protocols, fintech products, and enterprise platforms." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Recent Audits &amp; Case Studies | CredShields Security Portfolio" />
+  <meta property="og:description" content="Explore CredShields' latest audits and security assessments across Web3 protocols, fintech products, and enterprise platforms." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/design-tokens.v1.css" />
+  <link rel="stylesheet" href="css/main.v1.css" />
+  <link rel="stylesheet" href="css/page-components.css" />
+  <link rel="stylesheet" href="css/penetration-testing.css" />
+  <link rel="stylesheet" href="css/recently-audited.css" />
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- MS Clarity -->
+  <script async type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","ko6w13w47q");
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PN6ZFK2F');</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ALERT BAR
+════════════════════════════════════════════════════════════ -->
+<div class="alert-bar" id="alert-banner" role="banner">
+  <div class="alert-dot"></div>
+  <span class="alert-text">
+    <span class="alert-chain">OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart Contract Security.</span>
+    <span class="alert-apps">Industry Security Report 2026 Now Live. AI-led Pentesting Benchmark.</span>
+  </span>
+  <span class="alert-sub">Learn more about our findings.</span>
+  <a href="owasp-smart-contract-top-10-2026.html" class="alert-link alert-chain">Explore →</a>
+  <a href="sample-report.html" class="alert-link alert-apps">Read Report →</a>
+  <button id="close-banner" style="margin-left:16px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:16px;cursor:pointer;line-height:1;" aria-label="Close banner">✕</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="nav">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="CredShields home">
+      <!-- ▓▓▓▓▓ ⛓ CHAIN MODE — white logo (dark bg) ▓▓▓▓▓ -->
+      <img src="images/credshields_white_logo.svg" alt="CredShields" width="110" height="110" class="show-chain" />
+      <!-- ░░░░░ 📱 APPS MODE — black logo (light bg) ░░░░░ -->
+      <img src="images/credshields_black_logo.svg" alt="CredShields" width="110" height="110" class="show-apps" />
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="about.html" class="nav-link">About</a>
+
+      <!-- Solutions dropdown — items tagged by mode -->
+      <div class="nav-link nav-dropdown">
+        <span>Solutions</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu nav-dropdown-wide">
+          <!-- ⛓ Chain-only solutions -->
+          <a href="smart-contract-audits.html" class="nav-dropdown-item nav-chain-only">Smart Contract Audits</a>
+          <a href="dapp-protocol-security.html" class="nav-dropdown-item nav-chain-only">DApp &amp; Protocol Security</a>
+          <a href="enterprise-security.html"   class="nav-dropdown-item nav-chain-only">Enterprise Web &amp; Mobile Security</a>
+          <a href="penetration-testing.html"   class="nav-dropdown-item nav-chain-only">Penetration Testing</a>
+          <a href="blockchain-security.html"    class="nav-dropdown-item nav-chain-only">Blockchain Security</a>
+          <a href="cloud-security.html"         class="nav-dropdown-item nav-chain-only">Cloud Infrastructure</a>
+          <a href="wallet-security.html"        class="nav-dropdown-item nav-chain-only">Wallet Security</a>
+          <a href="continuous-monitoring.html"  class="nav-dropdown-item nav-chain-only">Continuous Monitoring</a>
+          <a href="incident-response.html"      class="nav-dropdown-item nav-chain-only">Incident Response</a>
+          <a href="security-training.html"      class="nav-dropdown-item nav-chain-only">Security Training</a>
+          <a href="ai-security-tools.html"      class="nav-dropdown-item nav-chain-only">AI Security Tools</a>
+          <div class="nav-dropdown-divider nav-chain-only"></div>
+          <a href="https://solidityscan.com/"   class="nav-dropdown-item nav-chain-only" target="_blank">SolidityScan ↗</a>
+          <a href="https://rustscan.com/"       class="nav-dropdown-item nav-chain-only" target="_blank">RustScan ↗</a>
+
+          <!-- 📱 Apps-only solutions (from apps_site, grouped) -->
+          <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
+          <a href="continuous-appsec.html"      class="nav-dropdown-flagship-row nav-apps-only">
+            <span class="nav-flagship-badge">FLAGSHIP</span>
+            <span>Continuous AppSec</span>
+          </a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Manual Pentesting</div>
+          <a href="web-pentest.html"            class="nav-dropdown-item nav-apps-only">Web App Pentesting</a>
+          <a href="mobile-pentest.html"         class="nav-dropdown-item nav-apps-only">Mobile App Pentesting</a>
+          <a href="api-security.html"           class="nav-dropdown-item nav-apps-only">API Security Testing</a>
+          <a href="cloud-pentest.html"          class="nav-dropdown-item nav-apps-only">Cloud Security Review</a>
+          <a href="red-team.html"               class="nav-dropdown-item nav-apps-only">Red Team Engagement</a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Continuous &amp; Tooling</div>
+          <a href="devsecops.html"              class="nav-dropdown-item nav-apps-only">DevSecOps Integration</a>
+          <a href="sast.html"                   class="nav-dropdown-item nav-apps-only">Source Code Review &amp; SAST</a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Specialized</div>
+          <a href="ai-llm-security.html"        class="nav-dropdown-item nav-apps-only">AI / LLM AppSec</a>
+          <a href="compliance.html"             class="nav-dropdown-item nav-apps-only">Compliance Readiness</a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
+          <a href="sample-report.html"          class="nav-dropdown-item nav-apps-only">Sample Pentest Report</a>
+          <a href="appsec-maturity.html"        class="nav-dropdown-item nav-apps-only">AppSec Maturity Model</a>
+          <a href="pentest-vs-scan.html"        class="nav-dropdown-item nav-apps-only">Pentest vs Vuln Scan</a>
         </div>
       </div>
+
+      <!-- Industries dropdown -->
+      <div class="nav-link nav-dropdown">
+        <span>Industries</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <!-- ⛓ Chain-only industries -->
+          <a href="web3-protocol-security.html" class="nav-dropdown-item nav-chain-only">Web3 Protocols &amp; Exchanges</a>
+          <a href="stablecoins.html"            class="nav-dropdown-item nav-chain-only">Stablecoins</a>
+          <a href="realwordassets.html"          class="nav-dropdown-item nav-chain-only">Real World Assets</a>
+          <a href="crosschainbridge.html"        class="nav-dropdown-item nav-chain-only">Cross-Chain Bridge</a>
+          <a href="payments.html"               class="nav-dropdown-item nav-chain-only">Payments &amp; DeFi</a>
+          <!-- 📱 Apps-only industries (from apps_site) -->
+          <a href="fintech-security.html"       class="nav-dropdown-item nav-apps-only">Finance &amp; Fintech</a>
+          <a href="saas-security.html"          class="nav-dropdown-item nav-apps-only">SaaS &amp; Enterprise</a>
+          <a href="healthcare-security.html"    class="nav-dropdown-item nav-apps-only">Healthcare &amp; Life Sciences</a>
+          <a href="industry-edtech.html"        class="nav-dropdown-item nav-apps-only"><span class="nav-flagship-badge nav-flag-new">NEW</span> EdTech</a>
+          <a href="industry-ecommerce.html"     class="nav-dropdown-item nav-apps-only">E-commerce &amp; Retail</a>
+          <a href="industry-govtech.html"       class="nav-dropdown-item nav-apps-only">Public Sector / GovTech</a>
+          <!-- ✅ Shared -->
+          <a href="gaming-security.html"        class="nav-dropdown-item">Gaming &amp; Digital Assets</a>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="nav-link nav-dropdown">
+        <span>Resources</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <!-- ⛓ Chain-only resources -->
+          <a href="recently-audited.html"       class="nav-dropdown-item nav-chain-only">Recently Audited</a>
+          <a href="ecosystem.html"              class="nav-dropdown-item nav-chain-only">Ecosystem</a>
+          <!-- 📱 Apps-only resources (from apps_site) -->
+          <a href="sample-report.html"          class="nav-dropdown-item nav-apps-only">Sample Pentest Report</a>
+          <a href="appsec-maturity.html"        class="nav-dropdown-item nav-apps-only">AppSec Maturity Model</a>
+          <a href="#"                           class="nav-dropdown-item nav-apps-only">Compliance Checklist Library</a>
+          <!-- ✅ Shared -->
+          <a href="https://discover.credshields.com/" class="nav-dropdown-item" target="_blank">Blog ↗</a>
+          <a href="brand-guidelines.html"       class="nav-dropdown-item">Brand Guidelines</a>
+          <a href="careers.html"                class="nav-dropdown-item">Careers</a>
+        </div>
+      </div>
+
+      <!-- Institutions — Chain only -->
+      <div class="nav-link nav-dropdown nav-chain-only">
+        <span>Institutions</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <a href="Institutions.html"           class="nav-dropdown-item">Overview</a>
+          <a href="vc-crypto-funds.html"         class="nav-dropdown-item">VCs &amp; Crypto Funds</a>
+          <a href="stablecoins.html"             class="nav-dropdown-item">Stablecoins</a>
+          <a href="crosschainbridge.html"        class="nav-dropdown-item">Cross-Chain Bridge</a>
+          <a href="realwordassets.html"          class="nav-dropdown-item">Real World Assets</a>
+          <a href="payments.html"               class="nav-dropdown-item">Payments</a>
+        </div>
+      </div>
+
+      <!-- OWASP Top 10 — Chain only -->
+      <div class="nav-link nav-dropdown nav-chain-only">
+        <span>OWASP Top 10</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <a href="owasp-smart-contract-top-10-2025.html" class="nav-dropdown-item">2025</a>
+          <a href="owasp-smart-contract-top-10-2026.html" class="nav-dropdown-item">2026</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Nav Actions -->
+    <div class="nav-actions">
+      <!-- Mode Toggle -->
+      <div class="mode-toggle" role="tablist" aria-label="Security surface">
+        <div class="mode-toggle-slider" aria-hidden="true"></div>
+        <button class="mode-toggle-btn" data-mode="apps" role="tab" aria-pressed="true">Apps</button>
+        <button class="mode-toggle-btn" data-mode="chain" role="tab" aria-pressed="false">Chain</button>
+      </div>
+      <button class="btn-primary" data-book-security>Book Security Audit</button>
     </div>
-    <button class="close_banner btn-close btn-close-white" id="closeBanner" aria-label="Close">
-      &#10005;
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MOBILE OVERLAY
+════════════════════════════════════════════════════════════ -->
+<div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="mobile-overlay-head">
+    <a href="index.html" class="nav-logo">
+      <!-- ▓▓▓▓▓ ⛓ CHAIN MODE — white logo (dark bg) ▓▓▓▓▓ -->
+      <img src="images/credshields_white_logo.svg" alt="CredShields" width="110" height="30" class="show-chain" />
+      <!-- ░░░░░ 📱 APPS MODE — black logo (light bg) ░░░░░ -->
+      <img src="images/credshields_black_logo.svg" alt="CredShields" width="110" height="30" class="show-apps" />
+    </a>
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="mobile-nav-item">
+    <a href="about.html" class="mobile-nav-link" style="display:block;padding:16px 0;">About</a>
+  </div>
+
+  <!-- Solutions -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-solutions">
+      <span>Solutions</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
     </div>
-    <!-- notification banner end -->
+    <div class="mobile-sub" id="mob-solutions">
+      <!-- ⛓ Chain-only -->
+      <a href="smart-contract-audits.html"  class="mobile-sub-link nav-chain-only">Smart Contract Audits</a>
+      <a href="dapp-protocol-security.html" class="mobile-sub-link nav-chain-only">DApp &amp; Protocol Security</a>
+      <a href="enterprise-security.html"    class="mobile-sub-link nav-chain-only">Enterprise Web &amp; Mobile Security</a>
+      <a href="penetration-testing.html"    class="mobile-sub-link nav-chain-only">Penetration Testing</a>
+      <a href="blockchain-security.html"    class="mobile-sub-link nav-chain-only">Blockchain Security</a>
+      <a href="cloud-security.html"         class="mobile-sub-link nav-chain-only">Cloud Infrastructure</a>
+      <a href="wallet-security.html"        class="mobile-sub-link nav-chain-only">Wallet Security</a>
+      <a href="continuous-monitoring.html"  class="mobile-sub-link nav-chain-only">Continuous Monitoring</a>
+      <a href="incident-response.html"      class="mobile-sub-link nav-chain-only">Incident Response</a>
+      <a href="security-training.html"      class="mobile-sub-link nav-chain-only">Security Training</a>
+      <a href="ai-security-tools.html"      class="mobile-sub-link nav-chain-only">AI Security Tools</a>
+      <a href="https://solidityscan.com/"   class="mobile-sub-link nav-chain-only" target="_blank">SolidityScan ↗</a>
+      <a href="https://rustscan.com/"       class="mobile-sub-link nav-chain-only" target="_blank">RustScan ↗</a>
 
-    <!-- announcement start -->
-    <!-- <div class="announcment_wrap">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-11 ordr_2">
-					<div class="text_center">
-						<h6>ANNOUNCEMENT : &nbsp;</h6>
-						<p>
-							We have launched our cloud based Smart Contract vulnerability
-							scanner SolidityScan. Check out
-							<a href="https://solidityscan.com/" target="_blank"
-								style="color: white">SolidityScan.com</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-lg-1 ordr_1">
-					<div class="text-right">
-						<a href="#" class="clse" id="clsoe">
-							<img src="images/clse_icon.svg" alt="x" class="img-fluid" />
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-    <!-- announcement end -->
+      <!-- 📱 Apps-only (from apps_site, grouped) -->
+      <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
+      <a href="continuous-appsec.html"      class="mobile-sub-link nav-apps-only">
+        <span class="nav-flagship-badge">FLAGSHIP</span>
+        Continuous AppSec
+      </a>
 
-    <!-- header section start -->
-  <header class="header_section">
-    <div class="container">
-      <nav class="navbar px-0 navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/logo.svg" alt="logo" class="img-fluid" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="fa fa-bars"></span>
+      <div class="nav-dropdown-section-title nav-apps-only">Manual Pentesting</div>
+      <a href="web-pentest.html"            class="mobile-sub-link nav-apps-only">Web App Pentesting</a>
+      <a href="mobile-pentest.html"         class="mobile-sub-link nav-apps-only">Mobile App Pentesting</a>
+      <a href="api-security.html"           class="mobile-sub-link nav-apps-only">API Security Testing</a>
+      <a href="cloud-pentest.html"          class="mobile-sub-link nav-apps-only">Cloud Security Review</a>
+      <a href="red-team.html"               class="mobile-sub-link nav-apps-only">Red Team Engagement</a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Continuous &amp; Tooling</div>
+      <a href="devsecops.html"              class="mobile-sub-link nav-apps-only">DevSecOps Integration</a>
+      <a href="sast.html"                   class="mobile-sub-link nav-apps-only">Source Code Review &amp; SAST</a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Specialized</div>
+      <a href="ai-llm-security.html"        class="mobile-sub-link nav-apps-only">AI / LLM AppSec</a>
+      <a href="compliance.html"             class="mobile-sub-link nav-apps-only">Compliance Readiness</a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
+      <a href="sample-report.html"          class="mobile-sub-link nav-apps-only">Sample Pentest Report</a>
+      <a href="appsec-maturity.html"        class="mobile-sub-link nav-apps-only">AppSec Maturity Model</a>
+      <a href="pentest-vs-scan.html"        class="mobile-sub-link nav-apps-only">Pentest vs Vuln Scan</a>
+    </div>
+  </div>
+
+  <!-- Industries -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-industries">
+      <span>Industries</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-industries">
+      <!-- ⛓ Chain-only -->
+      <a href="web3-protocol-security.html" class="mobile-sub-link nav-chain-only">Web3 Protocols &amp; Exchanges</a>
+      <a href="stablecoins.html"            class="mobile-sub-link nav-chain-only">Stablecoins</a>
+      <a href="realwordassets.html"          class="mobile-sub-link nav-chain-only">Real World Assets</a>
+      <a href="crosschainbridge.html"        class="mobile-sub-link nav-chain-only">Cross-Chain Bridge</a>
+      <a href="payments.html"               class="mobile-sub-link nav-chain-only">Payments &amp; DeFi</a>
+      <!-- 📱 Apps-only (from apps_site) -->
+      <a href="fintech-security.html"       class="mobile-sub-link nav-apps-only">Finance &amp; Fintech</a>
+      <a href="saas-security.html"          class="mobile-sub-link nav-apps-only">SaaS &amp; Enterprise</a>
+      <a href="healthcare-security.html"    class="mobile-sub-link nav-apps-only">Healthcare &amp; Life Sciences</a>
+      <a href="industry-edtech.html"        class="mobile-sub-link nav-apps-only"><span class="nav-flagship-badge nav-flag-new">NEW</span> EdTech</a>
+      <a href="industry-ecommerce.html"     class="mobile-sub-link nav-apps-only">E-commerce &amp; Retail</a>
+      <a href="industry-govtech.html"       class="mobile-sub-link nav-apps-only">Public Sector / GovTech</a>
+      <!-- ✅ Shared -->
+      <a href="gaming-security.html"        class="mobile-sub-link">Gaming &amp; Digital Assets</a>
+    </div>
+  </div>
+
+  <!-- Resources -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-resources">
+      <span>Resources</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-resources">
+      <!-- ⛓ Chain-only -->
+      <a href="recently-audited.html"       class="mobile-sub-link nav-chain-only">Recently Audited</a>
+      <a href="ecosystem.html"              class="mobile-sub-link nav-chain-only">Ecosystem</a>
+      <!-- 📱 Apps-only (from apps_site) -->
+      <a href="sample-report.html"          class="mobile-sub-link nav-apps-only">Sample Pentest Report</a>
+      <a href="appsec-maturity.html"        class="mobile-sub-link nav-apps-only">AppSec Maturity Model</a>
+      <a href="#"                           class="mobile-sub-link nav-apps-only">Compliance Checklist Library</a>
+      <!-- ✅ Shared -->
+      <a href="https://discover.credshields.com/" class="mobile-sub-link" target="_blank">Blog ↗</a>
+      <a href="brand-guidelines.html"       class="mobile-sub-link">Brand Guidelines</a>
+      <a href="careers.html"                class="mobile-sub-link">Careers</a>
+    </div>
+  </div>
+
+  <!-- Institutions — Chain only -->
+  <div class="mobile-nav-item nav-chain-only">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-institutions">
+      <span>Institutions</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-institutions">
+      <a href="Institutions.html"           class="mobile-sub-link">Overview</a>
+      <a href="vc-crypto-funds.html"         class="mobile-sub-link">VCs &amp; Crypto Funds</a>
+      <a href="stablecoins.html"             class="mobile-sub-link">Stablecoins</a>
+      <a href="crosschainbridge.html"        class="mobile-sub-link">Cross-Chain Bridge</a>
+      <a href="realwordassets.html"          class="mobile-sub-link">Real World Assets</a>
+      <a href="payments.html"               class="mobile-sub-link">Payments</a>
+    </div>
+  </div>
+
+  <!-- OWASP Top 10 — Chain only -->
+  <div class="mobile-nav-item nav-chain-only">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-owasp">
+      <span>OWASP Top 10</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-owasp">
+      <a href="owasp-smart-contract-top-10-2025.html" class="mobile-sub-link">2025</a>
+      <a href="owasp-smart-contract-top-10-2026.html" class="mobile-sub-link">2026</a>
+    </div>
+  </div>
+
+  <div class="mobile-overlay-cta">
+    <button class="btn-primary-lg" style="width:100%;text-align:center;" data-book-security>Book Security Audit</button>
+    <button class="btn-secondary-lg" style="width:100%;justify-content:center;" data-free-ai-scan>Run Free AI Scan</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PAGE CONTENT
+════════════════════════════════════════════════════════════ -->
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot"></span><span class="hero-badge-text">150+ audits completed</span></div>
+      <div class="hero-ticker"><span class="ticker-item">VOL. 05 · ISS. 150</span><span class="ticker-sep">◆</span><span class="ticker-item">AUDIT PORTFOLIO</span></div>
+      <h1 class="hero-headline">Explore our most<br>popular <em>audits</em>.</h1>
+      <p class="hero-body">150+ completed audits across smart contracts, DeFi protocols, and enterprise platforms. Browse the portfolio, check popular projects, and verify KYC reports.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary-lg" href="https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y">Submit Project <span>→</span></a>
+        <a class="btn-secondary-lg" href="#" data-free-ai-scan>Run Free AI Scan <span>↗</span></a>
+      </div>
+    </div>
+    <div class="hero-aside">
+      <div class="dossier-card">
+        <div class="dossier-stamp">AUDIT<br>LOG</div>
+        <div class="dossier-card-head"><span>PORTFOLIO · <strong>150+ AUDITS</strong></span><span>ACTIVE</span></div>
+        <div class="dossier-card-title">Smart contracts, protocols, and enterprise platforms — all <em>verified</em>.</div>
+        <div class="dossier-kv-grid">
+          <span class="dossier-kv-label">Audits</span>
+          <span class="dossier-kv-value">150+ completed</span>
+          <span class="dossier-kv-label">Scope</span>
+          <span class="dossier-kv-value">DeFi · L1/L2 · enterprise</span>
+          <span class="dossier-kv-label">KYC</span>
+          <span class="dossier-kv-value ok">Verified</span>
+          <span class="dossier-kv-label">Reports</span>
+          <span class="dossier-kv-value ok">Public</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT TAB SECTION -->
+<section id="audit_sec" class="section section--raised">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">§ 01 · Audit portfolio</div>
+      <div class="section-title">Browse, verify, <em>trust</em>.</div>
+    </div>
+
+    <div class="ra-tabs" role="tablist">
+      <button class="ra-tab-btn active" role="tab" aria-selected="true"  onclick="openTab(event,'Tab1')">Recently Audited</button>
+      <button class="ra-tab-btn"        role="tab" aria-selected="false" onclick="openTab(event,'Tab2')">Popular Projects</button>
+      <button class="ra-tab-btn"        role="tab" aria-selected="false" onclick="openTab(event,'Tab3')">KYC Reports</button>
+    </div>
+
+    <!-- Tab 1: Recently Audited (dynamically populated) -->
+    <div id="Tab1" class="ra-tab-panel active" role="tabpanel">
+      <div class="recent-audits"></div>
+      <div class="ra-pagination" id="pagination">
+        <button type="button" id="prev" aria-label="Previous page">
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav m-auto custom_scrl desktop-menu">
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">
-                <p>About</p>
-              </a>
-            </li>
-            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                <p style="margin: 0 12px; cursor: pointer">
-                  Solutions
-                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
-                </p>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <a class="dropdown-item" href="smart-contract-audits.html">Smart Contract Audits</a>
-                <a class="dropdown-item" href="dapp-protocol-security.html">DApp & Protocol Security</a>
-                <a class="dropdown-item" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
-                <a class="dropdown-item" href="penetration-testing.html">Penetration Testing</a>
-                <a class="dropdown-item" href="blockchain-security.html">Blockchain Security</a>
-
-                <a class="dropdown-item" href="cloud-security.html">Cloud Infrastructure</a>
-                <a class="dropdown-item" href="wallet-security.html">Wallet Security</a>
-                <a class="dropdown-item" href="mobile-app-security.html">Mobile App Security</a>
-                <a class="dropdown-item" href="web-app-security.html">Web App Security</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="ai-security-tools.html">AI Security Tools</a>
-                <a class="dropdown-item" href="https://solidityscan.com/">SolidityScan</a>
-                <a class="dropdown-item" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
-                <a class="dropdown-item" href="https://rustscan.com/">RustScan</a>
-                <a class="dropdown-item" href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                <p style="margin: 0 12px; cursor: pointer">
-                  Industries
-                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
-                </p>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <a class="dropdown-item" href="fintech-security.html">Finance & Fintech</a>
-                <a class="dropdown-item" href="saas-security.html">SaaS & Enterprise</a>
-                <a class="dropdown-item" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
-                <a class="dropdown-item" href="gaming-security.html">Gaming & Digital Assets</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                <a style="margin: 0 12px; cursor: pointer" href="resources.html">
-                  Resources
-                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
-                </a>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <a class="dropdown-item" href="recently-audited.html?tab-name=recent">Recently Audited</a>
-                <a class="dropdown-item" href="recently-audited.html?tab-name=popular">Popular Projects</a>
-                <a class="dropdown-item" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
-                <a class="dropdown-item" href="brand-guidelines.html">Brand Guidelines</a>
-                <a class="dropdown-item" href="ecosystem.html">Ecosystem</a>
-                <a class="dropdown-item" href="https://discover.credshields.com/">Blog</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                <a style="margin: 0 12px; cursor: pointer" href="Institutions.html">
-                  Institutions
-                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
-                </a>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <a class="dropdown-item" href="vc-crypto-funds.html">VCs & Crypto Funds</a>
-                <a class="dropdown-item" href="stablecoins.html">Stablecoins</a>
-                <a class="dropdown-item" href="crosschainbridge.html">Cross-Chain Bridge Infrastructure</a>
-                <a class="dropdown-item" href="realwordassets.html">Real World Assets</a>
-                <a class="dropdown-item" href="payments.html">Payments</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown dropdown-nav-custom dropdown-hover-expand">
-              <a class="dropdown-toggle" id="solutionsDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
-                <a style="margin: 0 12px; cursor: pointer" href="./owasp-smart-contract-top-10-2026.html">
-                  OWASP Top 10
-                  <img src="images/down_arrow.svg" alt="down" class="img-fluid" />
-                </a>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="solutionsDropdown">
-                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2025.html">2025</a>
-                <a class="dropdown-item" href="./owasp-smart-contract-top-10-2026.html">2026</a>
-              </div>
-            </li>
-          </ul>
-          <nav class="navbar navbar-light desktop-menu">
-            <form class="form-inline">
-              <a href="" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
-                <button class="book_security_audit_btn">
-                  Book Security Audit
-                </button>
-                <!-- <img src="images/book_security_audit_btn.svg" alt="clip_path_btn" class="img-fluid"> -->
-              </a>
-            </form>
-          </nav>
-          <div class="mobile-overlay-menu" id="navbarNav">
-            <div class="mobile-overlay-content">
-              <div class="mobile-overlay-menu-item">
-                <a href="index.html"> Home </a>
-              </div>
-              <div class="mobile-overlay-menu-item">
-                <a href="about.html"> About </a>
-              </div>
-              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('solutions')">
-                <span>Solutions</span>
-                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </div>
-              <div class="mobile-overlay-submenu" id="mobile-overlay-solutions-submenu">
-                <div class="mobile-overlay-submenu-item">
-                  <a href="smart-contract-audits.html">Smart Contract Audits</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="dapp-protocol-security.html">DApp & Protocol Security</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="enterprise-security.html">Enterprise Web & Mobile Security</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="penetration-testing.html">Penetration Testing</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="blockchain-security.html">Blockchain Security</a>
-                </div>
-
-                <div class="mobile-overlay-submenu-item">
-                  <a href="cloud-security.html">Cloud Infrastructure</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="wallet-security.html">Wallet Security</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="mobile-app-security.html">Mobile App Security</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="web-app-security.html">Web App Security</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="ai-security-tools.html">AI Security Tools</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="https://solidityscan.com/">SolidityScan</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="https://rustscan.com/">RustScan</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="#vulnerability_assessment">Wallet Tracker (Coming Soon)</a>
-                </div>
-              </div>
-
-              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('product')">
-                <span>Industries</span>
-                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </div>
-              <div class="mobile-overlay-submenu" id="mobile-overlay-product-submenu">
-                <div class="mobile-overlay-submenu-item">
-                  <a href="fintech-security.html">Finance & Fintech</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="saas-security.html">SaaS & Enterprise</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="gaming-security.html">Gaming & Digital Assets</a>
-                </div>
-              </div>
-
-              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('resources')">
-                <span>Resources</span>
-                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </div>
-              <div class="mobile-overlay-submenu" id="mobile-overlay-resources-submenu">
-                <div class="mobile-overlay-submenu-item">
-                  <a href="recently-audited.html?tab-name=recent">Recently Audited</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="recently-audited.html?tab-name=popular">Popular Projects</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="recently-audited.html?tab-name=kyc">KYC Reports</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="brand-guidelines.html">Brand Guidelines</a>
-                  </div>
-                  <div class="mobile-overlay-submenu-item">
-                  <a href="https://discover.credshields.com/">Blog</a>
-                </div>
-              </div>
-
-              <div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
-                <span>OWASP Top 10</span>
-                <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </div>
-              
-              <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
-                <div class="mobile-overlay-submenu-item">
-                  <a href="owasp-smart-contract-top-10-2025.html">2025</a>
-                </div>
-                <div class="mobile-overlay-submenu-item">
-                  <a href="owasp-smart-contract-top-10-2026.html">2026</a>
-                </div>
-              
-              </div>
-              
-              <!--<div class="mobile-overlay-menu-item" onclick="toggleSubmenu('owasp')">
-                              <span>OWASP Top 10</span>
-                              <svg class="mobile-overlay-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M6 9l6 6 6-6" />
-                              </svg>
-                            </div>
-              
-                             <div class="mobile-overlay-submenu" id="mobile-overlay-owasp-submenu">
-                              <div class="mobile-overlay-submenu-item">
-                                <a href="owasp-smart-contract-top-10-2025.html">2025</a>
-                              </div>
-                              <div class="mobile-overlay-submenu-item">
-                                <a href="owasp-smart-contract-top-10-2026.html">2026</a>
-                              </div>
-                </div> -->
-            </div>
-
-            <div class="mobile-overlay-footer">
-              <nav class="navbar navbar-light cart_drp_clk">
-                <form class="form-inline">
-                  <a href=""
-                    onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y'});return false;">
-                    <button class="book_security_audit_btn">
-                      Book Security Audit
-                    </button>
-                  </a>
-                </form>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </nav>
+        <div id="pages"></div>
+        <button type="button" id="next" aria-label="Next page">
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
-  </header>
 
-  <!-- header section end -->
+    <!-- Tab 2: Popular Projects (dynamically populated) -->
+    <div id="Tab2" class="ra-tab-panel" role="tabpanel">
+      <div class="popular-audits"></div>
+    </div>
 
-    <section class="eco_system_new_container eco_system_new_container_owasp">
-      <div class="owasp_main_icon_wrapper">
-        <div
-          class="eco_system_new_header eco_system_new_header_owasp"
-          style="row-gap: 60px"
-        >
-          <h1 class="eco_system_new_title">
-            Explore our Most  <br/>Popular Audits
-          </h1>
-          <p class="eco_system_new_subtitle">
-            150+ completed audits to understand the comprehensive security assessments Credshields offers.
-          </p>
+    <!-- Tab 3: KYC Reports -->
+    <div id="Tab3" class="ra-tab-panel" role="tabpanel">
+      <div class="ra-kyc-list">
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/etherempire.svg" alt="EtherEmpire" />
+            <span class="ra-kyc-name">EtherEmpire</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><a href="https://etherempire.com/" target="_blank">etherempire.com <img src="images/arrow-up-right.svg" alt="" /></a></div>
+            <div class="ra-kyc-date">09 Oct 2025</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/etherempire.pdf" download="EtherEmpire.pdf">View KYC Certificate <img src="images/arrow-up-right.svg" alt="" /></a>
+          </div>
         </div>
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg" alt="Cybercentry" />
+            <span class="ra-kyc-name">Cybercentry</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><a href="https://cybercentry.co.uk" target="_blank">cybercentry.co.uk <img src="images/arrow-up-right.svg" alt="" /></a></div>
+            <div class="ra-kyc-date">16 Dec 2024</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.pdf" download="Cybercentry.pdf">View KYC Certificate <img src="images/arrow-up-right.svg" alt="" /></a>
+          </div>
+        </div>
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg" alt="PultoPe" />
+            <span class="ra-kyc-name">PultoPe</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><a href="https://plutope.io" target="_blank">plutope.io <img src="images/arrow-up-right.svg" alt="" /></a></div>
+            <div class="ra-kyc-date">04 July 2024</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.pdf" download="PultoPe.pdf">View KYC Certificate <img src="images/arrow-up-right.svg" alt="" /></a>
+          </div>
+        </div>
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg" alt="Helldiver" />
+            <span class="ra-kyc-name">Helldiver</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><a href="https://helldiver.vip" target="_blank">helldiver.vip <img src="images/arrow-up-right.svg" alt="" /></a></div>
+            <div class="ra-kyc-date">05 May 2024</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.pdf" download="Helldiver.pdf">View KYC Certificate <img src="images/arrow-up-right.svg" alt="" /></a>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
 
-    <section class="section_alignment_website audits_sec" id="audit_sec" style="margin-top: -100px;">
-        <div class="container pos_relative">
-            <div class="tabs">
+  </div>
+</section>
 
-                <div class="tab-buttons">
-                    <button class="tab-button active" onclick="openTab(event, 'Tab1')">Recently
-                        Audited</button>
-                    <button class="tab-button" onclick="openTab(event, 'Tab2')">Popular Projects</button>
-                    <button class="tab-button" onclick="openTab(event, 'Tab3')">KYC Reports</button>
-                </div>
-
-                <div class="tab-content active" id="Tab1">
-                    <div class="recent-audits"></div>
-                    <div id="pagination">
-                        <button type="button" id="prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg></button>
-                        <div id="pages">
-                            <!-- Page buttons will be added here dynamically -->
-                        </div>
-                        <button type="button" id="next"><svg width="16" height="14" viewBox="0 0 16 14" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="tab-content" id="Tab2">
-                    <div class="popular-audits"></div>
-                </div>
-                <div class="tab-content" id="Tab3">
-                    <!-- <div class="col-lg-12"> -->
-                    <div class="kyc_row">
-                        <div class="kyc_row_company">
-                            <div class="audit_col_one">
-                                <div class="audit_logo"><img
-                                        src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/etherempire.svg"
-                                        alt="Other" /></div>
-                            </div>
-                            <div class="audit_col_two">EtherEmpire</div>
-                        </div>
-                        <div class="audit_col_tf">
-                            <div class="audit_col_three"><a href="https://etherempire.com/" target="_blank">
-                                    etherempire.com
-                                    <img src="images/arrow-up-right.svg" alt="link" />
-                                </a></div>
-                            <div class="audit_col_four">09 Oct 2025	</div>
-                        </div>
-                        <div class="audit_col_five">
-                            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/etherempire.pdf"
-                                download="EtherEmpire.pdf" class="audit-link">View KYC Certificate <img
-                                    src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
-                        </div>
-                    </div>
-                    <div class="kyc_row">
-                        <div class="kyc_row_company">
-                            <div class="audit_col_one">
-                                <div class="audit_logo"><img
-                                        src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg"
-                                        alt="Other" /></div>
-                            </div>
-                            <div class="audit_col_two">Cybercentry</div>
-                        </div>
-                        <div class="audit_col_tf">
-                            <div class="audit_col_three"><a href="https://cybercentry.co.uk" target="_blank">
-                                    cybercentry.co.uk
-                                    <img src="images/arrow-up-right.svg" alt="link" />
-                                </a></div>
-                            <div class="audit_col_four">16 Dec 2024</div>
-                        </div>
-                        <div class="audit_col_five">
-                            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.pdf"
-                                download="Cybercentry.pdf" class="audit-link">View KYC Certificate <img
-                                    src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
-                        </div>
-                    </div>
-                    <div class="kyc_row">
-                        <div class="kyc_row_company">
-
-                            <div class="audit_col_one">
-                                <div class="audit_logo"><img
-                                        src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg"
-                                        alt="Other" /></div>
-                            </div>
-                            <div class="audit_col_two">PultoPe</div>
-                        </div>
-                        <div class="audit_col_tf">
-                            <div class="audit_col_three"><a href="https://plutope.io" target="_blank">
-                                    plutope.io
-                                    <img src="images/arrow-up-right.svg" alt="link" />
-                                </a></div>
-                            <div class="audit_col_four">04 July 2024</div>
-                        </div>
-                        <div class="audit_col_five">
-                            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.pdf"
-                                download="PultoPe.pdf" class="audit-link">View KYC Certificate <img
-                                    src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
-                        </div>
-                    </div>
-                    <div class="kyc_row">
-                        <div class="kyc_row_company">
-
-                            <div class="audit_col_one">
-                                <div class="audit_logo"><img
-                                        src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg"
-                                        alt="Other" /></div>
-                            </div>
-                            <div class="audit_col_two">Helldiver</div>
-                        </div>
-                        <div class="audit_col_tf">
-                            <div class="audit_col_three"><a href="https://helldiver.vip" target="_blank">
-                                    helldiver.vip
-                                    <img src="images/arrow-up-right.svg" alt="link" />
-                                </a></div>
-                            <div class="audit_col_four">05 May 2024</div>
-                        </div>
-                        <div class="audit_col_five">
-                            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.pdf"
-                                download="Helldiver.pdf" class="audit-link">View KYC Certificate <img
-                                    src="images/arrow-up-right.svg" class="arrow-icon" alt="link" /></a>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </div>
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand-logo">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE — white logo (dark bg) ▓▓▓▓▓ -->
+          <img src="images/credshields_white_logo.svg" alt="CredShields" width="140" height="36" class="show-chain" />
+          <!-- ░░░░░ 📱 APPS MODE — black logo (light bg) ░░░░░ -->
+          <img src="images/credshields_black_logo.svg" alt="CredShields" width="140" height="36" class="show-apps" />
         </div>
-    </section>
-
-  <footer class="footer_new_container">
-    <div class="footer_new_content">
-      <div class="footer_new_main">
-        <!-- Brand Section -->
-        <div class="footer_new_brand">
-          <img src="images/Logo.svg" class="footer_new_logo" alt="" />
-          <p class="footer_new_tagline">
-            Protecting the future of Web3 and enterprise technology with
-            world-class security audits and consulting services.
-          </p>
-          <a class="partner_btn_primary font_color_black" style="margin-bottom: 20px;" onclick="Calendly.initPopupWidget({url: 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y'});return false;">
-          Partner with us
-        </a>
-          <div class="footer_new_social_icons">
-            <div class="footer_new_social_placeholder">
-              <img src="images/telegram_gray.svg" alt="telegram" class="img-fluid"
-                onclick="window.open('https://t.me/solidityscan', '_blank');" />
-            </div>
-            <div class="footer_new_social_placeholder">
-              <img src="images/discord_gray.svg" alt="discord" class="img-fluid"
-                onclick="window.open('https://discord.com/invite/9HhV4hGENw', '_blank');" />
-            </div>
-            <div class="footer_new_social_placeholder">
-              <img src="images/medium_gray.svg" alt="medium" class="img-fluid"
-                onclick="window.open('https://blog.solidityscan.com/', '_blank');" />
-            </div>
-            <div class="footer_new_social_placeholder">
-              <img src="images/x.svg" alt="X" class="img-fluid"
-                onclick="window.open('https://x.com/CredShields', '_blank');" />
-            </div>
-            <div class="footer_new_social_placeholder">
-              <img src="images/instagram_gray.svg" alt="instagram" class="img-fluid"
-                onclick="window.open('https://www.instagram.com/credshields/', '_blank');" />
-            </div>
-          </div>
-          <div class="footer_new_soc_badge" style=" display: flex; align-items: center; gap: 30px; cursor: pointer;">
-              <img src="images/soc_badge.svg" alt="SOC 2 Certified" style="width: 80px;" class="img-fluid"
-                onclick="window.open('https://www.aicpa-cima.com/', '_blank')" />
-              <img src="images/owasp_badge.svg" alt="OWASP" style="width: 140px;" class="img-fluid"
-                onclick="window.open('https://owasp.org/www-project-smart-contract-top-10/', '_blank')" />
-            </div>
-          
+        <p class="footer-brand-addr">20A Tanjong Pagar Road,<br>Singapore (088443)</p>
+        <div class="footer-social">
+          <a href="https://x.com/credshields" class="footer-social-link" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629 5.905-5.629zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/credshields" class="footer-social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://discover.credshields.com/" class="footer-social-link" target="_blank" rel="noopener" aria-label="Blog">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </a>
         </div>
+        <div class="footer-copy">© 2026 CredShields. All Rights Reserved.</div>
+      </div>
 
-        <!-- Services Column -->
-        <div class="footer_new_column">
-          <h3 class="footer_new_column_title">Solutions</h3>
-          <div class="footer_new_links">
-            <a class="footer_new_link" href="smart-contract-audits.html">Smart Contract Audits</a>
-            <a class="footer_new_link" href="dapp-protocol-security.html">DApp & Protocol Security</a>
-            <a class="footer_new_link" href="enterprise-security.html">Enterprise Web & Mobile Security</a>
-            <a class="footer_new_link" href="penetration-testing.html">Penetration Testing</a>
-            <a class="footer_new_link" href="blockchain-security.html">Blockchain Security</a>
-
-            <a class="footer_new_link" href="cloud-security.html">Cloud Infrastructure</a>
-            <a class="footer_new_link" href="wallet-security.html">Wallet Security</a>
-            <a class="footer_new_link" href="mobile-app-security.html">Mobile App Security</a>
-            <a class="footer_new_link" href="web-app-security.html">Web App Security</a>
-            <a class="footer_new_link" href="ai-security-tools.html">AI Security Tools</a>
-            <a class="footer_new_link" href="https://solidityscan.com/">SolidityScan</a>
-            <a class="footer_new_link" href="https://solidityscan.com/web3hackhub">Web3 HackHub</a>
-            <a class="footer_new_link" href="https://rustscan.com/">RustScan</a>
-            <a class="footer_new_link" href="#">Wallet Tracker (Coming Soon)</a>
-          </div>
-        </div>
-
-        <!-- Industries Column -->
-        <div class="footer_new_column">
-          <h3 class="footer_new_column_title">Industries</h3>
-          <div class="footer_new_links">
-            <a class="footer_new_link" href="fintech-security.html">Finance & Fintech</a>
-            <a class="footer_new_link" href="saas-security.html">SaaS & Enterprises</a>
-            <a class="footer_new_link" href="web3-protocol-security.html">Web3 Protocols & Exchanges</a>
-            <a class="footer_new_link" href="gaming-security.html">Gaming & Digital Assets</a>
-          </div>
-        </div>
-
-        <!-- Resources Column -->
-        <div class="footer_new_column">
-          <h3 class="footer_new_column_title">Resources</h3>
-          <div class="footer_new_links">
-            <a href="https://discover.credshields.com/" class="footer_new_link">Blog</a>
-            <a class="footer_new_link" href="recently-audited.html?tab-name=recent">Recently Audited</a>
-            <a class="footer_new_link" href="recently-audited.html?tab-name=popular">Popular Projects</a>
-            <a class="footer_new_link" href="recently-audited.html?tab-name=kyc">KYC Reports</a>
-            <a class="footer_new_link" href="brand-guidelines.html">Brand Guidelines</a>
-            <a class="footer_new_link" href="ecosystem.html">Ecosystem</a>
-            <a class="footer_new_link" href="careers.html">Careers</a>
-
-          
-
-          </div>
+      <!-- Solutions -->
+      <div>
+        <div class="footer-col-title">Solutions</div>
+        <div class="footer-links">
+          <!-- ⛓ Chain-only -->
+          <a href="smart-contract-audits.html"  class="footer-link foot-chain-only">Smart Contract Audits</a>
+          <a href="dapp-protocol-security.html"  class="footer-link foot-chain-only">DApp &amp; Protocol Security</a>
+          <a href="blockchain-security.html"     class="footer-link foot-chain-only">Blockchain Security</a>
+          <a href="wallet-security.html"         class="footer-link foot-chain-only">Wallet Security</a>
+          <a href="continuous-monitoring.html"   class="footer-link foot-chain-only">Continuous Monitoring</a>
+          <a href="https://solidityscan.com/"    class="footer-link foot-chain-only" target="_blank">SolidityScan ↗</a>
+          <a href="https://rustscan.com/"        class="footer-link foot-chain-only" target="_blank">RustScan ↗</a>
+          <!-- 📱 Apps-only -->
+          <a href="continuous-appsec.html"       class="footer-link foot-apps-only">Continuous AppSec</a>
+          <a href="web-pentest.html"             class="footer-link foot-apps-only">Web App Pentesting</a>
+          <a href="mobile-pentest.html"          class="footer-link foot-apps-only">Mobile App Pentesting</a>
+          <a href="api-security.html"            class="footer-link foot-apps-only">API Security Testing</a>
+          <a href="cloud-pentest.html"           class="footer-link foot-apps-only">Cloud Security Review</a>
+          <a href="red-team.html"                class="footer-link foot-apps-only">Red Team Engagement</a>
+          <a href="devsecops.html"               class="footer-link foot-apps-only">DevSecOps Integration</a>
+          <a href="sast.html"                    class="footer-link foot-apps-only">Source Code Review &amp; SAST</a>
+          <a href="ai-llm-security.html"         class="footer-link foot-apps-only">AI / LLM AppSec</a>
+          <a href="compliance.html"              class="footer-link foot-apps-only">Compliance Readiness</a>
+          <!-- ✅ Shared -->
+          <a href="incident-response.html"      class="footer-link">Incident Response</a>
+          <a href="security-training.html"      class="footer-link">Security Training</a>
+          <a href="ai-security-tools.html"      class="footer-link">AI Security Tools</a>
         </div>
       </div>
 
-      <!-- Divider -->
-      <div class="footer_new_divider"></div>
-
-      <!-- Bottom Section -->
-      <div class="footer_new_bottom">
-        <div class="footer_new_address">
-          20A TANJONG PAGAR ROAD, SINGAPORE (088443)
+      <!-- Industries -->
+      <div>
+        <div class="footer-col-title">Industries</div>
+        <div class="footer-links">
+          <!-- ⛓ Chain-only -->
+          <a href="web3-protocol-security.html" class="footer-link foot-chain-only">Web3 Protocols &amp; Exchanges</a>
+          <a href="stablecoins.html"            class="footer-link foot-chain-only">Stablecoins</a>
+          <a href="realwordassets.html"          class="footer-link foot-chain-only">Real World Assets</a>
+          <a href="crosschainbridge.html"        class="footer-link foot-chain-only">Cross-Chain Bridge</a>
+          <a href="payments.html"               class="footer-link foot-chain-only">Payments &amp; DeFi</a>
+          <!-- 📱 Apps-only -->
+          <a href="fintech-security.html"       class="footer-link foot-apps-only">Finance &amp; Fintech</a>
+          <a href="saas-security.html"          class="footer-link foot-apps-only">SaaS &amp; Enterprise</a>
+          <a href="healthcare-security.html"    class="footer-link foot-apps-only">Healthcare &amp; Life Sciences</a>
+          <a href="industry-edtech.html"        class="footer-link foot-apps-only">EdTech</a>
+          <a href="industry-ecommerce.html"     class="footer-link foot-apps-only">E-commerce &amp; Retail</a>
+          <a href="industry-govtech.html"       class="footer-link foot-apps-only">Public Sector / GovTech</a>
+          <!-- ✅ Shared -->
+          <a href="gaming-security.html"        class="footer-link">Gaming &amp; Digital Assets</a>
         </div>
-        <div class="footer_new_legal">
-          <a href="./tos.html" class="footer_new_legal_link">Terms & Conditions</a>
-          <span class="footer_new_separator">•</span>
-          <a href="./privacy.html" class="footer_new_legal_link">Privacy Policy</a>
-          <span class="footer_new_separator">•</span>
-          <span class="footer_new_copyright">Copyright © 2025 CredShields. All Rights Reserved</span>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <!-- ⛓ Chain-only -->
+          <a href="recently-audited.html"       class="footer-link foot-chain-only">Recently Audited</a>
+          <a href="ecosystem.html"              class="footer-link foot-chain-only">Ecosystem</a>
+          <a href="owasp-smart-contract-top-10-2026.html" class="footer-link foot-chain-only">OWASP Top 10 (2026)</a>
+          <a href="owasp-smart-contract-top-10-2025.html" class="footer-link foot-chain-only">OWASP Top 10 (2025)</a>
+          <a href="Institutions.html"           class="footer-link foot-chain-only">Institutions Overview</a>
+          <!-- 📱 Apps-only -->
+          <a href="sample-report.html"          class="footer-link foot-apps-only">Sample Pentest Report</a>
+          <a href="appsec-maturity.html"        class="footer-link foot-apps-only">AppSec Maturity Model</a>
+          <a href="pentest-vs-scan.html"        class="footer-link foot-apps-only">Pentest vs Vuln Scan</a>
+          <!-- ✅ Shared -->
+          <a href="https://discover.credshields.com/" class="footer-link" target="_blank">Blog ↗</a>
+          <a href="brand-guidelines.html"       class="footer-link">Brand Guidelines</a>
+          <a href="careers.html"               class="footer-link">Careers</a>
+          <a href="about.html"                 class="footer-link">About CredShields</a>
         </div>
       </div>
     </div>
-  </footer>
 
-  <!-- footer section end -->
+    <div class="footer-bottom">
+      <a href="tos.html" class="footer-legal">Terms &amp; Conditions</a>
+      <a href="privacy.html" class="footer-legal">Privacy Policy</a>
+      <a href="cookie.html" class="footer-legal">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
 
-    <!-- JavaScript Libraries in the correct loading order -->
-    <!-- 1. jQuery first (from CDN with local fallback) -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      window.jQuery ||
-        document.write('<script src="js/jquery.min.js"><\/script>');
-    </script>
+<script src="js/main.v1.js"></script>
+<script src="js/audits.js"></script>
+<script>
+  function openTab(evt, tabName) {
+    document.querySelectorAll('.ra-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+    document.querySelectorAll('.ra-tab-btn').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById(tabName).classList.add('active');
+    if (evt && evt.currentTarget) {
+      evt.currentTarget.classList.add('active');
+      evt.currentTarget.setAttribute('aria-selected','true');
+    }
+  }
 
-    <!-- 2. Other core libraries -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/aos.js"></script>
+  // URL param tab switching: ?tab-name=recent|popular|kyc
+  (function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var tab = urlParams.get('tab');
+    var tabName = urlParams.get('tab-name');
 
-    <!-- 3. Initialize AOS -->
-    <script>
-      AOS.init();
-    </script>
+    if (tab === 'recent-audits' || tabName === 'recently-audited') {
+      window.location.replace('recently-audited.html?tab-name=recent');
+      return;
+    } else if (tab === 'popular-projects') {
+      window.location.replace('recently-audited.html?tab-name=popular');
+      return;
+    } else if (tab === 'kyc-reports') {
+      window.location.replace('recently-audited.html?tab-name=kyc');
+      return;
+    }
 
-    <!-- 4. Custom scripts -->
-    <script src="js/smooth-naigate.js"></script>
-    <script src="js/custom_a.js"></script>
-    <script src="js/statAnimation.js"></script>
-    <script src="js/audits.js"></script>
-    <script src="js/scrollIntraction.js"></script>
+    var tabMap = { 'recent': 'Tab1', 'popular': 'Tab2', 'kyc': 'Tab3' };
+    var targetTab = 'Tab1';
+    if (tabName && tabMap[tabName.toLowerCase()]) {
+      targetTab = tabMap[tabName.toLowerCase()];
+    }
 
-    <script>
-      // Counter Animation Function
-      function animateCounter(element, target, suffix, duration = 2000) {
-        const start = 0;
-        const increment = target / (duration / 16); // 60 FPS
-        let current = start;
+    function activateTab(tabId) {
+      document.querySelectorAll('.ra-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('.ra-tab-btn').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      var el = document.getElementById(tabId);
+      if (el) el.classList.add('active');
+      var idx = tabId === 'Tab1' ? 0 : tabId === 'Tab2' ? 1 : 2;
+      var btns = document.querySelectorAll('.ra-tab-btn');
+      if (btns[idx]) { btns[idx].classList.add('active'); btns[idx].setAttribute('aria-selected','true'); }
+    }
 
-        const timer = setInterval(() => {
-          current += increment;
-
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-
-          // Format the number
-          let displayValue = current.toFixed(1);
-
-          // Add $ for the first stat
-          const prefix =
-            element.parentElement.querySelector(".upgraded_hero_stat_label")
-              .textContent === "Protected"
-              ? "$"
-              : "";
-
-          element.textContent = prefix + displayValue + suffix;
-        }, 16);
-      }
-
-      // Initialize counters when page loads
-      window.addEventListener("load", () => {
-        const counters = document.querySelectorAll(
-          ".upgraded_hero_stat_number"
-        );
-
-        // Delay the animation slightly for better effect
-        setTimeout(() => {
-          counters.forEach((counter) => {
-            const target = parseFloat(counter.getAttribute("data-target"));
-            const suffix = counter.getAttribute("data-suffix") || "";
-            animateCounter(counter, target, suffix);
-          });
-        }, 500);
-      });
-
-      // Intersection Observer for animation on scroll (if stats are below fold)
-      const observerOptions = {
-        threshold: 0.5,
-        rootMargin: "0px",
-      };
-
-      const observer_hero = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const counters = entry.target.querySelectorAll(
-              ".upgraded_hero_stat_number"
-            );
-            counters.forEach((counter) => {
-              if (
-                counter.textContent === "0" ||
-                counter.textContent.includes("$0")
-              ) {
-                const target = parseFloat(counter.getAttribute("data-target"));
-                const suffix = counter.getAttribute("data-suffix") || "";
-                animateCounter(counter, target, suffix);
-              }
-            });
-          }
-        });
-      }, observerOptions);
-
-      const statsSection = document.querySelector(".upgraded_hero_stats");
-      if (statsSection) {
-        observer_hero.observe(statsSection);
-      }
-    </script>
-
-    <!-- Banner functionality -->
-    <script>
-      $(document).ready(function () {
-        // Close banner functionality
-        $("#closeBanner").click(function () {
-          $(".notification_banner").fadeOut(300);
-        });
-      });
-
-      document
-        .getElementById("run_free_quickscan")
-        .addEventListener("click", function () {
-          document.getElementById("quickscan_container_sec").scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-
-      document
-        .getElementById("run_free_quickscan_2")
-        .addEventListener("click", function () {
-          document.getElementById("quickscan_container_sec").scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-
-      document
-        .getElementById("run_free_quickscan_3")
-        .addEventListener("click", function () {
-          document.getElementById("quickscan_container_sec").scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-    </script>
-
-    <!-- 5. HubSpot script (async) -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="https://js-eu1.hs-scripts.com/24889894.js"
-    ></script>
-
-    <script>
-      function toggleOwaspAccordion(header) {
-        const accordion = header.closest(".owasp_freq_asked_accordion");
-        const isActive = accordion.classList.contains(
-          "owasp_freq_asked_accordion_active"
-        );
-
-        // Close all accordions
-        document
-          .querySelectorAll(".owasp_freq_asked_accordion")
-          .forEach((acc) => {
-            acc.classList.remove("owasp_freq_asked_accordion_active");
-          });
-
-        // Toggle the clicked accordion
-        if (!isActive) {
-          accordion.classList.add("owasp_freq_asked_accordion_active");
-        }
-      }
-
-      function toggleSubmenu(id) {
-        const submenu = document.getElementById(
-          "mobile-overlay-" + id + "-submenu"
-        );
-        const menuItem = submenu.previousElementSibling;
-
-        submenu.classList.toggle("mobile-overlay-open");
-        menuItem.classList.toggle("mobile-overlay-expanded");
-      }
-
-      function closeMenu() {
-        alert(
-          "Menu closed! In a real implementation, this would hide the overlay."
-        );
-      }
-    </script>
-    <script>
-      function updateCards() {
-        const cards = document.querySelectorAll(".stack_card_card");
-
-        cards.forEach((card, index) => {
-          // Skip the title card (first card)
-          if (index === 0) return;
-
-          const rect = card.getBoundingClientRect();
-          const cardTop = rect.top;
-
-          // Calculate the stacked position based on card index
-          let stackPosition;
-          if (index === 1) stackPosition = 280;
-          else if (index === 2) stackPosition = 300;
-          else if (index === 3) stackPosition = 320;
-          else if (index === 4) stackPosition = 340;
-          else if (index === 5) stackPosition = 360;
-
-          // Show card when it's about to reach its stacked position
-          const triggerPoint = stackPosition + 200;
-
-          if (cardTop <= triggerPoint) {
-            card.classList.add("stack_card_visible");
-          } else {
-            card.classList.remove("stack_card_visible");
-          }
-        });
-      }
-
-      // Update on scroll
-      window.addEventListener("scroll", updateCards);
-
-      // Update on load
-      window.addEventListener("load", updateCards);
-
-      // Initial update
-      updateCards();
-    </script>
-
-    <!-- Script to handle tab opening based on URL parameters -->
-    <script>
-      (function() {
-        // Get URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-
-        // Handle URL redirections for alternative parameter names
-        const tab = urlParams.get('tab');
-        const tabName = urlParams.get('tab-name');
-        
-        // Redirect if using alternative parameter names
-        if (tab === 'recent-audits' || tabName === 'recently-audited') {
-          // Redirect to the canonical URL for Recent Audits
-          window.location.replace('recently-audited.html?tab-name=recent');
-          return;
-        } else if (tab === 'popular-projects') {
-          // Redirect to the canonical URL for Popular Projects
-          window.location.replace('recently-audited.html?tab-name=popular');
-          return;
-        } else if (tab === 'kyc-reports') {
-          // Redirect to the canonical URL for KYC Reports
-          window.location.replace('recently-audited.html?tab-name=kyc');
-          return;
-        }
-
-        // Map tab-name values to tab IDs
-        const tabMap = {
-          'recent': 'Tab1',
-          'popular': 'Tab2',
-          'kyc': 'Tab3'
-        };
-
-        // Determine which tab to open (default to Tab1 if no param or invalid param)
-        let targetTab = 'Tab1'; // Default
-        if (tabName && tabMap[tabName.toLowerCase()]) {
-          targetTab = tabMap[tabName.toLowerCase()];
-        }
-
-        // Function to open tab programmatically
-        function openTabByTabName(tabId) {
-          // Remove active class from all tab contents
-          const tabContents = document.querySelectorAll('.tab-content');
-          tabContents.forEach((content) => {
-            content.classList.remove('active');
-          });
-
-          // Remove active class from all tab buttons
-          const tabButtons = document.querySelectorAll('.tab-button');
-          tabButtons.forEach((button) => {
-            button.classList.remove('active');
-          });
-
-          // Add active class to target tab content
-          const targetContent = document.getElementById(tabId);
-          if (targetContent) {
-            targetContent.classList.add('active');
-          }
-
-          // Add active class to corresponding button
-          // Tab1 = Recently Audited (first button)
-          // Tab2 = Popular Projects (second button)
-          // Tab3 = KYC Reports (third button)
-          const buttonIndex = tabId === 'Tab1' ? 0 : tabId === 'Tab2' ? 1 : 2;
-          if (tabButtons[buttonIndex]) {
-            tabButtons[buttonIndex].classList.add('active');
-          }
-        }
-
-        // Wait for DOM to be ready
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', function() {
-            openTabByTabName(targetTab);
-          });
-        } else {
-          // DOM is already ready
-          openTabByTabName(targetTab);
-        }
-      })();
-    </script>
-  </body>
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { activateTab(targetTab); });
+    } else {
+      activateTab(targetTab);
+    }
+  })();
+</script>
+</body>
 </html>

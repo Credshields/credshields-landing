@@ -1,0 +1,60 @@
+/* =========================================================
+   CredShields — Web App Security (page-specific overrides)
+   Shared styles live in main.v1.css / page-components.css.
+   ========================================================= */
+
+.hero-headline em,
+.section-title em,
+.case-study-title em,
+.dossier-card-title em,
+.world-card-title em,
+.pipeline-step-title em,
+.card-title em {
+  color: var(--em-color);
+  font-style: normal;
+}
+
+/* 6-up service grid for the coverage section reads as a dossier
+   table; only the corner radius is page-specific. Background and
+   border are inherited from main.v1.css (which has correct hover
+   flip to dark surface). */
+.section--plain .card-grid-3 .service-card:not(:hover) {
+  border-radius: var(--r-sm);
+}
+
+.service-card .service-stag {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+  border: 1px solid var(--border);
+}
+
+.service-card .service-stag.lime {
+  color: var(--lime);
+  border-color: var(--lime-bdr);
+  background: var(--lime-bg);
+}
+
+/* Hero ticker mono treatment, page-scoped. */
+.hero .hero-ticker {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+}
+
+/* Pipeline time strap accent for this page. */
+.pipeline-step-time strong {
+  color: var(--fg);
+  font-family: var(--font-mono);
+}
+
+/* Worlds-grid tag chip tone. */
+.worlds-grid .world-card .world-card-tag {
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+
+/* Case-study dossier outcome highlight. */
+.case-study-aside .dossier-kv-value.ok {
+  color: var(--green);
+}

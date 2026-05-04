@@ -1,0 +1,30 @@
+/* vc-crypto-funds.css — page-specific overrides */
+
+/* Pull-quote treatment for § 01 lede (JSON subheading is a quote). */
+.section--raised .section-head .lede {
+  font-style: italic;
+  color: var(--fg-2);
+  border-left: 2px solid var(--lime-bdr);
+  padding-left: 16px;
+  max-width: 780px;
+}
+
+/* Hero dossier stamp — tighten letter-spacing for short two-line label. */
+.hero-aside .dossier-stamp {
+  letter-spacing: 0.06em;
+}
+
+/* § 03 services — 4–6 cards wrap into rows; comfortable row gap. */
+.section--surface .card-grid-3 {
+  row-gap: 20px;
+}
+
+/* § 04 deliverables — KV grid breathes after section-head. */
+.section--plain .kv-grid {
+  margin-top: 8px;
+}
+
+/* Service tag — typography-only override (per Hard Rule #13, no bg/border tweaks). */
+.service-card .service-stag {
+  letter-spacing: 0.04em;
+}

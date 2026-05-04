@@ -1,0 +1,58 @@
+/* =========================================================
+   CredShields — Careers · page-specific overrides
+   Base: main.v1.css · page-components.css
+   Tokens: only var(--*) from the allowed set — no hardcoded colours
+   ========================================================= */
+
+/* ── HERO dossier-stamp colour cue ─────────────────────────
+   The stamp says NOW HIRING — give it the lime-bg treatment
+   so it reads as "live" rather than case-closed red.        */
+.hero .dossier-stamp {
+  background: var(--lime-bg);
+  border-color: var(--lime-bdr);
+  color: var(--lime);
+}
+
+/* ── § 01  Why CredShields — ai-card spacing ────────────── */
+.careers-why .card-body {
+  color: var(--fg-2);
+}
+
+/* ── § 02  Open roles — inst-grid row height normalisation ─
+   Role cards are text-only (no stats), keep them compact.   */
+.inst-grid .inst-card-body {
+  color: var(--fg-2);
+}
+
+/* ── § 03  pipeline-grid-6 — time strap emphasis ───────────
+   The pipeline-step-time lines double as benefit labels;
+   increase weight slightly so they land at a glance.        */
+.pipeline-step-time strong {
+  color: var(--lime);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── § 04  worlds-grid — world-card CTA ────────────────────
+   Standard arrow-link colour; inherits hover from main.v1.  */
+.world-card-cta {
+  color: var(--fg-3);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Hero dossier card — full width on small screens */
+  .hero-aside .dossier-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Pipeline steps stack to single column on mobile */
+  .pipeline-grid.pipeline-grid-6 {
+    grid-template-columns: 1fr;
+  }
+}

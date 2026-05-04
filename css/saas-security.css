@@ -1,0 +1,13 @@
+/* saas-security.css — page-specific overrides only */
+
+/* Why-CredShields grid: 4-up at wide widths */
+@media (min-width: 1024px) {
+  .saas-why-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tighten service-card titles in the 5-up risk grid */
+.section--raised .service-card .service-title {
+  letter-spacing: -0.01em;
+}

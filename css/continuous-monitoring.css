@@ -1,0 +1,27 @@
+/* continuous-monitoring.css — page-specific overrides only */
+/* Base patterns live in main.v1.css. Only minor tweaks here. */
+
+/* Tighten hero body lede on this page */
+.hero .hero-body {
+  max-width: 640px;
+}
+
+/* Risks-covered grid: 4 cards — let card-grid-3 wrap to a comfortable 2-col on mid widths */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Coverage scope kv-grid: emphasise the M · NN monogram label */
+.kv-grid .kv-grid-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--fg-3);
+}
+
+.kv-grid .kv-grid-value {
+  color: var(--fg-2);
+}

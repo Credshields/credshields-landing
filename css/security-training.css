@@ -1,0 +1,45 @@
+/* security-training.css — page-specific overrides only */
+/* Base recipes (.kv-grid, .pipeline-grid-*, .worlds-grid, .ai-card, etc.) live in main.v1.css */
+
+.hero .hero-headline {
+  letter-spacing: -0.5px;
+}
+
+.hero .hero-body {
+  max-width: 560px;
+}
+
+/* Slightly tighter eyebrow rhythm on this page's section heads */
+.section .section-head .lede {
+  max-width: 720px;
+}
+
+/* ai-card inner spacing tweak — safe (no background/border override) */
+.card-grid-3 .ai-card .card-title {
+  margin-top: 12px;
+}
+
+/* kv-grid label alignment for the coverage scope section */
+.section--surface .kv-grid {
+  margin-top: 8px;
+}
+
+.section--surface .kv-grid-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+  color: var(--fg-3);
+}
+
+.section--surface .kv-grid-value {
+  color: var(--fg-2);
+}
+
+/* Pipeline step body slight max-width for readability */
+.pipeline-grid-3 .pipeline-step-body {
+  max-width: 320px;
+}
+
+/* World card list spacing in the explore-related section */
+.worlds-grid .world-card-list li {
+  padding: 4px 0;
+}

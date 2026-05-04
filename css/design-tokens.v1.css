@@ -1,0 +1,120 @@
+/* =========================================================
+   CredShields Design System — Design Tokens v1
+   Source of truth. Dual-mode: [data-mode="apps"] (cream/green, default)
+   and [data-mode="chain"] (ink/lime).
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+:root {
+  /* Fonts */
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Brand accents (shared both modes) */
+  --lime:       #A8FF45;
+  --lime-hover: #90E830;
+  --green:      #2E7D0E;
+  --green-mid:  #5AAA1E;
+  --lime-bg:    rgba(168,255,69,0.18);
+  --lime-bdr:   rgba(168,255,69,0.45);
+
+  /* Status colors */
+  --red:    #C0000A;
+  --orange: #B84800;
+  --blue:   #0050AA;
+
+  /* Radii */
+  --r-sm: 3px;
+  --radius: 6px;
+  --r-lg: 10px;
+
+  /* Shadows (ink-tinted) */
+  --shadow-sm: 0 1px 4px rgba(10,26,12,0.07);
+  --shadow-md: 0 4px 16px rgba(10,26,12,0.09);
+  --shadow-lg: 0 8px 32px rgba(10,26,12,0.12);
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;   --space-2: 8px;   --space-3: 12px;
+  --space-4: 16px;  --space-5: 24px;  --space-6: 32px;
+  --space-7: 48px;  --space-8: 64px;  --space-9: 88px;
+
+  /* Transitions */
+  --t-fast: 120ms ease;
+  --t-med:  200ms ease;
+  --t-slow: 280ms ease;
+}
+
+/* ── APPS MODE (default, cream/green) ─────────────────────── */
+html[data-mode="apps"], :root {
+  --bg:         #F4F8F4;
+  --bg-surface: #FFFFFF;
+  --bg-raised:  #EBF3EB;
+  --bg-dark:    #0A1A0C;
+  --fg:         #0A1A0C;
+  --fg-2:       #1E3A24;
+  --fg-3:       #4A6650;
+  --fg-4:       #7A9A80;
+  --fg-5:       #A8BEA8;
+  --border:     #C8DEC8;
+  --border-lt:  #E0EDE0;
+  --border-dk:  #A8C8A8;
+  --nav-bg:     rgba(244,248,244,0.97);
+  --grid-ln:    rgba(168,200,168,0.30);
+  --logo-check: #0A1A0C;
+  --em-color:   var(--green);
+}
+
+/* ── CHAIN MODE (ink/lime) ────────────────────────────────── */
+html[data-mode="chain"] {
+  --bg:         #0A1A0C;
+  --bg-surface: #0E2412;
+  --bg-raised:  #0C1F10;
+  --bg-dark:    #040C06;
+  --fg:         #F4F8F4;
+  --fg-2:       #DCE8DC;
+  --fg-3:       #A8BEA8;
+  --fg-4:       #7A9A80;
+  --fg-5:       #4A6650;
+  --border:     #1E3A24;
+  --border-lt:  #152A1B;
+  --border-dk:  #2E5234;
+  --nav-bg:     rgba(10,26,12,0.92);
+  --grid-ln:    rgba(46,82,52,0.45);
+  --logo-check: #0A1A0C;
+  --em-color:   var(--lime);
+
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.35);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.45);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.55);
+}
+
+/* ── SEMANTIC TYPE ────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color var(--t-slow), color var(--t-slow);
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul { list-style: none; }
+img { max-width: 100%; }
+
+/* Selection */
+::selection { background: var(--lime); color: #0A1A0C; }
+
+/* ── ANIMATIONS ──────────────────────────────────────────── */
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.45} }
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

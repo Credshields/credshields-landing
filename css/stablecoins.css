@@ -1,0 +1,30 @@
+/* ==========================================================================
+   stablecoins.css — page-specific overrides only
+   Base classes (.section, .ai-card, .service-card, .card-grid-3, hero,
+   dossier-card, kv-grid, etc.) live in main.v1.css. Do NOT redefine.
+   ========================================================================== */
+
+/* Tighten hero ticker monogram on this page */
+.hero .hero-ticker {
+  letter-spacing: 0.08em;
+}
+
+/* Lede sits below the section title with extra breathing room */
+.section-head .lede {
+  max-width: 720px;
+  margin-top: 12px;
+  color: var(--fg-2);
+}
+
+/* Section 1 stakes: 4 ai-cards — let the grid wrap to two rows on tablet/mobile.
+   Do NOT touch .ai-card background or border (see hard rule #13). */
+.card-grid-3 {
+  /* page-local nudge: keep 4-card layout breathable at md breakpoint */
+  row-gap: 18px;
+}
+
+/* Service-card body copy: slightly tighter line-height on this dense page.
+   Scoped to inner desc only — base card chrome unchanged. */
+.service-card .service-desc {
+  line-height: 1.55;
+}

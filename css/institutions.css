@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Institutions.html — page-specific overrides
+   Base classes (.hero, .section, .inst-grid, .inst-card, .stats-strip,
+   .card-grid-3, .ai-card, .dossier-card, etc.) live in main.v1.css.
+   This file only adds page-scoped tweaks that do NOT touch card backgrounds
+   or borders (per Hard rule #13).
+   ========================================================================== */
+
+/* Hero — reinforce the institutional dossier framing */
+.hero .hero-headline {
+  letter-spacing: -0.01em;
+}
+
+.hero .hero-body {
+  max-width: 56ch;
+}
+
+/* Slightly tighter inst-card title rhythm on this page (typography-only,
+   inner-span scoped — base background/border untouched). */
+.inst-card .inst-card-title {
+  letter-spacing: -0.005em;
+}
+
+/* Stats-strip lives inside a section on this page; loosen the top spacing
+   so the section-head breathes above the KPI band. */
+.section--plain .stats-strip {
+  margin-top: 28px;
+}
+
+/* AI-card icon tone on the section--surface compounding-standard block —
+   only restyling the inner .ai-icon stroke wash, never the card chrome. */
+.section--surface .ai-card .ai-icon {
+  color: var(--em-color);
+}
+
+/* Dossier KV grid — give the institutional badge labels a touch more
+   monospace gravity. Inner-span scoped. */
+.hero-aside .dossier-kv-label {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+}
+
+.hero-aside .dossier-kv-value {
+  color: var(--fg-2);
+}
+
+.hero-aside .dossier-kv-value.ok {
+  color: var(--lime);
+}
+
+/* Section-head lede max-width — keep the institutional copy from running
+   wide on ultrawide screens. */
+.section .section-head .lede {
+  max-width: 64ch;
+}
+
+/* Mobile polish — tighten inst-grid spacing on small screens
+   (layout-only override, base classes flip cleanly). */
+@media (max-width: 720px) {
+  .inst-card .inst-card-num {
+    font-family: var(--font-mono);
+    color: var(--fg-3);
+  }
+  .stats-strip-grid {
+    gap: 12px;
+  }
+}

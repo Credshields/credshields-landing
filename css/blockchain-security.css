@@ -1,0 +1,37 @@
+/* blockchain-security.html — page-specific overrides only */
+/* Base layout, card backgrounds, hover states all live in main.v1.css */
+
+/* Slightly tighter lede on this page */
+.section-head .lede {
+  max-width: 720px;
+}
+
+/* Hero copy width tweak so the long subheading reads well */
+.hero-content .hero-body {
+  max-width: 640px;
+}
+
+/* Pipeline body lines are dense on this page — give them a little air */
+.pipeline-step .pipeline-step-body {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Inst-card body copy for the audit checklist runs longer than usual */
+.inst-card .inst-card-body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--fg-2);
+}
+
+/* Eyebrow + monogram typography is monospace across the page */
+.case-study-eyebrow,
+.inst-card-num,
+.pipeline-step-num {
+  font-family: var(--font-mono);
+}
+
+/* Dossier KV ok value picks up green accent (token-driven) */
+.dossier-kv-value.ok {
+  color: var(--green);
+}

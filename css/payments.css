@@ -1,0 +1,56 @@
+/* payments.html — page-specific overrides only */
+
+/* Tighten hero ticker for the long framework string */
+.hero .hero-ticker {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Promote the dossier card head with payments-specific spacing */
+.hero-aside .dossier-card-head strong {
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+}
+
+/* Inst-grid layer monogram — payments uses L · NN instead of I · NN */
+.inst-card .inst-card-num {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+}
+
+/* Service-card vertical rhythm for the long attack-surface descriptions */
+.section--surface .service-card .service-desc {
+  color: var(--fg-2);
+}
+
+/* Ensure tools-grid card titles stay tight on payments stack copy */
+.tools-grid .tool-names {
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.tools-grid .tool-category {
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 11px;
+}
+
+/* Compliance grid — promote signature tag per column */
+.comp-tag-grid .comp-tag.lime {
+  border-color: var(--lime-bdr);
+  background: var(--lime-bg);
+}
+
+/* World-card tag chrome for the related-practices row */
+.worlds-grid-3 .world-card-tag {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+}
+
+/* Anchor offset for in-page jump from hero ↗ "View Attack Surface" */
+#critical-risk-vectors {
+  scroll-margin-top: 80px;
+}

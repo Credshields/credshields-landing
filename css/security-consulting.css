@@ -1,0 +1,63 @@
+/* ==========================================================================
+   security-consulting.css
+   Page-specific overrides for /security-consulting.html
+   Base patterns live in main.v1.css. This file only fine-tunes spacing and
+   tightens a few inner-typography rules. Cards (.ai-card, .world-card) are
+   left untouched per Hard Rule #13.
+   ========================================================================== */
+
+/* Hero — slightly tighten body width on the consulting page */
+.hero .hero-body {
+  max-width: 640px;
+}
+
+/* Section 01 — challenges grid spacing */
+.section .card-grid-3 {
+  gap: 24px;
+}
+
+/* Tighten ai-card body line-height inside the challenges section so the
+   four cards sit visually flush. Inner typography only — no background or
+   border overrides. */
+.ai-card .card-body {
+  line-height: 1.55;
+}
+
+/* Pipeline 4-up tweak: align the time strap bottom for visual rhythm */
+.pipeline-grid-4 .pipeline-step {
+  display: flex;
+  flex-direction: column;
+}
+
+.pipeline-grid-4 .pipeline-step-time {
+  margin-top: auto;
+}
+
+/* Coverage kv-grid — tighten label typography on this page */
+.kv-grid .kv-grid-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+  color: var(--fg-3);
+}
+
+.kv-grid .kv-grid-value {
+  color: var(--fg-2);
+}
+
+/* Worlds-grid 2-up — keep the bullet list tight on consulting page */
+.worlds-grid .world-card-list {
+  line-height: 1.6;
+}
+
+/* Responsive tightening at small widths */
+@media (max-width: 768px) {
+  .hero .hero-headline {
+    font-size: 40px;
+  }
+  .pipeline-grid-4 {
+    gap: 16px;
+  }
+  .kv-grid {
+    gap: 12px;
+  }
+}

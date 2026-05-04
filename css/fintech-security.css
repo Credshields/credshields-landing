@@ -1,0 +1,54 @@
+/* fintech-security.css — page-specific overrides */
+
+.hero .hero-badge-text {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.hero .hero-ticker {
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+}
+
+.case-study-split .case-study-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-study-split .case-study-stat-val {
+  color: var(--em-color);
+}
+
+/* Tighten 6-up ai-card grid on this page so cards sit in a clean 3x2 */
+.section--raised .card-grid-3 {
+  gap: 16px;
+}
+
+.ai-card .card-title em {
+  color: var(--em-color);
+}
+
+.service-card .service-stag.lime {
+  background: var(--lime-bg);
+  border-color: var(--lime-bdr);
+  color: var(--lime);
+}
+
+/* Pipeline cell timestamp uses mono on this page */
+.pipeline-step-time {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+}
+
+.pipeline-step-time strong {
+  color: var(--fg-2);
+}
+
+/* Dossier kv "ok" emphasis tuned for fintech green */
+.dossier-kv-value.ok {
+  color: var(--green);
+}

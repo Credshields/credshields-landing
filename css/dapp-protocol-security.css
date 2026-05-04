@@ -1,0 +1,61 @@
+/* dApp & Protocol Security — page-specific overrides */
+
+.kv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 960px) {
+  .kv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .kv-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kv-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.kv-card:hover {
+  border-color: var(--lime);
+  transform: translateY(-2px);
+}
+
+.kv-card-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+  text-transform: uppercase;
+}
+
+.kv-card-title {
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.kv-card-title em {
+  color: var(--em-color);
+  font-style: normal;
+}
+
+.kv-card-body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--fg-2);
+}

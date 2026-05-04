@@ -1,0 +1,37 @@
+/* Cross-chain bridge page — page-specific overrides only.
+   Base classes (.section, .ai-card, .service-card, .dossier-card,
+   .pipeline-grid, .worlds-grid, .case-study-*) live in main.v1.css.
+   Hard rule #13: never override background/border on .ai-card or
+   .service-card — they flip to a dark hover surface and rely on
+   their own text-color hover rules being readable on that surface. */
+
+/* Tighten the 4-up service-card row when bridge-services is set to
+   card-grid-3 — let the cards wrap to 2 columns on tablet, 4 on
+   desktop, without redefining card chrome. */
+.bridge-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1100px) {
+  .bridge-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bridge-services {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Lede paragraph on this page is a quote in §01 — italic + lime
+   accent border on the section-head lede only. Scoped tightly so it
+   does not bleed into other section-heads. */
+#attack_surface .section-head .lede {
+  font-style: italic;
+  border-left: 2px solid var(--lime);
+  padding-left: 16px;
+  color: var(--fg-2);
+}

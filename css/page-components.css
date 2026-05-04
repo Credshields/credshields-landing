@@ -1,0 +1,658 @@
+/* =========================================================
+   CredShields — Shared Service Page Components
+   Used by all service/solution pages (penetration-testing,
+   web-app-security, and any future pages).
+   Depends on design-tokens.v1.css and main.v1.css.
+   ========================================================= */
+
+/* ── LAYOUT UTILITIES ────────────────────────────────────── */
+
+.section_alignment_website {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section_padding_define {
+  padding: 80px 0;
+}
+
+/* ── HERO ────────────────────────────────────────────────── */
+
+.eco_system_new_container {
+  background: var(--bg);
+  padding: 140px 24px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.eco_system_new_container_owasp {
+  padding-bottom: 60px;
+}
+
+.owasp_main_icon_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.solution_badge_container {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  border-radius: 99px;
+  padding: 6px 16px;
+  margin-bottom: 28px;
+}
+
+.solution_badge_text {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  color: var(--em-color);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.eco_system_new_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.eco_system_new_header_owasp {
+  gap: 28px;
+}
+
+.eco_system_new_title {
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+}
+
+.eco_system_new_subtitle {
+  font-size: 18px;
+  color: var(--fg-3);
+  max-width: 640px;
+  line-height: 1.65;
+}
+
+.eco_system_new_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.eco_system_new_btn {
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--t-fast), box-shadow var(--t-fast);
+  border: none;
+}
+
+.eco_system_new_btn_primary {
+  background: var(--lime);
+  color: var(--bg-dark);
+}
+
+.eco_system_new_btn_primary:hover {
+  opacity: 0.88;
+  box-shadow: var(--shadow-md);
+}
+
+/* ── SECTION HEADERS ─────────────────────────────────────── */
+
+.fintech_risk_container {
+  background: var(--bg);
+}
+
+.fintech_risk_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.fintech_risk_header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.fintech_risk_title {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.fintech_risk_subtitle {
+  font-size: 16px;
+  color: var(--fg-3);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+/* ── CARDS GRID ──────────────────────────────────────────── */
+
+.fintech_risk_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.fintech_risk_card {
+  background: var(--bg-surface);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: box-shadow var(--t-med), border-color var(--t-med);
+}
+
+.fintech_risk_card:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-dk);
+}
+
+.fintech_risk_card_tall {
+  grid-row: span 2;
+}
+
+.fintech_risk_card_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+  border: 1px solid var(--border-dk);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.fintech_risk_card_icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.fintech_security_process_step_number_text {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--em-color);
+}
+
+.fintech_risk_card_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fintech_risk_card_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.fintech_risk_card_description {
+  font-size: 14px;
+  color: var(--fg-3);
+  line-height: 1.65;
+}
+
+/* ── AUDIT CHECKLIST TABLE ───────────────────────────────── */
+
+.smart_contracts_audit_checklist_section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.smart_contracts_audit_checklist_section .fintech_risk_header {
+  margin-bottom: 40px;
+}
+
+.audit_checklist_container {
+  overflow-x: auto;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+}
+
+.audit_checklist_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.audit_checklist_table thead tr {
+  background: var(--bg-raised);
+  border-bottom: 2px solid var(--border-dk);
+}
+
+.audit_checklist_table thead th {
+  padding: 14px 20px;
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--em-color);
+  white-space: nowrap;
+}
+
+.audit_checklist_table tbody tr {
+  border-bottom: 1px solid var(--border-lt);
+  transition: background var(--t-fast);
+}
+
+.audit_checklist_table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.audit_checklist_table tbody tr:hover {
+  background: var(--bg-raised);
+}
+
+.audit_checklist_table td {
+  padding: 16px 20px;
+  color: var(--fg);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.audit_checklist_table td:first-child {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--em-color);
+  font-size: 13px;
+  width: 60px;
+}
+
+.audit_checklist_table td:nth-child(2) {
+  font-weight: 600;
+  color: var(--fg);
+  white-space: nowrap;
+  width: 180px;
+}
+
+.audit_checklist_table td:nth-child(3) {
+  color: var(--fg-3);
+}
+
+/* ── CASE STUDY ──────────────────────────────────────────── */
+
+.owasp_about_the_initiative_section,
+.smart_contracts_audit_why_it_matter_section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.owasp_about_the_initiative_container {
+  width: 100%;
+}
+
+.owasp_about_the_initiative_content {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: center;
+}
+
+.owasp_about_the_initiative_right {
+  flex: 1;
+  min-width: 0;
+}
+
+.owasp_about_the_initiative_right img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--r-lg);
+  display: block;
+}
+
+.owasp_about_the_initiative_sources_box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+.owasp_about_the_initiative_sources_title {
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+}
+
+.smart_contracts_audit_success_story_content {
+  background: var(--bg-surface);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+.success_story_header {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.success_story_icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.success_story_icon img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.success_story_header_text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.success_story_header_title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.success_story_header_subtitle {
+  font-size: 13px;
+  color: var(--fg-3);
+  font-family: var(--font-mono);
+}
+
+.success_story_title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1.25;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.success_story_description {
+  font-size: 14px;
+  color: var(--fg-3);
+  line-height: 1.75;
+}
+
+.success_story_stats {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.success_story_stat_card {
+  flex: 1;
+  padding: 20px;
+  background: var(--bg-raised);
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--border-lt);
+}
+
+.success_story_stat_card_red {
+  border-color: rgba(192, 0, 10, 0.2);
+  background: rgba(192, 0, 10, 0.04);
+}
+
+.success_story_stat_card_green {
+  border-color: rgba(46, 125, 14, 0.2);
+  background: rgba(46, 125, 14, 0.04);
+}
+
+html[data-mode="chain"] .success_story_stat_card_red {
+  background: rgba(192, 0, 10, 0.08);
+}
+
+html[data-mode="chain"] .success_story_stat_card_green {
+  background: rgba(168, 255, 69, 0.06);
+}
+
+.success_story_stat_value {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  line-height: 1;
+}
+
+.success_story_stat_label {
+  font-size: 12px;
+  color: var(--fg-3);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ── RELATED SOLUTIONS ───────────────────────────────────── */
+
+.explore_related_solution_container {
+  background: var(--bg);
+}
+
+.explore_related_solution_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.explore_related_solution_title {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.explore_related_solution_subtitle {
+  font-size: 16px;
+  color: var(--fg-3);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+
+.security_coverage_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.security_coverage_card {
+  background: var(--bg-surface);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--t-med), border-color var(--t-med);
+}
+
+.security_coverage_card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-dk);
+}
+
+.security_coverage_title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.security_coverage_description {
+  font-size: 14px;
+  color: var(--fg-3);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.security_coverage_features {
+  list-style: none;
+  margin-bottom: 28px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.security_coverage_feature_item {
+  font-size: 14px;
+  color: var(--fg-2);
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border-lt);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.security_coverage_feature_item:last-child {
+  border-bottom: none;
+}
+
+.security_coverage_feature_item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--em-color);
+  flex-shrink: 0;
+}
+
+.security_coverage_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid var(--border-dk);
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+  cursor: pointer;
+  background: transparent;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+  align-self: flex-start;
+}
+
+.security_coverage_button:hover {
+  background: var(--bg-raised);
+  border-color: var(--em-color);
+  color: var(--em-color);
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .fintech_risk_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fintech_risk_card_tall {
+    grid-row: span 1;
+  }
+
+  .owasp_about_the_initiative_content {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .eco_system_new_container {
+    padding: 120px 20px 60px;
+  }
+
+  .fintech_risk_cards {
+    grid-template-columns: 1fr;
+  }
+
+  .fintech_risk_card_tall {
+    grid-row: span 1;
+  }
+
+  .security_coverage_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success_story_stats {
+    flex-direction: column;
+  }
+
+  .owasp_about_the_initiative_section,
+  .smart_contracts_audit_why_it_matter_section {
+    padding: 60px 20px;
+  }
+
+  .section_padding_define {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .eco_system_new_title {
+    font-size: 30px;
+  }
+
+  .eco_system_new_subtitle {
+    font-size: 16px;
+  }
+
+  .fintech_risk_title {
+    font-size: 24px;
+  }
+
+  .audit_checklist_table thead th,
+  .audit_checklist_table td {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .smart_contracts_audit_checklist_section {
+    padding: 60px 16px;
+  }
+}

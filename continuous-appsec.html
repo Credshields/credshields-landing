@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" data-mode="apps">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Continuous AppSec — CredShields</title>
+  <meta name="description" content="Continuous pentesting integrated into your CI, Jira, and Slack. Findings tied to commits. Always-current audit evidence." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Continuous AppSec — CredShields" />
+  <meta property="og:description" content="Continuous pentesting integrated into your CI, Jira, and Slack. Findings tied to commits. Always-current audit evidence." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Fonts preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="css/design-tokens.v1.css" />
+  <link rel="stylesheet" href="css/main.v1.css" />
+  <link rel="stylesheet" href="css/continuous-appsec.css" />
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ALERT BAR
+════════════════════════════════════════════════════════════ -->
+<div class="alert-bar" id="alert-banner" role="banner">
+  <div class="alert-dot"></div>
+  <span class="alert-text">
+    <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE — ALERT BAR TEXT ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+    <span class="alert-chain">OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart Contract Security.</span>
+    <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+    <!-- ░░░░░░░░░░░░░ 📱 APPS MODE — ALERT BAR TEXT ░░░░░░░░░░░░░ -->
+    <span class="alert-apps">Industry Security Report 2026 Now Live. AI-led Pentesting Benchmark.</span>
+    <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
+  </span>
+  <span class="alert-sub">Learn more about our findings.</span>
+  <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE — ALERT BAR LINK ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <a href="owasp-smart-contract-top-10-2026.html" class="alert-link alert-chain">Explore →</a>
+  <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+  <!-- ░░░░░░░░░░░░░ 📱 APPS MODE — ALERT BAR LINK ░░░░░░░░░░░░░ -->
+  <a href="sample-report.html" class="alert-link alert-apps">Read Report →</a>
+  <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
+  <button id="close-banner" style="margin-left:16px;background:none;border:none;color:rgba(255,255,255,0.4);font-size:16px;cursor:pointer;line-height:1;" aria-label="Close banner">✕</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+<div class="nav-wrap">
+  <div class="nav">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="CredShields home">
+      <!-- ▓▓▓▓▓ ⛓ CHAIN MODE — white logo (dark bg) ▓▓▓▓▓ -->
+      <img src="images/credshields_white_logo.svg" alt="CredShields" width="110" height="110" class="show-chain" />
+      <!-- ░░░░░ 📱 APPS MODE — black logo (light bg) ░░░░░ -->
+      <img src="images/credshields_black_logo.svg" alt="CredShields" width="110" height="110" class="show-apps" />
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="about.html" class="nav-link">About</a>
+
+      <!-- Solutions dropdown — items tagged by mode -->
+      <div class="nav-link nav-dropdown">
+        <span>Solutions</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu nav-dropdown-wide">
+          <!-- ⛓ Chain-only solutions -->
+          <a href="smart-contract-audits.html" class="nav-dropdown-item nav-chain-only">Smart Contract Audits</a>
+          <a href="dapp-protocol-security.html" class="nav-dropdown-item nav-chain-only">DApp &amp; Protocol Security</a>
+          <a href="enterprise-security.html"   class="nav-dropdown-item nav-chain-only">Enterprise Web &amp; Mobile Security</a>
+          <a href="penetration-testing.html"   class="nav-dropdown-item nav-chain-only">Penetration Testing</a>
+          <a href="blockchain-security.html"    class="nav-dropdown-item nav-chain-only">Blockchain Security</a>
+          <a href="cloud-security.html"         class="nav-dropdown-item nav-chain-only">Cloud Infrastructure</a>
+          <a href="wallet-security.html"        class="nav-dropdown-item nav-chain-only">Wallet Security</a>
+          <a href="continuous-monitoring.html"  class="nav-dropdown-item nav-chain-only">Continuous Monitoring</a>
+          <a href="incident-response.html"      class="nav-dropdown-item nav-chain-only">Incident Response</a>
+          <a href="security-training.html"      class="nav-dropdown-item nav-chain-only">Security Training</a>
+          <a href="ai-security-tools.html"      class="nav-dropdown-item nav-chain-only">AI Security Tools</a>
+          <div class="nav-dropdown-divider nav-chain-only"></div>
+          <a href="https://solidityscan.com/"   class="nav-dropdown-item nav-chain-only" target="_blank">SolidityScan ↗</a>
+          <a href="https://rustscan.com/"       class="nav-dropdown-item nav-chain-only" target="_blank">RustScan ↗</a>
+
+          <!-- 📱 Apps-only solutions (from apps_site, grouped) -->
+          <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
+          <a href="continuous-appsec.html"      class="nav-dropdown-flagship-row nav-apps-only">
+            <span class="nav-flagship-badge">FLAGSHIP</span>
+            <span>Continuous AppSec</span>
+          </a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Manual Pentesting</div>
+          <a href="web-pentest.html"            class="nav-dropdown-item nav-apps-only">Web App Pentesting</a>
+          <a href="mobile-pentest.html"         class="nav-dropdown-item nav-apps-only">Mobile App Pentesting</a>
+          <a href="api-security.html"           class="nav-dropdown-item nav-apps-only">API Security Testing</a>
+          <a href="cloud-pentest.html"          class="nav-dropdown-item nav-apps-only">Cloud Security Review</a>
+          <a href="red-team.html"               class="nav-dropdown-item nav-apps-only">Red Team Engagement</a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Continuous &amp; Tooling</div>
+          <a href="devsecops.html"              class="nav-dropdown-item nav-apps-only">DevSecOps Integration</a>
+          <a href="sast.html"                   class="nav-dropdown-item nav-apps-only">Source Code Review &amp; SAST</a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Specialized</div>
+          <a href="ai-llm-security.html"        class="nav-dropdown-item nav-apps-only">AI / LLM AppSec</a>
+          <a href="compliance.html"             class="nav-dropdown-item nav-apps-only">Compliance Readiness</a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
+          <a href="sample-report.html"          class="nav-dropdown-item nav-apps-only">Sample Pentest Report</a>
+          <a href="appsec-maturity.html"        class="nav-dropdown-item nav-apps-only">AppSec Maturity Model</a>
+          <a href="pentest-vs-scan.html"        class="nav-dropdown-item nav-apps-only">Pentest vs Vuln Scan</a>
+        </div>
+      </div>
+
+      <!-- Industries dropdown -->
+      <div class="nav-link nav-dropdown">
+        <span>Industries</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <!-- ⛓ Chain-only industries -->
+          <a href="web3-protocol-security.html" class="nav-dropdown-item nav-chain-only">Web3 Protocols &amp; Exchanges</a>
+          <a href="stablecoins.html"            class="nav-dropdown-item nav-chain-only">Stablecoins</a>
+          <a href="realwordassets.html"          class="nav-dropdown-item nav-chain-only">Real World Assets</a>
+          <a href="crosschainbridge.html"        class="nav-dropdown-item nav-chain-only">Cross-Chain Bridge</a>
+          <a href="payments.html"               class="nav-dropdown-item nav-chain-only">Payments &amp; DeFi</a>
+          <!-- 📱 Apps-only industries (from apps_site) -->
+          <a href="fintech-security.html"       class="nav-dropdown-item nav-apps-only">Finance &amp; Fintech</a>
+          <a href="saas-security.html"          class="nav-dropdown-item nav-apps-only">SaaS &amp; Enterprise</a>
+          <a href="healthcare-security.html"    class="nav-dropdown-item nav-apps-only">Healthcare &amp; Life Sciences</a>
+          <a href="industry-edtech.html"        class="nav-dropdown-item nav-apps-only"><span class="nav-flagship-badge nav-flag-new">NEW</span> EdTech</a>
+          <a href="industry-ecommerce.html"     class="nav-dropdown-item nav-apps-only">E-commerce &amp; Retail</a>
+          <a href="industry-govtech.html"       class="nav-dropdown-item nav-apps-only">Public Sector / GovTech</a>
+          <!-- ✅ Shared -->
+          <a href="gaming-security.html"        class="nav-dropdown-item">Gaming &amp; Digital Assets</a>
+        </div>
+      </div>
+
+      <!-- Resources dropdown -->
+      <div class="nav-link nav-dropdown">
+        <span>Resources</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <!-- ⛓ Chain-only resources -->
+          <a href="recently-audited.html"       class="nav-dropdown-item nav-chain-only">Recently Audited</a>
+          <a href="ecosystem.html"              class="nav-dropdown-item nav-chain-only">Ecosystem</a>
+          <!-- 📱 Apps-only resources (from apps_site) -->
+          <a href="sample-report.html"          class="nav-dropdown-item nav-apps-only">Sample Pentest Report</a>
+          <a href="appsec-maturity.html"        class="nav-dropdown-item nav-apps-only">AppSec Maturity Model</a>
+          <a href="#"                           class="nav-dropdown-item nav-apps-only">Compliance Checklist Library</a>
+          <!-- ✅ Shared -->
+          <a href="https://discover.credshields.com/" class="nav-dropdown-item" target="_blank">Blog ↗</a>
+          <a href="brand-guidelines.html"       class="nav-dropdown-item">Brand Guidelines</a>
+          <a href="careers.html"                class="nav-dropdown-item">Careers</a>
+        </div>
+      </div>
+
+      <!-- Institutions — Chain only -->
+      <div class="nav-link nav-dropdown nav-chain-only">
+        <span>Institutions</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <a href="Institutions.html"           class="nav-dropdown-item">Overview</a>
+          <a href="vc-crypto-funds.html"         class="nav-dropdown-item">VCs &amp; Crypto Funds</a>
+          <a href="stablecoins.html"             class="nav-dropdown-item">Stablecoins</a>
+          <a href="crosschainbridge.html"        class="nav-dropdown-item">Cross-Chain Bridge</a>
+          <a href="realwordassets.html"          class="nav-dropdown-item">Real World Assets</a>
+          <a href="payments.html"               class="nav-dropdown-item">Payments</a>
+        </div>
+      </div>
+
+      <!-- OWASP Top 10 — Chain only -->
+      <div class="nav-link nav-dropdown nav-chain-only">
+        <span>OWASP Top 10</span>
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+        <div class="nav-dropdown-menu">
+          <a href="owasp-smart-contract-top-10-2025.html" class="nav-dropdown-item">2025</a>
+          <a href="owasp-smart-contract-top-10-2026.html" class="nav-dropdown-item">2026</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Nav Actions -->
+    <div class="nav-actions">
+      <!-- Mode Toggle -->
+      <div class="mode-toggle" role="tablist" aria-label="Security surface">
+        <div class="mode-toggle-slider" aria-hidden="true"></div>
+        <button class="mode-toggle-btn" data-mode="apps" role="tab" aria-pressed="true">Apps</button>
+        <button class="mode-toggle-btn" data-mode="chain" role="tab" aria-pressed="false">Chain</button>
+      </div>
+      <button class="btn-primary" data-book-security>Book Security Audit</button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     MOBILE OVERLAY
+════════════════════════════════════════════════════════════ -->
+<div class="mobile-overlay" id="mobile-overlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="mobile-overlay-head">
+    <a href="index.html" class="nav-logo">
+      <!-- ▓▓▓▓▓ ⛓ CHAIN MODE — white logo (dark bg) ▓▓▓▓▓ -->
+      <img src="images/credshields_white_logo.svg" alt="CredShields" width="110" height="30" class="show-chain" />
+      <!-- ░░░░░ 📱 APPS MODE — black logo (light bg) ░░░░░ -->
+      <img src="images/credshields_black_logo.svg" alt="CredShields" width="110" height="30" class="show-apps" />
+    </a>
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  </div>
+
+  <div class="mobile-nav-item">
+    <a href="about.html" class="mobile-nav-link" style="display:block;padding:16px 0;">About</a>
+  </div>
+
+  <!-- Solutions -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-solutions">
+      <span>Solutions</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-solutions">
+      <!-- ⛓ Chain-only -->
+      <a href="smart-contract-audits.html"  class="mobile-sub-link nav-chain-only">Smart Contract Audits</a>
+      <a href="dapp-protocol-security.html" class="mobile-sub-link nav-chain-only">DApp &amp; Protocol Security</a>
+      <a href="enterprise-security.html"    class="mobile-sub-link nav-chain-only">Enterprise Web &amp; Mobile Security</a>
+      <a href="penetration-testing.html"    class="mobile-sub-link nav-chain-only">Penetration Testing</a>
+      <a href="blockchain-security.html"    class="mobile-sub-link nav-chain-only">Blockchain Security</a>
+      <a href="cloud-security.html"         class="mobile-sub-link nav-chain-only">Cloud Infrastructure</a>
+      <a href="wallet-security.html"        class="mobile-sub-link nav-chain-only">Wallet Security</a>
+      <a href="continuous-monitoring.html"  class="mobile-sub-link nav-chain-only">Continuous Monitoring</a>
+      <a href="incident-response.html"      class="mobile-sub-link nav-chain-only">Incident Response</a>
+      <a href="security-training.html"      class="mobile-sub-link nav-chain-only">Security Training</a>
+      <a href="ai-security-tools.html"      class="mobile-sub-link nav-chain-only">AI Security Tools</a>
+      <a href="https://solidityscan.com/"   class="mobile-sub-link nav-chain-only" target="_blank">SolidityScan ↗</a>
+      <a href="https://rustscan.com/"       class="mobile-sub-link nav-chain-only" target="_blank">RustScan ↗</a>
+
+      <!-- 📱 Apps-only (from apps_site, grouped) -->
+      <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
+      <a href="continuous-appsec.html"      class="mobile-sub-link nav-apps-only">
+        <span class="nav-flagship-badge">FLAGSHIP</span>
+        Continuous AppSec
+      </a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Manual Pentesting</div>
+      <a href="web-pentest.html"            class="mobile-sub-link nav-apps-only">Web App Pentesting</a>
+      <a href="mobile-pentest.html"         class="mobile-sub-link nav-apps-only">Mobile App Pentesting</a>
+      <a href="api-security.html"           class="mobile-sub-link nav-apps-only">API Security Testing</a>
+      <a href="cloud-pentest.html"          class="mobile-sub-link nav-apps-only">Cloud Security Review</a>
+      <a href="red-team.html"               class="mobile-sub-link nav-apps-only">Red Team Engagement</a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Continuous &amp; Tooling</div>
+      <a href="devsecops.html"              class="mobile-sub-link nav-apps-only">DevSecOps Integration</a>
+      <a href="sast.html"                   class="mobile-sub-link nav-apps-only">Source Code Review &amp; SAST</a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Specialized</div>
+      <a href="ai-llm-security.html"        class="mobile-sub-link nav-apps-only">AI / LLM AppSec</a>
+      <a href="compliance.html"             class="mobile-sub-link nav-apps-only">Compliance Readiness</a>
+
+      <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
+      <a href="sample-report.html"          class="mobile-sub-link nav-apps-only">Sample Pentest Report</a>
+      <a href="appsec-maturity.html"        class="mobile-sub-link nav-apps-only">AppSec Maturity Model</a>
+      <a href="pentest-vs-scan.html"        class="mobile-sub-link nav-apps-only">Pentest vs Vuln Scan</a>
+    </div>
+  </div>
+
+  <!-- Industries -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-industries">
+      <span>Industries</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-industries">
+      <!-- ⛓ Chain-only -->
+      <a href="web3-protocol-security.html" class="mobile-sub-link nav-chain-only">Web3 Protocols &amp; Exchanges</a>
+      <a href="stablecoins.html"            class="mobile-sub-link nav-chain-only">Stablecoins</a>
+      <a href="realwordassets.html"          class="mobile-sub-link nav-chain-only">Real World Assets</a>
+      <a href="crosschainbridge.html"        class="mobile-sub-link nav-chain-only">Cross-Chain Bridge</a>
+      <a href="payments.html"               class="mobile-sub-link nav-chain-only">Payments &amp; DeFi</a>
+      <!-- 📱 Apps-only (from apps_site) -->
+      <a href="fintech-security.html"       class="mobile-sub-link nav-apps-only">Finance &amp; Fintech</a>
+      <a href="saas-security.html"          class="mobile-sub-link nav-apps-only">SaaS &amp; Enterprise</a>
+      <a href="healthcare-security.html"    class="mobile-sub-link nav-apps-only">Healthcare &amp; Life Sciences</a>
+      <a href="industry-edtech.html"        class="mobile-sub-link nav-apps-only"><span class="nav-flagship-badge nav-flag-new">NEW</span> EdTech</a>
+      <a href="industry-ecommerce.html"     class="mobile-sub-link nav-apps-only">E-commerce &amp; Retail</a>
+      <a href="industry-govtech.html"       class="mobile-sub-link nav-apps-only">Public Sector / GovTech</a>
+      <!-- ✅ Shared -->
+      <a href="gaming-security.html"        class="mobile-sub-link">Gaming &amp; Digital Assets</a>
+    </div>
+  </div>
+
+  <!-- Resources -->
+  <div class="mobile-nav-item">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-resources">
+      <span>Resources</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-resources">
+      <!-- ⛓ Chain-only -->
+      <a href="recently-audited.html"       class="mobile-sub-link nav-chain-only">Recently Audited</a>
+      <a href="ecosystem.html"              class="mobile-sub-link nav-chain-only">Ecosystem</a>
+      <!-- 📱 Apps-only (from apps_site) -->
+      <a href="sample-report.html"          class="mobile-sub-link nav-apps-only">Sample Pentest Report</a>
+      <a href="appsec-maturity.html"        class="mobile-sub-link nav-apps-only">AppSec Maturity Model</a>
+      <a href="#"                           class="mobile-sub-link nav-apps-only">Compliance Checklist Library</a>
+      <!-- ✅ Shared -->
+      <a href="https://discover.credshields.com/" class="mobile-sub-link" target="_blank">Blog ↗</a>
+      <a href="brand-guidelines.html"       class="mobile-sub-link">Brand Guidelines</a>
+      <a href="careers.html"                class="mobile-sub-link">Careers</a>
+    </div>
+  </div>
+
+  <!-- Institutions — Chain only -->
+  <div class="mobile-nav-item nav-chain-only">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-institutions">
+      <span>Institutions</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-institutions">
+      <a href="Institutions.html"           class="mobile-sub-link">Overview</a>
+      <a href="vc-crypto-funds.html"         class="mobile-sub-link">VCs &amp; Crypto Funds</a>
+      <a href="stablecoins.html"             class="mobile-sub-link">Stablecoins</a>
+      <a href="crosschainbridge.html"        class="mobile-sub-link">Cross-Chain Bridge</a>
+      <a href="realwordassets.html"          class="mobile-sub-link">Real World Assets</a>
+      <a href="payments.html"               class="mobile-sub-link">Payments</a>
+    </div>
+  </div>
+
+  <!-- OWASP Top 10 — Chain only -->
+  <div class="mobile-nav-item nav-chain-only">
+    <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-owasp">
+      <span>OWASP Top 10</span>
+      <svg class="mobile-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition:transform 200ms"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="mobile-sub" id="mob-owasp">
+      <a href="owasp-smart-contract-top-10-2025.html" class="mobile-sub-link">2025</a>
+      <a href="owasp-smart-contract-top-10-2026.html" class="mobile-sub-link">2026</a>
+    </div>
+  </div>
+
+  <div class="mobile-overlay-cta">
+    <button class="btn-primary-lg" style="width:100%;text-align:center;" data-book-security>Book Security Audit</button>
+    <button class="btn-secondary-lg" style="width:100%;justify-content:center;" data-free-ai-scan>Run Free AI Scan</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main data-mode="apps" data-page="continuous-appsec">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Continuous Penetration Testing & AppSec Services",
+      "provider": {
+        "@type": "Organization",
+        "name": "CredShields",
+        "url": "https://credshields.com"
+      },
+      "description": "Continuous penetration testing and application security testing as a service. Senior-engineer-validated findings integrated with CI/CD, Jira, and Slack. Audit-ready evidence for SOC 2, ISO 27001, PCI DSS, and HIPAA.",
+      "areaServed": "Worldwide"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What happens after we sign \u2014 what are the first 30 days?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Day 1: CI integration deployed (30-minute setup), baseline pentest kicked off, Slack channel and Jira project provisioned. Day 14: Baseline findings delivered, severity-routed into your tracker, ownership assigned. Day 30: First retest cycle complete with critical and high issues verified fixed. By Day 90 you're in steady state with full release-cycle coverage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my engineering team can't fix findings fast enough?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We don't leave you stranded. Each finding includes specific fix guidance with code examples. We'll do live debugging sessions over Slack for tricky issues. For critical issues that take time to fix architecturally, we help with mitigation plans and compensating controls \u2014 both of which auditors accept as evidence of process."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we run Continuous AppSec on a per-app basis or is it all-or-nothing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Per-app. You can start with one critical application (typically the customer-facing SaaS app or the payment service) and add more apps as the program matures. Most clients start with 1-3 apps and expand within the first year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you replace our existing SAST/DAST tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, we complement them. SAST tools like Snyk, Semgrep, and SonarQube catch a different class of issues (code-level, dependencies). We handle the manual pentest layer that catches business logic, multi-tenant isolation, and complex auth flows. Most clients run both."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<section class="continuous-appsec-page-hero">
+  <div class="continuous-appsec-page-hero-grid"></div>
+  <div class="continuous-appsec-page-hero-inner">
+    <div>
+      <div class="continuous-appsec-breadcrumb">
+        <a href="#apps-home">Home</a>
+        <span class="continuous-appsec-breadcrumb-sep">/</span>
+        <a href="#apps-home">Solutions</a>
+        <span class="continuous-appsec-breadcrumb-sep">/</span>
+        <span class="continuous-appsec-current">Continuous AppSec</span>
+      </div>
+      <div class="continuous-appsec-page-eyebrow">
+        <span class="continuous-appsec-page-eyebrow-dot"></span>
+        Continuous AppSec
+      </div>
+      <h1 class="continuous-appsec-page-title-seo" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;">Continuous Application Security as a Service</h1>
+      <p class="continuous-appsec-page-h1-seo">Continuous Application Security as a Service</p>
+      <h2 class="continuous-appsec-page-title">AppSec that <em>runs with your team</em>.</h2>
+      <p class="continuous-appsec-page-lede">Continuous pentesting integrated with your CI, your Jira, and your Slack. Every meaningful release tested by senior engineers. Findings landed where your team already works — not in a quarterly PDF.</p>
+      <div class="continuous-appsec-page-cta-row">
+        <button class="continuous-appsec-btn-primary-lg">Start Continuous AppSec</button>
+        <button class="continuous-appsec-btn-secondary-lg">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Get Sample Report
+        </button>
+      </div>
+    </div>
+    <div class="continuous-appsec-hero-side-card">
+      <div class="continuous-appsec-hero-side-label">What's Included</div>
+      <div class="continuous-appsec-hero-side-list">
+        <div class="continuous-appsec-hero-side-item">
+          <div class="continuous-appsec-hero-side-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>CI / CD integration (GitHub, GitLab, Bitbucket)</span>
+        </div>
+        <div class="continuous-appsec-hero-side-item">
+          <div class="continuous-appsec-hero-side-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Jira / Linear ticket creation</span>
+        </div>
+        <div class="continuous-appsec-hero-side-item">
+          <div class="continuous-appsec-hero-side-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Slack alerts on critical findings</span>
+        </div>
+        <div class="continuous-appsec-hero-side-item">
+          <div class="continuous-appsec-hero-side-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Quarterly senior-engineer deep review</span>
+        </div>
+        <div class="continuous-appsec-hero-side-item">
+          <div class="continuous-appsec-hero-side-check">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <span>Annual SOC 2 / ISO evidence package</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-feature-row">
+      <div>
+        <div class="continuous-appsec-feature-num">01 // THE PROBLEM</div>
+        <h2 class="continuous-appsec-feature-title">Annual pentests are 11 months too late.</h2>
+        <p class="continuous-appsec-feature-body">By the time the report lands, half the codebase has changed. Critical findings get triaged into next quarter's roadmap. The auditor accepts the PDF; the bug is still in production. Continuous AppSec fixes the cadence problem.</p>
+        <ul class="continuous-appsec-feature-list">
+        <li>Findings tied to specific commits, not codebase snapshots</li>
+        <li>Severity routing: critical blocks merge, medium opens ticket</li>
+        <li>Retest within hours of fix, not next quarter</li>
+        <li>Always-current evidence trail for auditors</li>
+        </ul>
+      </div>
+      <div class="continuous-appsec-feature-visual">
+        <div class="continuous-appsec-feature-visual-header">
+          <div class="continuous-appsec-feature-visual-dots"><span></span><span></span><span></span></div>
+          <span class="continuous-appsec-feature-visual-title">.github/workflows/credshields.yml</span>
+        </div>
+        <pre class="continuous-appsec-code-block"><span class="continuous-appsec-kw">name</span>: <span class="continuous-appsec-str">CredShields AppSec</span>
+<span class="continuous-appsec-kw">on</span>: [pull_request, push]
+
+<span class="continuous-appsec-kw">jobs</span>:
+  appsec:
+    <span class="continuous-appsec-kw">runs-on</span>: ubuntu-latest
+    <span class="continuous-appsec-kw">steps</span>:
+      - <span class="continuous-appsec-kw">uses</span>: credshields/scan-action@v2
+        <span class="continuous-appsec-kw">with</span>:
+          api-key: ${{ secrets.CS_KEY }}
+          fail-on: <span class="continuous-appsec-str">high,critical</span>
+          slack: <span class="continuous-appsec-str">#appsec-alerts</span>
+          jira-project: <span class="continuous-appsec-str">SEC</span>
+
+<span class="continuous-appsec-com"># Critical findings → block merge</span>
+<span class="continuous-appsec-com"># Mediums → Jira ticket auto-created</span>
+<span class="continuous-appsec-com"># Quarterly: deep manual review</span>
+<span class="continuous-appsec-com"># Annual: SOC 2 evidence package</span></pre>
+      </div>
+    </div>
+  </div>
+</section><section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-feature-row continuous-appsec-reverse">
+      <div>
+        <div class="continuous-appsec-feature-num">02 // WHAT CHANGES</div>
+        <h2 class="continuous-appsec-feature-title">Day 1, Day 30, Day 90.</h2>
+        <p class="continuous-appsec-feature-body">Continuous AppSec isn't a longer pentest. It's a different operating model. Here's what your team actually experiences from kickoff to steady-state.</p>
+        <ul class="continuous-appsec-feature-list">
+        <li>Day 1: CI integration deployed, baseline scan complete</li>
+        <li>Day 14: First findings triaged, ownership assigned in Jira</li>
+        <li>Day 30: Critical issues remediated, retest verified</li>
+        <li>Day 90: Full release-cycle coverage, audit-ready evidence</li>
+        </ul>
+      </div>
+      <div class="continuous-appsec-feature-visual">
+        <div class="continuous-appsec-feature-visual-header">
+          <div class="continuous-appsec-feature-visual-dots"><span></span><span></span><span></span></div>
+          <span class="continuous-appsec-feature-visual-title">Engagement timeline</span>
+        </div>
+        <pre class="continuous-appsec-code-block"><span class="continuous-appsec-kw">DAY 1</span>
+  · CI/CD integration live
+  · Baseline pentest kicked off
+  · Slack channel + Jira project provisioned
+
+<span class="continuous-appsec-kw">DAY 14</span>
+  · Baseline findings delivered
+  · Severity-routed into your tracker
+  · Engineering ownership assigned
+
+<span class="continuous-appsec-kw">DAY 30</span>
+  · First retest cycle complete
+  · Critical and high issues verified fixed
+  · Coverage dashboard live
+
+<span class="continuous-appsec-kw">DAY 90</span>
+  · Full release-cycle coverage
+  · Audit-ready evidence binder
+  · Quarterly deep-review report
+
+<span class="continuous-appsec-com">→ Then: steady state. Forever.</span></pre>
+      </div>
+    </div>
+  </div>
+</section><section class="continuous-appsec-section continuous-appsec-ai-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">How it works</p>
+      <h2 class="continuous-appsec-section-title">Continuous, not transactional.</h2>
+    </div>
+    <div class="continuous-appsec-process-grid">
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">01</div>
+        <div class="continuous-appsec-process-title">Integrate</div>
+        <p class="continuous-appsec-process-desc">GitHub, GitLab, Bitbucket, Jenkins, CircleCI — 30-minute setup with your existing CI.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">02</div>
+        <div class="continuous-appsec-process-title">Baseline</div>
+        <p class="continuous-appsec-process-desc">Senior engineers run a deep manual pentest on your current state. This is your 'before' picture.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">03</div>
+        <div class="continuous-appsec-process-title">Continuous Scan</div>
+        <p class="continuous-appsec-process-desc">Every PR and meaningful release tested. AI-assisted triage, human verification on signal.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">04</div>
+        <div class="continuous-appsec-process-title">Route</div>
+        <p class="continuous-appsec-process-desc">Findings flow into Jira / Linear with severity, owner, reproduction steps, and fix guidance.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">05</div>
+        <div class="continuous-appsec-process-title">Retest</div>
+        <p class="continuous-appsec-process-desc">Mark as fixed in your tracker. We verify within hours and update the evidence trail.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">06</div>
+        <div class="continuous-appsec-process-title">Quarterly Review</div>
+        <p class="continuous-appsec-process-desc">Senior engineer goes deep on architectural changes, threat model evolution, new attack surfaces.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">07</div>
+        <div class="continuous-appsec-process-title">Annual Audit Package</div>
+        <p class="continuous-appsec-process-desc">SOC 2 / ISO 27001 / PCI evidence binder — drops straight into your auditor's hands.</p>
+      </div>
+      <div class="continuous-appsec-process-cell">
+        <div class="continuous-appsec-process-num">08</div>
+        <div class="continuous-appsec-process-title">Always On</div>
+        <p class="continuous-appsec-process-desc">No SOW renegotiation. No 'oh that's out of scope.' Continuous coverage of your entire app surface.</p>
+      </div>
+    </div>
+  </div>
+</section><section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">Integrations</p>
+      <h2 class="continuous-appsec-section-title">Lands where your team already works.</h2>
+    </div>
+    <div class="continuous-appsec-pill-grid">
+      <div class="continuous-appsec-pill-card">
+        <div class="continuous-appsec-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h3"/><path d="M18 9v3a3 3 0 0 1-3 3h-3"/></svg></div>
+        <div class="continuous-appsec-pill-title">Source control</div>
+        <p class="continuous-appsec-pill-desc">GitHub, GitLab, Bitbucket, Azure DevOps. PR comments, merge gates, status checks.</p>
+      </div>
+      <div class="continuous-appsec-pill-card">
+        <div class="continuous-appsec-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+        <div class="continuous-appsec-pill-title">CI / CD</div>
+        <p class="continuous-appsec-pill-desc">GitHub Actions, GitLab CI, CircleCI, Jenkins, Bitbucket Pipelines, Azure Pipelines.</p>
+      </div>
+      <div class="continuous-appsec-pill-card">
+        <div class="continuous-appsec-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h12l-2 4 2 4H6"/></svg></div>
+        <div class="continuous-appsec-pill-title">Issue tracking</div>
+        <p class="continuous-appsec-pill-desc">Jira, Linear, Asana, ClickUp. Auto-create tickets with severity, owner, and reproduction.</p>
+      </div>
+      <div class="continuous-appsec-pill-card">
+        <div class="continuous-appsec-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="continuous-appsec-pill-title">Team comms</div>
+        <p class="continuous-appsec-pill-desc">Slack, Teams, Discord. Critical-finding alerts and weekly summary digests.</p>
+      </div>
+      <div class="continuous-appsec-pill-card">
+        <div class="continuous-appsec-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div>
+        <div class="continuous-appsec-pill-title">SIEM / monitoring</div>
+        <p class="continuous-appsec-pill-desc">Datadog, Splunk, Elastic. Findings as events, dashboards as JSON.</p>
+      </div>
+      <div class="continuous-appsec-pill-card">
+        <div class="continuous-appsec-pill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="continuous-appsec-pill-title">SSO</div>
+        <p class="continuous-appsec-pill-desc">Okta, Auth0, Google Workspace, Azure AD. SCIM provisioning for teams.</p>
+      </div>
+    </div>
+  </div>
+</section><section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-pricing-callout">
+      <div>
+        <div class="continuous-appsec-pricing-callout-label">Pricing Model</div>
+        <h3 class="continuous-appsec-pricing-callout-title">Priced per app, not per engineer-hour.</h3>
+      </div>
+      <div class="continuous-appsec-pricing-callout-body">Continuous AppSec is sold as an annual subscription, scoped by application count and release cadence. <strong>You know your full-year cost on day one.</strong> Unlimited retests within scope. No surprise change orders. No "out of scope" friction. Three tiers: Growth (up to 3 apps), Scale (up to 10 apps), Enterprise (custom). Quarterly senior-engineer deep reviews and an annual SOC 2 / ISO evidence package included on every tier.</div>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">Deliverables</p>
+      <h2 class="continuous-appsec-section-title">What lands in your tools — and your auditor's binder.</h2>
+    </div>
+    <div class="continuous-appsec-deliverables-grid">
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h3"/><path d="M18 9v3a3 3 0 0 1-3 3h-3"/></svg></div>
+        <div>
+          <div class="continuous-appsec-deliverable-title">PR-level findings</div>
+          <p class="continuous-appsec-deliverable-desc">Each finding tied to specific commits, with reproduction steps and fix guidance. PR comments and merge gates configurable per severity.</p>
+        </div>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div>
+          <div class="continuous-appsec-deliverable-title">Always-current evidence package</div>
+          <p class="continuous-appsec-deliverable-desc">Audit-ready PDF rebuilt monthly. Pre-mapped to SOC 2 (CC6.1, CC6.6, CC7.1, CC7.2), ISO 27001 Annex A.12.6.1, A.14.2.8, and PCI 11.3.</p>
+        </div>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div>
+          <div class="continuous-appsec-deliverable-title">Quarterly deep review</div>
+          <p class="continuous-appsec-deliverable-desc">Senior engineer goes deep on architectural changes, threat model evolution, and new attack surfaces — delivered as a strategic report, not a finding dump.</p>
+        </div>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <div>
+          <div class="continuous-appsec-deliverable-title">Direct engineer access</div>
+          <p class="continuous-appsec-deliverable-desc">Shared Slack channel with your audit team. Async questions answered same-day. Live debugging when needed. No SDR layer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section continuous-appsec-compare-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">Continuous AppSec vs Alternatives</p>
+      <h2 class="continuous-appsec-section-title">Why teams switch from annual pentests.</h2>
+    </div>
+    <table class="continuous-appsec-compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Annual Pentest Vendor</th>
+          <th>Scanner-Only Tools</th>
+          <th class="continuous-appsec-cs-col">CredShields Continuous AppSec</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Cadence</span></td>
+          <td>Once a year, 14-day window</td>
+          <td>Continuous, but noisy</td>
+          <td class="continuous-appsec-cs-col">Continuous, every release</td>
+        </tr>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Engineer validation</span></td>
+          <td><span class="continuous-appsec-check">✓</span> But stale</td>
+          <td><span class="continuous-appsec-cross">✗</span> Scanner output only</td>
+          <td class="continuous-appsec-cs-col"><span class="continuous-appsec-check">✓</span> Every high+ finding</td>
+        </tr>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Business logic flaws</span></td>
+          <td><span class="continuous-appsec-check">✓</span></td>
+          <td><span class="continuous-appsec-cross">✗</span></td>
+          <td class="continuous-appsec-cs-col"><span class="continuous-appsec-check">✓</span></td>
+        </tr>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Findings in your tracker</span></td>
+          <td><span class="continuous-appsec-cross">✗</span> PDF report only</td>
+          <td><span class="continuous-appsec-partial">~</span> Scanner-format only</td>
+          <td class="continuous-appsec-cs-col"><span class="continuous-appsec-check">✓</span> Jira/Linear with severity routing</td>
+        </tr>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Retest after fix</span></td>
+          <td>Next quarter, billable</td>
+          <td>Scanner re-runs</td>
+          <td class="continuous-appsec-cs-col">Within hours, included</td>
+        </tr>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Audit-ready evidence</span></td>
+          <td>Annual report, scramble before audit</td>
+          <td><span class="continuous-appsec-cross">✗</span></td>
+          <td class="continuous-appsec-cs-col">Always-current binder, pre-mapped</td>
+        </tr>
+        <tr>
+          <td><span class="continuous-appsec-compare-row-label">Pricing model</span></td>
+          <td>Per-engagement, change orders</td>
+          <td>Per-seat or per-asset</td>
+          <td class="continuous-appsec-cs-col">Per-app annual, no overages</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head" style="text-align:center;">
+      <p class="continuous-appsec-section-eyebrow" style="display:inline-block;padding-left:0;">Frequently Asked Questions</p>
+      <h2 class="continuous-appsec-section-title">Common questions, answered.</h2>
+    </div>
+    <div class="continuous-appsec-faq-grid">
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">How is Continuous AppSec different from a scanner like Snyk or Semgrep?</summary>
+        <div class="continuous-appsec-faq-a">Scanners give you alerts; Continuous AppSec gives you exploited findings. Every issue we route into your tracker has been manually verified as exploitable by a senior security engineer — no scanner output dumped into Jira. We use scanners (including open-source ones like Semgrep, Slither, and ZAP) as one input among many; the output that reaches your team is engineer-curated.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">What's the commercial model?</summary>
+        <div class="continuous-appsec-faq-a">Annual contract priced by application count and release cadence — not engineer-hours. You know your cost on day one. Re-tests are unlimited within scope. No surprise change orders, no hourly billing meters, and no 'oh that's out of scope' moments mid-engagement. Most clients sit between $48k and $180k per year depending on app surface.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Can we keep our existing pentest vendor for the annual?</summary>
+        <div class="continuous-appsec-faq-a">Yes — though most clients consolidate within the first year because the dual-vendor model creates duplicated scoping, finding-overlap, and audit-coordination work. We're happy to coexist or hand off, whichever fits your procurement cycle. Our SOC 2 evidence is accepted by all major audit firms.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Will this slow our deploys?</summary>
+        <div class="continuous-appsec-faq-a">No. Default config gates merges only on critical findings. Mediums and lows route to tickets. Most teams set high+critical to block, everything else to warn. Build-time scanning runs in parallel with your test suite; manual pentest happens out-of-band on a sampling cadence you control.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Who reviews findings — engineers or scanners?</summary>
+        <div class="continuous-appsec-faq-a">Senior security engineers. Every finding flagged as high or critical is manually reproduced before it lands in your tracker. We do not auto-route scanner output without human verification. Scanner-detected lows can be auto-routed to a separate triage queue if you want them visible.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">How fast is the response on critical findings?</summary>
+        <div class="continuous-appsec-faq-a">Critical findings are validated and reported into your Slack / Jira within 24 hours of discovery. For especially severe findings (active exploit-in-the-wild patterns, RCE, auth bypass on production data) we'll page on-call same-day.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Do you support compliance frameworks beyond SOC 2?</summary>
+        <div class="continuous-appsec-faq-a">Yes — ISO 27001, ISO 27017, ISO 27018, PCI DSS Levels 1-4 (Service Provider), HIPAA, HITRUST, GDPR Article 32, CCPA, DORA, NIS2, FedRAMP Moderate, and customer-specific frameworks. Findings are mapped at routing time so your evidence binder is always current.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">How long does onboarding take?</summary>
+        <div class="continuous-appsec-faq-a">30-minute CI integration on day one. Baseline pentest delivered in 14 days. Steady-state continuous coverage from day 30. Full audit-ready evidence package available from day 90.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Can we get a sample report before signing?</summary>
+        <div class="continuous-appsec-faq-a">Yes. Sanitized full reports are available on the Sample Pentest Report page — pick one closest to your industry. Live walkthroughs with the senior pentester are also available during evaluation.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">What happens at the end of the engagement?</summary>
+        <div class="continuous-appsec-faq-a">All findings, evidence, methodology documents, and audit packages are yours forever — exported as PDFs and machine-readable JSON. Most clients renew because the cadence has become how their team ships; if you don't, you keep everything we delivered.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">What happens after we sign — what are the first 30 days?</summary>
+        <div class="continuous-appsec-faq-a">Day 1: CI integration deployed (30-minute setup), baseline pentest kicked off, Slack channel and Jira project provisioned. Day 14: Baseline findings delivered, severity-routed into your tracker, ownership assigned. Day 30: First retest cycle complete with critical and high issues verified fixed. By Day 90 you're in steady state with full release-cycle coverage.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">What if my engineering team can't fix findings fast enough?</summary>
+        <div class="continuous-appsec-faq-a">We don't leave you stranded. Each finding includes specific fix guidance with code examples. We'll do live debugging sessions over Slack for tricky issues. For critical issues that take time to fix architecturally, we help with mitigation plans and compensating controls — both of which auditors accept as evidence of process.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Can we run Continuous AppSec on a per-app basis or is it all-or-nothing?</summary>
+        <div class="continuous-appsec-faq-a">Per-app. You can start with one critical application (typically the customer-facing SaaS app or the payment service) and add more apps as the program matures. Most clients start with 1-3 apps and expand within the first year.</div>
+      </details>
+      <details class="continuous-appsec-faq-item">
+        <summary class="continuous-appsec-faq-q">Do you replace our existing SAST/DAST tools?</summary>
+        <div class="continuous-appsec-faq-a">No, we complement them. SAST tools like Snyk, Semgrep, and SonarQube catch a different class of issues (code-level, dependencies). We handle the manual pentest layer that catches business logic, multi-tenant isolation, and complex auth flows. Most clients run both.</div>
+      </details>
+    </div>
+  </div>
+</section><section class="continuous-appsec-section continuous-appsec-related-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">Related</p>
+      <h2 class="continuous-appsec-section-title">Continue exploring CredShields AppSec</h2>
+    </div>
+    <div class="continuous-appsec-related-grid">
+      <a href="#web-pentest" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-eyebrow">Manual Pentest</div>
+        <div class="continuous-appsec-related-title">Web App Pentesting</div>
+        <p class="continuous-appsec-related-desc">OWASP ASVS L2/L3 manual pentests for SaaS web apps.</p>
+        <span class="continuous-appsec-related-arrow">Read more →</span>
+      </a>
+      <a href="#compliance" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-eyebrow">Compliance</div>
+        <div class="continuous-appsec-related-title">SOC 2 / ISO 27001 / PCI</div>
+        <p class="continuous-appsec-related-desc">Pentest evidence pre-mapped to your audit framework.</p>
+        <span class="continuous-appsec-related-arrow">Read more →</span>
+      </a>
+      <a href="#devsecops" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-eyebrow">How It Works</div>
+        <div class="continuous-appsec-related-title">DevSecOps Integration</div>
+        <p class="continuous-appsec-related-desc">Technical deep dive into our CI/CD and tool integrations.</p>
+        <span class="continuous-appsec-related-arrow">Read more →</span>
+      </a>
+      <a href="#sample-report" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-eyebrow">Reference</div>
+        <div class="continuous-appsec-related-title">Sample Pentest Report</div>
+        <p class="continuous-appsec-related-desc">See exactly what your team will receive.</p>
+        <span class="continuous-appsec-related-arrow">Read more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-mini-cta">
+      <div class="continuous-appsec-mini-cta-text">
+        <div class="continuous-appsec-mini-cta-title">Ready to ship secure?</div>
+        <div class="continuous-appsec-mini-cta-sub">Talk to a senior engineer. No SDR script, no slide deck — just a working session about your stack.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="continuous-appsec-btn-primary-lg" data-book-security>Book a Pentest</button>
+        <button class="continuous-appsec-btn-secondary-lg" data-book-security>Talk to an Engineer</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section continuous-appsec-section-narrow">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-definition-block">
+      <p class="continuous-appsec-section-eyebrow">What is Continuous AppSec</p>
+      <h2 class="continuous-appsec-definition-title">Pentesting that runs every release, not once a year.</h2>
+      <p class="continuous-appsec-definition-body"><strong>Continuous Application Security</strong> (Continuous AppSec) is an evergreen engagement model where a security team — automated and human — tests your application on every meaningful release rather than once per year. Each commit, pull request, or feature deploy passes through a graduated set of checks: scanner-based static and dynamic analysis on every push, AI-assisted differential analysis on every PR, and senior-engineer manual pentesting on every meaningful release.</p>
+      <p class="continuous-appsec-definition-body">It exists because the annual penetration test, originally invented for waterfall-shipped on-premise software, doesn't match how SaaS teams ship. A typical Series B fintech merges 200 commits a week. By the time an annual pentest report lands, the codebase under review is 11 months stale and findings often refer to code that's already been refactored.</p>
+      <p class="continuous-appsec-definition-body">Continuous AppSec replaces that broken cadence with a recurring relationship: your security posture stays current with your codebase, findings flow into Jira within hours of being discovered, retests happen the day a fix lands, and audit evidence — for SOC 2, ISO 27001, PCI DSS — is always current rather than scrambled together at audit time.</p>
+      <ul class="continuous-appsec-definition-facts">
+        <li>Engagements run 12-month minimum to align with SOC 2 / ISO audit cycles</li>
+        <li>Findings are engineer-validated — no scanner output dumped into your tracker</li>
+        <li>Quarterly senior-engineer deep reviews complement continuous coverage</li>
+        <li>All findings mapped to OWASP ASVS, OWASP API Top 10, MITRE ATT&CK, CWE, and your applicable compliance controls</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section continuous-appsec-section-narrow">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-pricing-overview">
+      <p class="continuous-appsec-section-eyebrow">Pricing model</p>
+      <h2 class="continuous-appsec-pricing-title">Priced per app, not per engineer-hour.</h2>
+      <p class="continuous-appsec-pricing-body">Annual contract sized to your application count and release cadence. You know your cost on day one. Re-tests are unlimited within scope; there are no surprise change-orders, no hourly billing meters, and no 'oh that's out of scope' moments mid-engagement.</p>
+      <div class="continuous-appsec-pricing-rows">
+      <div class="continuous-appsec-pricing-row">
+        <div class="continuous-appsec-pricing-row-label">Engagement length</div>
+        <div class="continuous-appsec-pricing-row-value">12-month contract minimum</div>
+      </div>
+      <div class="continuous-appsec-pricing-row">
+        <div class="continuous-appsec-pricing-row-label">Pricing axis</div>
+        <div class="continuous-appsec-pricing-row-value">Application count × release cadence</div>
+      </div>
+      <div class="continuous-appsec-pricing-row">
+        <div class="continuous-appsec-pricing-row-label">Re-tests included</div>
+        <div class="continuous-appsec-pricing-row-value">Unlimited within engagement scope</div>
+      </div>
+      <div class="continuous-appsec-pricing-row">
+        <div class="continuous-appsec-pricing-row-label">Critical-finding response</div>
+        <div class="continuous-appsec-pricing-row-value">Validated and reported within 24 hours</div>
+      </div>
+      <div class="continuous-appsec-pricing-row">
+        <div class="continuous-appsec-pricing-row-label">Audit evidence</div>
+        <div class="continuous-appsec-pricing-row-value">Always-current; included at no additional cost</div>
+      </div>
+      <div class="continuous-appsec-pricing-row">
+        <div class="continuous-appsec-pricing-row-label">Onboarding time</div>
+        <div class="continuous-appsec-pricing-row-value">30-minute CI integration; 14 days to first baseline report</div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">What you get</p>
+      <h2 class="continuous-appsec-section-title">Deliverables that show up where your team works.</h2>
+    </div>
+    <div class="continuous-appsec-deliverable-grid">
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="continuous-appsec-deliverable-meta">QUARTERLY</div>
+        <div class="continuous-appsec-deliverable-title">Audit-ready PDF reports</div>
+        <p class="continuous-appsec-deliverable-desc">Quarterly deep-review reports formatted for direct inclusion in audit binders. Pre-mapped to SOC 2, ISO 27001, PCI DSS controls.</p>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h3"/><path d="M18 9v3a3 3 0 0 1-3 3h-3"/></svg></div>
+        <div class="continuous-appsec-deliverable-meta">CONTINUOUS</div>
+        <div class="continuous-appsec-deliverable-title">Findings in your tracker</div>
+        <p class="continuous-appsec-deliverable-desc">Critical and high-severity findings auto-create Jira / Linear tickets with severity, owner suggestion, reproduction steps, and fix guidance.</p>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
+        <div class="continuous-appsec-deliverable-meta">ON-DEMAND</div>
+        <div class="continuous-appsec-deliverable-title">Retest verification</div>
+        <p class="continuous-appsec-deliverable-desc">Mark a ticket as fixed in your tracker; we verify and update the evidence trail within 24 hours. No new SoW, no new invoice.</p>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="continuous-appsec-deliverable-meta">ALWAYS-ON</div>
+        <div class="continuous-appsec-deliverable-title">Direct engineer access</div>
+        <p class="continuous-appsec-deliverable-desc">Slack or Teams channel with the assigned senior pentester. Ask questions, share context, get answers — not a ticketing portal.</p>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22V4a2 2 0 0 1 2-2h12l-2 4 2 4H6"/></svg></div>
+        <div class="continuous-appsec-deliverable-meta">LIVE</div>
+        <div class="continuous-appsec-deliverable-title">Compliance evidence</div>
+        <p class="continuous-appsec-deliverable-desc">Live coverage matrix showing tested vs. untested controls per framework. Auditor-ready at any point in the engagement.</p>
+      </div>
+      <div class="continuous-appsec-deliverable-card">
+        <div class="continuous-appsec-deliverable-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="continuous-appsec-deliverable-meta">REFERENCEABLE</div>
+        <div class="continuous-appsec-deliverable-title">Methodology document</div>
+        <p class="continuous-appsec-deliverable-desc">Referenceable engagement-methodology document your auditor can include in their workpapers. NIST SP 800-115, OWASP ASVS, PTES aligned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">Buyer's guide</p>
+      <h2 class="continuous-appsec-section-title">Continuous AppSec vs. alternatives.</h2>
+    </div>
+    <div class="continuous-appsec-comparison-wrap">
+      <table class="continuous-appsec-comparison-table">
+        <thead><tr><th></th><th>Annual pentest</th><th>Bug bounty program</th><th>Continuous AppSec</th></tr></thead>
+        <tbody>
+        <tr><th class="continuous-appsec-comp-label">Cadence</th><td class="continuous-appsec-comp-cell continuous-appsec-comp-bad">Once per year</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-neutral">Continuous (paid per-finding)</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">Every meaningful release</td></tr>
+        <tr><th class="continuous-appsec-comp-label">Coverage</th><td class="continuous-appsec-comp-cell continuous-appsec-comp-bad">Snapshot in time</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-neutral">Whatever bounty hunters look at</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">Full app surface, methodically</td></tr>
+        <tr><th class="continuous-appsec-comp-label">Cost predictability</th><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">Fixed</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-bad">Variable; can blow budgets</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">Fixed annual</td></tr>
+        <tr><th class="continuous-appsec-comp-label">Audit acceptance</th><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">Yes; report is the artifact</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-bad">Often insufficient alone</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">Yes; evidence pre-mapped to controls</td></tr>
+        <tr><th class="continuous-appsec-comp-label">Findings quality</th><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">High; senior pentester</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-neutral">Wildly variable</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">High; same senior pentesters</td></tr>
+        <tr><th class="continuous-appsec-comp-label">Time to fix → retest</th><td class="continuous-appsec-comp-cell continuous-appsec-comp-bad">Next annual cycle</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-neutral">Pay for retest or self-verify</td><td class="continuous-appsec-comp-cell continuous-appsec-comp-good">&lt; 24 hours, included</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="continuous-appsec-section continuous-appsec-section-related">
+  <div class="continuous-appsec-container">
+    <div class="continuous-appsec-section-head">
+      <p class="continuous-appsec-section-eyebrow">Related</p>
+      <h2 class="continuous-appsec-section-title">Related services</h2>
+    </div>
+    <div class="continuous-appsec-related-grid">
+      <a href="#web-pentest" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-card-title">Web Application Pentesting<span class="continuous-appsec-related-card-arrow">→</span></div>
+        <p class="continuous-appsec-related-card-desc">Manual web app pentests against OWASP ASVS L2/L3.</p>
+      </a>
+      <a href="#api-security" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-card-title">API Security Testing<span class="continuous-appsec-related-card-arrow">→</span></div>
+        <p class="continuous-appsec-related-card-desc">REST, GraphQL, and gRPC pentesting on every release.</p>
+      </a>
+      <a href="#compliance" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-card-title">Compliance Readiness<span class="continuous-appsec-related-card-arrow">→</span></div>
+        <p class="continuous-appsec-related-card-desc">SOC 2, ISO 27001, PCI DSS, HIPAA pentest evidence.</p>
+      </a>
+      <a href="#devsecops" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-card-title">DevSecOps Integration<span class="continuous-appsec-related-card-arrow">→</span></div>
+        <p class="continuous-appsec-related-card-desc">Technical guide to CI/CD and IDE integrations.</p>
+      </a>
+      <a href="#sast" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-card-title">Source Code Review &amp; SAST<span class="continuous-appsec-related-card-arrow">→</span></div>
+        <p class="continuous-appsec-related-card-desc">Automated SAST as a complement to manual pentest.</p>
+      </a>
+      <a href="#sample-report" class="continuous-appsec-related-card">
+        <div class="continuous-appsec-related-card-title">Sample Pentest Report<span class="continuous-appsec-related-card-arrow">→</span></div>
+        <p class="continuous-appsec-related-card-desc">See exactly what a CredShields engagement delivers.</p>
+      </a>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Continuous Application Security", "description": "Continuous penetration testing integrated with CI/CD, Jira, and Slack. Engineer-validated findings every release. SOC 2, ISO 27001, PCI DSS audit-ready evidence on demand.", "provider": {"@type": "Organization", "name": "CredShields", "url": "https://credshields.com", "logo": "https://credshields.com/logo.png"}, "areaServed": "Worldwide", "serviceType": "Continuous Application Security", "url": "https://credshields.com#continuous-appsec"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://credshields.com#apps-home"}, {"@type": "ListItem", "position": 2, "name": "Solutions", "item": "https://credshields.com#apps-home"}, {"@type": "ListItem", "position": 3, "name": "Continuous AppSec", "item": "https://credshields.com#continuous-appsec"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How is Continuous AppSec different from a scanner like Snyk or Semgrep?", "acceptedAnswer": {"@type": "Answer", "text": "Scanners give you alerts; Continuous AppSec gives you exploited findings. Every issue we route into your tracker has been manually verified as exploitable by a senior security engineer \u2014 no scanner output dumped into Jira. We use scanners (including open-source ones like Semgrep, Slither, and ZAP) as one input among many; the output that reaches your team is engineer-curated."}}, {"@type": "Question", "name": "What's the commercial model?", "acceptedAnswer": {"@type": "Answer", "text": "Annual contract priced by application count and release cadence \u2014 not engineer-hours. You know your cost on day one. Re-tests are unlimited within scope. No surprise change orders, no hourly billing meters, and no 'oh that's out of scope' moments mid-engagement. Most clients sit between $48k and $180k per year depending on app surface."}}, {"@type": "Question", "name": "Can we keep our existing pentest vendor for the annual?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 though most clients consolidate within the first year because the dual-vendor model creates duplicated scoping, finding-overlap, and audit-coordination work. We're happy to coexist or hand off, whichever fits your procurement cycle. Our SOC 2 evidence is accepted by all major audit firms."}}, {"@type": "Question", "name": "Will this slow our deploys?", "acceptedAnswer": {"@type": "Answer", "text": "No. Default config gates merges only on critical findings. Mediums and lows route to tickets. Most teams set high+critical to block, everything else to warn. Build-time scanning runs in parallel with your test suite; manual pentest happens out-of-band on a sampling cadence you control."}}, {"@type": "Question", "name": "Who reviews findings \u2014 engineers or scanners?", "acceptedAnswer": {"@type": "Answer", "text": "Senior security engineers. Every finding flagged as high or critical is manually reproduced before it lands in your tracker. We do not auto-route scanner output without human verification. Scanner-detected lows can be auto-routed to a separate triage queue if you want them visible."}}, {"@type": "Question", "name": "How fast is the response on critical findings?", "acceptedAnswer": {"@type": "Answer", "text": "Critical findings are validated and reported into your Slack / Jira within 24 hours of discovery. For especially severe findings (active exploit-in-the-wild patterns, RCE, auth bypass on production data) we'll page on-call same-day."}}, {"@type": "Question", "name": "Do you support compliance frameworks beyond SOC 2?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 ISO 27001, ISO 27017, ISO 27018, PCI DSS Levels 1-4 (Service Provider), HIPAA, HITRUST, GDPR Article 32, CCPA, DORA, NIS2, FedRAMP Moderate, and customer-specific frameworks. Findings are mapped at routing time so your evidence binder is always current."}}, {"@type": "Question", "name": "How long does onboarding take?", "acceptedAnswer": {"@type": "Answer", "text": "30-minute CI integration on day one. Baseline pentest delivered in 14 days. Steady-state continuous coverage from day 30. Full audit-ready evidence package available from day 90."}}, {"@type": "Question", "name": "Can we get a sample report before signing?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Sanitized full reports are available on the Sample Pentest Report page \u2014 pick one closest to your industry. Live walkthroughs with the senior pentester are also available during evaluation."}}, {"@type": "Question", "name": "What happens at the end of the engagement?", "acceptedAnswer": {"@type": "Answer", "text": "All findings, evidence, methodology documents, and audit packages are yours forever \u2014 exported as PDFs and machine-readable JSON. Most clients renew because the cadence has become how their team ships; if you don't, you keep everything we delivered."}}]}</script>
+</main>
+<div class="continuous-appsec-cta-block" data-show-mode="apps">
+  <div class="continuous-appsec-cta-glow"></div>
+  <div class="continuous-appsec-cta-inner">
+    <div class="continuous-appsec-cta-eyebrow">
+      <svg width="14" height="16" viewBox="0 0 32 36" fill="none"><path d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z" fill="#A8FF45"/><path d="M11 17.5L14.5 21L21 14" stroke="#0A1A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Ready When You Are
+    </div>
+    <h2 class="continuous-appsec-cta-title">The pentest your auditor will accept.<br>The findings your engineers will fix.</h2>
+    <p class="continuous-appsec-cta-body">Continuous AppSec for SaaS, fintech, and regulated industries. Talk to a senior engineer &mdash; no SDR script, no slide deck, just a working session about your stack.</p>
+    <div class="continuous-appsec-cta-btns">
+      <button class="continuous-appsec-btn-cta-primary" data-book-security>Book a Pentest</button>
+      <button class="continuous-appsec-btn-cta-ghost" data-book-security>Talk to an Engineer</button>
+    </div>
+    <div class="continuous-appsec-cta-trust">
+      <div><div class="continuous-appsec-cta-trust-item-title">Fixed-Fee Pricing</div><div class="continuous-appsec-cta-trust-item-sub">No engineer-hour billing</div></div>
+      <div><div class="continuous-appsec-cta-trust-item-title">Audit-Ready by Default</div><div class="continuous-appsec-cta-trust-item-sub">SOC 2, ISO, PCI, HIPAA</div></div>
+      <div><div class="continuous-appsec-cta-trust-item-title">Engineer-Validated</div><div class="continuous-appsec-cta-trust-item-sub">Not scanner output</div></div>
+    </div>
+  </div>
+</div>
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand-logo">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE — white logo (dark bg) ▓▓▓▓▓ -->
+          <img src="images/credshields_white_logo.svg" alt="CredShields" width="140" height="36" class="show-chain" />
+          <!-- ░░░░░ 📱 APPS MODE — black logo (light bg) ░░░░░ -->
+          <img src="images/credshields_black_logo.svg" alt="CredShields" width="140" height="36" class="show-apps" />
+        </div>
+        <p class="footer-brand-addr">20A Tanjong Pagar Road,<br>Singapore (088443)</p>
+        <div class="footer-social">
+          <a href="https://x.com/credshields" class="footer-social-link" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629 5.905-5.629zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/credshields" class="footer-social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://discover.credshields.com/" class="footer-social-link" target="_blank" rel="noopener" aria-label="Blog">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </a>
+        </div>
+        <div class="footer-copy">© 2026 CredShields. All Rights Reserved.</div>
+      </div>
+
+      <!-- Solutions -->
+      <div>
+        <div class="footer-col-title">Solutions</div>
+        <div class="footer-links">
+          <!-- ⛓ Chain-only -->
+          <a href="smart-contract-audits.html"  class="footer-link foot-chain-only">Smart Contract Audits</a>
+          <a href="dapp-protocol-security.html"  class="footer-link foot-chain-only">DApp &amp; Protocol Security</a>
+          <a href="blockchain-security.html"     class="footer-link foot-chain-only">Blockchain Security</a>
+          <a href="wallet-security.html"         class="footer-link foot-chain-only">Wallet Security</a>
+          <a href="continuous-monitoring.html"   class="footer-link foot-chain-only">Continuous Monitoring</a>
+          <a href="https://solidityscan.com/"    class="footer-link foot-chain-only" target="_blank">SolidityScan ↗</a>
+          <a href="https://rustscan.com/"        class="footer-link foot-chain-only" target="_blank">RustScan ↗</a>
+          <!-- 📱 Apps-only -->
+          <a href="continuous-appsec.html"       class="footer-link foot-apps-only">Continuous AppSec</a>
+          <a href="web-pentest.html"             class="footer-link foot-apps-only">Web App Pentesting</a>
+          <a href="mobile-pentest.html"          class="footer-link foot-apps-only">Mobile App Pentesting</a>
+          <a href="api-security.html"            class="footer-link foot-apps-only">API Security Testing</a>
+          <a href="cloud-pentest.html"           class="footer-link foot-apps-only">Cloud Security Review</a>
+          <a href="red-team.html"                class="footer-link foot-apps-only">Red Team Engagement</a>
+          <a href="devsecops.html"               class="footer-link foot-apps-only">DevSecOps Integration</a>
+          <a href="sast.html"                    class="footer-link foot-apps-only">Source Code Review &amp; SAST</a>
+          <a href="ai-llm-security.html"         class="footer-link foot-apps-only">AI / LLM AppSec</a>
+          <a href="compliance.html"              class="footer-link foot-apps-only">Compliance Readiness</a>
+          <!-- ✅ Shared -->
+          <a href="incident-response.html"      class="footer-link">Incident Response</a>
+          <a href="security-training.html"      class="footer-link">Security Training</a>
+          <a href="ai-security-tools.html"      class="footer-link">AI Security Tools</a>
+        </div>
+      </div>
+
+      <!-- Industries -->
+      <div>
+        <div class="footer-col-title">Industries</div>
+        <div class="footer-links">
+          <!-- ⛓ Chain-only -->
+          <a href="web3-protocol-security.html" class="footer-link foot-chain-only">Web3 Protocols &amp; Exchanges</a>
+          <a href="stablecoins.html"            class="footer-link foot-chain-only">Stablecoins</a>
+          <a href="realwordassets.html"          class="footer-link foot-chain-only">Real World Assets</a>
+          <a href="crosschainbridge.html"        class="footer-link foot-chain-only">Cross-Chain Bridge</a>
+          <a href="payments.html"               class="footer-link foot-chain-only">Payments &amp; DeFi</a>
+          <!-- 📱 Apps-only -->
+          <a href="fintech-security.html"       class="footer-link foot-apps-only">Finance &amp; Fintech</a>
+          <a href="saas-security.html"          class="footer-link foot-apps-only">SaaS &amp; Enterprise</a>
+          <a href="healthcare-security.html"    class="footer-link foot-apps-only">Healthcare &amp; Life Sciences</a>
+          <a href="industry-edtech.html"        class="footer-link foot-apps-only">EdTech</a>
+          <a href="industry-ecommerce.html"     class="footer-link foot-apps-only">E-commerce &amp; Retail</a>
+          <a href="industry-govtech.html"       class="footer-link foot-apps-only">Public Sector / GovTech</a>
+          <!-- ✅ Shared -->
+          <a href="gaming-security.html"        class="footer-link">Gaming &amp; Digital Assets</a>
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <div class="footer-links">
+          <!-- ⛓ Chain-only -->
+          <a href="recently-audited.html"       class="footer-link foot-chain-only">Recently Audited</a>
+          <a href="ecosystem.html"              class="footer-link foot-chain-only">Ecosystem</a>
+          <a href="owasp-smart-contract-top-10-2026.html" class="footer-link foot-chain-only">OWASP Top 10 (2026)</a>
+          <a href="owasp-smart-contract-top-10-2025.html" class="footer-link foot-chain-only">OWASP Top 10 (2025)</a>
+          <a href="Institutions.html"           class="footer-link foot-chain-only">Institutions Overview</a>
+          <!-- 📱 Apps-only -->
+          <a href="sample-report.html"          class="footer-link foot-apps-only">Sample Pentest Report</a>
+          <a href="appsec-maturity.html"        class="footer-link foot-apps-only">AppSec Maturity Model</a>
+          <a href="pentest-vs-scan.html"        class="footer-link foot-apps-only">Pentest vs Vuln Scan</a>
+          <!-- ✅ Shared -->
+          <a href="https://discover.credshields.com/" class="footer-link" target="_blank">Blog ↗</a>
+          <a href="brand-guidelines.html"       class="footer-link">Brand Guidelines</a>
+          <a href="careers.html"               class="footer-link">Careers</a>
+          <a href="about.html"                 class="footer-link">About CredShields</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <a href="tos.html" class="footer-legal">Terms &amp; Conditions</a>
+      <a href="privacy.html" class="footer-legal">Privacy Policy</a>
+      <a href="cookie.html" class="footer-legal">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Main JS -->
+<script src="js/main.v1.js"></script>
+</body>
+</html>

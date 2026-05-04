@@ -1,0 +1,45 @@
+/* ==========================================================================
+   cloud-security.css — page-specific overrides only
+   Base patterns live in main.v1.css. Do NOT override
+   .service-card / .ai-card / .case-card / .world-card backgrounds or borders.
+   ========================================================================== */
+
+/* Tighten the 5-cell service-card grid so the checklist row reads as a
+   five-column ledger instead of a wrapped 3+2. */
+@media (min-width: 1100px) {
+  .section--raised .card-grid-3 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1099px) {
+  .section--raised .card-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Page-specific eyebrow tightening for the long compliance lede line. */
+.section-head .lede {
+  max-width: 720px;
+}
+
+/* Ensure pipeline-step time straps on this page render in mono regardless of
+   default — defensive only, no color overrides. */
+.pipeline-step-time {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+/* Case-study stat values on this page include a short token like "SOC 2" that
+   is wider than a numeric value. Allow it to breathe without shrinking. */
+.case-study-stat-val {
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Dossier KV in the field-report aside is 5 rows; cap label width so values
+   align cleanly across the column. */
+.case-study-aside .dossier-kv-label {
+  min-width: 88px;
+}

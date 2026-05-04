@@ -1,0 +1,43 @@
+/* mobile-app-security.css — page-specific overrides only */
+/* Base classes (.section, .card-grid-3, .ai-card, .service-card, .pipeline-grid, */
+/* .case-study-split, .worlds-grid, .world-card, .dossier-card, .kv-grid) live in main.v1.css. */
+/* Per Hard rule #13 we never override background/border on shared cards in their base state. */
+
+.hero-headline em {
+  color: var(--em-color);
+}
+
+.section-head .lede {
+  color: var(--fg-2);
+  max-width: 780px;
+  margin: 12px auto 0;
+}
+
+.section-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+  letter-spacing: 0.06em;
+}
+
+.case-study-eyebrow {
+  font-family: var(--font-mono);
+  color: var(--fg-3);
+  letter-spacing: 0.06em;
+}
+
+/* Safe inner-typography tweaks only (no background/border overrides on cards) */
+.ai-card .card-title em,
+.service-card .service-title em,
+.world-card .world-card-title em,
+.pipeline-step .pipeline-step-title em,
+.case-study-title em {
+  color: var(--em-color);
+}
+
+.pipeline-step-time strong {
+  color: var(--fg);
+}
+
+.dossier-kv-value.ok {
+  color: var(--green);
+}

@@ -1,15 +1,17 @@
-package-lock.json
-package.json
-node_modules
-.DS_Store
-credshields-blog-themeCLAUDE.md
-credshields-blog-theme
-CLAUDE.md
-.claude/
-CLAUDE.md.pre-claude-config.bak
-sync-nav-footer.js
-.playwright-mcp
-screenshots
-scripts
-setup-skill.sh
+# Added by code-review-graph
+.code-review-graph/
+.claude
+claude
+.theme-migration-v2
+mcp.json
 
+# Local one-off content generation/sync helpers
+generate-missing-pages.js
+sync-navbar.js
+sync-footer.js
+wire-cta-actions.js
+wire-ai-scan-actions.js
+.app-toggle-fragments
+AGENTS.md
+.mcp.json
+.DS_Store

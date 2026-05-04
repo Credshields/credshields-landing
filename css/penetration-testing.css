@@ -1,0 +1,12 @@
+/* penetration-testing.html — page-specific overrides on top of main.v1.css
+ *
+ * All previously-defined classes (.case-study-*, .pipeline-grid-6, .card-grid-2x2,
+ * .card-grid-coverage, .service-card .service-icon) have been promoted to
+ * main.v1.css via the theme-migration-v2 build-css-base.js script. The only
+ * page-specific tweak retained below is the worlds-grid gap when used inside
+ * a section--raised on this page.
+ */
+
+.section--raised .worlds-grid {
+  gap: 24px;
+}
