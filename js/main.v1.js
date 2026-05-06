@@ -10,7 +10,6 @@
   'use strict';
 
   var bookingUrl = 'https://calendly.com/koda-credshields/30min';
-  var aiScanFormUrl = 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y';
   var hubspotPortalId = '24889894';
   var hubspotFormId = 'cc23008b-c474-483e-ab9b-031cffe53005';
   var hubspotSubmitUrl = 'https://api.hsforms.com/submissions/v3/integration/submit/' + hubspotPortalId + '/' + hubspotFormId;
@@ -34,7 +33,7 @@
     expectation: 'briefly_describe_your_expectation_'
   };
 
-  function openCalendlyPopup(url) {
+  function openSchedulingPopup(url) {
     if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
       window.Calendly.initPopupWidget({ url: url });
       return;
@@ -43,7 +42,7 @@
   }
 
   function openBookingPopup() {
-    openCalendlyPopup(bookingUrl);
+    openSchedulingPopup(bookingUrl);
   }
 
   function getHubspotCookie() {

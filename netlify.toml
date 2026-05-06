@@ -8,6 +8,36 @@
   status = 301
 
 [[redirects]]
+  from = "/tos"
+  to = "/tos.html"
+  status = 200
+
+[[redirects]]
+  from = "/tos/"
+  to = "/tos.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/tos.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms/"
+  to = "/tos.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
   from = "/realwordassets.html"
   to = "/realworldassets"
   status = 301

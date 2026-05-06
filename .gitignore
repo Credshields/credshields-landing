@@ -9,6 +9,7 @@ mcp.json
 generate-missing-pages.js
 sync-navbar.js
 sync-footer.js
+!sync-footer.js
 wire-cta-actions.js
 wire-ai-scan-actions.js
 .app-toggle-fragments
@@ -26,3 +27,4 @@ scripts/*
 setup-skill.sh
 CTA_INVENTORY.md
 dist/
+sync-footer.js

@@ -164,18 +164,23 @@ function fillPopularAudits() {
 function normalizeAuditRecord(audit) {
   const legacyCriticalKey = "cri" + "ctal";
   const platformNames = {
-    ["Av" + "lance"]: "Avalanche",
-    COSMOS: "Cosmos",
-    SOLANA: "Solana",
+    avlance: "Avalanche",
+    cosmos: "Cosmos",
+    solana: "Solana",
+    aws: "Amazon Web Services",
+  };
+  const languageNames = {
+    aws: "N/A",
+    web: "N/A",
+    solana: "Solana",
+    cosmos: "Cosmos",
   };
   const normalized = { ...audit };
   normalized.critical = audit.critical ?? audit[legacyCriticalKey] ?? 0;
   normalized.platforms = Array.isArray(audit.platforms)
-    ? audit.platforms.map((platform) => platformNames[platform] || platform)
+    ? audit.platforms.map((platform) => platformNames[String(platform).toLowerCase()] || platform)
     : audit.platforms;
-  if (normalized.language === "AWS" || normalized.language === "Web") {
-    normalized.language = "N/A";
-  }
+  normalized.language = languageNames[String(normalized.language).toLowerCase()] || normalized.language;
   return normalized;
 }
 
