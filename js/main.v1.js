@@ -9,7 +9,7 @@
 (function () {
   'use strict';
 
-  var bookingUrl = 'https://share-eu1.hsforms.com/2sIrgwu_PRrq0Y3dNK4ZSTAeth5y';
+  var bookingUrl = 'https://calendly.com/koda-credshields/30min';
   var aiScanFormUrl = 'https://share-eu1.hsforms.com/2zCMAi8R0SD6rmwMc_-UwBQeth5y';
   var chainQuickscanUrl = 'https://solidityscan.com/quickscan';
 
@@ -20,14 +20,22 @@
     }
   }
 
-  function openBookingPopup() {
-    openHubspotPopup(bookingUrl);
+  function openCalendlyPopup(url) {
+    if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+      window.Calendly.initPopupWidget({ url: url });
+      return;
+    }
+    window.location.href = url;
   }
 
-  function isChainScanCta(cta) {
-    if (cta.classList.contains('show-chain') || cta.closest('.show-chain')) return true;
-    if (cta.classList.contains('show-apps') || cta.closest('.show-apps')) return false;
-    return html.getAttribute('data-mode') === 'chain';
+  function openBookingPopup() {
+    openCalendlyPopup(bookingUrl);
+  }
+
+  function hasNativeLinkTarget(cta) {
+    if (!cta || cta.tagName !== 'A') return false;
+    var href = cta.getAttribute('href') || '';
+    return href && href !== '#';
   }
 
   document.addEventListener('click', function (e) {
@@ -40,12 +48,16 @@
   document.addEventListener('click', function (e) {
     var cta = e.target.closest('[data-free-ai-scan]');
     if (!cta) return;
+    if (hasNativeLinkTarget(cta)) return;
     e.preventDefault();
-    if (isChainScanCta(cta)) {
-      window.location.href = chainQuickscanUrl;
-    } else {
-      openHubspotPopup(aiScanFormUrl);
-    }
+    window.location.href = chainQuickscanUrl;
+  });
+
+  document.addEventListener('click', function (e) {
+    var cta = e.target.closest('[data-contact-form]');
+    if (!cta) return;
+    e.preventDefault();
+    openHubspotPopup(aiScanFormUrl);
   });
 
   /* ── 1. MODE TOGGLE ─────────────────────────────────────── */
