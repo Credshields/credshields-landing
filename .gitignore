@@ -15,3 +15,9 @@ wire-ai-scan-actions.js
 AGENTS.md
 .mcp.json
 .DS_Store
+.playwright-mcp/
+node_modules/
+package-lock.json
+package.json
+scripts/
+setup-skill.sh

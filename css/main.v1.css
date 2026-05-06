@@ -310,6 +310,7 @@ html[data-mode="chain"] .mode-toggle-btn[aria-pressed="true"] { color: var(--lim
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--fg-3);
   margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
 }
 .section-title {
   font-family: var(--font-mono);
@@ -1778,6 +1779,13 @@ html[data-mode="apps"] .eyebrow-num { color: var(--green); }
   text-transform: uppercase;
   color: var(--fg-3);
   margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+
+.section-eyebrow svg,
+.cta-eyebrow svg,
+.case-study-eyebrow svg {
+  flex: 0 0 auto;
 }
 
 /* .case-study-title */
