@@ -20,5 +20,9 @@ node_modules/
 package-lock.json
 package.json
 scripts/
+!scripts/
+scripts/*
+!scripts/netlify-build.js
 setup-skill.sh
 CTA_INVENTORY.md
+dist/
