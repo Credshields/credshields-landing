@@ -1,3 +1,43 @@
+[[redirects]]
+  from = "/realwordassets"
+  to = "/realworldassets"
+  status = 301
+
+[[redirects]]
+  from = "/realwordassets.html"
+  to = "/realworldassets"
+  status = 301
+
+[[redirects]]
+  from = "/stablecoin.html"
+  to = "/stablecoins"
+  status = 301
+
+[[redirects]]
+  from = "/stablecoin"
+  to = "/stablecoins"
+  status = 301
+
+[[redirects]]
+  from = "/web3-cross-chain-bridge-audit.html"
+  to = "/crosschainbridge"
+  status = 301
+
+[[redirects]]
+  from = "/web3-cross-chain-bridge-audit"
+  to = "/crosschainbridge"
+  status = 301
+
+[[redirects]]
+  from = "/web3-defi-protocol-audit.html"
+  to = "/dapp-protocol-security"
+  status = 301
+
+[[redirects]]
+  from = "/web3-defi-protocol-audit"
+  to = "/dapp-protocol-security"
+  status = 301
+
 [[headers]]
   for = "/*.html"
   [headers.values]

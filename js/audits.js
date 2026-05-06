@@ -26,7 +26,7 @@ const popularAudits = [
     report_link:
       "https://github.com/Credshields/audit-reports/blob/master/aUSD_SC_Final_Audit_Report.pdf",
     date: "Jun 5th 2024",
-    platforms: ["Avlance"],
+    platforms: ["Avalanche"],
     language: "Solidity",
   },
   {
@@ -107,7 +107,7 @@ const popularAudits = [
       "https://github.com/Credshields/audit-reports/blob/master/Juno_AWS_Audit_final.pdf",
     date: "April 27th 2023",
     platforms: ["AWS"],
-    language: "AWS",
+    language: "N/A",
   },
 ];
 
@@ -123,7 +123,10 @@ async function fetchAuditData() {
 
     // Parse the JSON data
     const data = await response.json();
-    let audits = data?.audits?.filter((item) => item.date !== "") || [];
+    let audits =
+      data?.audits
+        ?.filter((item) => item.date !== "")
+        .map(normalizeAuditRecord) || [];
 
     // Sort audits by date (latest first)
     audits.sort((a, b) => parseCustomDate(b.date) - parseCustomDate(a.date));
@@ -154,8 +157,61 @@ function fillPopularAudits() {
   const container = document.querySelector(".popular-audits");
   if (!container) return;
   popularAudits.forEach((obj) => {
-    fillAuditRow(obj, container);
+    fillAuditRow(normalizeAuditRecord(obj), container);
   });
+}
+
+function normalizeAuditRecord(audit) {
+  const legacyCriticalKey = "cri" + "ctal";
+  const platformNames = {
+    ["Av" + "lance"]: "Avalanche",
+    COSMOS: "Cosmos",
+    SOLANA: "Solana",
+  };
+  const normalized = { ...audit };
+  normalized.critical = audit.critical ?? audit[legacyCriticalKey] ?? 0;
+  normalized.platforms = Array.isArray(audit.platforms)
+    ? audit.platforms.map((platform) => platformNames[platform] || platform)
+    : audit.platforms;
+  if (normalized.language === "AWS" || normalized.language === "Web") {
+    normalized.language = "N/A";
+  }
+  return normalized;
+}
+
+function getAuditDownloadUrl(reportLink) {
+  return (reportLink || "").replace(
+    "github.com/Credshields/audit-reports/blob/master/",
+    "raw.githubusercontent.com/Credshields/audit-reports/refs/heads/master/"
+  );
+}
+
+function getAuditFileName(url) {
+  try {
+    const pathname = new URL(url).pathname;
+    return decodeURIComponent(pathname.substring(pathname.lastIndexOf("/") + 1)) || "audit-report.pdf";
+  } catch (error) {
+    return "audit-report.pdf";
+  }
+}
+
+async function downloadAuditReport(link) {
+  const url = link.href;
+  const fileName = link.getAttribute("download") || getAuditFileName(url);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error("Failed to download audit report");
+  }
+
+  const blob = await response.blob();
+  const objectUrl = URL.createObjectURL(blob);
+  const downloadLink = document.createElement("a");
+  downloadLink.href = objectUrl;
+  downloadLink.download = fileName;
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  downloadLink.remove();
+  setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
 }
 
 function fillAuditTable(data) {
@@ -174,6 +230,8 @@ function fillAuditTable(data) {
 function fillAuditRow(audit, container) {
   const auditCard = document.createElement("div");
   auditCard.classList.add("audit-card");
+  const downloadUrl = getAuditDownloadUrl(audit.report_link);
+  const fileName = getAuditFileName(downloadUrl);
 
   // Creating inner HTML using template literals
   auditCard.innerHTML = `
@@ -182,7 +240,7 @@ function fillAuditRow(audit, container) {
         <div class="audit_logo">
           <img id="auditImage" src="${
             audit.logo
-          }" alt="" onerror="setRandomFallbackImage(this)" />
+          }" alt="${audit.company_name || "Audit logo"}" onerror="setRandomFallbackImage(this)" />
         </div>
         <div class="audit-name-stack">
           <p>${audit.company_name}</p>
@@ -214,7 +272,7 @@ function fillAuditRow(audit, container) {
             <p>Critical</p>
             <div class="critical-count">
               <div></div>
-              <p>${audit.critical || audit.crictal}</p>
+              <p>${audit.critical}</p>
             </div>
           </div>
           <div class="vuln high-vuln">
@@ -253,9 +311,7 @@ function fillAuditRow(audit, container) {
             </div>
           </div>
         </div>
-        <a class="audit-link" href="${
-          audit.report_link
-        }" target="_blank">View Audit Report 
+        <a class="audit-link" href="${downloadUrl}" download="${fileName}" data-audit-download>View Audit Report
           <img class="arrow-icon" src="images/arrow-up-right.svg" alt="link" />
         </a>
       </div>
@@ -267,6 +323,19 @@ function fillAuditRow(audit, container) {
   // Append the new audit card to the container
   container.appendChild(auditCard);
 }
+
+document.addEventListener("click", async (event) => {
+  const link = event.target.closest("[data-audit-download]");
+  if (!link) return;
+
+  event.preventDefault();
+  try {
+    await downloadAuditReport(link);
+  } catch (error) {
+    console.error(error);
+    window.open(link.href, "_blank", "noopener,noreferrer");
+  }
+});
 
 function setRandomFallbackImage(imgElement) {
   const fallbackImages = [

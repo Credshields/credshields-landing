@@ -16,7 +16,7 @@ const files = [
   "ai-security-tools.html",
   "web3-protocol-security.html",
   "stablecoins.html",
-  "realwordassets.html",
+  "realworldassets.html",
   "crosschainbridge.html",
   "payments.html",
   "fintech-security.html",
