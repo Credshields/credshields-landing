@@ -1,9 +1,9 @@
-/* wallet-security.css — page-specific overrides only.
+/* wallet-security.css - page-specific overrides only.
    Base classes (.section, .ai-card, .service-card, .pipeline-step, .case-study-*,
    .dossier-*, .world-card, .worlds-grid, .card-grid-3, .pipeline-grid, etc.)
    live in main.v1.css. Do not redefine them here. */
 
-/* Hero — slight typographic tightening for the wallet-security headline. */
+/* Hero - slight typographic tightening for the wallet-security headline. */
 .hero .hero-headline {
   letter-spacing: -0.01em;
 }
@@ -12,7 +12,7 @@
   max-width: 560px;
 }
 
-/* Pipeline — wallet process is a tight 5-step flow, give the time strap a
+/* Pipeline - wallet process is a tight 5-step flow, give the time strap a
    monospace look so it matches the dossier numerics. */
 .pipeline-step .pipeline-step-time {
   font-family: var(--font-mono);
@@ -23,7 +23,7 @@
   color: var(--lime);
 }
 
-/* Service-card checklist grid — five items wrap into 2 rows on wide screens.
+/* Service-card checklist grid - five items wrap into 2 rows on wide screens.
    Only typography/gap tweaks here; never touch .service-card background or border. */
 .section--surface .card-grid-3 {
   gap: 20px;
@@ -33,7 +33,7 @@
   letter-spacing: -0.005em;
 }
 
-/* Case-study split — keep stats prominent on wallet page (large $ figures). */
+/* Case-study split - keep stats prominent on wallet page (large $ figures). */
 .case-study-stat .case-study-stat-val {
   color: var(--em-color);
 }
@@ -45,7 +45,7 @@
   letter-spacing: 0.04em;
 }
 
-/* Dossier kv-grid — page-level alignment polish. */
+/* Dossier kv-grid - page-level alignment polish. */
 .dossier-kv-grid .dossier-kv-label {
   color: var(--fg-3);
 }
@@ -54,7 +54,7 @@
   color: var(--lime);
 }
 
-/* World-cards on the related-section — only border-radius/padding tweaks
+/* World-cards on the related-section - only border-radius/padding tweaks
    are safe; never override base background or border. */
 .worlds-grid .world-card {
   border-radius: var(--r-lg);

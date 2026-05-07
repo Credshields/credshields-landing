@@ -1,7 +1,7 @@
 /* =========================================================
-   CredShields — Ecosystem (page-specific overrides)
+   CredShields - Ecosystem (page-specific overrides)
    Base styles → main.v1.css / page-components.css
-   Only allowed tokens used — no invented variables.
+   Only allowed tokens used - no invented variables.
    ========================================================= */
 
 /* ── Hero dossier stamp ─────────────────────────────────── */
@@ -21,7 +21,7 @@
   margin-top: 32px;
 }
 
-/* ── § 02 comp-tag-grid — 4-column layout ───────────────── */
+/* ── § 02 comp-tag-grid - 4-column layout ───────────────── */
 .comp-tag-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

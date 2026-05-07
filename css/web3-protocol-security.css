@@ -1,4 +1,4 @@
-/* web3-protocol-security.css — page-specific overrides only */
+/* web3-protocol-security.css - page-specific overrides only */
 /* Base classes (.ai-card, .case-card, .pipeline-grid, etc.) live in main.v1.css */
 
 /* Tighten hero ticker spacing for the longer issue label */
@@ -6,7 +6,7 @@
   letter-spacing: 0.08em;
 }
 
-/* Lede under section-head — slight max-width for the two longer ledes */
+/* Lede under section-head - slight max-width for the two longer ledes */
 .section-head .lede {
   max-width: 720px;
 }

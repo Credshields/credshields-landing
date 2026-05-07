@@ -1,4 +1,4 @@
-/* appsec-maturity.css — scoped styles extracted from reffernce.html for appsec-maturity.html. */
+/* appsec-maturity.css - scoped styles extracted from reffernce.html for appsec-maturity.html. */
 
 /* Standalone scoped primitives used by extracted reference pages. */
 .appsec-maturity-container {
@@ -83,7 +83,7 @@
    SUB-PAGE LAYOUT
    ════════════════════════════════════════════════════════════════ */
 
-/* Page hero — compact version of homepage hero */
+/* Page hero - compact version of homepage hero */
 .appsec-maturity-page-hero {
   background: var(--bg);
   padding: 72px 32px 64px;
@@ -185,7 +185,7 @@ html[data-mode="chain"] .appsec-maturity-page-title em {
   flex-wrap: wrap;
 }
 
-/* Hero side panel — stat card */
+/* Hero side panel - stat card */
 .appsec-maturity-hero-side-card {
   background: var(--bg-surface);
   border: 1.5px solid var(--border);
@@ -605,7 +605,7 @@ html[data-mode="chain"] .appsec-maturity-mini-cta::before {
 
 
 /* ════════════════════════════════════════════════════════════════
-   CredShields One — Featured Product Promo Section
+   CredShields One - Featured Product Promo Section
    Dark inverted card on apps-mode cream background; refines naturally
    on chain-mode dark background.
    ════════════════════════════════════════════════════════════════ */
@@ -879,7 +879,7 @@ html[data-mode="chain"] .cs-one-card {
   animation: pulse 2.5s infinite;
 }
 
-/* Right column — terminal */
+/* Right column - terminal */
 .cs-one-terminal {
   background: rgba(0,0,0,0.45);
   border: 1px solid rgba(168,255,69,0.18);
@@ -1366,10 +1366,10 @@ html[data-mode="chain"] .dropdown-section-label {
 
 
 /* ════════════════════════════════════════════════════════════════
-   Wave 1 SEO additions — shared elements
+   Wave 1 SEO additions - shared elements
    ════════════════════════════════════════════════════════════════ */
 
-/* SEO H1 — small, indexable, sits above the visual headline */
+/* SEO H1 - small, indexable, sits above the visual headline */
 .appsec-maturity-seo-h1 {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
@@ -1396,7 +1396,7 @@ html[data-mode="chain"] .dropdown-flag.flag-new {
   border-color: rgba(255,160,96,0.35);
 }
 
-/* Related-links cluster — 4-card grid for cross-page linking */
+/* Related-links cluster - 4-card grid for cross-page linking */
 .appsec-maturity-related-section {
   background: var(--bg-raised);
   padding: 56px 0;

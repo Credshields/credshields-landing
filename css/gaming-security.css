@@ -1,4 +1,4 @@
-/* gaming-security.html — page-specific overrides only.
+/* gaming-security.html - page-specific overrides only.
    Base patterns (hero, section, ai-card, pipeline, case-study, dossier) live in main.v1.css.
    Tokens used: --fg, --fg-2, --fg-3, --lime, --em-color, --border, --border-lt, --r-sm. */
 
@@ -20,7 +20,7 @@
   font-style: italic;
 }
 
-/* Gaming/NFT case-study stat values run shorter (120k, 90%) — nudge tracking. */
+/* Gaming/NFT case-study stat values run shorter (120k, 90%) - nudge tracking. */
 .case-study-stat-val {
   letter-spacing: -0.01em;
 }

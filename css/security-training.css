@@ -1,4 +1,4 @@
-/* security-training.css — page-specific overrides only */
+/* security-training.css - page-specific overrides only */
 /* Base recipes (.kv-grid, .pipeline-grid-*, .worlds-grid, .ai-card, etc.) live in main.v1.css */
 
 .hero .hero-headline {
@@ -14,7 +14,7 @@
   max-width: 720px;
 }
 
-/* ai-card inner spacing tweak — safe (no background/border override) */
+/* ai-card inner spacing tweak - safe (no background/border override) */
 .card-grid-3 .ai-card .card-title {
   margin-top: 12px;
 }

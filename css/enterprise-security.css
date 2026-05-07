@@ -1,9 +1,9 @@
-/* enterprise-security.css — page-specific overrides only.
+/* enterprise-security.css - page-specific overrides only.
    Base patterns (section, card-grid-3, ai-card, service-card, kv-grid,
    case-study-*, worlds-grid, world-card, dossier-card) are defined in
    main.v1.css. Do NOT redeclare them here. */
 
-/* 4-up risks grid — extends card-grid-3 to 4 columns on wide screens */
+/* 4-up risks grid - extends card-grid-3 to 4 columns on wide screens */
 .card-grid-3.card-grid-4 {
   grid-template-columns: repeat(4, 1fr);
 }

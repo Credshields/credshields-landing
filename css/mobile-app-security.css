@@ -1,4 +1,4 @@
-/* mobile-app-security.css — page-specific overrides only */
+/* mobile-app-security.css - page-specific overrides only */
 /* Base classes (.section, .card-grid-3, .ai-card, .service-card, .pipeline-grid, */
 /* .case-study-split, .worlds-grid, .world-card, .dossier-card, .kv-grid) live in main.v1.css. */
 /* Per Hard rule #13 we never override background/border on shared cards in their base state. */

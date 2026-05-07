@@ -1,5 +1,5 @@
 /* ==========================================================================
-   stablecoins.css — page-specific overrides only
+   stablecoins.css - page-specific overrides only
    Base classes (.section, .ai-card, .service-card, .card-grid-3, hero,
    dossier-card, kv-grid, etc.) live in main.v1.css. Do NOT redefine.
    ========================================================================== */
@@ -16,7 +16,7 @@
   color: var(--fg-2);
 }
 
-/* Section 1 stakes: 4 ai-cards — let the grid wrap to two rows on tablet/mobile.
+/* Section 1 stakes: 4 ai-cards - let the grid wrap to two rows on tablet/mobile.
    Do NOT touch .ai-card background or border (see hard rule #13). */
 .card-grid-3 {
   /* page-local nudge: keep 4-card layout breathable at md breakpoint */
@@ -24,7 +24,7 @@
 }
 
 /* Service-card body copy: slightly tighter line-height on this dense page.
-   Scoped to inner desc only — base card chrome unchanged. */
+   Scoped to inner desc only - base card chrome unchanged. */
 .service-card .service-desc {
   line-height: 1.55;
 }

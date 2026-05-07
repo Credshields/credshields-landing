@@ -1,4 +1,4 @@
-/* incident-response.css — page-specific overrides */
+/* incident-response.css - page-specific overrides */
 /* Base patterns live in main.v1.css. Only page-specific tweaks here. */
 
 /* Slightly tighter card padding on the why-IR grid so 4 cards read evenly */
@@ -11,13 +11,13 @@
   letter-spacing: 1px;
 }
 
-/* Pipeline step time strap — keep monospace look consistent across browsers */
+/* Pipeline step time strap - keep monospace look consistent across browsers */
 .pipeline-step-time {
   font-family: var(--font-mono);
   color: var(--fg-3);
 }
 
-/* Worlds grid — give the 2-up cards a touch more breathing room on the related section */
+/* Worlds grid - give the 2-up cards a touch more breathing room on the related section */
 .worlds-grid .world-card {
   padding: 28px;
 }

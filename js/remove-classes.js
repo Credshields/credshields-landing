@@ -95,4 +95,4 @@ html = html.replace(/(\r?\n\s*){3,}/g, '\n\n');
 const outputPath = outputFile ? path.resolve(outputFile) : inputPath;
 fs.writeFileSync(outputPath, html, 'utf8');
 
-console.log(`Done — ${report.join(', ')}. Written to: ${outputPath}`);
+console.log(`Done - ${report.join(', ')}. Written to: ${outputPath}`);

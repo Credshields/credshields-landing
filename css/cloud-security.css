@@ -1,5 +1,5 @@
 /* ==========================================================================
-   cloud-security.css — page-specific overrides only
+   cloud-security.css - page-specific overrides only
    Base patterns live in main.v1.css. Do NOT override
    .service-card / .ai-card / .case-card / .world-card backgrounds or borders.
    ========================================================================== */
@@ -25,7 +25,7 @@
 }
 
 /* Ensure pipeline-step time straps on this page render in mono regardless of
-   default — defensive only, no color overrides. */
+   default - defensive only, no color overrides. */
 .pipeline-step-time {
   font-family: var(--font-mono);
   letter-spacing: 0.02em;

@@ -6,18 +6,18 @@
    left untouched per Hard Rule #13.
    ========================================================================== */
 
-/* Hero — slightly tighten body width on the consulting page */
+/* Hero - slightly tighten body width on the consulting page */
 .hero .hero-body {
   max-width: 640px;
 }
 
-/* Section 01 — challenges grid spacing */
+/* Section 01 - challenges grid spacing */
 .section .card-grid-3 {
   gap: 24px;
 }
 
 /* Tighten ai-card body line-height inside the challenges section so the
-   four cards sit visually flush. Inner typography only — no background or
+   four cards sit visually flush. Inner typography only - no background or
    border overrides. */
 .ai-card .card-body {
   line-height: 1.55;
@@ -33,7 +33,7 @@
   margin-top: auto;
 }
 
-/* Coverage kv-grid — tighten label typography on this page */
+/* Coverage kv-grid - tighten label typography on this page */
 .kv-grid .kv-grid-label {
   font-family: var(--font-mono);
   letter-spacing: 0.02em;
@@ -44,7 +44,7 @@
   color: var(--fg-2);
 }
 
-/* Worlds-grid 2-up — keep the bullet list tight on consulting page */
+/* Worlds-grid 2-up - keep the bullet list tight on consulting page */
 .worlds-grid .world-card-list {
   line-height: 1.6;
 }

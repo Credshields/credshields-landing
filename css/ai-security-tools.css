@@ -1,7 +1,7 @@
-/* ai-security-tools.css — page-specific overrides only.
+/* ai-security-tools.css - page-specific overrides only.
    Base patterns live in main.v1.css. Use only existing CSS variables. */
 
-/* §01 — AI feature grid: 4 cards on a card-grid-3 wrap cleanly to 2x2 on wide. */
+/* §01 - AI feature grid: 4 cards on a card-grid-3 wrap cleanly to 2x2 on wide. */
 .ai-feature-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -12,7 +12,7 @@
   }
 }
 
-/* §04 — Coverage kv-grid: emphasize the leading numeric monogram in the label. */
+/* §04 - Coverage kv-grid: emphasize the leading numeric monogram in the label. */
 .coverage-kv .kv-grid-label {
   font-family: var(--font-mono);
   letter-spacing: 0.04em;

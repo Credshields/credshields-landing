@@ -48,7 +48,7 @@ for (const file of files) {
 
   // --- Copy ---
   if (!fs.existsSync(srcPath)) {
-    console.error(`⚠️  SKIP  ${file} — not found in source`);
+    console.error(`⚠️  SKIP  ${file} - not found in source`);
     failed++;
     continue;
   }
@@ -71,4 +71,4 @@ for (const file of files) {
 }
 
 console.log("─".repeat(40));
-console.log(`Done — ${passed} succeeded, ${failed} failed.`);
+console.log(`Done - ${passed} succeeded, ${failed} failed.`);

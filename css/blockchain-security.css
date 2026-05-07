@@ -1,4 +1,4 @@
-/* blockchain-security.html — page-specific overrides only */
+/* blockchain-security.html - page-specific overrides only */
 /* Base layout, card backgrounds, hover states all live in main.v1.css */
 
 /* Slightly tighter lede on this page */
@@ -11,7 +11,7 @@
   max-width: 640px;
 }
 
-/* Pipeline body lines are dense on this page — give them a little air */
+/* Pipeline body lines are dense on this page - give them a little air */
 .pipeline-step .pipeline-step-body {
   font-size: 14px;
   line-height: 1.55;

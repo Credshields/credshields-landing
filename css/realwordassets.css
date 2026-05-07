@@ -1,10 +1,10 @@
 /* ==========================================================================
-   realwordassets.css — page-specific overrides only
+   realwordassets.css - page-specific overrides only
    Base classes (.section, .ai-card, .service-card, .card-grid-3, hero,
    dossier-card, kv-grid, etc.) live in main.v1.css. Do NOT redefine.
    ========================================================================== */
 
-/* Lede sits below the section title with extra breathing room — RWA copy
+/* Lede sits below the section title with extra breathing room - RWA copy
    on this page is dense and benefits from a wider measure. */
 .section-head .lede {
   max-width: 760px;
@@ -12,7 +12,7 @@
   color: var(--fg-2);
 }
 
-/* Section 01 ships four ai-cards in card-grid-3 — let the grid wrap to a
+/* Section 01 ships four ai-cards in card-grid-3 - let the grid wrap to a
    two-row layout cleanly at the md breakpoint. Do NOT touch .ai-card
    background or border (see hard rule #13). */
 .card-grid-3 {
