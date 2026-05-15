@@ -560,6 +560,7 @@ html[data-mode="chain"] .pricing-card.featured {
   gap: 28px;
   flex-wrap: wrap;
   border: 1.5px solid var(--border);
+  position: relative;
 }
 html[data-mode="chain"] .sample-report-mini-cta {
   background: linear-gradient(135deg, rgba(14,36,18,0.7) 0%, rgba(10,26,12,0.9) 100%);
@@ -585,6 +586,30 @@ html[data-mode="chain"] .sample-report-mini-cta::before {
 .sample-report-mini-cta-sub {
   font-size: 14px;
   color: var(--fg-3);
+}
+.sample-report-inline-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.sample-report-inline-status {
+  position: absolute;
+  top: calc(100% + 14px);
+  left: 0;
+  width: min(520px, 100%);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--fg-3);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-2px);
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+.sample-report-inline-status[data-state]:not([data-state=""]) {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive */
@@ -1687,6 +1712,5 @@ html[data-mode="chain"] .finding-severity {
 @media (max-width: 640px) {
   .sample-report-related-grid { grid-template-columns: 1fr; }
 }
-
 
 

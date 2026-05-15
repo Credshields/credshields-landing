@@ -393,7 +393,7 @@
         "name": "CredShields",
         "url": "https://credshields.com"
       },
-      "description": "A sanitized sample of an actual CredShields pentest report. Real findings, real reproduction steps, real remediation guidance.",
+      "description": "A sanitized sample of an actual CredShields Web Application and API audit report. Real findings with CWE classification, OWASP Risk Rating, reproduction steps, remediation guidance, and retest verification status.",
       "areaServed": "Worldwide"
     },
     {
@@ -453,31 +453,31 @@
           <div class="sample-report-hero-side-check">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <span>28-page sanitized pentest report (PDF)</span>
+          <span>Sanitized Web App &amp; API audit report (PDF)</span>
         </div>
         <div class="sample-report-hero-side-item">
           <div class="sample-report-hero-side-check">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <span>Executive summary + technical findings</span>
+          <span>Executive summary with severity breakdown</span>
         </div>
         <div class="sample-report-hero-side-item">
           <div class="sample-report-hero-side-check">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <span>OWASP ASVS coverage matrix</span>
+          <span>OWASP WSTG &amp; Top 10 methodology alignment</span>
         </div>
         <div class="sample-report-hero-side-item">
           <div class="sample-report-hero-side-check">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <span>Sample reproducible PoC</span>
+          <span>CWE classification per finding</span>
         </div>
         <div class="sample-report-hero-side-item">
           <div class="sample-report-hero-side-check">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <span>Remediation guidance examples</span>
+          <span>Retest verification with remediation status</span>
         </div>
       </div>
     </div>
@@ -490,10 +490,11 @@
         <h2 class="sample-report-feature-title">A real report from a real engagement.</h2>
         <p class="sample-report-feature-body">Most vendors send a glossy PDF that looks like a sales deck. Our sample is the actual deliverable from a real client engagement (sanitized for confidentiality). Same structure, same depth, same evidence quality your team and your auditor will receive.</p>
         <ul class="sample-report-feature-list">
-        <li>Executive summary written for non-technical readers</li>
-        <li>Detailed findings with severity, CVSS 3.1, reproduction</li>
-        <li>OWASP ASVS L2/L3 coverage matrix per finding</li>
-        <li>Remediation guidance with code examples</li>
+        <li>Executive summary with severity breakdown and remediation overview</li>
+        <li>Findings catalogued by severity using OWASP Risk Rating Methodology (Likelihood &times; Impact)</li>
+        <li>Per-finding CWE classification, affected endpoint, and inline HTTP / cURL reproduction</li>
+        <li>Methodology aligned to OWASP WSTG, OWASP Top 10, and an internal real-world attack checklist</li>
+        <li>Retest verification with explicit status tags ([Fixed] / [Open] / [Acknowledged])</li>
         </ul>
       </div>
       <div class="sample-report-feature-visual">
@@ -502,25 +503,34 @@
           <span class="sample-report-feature-visual-title">CredShields-pentest-report-2026-Q3.pdf</span>
         </div>
         <pre class="sample-report-code-block"><span class="sample-report-kw">EXECUTIVE SUMMARY</span>
-  · 4 critical, 7 high, 12 medium, 18 low
-  · 87% of OWASP ASVS L2 verified
-  · 6 business logic flaws identified
-  · All findings reproduced w/ working PoC
+  Engagement window      Jan 14 to Jan 22, 2026
+  Retest window          Feb 19, 2026
+  Total findings         13
+  Severity breakdown     3 critical, 3 high, 1 medium, 6 low
+  Methodology            OWASP WSTG, OWASP Top 10,
+                         + internal real-world checklist
 
-<span class="sample-report-kw">FINDINGS BY CATEGORY</span>
-  Authentication           <span class="sample-report-vuln">3 high, 2 medium</span>
-  Multi-tenant isolation   <span class="sample-report-vuln">1 critical, 2 high</span>
-  Injection                <span class="sample-report-kw">0 (clean)</span>
-  Business logic           <span class="sample-report-vuln">2 critical, 1 high</span>
-  Cryptography             <span class="sample-report-kw">2 medium, 3 low</span>
-  Session management       <span class="sample-report-kw">1 medium</span>
+<span class="sample-report-kw">SEVERITY MODEL</span> (OWASP Risk Rating)
+  Risk = Likelihood &times; Impact
+        Low                Medium           High
+  High  Medium             High             <span class="sample-report-vuln">Critical</span>
+  Med   Low                Medium           High
+  Low   None               Low              Medium
 
-<span class="sample-report-kw">REMEDIATION TIMELINE</span>
-  Critical    fix &lt; 7 days
-  High        fix &lt; 30 days
-  Medium      fix &lt; 90 days
+<span class="sample-report-kw">SAMPLE FINDINGS</span>
+  C001 <span class="sample-report-vuln">[Fixed]</span> IDOR in trade creation
+       CWE-639 (Insecure Direct Object Reference)
+  C002 <span class="sample-report-vuln">[Fixed]</span> Unlimited minting via client-side
+       count param manipulation
+       CWE-840 (Business Logic Errors)
+  H002 <span class="sample-report-vuln">[Fixed]</span> OAuth sign-up bypass
+       CWE-287 (Improper Authentication)
+  M001 <span class="sample-report-vuln">[Fixed]</span> Open redirect in sign-in flow
+       CWE-601
 
-<span class="sample-report-com">→ Continued for 28 pages with full PoCs</span></pre>
+<span class="sample-report-com">// Each finding: description, affected endpoint,</span>
+<span class="sample-report-com">// HTTP request samples, impact, remediation,</span>
+<span class="sample-report-com">// and retest verification status.</span></pre>
       </div>
     </div>
   </div>
@@ -535,43 +545,55 @@
         <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
         <div>
           <div class="sample-report-deliverable-title">Executive Summary</div>
-          <p class="sample-report-deliverable-desc">One-page overview for stakeholders. Risk rating, critical findings, remediation roadmap. Written for board members and C-suite, not security engineers.</p>
+          <p class="sample-report-deliverable-desc">Severity breakdown table, engagement and retest windows, methodology references, and an "Assets in Scope" matrix. Written for stakeholders, not security engineers. Drops directly into board updates.</p>
         </div>
       </div>
       <div class="sample-report-deliverable-card">
         <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
         <div>
           <div class="sample-report-deliverable-title">Methodology Document</div>
-          <p class="sample-report-deliverable-desc">How we tested. NIST SP 800-115, OWASP ASVS, PTES alignment. Tools used. Scope boundaries. Auditors reference this directly.</p>
+          <p class="sample-report-deliverable-desc">How we tested. OWASP Web Security Testing Guide (WSTG), OWASP Top 10, and an internal real-world attack checklist. Scope and assumptions stated explicitly. Auditors reference this section directly.</p>
         </div>
       </div>
       <div class="sample-report-deliverable-card">
         <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
         <div>
           <div class="sample-report-deliverable-title">Findings Catalog</div>
-          <p class="sample-report-deliverable-desc">Every finding with severity, CVSS 3.1 score, OWASP category, MITRE ATT&CK technique, reproduction steps, impact assessment, remediation guidance, and CWE reference.</p>
+          <p class="sample-report-deliverable-desc">Every finding with severity (OWASP Risk Rating: Likelihood &times; Impact), CWE classification, affected endpoint, inline HTTP/cURL reproduction, business impact assessment, and remediation guidance.</p>
         </div>
       </div>
       <div class="sample-report-deliverable-card">
         <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <div>
           <div class="sample-report-deliverable-title">Sample Reproducible PoC</div>
-          <p class="sample-report-deliverable-desc">A walkthrough of one full PoC: cURL commands, request/response headers, expected vs observed behavior. Your engineers can replay it independently.</p>
+          <p class="sample-report-deliverable-desc">Every finding includes full cURL commands, raw HTTP requests with headers and body, and expected vs observed behavior. Your engineers can reproduce and re-verify each finding independently.</p>
         </div>
       </div>
       <div class="sample-report-deliverable-card">
-        <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h12l-2 4 2 4H6"/></svg></div>
+        <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/></svg></div>
         <div>
-          <div class="sample-report-deliverable-title">Coverage Matrix</div>
-          <p class="sample-report-deliverable-desc">OWASP ASVS L2/L3 verification map showing pass / fail / not applicable for every requirement tested. Drops directly into your audit binder.</p>
+          <div class="sample-report-deliverable-title">Retest Verification</div>
+          <p class="sample-report-deliverable-desc">After remediation, each finding is re-tested and tagged with status: [Fixed], [Open], or [Acknowledged]. The retest section confirms what was fixed, when, and how, providing audit-ready evidence of closure.</p>
         </div>
       </div>
       <div class="sample-report-deliverable-card">
         <div class="sample-report-deliverable-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg></div>
         <div>
           <div class="sample-report-deliverable-title">Remediation Roadmap</div>
-          <p class="sample-report-deliverable-desc">Severity-prioritized fix order with effort estimates and risk-of-deferral notes. Includes architectural recommendations beyond per-finding fixes.</p>
+          <p class="sample-report-deliverable-desc">Per-finding remediation guidance with specific code-level and configuration recommendations. Severity-prioritized order, paired with architectural recommendations where individual fixes cascade across multiple findings.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section><section class="sample-report-section">
+  <div class="sample-report-container">
+    <div class="pricing-callout">
+      <div>
+        <div class="pricing-callout-label">Methodology &amp; Affiliations</div>
+        <h3 class="pricing-callout-title">Anchored in recognized standards.</h3>
+      </div>
+      <div class="pricing-callout-body">
+        Engagements are conducted by <strong>CredShields Technologies PTE. LTD.</strong> (Singapore). Methodology is anchored in the <strong>OWASP Web Security Testing Guide (WSTG)</strong>, <strong>OWASP Top 10</strong>, and an internal real-world attack checklist refined across hundreds of engagements. Severity follows <strong>OWASP Risk Rating Methodology</strong>. Findings include explicit <strong>CWE classification</strong>. The firm is <strong>AICPA SOC-aligned</strong> and is part of the <strong>OWASP Smart Contract Security Advocates</strong> community.
       </div>
     </div>
   </div>
@@ -582,10 +604,11 @@
         <div class="sample-report-mini-cta-title">Want the actual PDF?</div>
         <div class="sample-report-mini-cta-sub">Drop your email below to receive the sanitized 28-page sample report. No sales call required.</div>
       </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-        <input type="email" placeholder="you@company.com" style="padding:11px 14px;border:1.5px solid var(--border);border-radius:6px;font-family:inherit;font-size:13px;min-width:240px;background:var(--bg-surface);color:var(--fg);">
-        <button class="sample-report-btn-primary-lg">Send me the sample</button>
-      </div>
+      <form class="sample-report-inline-form" data-sample-report-form>
+        <input type="email" name="email" placeholder="you@company.com" autocomplete="email" required style="padding:11px 14px;border:1.5px solid var(--border);border-radius:6px;font-family:inherit;font-size:13px;min-width:240px;background:var(--bg-surface);color:var(--fg);">
+        <button class="sample-report-btn-primary-lg" type="submit">Send me the sample</button>
+        <div class="sample-report-inline-status" data-sample-report-status role="status" aria-live="polite"></div>
+      </form>
     </div>
   </div>
 </section>
@@ -597,16 +620,16 @@
     </div>
     <div class="sample-report-faq-grid">
       <details class="sample-report-faq-item">
-        <summary class="sample-report-faq-q">Why isn't the sample report just a download link?</summary>
-        <div class="sample-report-faq-a">It is. We deliver it via email with a single tracking pixel so we can follow up if you want a working session. No gating beyond that, no sales sequences, and you can unsubscribe with one click.</div>
+        <summary class="sample-report-faq-q">Why is the sample report behind an email form?</summary>
+        <div class="sample-report-faq-a">The sample is a sanitized version of an actual client engagement and we ask for an email so we can follow up if you want a working session. No SDR sequences, one-click unsubscribe, and the same address is used to send you the PDF.</div>
       </details>
       <details class="sample-report-faq-item">
         <summary class="sample-report-faq-q">Is this an actual client report or a marketing artifact?</summary>
         <div class="sample-report-faq-a">Actual client report, sanitized for confidentiality. The client granted permission to use it as a sample. Identifiers are scrubbed but the structure, depth, and finding quality are exactly what you'd receive.</div>
       </details>
       <details class="sample-report-faq-item">
-        <summary class="sample-report-faq-q">How is this different from your competitors' sample reports?</summary>
-        <div class="sample-report-faq-a">Most competitor samples are sales-shaped: glossy formatting, generic findings, light on technical detail. Our sample is engineering-shaped: dense, technical, audit-ready, with reproducible PoCs. The difference is visible in five seconds.</div>
+        <summary class="sample-report-faq-q">How is this different from competitors' sample reports?</summary>
+        <div class="sample-report-faq-a">Most competitor samples are sales-shaped: glossy formatting, generic findings, light on technical detail. The CredShields sample is engineering-shaped: dense, technical, with CWE classification, raw HTTP request samples, and retest verification on every finding. The difference is visible in five seconds.</div>
       </details>
       <details class="sample-report-faq-item">
         <summary class="sample-report-faq-q">Can I share this internally with my team?</summary>
@@ -616,9 +639,19 @@
         <summary class="sample-report-faq-q">Does the sample show pricing?</summary>
         <div class="sample-report-faq-a">No. Pricing is engagement-specific based on scope. We provide a written quote within 48 hours of a scoping call. The sample is purely about deliverable quality.</div>
       </details>
+
+      <details class="sample-report-faq-item">
+        <summary class="sample-report-faq-q">Why do reports use OWASP Risk Rating instead of CVSS?</summary>
+        <div class="sample-report-faq-a">CVSS is excellent for known CVEs in published software. Web application findings often involve business logic, multi-tenant isolation, and authorization flaws where CVSS's vector-string model fits awkwardly. OWASP Risk Rating (Likelihood &times; Impact) captures both technical and business context per finding, which is what your auditor and your engineering team both need. For clients who require CVSS scoring for internal vulnerability management workflows, we provide it on request alongside the OWASP rating.</div>
+      </details>
+
+      <details class="sample-report-faq-item">
+        <summary class="sample-report-faq-q">What about ASVS coverage mapping?</summary>
+        <div class="sample-report-faq-a">OWASP ASVS is a verification standard; it's complementary to the WSTG-driven testing methodology we use. For SOC 2, ISO 27001, or audit engagements where ASVS L2/L3 coverage mapping is explicitly required, we deliver it as an addendum to the standard report. Most apps-side engagements don't request it. The default report aligns to WSTG and OWASP Top 10, which auditors generally accept directly.</div>
+      </details>
       <details class="sample-report-faq-item">
         <summary class="sample-report-faq-q">Can I see samples for other engagement types (mobile, API, cloud)?</summary>
-        <div class="sample-report-faq-a">Yes, on request. We have sanitized samples for web pentest, API pentest, mobile pentest, cloud security review, and red team engagement. Tell us which is closest to your scope.</div>
+        <div class="sample-report-faq-a">The default sample is a Web Application and API audit, which is our most common engagement. We have sanitized samples available for mobile pentest, cloud security review, and other engagement types on request. Tell us which is closest to your scope and we'll send the matching sample.</div>
       </details>
     </div>
   </div>

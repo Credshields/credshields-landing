@@ -13,6 +13,8 @@
   var hubspotPortalId = '24889894';
   var hubspotFormId = 'cc23008b-c474-483e-ab9b-031cffe53005';
   var hubspotSubmitUrl = 'https://api.hsforms.com/submissions/v3/integration/submit/' + hubspotPortalId + '/' + hubspotFormId;
+  var sampleReportHubspotFormId = '82af3488-c4b7-4925-b29e-7e1be857b2e9';
+  var sampleReportHubspotSubmitUrl = 'https://api.hsforms.com/submissions/v3/integration/submit/' + hubspotPortalId + '/' + sampleReportHubspotFormId;
   var chainQuickscanUrl = 'https://solidityscan.com/quickscan';
   var contactModal = null;
   var contactLastFocus = null;
@@ -168,8 +170,8 @@
     return payload;
   }
 
-  function submitHubspotPayload(payload) {
-    return fetch(hubspotSubmitUrl, {
+  function submitHubspotPayload(payload, submitUrl) {
+    return fetch(submitUrl || hubspotSubmitUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -239,6 +241,45 @@
     });
   }
 
+  function setSampleReportStatus(form, message, state) {
+    var status = form.querySelector('[data-sample-report-status]');
+    if (!status) return;
+    status.textContent = message || '';
+    status.dataset.state = state || '';
+    status.style.color = state === 'error' ? '#C0000A' : state === 'success' ? 'var(--green)' : 'var(--fg-3)';
+  }
+
+  function submitSampleReportForm(e) {
+    var form = e.target.closest('[data-sample-report-form]');
+    if (!form) return;
+
+    e.preventDefault();
+
+    var emailInput = form.elements.email;
+    var submit = form.querySelector('button[type="submit"]');
+    var email = emailInput ? emailInput.value.trim() : '';
+
+    if (!email) {
+      setSampleReportStatus(form, 'Please enter your email to receive the sample report.', 'error');
+      form.reportValidity();
+      return;
+    }
+
+    setSampleReportStatus(form, 'Sending the sample report request...', 'pending');
+    if (submit) submit.disabled = true;
+
+    submitHubspotPayload(buildContactPayload([
+      { name: 'email', value: email }
+    ]), sampleReportHubspotSubmitUrl).then(function () {
+      form.reset();
+      setSampleReportStatus(form, 'Thanks. We received your request and will send the sample report to your inbox.', 'success');
+    }).catch(function () {
+      setSampleReportStatus(form, 'We could not submit the request just now. Please try again in a moment.', 'error');
+    }).finally(function () {
+      if (submit) submit.disabled = false;
+    });
+  }
+
   function hasNativeLinkTarget(cta) {
     if (!cta || cta.tagName !== 'A') return false;
     var href = cta.getAttribute('href') || '';
@@ -266,6 +307,8 @@
     e.preventDefault();
     openContactModal();
   });
+
+  document.addEventListener('submit', submitSampleReportForm);
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && contactModal && contactModal.classList.contains('open')) {
