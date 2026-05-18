@@ -446,8 +446,9 @@
       }
 
       trace.dataset.line = line;
-      trace.style.setProperty('--travel', ((randInt(3, 6) * cell) + 192) + 'px');
-      trace.style.setProperty('--dur', rand(1.8, 3.2).toFixed(2) + 's');
+      var travel = (randInt(4, 8) * cell) + 192;
+      trace.style.setProperty('--travel', travel + 'px');
+      trace.style.setProperty('--dur', (travel / 130).toFixed(2) + 's');
     }
 
     function build(host, usedCols, usedRows) {
@@ -468,9 +469,6 @@
         host.appendChild(trace);
         randomize(trace, cols, rows, usedCols, usedRows);
         trace.style.animationDelay = rand(-8, 0).toFixed(2) + 's';
-        trace.addEventListener('animationiteration', (function (el) {
-          return function () { randomize(el, cols, rows, usedCols, usedRows); };
-        })(trace));
       }
     }
 

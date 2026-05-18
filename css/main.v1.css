@@ -211,6 +211,13 @@ html[data-mode="chain"] .nav-flagship-badge { color: var(--lime); }
   padding: 3px;
   position: relative;
   font-family: var(--font-mono);
+  --mode-toggle-glow: rgba(46,125,14,0.24);
+  box-shadow: 0 0 0 0 var(--mode-toggle-glow);
+  animation: mode-toggle-shadow-blink 2.4s ease-in-out infinite;
+}
+html[data-mode="chain"] .mode-toggle {
+  --mode-toggle-glow: rgba(168,255,69,0.28);
+  box-shadow: 0 0 0 0 var(--mode-toggle-glow);
 }
 .mode-toggle-slider {
   position: absolute;
@@ -238,6 +245,17 @@ html[data-mode="chain"] .mode-toggle-slider { transform: translateX(100%); }
 .mode-toggle-btn[aria-pressed="true"] { color: var(--fg); }
 html[data-mode="apps"] .mode-toggle-btn[aria-pressed="true"] { color: var(--green); }
 html[data-mode="chain"] .mode-toggle-btn[aria-pressed="true"] { color: var(--lime); }
+@keyframes mode-toggle-shadow-blink {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(46,125,14,0);
+  }
+  50% {
+    box-shadow: 0 0 14px 2px var(--mode-toggle-glow);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mode-toggle { animation: none; }
+}
 
 /* ── Buttons ──────────────────────────────────────────────── */
 .btn-ghost {
@@ -607,7 +625,7 @@ html[data-mode="chain"] .cs-contact-calendar:hover { color: var(--lime); }
     rgba(46,125,14,0.08) 35%,
     rgba(46,125,14,0.45) 80%,
     rgba(46,125,14,1) 100%);
-  animation: hero-trace-v var(--dur, 2.6s) linear var(--delay, 0s) infinite;
+  animation: hero-trace-v var(--dur, 4.8s) linear var(--delay, 0s) infinite both;
 }
 .hero-trace.h {
   height: 1.5px;
@@ -617,7 +635,7 @@ html[data-mode="chain"] .cs-contact-calendar:hover { color: var(--lime); }
     rgba(46,125,14,0.08) 35%,
     rgba(46,125,14,0.45) 80%,
     rgba(46,125,14,1) 100%);
-  animation: hero-trace-h var(--dur, 2.6s) linear var(--delay, 0s) infinite;
+  animation: hero-trace-h var(--dur, 4.8s) linear var(--delay, 0s) infinite both;
 }
 html[data-mode="chain"] .hero-trace.v {
   background: linear-gradient(to bottom,
@@ -634,16 +652,16 @@ html[data-mode="chain"] .hero-trace.h {
     rgba(168,255,69,1) 100%);
 }
 @keyframes hero-trace-v {
-  0%   { transform: translateY(calc(var(--travel, 288px) * -1)); opacity: 0; }
-  8%   { opacity: 1; }
-  92%  { opacity: 1; }
-  100% { transform: translateY(var(--travel, 288px)); opacity: 0; }
+  0%   { transform: translate3d(0, calc(var(--travel, 288px) * -1), 0); opacity: 0; }
+  16%  { opacity: 0.72; }
+  84%  { opacity: 0.72; }
+  100% { transform: translate3d(0, var(--travel, 288px), 0); opacity: 0; }
 }
 @keyframes hero-trace-h {
-  0%   { transform: translateX(calc(var(--travel, 288px) * -1)); opacity: 0; }
-  8%   { opacity: 1; }
-  92%  { opacity: 1; }
-  100% { transform: translateX(var(--travel, 288px)); opacity: 0; }
+  0%   { transform: translate3d(calc(var(--travel, 288px) * -1), 0, 0); opacity: 0; }
+  16%  { opacity: 0.72; }
+  84%  { opacity: 0.72; }
+  100% { transform: translate3d(var(--travel, 288px), 0, 0); opacity: 0; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-trace { animation: none !important; opacity: 0 !important; }
