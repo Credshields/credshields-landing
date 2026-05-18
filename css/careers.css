@@ -24,6 +24,195 @@
   color: var(--fg-2);
 }
 
+.careers-jobs {
+  display: grid;
+  gap: 18px;
+}
+
+.careers-jobs-status,
+.careers-jobs-empty {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  grid-column: 1 / -1;
+  padding: 28px;
+  text-align: center;
+}
+
+.careers-role-card {
+  color: inherit;
+  min-height: 260px;
+  text-decoration: none;
+}
+
+.careers-role-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.careers-role-pill {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 7px 8px;
+  text-transform: uppercase;
+}
+
+.careers-role-card .inst-card-body {
+  margin-top: 0;
+}
+
+.careers-role-cta {
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-top: auto;
+  text-transform: uppercase;
+}
+
+.careers-role-card:hover .careers-role-cta {
+  color: var(--lime);
+}
+
+.careers-job-card {
+  background: var(--bg-surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 26px;
+  transition: border-color 200ms, box-shadow 200ms;
+}
+
+.careers-job-card--detail {
+  gap: 24px;
+}
+
+.careers-job-card:hover {
+  border-color: var(--border-dk);
+  box-shadow: var(--shadow-md);
+}
+
+.careers-job-header {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.careers-job-num,
+.careers-job-detail-title {
+  color: var(--fg-5);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.careers-job-title {
+  color: var(--fg);
+  font-family: var(--font-mono);
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 8px 0 0;
+}
+
+.careers-job-meta {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  max-width: 420px;
+}
+
+.careers-job-pill {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--fg-2);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 10px;
+  text-transform: uppercase;
+}
+
+.careers-job-description {
+  color: var(--fg-2);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+  max-width: 920px;
+}
+
+.careers-job-details {
+  border-top: 1px solid var(--border-lt);
+  padding-top: 14px;
+}
+
+.careers-job-details summary {
+  color: var(--fg);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.careers-job-details-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-top: 18px;
+}
+
+.careers-job-details-grid--open {
+  border-top: 1px solid var(--border-lt);
+  padding-top: 22px;
+}
+
+.careers-job-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.careers-job-list {
+  color: var(--fg-2);
+  display: grid;
+  font-size: 13px;
+  gap: 8px;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.careers-job-actions {
+  border-top: 1px solid var(--border-lt);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 22px;
+}
+
 /* ── § 03  pipeline-grid-6 - time strap emphasis ───────────
    The pipeline-step-time lines double as benefit labels;
    increase weight slightly so they land at a glance.        */
@@ -47,6 +236,19 @@
   /* Hero dossier card - full width on small screens */
   .hero-aside .dossier-card {
     width: 100%;
+  }
+
+  .careers-job-header {
+    flex-direction: column;
+  }
+
+  .careers-job-meta {
+    justify-content: flex-start;
+    max-width: none;
+  }
+
+  .careers-job-details-grid {
+    grid-template-columns: 1fr;
   }
 }
 
