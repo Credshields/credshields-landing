@@ -708,6 +708,11 @@
       ].filter(Boolean);
     }
 
+    function getApplyUrl(job) {
+      var title = job && job.title ? String(job.title) : 'CredShields role';
+      return 'https://form.jotform.com/260766620240048?role=' + encodeURIComponent(title);
+    }
+
     function setHero(job) {
       var title = job.title || 'Open role';
       document.title = title + ' | CredShields Careers';
@@ -719,7 +724,7 @@
 
       var applyLink = document.getElementById('job-apply-link');
       if (applyLink) {
-        applyLink.href = job.apply_url || 'mailto:info@credshields.com?subject=' + encodeURIComponent('Application: ' + title);
+        applyLink.href = getApplyUrl(job);
       }
 
       var meta = document.getElementById('job-brief-meta');
@@ -801,7 +806,7 @@
       actions.className = 'careers-job-actions';
       var apply = document.createElement('a');
       apply.className = 'btn-primary-lg';
-      apply.href = job.apply_url || 'mailto:info@credshields.com?subject=' + encodeURIComponent('Application: ' + (job.title || 'CredShields role'));
+      apply.href = getApplyUrl(job);
       apply.textContent = 'Apply for Role';
       actions.appendChild(apply);
       var back = document.createElement('a');
