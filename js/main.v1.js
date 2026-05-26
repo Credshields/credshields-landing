@@ -76,7 +76,7 @@
         '<button class="cs-contact-close" type="button" aria-label="Close contact form" data-contact-close>✕</button>' +
         '<div class="cs-contact-kicker">Security briefing</div>' +
         '<h2 id="cs-contact-title" class="cs-contact-title">Talk to the CredShields team</h2>' +
-        '<p class="cs-contact-copy">Please fill out the form below to get in touch with the team. We typically respond within 48 hours. For urgent requests, drop a message in the <a href="https://t.me/solidityscan" target="_blank" rel="noopener noreferrer">SolidityScan Telegram community</a>.</p>' +
+        '<p class="cs-contact-copy">Please fill out the form below to get in touch with the team. We typically respond within 48 hours.</p>' +
         '<form class="cs-contact-form" novalidate>' +
           '<div class="cs-contact-status" role="status" aria-live="polite"></div>' +
           '<label class="cs-contact-field">Email <strong>*</strong><input type="email" name="email" autocomplete="email" required></label>' +
