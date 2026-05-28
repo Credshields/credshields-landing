@@ -12,7 +12,7 @@ const assetExtensions = new Set([
 const copyDirs = ['css', 'js', 'images', 'CredShields_Logos'];
 const copyFiles = fs.readdirSync(root).filter((file) => {
   const ext = path.extname(file).toLowerCase();
-  return ext === '.html' || file === 'favicon.ico' || file === 'favicon-shield.ico';
+  return ext === '.html';
 });
 
 const deployKey = (
