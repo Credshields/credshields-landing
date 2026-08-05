@@ -1,0 +1,3865 @@
+<!doctype html>
+<html lang="en" data-mode="apps">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CredShields | AI-led Security Audits &amp; Pentesting</title>
+    <meta
+      name="description"
+      content="CredShields secures apps, smart contracts, and Web3 protocols with AI-powered audits, pentesting, and continuous security for 200+ institutions."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="CredShields - AI-led Security" />
+    <meta
+      property="og:description"
+      content="AI-powered audits and continuous pentesting - delivered at machine speed, verified by world-class human pentesters."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://credshields.com/" />
+    <meta
+      property="og:image"
+      content="https://credshields.com/images/product_one_img.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://credshields.com/images/product_one_img.png"
+    />
+    <link rel="canonical" href="https://credshields.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <!-- Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="css/design-tokens.v1.css" />
+    <link rel="stylesheet" href="css/main.v1.css" />
+    <link rel="stylesheet" href="css/app_home.css" />
+
+    <!-- Calendly -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+
+    <!-- MS Clarity -->
+    <script async type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "ko6w13w47q");
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PN6ZFK2F");
+    </script>
+    <style>
+      :root {
+        /* Light / cream palette — CredShields Apps mode */
+        --bg: #f4f8f4;
+        --bg-2: #ebf3eb;
+        --surface: #ffffff;
+        --surface-2: #f9fcf9;
+        --border: rgba(10, 26, 12, 0.08);
+        --border-strong: rgba(10, 26, 12, 0.16);
+        --border-green: rgba(46, 125, 14, 0.28);
+
+        --text: #0a1a0c;
+        --text-dim: #4a6650;
+        --text-faint: #7a9a80;
+
+        /* Brand accents */
+        --green: #2e7d0e; /* forest green — primary accent (was neon) */
+        --green-2: #5aaa1e; /* mid green */
+        --green-deep: #1e3a24;
+        --lime: #a8ff45; /* loud lime — highlights + CTA */
+        --lime-hover: #90e830;
+        --green-glow: rgba(168, 255, 69, 0.35);
+        --green-wash: rgba(168, 255, 69, 0.18);
+
+        /* Terminal ink surface (kept dark so the code panel reads "real") */
+        --ink: #0a1a0c;
+        --ink-2: #0e2412;
+
+        --radius: 10px;
+        --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Figtree", system-ui, sans-serif;
+        font-weight: 400;
+        line-height: 1.6;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      /* Soft cream wash — replaces dark ambient glow */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        background:
+          radial-gradient(
+            ellipse 900px 600px at 15% -5%,
+            rgba(168, 255, 69, 0.1),
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 700px 500px at 85% 10%,
+            rgba(46, 125, 14, 0.05),
+            transparent 60%
+          );
+      }
+
+      ::selection {
+        background: var(--lime);
+        color: var(--text);
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        background: none;
+        border: 0;
+        cursor: pointer;
+      }
+
+      /* type */
+      .display {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 600;
+        font-variation-settings: "opsz" 96;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        color: var(--text);
+      }
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+      .eyebrow {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 3px rgba(46, 125, 14, 0.15);
+      }
+
+      /* layout */
+      .container {
+        width: min(1280px, 92%);
+        margin: 0 auto;
+        position: relative;
+        z-index: 5;
+      }
+
+      /* nav */
+      nav.site {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding: 18px 0;
+        backdrop-filter: blur(14px);
+        background: rgba(244, 248, 244, 0.82);
+        border-bottom: 1px solid var(--border);
+      }
+      nav.site .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 700;
+        font-size: 19px;
+        letter-spacing: -0.02em;
+        color: var(--text);
+      }
+      .brand-mark {
+        width: 26px;
+        height: 26px;
+        position: relative;
+        display: grid;
+        place-items: center;
+      }
+      .brand-mark svg {
+        width: 100%;
+        height: 100%;
+      }
+      nav.site ul {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      nav.site ul a {
+        font-size: 14px;
+        color: var(--text-dim);
+        transition: color 0.2s var(--ease);
+        position: relative;
+      }
+      nav.site ul a:hover {
+        color: var(--text);
+      }
+      .nav-cta {
+        padding: 10px 18px;
+        border: 1px solid var(--green);
+        color: var(--green);
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.25s var(--ease);
+        background: transparent;
+      }
+      .nav-cta:hover {
+        background: var(--lime);
+        color: var(--text);
+        border-color: var(--lime);
+        box-shadow: 0 4px 18px var(--green-glow);
+      }
+      .nav-cta svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      /* buttons */
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 26px;
+        background: var(--lime);
+        color: var(--text);
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: -0.005em;
+        transition: all 0.25s var(--ease);
+        box-shadow: 0 2px 10px var(--green-glow);
+      }
+      .btn-primary:hover {
+        transform: translateY(-1px);
+        background: var(--lime-hover);
+        box-shadow: 0 10px 30px var(--green-glow);
+      }
+      .btn-primary svg {
+        width: 14px;
+        height: 14px;
+        transition: transform 0.25s var(--ease);
+      }
+      .btn-primary:hover svg {
+        transform: translateX(3px);
+      }
+
+      .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 22px;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 999px;
+        border: 1px solid var(--border-strong);
+        background: var(--surface);
+        transition: all 0.25s var(--ease);
+      }
+      .btn-ghost:hover {
+        border-color: var(--green);
+        color: var(--green);
+        background: var(--surface);
+      }
+
+      /* HERO ---------------------------- */
+      .hero {
+        position: relative;
+        padding: 180px 0 100px;
+        overflow: hidden;
+      }
+      .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(46, 125, 14, 0.07) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(46, 125, 14, 0.07) 1px,
+            transparent 1px
+          );
+        background-size: 64px 64px;
+        mask-image: radial-gradient(
+          ellipse 80% 70% at 50% 40%,
+          black 30%,
+          transparent 75%
+        );
+        z-index: 0;
+      }
+      .hero .container {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .ticker {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 14px;
+        border: 1px solid var(--border-green);
+        border-radius: 999px;
+        background: rgba(168, 255, 69, 0.14);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--green-deep);
+        margin-bottom: 32px;
+      }
+      .ticker-dot {
+        position: relative;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--green);
+      }
+      .ticker-dot::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        border: 1.5px solid var(--green);
+        animation: pulse 2s ease-out infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(0.6);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(2.2);
+          opacity: 0;
+        }
+      }
+
+      h1.hero-title {
+        font-size: clamp(48px, 6.5vw, 92px);
+        max-width: 12ch;
+      }
+      h1 .accent {
+        color: var(--green);
+        font-style: italic;
+        font-weight: 500;
+        font-family: "Bricolage Grotesque", serif;
+        position: relative;
+        display: inline-block;
+      }
+      h1 .accent::after {
+        content: "";
+        position: absolute;
+        left: -0.05em;
+        right: -0.05em;
+        bottom: 0.08em;
+        height: 0.32em;
+        background: var(--lime);
+        opacity: 0.55;
+        z-index: -1;
+        border-radius: 2px;
+      }
+
+      .hero-sub {
+        margin: 28px 0 40px;
+        font-size: 18px;
+        color: var(--text-dim);
+        max-width: 52ch;
+        line-height: 1.6;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      /* terminal card — keep dark for authenticity of a code panel */
+      .terminal {
+        position: relative;
+        background: linear-gradient(180deg, #0e2412 0%, #0a1a0c 100%);
+        border: 1px solid rgba(10, 26, 12, 0.9);
+        border-radius: 14px;
+        padding: 0;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        overflow: hidden;
+        box-shadow:
+          0 30px 60px rgba(10, 26, 12, 0.22),
+          0 4px 14px rgba(10, 26, 12, 0.08);
+      }
+      .terminal::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(168, 255, 69, 0.8),
+          transparent
+        );
+      }
+      .terminal-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+      }
+      .dot-r {
+        background: #ff5f57;
+        opacity: 0.7;
+      }
+      .dot-y {
+        background: #f5be3c;
+        opacity: 0.7;
+      }
+      .dot-g {
+        background: var(--lime);
+        opacity: 0.9;
+        box-shadow: 0 0 8px rgba(168, 255, 69, 0.5);
+      }
+      .terminal-title {
+        margin-left: 12px;
+        font-size: 11px;
+        color: rgba(244, 248, 244, 0.45);
+        letter-spacing: 0.04em;
+      }
+      .terminal-body {
+        padding: 22px 22px 26px;
+        line-height: 1.8;
+        color: #dce8dc;
+      }
+      .tl-line {
+        display: flex;
+        gap: 10px;
+      }
+      .tl-prompt {
+        color: var(--lime);
+        opacity: 0.95;
+      }
+      .tl-dim {
+        color: rgba(244, 248, 244, 0.55);
+      }
+      .tl-text {
+        color: #dce8dc;
+      }
+      .tl-crit {
+        color: #ff8878;
+        font-weight: 500;
+      }
+      .tl-ok {
+        color: var(--lime);
+      }
+      .tl-tag {
+        display: inline-block;
+        padding: 1px 8px;
+        font-size: 11px;
+        border-radius: 4px;
+        background: rgba(168, 255, 69, 0.14);
+        color: var(--lime);
+        border: 1px solid rgba(168, 255, 69, 0.35);
+      }
+      .caret {
+        display: inline-block;
+        width: 8px;
+        height: 14px;
+        background: var(--lime);
+        vertical-align: -2px;
+        margin-left: 2px;
+        animation: blink 1s steps(2) infinite;
+        box-shadow: 0 0 8px var(--lime);
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .scan {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(
+          180deg,
+          transparent,
+          rgba(168, 255, 69, 0.09),
+          transparent
+        );
+        pointer-events: none;
+        animation: scan 4s linear infinite;
+      }
+      @keyframes scan {
+        0% {
+          top: -60px;
+        }
+        100% {
+          top: 100%;
+        }
+      }
+
+      /* logo strip ---------------------- */
+      .logos-section {
+        padding: 60px 0 40px;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .logos-label {
+        text-align: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--text-dim);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 36px;
+      }
+      .logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+        opacity: 0.75;
+      }
+      .logo-item {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 600;
+        font-size: 22px;
+        letter-spacing: -0.02em;
+        color: var(--text);
+        transition:
+          opacity 0.2s var(--ease),
+          color 0.2s var(--ease);
+      }
+      .logo-item.alt {
+        font-style: italic;
+        font-weight: 400;
+      }
+      .logo-item.mono {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 17px;
+        font-weight: 500;
+      }
+      .logo-item:hover {
+        color: var(--green);
+      }
+
+      /* section heading pattern --------- */
+      section.block {
+        padding: 120px 0;
+        position: relative;
+      }
+      .section-head {
+        margin-bottom: 64px;
+        max-width: 820px;
+      }
+      .section-head h2 {
+        font-size: clamp(36px, 5vw, 64px);
+        margin-top: 16px;
+        max-width: 18ch;
+      }
+      .section-head p {
+        margin-top: 20px;
+        color: var(--text-dim);
+        font-size: 18px;
+        max-width: 60ch;
+      }
+
+      /* differentiators --------------- */
+      .diffs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .diff {
+        position: relative;
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        transition: all 0.3s var(--ease);
+        overflow: hidden;
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+      .diff::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          400px circle at var(--mx, 50%) var(--my, 0%),
+          rgba(168, 255, 69, 0.14),
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.3s var(--ease);
+        pointer-events: none;
+      }
+      .diff:hover {
+        border-color: var(--border-green);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(10, 26, 12, 0.08);
+      }
+      .diff:hover::before {
+        opacity: 1;
+      }
+      .diff-num {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--green);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+      }
+      .diff-num::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+      .diff-visual {
+        height: 140px;
+        margin-bottom: 24px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            ellipse at center,
+            rgba(168, 255, 69, 0.1) 0%,
+            transparent 70%
+          ),
+          var(--bg-2);
+      }
+      .diff h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 500;
+        font-size: 22px;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        color: var(--text);
+      }
+      .diff p {
+        color: var(--text-dim);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      .diff strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* Visual illustrations for diff cards */
+      .viz-shield {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .viz-shield svg {
+        width: 68px;
+        height: 68px;
+        filter: drop-shadow(0 4px 10px rgba(46, 125, 14, 0.18));
+      }
+
+      .viz-brain {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .viz-brain-nodes {
+        width: 120px;
+        height: 120px;
+        position: relative;
+      }
+      .viz-brain-nodes span {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(46, 125, 14, 0.12);
+      }
+      .viz-brain-nodes svg {
+        position: absolute;
+        inset: 0;
+      }
+
+      .viz-cube {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        perspective: 400px;
+      }
+      .cube {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: spin 18s linear infinite;
+      }
+      .cube div {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 1px solid var(--green);
+        background: rgba(168, 255, 69, 0.12);
+      }
+      .cube div:nth-child(1) {
+        transform: translateZ(30px);
+      }
+      .cube div:nth-child(2) {
+        transform: rotateY(180deg) translateZ(30px);
+      }
+      .cube div:nth-child(3) {
+        transform: rotateY(90deg) translateZ(30px);
+      }
+      .cube div:nth-child(4) {
+        transform: rotateY(-90deg) translateZ(30px);
+      }
+      .cube div:nth-child(5) {
+        transform: rotateX(90deg) translateZ(30px);
+      }
+      .cube div:nth-child(6) {
+        transform: rotateX(-90deg) translateZ(30px);
+      }
+      @keyframes spin {
+        0% {
+          transform: rotateX(-20deg) rotateY(0deg);
+        }
+        100% {
+          transform: rotateX(-20deg) rotateY(360deg);
+        }
+      }
+
+      /* problem section ---------------- */
+      .problems-wrap {
+        position: relative;
+      }
+      .problems {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 80px;
+      }
+      .problem {
+        padding: 36px 28px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        position: relative;
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+      .problem-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        background: rgba(192, 0, 10, 0.06);
+        border: 1px solid rgba(192, 0, 10, 0.22);
+        display: grid;
+        place-items: center;
+        margin-bottom: 24px;
+        color: #c0000a;
+      }
+      .problem h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+        margin-bottom: 12px;
+        color: var(--text);
+      }
+      .problem p {
+        color: var(--text-dim);
+        font-size: 15px;
+      }
+      .problem strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .kicker {
+        text-align: center;
+        font-family: "Bricolage Grotesque", serif;
+        font-size: clamp(32px, 4.5vw, 56px);
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+        max-width: 18ch;
+        margin: 0 auto;
+        color: var(--text);
+      }
+      .kicker em {
+        color: var(--green);
+        font-style: italic;
+        font-weight: 500;
+        position: relative;
+      }
+      .kicker em::after {
+        content: "";
+        position: absolute;
+        left: -0.02em;
+        right: -0.02em;
+        bottom: 0.08em;
+        height: 0.32em;
+        background: var(--lime);
+        opacity: 0.5;
+        z-index: -1;
+        border-radius: 2px;
+      }
+
+      /* platform section --------------- */
+      .platform-intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: end;
+        margin-bottom: 80px;
+      }
+      .platform-intro h2 {
+        font-size: clamp(36px, 5vw, 64px);
+      }
+      .platform-intro p {
+        color: var(--text-dim);
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 50ch;
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .step {
+        display: grid;
+        grid-template-columns: 60px 1fr 1.1fr;
+        gap: 40px;
+        padding: 48px 0;
+        border-top: 1px solid var(--border);
+        align-items: center;
+      }
+      .step:last-child {
+        border-bottom: 1px solid var(--border);
+      }
+      .step-num {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--green);
+        letter-spacing: 0.08em;
+        font-weight: 600;
+      }
+      .step-text h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text-dim);
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        margin-bottom: 14px;
+      }
+      .step-text h4 {
+        font-family: "Bricolage Grotesque", serif;
+        font-size: clamp(24px, 3vw, 34px);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+      .step-text p {
+        color: var(--text-dim);
+        font-size: 16px;
+        max-width: 45ch;
+      }
+      .step-viz {
+        height: 200px;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: var(--surface);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+
+      /* step visualizations */
+      .viz-map {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(46, 125, 14, 0.1) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(46, 125, 14, 0.1) 1px,
+            transparent 1px
+          );
+        background-size: 24px 24px;
+      }
+      .viz-map::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle 70px at 30% 50%,
+            rgba(168, 255, 69, 0.55),
+            transparent 70%
+          ),
+          radial-gradient(
+            circle 60px at 65% 40%,
+            rgba(168, 255, 69, 0.38),
+            transparent 70%
+          ),
+          radial-gradient(
+            circle 50px at 80% 70%,
+            rgba(46, 125, 14, 0.28),
+            transparent 70%
+          );
+      }
+      .viz-detect {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+      .bar {
+        width: 6px;
+        background: var(--green);
+        border-radius: 3px;
+        opacity: 0.35;
+        animation: barpulse 2s ease-in-out infinite;
+      }
+      .bar:nth-child(1) {
+        height: 30%;
+        animation-delay: 0s;
+      }
+      .bar:nth-child(2) {
+        height: 60%;
+        animation-delay: 0.1s;
+      }
+      .bar:nth-child(3) {
+        height: 85%;
+        animation-delay: 0.2s;
+        opacity: 1;
+        background: var(--lime);
+        box-shadow: 0 0 10px rgba(168, 255, 69, 0.6);
+      }
+      .bar:nth-child(4) {
+        height: 45%;
+        animation-delay: 0.3s;
+      }
+      .bar:nth-child(5) {
+        height: 70%;
+        animation-delay: 0.4s;
+      }
+      .bar:nth-child(6) {
+        height: 50%;
+        animation-delay: 0.5s;
+      }
+      .bar:nth-child(7) {
+        height: 95%;
+        animation-delay: 0.6s;
+        opacity: 1;
+        background: var(--lime);
+        box-shadow: 0 0 10px rgba(168, 255, 69, 0.6);
+      }
+      .bar:nth-child(8) {
+        height: 40%;
+        animation-delay: 0.7s;
+      }
+      .bar:nth-child(9) {
+        height: 65%;
+        animation-delay: 0.8s;
+      }
+      @keyframes barpulse {
+        0%,
+        100% {
+          transform: scaleY(1);
+        }
+        50% {
+          transform: scaleY(1.15);
+        }
+      }
+      .viz-check {
+        position: absolute;
+        inset: 0;
+        padding: 20px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        color: var(--text-dim);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        justify-content: center;
+      }
+      .check-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .check-row .tag-ok {
+        color: var(--green);
+        font-weight: 600;
+      }
+      .check-row .tag-bad {
+        color: var(--text-faint);
+        text-decoration: line-through;
+      }
+      .viz-fix {
+        position: absolute;
+        inset: 0;
+        padding: 16px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 10.5px;
+        color: var(--text-dim);
+      }
+      .fix-minus {
+        color: #c0000a;
+      }
+      .fix-plus {
+        color: var(--green);
+        font-weight: 600;
+      }
+      .viz-repeat {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .cycle {
+        width: 110px;
+        height: 110px;
+        border: 1.5px dashed var(--green);
+        border-radius: 50%;
+        animation: rotate 14s linear infinite;
+        display: grid;
+        place-items: center;
+        position: relative;
+      }
+      .cycle::before,
+      .cycle::after {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--green);
+        box-shadow: 0 0 0 4px rgba(46, 125, 14, 0.15);
+      }
+      .cycle::before {
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cycle::after {
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.4;
+      }
+      .cycle span {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        color: var(--green);
+        letter-spacing: 0.08em;
+        font-weight: 600;
+      }
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* testimonials ------------------- */
+      .testimonials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .quote {
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+      .quote-mark {
+        font-family: "Bricolage Grotesque", serif;
+        font-size: 48px;
+        color: var(--green);
+        line-height: 0.5;
+        margin-bottom: 12px;
+        opacity: 0.85;
+      }
+      .quote p {
+        color: var(--text);
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+        flex: 1;
+      }
+      .quote-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+      }
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--lime),
+          rgba(168, 255, 69, 0.35)
+        );
+        border: 1px solid var(--border-green);
+        display: grid;
+        place-items: center;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        color: var(--green-deep);
+        font-weight: 600;
+      }
+      .quote-author-meta .name {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .quote-author-meta .role {
+        font-size: 12px;
+        color: var(--text-dim);
+        font-family: "JetBrains Mono", monospace;
+        margin-top: 2px;
+      }
+
+      /* final CTA — keep a bold ink block (only loud contrast block on the page) */
+      .final {
+        margin: 60px 0 80px;
+        padding: 100px 60px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        background:
+          radial-gradient(
+            ellipse 80% 100% at 50% 100%,
+            rgba(168, 255, 69, 0.22),
+            transparent 70%
+          ),
+          linear-gradient(180deg, #0e2412 0%, #0a1a0c 100%);
+        border: 1px solid rgba(168, 255, 69, 0.35);
+        color: #f4f8f4;
+        box-shadow: 0 30px 60px rgba(10, 26, 12, 0.18);
+      }
+      .final::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(168, 255, 69, 0.07) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(168, 255, 69, 0.07) 1px,
+            transparent 1px
+          );
+        background-size: 48px 48px;
+        mask-image: radial-gradient(
+          ellipse 70% 80% at 50% 100%,
+          black,
+          transparent 70%
+        );
+      }
+      .final-inner {
+        position: relative;
+        z-index: 2;
+      }
+      .final .eyebrow {
+        color: rgba(244, 248, 244, 0.7);
+      }
+      .final .eyebrow::before {
+        background: var(--lime);
+        box-shadow: 0 0 0 3px rgba(168, 255, 69, 0.2);
+      }
+      .final h2 {
+        font-family: "Bricolage Grotesque", serif;
+        font-size: clamp(36px, 5vw, 72px);
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        line-height: 1.05;
+        max-width: 16ch;
+        margin: 14px auto 28px;
+        color: #f4f8f4;
+      }
+      .final h2 em {
+        color: var(--lime);
+        font-style: italic;
+      }
+      .final p {
+        color: rgba(244, 248, 244, 0.65);
+        font-size: 17px;
+        max-width: 52ch;
+        margin: 0 auto 40px;
+      }
+
+      /* footer ------------------------- */
+      footer {
+        padding: 60px 0 40px;
+        border-top: 1px solid var(--border);
+        background: var(--surface);
+      }
+      .foot-top {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+      .foot-col h4 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        margin-bottom: 18px;
+        font-weight: 600;
+      }
+      .foot-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .foot-col a {
+        color: var(--text-dim);
+        font-size: 14px;
+        transition: color 0.2s var(--ease);
+      }
+      .foot-col a:hover {
+        color: var(--green);
+      }
+      .foot-brand p {
+        color: var(--text-dim);
+        font-size: 14px;
+        max-width: 32ch;
+        margin: 16px 0 20px;
+      }
+      .socials {
+        display: flex;
+        gap: 8px;
+      }
+      .socials a {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        display: grid;
+        place-items: center;
+        color: var(--text-dim);
+        transition: all 0.2s var(--ease);
+        background: var(--bg);
+      }
+      .socials a:hover {
+        border-color: var(--green);
+        color: var(--green);
+      }
+      .foot-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 28px;
+        border-top: 1px solid var(--border);
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--text-faint);
+      }
+      .foot-bottom .legal {
+        display: flex;
+        gap: 24px;
+      }
+      .foot-bottom a:hover {
+        color: var(--text-dim);
+      }
+
+      /* responsive --------------------- */
+      @media (max-width: 960px) {
+        .hero {
+          padding: 140px 0 60px;
+        }
+        .hero .container {
+          grid-template-columns: 1fr;
+          gap: 50px;
+        }
+        .diffs,
+        .problems,
+        .testimonials {
+          grid-template-columns: 1fr;
+        }
+        .platform-intro {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        .step {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 36px 0;
+        }
+        .foot-top {
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+        nav.site ul {
+          display: none;
+        }
+        .final {
+          padding: 70px 24px;
+        }
+      }
+      @media (max-width: 560px) {
+        h1.hero-title {
+          font-size: 44px;
+        }
+        section.block {
+          padding: 80px 0;
+        }
+        .foot-top {
+          grid-template-columns: 1fr;
+        }
+        .foot-bottom {
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+
+      /* reveal on scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.8s var(--ease),
+          transform 0.8s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ============ BRAND LOGO ============ */
+      .brand img {
+        height: 28px;
+        width: auto;
+        display: block;
+      }
+      .foot-brand .brand img {
+        height: 30px;
+      }
+      .final-logo {
+        height: 30px;
+        width: auto;
+        display: block;
+        margin: 0 auto 28px;
+        opacity: 0.92;
+      }
+      @media (max-width: 560px) {
+        .brand img {
+          height: 24px;
+        }
+      }
+
+      /* ============ LONG FORM ============ */
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 72px;
+        align-items: start;
+      }
+      .split h2 {
+        font-size: clamp(32px, 4.2vw, 52px);
+        margin-top: 16px;
+        max-width: 17ch;
+      }
+      .prose p {
+        font-size: 17px;
+        color: var(--text-dim);
+        line-height: 1.72;
+        margin-bottom: 22px;
+        max-width: 66ch;
+      }
+      .prose p:last-child {
+        margin-bottom: 0;
+      }
+      .prose strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* risk rows */
+      .risk-list {
+        border-top: 1px solid var(--border);
+      }
+      .risk-row {
+        display: grid;
+        grid-template-columns: 54px 1fr 1.3fr;
+        gap: 40px;
+        padding: 40px 0;
+        border-bottom: 1px solid var(--border);
+        align-items: start;
+      }
+      .risk-row .risk-idx {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--green);
+        letter-spacing: 0.08em;
+        padding-top: 8px;
+      }
+      /* .risk-row h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 500;
+        font-size: clamp(21px, 2.4vw, 26px);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        color: var(--text);
+        margin-bottom: 12px;
+      } */
+      .risk-row .lead {
+        font-size: 16px;
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .risk-row .detail {
+        font-size: 15.5px;
+        color: var(--text-dim);
+        line-height: 1.72;
+      }
+
+      /* takeaways */
+      .takes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .take {
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+      .take .mark {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        color: var(--green);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 16px;
+      }
+      /* .take h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 500;
+        font-size: 21px;
+        letter-spacing: -0.018em;
+        line-height: 1.25;
+        margin-bottom: 12px;
+        color: var(--text);
+      } */
+      .take p {
+        font-size: 15px;
+        color: var(--text-dim);
+        line-height: 1.65;
+      }
+
+      /* faq */
+      .faq {
+        border-top: 1px solid var(--border);
+        max-width: 940px;
+      }
+      .faq details {
+        border-bottom: 1px solid var(--border);
+      }
+      .faq summary {
+        list-style: none;
+        cursor: pointer;
+        padding: 26px 0;
+        display: flex;
+        gap: 28px;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* font-family: "Bricolage Grotesque", serif; */
+        font-size: clamp(18px, 2vw, 21px);
+        font-weight: 500;
+        letter-spacing: -0.018em;
+        line-height: 1.3;
+        color: var(--text);
+        transition: color 0.2s var(--ease);
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary:hover {
+        color: var(--green);
+      }
+      .faq summary::after {
+        content: "+";
+        font-family: "JetBrains Mono", monospace;
+        font-size: 21px;
+        color: var(--green);
+        flex: none;
+        line-height: 1.2;
+      }
+      .faq details[open] summary {
+        color: var(--green);
+      }
+      .faq details[open] summary::after {
+        content: "-";
+      }
+      .faq .a {
+        padding: 0 0 28px;
+        font-size: 16px;
+        color: var(--text-dim);
+        line-height: 1.72;
+        max-width: 74ch;
+      }
+
+      @media (max-width: 960px) {
+        .split {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .risk-row {
+          grid-template-columns: 40px 1fr;
+          gap: 20px;
+          padding: 32px 0;
+        }
+        .risk-row .detail {
+          grid-column: 2;
+        }
+        .takes {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* ============ CASE STUDY ============ */
+      .crumbs {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--text-faint);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .crumbs a {
+        transition: color 0.2s var(--ease);
+      }
+      .crumbs a:hover {
+        color: var(--green);
+      }
+      .crumbs span {
+        color: var(--border-strong);
+      }
+
+      .cs-hero {
+        position: relative;
+        padding: 148px 0 72px;
+        overflow: hidden;
+      }
+      .cs-hero .container {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 60px;
+        align-items: start;
+      }
+      h1.cs-title {
+        font-size: clamp(46px, 6.2vw, 86px);
+        max-width: 14ch;
+      }
+      .cs-locale {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 13px;
+        color: var(--text-dim);
+        letter-spacing: 0.02em;
+        margin-top: 22px;
+      }
+
+      .cs-facts {
+        margin-top: 40px;
+        border-top: 1px solid var(--border);
+      }
+      .cs-facts div {
+        display: grid;
+        grid-template-columns: 176px 1fr;
+        gap: 28px;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .cs-facts dt {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        font-weight: 600;
+        padding-top: 3px;
+      }
+      .cs-facts dd {
+        font-size: 16px;
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      /* stats */
+      .stat-band {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .stat {
+        padding: 34px 30px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+      .stat .num {
+        /* font-family: "Bricolage Grotesque", serif; */
+        font-weight: 600;
+        font-variation-settings: "opsz" 96;
+        font-size: clamp(44px, 5vw, 62px);
+        letter-spacing: -0.035em;
+        line-height: 0.95;
+        color: var(--text);
+      }
+      .stat.hero-stat .num {
+        color: var(--green);
+      }
+      .stat .num small {
+        font-size: 0.42em;
+        letter-spacing: -0.01em;
+        color: var(--text-dim);
+        font-weight: 500;
+      }
+      .stat .lbl {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        font-weight: 600;
+        margin-top: 18px;
+      }
+      .stat .note {
+        font-size: 14px;
+        color: var(--text-dim);
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+
+      /* severity distribution */
+      .sev {
+        margin-top: 20px;
+        padding: 30px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+      }
+      .sev h4 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--text-faint);
+        font-weight: 600;
+        margin-bottom: 18px;
+      }
+      .sev-track {
+        display: flex;
+        height: 14px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: var(--bg-2);
+      }
+      .sev-track i {
+        height: 100%;
+        display: block;
+      }
+      .sev-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 26px;
+        margin-top: 20px;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+      }
+      .sev-legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--text-dim);
+      }
+      .sev-legend b {
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        display: inline-block;
+      }
+      .sev-legend u {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      /* risk list */
+      .risks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .risk {
+        display: flex;
+        gap: 18px;
+        padding: 26px 28px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+        transition: all 0.3s var(--ease);
+        position: relative;
+        overflow: hidden;
+      }
+      .risk::before,
+      .more-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(
+          320px circle at var(--mx, 50%) var(--my, 0%),
+          rgba(168, 255, 69, 0.13),
+          transparent 62%
+        );
+        opacity: 0;
+        transition: opacity 0.3s var(--ease);
+      }
+      .risk:hover::before,
+      .more-card:hover::before {
+        opacity: 1;
+      }
+      .risk > * {
+        position: relative;
+      }
+      .risk:hover {
+        border-color: var(--border-green);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(10, 26, 12, 0.08);
+      }
+      .risk-idx {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--green);
+        letter-spacing: 0.08em;
+        padding-top: 4px;
+        min-width: 20px;
+      }
+      .risk h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 500;
+        font-size: 19px;
+        letter-spacing: -0.015em;
+        line-height: 1.25;
+        margin-bottom: 9px;
+        color: var(--text);
+      }
+      .risk p {
+        font-size: 15px;
+        color: var(--text-dim);
+        line-height: 1.6;
+      }
+
+      /* outcome callout */
+      .outcome {
+        margin-top: 20px;
+        padding: 34px 36px;
+        border-radius: var(--radius);
+        border: 1px solid var(--border-green);
+        background: var(--green-wash);
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+      }
+      .outcome svg {
+        width: 26px;
+        height: 26px;
+        flex: none;
+        margin-top: 2px;
+        color: var(--green);
+      }
+      .outcome h4 {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--green);
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .outcome p {
+        font-size: 17px;
+        color: var(--text);
+        line-height: 1.55;
+        max-width: 72ch;
+      }
+
+      /* relevant for */
+      .fits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .fit {
+        padding: 28px;
+        border: 1px dashed var(--border-strong);
+        border-radius: var(--radius);
+        background: var(--surface-2);
+        transition: all 0.3s var(--ease);
+      }
+      .fit:hover {
+        border-color: var(--green);
+        border-style: solid;
+        background: var(--surface);
+      }
+      .fit svg {
+        width: 20px;
+        height: 20px;
+        color: var(--green);
+        margin-bottom: 16px;
+        display: block;
+      }
+      .fit p {
+        font-size: 15.5px;
+        color: var(--text);
+        line-height: 1.55;
+      }
+
+      /* more case studies */
+      .more {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+      .more-card {
+        padding: 34px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 1px 4px rgba(10, 26, 12, 0.04);
+        transition: all 0.3s var(--ease);
+        position: relative;
+        overflow: hidden;
+      }
+      .more-card > * {
+        position: relative;
+      }
+      .more-card:hover {
+        border-color: var(--border-green);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(10, 26, 12, 0.08);
+      }
+      .more-card .k {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--green);
+        font-weight: 600;
+      }
+      .more-card h3 {
+        font-family: "Bricolage Grotesque", serif;
+        font-weight: 500;
+        font-size: 28px;
+        letter-spacing: -0.02em;
+        margin: 14px 0 10px;
+        color: var(--text);
+      }
+      .more-card p {
+        font-size: 15px;
+        color: var(--text-dim);
+        flex: 1;
+      }
+      .more-card .go {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: var(--text-dim);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 26px;
+        padding-top: 18px;
+        border-top: 1px solid var(--border);
+      }
+      .more-card:hover .go {
+        color: var(--green);
+      }
+      .more-card .go svg {
+        width: 13px;
+        height: 13px;
+        transition: transform 0.25s var(--ease);
+      }
+      .more-card:hover .go svg {
+        transform: translateX(4px);
+      }
+
+      @media (max-width: 960px) {
+        .cs-hero {
+          padding: 128px 0 50px;
+        }
+        .cs-hero .container {
+          grid-template-columns: 1fr;
+          gap: 44px;
+        }
+        .stat-band,
+        .risks,
+        .fits,
+        .more {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        h1.cs-title {
+          font-size: 42px;
+        }
+        .cs-facts div {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .outcome {
+          flex-direction: column;
+          gap: 14px;
+          padding: 26px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--green);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- ═══════════════════════════════════════════════════════════
+     ALERT BAR
+════════════════════════════════════════════════════════════ -->
+    <div class="alert-bar" id="alert-banner" role="banner">
+      <div class="alert-dot"></div>
+      <span class="alert-text">
+        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR TEXT ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+        <span class="alert-chain"
+          >OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart
+          Contract Security.</span
+        >
+        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+        <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR TEXT ░░░░░░░░░░░░░ -->
+        <span class="alert-apps"
+          >Industry Security Report 2026 Now Live. AI-led Pentesting
+          Benchmark.</span
+        >
+        <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
+      </span>
+      <span class="alert-sub">Learn more about our findings.</span>
+      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR LINK ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+      <a
+        href="owasp-smart-contract-top-10-2026.html"
+        class="alert-link alert-chain"
+        >Explore →</a
+      >
+      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+      <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR LINK ░░░░░░░░░░░░░ -->
+      <a href="sample-report.html" class="alert-link alert-apps"
+        >Read Report →</a
+      >
+      <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
+      <button
+        id="close-banner"
+        style="
+          margin-left: 16px;
+          background: none;
+          border: none;
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 16px;
+          cursor: pointer;
+          line-height: 1;
+        "
+        aria-label="Close banner"
+      >
+        ✕
+      </button>
+    </div>
+    <!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+    <div class="nav-wrap">
+      <div class="nav">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="CredShields home">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+          <img
+            src="images/credshields_white_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="110"
+            class="show-chain"
+          />
+          <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+          <img
+            src="images/credshields_black_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="110"
+            class="show-apps"
+          />
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="about.html" class="nav-link">About</a>
+
+          <!-- Solutions dropdown - items tagged by mode -->
+          <div class="nav-link nav-dropdown">
+            <span>Solutions</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu nav-dropdown-wide">
+              <!-- ⛓ Chain-only solutions -->
+              <a
+                href="smart-contract-audits.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Smart Contract Audits</a
+              >
+              <a
+                href="dapp-protocol-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >DApp &amp; Protocol Security</a
+              >
+              <a
+                href="enterprise-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Enterprise Web &amp; Mobile Security</a
+              >
+              <a
+                href="penetration-testing.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Penetration Testing</a
+              >
+              <a
+                href="blockchain-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Blockchain Security</a
+              >
+              <a
+                href="cloud-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Cloud Infrastructure</a
+              >
+              <a
+                href="wallet-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Wallet Security</a
+              >
+              <a
+                href="continuous-monitoring.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Continuous Monitoring</a
+              >
+              <a
+                href="incident-response.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Incident Response</a
+              >
+              <a
+                href="security-training.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Security Training</a
+              >
+              <a
+                href="ai-security-tools.html"
+                class="nav-dropdown-item nav-chain-only"
+                >AI Security Tools</a
+              >
+              <div class="nav-dropdown-divider nav-chain-only"></div>
+              <a
+                href="https://solidityscan.com/"
+                class="nav-dropdown-item nav-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SolidityScan ↗</a
+              >
+              <a
+                href="https://rustscan.com/"
+                class="nav-dropdown-item nav-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RustScan ↗</a
+              >
+
+              <!-- 📱 Apps-only solutions (from apps_site, grouped) -->
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Flagship
+              </div>
+              <a
+                href="continuous-appsec.html"
+                class="nav-dropdown-flagship-row nav-apps-only"
+              >
+                <span class="nav-flagship-badge">FLAGSHIP</span>
+                <span>Continuous AppSec</span>
+              </a>
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Manual Pentesting
+              </div>
+              <a href="web-pentest.html" class="nav-dropdown-item nav-apps-only"
+                >Web App Pentesting</a
+              >
+              <a
+                href="mobile-pentest.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Mobile App Pentesting</a
+              >
+              <a
+                href="api-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >API Security Testing</a
+              >
+              <a
+                href="cloud-pentest.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Cloud Security Review</a
+              >
+              <a href="red-team.html" class="nav-dropdown-item nav-apps-only"
+                >Red Team Engagement</a
+              >
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Continuous &amp; Tooling
+              </div>
+              <a href="devsecops.html" class="nav-dropdown-item nav-apps-only"
+                >DevSecOps Integration</a
+              >
+              <a href="sast.html" class="nav-dropdown-item nav-apps-only"
+                >Source Code Review &amp; SAST</a
+              >
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Specialized
+              </div>
+              <a
+                href="ai-llm-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >AI / LLM AppSec</a
+              >
+              <a href="compliance.html" class="nav-dropdown-item nav-apps-only"
+                >Compliance Readiness</a
+              >
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Resources
+              </div>
+              <a
+                href="sample-report.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Sample Pentest Report</a
+              >
+              <a
+                href="appsec-maturity.html"
+                class="nav-dropdown-item nav-apps-only"
+                >AppSec Maturity Model</a
+              >
+              <a
+                href="pentest-vs-scan.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Pentest vs Vuln Scan</a
+              >
+            </div>
+          </div>
+
+          <a href="case-studies.html" class="nav-link">Case Studies</a>
+
+          <!-- Industries dropdown -->
+          <div class="nav-link nav-dropdown">
+            <span>Industries</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <!-- ⛓ Chain-only industries -->
+              <a
+                href="web3-protocol-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Web3 Protocols &amp; Exchanges</a
+              >
+              <a
+                href="stablecoins.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Stablecoins</a
+              >
+              <a
+                href="realworldassets.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Real World Assets</a
+              >
+              <a
+                href="crosschainbridge.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Cross-Chain Bridge</a
+              >
+              <a href="payments.html" class="nav-dropdown-item nav-chain-only"
+                >Payments &amp; DeFi</a
+              >
+              <!-- 📱 Apps-only industries (from apps_site) -->
+              <a
+                href="fintech-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Finance &amp; Fintech</a
+              >
+              <a
+                href="saas-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >SaaS &amp; Enterprise</a
+              >
+              <a
+                href="healthcare-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Healthcare &amp; Life Sciences</a
+              >
+              <a
+                href="industry-edtech.html"
+                class="nav-dropdown-item nav-apps-only"
+                ><span class="nav-flagship-badge nav-flag-new">NEW</span>
+                EdTech</a
+              >
+              <a
+                href="industry-ecommerce.html"
+                class="nav-dropdown-item nav-apps-only"
+                >E-commerce &amp; Retail</a
+              >
+              <a
+                href="industry-govtech.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Public Sector / GovTech</a
+              >
+              <!-- ✅ Shared -->
+              <a href="gaming-security.html" class="nav-dropdown-item"
+                >Gaming &amp; Digital Assets</a
+              >
+            </div>
+          </div>
+
+          <!-- Resources dropdown -->
+          <div class="nav-link nav-dropdown">
+            <span>Resources</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <!-- ⛓ Chain-only resources -->
+              <a
+                href="recently-audited.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Recently Audited</a
+              >
+              <a href="ecosystem.html" class="nav-dropdown-item nav-chain-only"
+                >Ecosystem</a
+              >
+              <!-- 📱 Apps-only resources (from apps_site) -->
+              <a
+                href="sample-report.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Sample Pentest Report</a
+              >
+              <a
+                href="appsec-maturity.html"
+                class="nav-dropdown-item nav-apps-only"
+                >AppSec Maturity Model</a
+              >
+
+              <!-- ✅ Shared -->
+              <a
+                href="https://discover.credshields.com/"
+                class="nav-dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blog ↗</a
+              >
+              <a href="brand-guidelines.html" class="nav-dropdown-item"
+                >Brand Guidelines</a
+              >
+              <a href="careers.html" class="nav-dropdown-item">Careers</a>
+            </div>
+          </div>
+
+          <!-- Institutions - Chain only -->
+          <div class="nav-link nav-dropdown nav-chain-only">
+            <span>Institutions</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <a href="Institutions.html" class="nav-dropdown-item">Overview</a>
+              <a href="vc-crypto-funds.html" class="nav-dropdown-item"
+                >VCs &amp; Crypto Funds</a
+              >
+              <a href="stablecoins.html" class="nav-dropdown-item"
+                >Stablecoins</a
+              >
+              <a href="crosschainbridge.html" class="nav-dropdown-item"
+                >Cross-Chain Bridge</a
+              >
+              <a href="realworldassets.html" class="nav-dropdown-item"
+                >Real World Assets</a
+              >
+              <a href="payments.html" class="nav-dropdown-item">Payments</a>
+            </div>
+          </div>
+
+          <!-- OWASP Top 10 - Chain only -->
+          <div class="nav-link nav-dropdown nav-chain-only">
+            <span>OWASP Top 10</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <a
+                href="owasp-smart-contract-top-10-2025.html"
+                class="nav-dropdown-item"
+                >2025</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2026.html"
+                class="nav-dropdown-item"
+                >2026</a
+              >
+            </div>
+          </div>
+        </nav>
+
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <!-- Mode Toggle -->
+          <div class="mode-toggle" role="tablist" aria-label="Security surface">
+            <div class="mode-toggle-slider" aria-hidden="true"></div>
+            <button
+              class="mode-toggle-btn"
+              data-mode="apps"
+              role="tab"
+              aria-pressed="true"
+            >
+              Apps
+            </button>
+            <button
+              class="mode-toggle-btn"
+              data-mode="chain"
+              role="tab"
+              aria-pressed="false"
+            >
+              Chain
+            </button>
+          </div>
+          <button class="btn-primary" data-contact-form>
+            Book Security Audit
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="mobile-menu-btn"
+          id="mobile-menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     MOBILE OVERLAY
+════════════════════════════════════════════════════════════ -->
+    <div
+      class="mobile-overlay"
+      id="mobile-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation"
+    >
+      <div class="mobile-overlay-head">
+        <a href="index.html" class="nav-logo">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+          <img
+            src="images/credshields_white_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="30"
+            class="show-chain"
+          />
+          <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+          <img
+            src="images/credshields_black_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="30"
+            class="show-apps"
+          />
+        </a>
+        <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a
+          href="about.html"
+          class="mobile-nav-link"
+          style="display: block; padding: 16px 0"
+          >About</a
+        >
+      </div>
+
+      <!-- Solutions -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-solutions"
+        >
+          <span>Solutions</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-solutions">
+          <!-- ⛓ Chain-only -->
+          <a
+            href="smart-contract-audits.html"
+            class="mobile-sub-link nav-chain-only"
+            >Smart Contract Audits</a
+          >
+          <a
+            href="dapp-protocol-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >DApp &amp; Protocol Security</a
+          >
+          <a
+            href="enterprise-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Enterprise Web &amp; Mobile Security</a
+          >
+          <a
+            href="penetration-testing.html"
+            class="mobile-sub-link nav-chain-only"
+            >Penetration Testing</a
+          >
+          <a
+            href="blockchain-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Blockchain Security</a
+          >
+          <a href="cloud-security.html" class="mobile-sub-link nav-chain-only"
+            >Cloud Infrastructure</a
+          >
+          <a href="wallet-security.html" class="mobile-sub-link nav-chain-only"
+            >Wallet Security</a
+          >
+          <a
+            href="continuous-monitoring.html"
+            class="mobile-sub-link nav-chain-only"
+            >Continuous Monitoring</a
+          >
+          <a
+            href="incident-response.html"
+            class="mobile-sub-link nav-chain-only"
+            >Incident Response</a
+          >
+          <a
+            href="security-training.html"
+            class="mobile-sub-link nav-chain-only"
+            >Security Training</a
+          >
+          <a
+            href="ai-security-tools.html"
+            class="mobile-sub-link nav-chain-only"
+            >AI Security Tools</a
+          >
+          <a
+            href="https://solidityscan.com/"
+            class="mobile-sub-link nav-chain-only"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SolidityScan ↗</a
+          >
+          <a
+            href="https://rustscan.com/"
+            class="mobile-sub-link nav-chain-only"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RustScan ↗</a
+          >
+
+          <!-- 📱 Apps-only (from apps_site, grouped) -->
+          <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
+          <a
+            href="continuous-appsec.html"
+            class="mobile-sub-link nav-apps-only"
+          >
+            <span class="nav-flagship-badge">FLAGSHIP</span>
+            Continuous AppSec
+          </a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">
+            Manual Pentesting
+          </div>
+          <a href="web-pentest.html" class="mobile-sub-link nav-apps-only"
+            >Web App Pentesting</a
+          >
+          <a href="mobile-pentest.html" class="mobile-sub-link nav-apps-only"
+            >Mobile App Pentesting</a
+          >
+          <a href="api-security.html" class="mobile-sub-link nav-apps-only"
+            >API Security Testing</a
+          >
+          <a href="cloud-pentest.html" class="mobile-sub-link nav-apps-only"
+            >Cloud Security Review</a
+          >
+          <a href="red-team.html" class="mobile-sub-link nav-apps-only"
+            >Red Team Engagement</a
+          >
+
+          <div class="nav-dropdown-section-title nav-apps-only">
+            Continuous &amp; Tooling
+          </div>
+          <a href="devsecops.html" class="mobile-sub-link nav-apps-only"
+            >DevSecOps Integration</a
+          >
+          <a href="sast.html" class="mobile-sub-link nav-apps-only"
+            >Source Code Review &amp; SAST</a
+          >
+
+          <div class="nav-dropdown-section-title nav-apps-only">
+            Specialized
+          </div>
+          <a href="ai-llm-security.html" class="mobile-sub-link nav-apps-only"
+            >AI / LLM AppSec</a
+          >
+          <a href="compliance.html" class="mobile-sub-link nav-apps-only"
+            >Compliance Readiness</a
+          >
+
+          <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
+          <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
+            >Sample Pentest Report</a
+          >
+          <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
+            >AppSec Maturity Model</a
+          >
+          <a href="pentest-vs-scan.html" class="mobile-sub-link nav-apps-only"
+            >Pentest vs Vuln Scan</a
+          >
+        </div>
+      </div>
+
+      <!-- Industries -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-industries"
+        >
+          <span>Industries</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-industries">
+          <!-- ⛓ Chain-only -->
+          <a
+            href="web3-protocol-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Web3 Protocols &amp; Exchanges</a
+          >
+          <a href="stablecoins.html" class="mobile-sub-link nav-chain-only"
+            >Stablecoins</a
+          >
+          <a href="realworldassets.html" class="mobile-sub-link nav-chain-only"
+            >Real World Assets</a
+          >
+          <a href="crosschainbridge.html" class="mobile-sub-link nav-chain-only"
+            >Cross-Chain Bridge</a
+          >
+          <a href="payments.html" class="mobile-sub-link nav-chain-only"
+            >Payments &amp; DeFi</a
+          >
+          <!-- 📱 Apps-only (from apps_site) -->
+          <a href="fintech-security.html" class="mobile-sub-link nav-apps-only"
+            >Finance &amp; Fintech</a
+          >
+          <a href="saas-security.html" class="mobile-sub-link nav-apps-only"
+            >SaaS &amp; Enterprise</a
+          >
+          <a
+            href="healthcare-security.html"
+            class="mobile-sub-link nav-apps-only"
+            >Healthcare &amp; Life Sciences</a
+          >
+          <a href="industry-edtech.html" class="mobile-sub-link nav-apps-only"
+            ><span class="nav-flagship-badge nav-flag-new">NEW</span> EdTech</a
+          >
+          <a
+            href="industry-ecommerce.html"
+            class="mobile-sub-link nav-apps-only"
+            >E-commerce &amp; Retail</a
+          >
+          <a href="industry-govtech.html" class="mobile-sub-link nav-apps-only"
+            >Public Sector / GovTech</a
+          >
+          <!-- ✅ Shared -->
+          <a href="gaming-security.html" class="mobile-sub-link"
+            >Gaming &amp; Digital Assets</a
+          >
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-resources"
+        >
+          <span>Resources</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-resources">
+          <!-- ⛓ Chain-only -->
+          <a href="recently-audited.html" class="mobile-sub-link nav-chain-only"
+            >Recently Audited</a
+          >
+          <a href="ecosystem.html" class="mobile-sub-link nav-chain-only"
+            >Ecosystem</a
+          >
+          <!-- 📱 Apps-only (from apps_site) -->
+          <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
+            >Sample Pentest Report</a
+          >
+          <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
+            >AppSec Maturity Model</a
+          >
+
+          <!-- ✅ Shared -->
+          <a
+            href="https://discover.credshields.com/"
+            class="mobile-sub-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Blog ↗</a
+          >
+          <a href="brand-guidelines.html" class="mobile-sub-link"
+            >Brand Guidelines</a
+          >
+          <a href="careers.html" class="mobile-sub-link">Careers</a>
+        </div>
+      </div>
+
+      <!-- Institutions - Chain only -->
+      <div class="mobile-nav-item nav-chain-only">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-institutions"
+        >
+          <span>Institutions</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-institutions">
+          <a href="Institutions.html" class="mobile-sub-link">Overview</a>
+          <a href="vc-crypto-funds.html" class="mobile-sub-link"
+            >VCs &amp; Crypto Funds</a
+          >
+          <a href="stablecoins.html" class="mobile-sub-link">Stablecoins</a>
+          <a href="crosschainbridge.html" class="mobile-sub-link"
+            >Cross-Chain Bridge</a
+          >
+          <a href="realworldassets.html" class="mobile-sub-link"
+            >Real World Assets</a
+          >
+          <a href="payments.html" class="mobile-sub-link">Payments</a>
+        </div>
+      </div>
+
+      <!-- OWASP Top 10 - Chain only -->
+      <div class="mobile-nav-item nav-chain-only">
+        <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-owasp">
+          <span>OWASP Top 10</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-owasp">
+          <a
+            href="owasp-smart-contract-top-10-2025.html"
+            class="mobile-sub-link"
+            >2025</a
+          >
+          <a
+            href="owasp-smart-contract-top-10-2026.html"
+            class="mobile-sub-link"
+            >2026</a
+          >
+        </div>
+      </div>
+
+      <div class="mobile-overlay-cta">
+        <button
+          class="btn-primary-lg"
+          style="width: 100%; text-align: center"
+          data-contact-form
+        >
+          Book Security Audit
+        </button>
+        <button
+          class="btn-secondary-lg"
+          style="width: 100%; justify-content: center"
+          data-free-ai-scan
+        >
+          Run Free AI Scan
+        </button>
+      </div>
+    </div>
+
+    <!-- HERO --------------------------------------------------- -->
+    <header class="cs-hero">
+      <div class="hero-grid"></div>
+      <div class="container">
+        <div>
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span>/</span>
+            <a href="index.html#proof">Case studies</a><span>/</span>
+            <a href="#" aria-current="page" style="color: var(--text-dim)"
+              >Holmes AI</a
+            >
+          </nav>
+          <div class="app_home-hero-badge">
+            <div class="app_home-hero-badge-dot"></div>
+            <span class="app_home-hero-badge-text">AI &amp; B2B SAAS</span>
+          </div>
+          <h1 class="app_home-hero-headline">Holmes AI</h1>
+
+          <div class="app_home-hero-ticker">
+            <span class="app_home-ticker-item">AI Saas</span
+            ><span class="app_home-ticker-sep">◆</span>
+            <span class="app_home-ticker-item">B2B Procurement</span
+            ><span class="app_home-ticker-sep">◆</span>
+            <span class="app_home-ticker-item">California</span
+            ><span class="app_home-ticker-sep">◆</span>
+            <span class="app_home-ticker-item">United States</span>
+          </div>
+          <p class="app_home-hero-body">
+            A web application and API penetration test across an AI-powered B2B
+            procurement platform, focused on the boundaries that matter most in
+            multi-tenant software: who can authenticate, who can read whose
+            records, and what an API will hand over when nobody checks.
+          </p>
+          <dl class="cs-facts">
+            <div>
+              <dt>Engagement type</dt>
+              <dd>Web Application &amp; API Penetration Test</dd>
+            </div>
+            <div>
+              <dt>Scope</dt>
+              <dd>
+                AI-powered B2B procurement platform. Web application,
+                authentication flows, and all backend APIs.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="terminal" aria-hidden="true">
+          <div class="scan"></div>
+          <div class="terminal-bar">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="terminal-title"
+              >~/credshields/engagements/holmes-ai · zsh</span
+            >
+          </div>
+          <div class="terminal-body">
+            <div class="tl-line">
+              <span class="tl-prompt">$</span
+              ><span class="tl-dim"
+                >cs-engage --client holmes-ai --scope webapp,api</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[recon]</span
+              ><span class="tl-text"
+                >procurement platform · auth flows · backend APIs</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[detect]</span
+              ><span class="tl-text"
+                >50 findings · authn · authz · session · input</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[validate]</span
+              ><span class="tl-crit"
+                >CROSS-ACCOUNT ACCESS CONFIRMED · buyer ↔ supplier</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[remediate]</span
+              ><span class="tl-ok">48 / 50 closed · verified on retest</span>
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[status]</span
+              ><span class="tl-text"
+                >2 open · accepted risk, signed off by client</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-prompt">$</span><span class="caret"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTEXT ------------------------------------------------ -->
+    <section class="block" style="padding-top: 80px">
+      <div class="container">
+        <div class="split reveal">
+          <div>
+            <span class="eyebrow">/ context</span>
+            <h2 class="app_home-section-title">
+              A procurement platform is a permissions problem wearing a UI.
+            </h2>
+          </div>
+          <div class="prose">
+            <p class="app_home-card-body">
+              B2B procurement software sits in the middle of a commercial
+              relationship. It holds the contracts, the negotiated pricing, the
+              supplier lists, and the approval chains that both sides of a
+              transaction consider confidential. Buyers do not want their
+              pricing visible to other buyers. Suppliers do not want their
+              margins visible to competitors bidding on the same contract.
+            </p>
+            <p class="app_home-card-body">
+              That separation is almost never physical. In a multi-tenant SaaS
+              platform every customer's records live in shared infrastructure,
+              and the boundary between them is enforced by application logic: a
+              check in a controller, a scope on a token, a filter on a query.
+              When one of those checks is missing, nothing crashes and no alert
+              fires. The data simply comes back to whoever asked for it.
+            </p>
+            <p class="app_home-card-body">
+              Adding AI to the workflow raises the stakes rather than changing
+              them. Procurement data now moves through processing pipelines that
+              summarize, classify, and route it, which means more services
+              touching the same records and more places where an authorization
+              decision has to be made correctly. The security question is not
+              whether the perimeter holds. It is whether the application
+              enforces the boundaries its own product page promises.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINDINGS ----------------------------------------------- -->
+    <section class="block" style="padding-top: 80px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ findings overview</span>
+          <h2 class="app_home-section-title">
+            Fifty findings. Forty-eight closed.
+          </h2>
+        </div>
+        <div class="stat-band">
+          <div class="stat reveal hero-stat">
+            <div class="num">50</div>
+            <div class="lbl">Total findings</div>
+            <p class="note">
+              Across authentication, authorization, session handling, and input
+              validation.
+            </p>
+          </div>
+          <div class="stat reveal">
+            <div class="num">48<small> / 50</small></div>
+            <div class="lbl">Remediated</div>
+            <p class="note">
+              Fixes confirmed on retest before the engagement closed.
+            </p>
+          </div>
+          <div class="stat reveal">
+            <div class="num">2</div>
+            <div class="lbl">Accepted risk</div>
+            <p class="note">
+              Acknowledged and formally accepted by the client.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD ------------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="split reveal">
+          <div>
+            <span class="eyebrow">/ approach</span>
+            <h2 class="app_home-section-title">How the engagement ran</h2>
+          </div>
+          <div class="prose">
+            <p class="app_home-card-body">
+              The engagement covered the web application, its authentication
+              flows, and every backend API behind it. Testing was conducted
+              against all three user types the platform supports, buyer,
+              supplier, and platform administrator, with each role tested
+              against the others rather than in isolation. Most authorization
+              failures only become visible when you hold one identity and reach
+              for another identity's data.
+            </p>
+            <p class="app_home-card-body">
+              Business logic flaws do not have signatures. An automated scanner
+              can tell you that an endpoint responds, but it cannot tell you
+              that a supplier should never have been able to read that
+              particular contract, because it does not know what a contract is
+              or who is supposed to see one. That distinction is why the API
+              surface was enumerated and exercised by hand rather than crawled.
+            </p>
+            <p class="app_home-card-body">
+              Findings were validated with reproduction steps and rated by real
+              business impact before being handed over. The engagement closed
+              with a retest cycle, which is where the remediation count comes
+              from: 48 of the 50 findings were confirmed fixed rather than
+              reported as fixed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISK AREAS --------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ what we found</span>
+          <h2 class="app_home-section-title">Key risk areas identified</h2>
+          <p>
+            Six areas where the platform's trust boundaries did not hold up
+            under attack.
+          </p>
+        </div>
+        <div class="risk-list">
+          <div class="risk-row reveal">
+            <div class="risk-idx">01</div>
+            <div>
+              <h3 class="app_home-service-title">Authentication bypass</h3>
+              <p class="lead">
+                Unauthorized access to procurement workflows and the supplier
+                and buyer data behind them.
+              </p>
+            </div>
+            <p class="detail">
+              Authentication bypass means reaching a state the login flow was
+              supposed to gate. It rarely looks like a cracked password. More
+              often it is a flow that can be entered halfway, a token that is
+              trusted without being verified, or a step that can be skipped
+              because the server assumes the client followed the intended order.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">02</div>
+            <div>
+              <h3 class="app_home-service-title">Cross-account data access</h3>
+              <p class="lead">
+                Records, contracts, and supplier profiles belonging to one
+                account reachable from another.
+              </p>
+            </div>
+            <p class="detail">
+              This class is what OWASP lists as the number one API risk, broken
+              object level authorization. The request is properly authenticated,
+              the session is real, and the server still returns a record
+              belonging to somebody else because the only thing identifying the
+              record was a value the caller supplied.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">03</div>
+            <div>
+              <h3 class="app_home-service-title">Privilege escalation</h3>
+              <p class="lead">
+                Movement between the buyer, supplier, and platform admin roles
+                beyond what each role should hold.
+              </p>
+            </div>
+            <p class="detail">
+              Escalation runs in two directions. Horizontal movement gets you
+              another account's data at your own permission level. Vertical
+              movement gets you a higher level entirely, which on a procurement
+              platform means reaching administrative functions from an ordinary
+              supplier login.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">04</div>
+            <div>
+              <h3 class="app_home-service-title">Unprotected API endpoints</h3>
+              <p class="lead">
+                Endpoints returning sensitive procurement and pricing data
+                without an authorization check.
+              </p>
+            </div>
+            <p class="detail">
+              APIs frequently carry data the interface never displays. An
+              endpoint built to populate one screen may return the full
+              underlying object, including pricing and counterparty detail the
+              front end simply does not render. The data is in the response
+              either way.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">05</div>
+            <div>
+              <h3 class="app_home-service-title">
+                Session management weaknesses
+              </h3>
+              <p class="lead">
+                Conditions allowing session hijacking and theft of
+                authentication tokens.
+              </p>
+            </div>
+            <p class="detail">
+              Session weaknesses extend the window an attacker gets. Tokens that
+              outlive their usefulness, sessions that survive a password change,
+              or identifiers that can be captured and replayed all turn a single
+              moment of exposure into ongoing access.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">06</div>
+            <div>
+              <h3 class="app_home-service-title">Input validation gaps</h3>
+              <p class="lead">
+                Room to manipulate data as it moved through AI-processed
+                procurement workflows.
+              </p>
+            </div>
+            <p class="detail">
+              In an AI-assisted workflow, input validation stops being only
+              about injection. Data that gets manipulated on the way into a
+              processing pipeline influences what comes out of it, which means a
+              validation gap upstream can quietly change a downstream result
+              that a human then treats as authoritative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKEAWAYS ---------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ takeaways</span>
+          <h2 class="app_home-service-title">
+            What this engagement says about multi-tenant SaaS
+          </h2>
+        </div>
+        <div class="takes">
+          <div class="take reveal">
+            <span class="mark">01</span>
+            <h3 class="app_home-service-title">
+              Authorization is a per-object question, not a per-endpoint one
+            </h3>
+            <p>
+              An endpoint can be correctly locked to authenticated users and
+              still hand every one of them the same records. The check that
+              matters is not can this user call this route, it is does this user
+              own this specific object.
+            </p>
+          </div>
+          <div class="take reveal">
+            <span class="mark">02</span>
+            <h3 class="app_home-service-title">
+              Every role you add multiplies the test surface
+            </h3>
+            <p>
+              Three roles do not produce three test cases. They produce every
+              combination of who is acting and whose data is being touched,
+              which is where privilege escalation paths hide.
+            </p>
+          </div>
+          <div class="take reveal">
+            <span class="mark">03</span>
+            <h3 class="app_home-service-title">
+              The API is the product, the UI is a client
+            </h3>
+            <p>
+              Access controls enforced in the interface are decoration. Anything
+              the browser can request, an attacker can request directly, without
+              the JavaScript that was supposed to hide the button.
+            </p>
+          </div>
+          <div class="take reveal">
+            <span class="mark">04</span>
+            <h3 class="app_home-service-title">
+              Accepted risk is a valid outcome when it is a decision
+            </h3>
+            <p>
+              Two findings closed as accepted rather than fixed. That is a
+              legitimate result when it is a documented, deliberate choice
+              rather than a backlog item nobody got to.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELEVANT FOR ------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ relevant for</span>
+          <h2 class="app_home-service-title">
+            If this looks like your environment, it probably behaves like it
+            too.
+          </h2>
+        </div>
+        <div class="fits">
+          <div class="fit reveal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>
+              AI SaaS platforms with multi-tenant data and role-based access.
+            </p>
+          </div>
+          <div class="fit reveal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>
+              B2B software handling procurement, financial, or sensitive
+              operational data.
+            </p>
+          </div>
+          <div class="fit reveal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>Platforms where cross-account data isolation is critical.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ---------------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ common questions</span>
+          <h2 class="app_home-service-title">
+            Questions this engagement usually raises.
+          </h2>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>
+              What is a web application and API penetration test?
+            </summary>
+            <div class="a">
+              A manual security assessment in which testers attack a live
+              application the way an adversary would, then confirm each issue
+              with reproduction steps. It covers both the interface and the
+              backend APIs behind it, because the two have different attack
+              surfaces and the API is usually the larger one.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>
+              How is a penetration test different from a vulnerability scan?
+            </summary>
+            <div class="a">
+              A scanner matches known signatures and reports anything that looks
+              familiar, including a large volume of things that are not
+              exploitable in context. A penetration test validates
+              exploitability and finds business logic flaws, which have no
+              signature to match because they are failures of intent rather than
+              of code pattern.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>What is broken object level authorization?</summary>
+            <div class="a">
+              A flaw where an application checks that you are logged in but not
+              that the specific record you asked for belongs to you. Changing an
+              identifier in a request returns somebody else's data. It is
+              consistently among the most common and most damaging API
+              vulnerabilities.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>Why does multi-tenancy make this harder?</summary>
+            <div class="a">
+              Because the separation between customers is enforced in software
+              rather than by infrastructure. Every query, endpoint, and
+              background job has to independently get the boundary right, and a
+              single omission exposes data across accounts without any visible
+              failure.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>What happens to findings that are not remediated?</summary>
+            <div class="a">
+              They are documented and formally accepted as risk by the client,
+              which is what happened with two of the fifty findings here.
+              Accepted risk should be a recorded decision with an owner, not an
+              open item that fell off the list.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE CASE STUDIES -------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ more engagements</span>
+          <h2 class="display">Other work.</h2>
+        </div>
+        <div class="more">
+          <a class="more-card reveal" href="case-study-tazapay.html">
+            <span class="k">Fintech &amp; Payments</span>
+            <h3>Tazapay</h3>
+            <p>
+              Five live phishing and crypto dusting scenarios run against the
+              custody and operations teams. All five blocked.
+            </p>
+            <span class="go"
+              >Read the case study
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></span>
+          </a>
+          <a class="more-card reveal" href="case-study-juno.html">
+            <span class="k">Fintech &amp; Payments</span>
+            <h3>Juno</h3>
+            <p>
+              42 findings across a full AWS environment, from publicly readable
+              buckets to a root account running without MFA.
+            </p>
+            <span class="go"
+              >Read the case study
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA ---------------------------------------------- -->
+    <section class="container" id="cta">
+      <div class="final reveal">
+        <div class="final-inner">
+          <img
+            class="final-logo"
+            src="data:image/png;base64,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"
+            alt="CredShields"
+          />
+          <span class="eyebrow" style="justify-content: center"
+            >/ follow the path real attackers take</span
+          >
+          <h2>Think like them. <em>Before they do.</em></h2>
+          <p>
+            Book a 30-minute walkthrough. We'll point CredShields at a scoped
+            asset and show you live findings by the end of the call.
+          </p>
+          <a href="#" class="btn-primary">
+            Book a demo
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div>
+            <div class="footer-brand-logo">
+              <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+              <img
+                src="images/credshields_white_logo.svg"
+                alt="CredShields"
+                width="140"
+                height="36"
+                class="show-chain"
+              />
+              <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+              <img
+                src="images/credshields_black_logo.svg"
+                alt="CredShields"
+                width="140"
+                height="36"
+                class="show-apps"
+              />
+            </div>
+            <p class="footer-brand-addr">
+              20A Tanjong Pagar Road,<br />Singapore (088443)
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://x.com/credshields"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629 5.905-5.629zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/credshields"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a
+                href="https://discover.credshields.com/"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Blog"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FFFFFF"
+                  stroke-width="2"
+                >
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path
+                    d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-copy">
+              © 2026 CredShields. All Rights Reserved.
+            </div>
+          </div>
+
+          <!-- Solutions -->
+          <div>
+            <div class="footer-col-title">Solutions</div>
+            <div class="footer-links">
+              <!-- ⛓ Chain-only -->
+              <a
+                href="smart-contract-audits.html"
+                class="footer-link foot-chain-only"
+                >Smart Contract Audits</a
+              >
+              <a
+                href="dapp-protocol-security.html"
+                class="footer-link foot-chain-only"
+                >DApp &amp; Protocol Security</a
+              >
+              <a
+                href="blockchain-security.html"
+                class="footer-link foot-chain-only"
+                >Blockchain Security</a
+              >
+              <a href="wallet-security.html" class="footer-link foot-chain-only"
+                >Wallet Security</a
+              >
+              <a
+                href="continuous-monitoring.html"
+                class="footer-link foot-chain-only"
+                >Continuous Monitoring</a
+              >
+              <a
+                href="https://solidityscan.com/"
+                class="footer-link foot-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SolidityScan ↗</a
+              >
+              <a
+                href="https://rustscan.com/"
+                class="footer-link foot-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RustScan ↗</a
+              >
+              <!-- 📱 Apps-only -->
+              <a
+                href="continuous-appsec.html"
+                class="footer-link foot-apps-only"
+                >Continuous AppSec</a
+              >
+              <a href="web-pentest.html" class="footer-link foot-apps-only"
+                >Web App Pentesting</a
+              >
+              <a href="mobile-pentest.html" class="footer-link foot-apps-only"
+                >Mobile App Pentesting</a
+              >
+              <a href="api-security.html" class="footer-link foot-apps-only"
+                >API Security Testing</a
+              >
+              <a href="cloud-pentest.html" class="footer-link foot-apps-only"
+                >Cloud Security Review</a
+              >
+              <a href="red-team.html" class="footer-link foot-apps-only"
+                >Red Team Engagement</a
+              >
+              <a href="devsecops.html" class="footer-link foot-apps-only"
+                >DevSecOps Integration</a
+              >
+              <a href="sast.html" class="footer-link foot-apps-only"
+                >Source Code Review &amp; SAST</a
+              >
+              <a href="ai-llm-security.html" class="footer-link foot-apps-only"
+                >AI / LLM AppSec</a
+              >
+              <a href="compliance.html" class="footer-link foot-apps-only"
+                >Compliance Readiness</a
+              >
+              <!-- ✅ Shared -->
+              <a href="incident-response.html" class="footer-link"
+                >Incident Response</a
+              >
+              <a href="security-training.html" class="footer-link"
+                >Security Training</a
+              >
+              <a href="ai-security-tools.html" class="footer-link"
+                >AI Security Tools</a
+              >
+            </div>
+          </div>
+
+          <!-- Industries -->
+          <div>
+            <div class="footer-col-title">Industries</div>
+            <div class="footer-links">
+              <!-- ⛓ Chain-only -->
+              <a
+                href="web3-protocol-security.html"
+                class="footer-link foot-chain-only"
+                >Web3 Protocols &amp; Exchanges</a
+              >
+              <a href="stablecoins.html" class="footer-link foot-chain-only"
+                >Stablecoins</a
+              >
+              <a href="realworldassets.html" class="footer-link foot-chain-only"
+                >Real World Assets</a
+              >
+              <a
+                href="crosschainbridge.html"
+                class="footer-link foot-chain-only"
+                >Cross-Chain Bridge</a
+              >
+              <a href="payments.html" class="footer-link foot-chain-only"
+                >Payments &amp; DeFi</a
+              >
+              <!-- 📱 Apps-only -->
+              <a href="fintech-security.html" class="footer-link foot-apps-only"
+                >Finance &amp; Fintech</a
+              >
+              <a href="saas-security.html" class="footer-link foot-apps-only"
+                >SaaS &amp; Enterprise</a
+              >
+              <a
+                href="healthcare-security.html"
+                class="footer-link foot-apps-only"
+                >Healthcare &amp; Life Sciences</a
+              >
+              <a href="industry-edtech.html" class="footer-link foot-apps-only"
+                >EdTech</a
+              >
+              <a
+                href="industry-ecommerce.html"
+                class="footer-link foot-apps-only"
+                >E-commerce &amp; Retail</a
+              >
+              <a href="industry-govtech.html" class="footer-link foot-apps-only"
+                >Public Sector / GovTech</a
+              >
+              <!-- ✅ Shared -->
+              <a href="gaming-security.html" class="footer-link"
+                >Gaming &amp; Digital Assets</a
+              >
+            </div>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <div class="footer-col-title">Resources</div>
+            <div class="footer-links">
+              <!-- ⛓ Chain-only -->
+              <a
+                href="recently-audited.html"
+                class="footer-link foot-chain-only"
+                >Recently Audited</a
+              >
+              <a href="ecosystem.html" class="footer-link foot-chain-only"
+                >Ecosystem</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2026.html"
+                class="footer-link foot-chain-only"
+                >OWASP Top 10 (2026)</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2025.html"
+                class="footer-link foot-chain-only"
+                >OWASP Top 10 (2025)</a
+              >
+              <a href="Institutions.html" class="footer-link foot-chain-only"
+                >Institutions Overview</a
+              >
+              <!-- 📱 Apps-only -->
+              <a href="sample-report.html" class="footer-link foot-apps-only"
+                >Sample Pentest Report</a
+              >
+              <a href="appsec-maturity.html" class="footer-link foot-apps-only"
+                >AppSec Maturity Model</a
+              >
+              <a href="pentest-vs-scan.html" class="footer-link foot-apps-only"
+                >Pentest vs Vuln Scan</a
+              >
+              <!-- ✅ Shared -->
+              <a
+                href="https://discover.credshields.com/"
+                class="footer-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blog ↗</a
+              >
+              <a href="brand-guidelines.html" class="footer-link"
+                >Brand Guidelines</a
+              >
+              <a href="careers.html" class="footer-link">Careers</a>
+              <a href="about.html" class="footer-link">About CredShields</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <a href="tos.html" class="footer-legal">Terms &amp; Conditions</a>
+          <a href="privacy.html" class="footer-legal">Privacy Policy</a>
+          <a href="privacy.html#cookies" class="footer-legal">Cookie Notice</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".risk, .more-card").forEach((el) => {
+        el.addEventListener("mousemove", (e) => {
+          const r = el.getBoundingClientRect();
+          el.style.setProperty("--mx", e.clientX - r.left + "px");
+          el.style.setProperty("--my", e.clientY - r.top + "px");
+        });
+      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    </script>
+    <!-- Main JS -->
+    <script src="js/main.v1.js"></script>
+  </body>
+</html>
