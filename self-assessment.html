@@ -1,0 +1,2291 @@
+<!doctype html>
+<html lang="en" data-mode="apps">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Are You Pentest Ready? | 3-Minute Readiness Assessment | CredShields
+    </title>
+    <meta
+      name="description"
+      content="12 questions, 3 minutes. Get a scored pentest readiness report and know exactly what to fix before you book a test."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/design-tokens.v1.css" />
+    <link rel="stylesheet" href="css/main.v1.css" />
+    <style>
+      .assessment-page {
+        --bg-2: var(--bg-raised);
+        --surface: var(--bg-surface);
+        --surface-2: var(--bg-surface);
+        --border-strong: var(--border-dk);
+        --border-green: rgba(46, 125, 14, 0.28);
+        --text: var(--fg);
+        --text-dim: var(--fg-3);
+        --text-faint: var(--fg-4);
+        --green-2: var(--green-mid);
+        --green-deep: var(--fg-2);
+        --green-glow: rgba(168, 255, 69, 0.35);
+        --green-wash: rgba(168, 255, 69, 0.18);
+        --ink: #0a1a0c;
+        --ink-2: #0e2412;
+        --amber: #b7791f;
+        --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .assessment-page {
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-sans);
+        font-weight: 400;
+        line-height: 1.6;
+        font-size: 16px;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      .assessment-page .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .mono {
+        font-family: var(--font-mono);
+      }
+      .display {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 0.98;
+        color: var(--text);
+      }
+      .accent {
+        color: var(--green);
+      }
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-dim);
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--lime);
+        box-shadow: 0 0 10px var(--green-glow);
+      }
+      .assessment-page .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 26px;
+        background: var(--lime);
+        color: var(--text);
+        border-radius: var(--radius);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        border: none;
+        cursor: pointer;
+        font-family: var(--font-mono);
+        box-shadow: 0 3px 16px rgba(168, 255, 69, 0.4);
+        transition: all var(--t-fast);
+        text-decoration: none;
+      }
+      .assessment-page .btn-primary:hover {
+        background: var(--lime-hover);
+        transform: translateY(-1px);
+        box-shadow: 0 5px 22px rgba(168, 255, 69, 0.5);
+      }
+      .assessment-page .btn-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 22px;
+        color: var(--text);
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        border-radius: var(--radius);
+        border: 1.5px solid var(--border-dk);
+        background: var(--surface);
+        cursor: pointer;
+        font-family: var(--font-mono);
+        transition: all var(--t-fast);
+        text-decoration: none;
+      }
+      .assessment-page .btn-ghost:hover {
+        border-color: var(--green);
+        color: var(--green);
+      }
+
+      /* header */
+      .topnav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(244, 248, 244, 0.88);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+      }
+      .topnav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+      .brand-mark {
+        width: 14px;
+        height: 14px;
+        background: var(--lime);
+        border-radius: 3px;
+        box-shadow: 0 0 12px var(--green-glow);
+      }
+      .nav-note {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-faint);
+        letter-spacing: 0.06em;
+      }
+
+      /* hero */
+      .hero {
+        padding: 84px 0 56px;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1.5px solid var(--border-lt);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(
+            700px 320px at 75% 10%,
+            var(--green-wash),
+            transparent 70%
+          ),
+          linear-gradient(var(--grid-ln) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-ln) 1px, transparent 1px);
+        background-size: auto, 48px 48px, 48px 48px;
+        opacity: 0.55;
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 48px;
+        align-items: center;
+        position: relative;
+      }
+      .hero-title {
+        font-size: clamp(40px, 5.4vw, 64px);
+        margin: 20px 0 18px;
+      }
+      .hero-sub {
+        font-size: 17px;
+        color: var(--text-dim);
+        max-width: 52ch;
+        margin-bottom: 26px;
+      }
+      .hero-ctas {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .hero-meta {
+        margin-top: 22px;
+        display: flex;
+        gap: 22px;
+        flex-wrap: wrap;
+      }
+      .hm {
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        color: var(--text-dim);
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .hm b {
+        color: var(--green);
+        font-weight: 700;
+      }
+
+      /* terminal preview card */
+      .terminal {
+        position: relative;
+        background: linear-gradient(180deg, #0e2412 0%, #0a1a0c 100%);
+        border: 1px solid rgba(10, 26, 12, 0.9);
+        border-radius: var(--r-lg);
+        overflow: hidden;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        box-shadow: 0 24px 60px rgba(10, 26, 12, 0.18);
+      }
+      .term-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(168, 255, 69, 0.14);
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .dot-r {
+        background: #e0654a;
+      }
+      .dot-y {
+        background: #e8c35a;
+      }
+      .dot-g {
+        background: #6fcf4c;
+      }
+      .term-title {
+        margin-left: 8px;
+        color: #8fa890;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+      }
+      .term-body {
+        padding: 20px 22px;
+        color: #c9e7c0;
+        line-height: 1.9;
+      }
+      .term-body .cm {
+        color: #7a9a80;
+      }
+      .term-body .ok {
+        color: #a8ff45;
+      }
+      .term-body .wr {
+        color: #e8c35a;
+      }
+      .term-score {
+        font-size: 26px;
+        color: #a8ff45;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      /* assessment */
+      .assess {
+        padding: 26px 0 90px;
+      }
+      .assess[hidden] {
+        display: none;
+      }
+      .panel {
+        background: var(--surface);
+        border: 1.5px solid var(--border);
+        border-radius: var(--r-lg);
+        box-shadow: var(--shadow-md);
+        max-width: 760px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .panel-head {
+        padding: 20px 28px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .progress {
+        height: 6px;
+        background: var(--bg-2);
+        border-radius: 99px;
+        flex: 1;
+        min-width: 160px;
+        overflow: hidden;
+      }
+      .progress i {
+        display: block;
+        height: 100%;
+        background: linear-gradient(90deg, var(--green-2), var(--lime));
+        width: 0%;
+        transition: width 0.45s var(--ease);
+        border-radius: 99px;
+      }
+      .p-label {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-dim);
+        letter-spacing: 0.08em;
+      }
+      .step {
+        display: none;
+        padding: 34px 32px 30px;
+        animation: fade 0.35s var(--ease);
+      }
+      .step.active {
+        display: block;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .dim-tag {
+        font-family: var(--font-mono);
+        font-size: 10.5px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--green);
+        margin-bottom: 10px;
+      }
+      .q-title {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+        margin-bottom: 20px;
+      }
+      .opts {
+        display: grid;
+        gap: 10px;
+      }
+      .opt {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 15px 18px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface-2);
+        cursor: pointer;
+        transition: all 0.18s var(--ease);
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+        font-family: inherit;
+        color: var(--text);
+      }
+      .opt:hover {
+        border-color: var(--green);
+        background: var(--green-wash);
+      }
+      .opt.sel {
+        border-color: var(--green);
+        background: var(--green-wash);
+        box-shadow: 0 0 0 1px var(--green);
+      }
+      .opt .k {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-faint);
+        border: 1px solid var(--border-strong);
+        border-radius: var(--r-sm);
+        padding: 2px 7px;
+        flex-shrink: 0;
+      }
+      .opt.sel .k {
+        background: var(--lime);
+        color: var(--text);
+        border-color: transparent;
+      }
+      .step-foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 26px;
+      }
+      .back {
+        background: none;
+        border: none;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--text-faint);
+        cursor: pointer;
+        letter-spacing: 0.06em;
+      }
+      .back:hover {
+        color: var(--text);
+      }
+
+      /* gate */
+      .gate-grid {
+        display: grid;
+        gap: 14px;
+        margin-top: 8px;
+      }
+      .gate-grid input,
+      .gate-grid select {
+        padding: 14px 16px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--bg-surface);
+        font-family: inherit;
+        font-size: 15px;
+        color: var(--text);
+        width: 100%;
+      }
+      .gate-grid input:focus,
+      .gate-grid select:focus {
+        outline: 2px solid var(--green);
+        border-color: var(--green);
+      }
+      .row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .consent {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 12.5px;
+        color: var(--text-dim);
+        margin-top: 4px;
+      }
+      .consent input {
+        width: auto;
+        margin-top: 3px;
+      }
+      .gate-note {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-faint);
+        letter-spacing: 0.05em;
+        margin-top: 14px;
+        text-align: center;
+      }
+      .err {
+        color: var(--red);
+        font-size: 13px;
+        display: none;
+        margin-top: 6px;
+      }
+
+      /* results */
+      .res-head {
+        padding: 26px 32px 4px;
+        text-align: center;
+      }
+      .score-ring {
+        width: 150px;
+        height: 150px;
+        margin: 6px auto 14px;
+        position: relative;
+      }
+      .score-ring svg {
+        transform: rotate(-90deg);
+      }
+      .score-num {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        gap: 5px;
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 38px;
+        letter-spacing: -0.03em;
+      }
+      .score-num small {
+        font-size: 11px;
+        font-family: var(--font-mono);
+        color: var(--text-faint);
+        letter-spacing: 0.1em;
+        font-weight: 400;
+        line-height: 1;
+      }
+      .tier {
+        font-family: var(--font-mono);
+        font-weight: 700;
+        font-size: 26px;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
+      .tier-sub {
+        color: var(--text-dim);
+        max-width: 52ch;
+        margin: 0 auto 8px;
+      }
+      .dims {
+        padding: 18px 32px 8px;
+        display: grid;
+        gap: 14px;
+      }
+      .dim {
+        display: grid;
+        grid-template-columns: 190px 1fr 46px;
+        gap: 14px;
+        align-items: center;
+      }
+      .dim .n {
+        font-family: var(--font-mono);
+        font-size: 11.5px;
+        letter-spacing: 0.06em;
+        color: var(--text-dim);
+      }
+      .dbar {
+        height: 8px;
+        background: var(--bg-2);
+        border-radius: 99px;
+        overflow: hidden;
+      }
+      .dbar i {
+        display: block;
+        height: 100%;
+        width: 0%;
+        border-radius: 99px;
+        transition: width 0.9s var(--ease);
+      }
+      .dim .v {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--text);
+        text-align: right;
+      }
+      .recs {
+        padding: 20px 32px;
+      }
+      .rec {
+        display: flex;
+        gap: 12px;
+        padding: 13px 16px;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--surface-2);
+        margin-bottom: 10px;
+        font-size: 14.5px;
+      }
+      .rec b {
+        color: var(--green-deep);
+      }
+      .rec .ic {
+        color: var(--green);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .res-cta {
+        padding: 10px 32px 34px;
+        text-align: center;
+      }
+      .res-cta .btn-primary {
+        margin: 0 6px 10px;
+      }
+      .res-note {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--text-faint);
+        margin-top: 12px;
+        letter-spacing: 0.05em;
+      }
+
+      /* trust strip + footer */
+      .strip {
+        border-top: 1px solid var(--border);
+        background: var(--bg-2);
+        padding: 34px 0;
+      }
+      .strip .container {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .strip .hm b {
+        color: var(--green-deep);
+      }
+      @media (max-width: 860px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+        .dim {
+          grid-template-columns: 130px 1fr 40px;
+        }
+        .row-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PN6ZFK2F"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     ALERT BAR
+════════════════════════════════════════════════════════════ -->
+    <div class="alert-bar" id="alert-banner" role="banner">
+      <div class="alert-dot"></div>
+      <span class="alert-text">
+        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR TEXT ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+        <span class="alert-chain"
+          >OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart
+          Contract Security.</span
+        >
+        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+        <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR TEXT ░░░░░░░░░░░░░ -->
+        <span class="alert-apps"
+          >Industry Security Report 2026 Now Live. AI-led Pentesting
+          Benchmark.</span
+        >
+        <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
+      </span>
+      <span class="alert-sub">Learn more about our findings.</span>
+      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR LINK ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+      <a
+        href="owasp-smart-contract-top-10-2026.html"
+        class="alert-link alert-chain"
+        >Explore →</a
+      >
+      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
+      <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR LINK ░░░░░░░░░░░░░ -->
+      <a href="sample-report.html" class="alert-link alert-apps"
+        >Read Report →</a
+      >
+      <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
+      <button
+        id="close-banner"
+        style="
+          margin-left: 16px;
+          background: none;
+          border: none;
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 16px;
+          cursor: pointer;
+          line-height: 1;
+        "
+        aria-label="Close banner"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+    <div class="nav-wrap">
+      <div class="nav">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="CredShields home">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+          <img
+            src="images/credshields_white_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="110"
+            class="show-chain"
+          />
+          <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+          <img
+            src="images/credshields_black_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="110"
+            class="show-apps"
+          />
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="about.html" class="nav-link">About</a>
+
+          <!-- Solutions dropdown - items tagged by mode -->
+          <div class="nav-link nav-dropdown">
+            <span>Solutions</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu nav-dropdown-wide">
+              <!-- ⛓ Chain-only solutions -->
+              <a
+                href="smart-contract-audits.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Smart Contract Audits</a
+              >
+              <a
+                href="dapp-protocol-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >DApp &amp; Protocol Security</a
+              >
+              <a
+                href="enterprise-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Enterprise Web &amp; Mobile Security</a
+              >
+              <a
+                href="penetration-testing.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Penetration Testing</a
+              >
+              <a
+                href="blockchain-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Blockchain Security</a
+              >
+              <a
+                href="cloud-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Cloud Infrastructure</a
+              >
+              <a
+                href="wallet-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Wallet Security</a
+              >
+              <a
+                href="continuous-monitoring.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Continuous Monitoring</a
+              >
+              <a
+                href="incident-response.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Incident Response</a
+              >
+              <a
+                href="security-training.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Security Training</a
+              >
+              <a
+                href="ai-security-tools.html"
+                class="nav-dropdown-item nav-chain-only"
+                >AI Security Tools</a
+              >
+              <div class="nav-dropdown-divider nav-chain-only"></div>
+              <a
+                href="https://solidityscan.com/"
+                class="nav-dropdown-item nav-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SolidityScan ↗</a
+              >
+              <a
+                href="https://rustscan.com/"
+                class="nav-dropdown-item nav-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RustScan ↗</a
+              >
+
+              <!-- 📱 Apps-only solutions (from apps_site, grouped) -->
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Flagship
+              </div>
+              <a
+                href="continuous-appsec.html"
+                class="nav-dropdown-flagship-row nav-apps-only"
+              >
+                <span class="nav-flagship-badge">FLAGSHIP</span>
+                <span>Continuous AppSec</span>
+              </a>
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Manual Pentesting
+              </div>
+              <a href="web-pentest.html" class="nav-dropdown-item nav-apps-only"
+                >Web App Pentesting</a
+              >
+              <a
+                href="mobile-pentest.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Mobile App Pentesting</a
+              >
+              <a
+                href="api-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >API Security Testing</a
+              >
+              <a
+                href="cloud-pentest.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Cloud Security Review</a
+              >
+              <a href="red-team.html" class="nav-dropdown-item nav-apps-only"
+                >Red Team Engagement</a
+              >
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Continuous &amp; Tooling
+              </div>
+              <a href="devsecops.html" class="nav-dropdown-item nav-apps-only"
+                >DevSecOps Integration</a
+              >
+              <a href="sast.html" class="nav-dropdown-item nav-apps-only"
+                >Source Code Review &amp; SAST</a
+              >
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Specialized
+              </div>
+              <a
+                href="ai-llm-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >AI / LLM AppSec</a
+              >
+              <a href="compliance.html" class="nav-dropdown-item nav-apps-only"
+                >Compliance Readiness</a
+              >
+
+              <div class="nav-dropdown-section-title nav-apps-only">
+                Resources
+              </div>
+              <a
+                href="sample-report.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Sample Pentest Report</a
+              >
+              <a
+                href="appsec-maturity.html"
+                class="nav-dropdown-item nav-apps-only"
+                >AppSec Maturity Model</a
+              >
+              <a
+                href="pentest-vs-scan.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Pentest vs Vuln Scan</a
+              >
+            </div>
+          </div>
+
+          <a href="case-studies.html" class="nav-link">Case Studies</a>
+
+          <!-- Industries dropdown -->
+          <div class="nav-link nav-dropdown">
+            <span>Industries</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <!-- ⛓ Chain-only industries -->
+              <a
+                href="web3-protocol-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Web3 Protocols &amp; Exchanges</a
+              >
+              <a
+                href="stablecoins.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Stablecoins</a
+              >
+              <a
+                href="realworldassets.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Real World Assets</a
+              >
+              <a
+                href="crosschainbridge.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Cross-Chain Bridge</a
+              >
+              <a href="payments.html" class="nav-dropdown-item nav-chain-only"
+                >Payments &amp; DeFi</a
+              >
+              <!-- 📱 Apps-only industries (from apps_site) -->
+              <a
+                href="fintech-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Finance &amp; Fintech</a
+              >
+              <a
+                href="saas-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >SaaS &amp; Enterprise</a
+              >
+              <a
+                href="healthcare-security.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Healthcare &amp; Life Sciences</a
+              >
+              <a
+                href="industry-edtech.html"
+                class="nav-dropdown-item nav-apps-only"
+                ><span class="nav-flagship-badge nav-flag-new">NEW</span>
+                EdTech</a
+              >
+              <a
+                href="industry-ecommerce.html"
+                class="nav-dropdown-item nav-apps-only"
+                >E-commerce &amp; Retail</a
+              >
+              <a
+                href="industry-govtech.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Public Sector / GovTech</a
+              >
+              <!-- ✅ Shared -->
+              <a href="gaming-security.html" class="nav-dropdown-item"
+                >Gaming &amp; Digital Assets</a
+              >
+            </div>
+          </div>
+
+          <!-- Resources dropdown -->
+          <div class="nav-link nav-dropdown">
+            <span>Resources</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <!-- ⛓ Chain-only resources -->
+              <a
+                href="recently-audited.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Recently Audited</a
+              >
+              <a href="ecosystem.html" class="nav-dropdown-item nav-chain-only"
+                >Ecosystem</a
+              >
+              <!-- 📱 Apps-only resources (from apps_site) -->
+              <a
+                href="sample-report.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Sample Pentest Report</a
+              >
+              <a
+                href="appsec-maturity.html"
+                class="nav-dropdown-item nav-apps-only"
+                >AppSec Maturity Model</a
+              >
+
+              <!-- ✅ Shared -->
+              <a
+                href="https://discover.credshields.com/"
+                class="nav-dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blog ↗</a
+              >
+              <a href="brand-guidelines.html" class="nav-dropdown-item"
+                >Brand Guidelines</a
+              >
+              <a href="careers.html" class="nav-dropdown-item">Careers</a>
+            </div>
+          </div>
+
+          <!-- Institutions - Chain only -->
+          <div class="nav-link nav-dropdown nav-chain-only">
+            <span>Institutions</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <a href="Institutions.html" class="nav-dropdown-item">Overview</a>
+              <a href="vc-crypto-funds.html" class="nav-dropdown-item"
+                >VCs &amp; Crypto Funds</a
+              >
+              <a href="stablecoins.html" class="nav-dropdown-item"
+                >Stablecoins</a
+              >
+              <a href="crosschainbridge.html" class="nav-dropdown-item"
+                >Cross-Chain Bridge</a
+              >
+              <a href="realworldassets.html" class="nav-dropdown-item"
+                >Real World Assets</a
+              >
+              <a href="payments.html" class="nav-dropdown-item">Payments</a>
+            </div>
+          </div>
+
+          <!-- OWASP Top 10 - Chain only -->
+          <div class="nav-link nav-dropdown nav-chain-only">
+            <span>OWASP Top 10</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <a
+                href="owasp-smart-contract-top-10-2025.html"
+                class="nav-dropdown-item"
+                >2025</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2026.html"
+                class="nav-dropdown-item"
+                >2026</a
+              >
+            </div>
+          </div>
+        </nav>
+
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <!-- Mode Toggle -->
+          <div class="mode-toggle" role="tablist" aria-label="Security surface">
+            <div class="mode-toggle-slider" aria-hidden="true"></div>
+            <button
+              class="mode-toggle-btn"
+              data-mode="apps"
+              role="tab"
+              aria-pressed="true"
+            >
+              Apps
+            </button>
+            <button
+              class="mode-toggle-btn"
+              data-mode="chain"
+              role="tab"
+              aria-pressed="false"
+            >
+              Chain
+            </button>
+          </div>
+          <button class="btn-primary" data-contact-form>
+            Book Security Audit
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="mobile-menu-btn"
+          id="mobile-menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     MOBILE OVERLAY
+════════════════════════════════════════════════════════════ -->
+    <div
+      class="mobile-overlay"
+      id="mobile-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation"
+    >
+      <div class="mobile-overlay-head">
+        <a href="index.html" class="nav-logo">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+          <img
+            src="images/credshields_white_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="30"
+            class="show-chain"
+          />
+          <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+          <img
+            src="images/credshields_black_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="30"
+            class="show-apps"
+          />
+        </a>
+        <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a
+          href="about.html"
+          class="mobile-nav-link"
+          style="display: block; padding: 16px 0"
+          >About</a
+        >
+      </div>
+
+      <!-- Solutions -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-solutions"
+        >
+          <span>Solutions</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-solutions">
+          <!-- ⛓ Chain-only -->
+          <a
+            href="smart-contract-audits.html"
+            class="mobile-sub-link nav-chain-only"
+            >Smart Contract Audits</a
+          >
+          <a
+            href="dapp-protocol-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >DApp &amp; Protocol Security</a
+          >
+          <a
+            href="enterprise-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Enterprise Web &amp; Mobile Security</a
+          >
+          <a
+            href="penetration-testing.html"
+            class="mobile-sub-link nav-chain-only"
+            >Penetration Testing</a
+          >
+          <a
+            href="blockchain-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Blockchain Security</a
+          >
+          <a href="cloud-security.html" class="mobile-sub-link nav-chain-only"
+            >Cloud Infrastructure</a
+          >
+          <a href="wallet-security.html" class="mobile-sub-link nav-chain-only"
+            >Wallet Security</a
+          >
+          <a
+            href="continuous-monitoring.html"
+            class="mobile-sub-link nav-chain-only"
+            >Continuous Monitoring</a
+          >
+          <a
+            href="incident-response.html"
+            class="mobile-sub-link nav-chain-only"
+            >Incident Response</a
+          >
+          <a
+            href="security-training.html"
+            class="mobile-sub-link nav-chain-only"
+            >Security Training</a
+          >
+          <a
+            href="ai-security-tools.html"
+            class="mobile-sub-link nav-chain-only"
+            >AI Security Tools</a
+          >
+          <a
+            href="https://solidityscan.com/"
+            class="mobile-sub-link nav-chain-only"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SolidityScan ↗</a
+          >
+          <a
+            href="https://rustscan.com/"
+            class="mobile-sub-link nav-chain-only"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RustScan ↗</a
+          >
+
+          <!-- 📱 Apps-only (from apps_site, grouped) -->
+          <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
+          <a
+            href="continuous-appsec.html"
+            class="mobile-sub-link nav-apps-only"
+          >
+            <span class="nav-flagship-badge">FLAGSHIP</span>
+            Continuous AppSec
+          </a>
+
+          <div class="nav-dropdown-section-title nav-apps-only">
+            Manual Pentesting
+          </div>
+          <a href="web-pentest.html" class="mobile-sub-link nav-apps-only"
+            >Web App Pentesting</a
+          >
+          <a href="mobile-pentest.html" class="mobile-sub-link nav-apps-only"
+            >Mobile App Pentesting</a
+          >
+          <a href="api-security.html" class="mobile-sub-link nav-apps-only"
+            >API Security Testing</a
+          >
+          <a href="cloud-pentest.html" class="mobile-sub-link nav-apps-only"
+            >Cloud Security Review</a
+          >
+          <a href="red-team.html" class="mobile-sub-link nav-apps-only"
+            >Red Team Engagement</a
+          >
+
+          <div class="nav-dropdown-section-title nav-apps-only">
+            Continuous &amp; Tooling
+          </div>
+          <a href="devsecops.html" class="mobile-sub-link nav-apps-only"
+            >DevSecOps Integration</a
+          >
+          <a href="sast.html" class="mobile-sub-link nav-apps-only"
+            >Source Code Review &amp; SAST</a
+          >
+
+          <div class="nav-dropdown-section-title nav-apps-only">
+            Specialized
+          </div>
+          <a href="ai-llm-security.html" class="mobile-sub-link nav-apps-only"
+            >AI / LLM AppSec</a
+          >
+          <a href="compliance.html" class="mobile-sub-link nav-apps-only"
+            >Compliance Readiness</a
+          >
+
+          <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
+          <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
+            >Sample Pentest Report</a
+          >
+          <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
+            >AppSec Maturity Model</a
+          >
+          <a href="pentest-vs-scan.html" class="mobile-sub-link nav-apps-only"
+            >Pentest vs Vuln Scan</a
+          >
+        </div>
+      </div>
+
+      <!-- Industries -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-industries"
+        >
+          <span>Industries</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-industries">
+          <!-- ⛓ Chain-only -->
+          <a
+            href="web3-protocol-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Web3 Protocols &amp; Exchanges</a
+          >
+          <a href="stablecoins.html" class="mobile-sub-link nav-chain-only"
+            >Stablecoins</a
+          >
+          <a href="realworldassets.html" class="mobile-sub-link nav-chain-only"
+            >Real World Assets</a
+          >
+          <a href="crosschainbridge.html" class="mobile-sub-link nav-chain-only"
+            >Cross-Chain Bridge</a
+          >
+          <a href="payments.html" class="mobile-sub-link nav-chain-only"
+            >Payments &amp; DeFi</a
+          >
+          <!-- 📱 Apps-only (from apps_site) -->
+          <a href="fintech-security.html" class="mobile-sub-link nav-apps-only"
+            >Finance &amp; Fintech</a
+          >
+          <a href="saas-security.html" class="mobile-sub-link nav-apps-only"
+            >SaaS &amp; Enterprise</a
+          >
+          <a
+            href="healthcare-security.html"
+            class="mobile-sub-link nav-apps-only"
+            >Healthcare &amp; Life Sciences</a
+          >
+          <a href="industry-edtech.html" class="mobile-sub-link nav-apps-only"
+            ><span class="nav-flagship-badge nav-flag-new">NEW</span> EdTech</a
+          >
+          <a
+            href="industry-ecommerce.html"
+            class="mobile-sub-link nav-apps-only"
+            >E-commerce &amp; Retail</a
+          >
+          <a href="industry-govtech.html" class="mobile-sub-link nav-apps-only"
+            >Public Sector / GovTech</a
+          >
+          <!-- ✅ Shared -->
+          <a href="gaming-security.html" class="mobile-sub-link"
+            >Gaming &amp; Digital Assets</a
+          >
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-resources"
+        >
+          <span>Resources</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-resources">
+          <!-- ⛓ Chain-only -->
+          <a href="recently-audited.html" class="mobile-sub-link nav-chain-only"
+            >Recently Audited</a
+          >
+          <a href="ecosystem.html" class="mobile-sub-link nav-chain-only"
+            >Ecosystem</a
+          >
+          <!-- 📱 Apps-only (from apps_site) -->
+          <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
+            >Sample Pentest Report</a
+          >
+          <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
+            >AppSec Maturity Model</a
+          >
+
+          <!-- ✅ Shared -->
+          <a
+            href="https://discover.credshields.com/"
+            class="mobile-sub-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Blog ↗</a
+          >
+          <a href="brand-guidelines.html" class="mobile-sub-link"
+            >Brand Guidelines</a
+          >
+          <a href="careers.html" class="mobile-sub-link">Careers</a>
+        </div>
+      </div>
+
+      <!-- Institutions - Chain only -->
+      <div class="mobile-nav-item nav-chain-only">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-institutions"
+        >
+          <span>Institutions</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-institutions">
+          <a href="Institutions.html" class="mobile-sub-link">Overview</a>
+          <a href="vc-crypto-funds.html" class="mobile-sub-link"
+            >VCs &amp; Crypto Funds</a
+          >
+          <a href="stablecoins.html" class="mobile-sub-link">Stablecoins</a>
+          <a href="crosschainbridge.html" class="mobile-sub-link"
+            >Cross-Chain Bridge</a
+          >
+          <a href="realworldassets.html" class="mobile-sub-link"
+            >Real World Assets</a
+          >
+          <a href="payments.html" class="mobile-sub-link">Payments</a>
+        </div>
+      </div>
+
+      <!-- OWASP Top 10 - Chain only -->
+      <div class="mobile-nav-item nav-chain-only">
+        <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-owasp">
+          <span>OWASP Top 10</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-owasp">
+          <a
+            href="owasp-smart-contract-top-10-2025.html"
+            class="mobile-sub-link"
+            >2025</a
+          >
+          <a
+            href="owasp-smart-contract-top-10-2026.html"
+            class="mobile-sub-link"
+            >2026</a
+          >
+        </div>
+      </div>
+
+      <div class="mobile-overlay-cta">
+        <button
+          class="btn-primary-lg"
+          style="width: 100%; text-align: center"
+          data-contact-form
+        >
+          Book Security Audit
+        </button>
+        <button
+          class="btn-secondary-lg"
+          style="width: 100%; justify-content: center"
+          data-free-ai-scan
+        >
+          Run Free AI Scan
+        </button>
+      </div>
+    </div>
+
+    <main class="assessment-page" data-mode="apps" data-page="self-assessment">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">SELF-ASSESSMENT · 12 QUESTIONS</span>
+          <h1 class="display hero-title">
+            Are you <span class="accent">pentest ready?</span>
+          </h1>
+          <p class="hero-sub">
+            Most pentests lose a week to unclear scope, missing credentials, and
+            no one on the hook for fixes. Twelve questions tell you whether
+            yours will, and exactly what to prepare so the report lands with
+            proof, not caveats.
+          </p>
+          <div class="hero-ctas">
+            <button
+              class="btn-primary"
+              onclick="startAssessment()"
+              aria-controls="assess"
+            >
+              Start the assessment →
+            </button>
+            <a class="btn-ghost" href="https://credshields.com/sample-report"
+              >See a sample report</a
+            >
+          </div>
+          <div class="hero-meta">
+            <span class="hm"><b>3 min</b> to complete</span>
+            <span class="hm"><b>Scored</b> across 4 dimensions</span>
+            <span class="hm"><b>Free</b> readiness report</span>
+          </div>
+        </div>
+        <div class="terminal" aria-hidden="true">
+          <div class="term-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span
+            ><span class="dot dot-g"></span>
+            <span class="term-title">readiness_report.txt</span>
+          </div>
+          <div class="term-body">
+            <div class="cm">$ credshields assess --scope production</div>
+            <div>› scope inventory <span class="ok">✓ documented</span></div>
+            <div>› test credentials <span class="ok">✓ staged</span></div>
+            <div>
+              › compliance driver <span class="ok">SOC 2 · 6 weeks</span>
+            </div>
+            <div>› fix owner <span class="wr">⚠ unassigned</span></div>
+            <div style="margin-top: 12px" class="cm">// readiness score</div>
+            <div class="term-score">78 / 100 · nearly ready</div>
+            <div class="cm">1 blocker</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="assess" id="assess" hidden>
+      <div class="container">
+        <div class="panel" id="panel">
+          <div class="panel-head">
+            <span class="p-label" id="plabel">START WHEN READY</span>
+            <div class="progress"><i id="pbar"></i></div>
+          </div>
+          <div id="steps"></div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div>
+            <div class="footer-brand-logo">
+              <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+              <img
+                src="images/credshields_white_logo.svg"
+                alt="CredShields"
+                width="140"
+                height="36"
+                class="show-chain"
+              />
+              <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+              <img
+                src="images/credshields_black_logo.svg"
+                alt="CredShields"
+                width="140"
+                height="36"
+                class="show-apps"
+              />
+            </div>
+            <p class="footer-brand-addr">
+              20A Tanjong Pagar Road,<br />Singapore (088443)
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://x.com/credshields"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629 5.905-5.629zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/credshields"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#FFFFFF">
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a
+                href="https://discover.credshields.com/"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Blog"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#FFFFFF"
+                  stroke-width="2"
+                >
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path
+                    d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-copy">
+              © 2026 CredShields. All Rights Reserved.
+            </div>
+          </div>
+
+          <!-- Solutions -->
+          <div>
+            <div class="footer-col-title">Solutions</div>
+            <div class="footer-links">
+              <!-- ⛓ Chain-only -->
+              <a
+                href="smart-contract-audits.html"
+                class="footer-link foot-chain-only"
+                >Smart Contract Audits</a
+              >
+              <a
+                href="dapp-protocol-security.html"
+                class="footer-link foot-chain-only"
+                >DApp &amp; Protocol Security</a
+              >
+              <a
+                href="blockchain-security.html"
+                class="footer-link foot-chain-only"
+                >Blockchain Security</a
+              >
+              <a href="wallet-security.html" class="footer-link foot-chain-only"
+                >Wallet Security</a
+              >
+              <a
+                href="continuous-monitoring.html"
+                class="footer-link foot-chain-only"
+                >Continuous Monitoring</a
+              >
+              <a
+                href="https://solidityscan.com/"
+                class="footer-link foot-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SolidityScan ↗</a
+              >
+              <a
+                href="https://rustscan.com/"
+                class="footer-link foot-chain-only"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RustScan ↗</a
+              >
+              <!-- 📱 Apps-only -->
+              <a
+                href="continuous-appsec.html"
+                class="footer-link foot-apps-only"
+                >Continuous AppSec</a
+              >
+              <a href="web-pentest.html" class="footer-link foot-apps-only"
+                >Web App Pentesting</a
+              >
+              <a href="mobile-pentest.html" class="footer-link foot-apps-only"
+                >Mobile App Pentesting</a
+              >
+              <a href="api-security.html" class="footer-link foot-apps-only"
+                >API Security Testing</a
+              >
+              <a href="cloud-pentest.html" class="footer-link foot-apps-only"
+                >Cloud Security Review</a
+              >
+              <a href="red-team.html" class="footer-link foot-apps-only"
+                >Red Team Engagement</a
+              >
+              <a href="devsecops.html" class="footer-link foot-apps-only"
+                >DevSecOps Integration</a
+              >
+              <a href="sast.html" class="footer-link foot-apps-only"
+                >Source Code Review &amp; SAST</a
+              >
+              <a href="ai-llm-security.html" class="footer-link foot-apps-only"
+                >AI / LLM AppSec</a
+              >
+              <a href="compliance.html" class="footer-link foot-apps-only"
+                >Compliance Readiness</a
+              >
+              <!-- ✅ Shared -->
+              <a href="incident-response.html" class="footer-link"
+                >Incident Response</a
+              >
+              <a href="security-training.html" class="footer-link"
+                >Security Training</a
+              >
+              <a href="ai-security-tools.html" class="footer-link"
+                >AI Security Tools</a
+              >
+            </div>
+          </div>
+
+          <!-- Industries -->
+          <div>
+            <div class="footer-col-title">Industries</div>
+            <div class="footer-links">
+              <!-- ⛓ Chain-only -->
+              <a
+                href="web3-protocol-security.html"
+                class="footer-link foot-chain-only"
+                >Web3 Protocols &amp; Exchanges</a
+              >
+              <a href="stablecoins.html" class="footer-link foot-chain-only"
+                >Stablecoins</a
+              >
+              <a href="realworldassets.html" class="footer-link foot-chain-only"
+                >Real World Assets</a
+              >
+              <a
+                href="crosschainbridge.html"
+                class="footer-link foot-chain-only"
+                >Cross-Chain Bridge</a
+              >
+              <a href="payments.html" class="footer-link foot-chain-only"
+                >Payments &amp; DeFi</a
+              >
+              <!-- 📱 Apps-only -->
+              <a href="fintech-security.html" class="footer-link foot-apps-only"
+                >Finance &amp; Fintech</a
+              >
+              <a href="saas-security.html" class="footer-link foot-apps-only"
+                >SaaS &amp; Enterprise</a
+              >
+              <a
+                href="healthcare-security.html"
+                class="footer-link foot-apps-only"
+                >Healthcare &amp; Life Sciences</a
+              >
+              <a href="industry-edtech.html" class="footer-link foot-apps-only"
+                >EdTech</a
+              >
+              <a
+                href="industry-ecommerce.html"
+                class="footer-link foot-apps-only"
+                >E-commerce &amp; Retail</a
+              >
+              <a href="industry-govtech.html" class="footer-link foot-apps-only"
+                >Public Sector / GovTech</a
+              >
+              <!-- ✅ Shared -->
+              <a href="gaming-security.html" class="footer-link"
+                >Gaming &amp; Digital Assets</a
+              >
+            </div>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <div class="footer-col-title">Resources</div>
+            <div class="footer-links">
+              <!-- ⛓ Chain-only -->
+              <a
+                href="recently-audited.html"
+                class="footer-link foot-chain-only"
+                >Recently Audited</a
+              >
+              <a href="ecosystem.html" class="footer-link foot-chain-only"
+                >Ecosystem</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2026.html"
+                class="footer-link foot-chain-only"
+                >OWASP Top 10 (2026)</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2025.html"
+                class="footer-link foot-chain-only"
+                >OWASP Top 10 (2025)</a
+              >
+              <a href="Institutions.html" class="footer-link foot-chain-only"
+                >Institutions Overview</a
+              >
+              <!-- 📱 Apps-only -->
+              <a href="sample-report.html" class="footer-link foot-apps-only"
+                >Sample Pentest Report</a
+              >
+              <a href="appsec-maturity.html" class="footer-link foot-apps-only"
+                >AppSec Maturity Model</a
+              >
+              <a href="pentest-vs-scan.html" class="footer-link foot-apps-only"
+                >Pentest vs Vuln Scan</a
+              >
+              <a href="self-assessment.html" class="footer-link foot-apps-only"
+                >Pentest Readiness Assessment</a
+              >
+              <!-- ✅ Shared -->
+              <a
+                href="https://discover.credshields.com/"
+                class="footer-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Blog ↗</a
+              >
+              <a href="brand-guidelines.html" class="footer-link"
+                >Brand Guidelines</a
+              >
+              <a href="careers.html" class="footer-link">Careers</a>
+              <a href="about.html" class="footer-link">About CredShields</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <a href="tos.html" class="footer-legal">Terms &amp; Conditions</a>
+          <a href="privacy.html" class="footer-legal">Privacy Policy</a>
+          <a href="privacy.html#cookies" class="footer-legal">Cookie Notice</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* ================= CONFIG: wire these before launch ================= */
+      const LEAD_WEBHOOK = ""; // paste Zapier / Make / HubSpot Forms API endpoint (POST JSON)
+      const CALENDLY_URL = "https://calendly.com/koda-credshields/30min";
+      const SAMPLE_REPORT_URL = "https://credshields.com/sample-report";
+      /* ==================================================================== */
+
+      const DIMS = [
+        "Scope & access",
+        "Driver & timeline",
+        "Current practices",
+        "Fix readiness",
+      ];
+      const QS = [
+        // d = dimension index; options: [label, points]
+        {
+          d: 0,
+          q: "Do you have a current inventory of your internet-facing applications and APIs?",
+          o: [
+            ["Yes, documented and current", 10],
+            ["Partially, we know the big ones", 5],
+            ["No, it lives in people's heads", 0],
+          ],
+        },
+        {
+          d: 0,
+          q: "Can you provide a test environment with realistic data and working credentials?",
+          o: [
+            ["Yes, staging mirrors production", 10],
+            ["Production only, with care", 6],
+            ["Not yet", 0],
+          ],
+        },
+        {
+          d: 0,
+          q: "Do you know which user roles and tenant boundaries matter most to test?",
+          o: [
+            ["Yes, roles and tenants mapped", 10],
+            ["Roughly", 5],
+            ["Haven't thought about it", 0],
+          ],
+        },
+        {
+          d: 1,
+          q: "What's driving this pentest?",
+          o: [
+            ["Compliance deadline or customer requirement", 10],
+            ["Proactive security decision", 7],
+            ["Just exploring", 3],
+          ],
+        },
+        {
+          d: 1,
+          q: "When do you need the report in hand?",
+          o: [
+            ["Inside 4 weeks", 10],
+            ["This quarter", 6],
+            ["No date yet", 2],
+          ],
+        },
+        {
+          d: 1,
+          q: "Which compliance frameworks are in play?",
+          o: [
+            ["SOC 2 / ISO 27001 / PCI / HIPAA, active now", 10],
+            ["Planning for one of them", 5],
+            ["None right now", 2],
+          ],
+        },
+        {
+          d: 2,
+          q: "Is automated vulnerability scanning already running?",
+          o: [
+            ["Yes, in CI or scheduled", 10],
+            ["Occasionally / ad hoc", 5],
+            ["No", 0],
+          ],
+        },
+        {
+          d: 2,
+          q: "When was your last penetration test?",
+          o: [
+            ["Within 12 months", 10],
+            ["Over a year ago", 5],
+            ["Never", 2],
+          ],
+        },
+        {
+          d: 2,
+          q: "Do findings today follow a triage-and-fix process?",
+          o: [
+            ["Yes: owned, tracked, verified", 10],
+            ["Tracked, loosely owned", 5],
+            ["Findings tend to sit", 0],
+          ],
+        },
+        {
+          d: 3,
+          q: "Is engineering capacity allocated for remediation after the test?",
+          o: [
+            ["Yes, sprint time reserved", 10],
+            ["We'll find the time", 5],
+            ["Not planned", 0],
+          ],
+        },
+        {
+          d: 3,
+          q: "Where should findings land?",
+          o: [
+            ["Straight into Jira / Slack / CI", 10],
+            ["Email or PDF is fine", 6],
+            ["Undecided", 3],
+          ],
+        },
+        {
+          d: 3,
+          q: "Is a budget owner identified for security testing?",
+          o: [
+            ["Yes, budget approved or owned", 10],
+            ["In discussion", 5],
+            ["Not yet", 0],
+          ],
+        },
+      ];
+
+      const state = {
+        i: -1,
+        answers: new Array(QS.length).fill(null),
+        lead: null,
+      };
+
+      function getUTM() {
+        const p = new URLSearchParams(location.search),
+          u = {};
+        [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "utm_term",
+        ].forEach((k) => {
+          if (p.get(k)) u[k] = p.get(k);
+        });
+        return u;
+      }
+
+      function render() {
+        const steps = document.getElementById("steps");
+        steps.innerHTML = "";
+        QS.forEach((q, idx) => {
+          const div = document.createElement("div");
+          div.className = "step" + (state.i === idx ? " active" : "");
+          div.innerHTML = `
+      <div class="dim-tag">${DIMS[q.d]} · Q${idx + 1} of ${QS.length}</div>
+      <div class="q-title">${q.q}</div>
+      <div class="opts">${q.o
+        .map(
+          (o, oi) => `
+        <button class="opt${state.answers[idx] === oi ? " sel" : ""}" onclick="pick(${idx},${oi})">
+          <span class="k">${String.fromCharCode(65 + oi)}</span><span>${o[0]}</span>
+        </button>`,
+        )
+        .join("")}
+      </div>
+      <div class="step-foot">
+        <button class="back" onclick="go(${idx - 1})" ${idx === 0 ? 'style="visibility:hidden"' : ""}>← BACK</button>
+        <span class="p-label">${state.answers[idx] !== null ? "SELECT TO CONTINUE ✓" : "SELECT AN ANSWER"}</span>
+      </div>`;
+          steps.appendChild(div);
+        });
+        // gate step
+        const gate = document.createElement("div");
+        gate.className = "step" + (state.i === QS.length ? " active" : "");
+        gate.innerHTML = `
+    <div class="dim-tag">LAST STEP</div>
+    <div class="q-title">Your readiness report is scored. Where should we send it?</div>
+    <div class="gate-grid">
+      <div class="row-2">
+        <input id="f-name" placeholder="Full name" autocomplete="name">
+        <input id="f-company" placeholder="Company" autocomplete="organization">
+      </div>
+      <div class="row-2">
+        <input id="f-email" type="email" placeholder="Work email" autocomplete="email">
+        <select id="f-role">
+          <option value="">Your role…</option>
+          <option>Founder / CEO</option><option>CTO / VP Engineering</option>
+          <option>CISO / Security lead</option><option>Compliance / GRC</option>
+          <option>Engineer</option><option>Other</option>
+        </select>
+      </div>
+      <label class="consent"><input type="checkbox" id="f-consent">
+        <span>Email me the report and the short readiness series that follows. Unsubscribe anytime. See our <a href="https://credshields.com/privacy" style="color:var(--green)">privacy policy</a>.</span>
+      </label>
+      <div class="err" id="gate-err">Please add your name, a valid work email, company, and consent.</div>
+      <button class="btn-primary" style="justify-content:center" onclick="submitLead()">See my readiness report →</button>
+    </div>
+    <div class="step-foot"><button class="back" onclick="go(${QS.length - 1})">← BACK</button><span></span></div>`;
+        steps.appendChild(gate);
+        // results placeholder
+        const res = document.createElement("div");
+        res.id = "results";
+        res.className = "step" + (state.i === QS.length + 1 ? " active" : "");
+        steps.appendChild(res);
+        // progress
+        const done = state.answers.filter((a) => a !== null).length;
+        const pct =
+          state.i >= QS.length ? 100 : Math.round((done / QS.length) * 100);
+        document.getElementById("pbar").style.width = pct + "%";
+        document.getElementById("plabel").textContent =
+          state.i < 0
+            ? "START WHEN READY"
+            : state.i < QS.length
+              ? `QUESTION ${state.i + 1} / ${QS.length}`
+              : state.i === QS.length
+                ? "ALMOST THERE"
+                : "YOUR REPORT";
+        if (state.i === QS.length + 1) renderResults();
+      }
+
+      function startAssessment() {
+        const assessment = document.getElementById("assess");
+        assessment.hidden = false;
+        state.i = 0;
+        render();
+        assessment.scrollIntoView({ behavior: "smooth" });
+      }
+      function go(i) {
+        state.i = Math.max(0, i);
+        render();
+      }
+      function pick(qi, oi) {
+        state.answers[qi] = oi;
+        state.i = qi + 1;
+        render();
+        document
+          .getElementById("panel")
+          .scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function scores() {
+        const dim = [0, 0, 0, 0],
+          dmax = [0, 0, 0, 0];
+        let total = 0;
+        QS.forEach((q, i) => {
+          const pts = state.answers[i] !== null ? q.o[state.answers[i]][1] : 0;
+          dim[q.d] += pts;
+          dmax[q.d] += 10;
+          total += pts;
+        });
+        return {
+          total: Math.round((total / (QS.length * 10)) * 100),
+          dims: dim.map((v, i) => Math.round((v / dmax[i]) * 100)),
+        };
+      }
+      function tierOf(t) {
+        if (t >= 70)
+          return {
+            name: "Pentest ready.",
+            color: "var(--green)",
+            sub: "Scope, driver, and fix path are in place. A test booked now converts straight into proof: findings reproduced, fixed, and verified inside your window.",
+            cta: "book",
+          };
+        if (t >= 40)
+          return {
+            name: "Nearly ready.",
+            color: "var(--amber)",
+            sub: "You'd get value from a pentest today, but one or two gaps below would slow the engagement or blunt the report. Clear them first. Most take under a week.",
+            cta: "sample",
+          };
+        return {
+          name: "Not ready yet. That is worth knowing now.",
+          color: "var(--red)",
+          sub: "A pentest today would spend its budget on setup, not findings. The checklist below is the fastest path to readiness; the series we send walks each step.",
+          cta: "checklist",
+        };
+      }
+      function recsFor(s) {
+        const R = [];
+        if (s.dims[0] < 70)
+          R.push([
+            "Scope & access",
+            "Write the one-page scope: internet-facing apps, APIs, the roles and tenant boundaries that matter. Stage credentials before kickoff. Missing access is the #1 cause of lost test days.",
+          ]);
+        if (s.dims[1] < 70)
+          R.push([
+            "Driver & timeline",
+            "Anchor the test to its real deadline (audit window, customer ask). A dated driver gets budget approved and findings fixed.",
+          ]);
+        if (s.dims[2] < 70)
+          R.push([
+            "Current practices",
+            "Turn on baseline scanning before the pentest so paid researcher time goes to what machines can't find: logic, authorization, chained paths.",
+          ]);
+        if (s.dims[3] < 70)
+          R.push([
+            "Fix readiness",
+            "Name the fix owner and reserve sprint capacity now. A finding without an owner is a risk with a report attached.",
+          ]);
+        if (!R.length)
+          R.push([
+            "You're set",
+            "Bring the scope doc to the kickoff call and we can begin the same week: report in 5–7 days, retests free for 90.",
+          ]);
+        return R;
+      }
+
+      function validEmail(e) {
+        return (
+          (/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e) &&
+            !/@(gmail|yahoo|hotmail|outlook)\./i.test(e)) ||
+          /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)
+        );
+      }
+
+      function submitLead() {
+        const name = document.getElementById("f-name").value.trim(),
+          company = document.getElementById("f-company").value.trim(),
+          email = document.getElementById("f-email").value.trim(),
+          role = document.getElementById("f-role").value,
+          consent = document.getElementById("f-consent").checked;
+        if (!name || !company || !validEmail(email) || !consent) {
+          document.getElementById("gate-err").style.display = "block";
+          return;
+        }
+        const s = scores(),
+          tier = tierOf(s.total);
+        state.lead = {
+          name,
+          company,
+          email,
+          role,
+          consent,
+          score: s.total,
+          dims: Object.fromEntries(DIMS.map((d, i) => [d, s.dims[i]])),
+          tier: tier.name,
+          answers: state.answers.map((a, i) => ({
+            q: QS[i].q,
+            a: QS[i].o[a][0],
+            pts: QS[i].o[a][1],
+          })),
+          source: "pentest-ready-assessment",
+          utm: getUTM(),
+          ts: new Date().toISOString(),
+        };
+        if (LEAD_WEBHOOK) {
+          fetch(LEAD_WEBHOOK, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(state.lead),
+          }).catch(() => {});
+        }
+        console.log("LEAD PAYLOAD →", state.lead);
+        state.i = QS.length + 1;
+        render();
+      }
+
+      function renderResults() {
+        const s = scores(),
+          tier = tierOf(s.total),
+          C = 283;
+        const off = C - (C * s.total) / 100;
+        const pb = document.getElementById("pbar");
+        pb.style.width = s.total + "%";
+        pb.style.background = tier.color;
+        const dimColor = (v) =>
+          v >= 70 ? "var(--green)" : v >= 40 ? "var(--amber)" : "var(--red)";
+        const ctas = {
+          book: `<a class="btn-primary" href="${CALENDLY_URL}">Book your scoping call · 15 min →</a>
+          <a class="btn-ghost" href="${SAMPLE_REPORT_URL}">See a sample report</a>
+          <div class="res-note">HOT PATH · SLOTS SCOPED SAME WEEK</div>`,
+          sample: `<a class="btn-primary" href="${SAMPLE_REPORT_URL}">See what the report looks like →</a>
+          <a class="btn-ghost" href="${CALENDLY_URL}">Talk it through · 15 min</a>
+          <div class="res-note">YOUR GAPS + THE FIX SERIES ARE IN YOUR INBOX</div>`,
+          checklist: `<a class="btn-primary" href="mailto:?subject=Pentest readiness">Email me the readiness checklist →</a>
+          <a class="btn-ghost" href="${SAMPLE_REPORT_URL}">See a sample report</a>`,
+        };
+        document.getElementById("results").innerHTML = `
+    <div class="res-head">
+      <div class="score-ring">
+        <svg width="150" height="150"><circle cx="75" cy="75" r="45" fill="none" stroke="var(--bg-2)" stroke-width="10"/>
+        <circle cx="75" cy="75" r="45" fill="none" stroke="${tier.color}" stroke-width="10" stroke-linecap="round"
+          stroke-dasharray="${C}" stroke-dashoffset="${off}" style="transition:stroke-dashoffset 1.1s var(--ease)"/></svg>
+        <div class="score-num">${s.total}<small>/ 100</small></div>
+      </div>
+      <div class="tier" style="color:${tier.color}">${tier.name}</div>
+      <p class="tier-sub">${tier.sub}</p>
+    </div>
+    <div class="dims">
+      ${DIMS.map(
+        (d, i) => `<div class="dim"><span class="n">${d.toUpperCase()}</span>
+        <div class="dbar"><i style="background:${dimColor(s.dims[i])};width:${s.dims[i]}%"></i></div>
+        <span class="v">${s.dims[i]}%</span></div>`,
+      ).join("")}
+    </div>
+    <div class="recs">
+      ${recsFor(s)
+        .map(
+          (r) =>
+            `<div class="rec"><span class="ic">→</span><span><b>${r[0]}.</b> ${r[1]}</span></div>`,
+        )
+        .join("")}
+    </div>
+    <div class="res-cta">${ctas[tier.cta]}</div>`;
+      }
+
+      render();
+    </script>
+    <script src="js/main.v1.js"></script>
+  </body>
+</html>
