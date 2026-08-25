@@ -1288,7 +1288,8 @@ html[data-mode="chain"] .comp-badge { color: var(--lime); }
 .cta-trust-item-sub { font-size: 13px; color: rgba(255,255,255,0.45); }
 
 .trustpilot-widget-wrapper {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-left: -55px;
 }
 
 /* ── Footer ───────────────────────────────────────────────── */
