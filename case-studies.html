@@ -633,7 +633,7 @@
         max-width: 820px;
       }
       .section-head h2 {
-        font-size: clamp(36px, 5vw, 64px);
+        /* font-size: clamp(36px, 5vw, 64px); */
         margin-top: 16px;
         max-width: 18ch;
       }
@@ -2959,13 +2959,13 @@
           <h1 class="app_home-hero-headline">Holmes AI</h1>
 
           <div class="app_home-hero-ticker">
-            <span class="app_home-ticker-item">AI Saas</span
-            ><span class="app_home-ticker-sep">◆</span>
-            <span class="app_home-ticker-item">B2B Procurement</span
-            ><span class="app_home-ticker-sep">◆</span>
-            <span class="app_home-ticker-item">California</span
-            ><span class="app_home-ticker-sep">◆</span>
-            <span class="app_home-ticker-item">United States</span>
+            <span class="app_home-ticker-item">AI SAAS</span
+            ><span class="app_home-ticker-sep" style="font-size: 10px">◆</span>
+            <span class="app_home-ticker-item">B2B PROCUREMENT</span
+            ><span class="app_home-ticker-sep" style="font-size: 10px">◆</span>
+            <span class="app_home-ticker-item">CALIFORNIA</span
+            ><span class="app_home-ticker-sep" style="font-size: 10px">◆</span>
+            <span class="app_home-ticker-item">UNITED STATES</span>
           </div>
           <p class="app_home-hero-body">
             A web application and API penetration test across an AI-powered B2B
@@ -3398,7 +3398,7 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">/ common questions</span>
-          <h2 class="app_home-service-title">
+          <h2 class="app_home-section-title">
             Questions this engagement usually raises.
           </h2>
         </div>
@@ -3469,9 +3469,9 @@
           <h2 class="display">Other work.</h2>
         </div>
         <div class="more">
-          <a class="more-card reveal" href="case-study-tazapay.html">
+          <a class="more-card reveal" href="neobank-case-study.html">
             <span class="k">Fintech &amp; Payments</span>
-            <h3>Tazapay</h3>
+            <h3>NeoBank</h3>
             <p>
               Five live phishing and crypto dusting scenarios run against the
               custody and operations teams. All five blocked.
@@ -3490,7 +3490,7 @@
                 <polyline points="12 5 19 12 12 19" /></svg
             ></span>
           </a>
-          <a class="more-card reveal" href="case-study-juno.html">
+          <a class="more-card reveal" href="payments-platform-case-study.html">
             <span class="k">Fintech &amp; Payments</span>
             <h3>Juno</h3>
             <p>
@@ -3514,41 +3514,99 @@
         </div>
       </div>
     </section>
-
-    <!-- FINAL CTA ---------------------------------------------- -->
-    <section class="container" id="cta">
-      <div class="final reveal">
-        <div class="final-inner">
-          <img
-            class="final-logo"
-            src="data:image/png;base64,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"
-            alt="CredShields"
-          />
-          <span class="eyebrow" style="justify-content: center"
-            >/ follow the path real attackers take</span
-          >
-          <h2>Think like them. <em>Before they do.</em></h2>
-          <p>
+    <!-- ═══════════════════════════════════════════════════════════
+     CTA BLOCK
+════════════════════════════════════════════════════════════ -->
+    <div class="cta-block">
+      <div class="cta-glow" aria-hidden="true"></div>
+      <div class="cta-inner">
+        <!-- APPS CTA -->
+        <div class="show-apps">
+          <div class="cta-eyebrow">
+            <svg width="14" height="16" viewBox="0 0 32 36" fill="none">
+              <path
+                d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z"
+                fill="#A8FF45"
+              ></path>
+              <path
+                d="M11 17.5L14.5 21L21 14"
+                stroke="#0A1A0C"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            Start here
+          </div>
+          <h2 class="cta-title">Think like them.<br />Before they do</h2>
+          <p class="cta-body">
             Book a 30-minute walkthrough. We'll point CredShields at a scoped
             asset and show you live findings by the end of the call.
           </p>
-          <a href="#" class="btn-primary">
-            Book a demo
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
+        </div>
+        <!-- CHAIN CTA -->
+        <div class="show-chain">
+          <div class="cta-eyebrow">
+            <svg width="14" height="16" viewBox="0 0 32 36" fill="none">
+              <path
+                d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z"
+                fill="#A8FF45"
+              ></path>
+              <path
+                d="M11 17.5L14.5 21L21 14"
+                stroke="#0A1A0C"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
             </svg>
-          </a>
+            Secure your protocol today
+          </div>
+          <h2 class="cta-title">
+            Don't wait for a<br />security <em>incident</em>.
+          </h2>
+          <p class="cta-body">
+            Get your comprehensive security audit from the team trusted by 200+
+            protocols and enterprises worldwide. Fast turnaround. Proven track
+            record. Direct access to senior security engineers.
+          </p>
+        </div>
+        <div class="cta-btns">
+          <!-- APPS buttons -->
+          <a class="btn-cta-primary show-apps" href="#contact"
+            >Start a Pentest →</a
+          >
+          <a
+            class="btn-cta-ghost show-apps"
+            href="https://calendly.com/koda-credshields/30min"
+            data-book-security
+            >Talk to an Expert ↗</a
+          >
+          <!-- CHAIN buttons -->
+          <a class="btn-cta-primary show-chain" href="#contact"
+            >Request Manual Audit →</a
+          >
+          <a class="btn-cta-ghost show-chain" href="#contact"
+            >Book Security Review ↗</a
+          >
+        </div>
+        <!-- Shared trust strip -->
+        <div class="cta-trust">
+          <div>
+            <div class="cta-trust-item-title">Fixed-Fee Pricing</div>
+            <div class="cta-trust-item-sub">No engineer-hour billing</div>
+          </div>
+          <div>
+            <div class="cta-trust-item-title">Audit-Ready by Default</div>
+            <div class="cta-trust-item-sub">SOC 2, ISO, PCI, HIPAA</div>
+          </div>
+          <div>
+            <div class="cta-trust-item-title">Engineer-Validated</div>
+            <div class="cta-trust-item-sub">Not scanner output</div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ═══════════════════════════════════════════════════════════
      FOOTER
