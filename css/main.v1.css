@@ -19,46 +19,6 @@
 .section--plain { background: var(--bg); }
 
 /* ── Alert Bar ────────────────────────────────────────────── */
-.alert-bar {
-  background: var(--bg-dark);
-  padding: 9px 32px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  justify-content: center;
-}
-.alert-dot {
-  width: 7px; height: 7px;
-  background: var(--lime);
-  border-radius: 50%;
-  flex-shrink: 0;
-  animation: pulse 2s infinite;
-}
-.alert-text {
-  font-family: var(--font-mono);
-  font-size: 11px; font-weight: 600;
-  letter-spacing: 0.06em;
-  color: var(--lime);
-}
-.alert-sub {
-  font-size: 12px;
-  color: rgba(255,255,255,0.5);
-  margin-left: 4px;
-}
-.alert-link {
-  font-family: var(--font-mono);
-  font-size: 11px; font-weight: 700;
-  color: var(--lime);
-  white-space: nowrap;
-}
-.alert-link:hover { text-decoration: underline; }
-
-/* Mode-specific alert text */
-.alert-chain { display: none; }
-.alert-apps  { display: inline; }
-html[data-mode="chain"] .alert-chain { display: inline; }
-html[data-mode="chain"] .alert-apps  { display: none; }
-
 /* ── Navigation ───────────────────────────────────────────── */
 .nav-wrap {
   position: sticky; top: 0; z-index: 200;
@@ -1436,7 +1396,6 @@ html[data-mode="chain"] .comp-badge { color: var(--lime); }
   .nav-links    { display: none; }
   .nav-actions > .btn-primary { display: none; }
   .mobile-menu-btn { display: flex; }
-  .alert-sub    { display: none; }
   .hero-stats   { flex-wrap: wrap; }
   .hero-inner   { grid-template-columns: 1fr; gap: 40px; }
 }

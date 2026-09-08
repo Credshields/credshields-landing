@@ -39,6 +39,9 @@
     <link rel="stylesheet" href="css/design-tokens.v1.css" />
     <link rel="stylesheet" href="css/main.v1.css" />
     <link rel="stylesheet" href="css/app_home.css" />
+    <link rel="stylesheet" href="css/homepage-rehaul.css" />
+    <script src="js/three.min.js"></script>
+    <script type="module" src="js/hero-globe.js"></script>
 
     <!-- Calendly -->
     <link
@@ -50,14 +53,6 @@
       type="text/javascript"
       async
     ></script>
-
-    <!-- TrustBox script -->
-    <script
-      type="text/javascript"
-      src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-      async
-    ></script>
-    <!-- End TrustBox script -->
 
     <!-- MS Clarity -->
     <script async type="text/javascript">
@@ -102,52 +97,6 @@
     <!-- ═══════════════════════════════════════════════════════════
      ALERT BAR
 ════════════════════════════════════════════════════════════ -->
-    <div class="alert-bar" id="alert-banner" role="banner">
-      <div class="alert-dot"></div>
-      <span class="alert-text">
-        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR TEXT ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-        <span class="alert-chain"
-          >OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart
-          Contract Security.</span
-        >
-        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-        <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR TEXT ░░░░░░░░░░░░░ -->
-        <span class="alert-apps"
-          >Industry Security Report 2026 Now Live. AI-led Pentesting
-          Benchmark.</span
-        >
-        <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
-      </span>
-      <span class="alert-sub">Learn more about our findings.</span>
-      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR LINK ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-      <a
-        href="owasp-smart-contract-top-10-2026.html"
-        class="alert-link alert-chain"
-        >Explore →</a
-      >
-      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-      <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR LINK ░░░░░░░░░░░░░ -->
-      <a href="sample-report.html" class="alert-link alert-apps"
-        >Read Report →</a
-      >
-      <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
-      <button
-        id="close-banner"
-        style="
-          margin-left: 16px;
-          background: none;
-          border: none;
-          color: rgba(255, 255, 255, 0.4);
-          font-size: 16px;
-          cursor: pointer;
-          line-height: 1;
-        "
-        aria-label="Close banner"
-      >
-        ✕
-      </button>
-    </div>
-
     <!-- ═══════════════════════════════════════════════════════════
      NAVIGATION
 ════════════════════════════════════════════════════════════ -->
@@ -191,78 +140,6 @@
               <path d="M6 9l6 6 6-6" />
             </svg>
             <div class="nav-dropdown-menu nav-dropdown-wide">
-              <!-- ⛓ Chain-only solutions -->
-              <a
-                href="smart-contract-audits.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Smart Contract Audits</a
-              >
-              <a
-                href="dapp-protocol-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >DApp &amp; Protocol Security</a
-              >
-              <a
-                href="enterprise-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Enterprise Web &amp; Mobile Security</a
-              >
-              <a
-                href="penetration-testing.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Penetration Testing</a
-              >
-              <a
-                href="blockchain-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Blockchain Security</a
-              >
-              <a
-                href="cloud-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Cloud Infrastructure</a
-              >
-              <a
-                href="wallet-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Wallet Security</a
-              >
-              <a
-                href="continuous-monitoring.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Continuous Monitoring</a
-              >
-              <a
-                href="incident-response.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Incident Response</a
-              >
-              <a
-                href="security-training.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Security Training</a
-              >
-              <a
-                href="ai-security-tools.html"
-                class="nav-dropdown-item nav-chain-only"
-                >AI Security Tools</a
-              >
-              <div class="nav-dropdown-divider nav-chain-only"></div>
-              <a
-                href="https://solidityscan.com/"
-                class="nav-dropdown-item nav-chain-only"
-                target="_blank"
-                rel="noopener noreferrer"
-                >SolidityScan ↗</a
-              >
-              <a
-                href="https://rustscan.com/"
-                class="nav-dropdown-item nav-chain-only"
-                target="_blank"
-                rel="noopener noreferrer"
-                >RustScan ↗</a
-              >
-
               <!-- 📱 Apps-only solutions (from apps_site, grouped) -->
               <div class="nav-dropdown-section-title nav-apps-only">
                 Flagship
@@ -310,6 +187,37 @@
                 >Source Code Review &amp; SAST</a
               >
 
+              <div class="nav-dropdown-section-title">Web3</div>
+              <a href="smart-contract-audits.html" class="nav-dropdown-item"
+                >Smart Contract Audits</a
+              >
+              <a href="dapp-protocol-security.html" class="nav-dropdown-item"
+                >DApp &amp; Protocol Security</a
+              >
+              <a href="blockchain-security.html" class="nav-dropdown-item"
+                >Blockchain Security</a
+              >
+              <a href="wallet-security.html" class="nav-dropdown-item"
+                >Wallet Security</a
+              >
+              <a href="continuous-monitoring.html" class="nav-dropdown-item"
+                >Continuous Monitoring</a
+              >
+              <a
+                href="https://solidityscan.com/"
+                class="nav-dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SolidityScan ↗</a
+              >
+              <a
+                href="https://rustscan.com/"
+                class="nav-dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RustScan ↗</a
+              >
+
               <div class="nav-dropdown-section-title nav-apps-only">
                 Specialized
               </div>
@@ -322,24 +230,6 @@
                 >Compliance Readiness</a
               >
 
-              <div class="nav-dropdown-section-title nav-apps-only">
-                Resources
-              </div>
-              <a
-                href="sample-report.html"
-                class="nav-dropdown-item nav-apps-only"
-                >Sample Pentest Report</a
-              >
-              <a
-                href="appsec-maturity.html"
-                class="nav-dropdown-item nav-apps-only"
-                >AppSec Maturity Model</a
-              >
-              <a
-                href="pentest-vs-scan.html"
-                class="nav-dropdown-item nav-apps-only"
-                >Pentest vs Vuln Scan</a
-              >
             </div>
           </div>
 
@@ -445,6 +335,16 @@
               <a href="ecosystem.html" class="nav-dropdown-item nav-chain-only"
                 >Ecosystem</a
               >
+              <a
+                href="owasp-smart-contract-top-10-2025.html"
+                class="nav-dropdown-item nav-chain-only"
+                >OWASP Smart Contract Top 10 (2025)</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2026.html"
+                class="nav-dropdown-item nav-chain-only"
+                >OWASP Smart Contract Top 10 (2026)</a
+              >
               <!-- 📱 Apps-only resources (from apps_site) -->
               <a
                 href="sample-report.html"
@@ -455,6 +355,11 @@
                 href="appsec-maturity.html"
                 class="nav-dropdown-item nav-apps-only"
                 >AppSec Maturity Model</a
+              >
+              <a
+                href="pentest-vs-scan.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Pentest vs Vuln Scan</a
               >
 
               <!-- ✅ Shared -->
@@ -503,56 +408,10 @@
             </div>
           </div>
 
-          <!-- OWASP Top 10 - Chain only -->
-          <div class="nav-link nav-dropdown nav-chain-only">
-            <span>OWASP Top 10</span>
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-            >
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-            <div class="nav-dropdown-menu">
-              <a
-                href="owasp-smart-contract-top-10-2025.html"
-                class="nav-dropdown-item"
-                >2025</a
-              >
-              <a
-                href="owasp-smart-contract-top-10-2026.html"
-                class="nav-dropdown-item"
-                >2026</a
-              >
-            </div>
-          </div>
         </nav>
 
         <!-- Nav Actions -->
         <div class="nav-actions">
-          <!-- Mode Toggle -->
-          <div class="mode-toggle" role="tablist" aria-label="Security surface">
-            <div class="mode-toggle-slider" aria-hidden="true"></div>
-            <button
-              class="mode-toggle-btn"
-              data-mode="apps"
-              role="tab"
-              aria-pressed="true"
-            >
-              Apps
-            </button>
-            <button
-              class="mode-toggle-btn"
-              data-mode="chain"
-              role="tab"
-              aria-pressed="false"
-            >
-              Chain
-            </button>
-          </div>
           <button class="btn-primary" data-contact-form>
             Book Security Audit
           </button>
@@ -634,73 +493,6 @@
           </svg>
         </div>
         <div class="mobile-sub" id="mob-solutions">
-          <!-- ⛓ Chain-only -->
-          <a
-            href="smart-contract-audits.html"
-            class="mobile-sub-link nav-chain-only"
-            >Smart Contract Audits</a
-          >
-          <a
-            href="dapp-protocol-security.html"
-            class="mobile-sub-link nav-chain-only"
-            >DApp &amp; Protocol Security</a
-          >
-          <a
-            href="enterprise-security.html"
-            class="mobile-sub-link nav-chain-only"
-            >Enterprise Web &amp; Mobile Security</a
-          >
-          <a
-            href="penetration-testing.html"
-            class="mobile-sub-link nav-chain-only"
-            >Penetration Testing</a
-          >
-          <a
-            href="blockchain-security.html"
-            class="mobile-sub-link nav-chain-only"
-            >Blockchain Security</a
-          >
-          <a href="cloud-security.html" class="mobile-sub-link nav-chain-only"
-            >Cloud Infrastructure</a
-          >
-          <a href="wallet-security.html" class="mobile-sub-link nav-chain-only"
-            >Wallet Security</a
-          >
-          <a
-            href="continuous-monitoring.html"
-            class="mobile-sub-link nav-chain-only"
-            >Continuous Monitoring</a
-          >
-          <a
-            href="incident-response.html"
-            class="mobile-sub-link nav-chain-only"
-            >Incident Response</a
-          >
-          <a
-            href="security-training.html"
-            class="mobile-sub-link nav-chain-only"
-            >Security Training</a
-          >
-          <a
-            href="ai-security-tools.html"
-            class="mobile-sub-link nav-chain-only"
-            >AI Security Tools</a
-          >
-          <a
-            href="https://solidityscan.com/"
-            class="mobile-sub-link nav-chain-only"
-            target="_blank"
-            rel="noopener noreferrer"
-            >SolidityScan ↗</a
-          >
-          <a
-            href="https://rustscan.com/"
-            class="mobile-sub-link nav-chain-only"
-            target="_blank"
-            rel="noopener noreferrer"
-            >RustScan ↗</a
-          >
-
           <!-- 📱 Apps-only (from apps_site, grouped) -->
           <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
           <a
@@ -740,6 +532,37 @@
             >Source Code Review &amp; SAST</a
           >
 
+          <div class="nav-dropdown-section-title">Web3</div>
+          <a href="smart-contract-audits.html" class="mobile-sub-link"
+            >Smart Contract Audits</a
+          >
+          <a href="dapp-protocol-security.html" class="mobile-sub-link"
+            >DApp &amp; Protocol Security</a
+          >
+          <a href="blockchain-security.html" class="mobile-sub-link"
+            >Blockchain Security</a
+          >
+          <a href="wallet-security.html" class="mobile-sub-link"
+            >Wallet Security</a
+          >
+          <a href="continuous-monitoring.html" class="mobile-sub-link"
+            >Continuous Monitoring</a
+          >
+          <a
+            href="https://solidityscan.com/"
+            class="mobile-sub-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SolidityScan ↗</a
+          >
+          <a
+            href="https://rustscan.com/"
+            class="mobile-sub-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RustScan ↗</a
+          >
+
           <div class="nav-dropdown-section-title nav-apps-only">
             Specialized
           </div>
@@ -750,16 +573,6 @@
             >Compliance Readiness</a
           >
 
-          <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
-          <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
-            >Sample Pentest Report</a
-          >
-          <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
-            >AppSec Maturity Model</a
-          >
-          <a href="pentest-vs-scan.html" class="mobile-sub-link nav-apps-only"
-            >Pentest vs Vuln Scan</a
-          >
         </div>
       </div>
 
@@ -860,12 +673,25 @@
           <a href="ecosystem.html" class="mobile-sub-link nav-chain-only"
             >Ecosystem</a
           >
+          <a
+            href="owasp-smart-contract-top-10-2025.html"
+            class="mobile-sub-link nav-chain-only"
+            >OWASP Smart Contract Top 10 (2025)</a
+          >
+          <a
+            href="owasp-smart-contract-top-10-2026.html"
+            class="mobile-sub-link nav-chain-only"
+            >OWASP Smart Contract Top 10 (2026)</a
+          >
           <!-- 📱 Apps-only (from apps_site) -->
           <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
             >Sample Pentest Report</a
           >
           <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
             >AppSec Maturity Model</a
+          >
+          <a href="pentest-vs-scan.html" class="mobile-sub-link nav-apps-only"
+            >Pentest vs Vuln Scan</a
           >
 
           <!-- ✅ Shared -->
@@ -919,37 +745,6 @@
         </div>
       </div>
 
-      <!-- OWASP Top 10 - Chain only -->
-      <div class="mobile-nav-item nav-chain-only">
-        <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-owasp">
-          <span>OWASP Top 10</span>
-          <svg
-            class="mobile-chevron"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            style="transition: transform 200ms"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </div>
-        <div class="mobile-sub" id="mob-owasp">
-          <a
-            href="owasp-smart-contract-top-10-2025.html"
-            class="mobile-sub-link"
-            >2025</a
-          >
-          <a
-            href="owasp-smart-contract-top-10-2026.html"
-            class="mobile-sub-link"
-            >2026</a
-          >
-        </div>
-      </div>
-
       <div class="mobile-overlay-cta">
         <button
           class="btn-primary-lg"
@@ -971,167 +766,75 @@
     <!-- ═══════════════════════════════════════════════════════════
      SECTION 01 · HERO
 ════════════════════════════════════════════════════════════ -->
-    <section class="hero show-chain" aria-label="Hero">
-      <div class="hero-grid-bg" aria-hidden="true"></div>
-      <div class="hero-traces" id="hero-traces" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <div class="hero-content">
-          <!-- APPS badge -->
-          <div class="hero-badge show-apps">
-            <span class="hero-badge-dot"></span>
-            <span class="hero-badge-text">Trusted by 200+ enterprises</span>
+    <section id="top" class="rehaul-hero" aria-label="Hero">
+      <div class="rehaul-hero-globe" aria-hidden="true">
+        <canvas id="hero-globe-canvas"></canvas>
+      </div>
+      <div class="rehaul-hero-shade" aria-hidden="true"></div>
+      <div class="rehaul-hero-inner">
+        <div class="rehaul-hero-content">
+          <div class="rehaul-hero-badge">
+            <span class="rehaul-hero-badge-dot"></span>
+            <span class="rehaul-hero-badge-text">AUTONOMOUS AI PENTESTING</span>
           </div>
-          <!-- CHAIN badge -->
-          <div class="hero-badge show-chain">
-            <span class="hero-badge-dot"></span>
-            <span class="hero-badge-text">Trusted by 200+ protocols</span>
-          </div>
-
-          <!-- APPS ticker -->
-          <div class="hero-ticker show-apps-flex">
-            <span class="ticker-item"> 04 · ISS. 217 · FIELD EDITION</span>
-            <span class="ticker-sep">◆</span>
-            <span class="ticker-item">SOC 2 TYPE II · ISO 27001</span>
-            <span class="ticker-sep">◆</span>
-            <span class="ticker-item">SINGAPORE · REMOTE-FIRST</span>
-          </div>
-          <!-- CHAIN ticker -->
-          <div class="hero-ticker show-chain-flex">
-            <span class="ticker-item"> 04 · ISS. 217 · ON-CHAIN EDITION</span>
-            <span class="ticker-sep">◆</span>
-            <span class="ticker-item">OWASP SCS TOP 10 · 2026 NOW LIVE</span>
-            <span class="ticker-sep">◆</span>
-            <span class="ticker-item">SOC 2 TYPE II</span>
-          </div>
-
-          <!-- APPS headline -->
-          <h1 class="hero-headline show-apps">
-            Security research,<br /><em>evolved</em>.
+          <h1 class="rehaul-hero-title">
+            Pentesting at AI scale,
+            <span>for every release</span>
           </h1>
-          <!-- CHAIN headline -->
-          <div class="hero-headline show-chain" role="heading" aria-level="2">
-            AI-led security that<br /><em>institutions</em> &amp; protocols
-            trust.
-          </div>
-
-          <!-- APPS body -->
-          <p class="hero-body show-apps">
-            AI-led. Human-validated. Delivered in days. Whether you're securing
-            a web application or an on-chain protocol, CredShields combines two
-            decades of offensive security expertise with AI - the depth of a
-            senior-led engagement, at a fraction of the cost and timeline.
+          <p class="rehaul-hero-copy">
+            CredShields One discovers, exploits, and proves vulnerabilities
+            across your web, mobile, cloud, and API surface. Behind it sits a
+            senior offensive security team that validates every finding.
           </p>
-          <!-- CHAIN body -->
-          <p class="hero-body show-chain">
-            We secure enterprise applications, smart contracts, and Web3
-            protocols with AI-powered audits and continuous pentesting delivered
-            at machine speed, verified by world-class human pentesters. Trusted
-            by 200+ institutions and protocols worldwide.
-          </p>
-
-          <!-- APPS CTAs -->
-          <div class="hero-ctas show-apps-flex">
-            <a class="btn-primary-lg" href="#contact"
-              >Start a Pentest <span>→</span></a
+          <div class="rehaul-hero-actions">
+            <a href="#contact" class="rehaul-btn rehaul-btn-primary" data-contact-form
+              >Get Scoped</a
             >
             <a
-              class="btn-secondary-lg"
-              href="https://calendly.com/koda-credshields/30min"
-              data-book-security
-              >Talk to an Expert <span>↗</span></a
+              href="https://one.credshields.com/login"
+              class="rehaul-btn rehaul-btn-secondary"
+              >Log In to CredShields One ↗</a
             >
           </div>
-          <!-- CHAIN CTAs -->
-          <div class="hero-ctas show-chain-flex">
-            <a class="btn-primary-lg" href="#contact"
-              >Book Security Audit <span>→</span></a
-            >
-            <a
-              class="btn-secondary-lg"
-              href="https://solidityscan.com/quickscan"
-              data-free-ai-scan
-              >Run Free AI Scan <span>↗</span></a
-            >
+          <div class="rehaul-hero-audience">
+            BUILT FOR DEVOPS, ENGINEERING, AND SECURITY TEAMS
           </div>
         </div>
-        <!-- /.hero-content -->
 
-        <div class="hero-aside">
-          <!-- APPS dossier -->
-          <div class="dossier-card show-apps">
-            <div class="dossier-stamp">LIVE<br />NOW</div>
-            <div class="dossier-card-head">
-              <span>DOSSIER · <strong>01/03 OPEN SLOTS</strong></span>
-              <span>This week</span>
-            </div>
-            <div class="dossier-card-title">
-              A senior-led pentest, scoped today, report in <em>seven</em>.
-            </div>
-            <div class="dossier-card-body">
-              Fifteen-minute kickoff. AI handles the mechanical work. Our
-              pentesters handle the judgment. Every finding reproduced, signed,
-              and mapped to your framework.
-            </div>
-            <div class="dossier-kv-grid">
-              <span class="dossier-kv-label">Scope</span>
-              <span class="dossier-kv-value">Hours · not weeks</span>
-              <span class="dossier-kv-label">Delivery</span>
-              <span class="dossier-kv-value">5–7 business days</span>
-              <span class="dossier-kv-label">Retests</span>
-              <span class="dossier-kv-value ok">Free · 90 days</span>
-              <span class="dossier-kv-label">FPs</span>
-              <span class="dossier-kv-value ok">Contractually zero</span>
-            </div>
-            <div class="dossier-card-foot">
-              <span>Next available: <strong>Mon 28 Apr</strong></span>
-              <a
-                class="dossier-card-cta"
-                href="https://calendly.com/koda-credshields/30min"
-                data-book-security
-                >Claim slot →</a
-              >
+        <aside class="rehaul-hero-result" aria-label="What a run returns">
+          <div class="rehaul-hero-result-label">WHAT A RUN RETURNS</div>
+          <div class="rehaul-result-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <div>
+              <div class="rehaul-result-title">Proven findings</div>
+              <p>Each one exploited and reproduced, with the request chain attached.</p>
             </div>
           </div>
-
-          <!-- CHAIN dossier -->
-          <div class="dossier-card show-chain">
-            <div class="dossier-stamp">OWASP<br />2026</div>
-            <div class="dossier-card-head">
-              <span>AUDIT DOSSIER · <strong>01/03 SLOTS</strong></span>
-              <span>This week</span>
-            </div>
-            <div class="dossier-card-title">
-              Smart contract audit, scoped today, report in <em>72 hours</em>.
-            </div>
-            <div class="dossier-card-body">
-              0-12hr AI-driven recon. 12-60hr human strike team. 60-72hr
-              audit-ready report with reproducible PoCs, delivered straight to
-              your sprint board.
-            </div>
-            <div class="dossier-kv-grid">
-              <span class="dossier-kv-label">Coverage</span>
-              <span class="dossier-kv-value">EVM · Solana · Rust · Move</span>
-              <span class="dossier-kv-label">Delivery</span>
-              <span class="dossier-kv-value">72 hours</span>
-              <span class="dossier-kv-label">Re-tests</span>
-              <span class="dossier-kv-value ok">Unlimited in scope</span>
-              <span class="dossier-kv-label">Tooling</span>
-              <span class="dossier-kv-value"
-                >Slither · Mythril · Echidna · Foundry</span
-              >
-            </div>
-            <div class="dossier-card-foot">
-              <span>Next slot: <strong>Mon 28 Apr</strong></span>
-              <a
-                class="dossier-card-cta"
-                href="https://calendly.com/koda-credshields/30min"
-                data-book-security
-                >Book audit →</a
-              >
+          <div class="rehaul-result-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <div>
+              <div class="rehaul-result-title">Senior validation</div>
+              <p>A pentester confirms or rules out every finding before it reaches you.</p>
             </div>
           </div>
-        </div>
-        <!-- /.hero-aside -->
+          <div class="rehaul-result-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <div>
+              <div class="rehaul-result-title">Retest on the next commit</div>
+              <p>Push a fix and the same chain runs again.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="rehaul-hero-scroll" aria-hidden="true">
+        <span>SCROLL</span>
+        <i></i>
       </div>
     </section>
 
@@ -1201,931 +904,630 @@
      APPS-MODE CONTENT (sourced from apps_site/index.html)
 ════════════════════════════════════════════════════════════ -->
 
-    <!-- APPS Hero -->
-    <section class="app_home-hero show-apps">
-      <div class="app_home-hero-grid-bg"></div>
-      <div class="hero-traces" aria-hidden="true"></div>
-      <div class="app_home-hero-inner">
-        <div class="app_home-hero-content">
-          <div class="app_home-hero-badge">
-            <div class="app_home-hero-badge-dot"></div>
-            <span class="app_home-hero-badge-text"
-              >Trusted by 200+ engineering teams in regulated industries</span
-            >
-          </div>
-          <div class="app_home-hero-ticker">
-            <span class="app_home-ticker-item">CONTINUOUS</span
-            ><span class="app_home-ticker-sep">◆</span>
-            <span class="app_home-ticker-item">CI-NATIVE</span
-            ><span class="app_home-ticker-sep">◆</span>
-            <span class="app_home-ticker-item">AUDIT-READY</span
-            ><span class="app_home-ticker-sep">◆</span>
-            <span class="app_home-ticker-item">ENGINEER-LED</span>
-          </div>
-          <h2 class="app_home-hero-headline">
-            The pentest your auditor will accept.<br />
-            The findings your <em>engineers will fix</em>.
-          </h2>
-          <p class="app_home-hero-body">
-            Continuous AppSec for SaaS, fintech, and regulated industries.
-            Audit-ready, integrated where your team already works.
-          </p>
-          <div class="app_home-hero-ctas">
-            <button class="app_home-btn-primary-lg" data-contact-form>
-              Start a Pentest
-            </button>
-            <button class="app_home-btn-secondary-lg">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Get Sample Report
-            </button>
-          </div>
-          <div class="app_home-hero-stats">
-            <div class="app_home-stat-cell">
-              <div class="app_home-stat-value">1,200+</div>
-              <div class="app_home-stat-label">Pentests</div>
-            </div>
-            <div class="app_home-stat-cell">
-              <div class="app_home-stat-value">4.9★</div>
-              <div class="app_home-stat-label">Customer NPS</div>
-            </div>
-            <div class="app_home-stat-cell">
-              <div class="app_home-stat-value">72hr</div>
-              <div class="app_home-stat-label">SLA</div>
-            </div>
-            <div class="app_home-stat-cell">
-              <div class="app_home-stat-value app_home-accent">0</div>
-              <div class="app_home-stat-label">Prod Incidents</div>
-            </div>
-          </div>
-        </div>
-        <!-- /.app_home-hero-content -->
-
-        <div class="app_home-hero-aside">
-          <div class="dossier-card">
-            <div class="dossier-stamp">LIVE<br />NOW</div>
-            <div class="dossier-card-head">
-              <span>PENTEST DOSSIER · <strong>03/05 OPEN SLOTS</strong></span>
-              <span>This sprint</span>
-            </div>
-            <div class="dossier-card-title">
-              A senior-led pentest, scoped today, report in <em>seven</em>.
-            </div>
-            <div class="dossier-card-body">
-              Fifteen-minute kickoff. AI handles the mechanical work. Our
-              pentesters handle the judgment. Every finding reproduced, signed,
-              and mapped to your framework.
-            </div>
-            <div class="dossier-kv-grid">
-              <span class="dossier-kv-label">Scope</span>
-              <span class="dossier-kv-value">Hours · not weeks</span>
-              <span class="dossier-kv-label">Delivery</span>
-              <span class="dossier-kv-value">5–7 business days</span>
-              <span class="dossier-kv-label">Retests</span>
-              <span class="dossier-kv-value ok">Free · 90 days</span>
-              <span class="dossier-kv-label">FPs</span>
-              <span class="dossier-kv-value ok">Contractually zero</span>
-            </div>
-            <div class="dossier-card-foot">
-              <span>Next available: <strong>Mon 5 May</strong></span>
-              <a
-                class="dossier-card-cta"
-                href="https://calendly.com/koda-credshields/30min"
-                data-book-security
-                >Claim slot →</a
-              >
-            </div>
-          </div>
-        </div>
-        <!-- /.app_home-hero-aside -->
-      </div>
-    </section>
-
-    <!-- APPS Trust Logos -->
-    <div class="app_home-trust show-apps">
-      <div class="app_home-trust-label">Trusted by Engineering Teams</div>
-      <div class="app_home-trust-logos">
-        <span class="app_home-trust-pill">Fintech (NA)</span
-        ><span class="app_home-trust-pill">SaaS Platform (EU)</span>
-        <span class="app_home-trust-pill">Health-Tech (US)</span
-        ><span class="app_home-trust-pill">Payments Co. (APAC)</span>
-        <span class="app_home-trust-pill">Insurance (UK)</span
-        ><span class="app_home-trust-pill">Logistics (DE)</span>
-        <span class="app_home-trust-pill">EdTech (US)</span
-        ><span class="app_home-trust-pill">HR-Tech (CA)</span>
-        <span class="app_home-trust-pill">Banking (SG)</span
-        ><span class="app_home-trust-pill">Retail (AU)</span>
-        <span class="app_home-trust-pill">DevTools (US)</span
-        ><span class="app_home-trust-pill">Government (EU)</span>
-        <span class="app_home-trust-pill">Telco (UK)</span
-        ><span class="app_home-trust-pill">B2B SaaS (US)</span>
-        <span class="app_home-trust-pill">Legal-Tech (EU)</span
-        ><span class="app_home-trust-pill">FinTech (BR)</span>
-      </div>
-    </div>
-
-    <!-- APPS CredShields One Promo -->
-    <section class="app_home-section app_home-cs-one-section show-apps">
-      <div class="app_home-container">
-        <div class="app_home-cs-one-card">
-          <div class="app_home-cs-one-glow"></div>
-          <div class="app_home-cs-one-grid">
-            <div class="app_home-cs-one-copy">
-              <div class="app_home-cs-one-eyebrow">
-                <span class="app_home-cs-one-eyebrow-dot"></span>
-                Featured Product
-              </div>
-              <div class="app_home-cs-one-wordmark">
-                <svg
-                  width="22"
-                  height="25"
-                  viewBox="0 0 32 36"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z"
-                    fill="#A8FF45"
-                  />
-                  <path
-                    d="M11 17.5L14.5 21L21 14"
-                    stroke="#040C06"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span class="app_home-cs-one-wordmark-text"
-                  >CredShields <em>One</em></span
-                >
-              </div>
-              <h2 class="app_home-cs-one-title">
-                AI's pentesting.<br />
-                <em>A human's signing off.</em>
-              </h2>
-              <p class="app_home-cs-one-body">
-                CredShields One is our AI penetration testing platform for cloud
-                and mobile apps. An AI operator attacks your apps continuously -
-                senior human pentesters direct the hunt, confirm exploits, and
-                sign every report before it reaches you.
-              </p>
-              <ul class="app_home-cs-one-bullets">
-                <li>
-                  <span class="app_home-cs-one-check">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </span>
-                  Continuous coverage - not a one-shot PDF
-                </li>
-                <li>
-                  <span class="app_home-cs-one-check">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </span>
-                  Every finding human-validated by senior pentesters
-                </li>
-                <li>
-                  <span class="app_home-cs-one-check">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </span>
-                  Reports auto-mapped to GDPR, SOC 2, ISO 27001
-                </li>
-                <li>
-                  <span class="app_home-cs-one-check">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  </span>
-                  Retest on every commit - no new SoW, no new invoice
-                </li>
-              </ul>
-              <div class="app_home-cs-one-ctas">
-                <a
-                  href="https://one.credshields.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="app_home-cs-one-btn-primary"
-                >
-                  See CredShields One
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M7 17L17 7M17 7H8M17 7V16" />
-                  </svg>
-                </a>
-                <a
-                  href="https://one.credshields.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="app_home-cs-one-btn-ghost"
-                >
-                  Request access
-                </a>
-              </div>
-              <div class="app_home-cs-one-status">
-                <span class="app_home-cs-one-status-dot"></span>
-                Invite-only · onboarding the first design-partner cohort
-              </div>
-            </div>
-            <div class="app_home-cs-one-terminal">
-              <div class="app_home-cs-one-term-header">
-                <div class="app_home-cs-one-term-dots">
-                  <span></span><span></span><span></span>
-                </div>
-                <span class="app_home-cs-one-term-title"
-                  >~/credshields-one/engagement/acme · zsh</span
-                >
-              </div>
-              <pre
-                class="app_home-cs-one-term-body"
-              ><span class="app_home-t-prompt">$</span> <span class="app_home-t-cmd">cs-one pentest --target app.acme.io --scope cloud,api</span>
-
-<span class="app_home-t-tag app_home-t-recon">[recon]</span>     mapped 1,284 endpoints · 27 auth flows
-<span class="app_home-t-tag app_home-t-ai">[ai-attack]</span> chained 14 exploits · 3 business-logic flaws
-<span class="app_home-t-tag app_home-t-human">[human]</span>     reviewed by <span class="app_home-t-user">@arjun</span> · 2 confirmed, 1 ruled out
-<span class="app_home-t-tag app_home-t-report">[report]</span>    <span class="app_home-t-badge">GDPR</span><span class="app_home-t-badge">SOC 2</span> export ready · 9 pages
-<span class="app_home-t-tag app_home-t-retest">[retest]</span>    patch verified · <span class="app_home-t-ok">0 regressions</span>
-
-<span class="app_home-t-prompt">$</span> <span class="app_home-t-caret">▌</span></pre>
-            </div>
-          </div>
+    <!-- APPS Client Logos -->
+    <section class="rehaul-clients show-apps" aria-labelledby="clients-title">
+      <div class="rehaul-clients-inner">
+        <h2 id="clients-title" class="rehaul-clients-title">
+          Trusted by teams shipping to production every week
+        </h2>
+        <div class="rehaul-client-logos">
+          <img
+            class="rehaul-client-logo rehaul-client-logo-hawkins"
+            src="images/logo-client-hawkins.png"
+            alt="Hawkins"
+            title="Hawkins"
+            loading="lazy"
+          />
+          <img
+            class="rehaul-client-logo"
+            src="images/logo-client-tazapay.png"
+            alt="Tazapay"
+            title="Tazapay"
+            loading="lazy"
+          />
+          <img
+            class="rehaul-client-logo"
+            src="images/logo-client-kappalab.png"
+            alt="Kappa Lab"
+            title="Kappa Lab"
+            loading="lazy"
+          />
+          <img
+            class="rehaul-client-logo"
+            src="images/logo-client-qiro.png"
+            alt="Qiro"
+            title="Qiro"
+            loading="lazy"
+          />
+          <img
+            class="rehaul-client-logo rehaul-client-logo-juno"
+            src="images/logo-client-juno.png"
+            alt="Juno"
+            title="Juno"
+            loading="lazy"
+          />
+          <img
+            class="rehaul-client-logo rehaul-client-logo-realproton"
+            src="images/logo-client-realproton.png"
+            alt="RealProton"
+            title="RealProton"
+            loading="lazy"
+          />
+          <img
+            class="rehaul-client-logo"
+            src="images/logo-client-capx.png"
+            alt="Capx"
+            title="Capx"
+            loading="lazy"
+          />
         </div>
       </div>
     </section>
 
-    <!-- APPS Why CredShields AppSec -->
-    <section class="app_home-section app_home-ai-section show-apps">
-      <div class="app_home-container">
-        <div class="app_home-section-head">
-          <p class="app_home-section-eyebrow">Why CredShields AppSec</p>
-          <h2 class="app_home-section-title">
-            Built for engineering teams<br />who actually ship.
-          </h2>
-        </div>
-        <div class="app_home-card-grid-3">
-          <div class="app_home-ai-card">
-            <div class="app_home-ai-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M21 12a9 9 0 1 1-9-9" />
-                <path d="M21 3v6h-6" />
-              </svg>
+    <!-- APPS Platform Overview -->
+    <section
+      id="platform"
+      class="rehaul-platform show-apps"
+      aria-labelledby="platform-title"
+    >
+      <div class="rehaul-platform-inner">
+        <div class="rehaul-platform-eyebrow">/ Inside the platform</div>
+        <h2 id="platform-title" class="rehaul-platform-title">
+          One run, end to end
+        </h2>
+        <p class="rehaul-platform-intro">
+          One run, from mapped endpoints to a signed, compliance mapped report.
+        </p>
+
+        <figure class="rehaul-platform-feature">
+          <div class="rehaul-product-window rehaul-product-window-feature">
+            <div class="rehaul-product-bar">
+              <span class="rehaul-window-dot rehaul-window-dot-red"></span>
+              <span class="rehaul-window-dot rehaul-window-dot-yellow"></span>
+              <span class="rehaul-window-dot rehaul-window-dot-green"></span>
+              <span class="rehaul-product-url">one.credshields.com/projects</span>
             </div>
-            <div class="app_home-card-title">Continuous, not annual</div>
-            <p class="app_home-card-body">
-              Pentests every release, not once a year. Findings tied to commits.
-              Retests happen in hours, not next quarter. Your security posture
-              stays current with your codebase.
-            </p>
+            <img
+              src="images/product-overview.png"
+              alt="CredShields One engagement overview: risk score, severity breakdown, scan coverage, and top high-impact issues"
+            />
           </div>
-          <div class="app_home-ai-card">
-            <div class="app_home-ai-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="6" cy="6" r="3" />
-                <circle cx="18" cy="6" r="3" />
-                <circle cx="12" cy="18" r="3" />
-                <path d="M6 9v6a3 3 0 0 0 3 3h3" />
-                <path d="M18 9v3a3 3 0 0 1-3 3h-3" />
-              </svg>
+          <figcaption class="rehaul-platform-caption rehaul-platform-caption-feature">
+            <span class="rehaul-platform-caption-label">OVERVIEW</span>
+            <span>
+              <strong>Risk score, severity breakdown, and scan coverage for the release.</strong>
+              Every issue carries a CWE reference and a confidence score, ranked
+              by impact.
+            </span>
+          </figcaption>
+        </figure>
+
+        <div class="rehaul-platform-grid">
+          <figure class="rehaul-platform-figure">
+            <div class="rehaul-product-window">
+              <div class="rehaul-product-bar rehaul-product-bar-small">
+                <span class="rehaul-window-dot rehaul-window-dot-red"></span>
+                <span class="rehaul-window-dot rehaul-window-dot-yellow"></span>
+                <span class="rehaul-window-dot rehaul-window-dot-green"></span>
+                <span class="rehaul-product-url">one.credshields.com</span>
+              </div>
+              <img
+                src="images/product-findings.png"
+                alt="CredShields One findings list with severity, CWE, confidence, and affected endpoint"
+                loading="lazy"
+              />
             </div>
-            <div class="app_home-card-title">Where your team already works</div>
-            <p class="app_home-card-body">
-              Findings in Jira. Critical alerts in Slack. Merge gates in GitHub.
-              We don't ask your team to learn a new tool - we land in the ones
-              they're already in.
-            </p>
-          </div>
-          <div class="app_home-ai-card">
-            <div class="app_home-ai-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M9 11l3 3L22 4" />
-                <path
-                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
-                />
-              </svg>
+            <figcaption class="rehaul-platform-caption">
+              <span class="rehaul-platform-caption-label">FINDINGS</span>
+              <span>
+                <strong>Every finding, searchable.</strong>
+                Severity, CWE, confidence, and the endpoint it was found on.
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="rehaul-platform-figure">
+            <div class="rehaul-product-window">
+              <div class="rehaul-product-bar rehaul-product-bar-small">
+                <span class="rehaul-window-dot rehaul-window-dot-red"></span>
+                <span class="rehaul-window-dot rehaul-window-dot-yellow"></span>
+                <span class="rehaul-window-dot rehaul-window-dot-green"></span>
+                <span class="rehaul-product-url">one.credshields.com</span>
+              </div>
+              <img
+                src="images/product-finding-detail.png"
+                alt="CredShields One finding detail with description, proof of concept, and remediation"
+                loading="lazy"
+              />
             </div>
-            <div class="app_home-card-title">Audit-ready by default</div>
-            <p class="app_home-card-body">
-              Reports come pre-mapped to SOC 2, ISO 27001, PCI DSS, and HIPAA
-              controls. Your auditor gets the evidence they need on page one -
-              not buried in an appendix.
-            </p>
-          </div>
+            <figcaption class="rehaul-platform-caption">
+              <span class="rehaul-platform-caption-label">FINDING DETAIL</span>
+              <span>
+                <strong>Description, proof of concept, remediation.</strong>
+                Reproduction commands, root cause, and the code fix.
+              </span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
+    <!-- APPS Product Position -->
+    <section
+      id="position"
+      class="rehaul-position show-apps"
+      aria-labelledby="position-title"
+    >
+      <div class="rehaul-position-inner">
+        <div class="rehaul-platform-eyebrow">/ Where it fits</div>
+        <h2 id="position-title" class="rehaul-platform-title">
+          Vulnerability detection that keeps up with your releases
+        </h2>
+        <p class="rehaul-position-lead">
+          <strong>
+            CredShields One maps your attack surface, exploits what it finds,
+            and proves which vulnerabilities are real.
+          </strong>
+          A senior pentester reviews every finding before it reaches you, and
+          you decide which environment it runs against.
+        </p>
+        <p class="rehaul-position-copy">
+          Most teams gate releases with DAST, SAST, or a scanner. Those tools
+          flag patterns. CredShields One tests the way a pentester does: it
+          exploits the issue, then proves it.
+        </p>
 
-    <!-- APPS Services -->
-    <section class="app_home-section show-apps">
-      <div class="app_home-container">
-        <div class="app_home-section-head">
-          <p class="app_home-section-eyebrow">Services</p>
-          <h2 class="app_home-section-title">
-            Pentests, AppSec, and<br />compliance evidence.
-          </h2>
-        </div>
-        <div class="app_home-card-grid-3">
-          <div class="app_home-service-card app_home-featured">
-            <div class="app_home-service-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M21 12a9 9 0 1 1-9-9" />
-                <path d="M21 3v6h-6" />
-              </svg>
-            </div>
-            <div class="app_home-service-title">Continuous AppSec</div>
-            <p class="app_home-service-desc">
-              Continuous pentesting integrated with your CI, your Jira, and your
-              Slack. Engineer-validated findings - not scanner output.
-            </p>
-            <ul class="app_home-service-points">
-              <li class="app_home-service-point">CI / CD integration</li>
-              <li class="app_home-service-point">
-                Jira / Linear ticket creation
-              </li>
-              <li class="app_home-service-point">
-                Quarterly senior-engineer review
-              </li>
-              <li class="app_home-service-point">
-                Always-current audit evidence
-              </li>
-            </ul>
-            <a href="continuous-appsec.html" class="app_home-service-link"
-              >Learn More →</a
-            >
+        <div class="rehaul-release-flow" aria-label="Release workflow">
+          <div class="rehaul-release-step">
+            <div class="rehaul-release-label">COMMIT</div>
+            <div class="rehaul-release-copy">Engineering ships</div>
           </div>
-          <div class="app_home-service-card">
-            <div class="app_home-service-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10" />
-                <line x1="2" y1="12" x2="22" y2="12" />
-                <path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
-              </svg>
-            </div>
-            <div class="app_home-service-title">Web App Pentesting</div>
-            <p class="app_home-service-desc">
-              Manual web app pentesting against OWASP ASVS L2/L3. Business
-              logic, multi-tenant isolation, complex auth flows.
-            </p>
-            <ul class="app_home-service-points">
-              <li class="app_home-service-point">OWASP ASVS L2/L3 alignment</li>
-              <li class="app_home-service-point">
-                Multi-tenant isolation testing
-              </li>
-              <li class="app_home-service-point">Auth flow deep review</li>
-              <li class="app_home-service-point">
-                Reproducible PoC for every finding
-              </li>
-            </ul>
-            <a href="web-pentest.html" class="app_home-service-link"
-              >Learn More →</a
-            >
+          <div class="rehaul-release-arrow" aria-hidden="true">→</div>
+          <div class="rehaul-release-step">
+            <div class="rehaul-release-label">BUILD</div>
+            <div class="rehaul-release-copy">CI runs</div>
           </div>
-          <div class="app_home-service-card">
-            <div class="app_home-service-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="5" y="2" width="14" height="20" rx="2" />
-                <line x1="12" y1="18" x2="12" y2="18" />
-              </svg>
-            </div>
-            <div class="app_home-service-title">Mobile App Pentesting</div>
-            <p class="app_home-service-desc">
-              iOS, Android, React Native, Flutter. OWASP MASVS-aligned. Static,
-              dynamic, and runtime instrumentation.
-            </p>
-            <ul class="app_home-service-points">
-              <li class="app_home-service-point">MASVS L1/L2 alignment</li>
-              <li class="app_home-service-point">
-                Frida-based runtime hooking
-              </li>
-              <li class="app_home-service-point">
-                Cert pinning bypass attempts
-              </li>
-              <li class="app_home-service-point">App Store privacy review</li>
-            </ul>
-            <a href="mobile-pentest.html" class="app_home-service-link"
-              >Learn More →</a
-            >
-          </div>
-          <div class="app_home-service-card">
-            <div class="app_home-service-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
-              </svg>
-            </div>
-            <div class="app_home-service-title">API Security Testing</div>
-            <p class="app_home-service-desc">
-              REST, GraphQL, gRPC, WebSocket. OWASP API Top 10 (2023).
-              Schema-driven exhaustive testing.
-            </p>
-            <ul class="app_home-service-points">
-              <li class="app_home-service-point">
-                OWASP API Top 10 (2023) coverage
-              </li>
-              <li class="app_home-service-point">
-                GraphQL-specific attack patterns
-              </li>
-              <li class="app_home-service-point">
-                Undocumented endpoint discovery
-              </li>
-              <li class="app_home-service-point">
-                JWT, OAuth, mTLS auth review
-              </li>
-            </ul>
-            <a href="api-security.html" class="app_home-service-link"
-              >Learn More →</a
-            >
-          </div>
-          <div class="app_home-service-card">
-            <div class="app_home-service-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M18 10a6 6 0 0 0-11.5-2A4 4 0 0 0 6 16h12a4 4 0 0 0 0-6z"
-                />
-              </svg>
-            </div>
-            <div class="app_home-service-title">Cloud Security Review</div>
-            <p class="app_home-service-desc">
-              AWS, GCP, Azure security reviews focused on actual attack paths -
-              not CIS benchmark checklists.
-            </p>
-            <ul class="app_home-service-points">
-              <li class="app_home-service-point">
-                IAM privilege graph mapping
-              </li>
-              <li class="app_home-service-point">K8s RBAC + pod security</li>
-              <li class="app_home-service-point">
-                CI/CD supply chain assessment
-              </li>
-              <li class="app_home-service-point">
-                Cross-cloud trust boundaries
-              </li>
-            </ul>
-            <a href="cloud-pentest.html" class="app_home-service-link"
-              >Learn More →</a
-            >
-          </div>
-          <div class="app_home-service-card">
-            <div class="app_home-service-icon">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M4 22V4a2 2 0 0 1 2-2h12l-2 4 2 4H6" />
-              </svg>
-            </div>
-            <div class="app_home-service-title">Compliance Readiness</div>
-            <p class="app_home-service-desc">
-              SOC 2 Type II, ISO 27001, PCI DSS Level 1, HIPAA, GDPR. Pentest
-              evidence pre-mapped to controls.
-            </p>
-            <ul class="app_home-service-points">
-              <li class="app_home-service-point">
-                SOC 2 / ISO / PCI / HIPAA coverage
-              </li>
-              <li class="app_home-service-point">
-                Findings mapped to controls
-              </li>
-              <li class="app_home-service-point">Direct auditor liaison</li>
-              <li class="app_home-service-point">Audit-cycle aligned timing</li>
-            </ul>
-            <a href="compliance.html" class="app_home-service-link"
-              >Learn More →</a
-            >
-          </div>
-        </div>
-        <div style="margin-top: 24px; display: flex; justify-content: center">
-          <a
-            href="red-team.html"
-            class="app_home-btn-secondary-lg"
-            style="text-decoration: none"
-          >
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <circle cx="12" cy="12" r="6" />
-              <circle cx="12" cy="12" r="2" />
-            </svg>
-            Need a Red Team engagement? →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPS Continuous Process -->
-    <section class="app_home-section app_home-pentest-section show-apps">
-      <div class="app_home-container">
-        <div class="app_home-section-head">
-          <p class="app_home-section-eyebrow">The Continuous AppSec Model</p>
-          <h2 class="app_home-section-title">
-            From annual pentest fatigue<br />to continuous coverage.
-          </h2>
-        </div>
-        <div class="app_home-pentest-grid">
-          <div>
-            <div class="app_home-pentest-pre">
-              <div class="app_home-pentest-pre-title">
-                Why "annual pentest" stopped working
-              </div>
-              <p class="app_home-pentest-pre-body">
-                Your codebase ships 200 commits a week. The annual pentest
-                report covers a 14-day window from 11 months ago. Half the
-                findings are already obsolete. The other half landed too late to
-                fix before audit. Continuous AppSec changes the cadence.
-              </p>
-              <ul class="app_home-service-points" style="margin-top: 16px">
-                <li class="app_home-service-point">
-                  Findings tied to commits, not snapshots
-                </li>
-                <li class="app_home-service-point">
-                  Severity-routed to your tracker
-                </li>
-                <li class="app_home-service-point">
-                  Retests in hours, not next quarter
-                </li>
-                <li class="app_home-service-point">
-                  Always-current audit evidence
-                </li>
-              </ul>
-              <a href="continuous-appsec.html" class="app_home-pentest-cta"
-                >Learn how it works →</a
-              >
-            </div>
-          </div>
-          <div class="app_home-pentest-timeline">
-            <div class="app_home-timeline-item">
-              <div class="app_home-timeline-track">
-                <div class="app_home-timeline-dot"></div>
-                <div class="app_home-timeline-line"></div>
-              </div>
-              <div class="app_home-timeline-content">
-                <div class="app_home-timeline-range">DAY 1</div>
-                <div class="app_home-timeline-title">CI Integration</div>
-                <p class="app_home-timeline-desc">
-                  30-minute setup. GitHub / GitLab / Bitbucket. Slack and Jira
-                  projects provisioned.
-                </p>
-              </div>
-            </div>
-            <div class="app_home-timeline-item">
-              <div class="app_home-timeline-track">
-                <div
-                  class="app_home-timeline-dot"
-                  style="
-                    background: #b84800;
-                    box-shadow: 0 0 0 4px rgba(184, 72, 0, 0.15);
-                  "
-                ></div>
-                <div class="app_home-timeline-line"></div>
-              </div>
-              <div class="app_home-timeline-content">
-                <div class="app_home-timeline-range" style="color: #b84800">
-                  DAY 14
-                </div>
-                <div class="app_home-timeline-title">Baseline Findings</div>
-                <p class="app_home-timeline-desc">
-                  Senior engineers complete deep manual pentest. Findings
-                  severity-routed into your tracker.
-                </p>
-              </div>
-            </div>
-            <div class="app_home-timeline-item">
-              <div class="app_home-timeline-track">
-                <div
-                  class="app_home-timeline-dot"
-                  style="
-                    background: #0050aa;
-                    box-shadow: 0 0 0 4px rgba(0, 80, 170, 0.15);
-                  "
-                ></div>
-              </div>
-              <div class="app_home-timeline-content">
-                <div class="app_home-timeline-range" style="color: #0050aa">
-                  DAY 90+
-                </div>
-                <div class="app_home-timeline-title">Steady State</div>
-                <p class="app_home-timeline-desc">
-                  Full release-cycle coverage. Audit-ready evidence binder.
-                  Quarterly deep-review reports. Always on.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPS Methodology -->
-    <section class="app_home-section app_home-method-section show-apps">
-      <div class="app_home-container">
-        <div class="app_home-section-head">
-          <p class="app_home-section-eyebrow">Methodology</p>
-          <h2 class="app_home-section-title">
-            Aligned with the standards<br />your auditor recognizes.
-          </h2>
-        </div>
-        <div class="app_home-method-grid">
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">01</div>
-            <div class="app_home-method-title">OWASP ASVS</div>
-            <p class="app_home-method-desc">
-              L2 / L3 verification requirements executed manually with pass/fail
-              evidence per control.
-            </p>
-          </div>
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">02</div>
-            <div class="app_home-method-title">OWASP API Top 10</div>
-            <p class="app_home-method-desc">
-              2023 edition - full coverage of BOLA, broken auth, resource
-              consumption, and the rest.
-            </p>
-          </div>
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">03</div>
-            <div class="app_home-method-title">OWASP MASVS</div>
-            <p class="app_home-method-desc">
-              Mobile-specific verification standard for iOS and Android apps
-              with cross-platform parity.
-            </p>
-          </div>
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">04</div>
-            <div class="app_home-method-title">PTES</div>
-            <p class="app_home-method-desc">
-              Penetration Testing Execution Standard methodology for the
-              engagement lifecycle itself.
-            </p>
-          </div>
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">05</div>
-            <div class="app_home-method-title">NIST SP 800-115</div>
-            <p class="app_home-method-desc">
-              Technical guide for information security testing - required by
-              FedRAMP and similar frameworks.
-            </p>
-          </div>
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">06</div>
-            <div class="app_home-method-title">MITRE ATT&CK</div>
-            <p class="app_home-method-desc">
-              Findings tagged with specific TTPs for purple-team and
-              detection-engineering value.
-            </p>
-          </div>
-          <div class="app_home-method-cell">
-            <div class="app_home-method-num">07</div>
-            <div class="app_home-method-title">CVSS 3.1</div>
-            <p class="app_home-method-desc">
-              Severity scored with environmental adjustments for your specific
-              deployment context.
-            </p>
+          <div class="rehaul-release-arrow" aria-hidden="true">→</div>
+          <div class="rehaul-release-step">
+            <div class="rehaul-release-label">DEPLOY</div>
+            <div class="rehaul-release-copy">Release goes live</div>
           </div>
           <div
-            class="app_home-method-cell"
-            style="display: flex; align-items: center; justify-content: center"
+            class="rehaul-release-arrow rehaul-release-arrow-accent"
+            aria-hidden="true"
           >
-            <div style="text-align: center">
-              <div style="margin-bottom: 10px; color: var(--border)">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <polygon
-                    points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2"
-                  />
-                </svg>
-              </div>
-              <div
-                style="
-                  font-family: &quot;IBM Plex Mono&quot;, monospace;
-                  font-size: 10px;
-                  font-weight: 700;
-                  letter-spacing: 0.1em;
-                  text-transform: uppercase;
-                  color: var(--fg-5);
-                  line-height: 1.6;
-                "
-              >
-                Standards-Based<br />AppSec at Scale
-              </div>
+            →
+          </div>
+          <div class="rehaul-release-step rehaul-release-step-featured">
+            <div class="rehaul-release-featured-title">
+              <span>CREDSHIELDS ONE</span>
+              <span class="rehaul-release-badge">Pentest every release</span>
+            </div>
+            <div class="rehaul-release-copy rehaul-release-featured-copy">
+              Attacks each release. Retests each fix. No new SoW.
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- APPS How It Works -->
+    <section
+      id="how"
+      class="rehaul-how show-apps"
+      aria-labelledby="how-title"
+    >
+      <div class="rehaul-how-inner">
+        <div class="rehaul-platform-eyebrow">/ How it works</div>
+        <h2 id="how-title" class="rehaul-platform-title">
+          How CredShields One works
+        </h2>
+        <p class="rehaul-how-intro">
+          Five stages. The AI handles scale, senior pentesters handle judgment.
+        </p>
 
-    <!-- APPS Compliance -->
-    <section class="app_home-section app_home-compliance-section show-apps">
-      <div class="app_home-container">
-        <div class="app_home-section-head">
-          <p class="app_home-section-eyebrow">Compliance</p>
-          <h2 class="app_home-section-title">
-            Pentest evidence for<br />every major framework.
-          </h2>
-        </div>
-        <div class="app_home-compliance-badges">
-          <div class="app_home-comp-badge">SOC 2 Type II</div>
-          <div class="app_home-comp-badge">ISO 27001</div>
-          <div class="app_home-comp-badge">PCI DSS L1</div>
-          <div class="app_home-comp-badge">HIPAA</div>
-          <div class="app_home-comp-badge">GDPR</div>
-          <div class="app_home-comp-badge">DORA</div>
-        </div>
-        <div class="app_home-compliance-grid">
-          <div class="app_home-compliance-card">
-            <div class="app_home-compliance-col-title">
-              Financial &amp; Payments
+        <div class="rehaul-how-grid">
+          <div class="rehaul-how-stages">
+            <div class="rehaul-how-stage">
+              <div class="rehaul-how-number">01</div>
+              <div>
+                <div class="rehaul-how-stage-heading">
+                  <h3>Discover</h3>
+                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
+                </div>
+                <p>Maps your attack surface: web, mobile, APIs, auth paths, cloud.</p>
+              </div>
             </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >PCI DSS Level 1 (Service Provider)</span
-              >
+            <div class="rehaul-how-stage">
+              <div class="rehaul-how-number">02</div>
+              <div>
+                <div class="rehaul-how-stage-heading">
+                  <h3>Attack</h3>
+                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
+                </div>
+                <p>Tests APIs, sessions, and business logic on every release.</p>
+              </div>
             </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >SOX IT General Controls</span
-              >
+            <div class="rehaul-how-stage">
+              <div class="rehaul-how-number">03</div>
+              <div>
+                <div class="rehaul-how-stage-heading">
+                  <h3>Verify</h3>
+                  <span class="rehaul-how-badge rehaul-how-badge-lime">AI + HUMAN</span>
+                </div>
+                <p>Senior pentesters reproduce every exploit. False positives die here.</p>
+              </div>
             </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >DORA (EU operational resilience)</span
-              >
+            <div class="rehaul-how-stage">
+              <div class="rehaul-how-number">04</div>
+              <div>
+                <div class="rehaul-how-stage-heading">
+                  <h3>Report</h3>
+                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
+                </div>
+                <p>Audit-ready, mapped to SOC 2, ISO 27001, and GDPR. In days.</p>
+              </div>
             </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >FFIEC banking guidelines</span
-              >
+            <div class="rehaul-how-stage rehaul-how-stage-last">
+              <div class="rehaul-how-number">05</div>
+              <div>
+                <div class="rehaul-how-stage-heading">
+                  <h3>Retest</h3>
+                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
+                </div>
+                <p>Re-runs the exact exploit chain against your patch.</p>
+              </div>
             </div>
           </div>
-          <div class="app_home-compliance-card">
-            <div class="app_home-compliance-col-title">
-              SaaS &amp; Healthcare
+
+          <div class="rehaul-how-demo">
+            <div class="rehaul-terminal">
+              <div class="rehaul-terminal-header">
+                <span>~/credshields-one · zsh</span>
+                <span class="rehaul-terminal-live">LIVE</span>
+              </div>
+              <div class="rehaul-terminal-body" aria-label="Example CredShields One run">
+                <div>
+                  <span class="rehaul-terminal-prompt">$</span>
+                  cs-one pentest --target app.acme.io --scope cloud,api
+                </div>
+                <div>
+                  <span class="rehaul-terminal-tag">[recon]&nbsp;&nbsp;</span>
+                  mapped 1,284 endpoints · 27 auth flows
+                </div>
+                <div>
+                  <span class="rehaul-terminal-tag">[attack]&nbsp;</span>
+                  chained 14 exploits · 3 business-logic flaws
+                </div>
+                <div>
+                  <span class="rehaul-terminal-tag">[human]&nbsp;&nbsp;</span>
+                  reviewed by @m.laurent · 2 confirmed, 1 ruled out
+                </div>
+                <div>
+                  <span class="rehaul-terminal-tag">[report]&nbsp;</span>
+                  GDPR · SOC 2 · ISO 27001 · export ready
+                </div>
+                <div>
+                  <span class="rehaul-terminal-tag">[retest]&nbsp;</span>
+                  patch verified · 0 regressions
+                </div>
+                <div>
+                  <span class="rehaul-terminal-prompt">$</span>
+                  <span class="rehaul-terminal-cursor" aria-hidden="true"></span>
+                </div>
+              </div>
             </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >SOC 2 Type I and Type II</span
-              >
-            </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >ISO 27001 / 27017 / 27018</span
-              >
-            </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >HIPAA / HITRUST CSF</span
-              >
-            </div>
-            <div class="app_home-compliance-item">
-              <span class="app_home-compliance-item-text"
-                >GDPR Article 32 evidence</span
-              >
+
+            <div class="rehaul-scope-note">
+              <div>SAFE BY SCOPE</div>
+              <p>
+                It scans exactly the environment you provide. We exploit to
+                prove impact, then stop.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- APPS Comparison -->
+    <section
+      id="compare"
+      class="rehaul-compare show-apps"
+      aria-labelledby="compare-title"
+    >
+      <div class="rehaul-compare-inner">
+        <div class="rehaul-platform-eyebrow">/ Comparison</div>
+        <h2 id="compare-title" class="rehaul-platform-title">
+          How CredShields One compares
+        </h2>
 
-    <!-- ═══════════════════════════════════════════════════════════
-     CHAIN-MODE SECTIONS (existing, preserved)
-════════════════════════════════════════════════════════════ -->
+        <div class="rehaul-compare-scroll">
+          <div class="rehaul-compare-grid" role="table" aria-label="Pentesting approaches compared">
+            <div class="rehaul-compare-head" role="columnheader"></div>
+            <div class="rehaul-compare-head" role="columnheader">TRADITIONAL PENTEST</div>
+            <div class="rehaul-compare-head" role="columnheader">DAST / SAST / SCANNERS</div>
+            <div class="rehaul-compare-head rehaul-compare-featured-head" role="columnheader">
+              CREDSHIELDS ONE
+            </div>
+
+            <div class="rehaul-compare-label" role="rowheader">Runs on every release</div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg></div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+
+            <div class="rehaul-compare-label" role="rowheader">Finds business-logic flaws</div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg></div>
+            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+
+            <div class="rehaul-compare-label" role="rowheader">
+              Every finding proven, not flagged
+            </div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg></div>
+            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+
+            <div class="rehaul-compare-label" role="rowheader">
+              Senior human on every engagement
+            </div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg></div>
+            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+
+            <div class="rehaul-compare-label" role="rowheader">
+              Retests included in the engagement
+            </div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg></div>
+            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg></div>
+
+            <div class="rehaul-compare-label" role="rowheader">
+              Time to first validated finding
+            </div>
+            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">2 to 6 weeks</div>
+            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">
+              hours, mostly noise
+            </div>
+            <div
+              class="rehaul-compare-cell rehaul-compare-value rehaul-compare-featured rehaul-compare-featured-value"
+              role="cell"
+            >
+              days, validated
+            </div>
+
+            <div class="rehaul-compare-label" role="rowheader">Cost model</div>
+            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">
+              per engagement, 5 figures
+            </div>
+            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">
+              subscription
+            </div>
+            <div
+              class="rehaul-compare-cell rehaul-compare-value rehaul-compare-featured rehaul-compare-featured-value rehaul-compare-featured-last"
+              role="cell"
+            >
+              fraction of traditional
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- APPS Audiences -->
+    <section
+      id="who"
+      class="rehaul-who show-apps"
+      aria-labelledby="who-title"
+    >
+      <div class="rehaul-who-inner">
+        <div class="rehaul-platform-eyebrow">/ Who it's for</div>
+        <h2 id="who-title" class="rehaul-platform-title">
+          Built for the whole release path
+        </h2>
+        <p class="rehaul-who-intro">
+          DevOps, engineering, security, and compliance each get what they need
+          from the same run.
+        </p>
+
+        <div class="rehaul-who-grid">
+          <article class="rehaul-who-card">
+            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 11a8 8 0 10-2 6"></path>
+              <path d="M20 5v6h-6"></path>
+            </svg>
+            <div class="rehaul-who-label">DEVOPS</div>
+            <h3>Test without holding the release</h3>
+            <p>
+              Runs against staging or a deploy rather than a calendar. No
+              coordination overhead, no waiting on a vendor to open a window.
+            </p>
+            <div class="rehaul-who-meta">CI-TRIGGERED · SCOPED BY YOU</div>
+          </article>
+
+          <article class="rehaul-who-card">
+            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3l7 3v6c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V6l7-3z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+            <div class="rehaul-who-label">ENGINEERING</div>
+            <h3>Fix what is proven</h3>
+            <p>
+              Every finding arrives with a reproduced exploit chain and the
+              exact fix. No triaging 400 maybes out of a scanner export.
+            </p>
+            <div class="rehaul-who-meta">PROVEN · REPRODUCIBLE · IN JIRA</div>
+          </article>
+
+          <article class="rehaul-who-card">
+            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5"></circle>
+              <path d="M16 16l4.5 4.5"></path>
+            </svg>
+            <div class="rehaul-who-label">SECURITY</div>
+            <h3>Reach what a scanner cannot</h3>
+            <p>
+              Business logic, chained exploits, and auth flaws, found by senior
+              pentesters directing the AI. Retest any fix on the next commit.
+            </p>
+            <div class="rehaul-who-meta">
+              HUMAN-VALIDATED · RETESTS INCLUDED
+            </div>
+          </article>
+
+          <article class="rehaul-who-card">
+            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="5" y="4" width="14" height="17" rx="2"></rect>
+              <path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"></path>
+              <path d="M9 11h6M9 15h4"></path>
+            </svg>
+            <div class="rehaul-who-label">COMPLIANCE</div>
+            <h3>Stay audit-ready between reviews</h3>
+            <p>
+              SOC 2, ISO 27001, and GDPR mappings regenerated on every run. Your
+              report is current as of your last release.
+            </p>
+            <div class="rehaul-who-meta">AUDIT-READY · EXPORT ANYTIME</div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- APPS Team -->
+    <section
+      id="team"
+      class="rehaul-team show-apps"
+      aria-labelledby="team-title"
+    >
+      <div class="rehaul-team-inner">
+        <div class="rehaul-platform-eyebrow">/ The team</div>
+        <h2 id="team-title" class="rehaul-platform-title">
+          The pentesters behind the platform
+        </h2>
+        <p class="rehaul-team-intro">
+          CredShields was built by offensive security researchers. The same
+          team validates your findings.
+        </p>
+
+        <div class="rehaul-team-stats">
+          <div class="rehaul-team-stat">
+            <div class="rehaul-team-stat-value">2,000+</div>
+            <div class="rehaul-team-stat-label">VAPT ENGAGEMENTS</div>
+          </div>
+          <div class="rehaul-team-stat">
+            <div class="rehaul-team-stat-value">20+</div>
+            <div class="rehaul-team-stat-label">
+              YEARS OFFENSIVE EXPERIENCE
+            </div>
+          </div>
+          <div class="rehaul-team-stat">
+            <div class="rehaul-team-stat-value">20+</div>
+            <div class="rehaul-team-stat-label">CVES DISCLOSED</div>
+          </div>
+          <div class="rehaul-team-stat">
+            <div class="rehaul-team-stat-value">100%</div>
+            <div class="rehaul-team-stat-label">REPORTS HUMAN-REVIEWED</div>
+          </div>
+        </div>
+
+        <div class="rehaul-team-grid">
+          <article class="rehaul-team-card">
+            <div class="rehaul-team-person">
+              <img
+                src="images/shashank.jpeg"
+                alt="Shashank"
+                loading="lazy"
+              />
+              <div>
+                <h3>Shashank</h3>
+                <div>Co-Founder &amp; CEO</div>
+              </div>
+            </div>
+            <p>
+              12 years of pentesting. Halls of fame at Google, Facebook, Apple,
+              and 30+ others.
+            </p>
+            <div class="rehaul-team-credentials">
+              <a href="CVE - 2017-7063.html">CVE-2017-7063</a> ·
+              <a href="CVE - 2017-7062.html">CVE-2017-7062</a> ·
+              <a href="CVE - 2017-2458.html">CVE-2017-2458</a>
+            </div>
+          </article>
+
+          <article class="rehaul-team-card">
+            <div class="rehaul-team-person">
+              <img
+                src="images/indranil.jpeg"
+                alt="Indranil Roy"
+                loading="lazy"
+              />
+              <div>
+                <h3>Indranil Roy</h3>
+                <div>Co-Founder &amp; CBO</div>
+              </div>
+            </div>
+            <p>
+              Ex-Deloitte Cyber Risk. Nmap and Metasploit contributor.
+              Recognized by Tesla, Samsung, Cisco, and 20+ others.
+            </p>
+            <div class="rehaul-team-credentials">
+              NMAP · METASPLOIT CONTRIBUTOR
+            </div>
+          </article>
+
+          <article class="rehaul-team-card">
+            <div class="rehaul-team-person">
+              <img
+                src="images/aditya.jpg"
+                alt="Aditya"
+                loading="lazy"
+              />
+              <div>
+                <h3>Aditya</h3>
+                <div>Audit &amp; Research Lead</div>
+              </div>
+            </div>
+            <p>
+              10+ years, 500+ pentests. Led pentest teams at Cobalt and
+              HackerOne.
+            </p>
+            <div class="rehaul-team-credentials">
+              OSCP · CREST CPSA · AWS SECURITY
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
     <!-- ═══════════════════════════════════════════════════════════
      SECTION 01 - CHAIN: AI at Core
 ════════════════════════════════════════════════════════════ -->
@@ -2827,10 +2229,415 @@
       </div>
     </section>
 
+    <!-- APPS AI Access Controls -->
+    <section
+      id="trust"
+      class="rehaul-controls show-apps"
+      aria-labelledby="controls-title"
+    >
+      <div class="rehaul-controls-inner">
+        <div class="rehaul-controls-grid">
+          <div class="rehaul-controls-intro">
+            <div class="rehaul-controls-eyebrow">/ AI Access Controls</div>
+            <h2 id="controls-title">How we secure your data and our AI</h2>
+            <p>The questions every security review opens with, answered.</p>
+            <div class="rehaul-controls-tags">
+              <span>OWASP LLM Top 10</span>
+              <span>NIST AI RMF</span>
+              <span>SOC 2 Type II</span>
+            </div>
+            <a href="#contact" data-contact-form
+              >Request the full control document →</a
+            >
+          </div>
+
+          <div class="rehaul-controls-list">
+            <details class="rehaul-control" open>
+              <summary>
+                <span class="rehaul-control-number">01</span>
+                <span class="rehaul-control-heading">
+                  <strong>Your data never trains models</strong>
+                  <span>Code, findings, prompts, and logs never train any model.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Application code, scan results, vulnerability findings, prompts,
+                HTTP requests and responses, and interaction logs are never used
+                to train, fine-tune, or improve any model, ours or a third
+                party’s. Model development relies entirely on our own internal
+                test cases. Each customer’s data is logically isolated and
+                processed only for that customer’s scan.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">02</span>
+                <span class="rehaul-control-heading">
+                  <strong>Role-based access control</strong>
+                  <span>RBAC scopes access per user and per project.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                RBAC governs who can launch scans, view findings, configure
+                targets, and export reports. Permissions are scoped per user and
+                per project, so access to scan data and AI output is limited to
+                authorized team members. Adding users, changing scan targets,
+                and deleting data are restricted to admin roles.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">03</span>
+                <span class="rehaul-control-heading">
+                  <strong>You choose the target</strong>
+                  <span>It scans the environment you provide, nothing else.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                The scan target is configurable and entirely at your team’s
+                discretion. Provide a staging or UAT URL and only that
+                environment is scanned; provide production and only production
+                is scanned. The platform includes guardrails to minimize
+                disruption. We recommend staging or UAT during a PoC.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">04</span>
+                <span class="rehaul-control-heading">
+                  <strong>Human oversight</strong>
+                  <span>A human validation layer confirms findings before they are finalized.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                AI scale with human tradecraft, not autonomous AI acting without
+                review. A senior pentester confirms or rules out every finding
+                before it is finalized, which provides oversight over
+                AI-generated conclusions.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">05</span>
+                <span class="rehaul-control-heading">
+                  <strong>External LLM providers</strong>
+                  <span>Only the data required for the requested test is sent.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Our engine is AI-native and uses external LLM providers for
+                reasoning. The provider is configurable and can be selected or
+                swapped to meet your requirements. Only the data required to
+                perform the requested security testing is sent, for example the
+                specific request, response, or code segment under analysis.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">06</span>
+                <span class="rehaul-control-heading">
+                  <strong>Retention is user-controlled</strong>
+                  <span>Delete a scan and everything associated with it is removed.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Findings, requests, and scan artifacts are retained only for as
+                long as you need access to the results. Deleting a scan
+                permanently removes it and all associated data: findings,
+                requests and responses, screenshots, configuration, and
+                generated reports. We can provide formal confirmation of
+                deletion at the end of an engagement.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">07</span>
+                <span class="rehaul-control-heading">
+                  <strong>Prompt injection handling</strong>
+                  <span>All scanned content is treated as untrusted input.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Because our agents analyze untrusted target content, our
+                architecture separates control instructions from analyzed data,
+                so content encountered during a scan cannot redirect agent
+                behavior or exfiltrate data. Findings are validated before
+                reporting, adding a second layer against manipulated output.
+              </p>
+            </details>
+            <details class="rehaul-control">
+              <summary>
+                <span class="rehaul-control-number">08</span>
+                <span class="rehaul-control-heading">
+                  <strong>Logging and governance alignment</strong>
+                  <span>Every action is attributable, mapped to recognized frameworks.</span>
+                </span>
+                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
+              </summary>
+              <p>
+                Scans launched, targets configured, data deleted, and reports
+                exported are logged and attributable to the user who performed
+                them, supporting your own audit and access-review requirements.
+                Our practices align with the OWASP Top 10 for LLM Applications
+                and the NIST AI Risk Management Framework.
+              </p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS AI Features -->
+    <section class="rehaul-ai-features show-apps">
+      <div class="rehaul-ai-features-inner">
+        <div class="rehaul-ai-features-card">
+          <div class="rehaul-ai-features-copy">
+            <div class="rehaul-ai-features-label">
+              <span>New</span>
+              <span>AI-POWERED FEATURES</span>
+            </div>
+            <h2>Shipping LLM features? We pentest those too</h2>
+            <p>
+              The same humans-in-the-loop pipeline, applied to the attack
+              surface your AI just added.
+            </p>
+          </div>
+          <div class="rehaul-ai-feature-tags">
+            <span>PROMPT INJECTION</span>
+            <span>AGENT MANIPULATION</span>
+            <span>RAG LEAKAGE</span>
+            <span>GUARDRAIL BYPASS</span>
+            <span>TOOL-CALL ABUSE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS Services -->
+    <section
+      id="services"
+      class="rehaul-services show-apps"
+      aria-labelledby="services-title"
+    >
+      <div class="rehaul-services-inner">
+        <div class="rehaul-platform-eyebrow">/ Beyond the Platform</div>
+        <h2 id="services-title" class="rehaul-platform-title">
+          Services and
+          <a href="https://solidityscan.com/" target="_blank" rel="noopener"
+            >blockchain</a
+          >
+          security
+        </h2>
+        <p class="rehaul-services-intro">
+          Human-led VAPT engagements and smart contract audits. Every
+          engagement gets a named lead, a signed report, and a committed date.
+        </p>
+
+        <div class="rehaul-services-grid">
+          <div class="rehaul-service-list" role="list">
+            <button type="button" data-rehaul-service="0" aria-pressed="true">
+              <span><strong>Web app pentesting</strong><small>OWASP ASVS L2/L3, business logic, multi-tenant isolation</small></span><i>→</i>
+            </button>
+            <button type="button" data-rehaul-service="1" aria-pressed="false">
+              <span><strong>Mobile app pentesting</strong><small>iOS and Android, MASVS-aligned, runtime instrumentation</small></span><i>→</i>
+            </button>
+            <button type="button" data-rehaul-service="2" aria-pressed="false">
+              <span><strong>API security testing</strong><small>REST, GraphQL, and gRPC, OWASP API Top 10 coverage</small></span><i>→</i>
+            </button>
+            <button type="button" data-rehaul-service="3" aria-pressed="false">
+              <span><strong>Cloud security review</strong><small>AWS, GCP, and Azure, attack paths over checklists</small></span><i>→</i>
+            </button>
+            <button type="button" data-rehaul-service="4" aria-pressed="false">
+              <span><strong>Red team engagement</strong><small>Objective-based, full kill chain, detection value included</small></span><i>→</i>
+            </button>
+            <button type="button" data-rehaul-service="5" aria-pressed="false">
+              <span><strong>Smart contract audit</strong><small>Solidity and EVM, manual review backed by SolidityScan</small></span><i>→</i>
+            </button>
+            <button type="button" data-rehaul-service="6" aria-pressed="false">
+              <span><strong>Blockchain protocol audit</strong><small>Bridges, L2s, and DeFi, with economic attack modeling</small></span><i>→</i>
+            </button>
+          </div>
+
+          <div class="rehaul-service-detail" aria-live="polite">
+            <div class="rehaul-service-detail-head">
+              <span>ENGAGEMENT DETAIL</span>
+              <span data-service-duration>2 to 3 weeks</span>
+            </div>
+            <div class="rehaul-service-detail-body">
+              <h3 data-service-name>Web app pentesting</h3>
+              <div>
+                <div class="rehaul-service-detail-label">WHAT WE TEST</div>
+                <div class="rehaul-service-tests" data-service-tests>
+                  <span>Business logic and workflow abuse</span>
+                  <span>Multi-tenant isolation boundaries</span>
+                  <span>Authentication and session handling</span>
+                  <span>Privilege escalation paths</span>
+                </div>
+              </div>
+              <div>
+                <div class="rehaul-service-detail-label">STANDARDS</div>
+                <div class="rehaul-service-standards" data-service-standards>
+                  <span>OWASP ASVS L2/L3</span><span>OWASP Top 10</span><span>PTES</span>
+                </div>
+              </div>
+              <div class="rehaul-service-deliverable">
+                <div class="rehaul-service-detail-label">YOU RECEIVE</div>
+                <p data-service-deliverable>
+                  Signed report with reproduction steps, CVSS scoring, and
+                  control mapping.
+                </p>
+              </div>
+              <div class="rehaul-service-actions">
+                <a href="web-app-security.html" data-service-link
+                  >See full service</a
+                >
+                <a href="#contact" data-contact-form>Get Scoped →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS Compliance Strip -->
+    <section class="rehaul-compliance-strip show-apps" aria-label="Compliance">
+      <div class="rehaul-compliance-inner">
+        <p>
+          SOC 2 Type II report on file · ISO 27001 in progress · Reports map to
+        </p>
+        <div class="rehaul-compliance-logos">
+          <img src="images/logo-soc2.png" alt="SOC 2" title="SOC 2" />
+          <img src="images/logo-iso27001.png" alt="ISO 27001" title="ISO 27001" />
+          <img src="images/logo-gdpr.png" alt="GDPR" title="GDPR" />
+          <img src="images/logo-pcidss.png" alt="PCI DSS" title="PCI DSS" />
+          <img src="images/logo-hipaa.png" alt="HIPAA" title="HIPAA" />
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      class="rehaul-get-started show-apps"
+      aria-labelledby="rehaul-get-started-title"
+    >
+      <div class="rehaul-get-started-inner">
+        <div class="rehaul-get-started-copy">
+          <div class="rehaul-section-kicker">/ Get started</div>
+          <h2 id="rehaul-get-started-title">Start with a scoped assessment</h2>
+          <p>
+            Tell us what you are securing. We reply with scope and next steps
+            within one business day.
+          </p>
+
+          <ul class="rehaul-get-started-benefits">
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Scoping within a day, findings within the first week
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              A senior pentester on every engagement
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Scope and pricing before you commit
+            </li>
+          </ul>
+
+          <p class="rehaul-get-started-link">
+            Prefer to see it first?
+            <a href="https://calendly.com/koda-credshields/30min" data-book-security
+              >Book a Demo ↗</a
+            >
+          </p>
+          <p class="rehaul-get-started-login">
+            Already a CredShields One customer?
+            <a href="https://one.credshields.com">Log in ↗</a>
+          </p>
+        </div>
+
+        <form class="rehaul-lead-form" data-rehaul-lead-form>
+          <div
+            class="rehaul-form-status"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <div class="rehaul-form-row">
+            <label>
+              <span>NAME <b>*</b></span>
+              <input name="name" required placeholder="Jane Doe" />
+            </label>
+            <label>
+              <span>WORK EMAIL <b>*</b></span>
+              <input name="email" type="email" required autocomplete="email" placeholder="jane@company.com" />
+            </label>
+          </div>
+
+          <div class="rehaul-form-row">
+            <label>
+              <span>COMPANY <b>*</b></span>
+              <input name="company" required autocomplete="organization" placeholder="Company name" />
+            </label>
+            <label>
+              <span>YOUR ROLE <b>*</b></span>
+              <select name="role" required>
+                <option value="">Choose…</option>
+                <option>Founder / CEO</option>
+                <option>CTO / VP Engineering</option>
+                <option>DevOps / Platform</option>
+                <option>CISO / Security lead</option>
+                <option>Compliance / GRC</option>
+                <option>Engineer</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>WHAT DO YOU WANT PENTESTED? <b>*</b></span>
+            <select name="target" required>
+              <option value="">Choose…</option>
+              <option>Web Application</option>
+              <option>Mobile App (iOS / Android)</option>
+              <option>API</option>
+              <option>Smart Contract</option>
+              <option>Cloud Infrastructure</option>
+              <option>Multiple / Not sure yet</option>
+            </select>
+          </label>
+
+          <label>
+            <span>ANYTHING ELSE WE SHOULD KNOW?</span>
+            <textarea name="context" rows="4" placeholder="Stack, release cadence, compliance needs, timeline…"></textarea>
+          </label>
+
+          <button class="rehaul-form-submit" type="submit">Send request →</button>
+          <small>We respond within one business day.</small>
+          <div class="rehaul-form-divider"><span>OR</span></div>
+          <a class="rehaul-form-demo" href="https://calendly.com/koda-credshields/30min" data-book-security
+            >Book a Demo ↗</a
+          >
+        </form>
+      </div>
+    </section>
+
     <!-- ═══════════════════════════════════════════════════════════
      CTA BLOCK
 ════════════════════════════════════════════════════════════ -->
-    <div class="cta-block">
+    <div class="cta-block show-chain">
       <div class="cta-glow" aria-hidden="true"></div>
       <div class="cta-inner">
         <!-- APPS CTA -->
@@ -2934,23 +2741,18 @@
           <!-- Brand -->
           <div>
             <div class="footer-brand-logo">
-              <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
               <img
-                src="images/credshields_white_logo.svg"
+                src="images/logo-full-white-trim.png"
                 alt="CredShields"
-                width="140"
-                height="36"
-                class="show-chain"
-              />
-              <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
-              <img
-                src="images/credshields_black_logo.svg"
-                alt="CredShields"
-                width="140"
-                height="36"
-                class="show-apps"
+                width="141"
+                height="56"
               />
             </div>
+            <p class="rehaul-footer-description">
+              A full-scope cybersecurity company providing AI-powered
+              penetration testing and manual VAPT services across web, mobile,
+              cloud, APIs, and smart contracts.
+            </p>
             <p class="footer-brand-addr">
               20A Tanjong Pagar Road,<br />Singapore (088443)
             </p>
@@ -3004,29 +2806,6 @@
                   />
                 </svg>
               </a>
-            </div>
-            <div class="footer-copy">
-              © 2026 CredShields. All Rights Reserved.
-            </div>
-            <div class="trustpilot-widget-wrapper">
-              <!-- TrustBox widget - Review Collector -->
-              <div
-                class="trustpilot-widget"
-                data-locale="en-US"
-                data-template-id="56278e9abfbbba0bdcd568bc"
-                data-businessunit-id="6a83d9713986f4670926d9b2"
-                data-style-height="52px"
-                data-style-width="100%"
-                data-token="a23effb3-dfdd-40a7-bfd2-6ece802377c1"
-              >
-                <a
-                  href="https://www.trustpilot.com/review/credshields.com"
-                  target="_blank"
-                  rel="noopener"
-                  >Trustpilot</a
-                >
-              </div>
-              <!-- End TrustBox widget -->
             </div>
           </div>
 
@@ -3228,15 +3007,51 @@
           </div>
         </div>
 
+        <div class="rehaul-footer-reviews">
+          <div class="rehaul-footer-rating">
+            <span class="rehaul-footer-stars" aria-label="4.8 out of 5 stars">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg>
+              <svg class="is-partial" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg>
+            </span>
+            <span class="rehaul-footer-score"><strong>4.8</strong> out of 5</span>
+            <span class="rehaul-footer-review-count">BASED ON 60+ REVIEWS · TRUSTPILOT</span>
+          </div>
+          <div class="rehaul-footer-review-actions">
+            <a
+              href="https://www.trustpilot.com/review/credshields.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Read Our Reviews ↗</a
+            >
+            <a
+              class="rehaul-footer-rate"
+              href="https://www.trustpilot.com/evaluate/credshields.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Rate Us</a
+            >
+          </div>
+        </div>
+
         <div class="footer-bottom">
-          <a href="tos.html" class="footer-legal">Terms &amp; Conditions</a>
-          <a href="privacy.html" class="footer-legal">Privacy Policy</a>
-          <a href="privacy.html#cookies" class="footer-legal">Cookie Notice</a>
+          <span class="rehaul-footer-company">
+            © 2026 Credshields Technologies Pte. Ltd · Singapore · India ·
+            info@credshields.com
+          </span>
+          <div class="rehaul-footer-legal-links">
+            <a href="tos.html" class="footer-legal">Terms &amp; Conditions</a>
+            <a href="privacy.html" class="footer-legal">Privacy Policy</a>
+            <a href="privacy.html#cookies" class="footer-legal">Cookie Notice</a>
+          </div>
         </div>
       </div>
     </footer>
 
     <!-- Main JS -->
     <script src="js/main.v1.js"></script>
+    <script src="js/homepage-rehaul.js"></script>
   </body>
 </html>
