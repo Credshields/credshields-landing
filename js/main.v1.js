@@ -2,7 +2,6 @@
    CredShields Main JS v1
    ─ Mode toggle (Apps ↔ Chain)
    ─ Mobile nav overlay
-   ─ Banner close
    ─ Animated stat counters
    ========================================================= */
 
@@ -322,7 +321,7 @@
   var saved   = null;
 
   try { saved = localStorage.getItem('cs-mode'); } catch (e) {}
-  if (saved === 'apps' || saved === 'chain') applyMode(saved);
+  if (btns.length && (saved === 'apps' || saved === 'chain')) applyMode(saved);
 
   function applyMode(mode) {
     html.setAttribute('data-mode', mode);
@@ -381,14 +380,6 @@
   });
 
   /* ── 3. NOTIFICATION BANNER CLOSE ──────────────────────── */
-  var banner    = document.getElementById('alert-banner');
-  var bannerBtn = document.getElementById('close-banner');
-  if (bannerBtn && banner) {
-    bannerBtn.addEventListener('click', function () {
-      banner.style.display = 'none';
-    });
-  }
-
   /* ── 4. HERO GRID TRACES ───────────────────────────────── */
   function initHeroTraces() {
     var hosts = document.querySelectorAll('.hero-traces');
