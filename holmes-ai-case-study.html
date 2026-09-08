@@ -4,34 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Case Studies | CredShields</title>
+    <title>Holmes AI Case Study | CredShields</title>
     <meta
       name="description"
-      content="Details from real CredShields engagements across fintech, DeFi, Web3, cloud, and SaaS: scope, findings, and outcomes in full."
+      content="A web and API pentest across an AI procurement platform, focused on authentication, authorization, and multi-tenant data boundaries."
     />
     <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Case Studies | CredShields" />
+    <meta property="og:title" content="Holmes AI Case Study | CredShields" />
     <meta
       property="og:description"
-      content="Details from real CredShields security engagements: scope, findings, and outcomes in full."
+      content="A web and API pentest across an AI procurement platform, focused on authentication, authorization, and multi-tenant data boundaries."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://credshields.com/case-studies" />
+    <meta property="og:url" content="https://credshields.com/case-studies/holmes-ai" />
     <meta
       property="og:image"
       content="https://credshields.com/images/product_one_img.png"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Case Studies | CredShields" />
-    <meta
-      name="twitter:description"
-      content="Details from real CredShields security engagements: scope, findings, and outcomes in full."
-    />
     <meta
       name="twitter:image"
       content="https://credshields.com/images/product_one_img.png"
     />
-    <link rel="canonical" href="https://credshields.com/case-studies" />
+    <link rel="canonical" href="https://credshields.com/case-studies/holmes-ai" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
@@ -44,7 +39,6 @@
     <link rel="stylesheet" href="css/design-tokens.v1.css" />
     <link rel="stylesheet" href="css/main.v1.css" />
     <link rel="stylesheet" href="css/app_home.css" />
-    <link rel="stylesheet" href="css/case-studies.css" />
 
     <!-- Calendly -->
     <link
@@ -2946,103 +2940,657 @@
       </div>
     </div>
 
-    <main class="case-studies-main">
-      <section class="case-studies-hero" aria-labelledby="case-studies-title">
-        <div class="case-studies-inner">
-          <div class="case-studies-badge">CASE STUDIES</div>
-          <h1 class="continuous-appsec-page-title" id="case-studies-title">The work, without the names</h1>
-          <p class="continuous-appsec-page-lede">Details from real engagements across fintech, DeFi, Web3, and SaaS: scope, findings, and outcomes in full.</p>
-          <div class="case-studies-actions">
-            <button class="btn-primary-lg" type="button" data-contact-form>Start a Pentest</button>
-            <a class="btn-secondary-lg" href="sample-report.html">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              View Sample Report
-            </a>
+    <!-- HERO --------------------------------------------------- -->
+    <header class="cs-hero">
+      <div class="hero-grid"></div>
+      <div class="container">
+        <div>
+          <nav class="crumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span>/</span>
+            <a href="case-studies.html">Case studies</a><span>/</span>
+            <a href="#" aria-current="page" style="color: var(--text-dim)"
+              >Holmes AI</a
+            >
+          </nav>
+          <div class="app_home-hero-badge">
+            <div class="app_home-hero-badge-dot"></div>
+            <span class="app_home-hero-badge-text">AI &amp; B2B SAAS</span>
           </div>
-          <div class="case-studies-tags" aria-label="Case study industries">
-            <span class="case-studies-tag">FINTECH</span>
-            <span class="case-studies-tag">DEFI AND WEB3</span>
-            <span class="case-studies-tag">CLOUD</span>
-            <span class="case-studies-tag">APPSEC</span>
+          <h1 class="app_home-hero-headline">Holmes AI</h1>
+
+          <div class="app_home-hero-ticker">
+            <span class="app_home-ticker-item">AI SAAS</span
+            ><span class="app_home-ticker-sep" style="font-size: 10px">◆</span>
+            <span class="app_home-ticker-item">B2B PROCUREMENT</span
+            ><span class="app_home-ticker-sep" style="font-size: 10px">◆</span>
+            <span class="app_home-ticker-item">CALIFORNIA</span
+            ><span class="app_home-ticker-sep" style="font-size: 10px">◆</span>
+            <span class="app_home-ticker-item">UNITED STATES</span>
+          </div>
+          <p class="app_home-hero-body">
+            A web application and API penetration test across an AI-powered B2B
+            procurement platform, focused on the boundaries that matter most in
+            multi-tenant software: who can authenticate, who can read whose
+            records, and what an API will hand over when nobody checks.
+          </p>
+          <dl class="cs-facts">
+            <div>
+              <dt>Engagement type</dt>
+              <dd>Web Application &amp; API Penetration Test</dd>
+            </div>
+            <div>
+              <dt>Scope</dt>
+              <dd>
+                AI-powered B2B procurement platform. Web application,
+                authentication flows, and all backend APIs.
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="terminal" aria-hidden="true">
+          <div class="scan"></div>
+          <div class="terminal-bar">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+            <span class="terminal-title"
+              >~/credshields/engagements/holmes-ai · zsh</span
+            >
+          </div>
+          <div class="terminal-body">
+            <div class="tl-line">
+              <span class="tl-prompt">$</span
+              ><span class="tl-dim"
+                >cs-engage --client holmes-ai --scope webapp,api</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[recon]</span
+              ><span class="tl-text"
+                >procurement platform · auth flows · backend APIs</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[detect]</span
+              ><span class="tl-text"
+                >50 findings · authn · authz · session · input</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[validate]</span
+              ><span class="tl-crit"
+                >CROSS-ACCOUNT ACCESS CONFIRMED · buyer ↔ supplier</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[remediate]</span
+              ><span class="tl-ok">48 / 50 closed · verified on retest</span>
+            </div>
+            <div class="tl-line">
+              <span class="tl-dim">[status]</span
+              ><span class="tl-text"
+                >2 open · accepted risk, signed off by client</span
+              >
+            </div>
+            <div class="tl-line">
+              <span class="tl-prompt">$</span><span class="caret"></span>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </header>
 
-      <section class="case-studies-list" aria-labelledby="every-engagement-title">
-        <div class="case-studies-inner">
-          <div class="case-studies-eyebrow">/ Every engagement</div>
-          <h2 class="case-studies-heading" id="every-engagement-title">Every engagement</h2>
-
-          <div class="case-studies-filters" role="toolbar" aria-label="Filter case studies">
-            <button class="case-studies-filter is-active" type="button" data-case-filter="all" aria-pressed="true">All</button>
-            <button class="case-studies-filter" type="button" data-case-filter="appsec" aria-pressed="false">Application security</button>
-            <button class="case-studies-filter" type="button" data-case-filter="cloud" aria-pressed="false">Cloud security</button>
-            <button class="case-studies-filter" type="button" data-case-filter="web3" aria-pressed="false">Web3 &amp; crypto</button>
-            <button class="case-studies-filter" type="button" data-case-filter="redteam" aria-pressed="false">Red team &amp; social engineering</button>
+    <!-- CONTEXT ------------------------------------------------ -->
+    <section class="block" style="padding-top: 80px">
+      <div class="container">
+        <div class="split reveal">
+          <div>
+            <span class="eyebrow">/ context</span>
+            <h2 class="app_home-section-title">
+              A procurement platform is a permissions problem wearing a UI.
+            </h2>
           </div>
-
-          <div class="case-studies-grid" aria-live="polite">
-            <a class="case-study-card" href="holmes-ai-case-study.html" data-case-category="appsec">
-              <span class="case-study-card__category">AI AND B2B SAAS</span>
-              <h3>50 findings, 48 closed on retest</h3>
-              <p>Web application and API pentest across an AI-powered B2B procurement platform.</p>
-              <span class="case-study-card__link">Read the case study →</span>
-            </a>
-            <a class="case-study-card" href="neobank-case-study.html" data-case-category="cloud">
-              <span class="case-study-card__category">CRYPTO-FRIENDLY NEOBANK</span>
-              <h3>42 findings across a full AWS environment</h3>
-              <p>Full-infrastructure AWS audit across compute, storage, databases, networking, and IAM.</p>
-              <span class="case-study-card__link">Read the case study →</span>
-            </a>
-            <a class="case-study-card" href="payments-platform-case-study.html" data-case-category="web3 redteam">
-              <span class="case-study-card__category">CROSS-BORDER PAYMENTS AND CUSTODY</span>
-              <h3>Five live attack scenarios, no successful breaches</h3>
-              <p>Phishing and crypto dusting simulation against a custody operations team.</p>
-              <span class="case-study-card__link">Read the case study →</span>
-            </a>
+          <div class="prose">
+            <p class="app_home-card-body">
+              B2B procurement software sits in the middle of a commercial
+              relationship. It holds the contracts, the negotiated pricing, the
+              supplier lists, and the approval chains that both sides of a
+              transaction consider confidential. Buyers do not want their
+              pricing visible to other buyers. Suppliers do not want their
+              margins visible to competitors bidding on the same contract.
+            </p>
+            <p class="app_home-card-body">
+              That separation is almost never physical. In a multi-tenant SaaS
+              platform every customer's records live in shared infrastructure,
+              and the boundary between them is enforced by application logic: a
+              check in a controller, a scope on a token, a filter on a query.
+              When one of those checks is missing, nothing crashes and no alert
+              fires. The data simply comes back to whoever asked for it.
+            </p>
+            <p class="app_home-card-body">
+              Adding AI to the workflow raises the stakes rather than changing
+              them. Procurement data now moves through processing pipelines that
+              summarize, classify, and route it, which means more services
+              touching the same records and more places where an authorization
+              decision has to be made correctly. The security question is not
+              whether the perimeter holds. It is whether the application
+              enforces the boundaries its own product page promises.
+            </p>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
+    <!-- FINDINGS ----------------------------------------------- -->
+    <section class="block" style="padding-top: 80px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ findings overview</span>
+          <h2 class="app_home-section-title">
+            Fifty findings. Forty-eight closed.
+          </h2>
+        </div>
+        <div class="stat-band">
+          <div class="stat reveal hero-stat">
+            <div class="num">50</div>
+            <div class="lbl">Total findings</div>
+            <p class="note">
+              Across authentication, authorization, session handling, and input
+              validation.
+            </p>
+          </div>
+          <div class="stat reveal">
+            <div class="num">48<small> / 50</small></div>
+            <div class="lbl">Remediated</div>
+            <p class="note">
+              Fixes confirmed on retest before the engagement closed.
+            </p>
+          </div>
+          <div class="stat reveal">
+            <div class="num">2</div>
+            <div class="lbl">Accepted risk</div>
+            <p class="note">
+              Acknowledged and formally accepted by the client.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METHOD ------------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="split reveal">
+          <div>
+            <span class="eyebrow">/ approach</span>
+            <h2 class="app_home-section-title">How the engagement ran</h2>
+          </div>
+          <div class="prose">
+            <p class="app_home-card-body">
+              The engagement covered the web application, its authentication
+              flows, and every backend API behind it. Testing was conducted
+              against all three user types the platform supports, buyer,
+              supplier, and platform administrator, with each role tested
+              against the others rather than in isolation. Most authorization
+              failures only become visible when you hold one identity and reach
+              for another identity's data.
+            </p>
+            <p class="app_home-card-body">
+              Business logic flaws do not have signatures. An automated scanner
+              can tell you that an endpoint responds, but it cannot tell you
+              that a supplier should never have been able to read that
+              particular contract, because it does not know what a contract is
+              or who is supposed to see one. That distinction is why the API
+              surface was enumerated and exercised by hand rather than crawled.
+            </p>
+            <p class="app_home-card-body">
+              Findings were validated with reproduction steps and rated by real
+              business impact before being handed over. The engagement closed
+              with a retest cycle, which is where the remediation count comes
+              from: 48 of the 50 findings were confirmed fixed rather than
+              reported as fixed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISK AREAS --------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ what we found</span>
+          <h2 class="app_home-section-title">Key risk areas identified</h2>
+          <p>
+            Six areas where the platform's trust boundaries did not hold up
+            under attack.
+          </p>
+        </div>
+        <div class="risk-list">
+          <div class="risk-row reveal">
+            <div class="risk-idx">01</div>
+            <div>
+              <h3 class="app_home-service-title">Authentication bypass</h3>
+              <p class="lead">
+                Unauthorized access to procurement workflows and the supplier
+                and buyer data behind them.
+              </p>
+            </div>
+            <p class="detail">
+              Authentication bypass means reaching a state the login flow was
+              supposed to gate. It rarely looks like a cracked password. More
+              often it is a flow that can be entered halfway, a token that is
+              trusted without being verified, or a step that can be skipped
+              because the server assumes the client followed the intended order.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">02</div>
+            <div>
+              <h3 class="app_home-service-title">Cross-account data access</h3>
+              <p class="lead">
+                Records, contracts, and supplier profiles belonging to one
+                account reachable from another.
+              </p>
+            </div>
+            <p class="detail">
+              This class is what OWASP lists as the number one API risk, broken
+              object level authorization. The request is properly authenticated,
+              the session is real, and the server still returns a record
+              belonging to somebody else because the only thing identifying the
+              record was a value the caller supplied.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">03</div>
+            <div>
+              <h3 class="app_home-service-title">Privilege escalation</h3>
+              <p class="lead">
+                Movement between the buyer, supplier, and platform admin roles
+                beyond what each role should hold.
+              </p>
+            </div>
+            <p class="detail">
+              Escalation runs in two directions. Horizontal movement gets you
+              another account's data at your own permission level. Vertical
+              movement gets you a higher level entirely, which on a procurement
+              platform means reaching administrative functions from an ordinary
+              supplier login.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">04</div>
+            <div>
+              <h3 class="app_home-service-title">Unprotected API endpoints</h3>
+              <p class="lead">
+                Endpoints returning sensitive procurement and pricing data
+                without an authorization check.
+              </p>
+            </div>
+            <p class="detail">
+              APIs frequently carry data the interface never displays. An
+              endpoint built to populate one screen may return the full
+              underlying object, including pricing and counterparty detail the
+              front end simply does not render. The data is in the response
+              either way.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">05</div>
+            <div>
+              <h3 class="app_home-service-title">
+                Session management weaknesses
+              </h3>
+              <p class="lead">
+                Conditions allowing session hijacking and theft of
+                authentication tokens.
+              </p>
+            </div>
+            <p class="detail">
+              Session weaknesses extend the window an attacker gets. Tokens that
+              outlive their usefulness, sessions that survive a password change,
+              or identifiers that can be captured and replayed all turn a single
+              moment of exposure into ongoing access.
+            </p>
+          </div>
+          <div class="risk-row reveal">
+            <div class="risk-idx">06</div>
+            <div>
+              <h3 class="app_home-service-title">Input validation gaps</h3>
+              <p class="lead">
+                Room to manipulate data as it moved through AI-processed
+                procurement workflows.
+              </p>
+            </div>
+            <p class="detail">
+              In an AI-assisted workflow, input validation stops being only
+              about injection. Data that gets manipulated on the way into a
+              processing pipeline influences what comes out of it, which means a
+              validation gap upstream can quietly change a downstream result
+              that a human then treats as authoritative.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKEAWAYS ---------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ takeaways</span>
+          <h2 class="app_home-service-title">
+            What this engagement says about multi-tenant SaaS
+          </h2>
+        </div>
+        <div class="takes">
+          <div class="take reveal">
+            <span class="mark">01</span>
+            <h3 class="app_home-service-title">
+              Authorization is a per-object question, not a per-endpoint one
+            </h3>
+            <p>
+              An endpoint can be correctly locked to authenticated users and
+              still hand every one of them the same records. The check that
+              matters is not can this user call this route, it is does this user
+              own this specific object.
+            </p>
+          </div>
+          <div class="take reveal">
+            <span class="mark">02</span>
+            <h3 class="app_home-service-title">
+              Every role you add multiplies the test surface
+            </h3>
+            <p>
+              Three roles do not produce three test cases. They produce every
+              combination of who is acting and whose data is being touched,
+              which is where privilege escalation paths hide.
+            </p>
+          </div>
+          <div class="take reveal">
+            <span class="mark">03</span>
+            <h3 class="app_home-service-title">
+              The API is the product, the UI is a client
+            </h3>
+            <p>
+              Access controls enforced in the interface are decoration. Anything
+              the browser can request, an attacker can request directly, without
+              the JavaScript that was supposed to hide the button.
+            </p>
+          </div>
+          <div class="take reveal">
+            <span class="mark">04</span>
+            <h3 class="app_home-service-title">
+              Accepted risk is a valid outcome when it is a decision
+            </h3>
+            <p>
+              Two findings closed as accepted rather than fixed. That is a
+              legitimate result when it is a documented, deliberate choice
+              rather than a backlog item nobody got to.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELEVANT FOR ------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ relevant for</span>
+          <h2 class="app_home-service-title">
+            If this looks like your environment, it probably behaves like it
+            too.
+          </h2>
+        </div>
+        <div class="fits">
+          <div class="fit reveal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>
+              AI SaaS platforms with multi-tenant data and role-based access.
+            </p>
+          </div>
+          <div class="fit reveal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>
+              B2B software handling procurement, financial, or sensitive
+              operational data.
+            </p>
+          </div>
+          <div class="fit reveal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <p>Platforms where cross-account data isolation is critical.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ---------------------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ common questions</span>
+          <h2 class="app_home-section-title">
+            Questions this engagement usually raises.
+          </h2>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>
+              What is a web application and API penetration test?
+            </summary>
+            <div class="a">
+              A manual security assessment in which testers attack a live
+              application the way an adversary would, then confirm each issue
+              with reproduction steps. It covers both the interface and the
+              backend APIs behind it, because the two have different attack
+              surfaces and the API is usually the larger one.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>
+              How is a penetration test different from a vulnerability scan?
+            </summary>
+            <div class="a">
+              A scanner matches known signatures and reports anything that looks
+              familiar, including a large volume of things that are not
+              exploitable in context. A penetration test validates
+              exploitability and finds business logic flaws, which have no
+              signature to match because they are failures of intent rather than
+              of code pattern.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>What is broken object level authorization?</summary>
+            <div class="a">
+              A flaw where an application checks that you are logged in but not
+              that the specific record you asked for belongs to you. Changing an
+              identifier in a request returns somebody else's data. It is
+              consistently among the most common and most damaging API
+              vulnerabilities.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>Why does multi-tenancy make this harder?</summary>
+            <div class="a">
+              Because the separation between customers is enforced in software
+              rather than by infrastructure. Every query, endpoint, and
+              background job has to independently get the boundary right, and a
+              single omission exposes data across accounts without any visible
+              failure.
+            </div>
+          </details>
+          <details class="reveal">
+            <summary>What happens to findings that are not remediated?</summary>
+            <div class="a">
+              They are documented and formally accepted as risk by the client,
+              which is what happened with two of the fifty findings here.
+              Accepted risk should be a recorded decision with an owner, not an
+              open item that fell off the list.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- MORE CASE STUDIES -------------------------------------- -->
+    <section class="block" style="padding-top: 40px">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">/ more engagements</span>
+          <h2 class="display">Other work.</h2>
+        </div>
+        <div class="more">
+          <a class="more-card reveal" href="neobank-case-study.html">
+            <span class="k">Fintech &amp; Payments</span>
+            <h3>NeoBank</h3>
+            <p>
+              Five live phishing and crypto dusting scenarios run against the
+              custody and operations teams. All five blocked.
+            </p>
+            <span class="go"
+              >Read the case study
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></span>
+          </a>
+          <a class="more-card reveal" href="payments-platform-case-study.html">
+            <span class="k">Fintech &amp; Payments</span>
+            <h3>Juno</h3>
+            <p>
+              42 findings across a full AWS environment, from publicly readable
+              buckets to a root account running without MFA.
+            </p>
+            <span class="go"
+              >Read the case study
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" /></svg
+            ></span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ═══════════════════════════════════════════════════════════
+     CTA BLOCK
+════════════════════════════════════════════════════════════ -->
     <div class="cta-block">
       <div class="cta-glow" aria-hidden="true"></div>
       <div class="cta-inner">
+        <!-- APPS CTA -->
         <div class="show-apps">
           <div class="cta-eyebrow">
-            <svg width="14" height="16" viewBox="0 0 32 36" fill="none" aria-hidden="true">
-              <path d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z" fill="#A8FF45"></path>
-              <path d="M11 17.5L14.5 21L21 14" stroke="#0A1A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <svg width="14" height="16" viewBox="0 0 32 36" fill="none">
+              <path
+                d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z"
+                fill="#A8FF45"
+              ></path>
+              <path
+                d="M11 17.5L14.5 21L21 14"
+                stroke="#0A1A0C"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
             </svg>
             Start here
           </div>
           <h2 class="cta-title">Think like them.<br />Before they do</h2>
-          <p class="cta-body">Book a 30-minute walkthrough. We'll point CredShields at a scoped asset and show you live findings by the end of the call.</p>
+          <p class="cta-body">
+            Book a 30-minute walkthrough. We'll point CredShields at a scoped
+            asset and show you live findings by the end of the call.
+          </p>
         </div>
-
+        <!-- CHAIN CTA -->
         <div class="show-chain">
           <div class="cta-eyebrow">
-            <svg width="14" height="16" viewBox="0 0 32 36" fill="none" aria-hidden="true">
-              <path d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z" fill="#A8FF45"></path>
-              <path d="M11 17.5L14.5 21L21 14" stroke="#0A1A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <svg width="14" height="16" viewBox="0 0 32 36" fill="none">
+              <path
+                d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z"
+                fill="#A8FF45"
+              ></path>
+              <path
+                d="M11 17.5L14.5 21L21 14"
+                stroke="#0A1A0C"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
             </svg>
             Secure your protocol today
           </div>
-          <h2 class="cta-title">Don't wait for a<br />security <em>incident</em>.</h2>
-          <p class="cta-body">Get your comprehensive security audit from the team trusted by 200+ protocols and enterprises worldwide. Fast turnaround. Proven track record. Direct access to senior security engineers.</p>
+          <h2 class="cta-title">
+            Don't wait for a<br />security <em>incident</em>.
+          </h2>
+          <p class="cta-body">
+            Get your comprehensive security audit from the team trusted by 200+
+            protocols and enterprises worldwide. Fast turnaround. Proven track
+            record. Direct access to senior security engineers.
+          </p>
         </div>
-
         <div class="cta-btns">
-          <button class="btn-cta-primary show-apps" type="button" data-contact-form>Start a Pentest →</button>
-          <a class="btn-cta-ghost show-apps" href="https://calendly.com/koda-credshields/30min" data-book-security>Talk to an Expert ↗</a>
-          <button class="btn-cta-primary show-chain" type="button" data-contact-form>Request Manual Audit →</button>
-          <a class="btn-cta-ghost show-chain" href="https://calendly.com/koda-credshields/30min" data-book-security>Book Security Review ↗</a>
+          <!-- APPS buttons -->
+          <a class="btn-cta-primary show-apps" href="#contact"
+            >Start a Pentest →</a
+          >
+          <a
+            class="btn-cta-ghost show-apps"
+            href="https://calendly.com/koda-credshields/30min"
+            data-book-security
+            >Talk to an Expert ↗</a
+          >
+          <!-- CHAIN buttons -->
+          <a class="btn-cta-primary show-chain" href="#contact"
+            >Request Manual Audit →</a
+          >
+          <a class="btn-cta-ghost show-chain" href="#contact"
+            >Book Security Review ↗</a
+          >
         </div>
-
+        <!-- Shared trust strip -->
         <div class="cta-trust">
           <div>
             <div class="cta-trust-item-title">Fixed-Fee Pricing</div>
@@ -3349,27 +3897,25 @@
     </footer>
 
     <script>
-      (() => {
-        const filters = [...document.querySelectorAll("[data-case-filter]")];
-        const cards = [...document.querySelectorAll("[data-case-category]")];
-
-        filters.forEach((button) => {
-          button.addEventListener("click", () => {
-            const selected = button.dataset.caseFilter;
-
-            filters.forEach((filter) => {
-              const active = filter === button;
-              filter.classList.toggle("is-active", active);
-              filter.setAttribute("aria-pressed", String(active));
-            });
-
-            cards.forEach((card) => {
-              const categories = card.dataset.caseCategory.split(" ");
-              card.hidden = selected !== "all" && !categories.includes(selected);
-            });
-          });
+      document.querySelectorAll(".risk, .more-card").forEach((el) => {
+        el.addEventListener("mousemove", (e) => {
+          const r = el.getBoundingClientRect();
+          el.style.setProperty("--mx", e.clientX - r.left + "px");
+          el.style.setProperty("--my", e.clientY - r.top + "px");
         });
-      })();
+      });
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     </script>
     <!-- Main JS -->
     <script src="js/main.v1.js"></script>
