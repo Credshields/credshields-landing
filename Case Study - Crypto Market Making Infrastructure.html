@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto Market Making Infrastructure Case Study - CredShields</title>
+<meta name="description" content="A dual-track engagement for a crypto market making firm: an AWS audit across 10+ regions plus a red team phishing simulation. All attack vectors blocked.">
+<link rel="canonical" href="https://credshields.com/case-studies/crypto-market-making-infrastructure">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CredShields">
+<meta property="og:title" content="Crypto Market Making Infrastructure Case Study - CredShields">
+<meta property="og:description" content="A dual-track engagement for a crypto market making firm: an AWS audit across 10+ regions plus a red team phishing simulation. All attack vectors blocked.">
+<meta property="og:url" content="https://credshields.com/case-studies/crypto-market-making-infrastructure">
+<meta property="og:image" content="https://credshields.com/assets/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CredShields">
+<meta name="twitter:title" content="Crypto Market Making Infrastructure Case Study - CredShields">
+<meta name="twitter:description" content="A dual-track engagement for a crypto market making firm: an AWS audit across 10+ regions plus a red team phishing simulation. All attack vectors blocked.">
+<meta name="twitter:image" content="https://credshields.com/assets/og-card.png">
+<script src="./support.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://credshields.com/"},{"@type":"ListItem","position":2,"name":"Case Studies","item":"https://credshields.com/case-studies"},{"@type":"ListItem","position":3,"name":"Crypto Market Making Infrastructure Case Study","item":"https://credshields.com/case-studies/crypto-market-making-infrastructure"}]}</script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/tokens/colors.css">
+<link rel="stylesheet" href="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/tokens/typography.css">
+<link rel="stylesheet" href="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/tokens/effects.css">
+<link rel="stylesheet" href="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/components/components.css">
+<link rel="stylesheet" href="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/styles.css">
+<script src="_ds/credshields-design-system-019dc4b5-1ee8-764c-be83-fad47cb4b5d7/_ds_bundle.js"></script>
+<style>
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; background: var(--surface-page, #F4F8F4); }
+body { overflow-x: hidden; }
+a { color: var(--link-color, #2E7D0E); text-decoration: none; }
+a:hover { color: var(--link-hover-color, #256A0B); }
+::selection { background: rgba(168,255,69,.3); }
+@keyframes pulseDot { 0%,100% { opacity: .35; } 50% { opacity: 1; } }
+@media (max-width: 1080px) {
+  [data-navlinks] { display: none !important; }
+  [data-navburger] { display: inline-flex !important; }
+}
+@media (max-width: 520px) { [data-navcta] { display: none !important; } }
+</style>
+<script src="./enhance.js"></script>
+</helmet>
+<div ref="{{ rootRef }}" style="background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body)">
+  <nav style="position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:11px 40px;background:{{ navBg }};border-bottom:1px solid {{ navLine }};transition:background .3s ease,border-color .3s ease">
+    <a href="CredShields Homepage.html" style="display:flex;align-items:center">
+      <img src="assets/logo-full-white-trim.png" alt="CredShields" style="height:48px;width:121px;display:block;filter:{{ navLogoFilter }};transition:filter .3s ease">
+    </a>
+    <div data-navlinks="" style="display:flex;align-items:center;gap:28px;font:500 14px var(--font-body)">
+      <div onMouseEnter="{{ openSol }}" onMouseLeave="{{ closeMenus }}" style="position:relative;padding:22px 0">
+        <span style="color:{{ navFg }};opacity:.85;cursor:default;transition:color .3s ease">Platform</span>
+      <sc-if value="{{ solOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;top:100%;left:0;padding-top:10px">
+          <div style="background:var(--surface-page);border:1px solid var(--border-default);border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(10,26,12,.18);padding:10px 26px 22px;width:300px;column-count:1;column-gap:36px;box-sizing:border-box">
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:14px 0 6px">THE PLATFORM</div>
+            <a href="CredShields Homepage.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">CredShields One</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:14px 0 6px">COMPARE</div>
+            <a href="Resources.html#compare" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">All 14 Comparisons</a>
+            <a href="Compare - CredShields vs Cobalt.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">vs Cobalt</a>
+            <a href="Compare - CredShields vs HackerOne.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">vs HackerOne</a>
+            <a href="Compare - CredShields vs Astra Security.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">vs Astra Security</a>
+            <a href="Compare - CredShields vs DAST and SAST scanners.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">vs DAST and SAST</a>
+          </div>
+        </div>
+      </sc-if>
+      </div>
+      <div onMouseEnter="{{ openSvc }}" onMouseLeave="{{ closeMenus }}" style="position:relative;padding:22px 0">
+        <span style="color:{{ navFg }};opacity:.85;cursor:default;transition:color .3s ease">Services</span>
+      <sc-if value="{{ svcOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;top:100%;left:0;padding-top:10px">
+          <div style="background:var(--surface-page);border:1px solid var(--border-default);border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(10,26,12,.18);padding:10px 26px 22px;width:340px;column-count:1;column-gap:36px;box-sizing:border-box">
+            <a href="Services.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:14px 0 4px;display:block" style-hover="color:var(--color-forest)">All services →</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:14px 0 6px">MANUAL + AI PENTESTING</div>
+            <a href="Solution - Web App Pentesting.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Web App Pentesting</a>
+            <a href="Solution - Mobile App Pentesting.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Mobile App Pentesting</a>
+            <a href="Solution - API Security Testing.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">API Security Testing</a>
+            <a href="Solution - Cloud Security Review.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Cloud Security Review</a>
+            <a href="Solution - Red Team Engagement.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Red Team Engagement</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:14px 0 6px">CONTINUOUS &amp; TOOLING</div>
+            <a href="Solution - DevSecOps Integration.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">DevSecOps Integration</a>
+            <a href="Solution - Source Code Review and SAST.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Source Code Review &amp; SAST</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:14px 0 6px">WEB3</div>
+            <a href="Web3 Security.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Web3 Security</a>
+            <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">SolidityScan ↗</a>
+            <a href="OWASP Smart Contract Top 10 2026.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">OWASP Smart Contract Top 10 2026</a>
+            <a href="OWASP Smart Contract Top 10 2025.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">OWASP Smart Contract Top 10 2025</a>
+            <a href="Web3 Ecosystem.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Web3 Ecosystem</a>
+            <a href="https://credshields.com/recently-audited" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Recently audited ↗</a>
+            <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Web3HackHub ↗</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:14px 0 6px">SPECIALIZED</div>
+            <a href="Solution - AI and LLM AppSec.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">AI / LLM AppSec</a>
+            <a href="Solution - Compliance Readiness.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Compliance Readiness</a>
+            <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Smart Contract Audits ↗</a>
+          </div>
+        </div>
+      </sc-if>
+      </div>
+      <div onMouseEnter="{{ openInd }}" onMouseLeave="{{ closeMenus }}" style="position:relative;padding:22px 0">
+        <span style="color:{{ navFg }};opacity:.85;cursor:default;transition:color .3s ease">Industries</span>
+      <sc-if value="{{ indOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;top:100%;left:0;padding-top:10px">
+          <div style="background:var(--surface-page);border:1px solid var(--border-default);border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(10,26,12,.18);padding:10px 26px 22px;width:300px;column-count:1;column-gap:36px;box-sizing:border-box">
+            <a href="Industry - Finance and Fintech.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Finance &amp; Fintech</a>
+            <a href="Industry - SaaS and Enterprise.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">SaaS &amp; Enterprise</a>
+            <a href="Industry - Healthcare and Life Sciences.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Healthcare &amp; Life Sciences</a>
+            <a href="Industry - EdTech.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">EdTech</a>
+            <a href="Industry - E-commerce and Retail.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">E-commerce &amp; Retail</a>
+            <a href="Industry - Public Sector and GovTech.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Public Sector / GovTech</a>
+            <a href="Industry - Gaming and Digital Assets.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Gaming &amp; Digital Assets</a>
+          </div>
+        </div>
+      </sc-if>
+      </div>
+      <div onMouseEnter="{{ openRes }}" onMouseLeave="{{ closeMenus }}" style="position:relative;padding:22px 0">
+        <span style="color:{{ navFg }};opacity:.85;cursor:default;transition:color .3s ease">Resources</span>
+      <sc-if value="{{ resOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;top:100%;left:0;padding-top:10px">
+          <div style="background:var(--surface-page);border:1px solid var(--border-default);border-radius:var(--radius-md);box-shadow:0 24px 60px rgba(10,26,12,.18);padding:10px 26px 22px;width:300px;column-count:1;column-gap:36px;box-sizing:border-box">
+            <a href="Resources.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">All Resources</a>
+            <a href="Guide - What is PTaaS.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">What is PTaaS?</a>
+            <a href="Compliance Guides.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Compliance Guides</a>
+            <a href="Glossary.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Security Glossary</a>
+            <a href="Pentest Readiness Assessment.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Pentest Readiness Quiz</a>
+            <a href="CVE Research.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">CVE Research</a>
+            <a href="Brand Kit.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Brand Kit</a>
+            <a href="https://discover.credshields.com/" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Blog ↗</a>
+            <a href="Resource Library.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Resource Library</a>
+            <a href="Events.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">Events</a>
+            <a href="FAQ.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:7px 0;display:block" style-hover="color:var(--color-forest)">FAQ</a>
+          </div>
+        </div>
+      </sc-if>
+      </div>
+      <a href="Case Studies.html" style="color:{{ navFg }};opacity:.75;transition:color .3s ease" style-hover="opacity:1">Case Studies</a>
+      <a href="Why CredShields.html" style="color:{{ navFg }};opacity:.75;transition:color .3s ease" style-hover="opacity:1">Why Us</a>
+      <a href="About.html" style="color:{{ navFg }};opacity:.75;transition:color .3s ease" style-hover="opacity:1">Company</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a data-navdemo="" href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" style="font:500 14px var(--font-body);color:{{ navFg }};opacity:.85;white-space:nowrap;transition:color .3s ease" style-hover="opacity:1">Book a Demo</a>
+      <a data-navcta="" href="#lead-form" class="cs-btn cs-btn-lime cs-btn-sm">Get Scoped</a>
+    <button onClick="{{ toggleMobile }}" aria-label="Menu" data-navburger="" style="display:none;align-items:center;justify-content:center;background:none;border:1px solid {{ navBurgerLine }};border-radius:var(--radius-sm);width:40px;height:40px;cursor:pointer;color:{{ navFg }};padding:0;flex-shrink:0">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+    </button>
+    </div>
+    <sc-if value="{{ mobileOpen }}" hint-placeholder-val="{{ false }}">
+      <div style="position:fixed;top:70px;left:0;right:0;bottom:0;z-index:39;background:var(--surface-page);overflow-y:auto;padding:8px 28px 40px;box-sizing:border-box">
+        <div style="display:flex;flex-direction:column;max-width:520px;margin:0 auto">
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">THE PLATFORM</div>
+            <a href="CredShields Homepage.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">CredShields One</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">COMPARE</div>
+            <a href="Resources.html#compare" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">All 14 Comparisons</a>
+            <a href="Compare - CredShields vs Cobalt.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">vs Cobalt</a>
+            <a href="Compare - CredShields vs HackerOne.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">vs HackerOne</a>
+            <a href="Compare - CredShields vs Astra Security.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">vs Astra Security</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">RESOURCES</div>
+            <a href="Resources.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">All Resources</a>
+            <a href="Compliance Guides.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Compliance Guides</a>
+            <a href="Glossary.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Security Glossary</a>
+            <a href="Pentest Readiness Assessment.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Pentest Readiness Quiz</a>
+            <a href="CVE Research.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">CVE Research</a>
+            <a href="Brand Kit.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Brand Kit</a>
+            <a href="https://discover.credshields.com/" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Blog ↗</a>
+            <a href="Resource Library.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Resource Library</a>
+            <a href="Events.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Events</a>
+            <a href="FAQ.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">FAQ</a>
+          <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">SERVICES</div>
+            <a href="Services.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">All services →</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">MANUAL + AI PENTESTING</div>
+            <a href="Solution - Web App Pentesting.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Web App Pentesting</a>
+            <a href="Solution - Mobile App Pentesting.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Mobile App Pentesting</a>
+            <a href="Solution - API Security Testing.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">API Security Testing</a>
+            <a href="Solution - Cloud Security Review.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Cloud Security Review</a>
+            <a href="Solution - Red Team Engagement.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Red Team Engagement</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">CONTINUOUS &amp; TOOLING</div>
+            <a href="Solution - DevSecOps Integration.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">DevSecOps Integration</a>
+            <a href="Solution - Source Code Review and SAST.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Source Code Review &amp; SAST</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">WEB3</div>
+            <a href="Web3 Security.html" style="font:500 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Web3 Security</a>
+            <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">SolidityScan ↗</a>
+            <a href="OWASP Smart Contract Top 10 2026.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">OWASP Smart Contract Top 10 2026</a>
+            <a href="Web3 Ecosystem.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Web3 Ecosystem</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">SPECIALIZED</div>
+            <a href="Solution - AI and LLM AppSec.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">AI / LLM AppSec</a>
+            <a href="Solution - Compliance Readiness.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Compliance Readiness</a>
+            <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Smart Contract Audits ↗</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">INDUSTRIES</div>
+            <a href="Industry - Finance and Fintech.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Finance &amp; Fintech</a>
+            <a href="Industry - SaaS and Enterprise.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">SaaS &amp; Enterprise</a>
+            <a href="Industry - Healthcare and Life Sciences.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Healthcare &amp; Life Sciences</a>
+            <a href="Industry - EdTech.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">EdTech</a>
+            <a href="Industry - E-commerce and Retail.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">E-commerce &amp; Retail</a>
+            <a href="Industry - Public Sector and GovTech.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Public Sector / GovTech</a>
+            <a href="Industry - Gaming and Digital Assets.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Gaming &amp; Digital Assets</a>
+            <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;padding:16px 0 6px">COMPANY</div>
+            <a href="Case Studies.html" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Case Studies</a>
+            <a href="CredShields Homepage.html#team" style="font:400 14.5px var(--font-body);color:var(--color-ink);padding:9px 0;display:block" style-hover="color:var(--color-forest)">Company</a>
+            <a href="https://one.credshields.com/login" style="font:400 14.5px var(--font-body);color:var(--color-forest);padding:9px 0;display:block">Log in to CredShields One ↗</a>
+          <a href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" class="cs-btn cs-btn-secondary cs-btn-lg" style="justify-content:center;margin-top:20px">Book a demo ↗</a>
+          <a href="#lead-form" onClick="{{ closeMenus }}" class="cs-btn cs-btn-lime cs-btn-lg" style="justify-content:center;margin-top:10px">Get Scoped</a>
+        </div>
+      </div>
+    </sc-if>
+  </nav>
+  <section id="top" ref="{{ heroRef }}" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="assets/icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">CASE STUDY · CRYPTO MARKET MAKING AND <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="color:inherit">WEB3</a> INFRASTRUCTURE</span>
+      </div>
+      <h1 style="font:700 clamp(34px,4.4vw,58px)/1.06 var(--font-display);letter-spacing:-.03em;margin:0;color:var(--color-forest);max-width:960px;text-wrap:pretty">Ten AWS regions, one phishing campaign, no breaches</h1>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:22px 0 30px;max-width:760px;text-wrap:pretty">A dual-track engagement for a crypto market making and <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="color:inherit">Web3</a> infrastructure firm: an AWS cloud security audit across a globally distributed environment, plus a red team assessment against the internal team.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#lead-form" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="CredShields Homepage.html" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="facts" data-screen-label="Engagement" style="border-bottom:1px solid var(--border-default);">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Engagement</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">The scope, in short</h2>
+      
+      <dl style="border-top:1px solid var(--border-default);margin:0">
+        <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border-default)">
+          <dt style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;text-transform:uppercase">ENGAGEMENT TYPE</dt>
+          <dd style="font:400 15px/1.55 var(--font-body);color:var(--color-ink);margin:0">AWS cloud security audit, plus red team assessment (social engineering and phishing simulation)</dd>
+        </div>
+        <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border-default)">
+          <dt style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;text-transform:uppercase">SCOPE</dt>
+          <dd style="font:400 15px/1.55 var(--font-body);color:var(--color-ink);margin:0">Global AWS cloud infrastructure spanning 10+ regions (EU, Asia-Pacific, Americas), plus the internal team subjected to live phishing campaigns and social engineering scenarios</dd>
+        </div>
+        <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border-default)">
+          <dt style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;text-transform:uppercase">INDUSTRY</dt>
+          <dd style="font:400 15px/1.55 var(--font-body);color:var(--color-ink);margin:0">Crypto market making, <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="color:inherit">Web3</a> infrastructure</dd>
+        </div>
+        <div style="display:grid;grid-template-columns:180px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--border-default)">
+          <dt style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;text-transform:uppercase">REGULATORY CONTEXT</dt>
+          <dd style="font:400 15px/1.55 var(--font-body);color:var(--color-ink);margin:0">UK and UAE, VARA regulated</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+  <section id="stats" data-screen-label="Findings overview" style="border-bottom:1px solid var(--border-default);">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Findings overview</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Findings across two tracks</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;background:var(--surface-raised)">
+          <div data-count="" style="font:700 clamp(36px,4vw,50px) var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">1 + 3 + 4 + 3</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:10px">AWS: CRITICAL, HIGH, MEDIUM, LOW</div>
+          
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;background:var(--surface-raised)">
+          <div data-count="" style="font:700 clamp(36px,4vw,50px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">1 + 4 + 3</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:10px">RED TEAM: HIGH, MEDIUM, INFORMATIONAL</div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="risks" data-screen-label="What we found" style="border-bottom:1px solid var(--border-default);">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Key risk areas identified</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: var(--color-forest); text-wrap: pretty">What the dual-track review found</h2>
+      
+      <div style="display:flex;flex-direction:column">
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">01</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Network perimeter fully exposed: security groups allowed unrestricted access to all services and ports across the global infrastructure.</p>
+        </div>
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">02</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Audit trail blind spots: data-plane operations such as file access and serverless function invocations were not captured in activity logs.</p>
+        </div>
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">03</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Administrative server access (SSH) open to the internet without IP restriction, across multiple regions.</p>
+        </div>
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">04</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Data storage volumes not encrypted by default, with trading and operational data potentially stored in plain text.</p>
+        </div>
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">05</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Cloud configuration changes not tracked, so unauthorized infrastructure modifications could go undetected.</p>
+        </div>
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">06</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Backup snapshots left unencrypted, exposing data recovery points if storage is compromised.</p>
+        </div>
+        <div style="display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);align-items:baseline">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);flex-shrink:0">07</span>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Red team: employee susceptibility to credential phishing was tested, and MFA integrity was validated under a live simulated attack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Outcome" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px 88px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Outcome</div>
+      <div style="border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-md);padding:28px 30px;display:flex;gap:18px;align-items:flex-start;margin-top:8px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest-600)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <p style="font:500 17px/1.55 var(--font-body);color:var(--color-ink);margin:0;max-width:680px;text-wrap:pretty">The AWS audit report was delivered with several high-priority issues remediated on retest. The red team exercise blocked every attack vector: zero credentials compromised, MFA held under all test scenarios.</p>
+      </div>
+    </div>
+  </section>
+  <section id="fits" data-screen-label="Relevant for" style="border-bottom:1px solid var(--border-default);">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Relevant for</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: var(--color-forest); text-wrap: pretty">If this looks like your environment, it probably behaves like it too</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+        <div style="border:1px dashed var(--border-strong,var(--border-default));border-radius:var(--radius-md);padding:22px;background:var(--surface-raised)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px;display:block"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <p style="font:400 14.5px/1.55 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Regulated tech companies needing both cloud infrastructure review and employee phishing validation.</p>
+        </div>
+        <div style="border:1px dashed var(--border-strong,var(--border-default));border-radius:var(--radius-md);padding:22px;background:var(--surface-raised)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px;display:block"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <p style="font:400 14.5px/1.55 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Organizations with globally distributed AWS infrastructure.</p>
+        </div>
+        <div style="border:1px dashed var(--border-strong,var(--border-default));border-radius:var(--radius-md);padding:22px;background:var(--surface-raised)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px;display:block"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <p style="font:400 14.5px/1.55 var(--font-body);color:var(--color-ink);margin:0;text-wrap:pretty">Firms in VARA, FCA, or MAS regulated environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ FAQ</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: var(--color-forest); text-wrap: pretty">Questions engagements like this raise</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Why review infrastructure and people in the same engagement?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A globally distributed, regulated firm faces both risks at once. Testing them together produces one coherent picture of exposure instead of two disconnected reports.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Why is missing data-plane logging a significant finding on its own?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Without it, a successful intrusion into storage or serverless functions may leave no trace, which means detection and incident response depend entirely on controls that were never tested until this audit.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">What does "MFA held under all test scenarios" mean in practice?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Every simulated phishing attempt aimed at obtaining credentials or session access was defeated by multi-factor authentication, even where a credential itself may have been at risk.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">How does this map to VARA or similar regulatory expectations?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Regulators in these regimes increasingly expect evidence of both technical infrastructure controls and human-layer resilience testing, which is exactly what the two tracks of this engagement produced.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="More case studies" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,80px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ More case studies</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Other engagements</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+        <a href="Case Study - Custody Security Simulation.html" style="display:flex;flex-direction:column;gap:9px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px;color:inherit;transition:border-color .2s ease,background .2s ease" style-hover="border-color:var(--color-forest);background:var(--surface-sunken)">
+          <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">Red team</span>
+          <h3 style="font:600 16px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Cross-border payments custody</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">5 attack scenarios, all blocked by existing controls.</p>
+          <span style="font:500 12px var(--font-body);color:var(--color-forest);margin-top:4px">Read →</span>
+        </a>
+        <a href="Case Study - DeFi Lending Platform.html" style="display:flex;flex-direction:column;gap:9px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px;color:inherit;transition:border-color .2s ease,background .2s ease" style-hover="border-color:var(--color-forest);background:var(--surface-sunken)">
+          <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">Dual track</span>
+          <h3 style="font:600 16px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">DeFi private credit platform</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">35 findings across web, API, and AWS, pre-launch.</p>
+          <span style="font:500 12px var(--font-body);color:var(--color-forest);margin-top:4px">Read →</span>
+        </a>
+        <a href="Case Study - Enterprise Mobile and Web Security Program.html" style="display:flex;flex-direction:column;gap:9px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px;color:inherit;transition:border-color .2s ease,background .2s ease" style-hover="border-color:var(--color-forest);background:var(--surface-sunken)">
+          <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">Mobile</span>
+          <h3 style="font:600 16px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Consumer electronics brand</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">14 products: 11 mobile apps and 3 backend systems.</p>
+          <span style="font:500 12px var(--font-body);color:var(--color-forest);margin-top:4px">Read →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="cta" data-screen-label="Get scoped" style="background:var(--surface-deep)">
+    <div id="lead-form" data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px;display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start;justify-content:space-between">
+      <div style="flex:1 1 380px;max-width:480px">
+        <div style="font:500 12px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px">/ Get started</div>
+        <h2 style="font:600 clamp(30px,3.4vw,44px)/1.1 var(--font-display);letter-spacing:-.025em;margin:0 0 18px;color:var(--text-on-deep-primary);text-wrap:balance">Start with a scoped assessment</h2>
+        <p style="font:400 17px/1.6 var(--font-body);color:var(--text-on-deep-tertiary);margin:0 0 28px;max-width:460px;text-wrap:pretty">Tell us what you are securing. We reply with scope and next steps within one business day.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;font:400 14.5px/1.5 var(--font-body);color:var(--text-on-deep-secondary)">
+          <span style="display:flex;align-items:baseline;gap:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Scoping within a day, findings within the first week</span>
+          <span style="display:flex;align-items:baseline;gap:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>A senior pentester on every engagement</span>
+          <span style="display:flex;align-items:baseline;gap:10px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Scope and pricing before you commit</span>
+        </div>
+        <p style="font:400 13px/1.5 var(--font-body);color:var(--text-on-deep-tertiary);margin:24px 0 0">Prefer to see it first? <a href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" style="color:#A8FF45;font-weight:500">Book a demo ↗</a></p>
+        <p style="font:400 13px/1.5 var(--font-body);color:var(--text-on-deep-muted);margin:10px 0 0">Already a CredShields One customer? <a href="https://one.credshields.com/login" style="color:#A8FF45;font-weight:500">Log in ↗</a></p>
+      </div>
+      <form onSubmit="{{ submitLead }}" style="flex:1 1 420px;max-width:520px;background:var(--surface-page);border-radius:var(--radius-md);padding:32px;display:flex;flex-direction:column;gap:16px;box-sizing:border-box">
+        <sc-if value="{{ leadSent }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:10px;padding:24px 0;text-align:center">
+            <span style="font:600 22px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">Request received</span>
+            <span style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary)">We respond within one business day. For urgent requests, email info@credshields.com.</span>
+          </div>
+        </sc-if>
+        <sc-if value="{{ leadNotSent }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px">
+            <label style="display:flex;flex-direction:column;gap:7px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">NAME <span style="color:var(--color-forest)">*</span>
+              <input name="name" required="required" placeholder="Jane Doe" style="padding:14px 16px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-page);font:400 15px var(--font-body);color:var(--color-ink);width:100%;outline:none;box-sizing:border-box" style-focus="border-color:var(--color-forest)">
+            </label>
+            <label style="display:flex;flex-direction:column;gap:7px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">WORK EMAIL <span style="color:var(--color-forest)">*</span>
+              <input name="email" type="email" required="required" placeholder="jane@company.com" style="padding:14px 16px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-page);font:400 15px var(--font-body);color:var(--color-ink);width:100%;outline:none;box-sizing:border-box" style-focus="border-color:var(--color-forest)">
+            </label>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px">
+            <label style="display:flex;flex-direction:column;gap:7px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">COMPANY <span style="color:var(--color-forest)">*</span>
+              <input name="company" required="required" placeholder="Company name" style="padding:14px 16px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-page);font:400 15px var(--font-body);color:var(--color-ink);width:100%;outline:none;box-sizing:border-box" style-focus="border-color:var(--color-forest)">
+            </label>
+            <label style="display:flex;flex-direction:column;gap:7px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">YOUR ROLE <span style="color:var(--color-forest)">*</span>
+              <select name="role" required="required" style="padding:14px 16px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-page);font:400 15px var(--font-body);color:var(--color-ink);width:100%;outline:none;box-sizing:border-box" style-focus="border-color:var(--color-forest)">
+                <option value="">Choose…</option>
+                <option>Founder / CEO</option>
+                <option>CTO / VP Engineering</option>
+                <option>DevOps / Platform</option>
+                <option>CISO / Security lead</option>
+                <option>Compliance / GRC</option>
+                <option>Engineer</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:7px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">WHAT DO YOU WANT PENTESTED? <span style="color:var(--color-forest)">*</span>
+            <select name="target" required="required" style="padding:14px 16px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-page);font:400 15px var(--font-body);color:var(--color-ink);width:100%;outline:none;box-sizing:border-box" style-focus="border-color:var(--color-forest)">
+              <option value="">Choose…</option>
+              <option>Web Application</option>
+              <option>Mobile App (iOS / Android)</option>
+              <option>API</option>
+              <option>Smart Contract</option>
+              <option>Cloud Infrastructure</option>
+              <option>Multiple / Not sure yet</option>
+            </select>
+          </label>
+          <label style="display:flex;flex-direction:column;gap:7px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">ANYTHING ELSE WE SHOULD KNOW?
+            <textarea name="context" rows="4" placeholder="Stack, release cadence, compliance needs, timeline…" style="padding:14px 16px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-page);font:400 15px var(--font-body);color:var(--color-ink);width:100%;outline:none;box-sizing:border-box;line-height:1.5;resize:vertical"></textarea>
+          </label>
+          <button type="submit" class="cs-btn cs-btn-lime cs-btn-lg" style="width:100%;justify-content:center">Send request →</button>
+          <span style="font:400 12px/1.5 var(--font-body);color:var(--text-secondary);text-align:center">We respond within one business day.</span>
+          <div style="display:flex;align-items:center;gap:12px"><span style="height:1px;background:var(--border-default);flex:1"></span><span style="font:400 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.1em">OR</span><span style="height:1px;background:var(--border-default);flex:1"></span></div>
+          <a href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" class="cs-btn cs-btn-secondary cs-btn-lg" style="width:100%;justify-content:center;box-sizing:border-box">Book a demo ↗</a>
+        </sc-if>
+      </form>
+    </div>
+  </section>
+  <footer data-screen-label="Footer" style="background:var(--color-ink);color:var(--text-on-deep-secondary)">
+    <div style="max-width:1180px;margin:0 auto;padding:64px 28px 40px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(244,248,244,.12)">
+        <div>
+          <img src="assets/logo-full-white-trim.png" alt="CredShields" style="height:56px;width:141px;display:block;margin-bottom:14px">
+          <p style="font:400 13px/1.6 var(--font-body);color:rgba(244,248,244,.6);margin:0;max-width:240px;text-wrap:pretty">A full-scope cybersecurity company providing AI-powered penetration testing and manual VAPT services across web, mobile, cloud, APIs, and smart contracts.</p>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:rgba(244,248,244,.45);letter-spacing:.16em;margin-bottom:14px">SOLUTIONS</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font:400 13.5px var(--font-body)">
+            <a href="CredShields Homepage.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">CredShields One</a>
+            <a href="Solution - Web App Pentesting.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Web App Pentesting</a>
+            <a href="Solution - Mobile App Pentesting.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Mobile App Pentesting</a>
+            <a href="Solution - API Security Testing.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">API Security Testing</a>
+            <a href="Solution - Cloud Security Review.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Cloud Security Review</a>
+            <a href="Solution - Red Team Engagement.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Red Team Engagement</a>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:rgba(244,248,244,.45);letter-spacing:.16em;margin-bottom:14px">MORE SOLUTIONS</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font:400 13.5px var(--font-body)">
+            <a href="Solution - DevSecOps Integration.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">DevSecOps Integration</a>
+            <a href="Solution - Source Code Review and SAST.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Source Code Review &amp; SAST</a>
+            <a href="Solution - AI and LLM AppSec.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">AI / LLM AppSec</a>
+            <a href="Solution - Compliance Readiness.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Compliance Readiness</a>
+            <a href="Web3 Security.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Web3 Security</a>
+            <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">SolidityScan ↗</a>
+            <a href="OWASP Smart Contract Top 10 2026.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">OWASP Smart Contract Top 10</a>
+            <a href="Web3 Ecosystem.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Web3 Ecosystem</a>
+            <a href="https://credshields.com/recently-audited" target="_blank" rel="noopener" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Recently Audited ↗</a>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:rgba(244,248,244,.45);letter-spacing:.16em;margin-bottom:14px">INDUSTRIES</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font:400 13.5px var(--font-body)">
+            <a href="Industry - Finance and Fintech.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Finance &amp; Fintech</a>
+            <a href="Industry - SaaS and Enterprise.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">SaaS &amp; Enterprise</a>
+            <a href="Industry - Healthcare and Life Sciences.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Healthcare &amp; Life Sciences</a>
+            <a href="Industry - EdTech.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">EdTech</a>
+            <a href="Industry - E-commerce and Retail.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">E-commerce &amp; Retail</a>
+            <a href="Industry - Public Sector and GovTech.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Public Sector / GovTech</a>
+            <a href="Industry - Gaming and Digital Assets.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Gaming &amp; Digital Assets</a>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:rgba(244,248,244,.45);letter-spacing:.16em;margin-bottom:14px">COMPANY</div>
+          <div style="display:flex;flex-direction:column;gap:9px;font:400 13.5px var(--font-body)">
+            <a href="Why CredShields.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Why Us</a>
+            <a href="About.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">About</a>
+            <a href="Careers.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Careers</a>
+            <a href="Contact.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Contact</a>
+            <a href="Security.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Security</a>
+            <a href="#lead-form" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Newsletter</a>
+            <a href="https://discover.credshields.com/" target="_blank" rel="noopener" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Blog ↗</a>
+            <a href="Resource Library.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Resource Library</a>
+            <a href="Events.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Events</a>
+            <a href="FAQ.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">FAQ</a>
+            <a href="CVE Research.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">CVE Research</a>
+            <a href="Resources.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">All Resources</a>
+            <a href="Glossary.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Security Glossary</a>
+            <a href="Compliance Guides.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Compliance Guides</a>
+            <a href="Brand Kit.html" style="color:rgba(244,248,244,.75)" style-hover="color:#A8FF45">Brand Kit</a>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 0;border-top:1px solid rgba(244,248,244,.12)">
+        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <span style="display:flex;gap:3px;align-items:center"><svg width="15" height="15" viewBox="0 0 24 24" fill="#00B67A" style="display:block;flex-shrink:0"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#00B67A" style="display:block;flex-shrink:0"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#00B67A" style="display:block;flex-shrink:0"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="#00B67A" style="display:block;flex-shrink:0"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="rgba(0,182,122,.45)" style="display:block;flex-shrink:0"><path d="M12 2l2.9 6.6 7.1.7-5.3 4.8 1.5 7-6.2-3.6L5.8 21l1.5-7L2 9.3l7.1-.7z"></path></svg></span>
+          <span style="font:500 13px var(--font-body);color:rgba(244,248,244,.9)"><strong style="font-weight:700">4.8</strong> out of 5</span>
+          <span style="font:400 12px var(--font-mono);color:rgba(244,248,244,.5);letter-spacing:.06em">BASED ON 60+ REVIEWS · TRUSTPILOT</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <a href="https://www.trustpilot.com/review/credshields.com" target="_blank" rel="noopener" style="font:500 12.5px var(--font-body);color:#A8FF45">Read our reviews ↗</a>
+          <a href="https://www.trustpilot.com/evaluate/credshields.com" target="_blank" rel="noopener" style="font:500 12.5px var(--font-body);color:var(--color-ink);background:#A8FF45;border-radius:var(--radius-pill);padding:8px 16px;white-space:nowrap">Rate Us</a>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:24px">
+        <span style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(168,255,69,.3);border-radius:var(--radius-pill);padding:6px 14px;font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.16em"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 TYPE II CERTIFIED</span>
+        </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:24px">
+        <span style="font:400 12px var(--font-body);color:rgba(244,248,244,.5)">© 2026 Credshields Technologies Pte. Ltd · Singapore · Bangalore · info@credshields.com</span>
+        <div style="display:flex;gap:20px;font:400 12px var(--font-body)">
+          <a href="Privacy.html" style="color:rgba(244,248,244,.6)" style-hover="color:#A8FF45">Privacy</a>
+          <a href="Terms.html" style="color:rgba(244,248,244,.6)" style-hover="color:#A8FF45">Terms</a>
+          <a href="Security.html" style="color:rgba(244,248,244,.6)" style-hover="color:#A8FF45">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { light: false, leadSent: false, menu: null };
+  rootRef = React.createRef();
+  heroRef = React.createRef();
+  componentDidMount() {
+    this._onScroll = () => {
+      const h = this.heroRef.current ? this.heroRef.current.offsetHeight : 520;
+      const light = window.scrollY > h - 70;
+      if (light !== this.state.light) this.setState({ light });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      this._io = new IntersectionObserver((es) => {
+        for (const e of es) if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; this._io.unobserve(e.target); }
+      }, { threshold: 0.06 });
+      for (const el of (this.rootRef.current || document).querySelectorAll('[data-reveal]')) {
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) continue;
+        el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+        el.style.transition = 'opacity 600ms ease, transform 600ms ease';
+        this._io.observe(el);
+      }
+    }
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); if (this._io) this._io.disconnect(); }
+  renderVals() {
+    const light = this.state.light;
+    return {
+      rootRef: this.rootRef, heroRef: this.heroRef,
+      navBg: light ? 'rgba(244,248,244,.96)' : 'rgba(244,248,244,0)',
+      navFg: '#0A1A0C',
+      navLine: light ? 'rgba(10,26,12,.12)' : 'transparent',
+      navLogoFilter: 'invert(1)',
+      solOpen: this.state.menu === 'sol',
+      indOpen: this.state.menu === 'ind',
+      openSol: () => this.setState({ menu: 'sol' }),
+      openInd: () => this.setState({ menu: 'ind' }),
+      svcOpen: this.state.menu === 'svc',
+      openSvc: () => this.setState({ menu: 'svc' }),
+      resOpen: this.state.menu === 'res',
+      openRes: () => this.setState({ menu: 'res' }),
+      closeMenus: () => this.setState({ menu: null }),
+      mobileOpen: this.state.menu === 'mobile',
+      navBurgerLine: 'rgba(10,26,12,.2)',
+      toggleMobile: () => this.setState((s) => ({ menu: s.menu === 'mobile' ? null : 'mobile' })),
+      leadSent: this.state.leadSent,
+      leadNotSent: !this.state.leadSent,
+      submitLead: (e) => { e.preventDefault(); this.setState({ leadSent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
