@@ -2401,7 +2401,7 @@
           >
             Book a Demo
           </a>
-          <a class="btn-primary" href="index.html#contact">Get Scoped</a>
+          <a class="btn-primary" href="#contact">Get Scoped</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -2744,7 +2744,7 @@
         </a>
         <a
           class="btn-primary-lg"
-          href="index.html#contact"
+          href="#contact"
           style="width: 100%; text-align: center"
         >
           Get Scoped
@@ -2760,20 +2760,39 @@
     </div>
 
     <main class="case-studies-main">
-      <section class="case-studies-hero" aria-labelledby="case-studies-title">
+      <section
+        id="top"
+        class="case-studies-hero"
+        aria-labelledby="case-studies-title"
+      >
+        <img
+          class="case-studies-hero-mark"
+          src="images/icon-black.png"
+          alt=""
+          aria-hidden="true"
+        />
         <div class="case-studies-inner">
           <div class="case-studies-badge">CASE STUDIES</div>
-          <h1 class="continuous-appsec-page-title" id="case-studies-title">The work, without the names</h1>
-          <p class="continuous-appsec-page-lede">Details from real engagements across fintech, DeFi, Web3, and SaaS: scope, findings, and outcomes in full.</p>
+          <h1 class="continuous-appsec-page-title" id="case-studies-title">
+            The work, experience and learnings
+          </h1>
+          <p class="continuous-appsec-page-lede">
+            Details from our engagements across cloud, application, fintech,
+            DeFi, Web3, SaaS and morescope, with findings, and outcomes.
+          </p>
           <div class="case-studies-actions">
-            <button class="btn-primary-lg" type="button" data-contact-form>Start a Pentest</button>
-            <a class="btn-secondary-lg" href="sample-report.html">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              View Sample Report
+            <a
+              class="case-studies-action case-studies-action--primary"
+              href="#contact"
+              >Get Scoped</a
+            >
+            <a
+              class="case-studies-action case-studies-action--secondary"
+              href="https://app.credshields.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See CredShields One
             </a>
           </div>
           <div class="case-studies-tags" aria-label="Case study industries">
@@ -2895,56 +2914,117 @@
       </section>
     </main>
 
-    <div class="cta-block">
-      <div class="cta-glow" aria-hidden="true"></div>
-      <div class="cta-inner">
-        <div class="show-apps">
-          <div class="cta-eyebrow">
-            <svg width="14" height="16" viewBox="0 0 32 36" fill="none" aria-hidden="true">
-              <path d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z" fill="#A8FF45"></path>
-              <path d="M11 17.5L14.5 21L21 14" stroke="#0A1A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-            Start here
-          </div>
-          <h2 class="cta-title">Think like them.<br />Before they do</h2>
-          <p class="cta-body">Book a 30-minute walkthrough. We'll point CredShields at a scoped asset and show you live findings by the end of the call.</p>
+    <section
+      id="contact"
+      class="rehaul-get-started show-apps"
+      aria-labelledby="rehaul-get-started-title"
+    >
+      <div class="rehaul-get-started-inner">
+        <div class="rehaul-get-started-copy">
+          <div class="rehaul-section-kicker">/ Get started</div>
+          <h2 id="rehaul-get-started-title">Start with a scoped assessment</h2>
+          <p>
+            Tell us what you are securing. We reply with scope and next steps
+            within one business day.
+          </p>
+
+          <ul class="rehaul-get-started-benefits">
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Scoping within a day, findings within the first week
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              A senior pentester on every engagement
+            </li>
+            <li>
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Scope and pricing before you commit
+            </li>
+          </ul>
+
+          <p class="rehaul-get-started-link">
+            Prefer to see it first?
+            <a href="https://calendly.com/koda-credshields/30min" data-book-security
+              >Book a Demo ↗</a
+            >
+          </p>
+          <p class="rehaul-get-started-login">
+            Already a CredShields One customer?
+            <a href="https://one.credshields.com">Log in ↗</a>
+          </p>
         </div>
 
-        <div class="show-chain">
-          <div class="cta-eyebrow">
-            <svg width="14" height="16" viewBox="0 0 32 36" fill="none" aria-hidden="true">
-              <path d="M16 2L29 7.5V17C29 25 23 31.5 16 34C9 31.5 3 25 3 17V7.5L16 2Z" fill="#A8FF45"></path>
-              <path d="M11 17.5L14.5 21L21 14" stroke="#0A1A0C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-            Secure your protocol today
+        <form class="rehaul-lead-form" data-rehaul-lead-form>
+          <div
+            class="rehaul-form-status"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <div class="rehaul-form-row">
+            <label>
+              <span>NAME <b>*</b></span>
+              <input name="name" required placeholder="Jane Doe" />
+            </label>
+            <label>
+              <span>WORK EMAIL <b>*</b></span>
+              <input name="email" type="email" required autocomplete="email" placeholder="jane@company.com" />
+            </label>
           </div>
-          <h2 class="cta-title">Don't wait for a<br />security <em>incident</em>.</h2>
-          <p class="cta-body">Get your comprehensive security audit from the team trusted by 200+ protocols and enterprises worldwide. Fast turnaround. Proven track record. Direct access to senior security engineers.</p>
-        </div>
 
-        <div class="cta-btns">
-          <button class="btn-cta-primary show-apps" type="button" data-contact-form>Start a Pentest →</button>
-          <a class="btn-cta-ghost show-apps" href="https://calendly.com/koda-credshields/30min" data-book-security>Talk to an Expert ↗</a>
-          <button class="btn-cta-primary show-chain" type="button" data-contact-form>Request Manual Audit →</button>
-          <a class="btn-cta-ghost show-chain" href="https://calendly.com/koda-credshields/30min" data-book-security>Book Security Review ↗</a>
-        </div>
+          <div class="rehaul-form-row">
+            <label>
+              <span>COMPANY <b>*</b></span>
+              <input name="company" required autocomplete="organization" placeholder="Company name" />
+            </label>
+            <label>
+              <span>YOUR ROLE <b>*</b></span>
+              <select name="role" required>
+                <option value="">Choose…</option>
+                <option>Founder / CEO</option>
+                <option>CTO / VP Engineering</option>
+                <option>DevOps / Platform</option>
+                <option>CISO / Security lead</option>
+                <option>Compliance / GRC</option>
+                <option>Engineer</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
 
-        <div class="cta-trust">
-          <div>
-            <div class="cta-trust-item-title">Fixed-Fee Pricing</div>
-            <div class="cta-trust-item-sub">No engineer-hour billing</div>
-          </div>
-          <div>
-            <div class="cta-trust-item-title">Audit-Ready by Default</div>
-            <div class="cta-trust-item-sub">SOC 2, ISO, PCI, HIPAA</div>
-          </div>
-          <div>
-            <div class="cta-trust-item-title">Engineer-Validated</div>
-            <div class="cta-trust-item-sub">Not scanner output</div>
-          </div>
-        </div>
+          <label>
+            <span>WHAT DO YOU WANT PENTESTED? <b>*</b></span>
+            <select name="target" required>
+              <option value="">Choose…</option>
+              <option>Web Application</option>
+              <option>Mobile App (iOS / Android)</option>
+              <option>API</option>
+              <option>Smart Contract</option>
+              <option>Cloud Infrastructure</option>
+              <option>Multiple / Not sure yet</option>
+            </select>
+          </label>
+
+          <label>
+            <span>ANYTHING ELSE WE SHOULD KNOW?</span>
+            <textarea name="context" rows="4" placeholder="Stack, release cadence, compliance needs, timeline…"></textarea>
+          </label>
+
+          <button class="rehaul-form-submit" type="submit">Send request →</button>
+          <small>We respond within one business day.</small>
+          <div class="rehaul-form-divider"><span>OR</span></div>
+          <a class="rehaul-form-demo" href="https://calendly.com/koda-credshields/30min" data-book-security
+            >Book a Demo ↗</a
+          >
+        </form>
       </div>
-    </div>
+    </section>
 
     <!-- ═══════════════════════════════════════════════════════════
      FOOTER
@@ -3259,5 +3339,6 @@
     </script>
     <!-- Main JS -->
     <script src="js/main.v1.js"></script>
+    <script src="js/homepage-rehaul.js"></script>
   </body>
 </html>
