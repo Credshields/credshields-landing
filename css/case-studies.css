@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+:root {
+  --font-display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", system-ui, sans-serif;
+  --font-body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  --font-sans: var(--font-body);
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
 .case-studies-main {
   --cs-page: #f4f8f4;
   --cs-raised: #ffffff;
@@ -8,6 +19,76 @@
   --cs-border: rgba(10, 26, 12, 0.14);
   background: var(--cs-page);
   color: var(--cs-ink);
+}
+
+.nav-wrap .nav-actions .btn-nav-demo {
+  padding: 9px 17px;
+  border: 0;
+  background: transparent;
+  color: var(--fg-2);
+  font: 500 14px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  white-space: nowrap;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.nav-wrap .nav-link {
+  font: 500 14px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.nav-wrap .nav-dropdown-item,
+.nav-wrap .nav-dropdown-flagship-row {
+  font: 400 14.5px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.nav-wrap .nav-dropdown-flagship-row {
+  font-weight: 500;
+}
+
+.nav-wrap .nav-dropdown-section-title,
+.mobile-overlay .nav-dropdown-section-title {
+  font-family: var(--font-mono);
+}
+
+.nav-wrap .nav-actions .btn-primary {
+  font: 600 13px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.mobile-overlay .mobile-nav-link {
+  font: 500 14.5px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.mobile-overlay .mobile-sub-link {
+  font: 400 14.5px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  letter-spacing: 0;
+}
+
+.nav-wrap .nav-actions .btn-nav-demo:hover {
+  background: rgba(10, 26, 12, 0.06);
+  color: var(--fg);
+  transform: translateY(-1px);
+}
+
+.mobile-overlay-cta .btn-mobile-demo {
+  border: 0;
+}
+
+@media (max-width: 960px) {
+  .nav-actions > .btn-nav-demo {
+    display: none;
+  }
 }
 
 .cs-contact-backdrop {
@@ -29,22 +110,26 @@
 }
 
 .continuous-appsec-page-title {
-  margin-bottom: 18px;
-  color: var(--fg);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: clamp(30px, 4vw, 46px);
+  max-width: 960px;
+  margin: 0;
+  color: var(--cs-forest);
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.4vw, 58px);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.06;
   letter-spacing: -0.03em;
+  text-wrap: pretty;
 }
 
 .continuous-appsec-page-lede {
-  max-width: 560px;
-  margin-bottom: 28px;
-  color: var(--fg-2);
-  font-family: var(--font-sans);
-  font-size: 17px;
-  line-height: 1.75;
+  max-width: 760px;
+  margin: 22px 0 30px;
+  color: var(--cs-muted);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  text-wrap: pretty;
 }
 
 .case-studies-badge {
@@ -59,7 +144,7 @@
   color: var(--cs-green);
   font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.18em;
 }
 
@@ -101,6 +186,7 @@
   color: var(--cs-muted);
   font-family: var(--font-mono);
   font-size: 11px;
+  font-weight: 400;
   letter-spacing: 0.1em;
 }
 
@@ -114,7 +200,7 @@
   color: var(--cs-green);
   font-family: var(--font-mono);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -122,8 +208,8 @@
 .case-studies-heading {
   margin: 0 0 28px;
   color: var(--cs-forest);
-  font-family: var(--font-sans);
-  font-size: clamp(34px, 4vw, 52px);
+  font-family: var(--font-display);
+  font-size: clamp(30px, calc(20.8px + 2.8vw), 52px);
   font-weight: 600;
   line-height: 1.08;
   letter-spacing: -0.025em;
@@ -135,16 +221,16 @@
 }
 
 .case-studies-filter {
-  padding: 9px 16px;
+  padding: 8px 16px;
   border: 1px solid var(--cs-border);
   border-radius: 999px;
   background: var(--cs-page);
   color: var(--cs-ink);
   cursor: pointer;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
@@ -195,15 +281,15 @@
   color: var(--cs-green);
   font-family: var(--font-mono);
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.12em;
 }
 
 .case-study-card h3 {
   margin: 0;
   color: var(--cs-ink);
-  font-family: var(--font-sans);
-  font-size: 21px;
+  font-family: var(--font-display);
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.015em;
@@ -213,7 +299,9 @@
 .case-study-card p {
   margin: 0;
   color: var(--cs-muted);
+  font-family: var(--font-body);
   font-size: 14.5px;
+  font-weight: 400;
   line-height: 1.6;
   text-wrap: pretty;
 }
@@ -222,8 +310,34 @@
   margin-top: auto;
   padding-top: 8px;
   color: var(--cs-green);
+  font-family: var(--font-body);
   font-size: 13px;
+  font-weight: 500;
+}
+
+.case-studies-actions .btn-primary-lg,
+.case-studies-actions .btn-secondary-lg {
+  font-family: var(--font-body);
+  font-size: 16px;
   font-weight: 600;
+}
+
+.mobile-overlay-cta .btn-primary-lg,
+.mobile-overlay-cta .btn-secondary-lg {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cta-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.cta-body,
+.btn-cta-primary,
+.btn-cta-ghost {
+  font-family: var(--font-body);
 }
 
 @media (max-width: 960px) {
