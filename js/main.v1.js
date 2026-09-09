@@ -359,6 +359,7 @@
     });
     closeBtn && closeBtn.addEventListener('click', closeMobileNav);
     overlay.addEventListener('click', function (e) {
+      if (e.target.closest('a[href]')) closeMobileNav();
       if (e.target === overlay) closeMobileNav();
     });
   }

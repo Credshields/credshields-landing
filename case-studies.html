@@ -2079,54 +2079,6 @@
       ></iframe
     ></noscript>
     <!-- ═══════════════════════════════════════════════════════════
-     ALERT BAR
-════════════════════════════════════════════════════════════ -->
-    <div class="alert-bar" id="alert-banner" role="banner">
-      <div class="alert-dot"></div>
-      <span class="alert-text">
-        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR TEXT ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-        <span class="alert-chain"
-          >OWASP® Smart Contract Top 10 (2026) Now Live. A Baseline for Smart
-          Contract Security.</span
-        >
-        <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-        <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR TEXT ░░░░░░░░░░░░░ -->
-        <span class="alert-apps"
-          >Industry Security Report 2026 Now Live. AI-led Pentesting
-          Benchmark.</span
-        >
-        <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
-      </span>
-      <span class="alert-sub">Learn more about our findings.</span>
-      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ ⛓ CHAIN MODE - ALERT BAR LINK ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-      <a
-        href="owasp-smart-contract-top-10-2026.html"
-        class="alert-link alert-chain"
-        >Explore →</a
-      >
-      <!-- ▓▓▓▓▓▓▓▓▓▓▓▓▓ / END CHAIN MODE ▓▓▓▓▓▓▓▓▓▓▓▓▓ -->
-      <!-- ░░░░░░░░░░░░░ 📱 APPS MODE - ALERT BAR LINK ░░░░░░░░░░░░░ -->
-      <a href="sample-report.html" class="alert-link alert-apps"
-        >Read Report →</a
-      >
-      <!-- ░░░░░░░░░░░░░ / END APPS MODE ░░░░░░░░░░░░░ -->
-      <button
-        id="close-banner"
-        style="
-          margin-left: 16px;
-          background: none;
-          border: none;
-          color: rgba(255, 255, 255, 0.4);
-          font-size: 16px;
-          cursor: pointer;
-          line-height: 1;
-        "
-        aria-label="Close banner"
-      >
-        ✕
-      </button>
-    </div>
-    <!-- ═══════════════════════════════════════════════════════════
      NAVIGATION
 ════════════════════════════════════════════════════════════ -->
     <div class="nav-wrap">
@@ -2169,78 +2121,6 @@
               <path d="M6 9l6 6 6-6" />
             </svg>
             <div class="nav-dropdown-menu nav-dropdown-wide">
-              <!-- ⛓ Chain-only solutions -->
-              <a
-                href="smart-contract-audits.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Smart Contract Audits</a
-              >
-              <a
-                href="dapp-protocol-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >DApp &amp; Protocol Security</a
-              >
-              <a
-                href="enterprise-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Enterprise Web &amp; Mobile Security</a
-              >
-              <a
-                href="penetration-testing.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Penetration Testing</a
-              >
-              <a
-                href="blockchain-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Blockchain Security</a
-              >
-              <a
-                href="cloud-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Cloud Infrastructure</a
-              >
-              <a
-                href="wallet-security.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Wallet Security</a
-              >
-              <a
-                href="continuous-monitoring.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Continuous Monitoring</a
-              >
-              <a
-                href="incident-response.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Incident Response</a
-              >
-              <a
-                href="security-training.html"
-                class="nav-dropdown-item nav-chain-only"
-                >Security Training</a
-              >
-              <a
-                href="ai-security-tools.html"
-                class="nav-dropdown-item nav-chain-only"
-                >AI Security Tools</a
-              >
-              <div class="nav-dropdown-divider nav-chain-only"></div>
-              <a
-                href="https://solidityscan.com/"
-                class="nav-dropdown-item nav-chain-only"
-                target="_blank"
-                rel="noopener noreferrer"
-                >SolidityScan ↗</a
-              >
-              <a
-                href="https://rustscan.com/"
-                class="nav-dropdown-item nav-chain-only"
-                target="_blank"
-                rel="noopener noreferrer"
-                >RustScan ↗</a
-              >
-
               <!-- 📱 Apps-only solutions (from apps_site, grouped) -->
               <div class="nav-dropdown-section-title nav-apps-only">
                 Flagship
@@ -2288,6 +2168,37 @@
                 >Source Code Review &amp; SAST</a
               >
 
+              <div class="nav-dropdown-section-title">Web3</div>
+              <a href="smart-contract-audits.html" class="nav-dropdown-item"
+                >Smart Contract Audits</a
+              >
+              <a href="dapp-protocol-security.html" class="nav-dropdown-item"
+                >DApp &amp; Protocol Security</a
+              >
+              <a href="blockchain-security.html" class="nav-dropdown-item"
+                >Blockchain Security</a
+              >
+              <a href="wallet-security.html" class="nav-dropdown-item"
+                >Wallet Security</a
+              >
+              <a href="continuous-monitoring.html" class="nav-dropdown-item"
+                >Continuous Monitoring</a
+              >
+              <a
+                href="https://solidityscan.com/"
+                class="nav-dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SolidityScan ↗</a
+              >
+              <a
+                href="https://rustscan.com/"
+                class="nav-dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RustScan ↗</a
+              >
+
               <div class="nav-dropdown-section-title nav-apps-only">
                 Specialized
               </div>
@@ -2300,24 +2211,6 @@
                 >Compliance Readiness</a
               >
 
-              <div class="nav-dropdown-section-title nav-apps-only">
-                Resources
-              </div>
-              <a
-                href="sample-report.html"
-                class="nav-dropdown-item nav-apps-only"
-                >Sample Pentest Report</a
-              >
-              <a
-                href="appsec-maturity.html"
-                class="nav-dropdown-item nav-apps-only"
-                >AppSec Maturity Model</a
-              >
-              <a
-                href="pentest-vs-scan.html"
-                class="nav-dropdown-item nav-apps-only"
-                >Pentest vs Vuln Scan</a
-              >
             </div>
           </div>
 
@@ -2423,6 +2316,16 @@
               <a href="ecosystem.html" class="nav-dropdown-item nav-chain-only"
                 >Ecosystem</a
               >
+              <a
+                href="owasp-smart-contract-top-10-2025.html"
+                class="nav-dropdown-item nav-chain-only"
+                >OWASP Smart Contract Top 10 (2025)</a
+              >
+              <a
+                href="owasp-smart-contract-top-10-2026.html"
+                class="nav-dropdown-item nav-chain-only"
+                >OWASP Smart Contract Top 10 (2026)</a
+              >
               <!-- 📱 Apps-only resources (from apps_site) -->
               <a
                 href="sample-report.html"
@@ -2433,6 +2336,11 @@
                 href="appsec-maturity.html"
                 class="nav-dropdown-item nav-apps-only"
                 >AppSec Maturity Model</a
+              >
+              <a
+                href="pentest-vs-scan.html"
+                class="nav-dropdown-item nav-apps-only"
+                >Pentest vs Vuln Scan</a
               >
 
               <!-- ✅ Shared -->
@@ -2481,59 +2389,19 @@
             </div>
           </div>
 
-          <!-- OWASP Top 10 - Chain only -->
-          <div class="nav-link nav-dropdown nav-chain-only">
-            <span>OWASP Top 10</span>
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.5"
-            >
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-            <div class="nav-dropdown-menu">
-              <a
-                href="owasp-smart-contract-top-10-2025.html"
-                class="nav-dropdown-item"
-                >2025</a
-              >
-              <a
-                href="owasp-smart-contract-top-10-2026.html"
-                class="nav-dropdown-item"
-                >2026</a
-              >
-            </div>
-          </div>
         </nav>
 
         <!-- Nav Actions -->
         <div class="nav-actions">
-          <!-- Mode Toggle -->
-          <div class="mode-toggle" role="tablist" aria-label="Security surface">
-            <div class="mode-toggle-slider" aria-hidden="true"></div>
-            <button
-              class="mode-toggle-btn"
-              data-mode="apps"
-              role="tab"
-              aria-pressed="true"
-            >
-              Apps
-            </button>
-            <button
-              class="mode-toggle-btn"
-              data-mode="chain"
-              role="tab"
-              aria-pressed="false"
-            >
-              Chain
-            </button>
-          </div>
-          <button class="btn-primary" data-contact-form>
-            Book Security Audit
-          </button>
+          <a
+            class="btn-nav-demo"
+            href="https://calendly.com/koda-credshields/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Demo
+          </a>
+          <a class="btn-primary" href="index.html#contact">Get Scoped</a>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -2612,73 +2480,6 @@
           </svg>
         </div>
         <div class="mobile-sub" id="mob-solutions">
-          <!-- ⛓ Chain-only -->
-          <a
-            href="smart-contract-audits.html"
-            class="mobile-sub-link nav-chain-only"
-            >Smart Contract Audits</a
-          >
-          <a
-            href="dapp-protocol-security.html"
-            class="mobile-sub-link nav-chain-only"
-            >DApp &amp; Protocol Security</a
-          >
-          <a
-            href="enterprise-security.html"
-            class="mobile-sub-link nav-chain-only"
-            >Enterprise Web &amp; Mobile Security</a
-          >
-          <a
-            href="penetration-testing.html"
-            class="mobile-sub-link nav-chain-only"
-            >Penetration Testing</a
-          >
-          <a
-            href="blockchain-security.html"
-            class="mobile-sub-link nav-chain-only"
-            >Blockchain Security</a
-          >
-          <a href="cloud-security.html" class="mobile-sub-link nav-chain-only"
-            >Cloud Infrastructure</a
-          >
-          <a href="wallet-security.html" class="mobile-sub-link nav-chain-only"
-            >Wallet Security</a
-          >
-          <a
-            href="continuous-monitoring.html"
-            class="mobile-sub-link nav-chain-only"
-            >Continuous Monitoring</a
-          >
-          <a
-            href="incident-response.html"
-            class="mobile-sub-link nav-chain-only"
-            >Incident Response</a
-          >
-          <a
-            href="security-training.html"
-            class="mobile-sub-link nav-chain-only"
-            >Security Training</a
-          >
-          <a
-            href="ai-security-tools.html"
-            class="mobile-sub-link nav-chain-only"
-            >AI Security Tools</a
-          >
-          <a
-            href="https://solidityscan.com/"
-            class="mobile-sub-link nav-chain-only"
-            target="_blank"
-            rel="noopener noreferrer"
-            >SolidityScan ↗</a
-          >
-          <a
-            href="https://rustscan.com/"
-            class="mobile-sub-link nav-chain-only"
-            target="_blank"
-            rel="noopener noreferrer"
-            >RustScan ↗</a
-          >
-
           <!-- 📱 Apps-only (from apps_site, grouped) -->
           <div class="nav-dropdown-section-title nav-apps-only">Flagship</div>
           <a
@@ -2718,6 +2519,37 @@
             >Source Code Review &amp; SAST</a
           >
 
+          <div class="nav-dropdown-section-title">Web3</div>
+          <a href="smart-contract-audits.html" class="mobile-sub-link"
+            >Smart Contract Audits</a
+          >
+          <a href="dapp-protocol-security.html" class="mobile-sub-link"
+            >DApp &amp; Protocol Security</a
+          >
+          <a href="blockchain-security.html" class="mobile-sub-link"
+            >Blockchain Security</a
+          >
+          <a href="wallet-security.html" class="mobile-sub-link"
+            >Wallet Security</a
+          >
+          <a href="continuous-monitoring.html" class="mobile-sub-link"
+            >Continuous Monitoring</a
+          >
+          <a
+            href="https://solidityscan.com/"
+            class="mobile-sub-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SolidityScan ↗</a
+          >
+          <a
+            href="https://rustscan.com/"
+            class="mobile-sub-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >RustScan ↗</a
+          >
+
           <div class="nav-dropdown-section-title nav-apps-only">
             Specialized
           </div>
@@ -2728,16 +2560,6 @@
             >Compliance Readiness</a
           >
 
-          <div class="nav-dropdown-section-title nav-apps-only">Resources</div>
-          <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
-            >Sample Pentest Report</a
-          >
-          <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
-            >AppSec Maturity Model</a
-          >
-          <a href="pentest-vs-scan.html" class="mobile-sub-link nav-apps-only"
-            >Pentest vs Vuln Scan</a
-          >
         </div>
       </div>
 
@@ -2838,12 +2660,25 @@
           <a href="ecosystem.html" class="mobile-sub-link nav-chain-only"
             >Ecosystem</a
           >
+          <a
+            href="owasp-smart-contract-top-10-2025.html"
+            class="mobile-sub-link nav-chain-only"
+            >OWASP Smart Contract Top 10 (2025)</a
+          >
+          <a
+            href="owasp-smart-contract-top-10-2026.html"
+            class="mobile-sub-link nav-chain-only"
+            >OWASP Smart Contract Top 10 (2026)</a
+          >
           <!-- 📱 Apps-only (from apps_site) -->
           <a href="sample-report.html" class="mobile-sub-link nav-apps-only"
             >Sample Pentest Report</a
           >
           <a href="appsec-maturity.html" class="mobile-sub-link nav-apps-only"
             >AppSec Maturity Model</a
+          >
+          <a href="pentest-vs-scan.html" class="mobile-sub-link nav-apps-only"
+            >Pentest vs Vuln Scan</a
           >
 
           <!-- ✅ Shared -->
@@ -2897,45 +2732,23 @@
         </div>
       </div>
 
-      <!-- OWASP Top 10 - Chain only -->
-      <div class="mobile-nav-item nav-chain-only">
-        <div class="mobile-nav-link mobile-nav-toggle" data-target="mob-owasp">
-          <span>OWASP Top 10</span>
-          <svg
-            class="mobile-chevron"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            style="transition: transform 200ms"
-          >
-            <path d="M6 9l6 6 6-6" />
-          </svg>
-        </div>
-        <div class="mobile-sub" id="mob-owasp">
-          <a
-            href="owasp-smart-contract-top-10-2025.html"
-            class="mobile-sub-link"
-            >2025</a
-          >
-          <a
-            href="owasp-smart-contract-top-10-2026.html"
-            class="mobile-sub-link"
-            >2026</a
-          >
-        </div>
-      </div>
-
       <div class="mobile-overlay-cta">
-        <button
-          class="btn-primary-lg"
-          style="width: 100%; text-align: center"
-          data-contact-form
+        <a
+          class="btn-secondary-lg btn-mobile-demo"
+          href="https://calendly.com/koda-credshields/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="width: 100%; justify-content: center"
         >
-          Book Security Audit
-        </button>
+          Book a Demo
+        </a>
+        <a
+          class="btn-primary-lg"
+          href="index.html#contact"
+          style="width: 100%; text-align: center"
+        >
+          Get Scoped
+        </a>
         <button
           class="btn-secondary-lg"
           style="width: 100%; justify-content: center"
