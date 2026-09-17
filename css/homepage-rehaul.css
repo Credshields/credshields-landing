@@ -183,10 +183,10 @@ html[data-mode="apps"]
   position: relative;
   z-index: 2;
   display: flex;
-  width: min(1500px, 100%);
+  width: min(1180px, 100%);
   min-height: 653px;
   margin: 0 auto;
-  padding: 120px 28px 90px 20px;
+  padding: 120px 28px 90px;
   align-items: flex-end;
   gap: 48px;
   box-sizing: border-box;
@@ -438,18 +438,30 @@ html[data-mode="apps"]
 }
 
 .rehaul-client-logos {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   width: 100%;
   align-items: center;
+  justify-items: center;
+  gap: 8px;
+}
+
+.rehaul-client-card {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 80px;
+  padding: 16px 8px;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: clamp(22px, 3.4vw, 44px);
+  background: rgba(46, 125, 14, 0.08);
 }
 
 .rehaul-client-logo {
   display: block;
   width: auto;
-  max-width: 150px;
+  max-width: min(150px, 100%);
+  min-width: 0;
   height: 24px;
   object-fit: contain;
   filter: grayscale(1) contrast(1.15);
@@ -508,7 +520,7 @@ html[data-mode="apps"]
 .rehaul-platform-intro {
   margin: 0 0 40px;
   color: #4a6650;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(15px, calc(13px + 0.5vw), 18px) / 1.6 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
@@ -625,6 +637,106 @@ html[data-mode="apps"]
   font-weight: 600;
 }
 
+.rehaul-platform-card {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 32px;
+  padding: 40px 32px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(46, 125, 14, 0.08), transparent);
+}
+
+.rehaul-platform-cards {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 52px;
+}
+
+.rehaul-platform-card-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.rehaul-platform-card-copy strong {
+  font: 600 24px/1.2 "Bricolage Grotesque", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+.rehaul-platform-card-copy .rehaul-platform-caption-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.rehaul-platform-card-copy .rehaul-platform-caption-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(10, 26, 12, 0.12);
+}
+
+.rehaul-platform-card-image {
+  display: block;
+  grid-column: span 3;
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.rehaul-platform-card-detail {
+  height: 480px;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.rehaul-platform-card-image-wrapper {
+  display: flex;
+  grid-column: span 3;
+  align-self: start;
+  align-items: safe center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+}
+
+.rehaul-platform-card-detail .rehaul-platform-card-image {
+  flex-shrink: 0;
+  width: 640px;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 760px) {
+  .rehaul-platform-card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 28px 20px;
+    gap: 28px;
+  }
+
+  .rehaul-platform-card-image {
+    grid-column: auto;
+  }
+
+  .rehaul-platform-card-image-wrapper {
+    grid-column: auto;
+  }
+
+  .rehaul-platform-card-detail {
+    height: 560px;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+}
+
 .rehaul-platform-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
@@ -646,7 +758,7 @@ html[data-mode="apps"]
 .rehaul-position-lead,
 .rehaul-position-copy {
   color: #0a1a0c;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(14px, calc(12px + 0.5vw), 17px) / 1.8 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
@@ -1962,6 +2074,45 @@ html[data-mode="apps"]
   color: #176b35;
 }
 
+.footer .rehaul-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.rehaul-footer-brand {
+  flex: 0 0 240px;
+}
+
+.rehaul-footer-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  min-width: 0;
+}
+
+@media (max-width: 960px) {
+  .footer .rehaul-footer-main {
+    flex-direction: column;
+  }
+
+  .rehaul-footer-brand {
+    flex-basis: auto;
+  }
+
+  .rehaul-footer-navigation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .rehaul-footer-navigation {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+}
+
 .rehaul-footer-description {
   max-width: 240px;
   margin: 0 0 18px;
@@ -2227,4 +2378,80 @@ html[data-mode="apps"]
   .rehaul-client-logo {
     transition: none;
   }
+}
+
+/* Release workflow from the standalone homepage. */
+.rehaul-workflow-stage-status {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.rehaul-workflow-stage-steps {
+  font: 500 11px var(--font-mono);
+  color: var(--text-secondary);
+  letter-spacing: .08em;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.rehaul-workflow-stage-track {
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  overflow: hidden;
+  background: rgba(46, 125, 14, .12);
+}
+
+[data-pipe-stage-progress] {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 1px;
+  background: var(--color-forest);
+}
+
+.rehaul-workflow {
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-body: "Figtree", sans-serif;
+  --color-forest: #2e7d0e;
+  --color-forest-600: #2e7d0e;
+  --color-ink: #0a1a0c;
+  --color-lime: #a8ff45;
+  --text-secondary: #4a6650;
+  --surface-raised: #fff;
+  --border-default: rgba(10, 26, 12, 0.12);
+  --radius-md: 6px;
+}
+@keyframes pipeSpin { to { transform: rotate(360deg); } }
+@keyframes pipeIcon { 0%,100% { transform: scale(1); } 45% { transform: scale(1.18); } }
+[data-pipe-card] { transition: transform .45s cubic-bezier(.2,.7,.2,1), border-color .4s ease, box-shadow .45s ease, background .5s ease; }
+[data-pipe-card]:hover { transform: translateY(-4px) scale(1.012); border-color: rgba(46,125,14,.45) !important; box-shadow: 0 12px 30px rgba(10,26,12,.09) !important; }
+[data-pipe-card][data-active="1"] { transform: translateY(-5px); border-color: rgba(46,125,14,.6) !important; box-shadow: 0 10px 28px rgba(10,26,12,.08) !important; }
+[data-pipe-card][data-state="ok"] { border-color: var(--color-forest) !important; background: linear-gradient(180deg, rgba(168,255,69,.18), rgba(168,255,69,.04)), var(--surface-raised) !important; box-shadow: 0 0 0 4px rgba(168,255,69,.18), 0 12px 30px rgba(46,125,14,.16) !important; }
+[data-pipe-icon] { transition: background .4s ease, color .4s ease, border-color .4s ease; }
+[data-pipe-icon] svg:last-child { transition: transform .4s ease; }
+[data-pipe-card][data-active="1"] [data-pipe-icon], [data-pipe-card][data-state="ok"] [data-pipe-icon] { background: var(--color-forest) !important; border-color: var(--color-forest) !important; color: #F4F8F4 !important; }
+[data-pipe-card][data-state="ok"] [data-pipe-ring] { opacity: 1; }
+[data-pipe-card][data-state="ok"] [data-pipe-ring] circle:last-child { stroke-dasharray: 200; stroke: var(--color-lime); transition: stroke-dasharray .6s ease; }
+[data-pipe-card][data-state="ok"] [data-pipe-status] { color: var(--color-forest) !important; }
+[data-pipe-card][data-state="ok"] [data-pipe-progress] { background: var(--color-forest) !important; box-shadow: 0 0 8px rgba(168,255,69,.6); }
+[data-pipe-card][data-active="1"] [data-pipe-icon] svg:last-child { animation: pipeIcon .7s ease; }
+[data-pipe-detail] { max-height: 0; opacity: 0; overflow: hidden; margin-top: 0; transition: max-height .35s ease, opacity .3s ease, margin-top .35s ease; }
+[data-pipe-card]:hover [data-pipe-detail] { max-height: 24px; opacity: 1; margin-top: 8px; }
+[data-pipe-ring] { opacity: 0; transform-origin: 50% 50%; transition: opacity .3s ease; }
+[data-pipe-card][data-state="scan"] [data-pipe-ring] { opacity: 1; animation: pipeSpin 1.1s linear infinite; }
+[data-pipe-card][data-state="scan"] [data-pipe-icon] { background: rgba(46,125,14,.14) !important; }
+[data-pipe-pulse] { transition: left 1.5s cubic-bezier(.45,0,.2,1), opacity .3s ease; }
+[data-pipe-progress] { transition: width .55s ease; }
+
+@media (max-width: 1040px) {
+  .rehaul-workflow [data-pipe-grid] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 16px !important; }
+  .rehaul-workflow [data-pipe-track] { display: none; }
+}
+@media (max-width: 520px) {
+  .rehaul-workflow [data-pipe-grid] { grid-template-columns: minmax(0, 1fr) !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rehaul-workflow *, .rehaul-workflow *::after { transition: none !important; animation: none !important; }
 }
