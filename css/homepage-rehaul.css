@@ -866,7 +866,7 @@ html[data-mode="apps"]
 .rehaul-how-intro {
   margin: 0 0 48px;
   color: #4a6650;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(15px, calc(13px + 0.5vw), 18px) / 1.6 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
@@ -1140,7 +1140,7 @@ html[data-mode="apps"]
 .rehaul-who-intro {
   margin: 0 0 44px;
   color: #4a6650;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(15px, calc(13px + 0.5vw), 18px) / 1.6 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
@@ -1217,7 +1217,7 @@ html[data-mode="apps"]
 .rehaul-team-intro {
   margin: 0 0 48px;
   color: #4a6650;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(15px, calc(13px + 0.5vw), 18px) / 1.6 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
@@ -1358,7 +1358,7 @@ html[data-mode="apps"]
 .rehaul-controls-intro > p {
   margin: 0 0 28px;
   color: #a9bfae;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(15px, calc(13px + 0.5vw), 18px) / 1.6 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
@@ -1556,7 +1556,7 @@ html[data-mode="apps"]
   max-width: 680px;
   margin: 0 0 40px;
   color: #4a6650;
-  font: 400 clamp(18px, calc(16px + 0.5vw), 21px) / 1.6 "Figtree",
+  font: 400 clamp(15px, calc(13px + 0.5vw), 18px) / 1.6 "Figtree",
     -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   text-wrap: pretty;
 }
