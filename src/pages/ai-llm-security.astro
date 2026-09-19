@@ -1,0 +1,328 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/ai-llm-security.css";
+
+const title = "AI and LLM AppSec - CredShields";
+const description = "Prompt injection, agent and tool-call abuse, RAG leakage, and the authorization holes that appear when an LLM starts acting on behalf of your users.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://credshields.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://credshields.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI and LLM AppSec",
+      "item": "https://credshields.com/ai-llm-security/"
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+  <div class="ai-llm-security-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <span data-heroicon="" style="color:var(--color-forest);display:block;margin-bottom:18px;transform:scale(1.5);transform-origin:left center" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5a3 3 0 00-6 .5 2.8 2.8 0 00-1 4.6A3 3 0 007 16a3 3 0 005 2.2z"/><path d="M12 5.5a3 3 0 016 .5 2.8 2.8 0 011 4.6A3 3 0 0117 16a3 3 0 01-5 2.2z"/><path d="M12 5.5v13"/></svg></span>
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">SPECIALIZED · AI SECURITY</span>
+      </div>
+      <h1 style="font:700 clamp(34px,4.4vw,58px)/1.06 var(--font-display);letter-spacing:-.03em;margin:0;color:var(--color-forest);max-width:960px;text-wrap:pretty">Pentesting the attack surface your AI features just added</h1>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:22px 0 30px;max-width:760px;text-wrap:pretty">Prompt injection, agent and tool-call abuse, RAG leakage, and the authorization holes that appear when an LLM starts acting on behalf of your users.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+        <a data-herodemo="" href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" style="font:500 14.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Book a demo &#8599;</a>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="CredShields One" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) 28px">
+      <div style="background:var(--surface-deep);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 460px;max-width:640px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span class="cs-badge cs-badge-lime">Start here</span>
+            <span style="font:500 11px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.16em">CREDSHIELDS ONE</span>
+          </div>
+          <h2 style="font:600 clamp(22px,2.4vw,30px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--text-on-deep-primary);max-width:640px;text-wrap:balance">AI features ship weekly, and so does their attack surface</h2>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-on-deep-tertiary);margin:0;text-wrap:pretty">CredShields One covers your application and API surface on every release. This engagement adds the model layer: the prompts, the retrieval store, and every tool your agent can call.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/" class="cs-btn cs-btn-lime cs-btn-md">Explore CredShields One</a>
+          <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Talk it through</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="scope" data-screen-label="What we test" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What we test</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);max-width:660px;text-wrap:pretty">The model, the context, and the tools it can reach</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Most real AI findings are authorization bugs wearing a prompt as a disguise.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">PROMPT AND MODEL</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct and indirect prompt injection</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>System prompt extraction and override</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Jailbreak and guardrail bypass</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Output handling and downstream injection</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">DATA AND RETRIEVAL</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>RAG index poisoning and cross-tenant retrieval</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Context window leakage between sessions</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Embedding inversion and data reconstruction</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Training and fine-tuning data exposure</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">AGENTS AND TOOLS</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Tool-call authorization and parameter tampering</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Excessive agency and unbounded action chains</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Multi-agent trust and delegation abuse</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Cost and resource exhaustion via loops</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="process" data-screen-label="Process" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ How the engagement runs</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">Three weeks against a moving target</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">We test the deployed system, including your guardrails.</p>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">01</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Architecture review</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We map the model, the prompts, the retrieval sources, and every tool the agent can invoke, with the permissions behind each.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">2-4 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">02</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Injection and bypass testing</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Systematic testing of direct and indirect injection paths, including content the model ingests from your own users.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">5-8 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">03</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Agency and authorization testing</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We attempt to make the agent act outside its authority: calling tools it should not, for users it should not act for.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">4-7 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">04</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Report and retest</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Signed report with reproducible prompts, plus a retest after your guardrail changes.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">2-4 days</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="findings" data-screen-label="Sample findings" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Sample findings</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">What these engagements typically surface</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">From recent AI engagements.</p>
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+        <div style="padding:20px 24px;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical">Critical</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-danger-strong)">CVSS 9.2</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Indirect injection via uploaded document triggered cross-tenant tool call</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">A PDF uploaded by one customer contained instructions the assistant followed, invoking a data-export tool against a different tenant. The tool trusted the agent, and the agent trusted the document.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high">High</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 7.8</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">RAG retrieval returned another tenant chunks on semantic match</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">The vector store filtered by tenant at query time but not at index time. Sufficiently similar embeddings surfaced foreign content before the filter applied.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-medium">Medium</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 6.2</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">System prompt recoverable through structured output coercion</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Asking the model to emit its instructions as JSON schema bypassed the refusal, exposing internal business rules and an internal endpoint name.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deliverables" data-screen-label="Deliverables" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What you get</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);max-width:660px;text-wrap:pretty">A report your AI team and your security team can both use</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Every finding ships with the exact prompt or payload that triggers it.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">IN THE REPORT</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">&#8250;</span>Executive summary with business-impact framing</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">&#8250;</span>Every finding with the verbatim reproduction prompt</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">&#8250;</span>Architecture diagram of trust boundaries in your AI stack</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">&#8250;</span>Guardrail recommendations at prompt, code, and infra layers</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">&#8250;</span>Mapping to OWASP LLM Top 10 and NIST AI RMF</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">&#8250;</span>Attestation letter for enterprise AI security reviews</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">ALSO INCLUDED</div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Findings in your tracker</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">Jira, Linear, or GitHub Issues, filed as we confirm them.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Live triage channel</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">A shared Slack or Teams channel with the AI security lead for the duration.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Retest included</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">One full retest after remediation, plus ad-hoc retests on individual findings.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Debrief call</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">Working session with your AI engineers on trust boundaries and tool authorization design.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="standards" data-screen-label="Standards" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Standards we test against</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Standards we test against</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">METHODOLOGY</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>OWASP Top 10 for LLM Applications</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>NIST AI Risk Management Framework</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MITRE ATLAS adversarial ML tactics</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>OWASP ASVS for the surrounding application</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">SCORING</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CVSS 3.1 with environmental adjustment</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CWE classification per finding</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MITRE ATT&amp;CK technique tagging</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Business-impact rating agreed with you</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">COMPLIANCE</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>EU AI Act risk-management alignment</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 Type II evidence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>ISO 42001 AI management systems</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>GDPR Article 22 and Article 32</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" data-screen-label="Engagement sizing" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Engagement sizing</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">Priced by feature count and agent complexity</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Indicative sizing. Final quote follows an architecture walkthrough.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">SINGLE FEATURE</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">One assistant or chat feature</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">One model-backed feature with no autonomous tool use. Suits a first assessment.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">2 weeks</div>
+        </div>
+        <div style="border:1px solid var(--color-forest);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;background:var(--color-forest-100);">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">AGENTIC</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">Tool-calling agent</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">An agent with tool access, retrieval, and user-supplied context. The most common scope.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">3 weeks</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">MULTI-AGENT</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">Orchestrated systems</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Multiple agents with delegation, shared memory, and privileged tool access.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">4-5 weeks</div>
+        </div>
+      </div>
+      <p style="font:400 13.5px/1.6 var(--font-body);color:var(--text-secondary);margin:22px 0 0;max-width:640px">Every engagement is quoted after scoping. No per-seat pricing, no surprise change orders, and retests are included for the life of the engagement.</p>
+    </div>
+  </section>
+  <section id="case" data-screen-label="Case study" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Case study</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">A SaaS assistant, one PDF</h2>
+      
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <div style="flex:1 1 380px;max-width:620px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:16px">B2B SAAS · SERIES C</div>
+          <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 16px;text-wrap:balance">A customer-uploaded document told the assistant what to do, and the assistant had a data-export tool.</p>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Every guardrail sat on the user prompt. Nothing sanitized the documents the assistant ingested. Instructions inside a PDF caused a tool call that exported data belonging to another tenant. The fix was authorization at the tool layer rather than prompt tuning.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;min-width:180px">
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">1</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">DOCUMENT TO EXPLOIT</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">0</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">GUARDRAILS ON INGESTED CONTENT</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">2</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">LAYERS OF FIX</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Questions we get</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Questions we get</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Do you test the model or our application?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Your application. Base model behavior matters, but almost every exploitable finding lives in how your system wires prompts, retrieval, and tools together.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">We use a hosted model. Is that in scope?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes. The provider secures the model; you secure everything around it. That boundary is exactly where we test.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Will testing run up our inference bill?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We agree a token budget during scoping and stay inside it. Cost-exhaustion testing is deliberately bounded and always pre-approved.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Is this ready for an enterprise AI security review?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes. The report maps to the OWASP LLM Top 10 and the NIST AI RMF, which is what most enterprise AI questionnaires reference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

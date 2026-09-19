@@ -1,0 +1,241 @@
+---
+import { Image } from "astro:assets";
+import pageLogo0 from "../images/owasp-logo.png";
+import pageLogo1 from "../images/ethereum-foundation.png";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/web3.css";
+
+const title = "OWASP Smart Contract Top 10 2025 - CredShields";
+const description = "The first-ever OWASP Smart Contract Top 10, authored with the OWASP Foundation and funded by the Ethereum Foundation. Built on $1.42B in 2024 loss data.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="web3-page">
+<section id="top" data-screen-label="Hero" style="background:#081109;color:#F4F8F4;padding:150px 28px clamp(64px,8vw,88px)">
+    <div style="max-width:1180px;margin:0 auto">
+      <Image src={pageLogo0} alt="OWASP" style="height:38px;width:109px;display:block;filter:brightness(0) invert(1);opacity:.95;margin-bottom:22px" loading="lazy" />
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(168,255,69,.25);border-radius:var(--radius-pill);padding:8px 16px;background:rgba(14,36,18,.45);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:#A8FF45;animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:#C9E8AF;letter-spacing:.18em">OWASP · CREDSHIELDS · 2025 EDITION</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: #F4F8F4; text-wrap: balance">OWASP Smart Contract Top 10 2025</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: #A9BFAE; margin: 22px 0 30px; text-wrap: pretty; max-width: 760px">We authored the first-ever OWASP Smart Contract Top 10. Funded by the Ethereum Foundation and grounded in 50,000+ contracts scanned and 1,200+ documented incidents.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="numbers" data-screen-label="The data" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ The data</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">The 2025 edition in numbers</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px">
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:18px">
+          <div data-count="" style="font:700 clamp(28px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:#A8FF45">$1.42B</div>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em;margin-top:6px">LOST IN 2024</div>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:18px">
+          <div data-count="" style="font:700 clamp(28px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:#F4F8F4">149</div>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em;margin-top:6px">INCIDENTS TRACKED</div>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:18px">
+          <div data-count="" style="font:700 clamp(28px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:#F4F8F4">50K+</div>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em;margin-top:6px">CONTRACTS SCANNED</div>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:18px">
+          <div data-count="" style="font:700 clamp(28px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:#F4F8F4">10</div>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em;margin-top:6px">RISK CATEGORIES</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" data-screen-label="About" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ About the initiative</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: #A8FF45; text-wrap: balance">The gold standard for Web3 security</h2>
+      
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:720px">
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">The Open Web Application Security Project has been the reference for web security since 2001, and its Top 10 lists have guided millions of developers in building secure applications.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">CredShields authored, with the OWASP Foundation,  the first comprehensive smart contract security standard. Our SolidityScan data, covering 50,000+ audited contracts and 1,200+ documented hacks, provided the empirical backbone for every category in the list.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">The work was supported by an Ethereum Foundation Ethereum Foundation grant, which funded the incident classification and category methodology.</p>
+      </div>
+    </div>
+  </section>
+  <section id="risks" data-screen-label="Top 10 risks" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Top 10 risks</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: #A8FF45; text-wrap: balance">The most critical smart contract vulnerabilities in 2025</h2>
+      <p style="font:400 var(--type-body-lg)/1.6 var(--font-body);color:#A9BFAE;margin:0 0 40px;text-wrap:pretty">Ranked by exploitability, prevalence, and financial impact.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px">
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC01</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Access Control Vulnerabilities</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Missing or misconfigured role checks allow unauthorized callers to drain funds, upgrade contracts, or pause protocols.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC02</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Price Oracle Manipulation</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Flash-loan-powered spot-price attacks distort oracle feeds, enabling mispriced borrows and protocol-level drains.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC03</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Logic Errors</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Flawed business logic, incorrect accounting, off-by-one errors, and improper state transitions lead to silent fund loss.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC04</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Lack of Input Validation</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Unvalidated parameters allow attackers to supply malicious addresses, overflow amounts, or bypass critical guards.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC05</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Reentrancy Attacks</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Recursive external calls drain funds before state is updated. The original smart contract exploit, still in use today.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC06</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Unchecked External Calls</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Ignoring return values from low-level calls or ERC-20 transfers silently swallows failures, leaving contracts in broken states.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC07</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Flash Loan Attacks</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Atomic uncollateralized borrowing manipulates governance, liquidity, or price feeds within a single transaction block.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC08</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Integer Overflow and Underflow</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Arithmetic wrapping pre-SafeMath or in assembly blocks produces out-of-bounds balances and bypasses transfer limits.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC09</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Insecure Randomness</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">On-chain entropy sources such as blockhash, timestamp, and difficulty are predictable. Miners and validators can game lottery or NFT outcomes.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;background:rgba(244,248,244,.04);display:flex;flex-direction:column;gap:9px">
+          <span style="font:600 12px var(--font-mono);color:#A8FF45;letter-spacing:.1em">SC10</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Denial of Service</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Gas exhaustion, unbounded loops, or griefing patterns lock critical functions, preventing legitimate users from withdrawing funds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="data" data-screen-label="Our data" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ The data behind it</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: #A8FF45; text-wrap: balance">How our research informed the standard</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">SOLIDITYSCAN DATASET</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">50,000+ contracts scanned</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Across EVM chains. Each scan maps vulnerability patterns to OWASP categories, building an empirical frequency baseline.</p>
+        </div>
+        <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <div style="font:500 11px var(--font-mono);color:#A8FF45;letter-spacing:.14em">WEB3HACKHUB</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">1,200+ incidents catalogued</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Real-world hacks with root-cause classification, loss amounts, and exploit technique, used to calibrate the risk ranking of each category.</p>
+        </a></div><a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+        </a><div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px"><a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">AUTHORSHIP</div>
+          <Image src={pageLogo1} alt="Ethereum Foundation" style="height:24px;width:71px;display:block;margin-top:10px;filter:brightness(0) invert(1);opacity:.92" loading="lazy" />
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Grant-funded, authored</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">CredShields researchers authored the methodology, ensuring the standard reflects real exploit patterns rather than theoretical risk models.</p>
+        
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Browse the database ↗</span>
+        </a>
+    </div>
+  </div></section>
+  <section id="losses" data-screen-label="Loss landscape" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Loss landscape</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:#A8FF45;text-wrap:balance">$1.42 billion lost in 2024</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: #A9BFAE; margin: 0 0 40px; text-wrap: pretty">Across 149 security incidents. The breakdown confirms these categories are active attack vectors.</p>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(244,248,244,.12);">
+          <span style="font:600 13px var(--font-mono);color:#7A9A80">01</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:#F4F8F4">Access control and logic</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">The largest single loss category in 2024. Misconfigured roles and flawed business logic accounted for the majority of funds stolen across DeFi protocols.</p>
+          </div>
+          <span style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.06em;white-space:nowrap">~$600M+ · LARGEST</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(244,248,244,.12);">
+          <span style="font:600 13px var(--font-mono);color:#7A9A80">02</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:#F4F8F4">Oracle and flash loan attacks</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Price manipulation via flash loans remained a dominant vector, targeting lending protocols, AMMs, and yield optimizers with atomic multi-step exploits.</p>
+          </div>
+          <span style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.06em;white-space:nowrap">~$300M+ · FLASH LOAN CHAINS</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:22px 0;border-top:1px solid rgba(244,248,244,.12);border-bottom:1px solid rgba(244,248,244,.12);">
+          <span style="font:600 13px var(--font-mono);color:#7A9A80">03</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:#F4F8F4">Reentrancy and input flaws</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Classic reentrancy and input validation failures continued to surface in newly deployed contracts, proving known vulnerability classes are still reaching production.</p>
+          </div>
+          <span style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.06em;white-space:nowrap">~$200M+ · PREVENTABLE</span>
+        </div>
+      </div>
+      <p style="font:400 12.5px/1.6 var(--font-body);color:#7A9A80;margin:22px 0 0"><a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="font-weight:500">Source: Web3HackHub ↗</a>, our incident database of documented Web3 hacks with root-cause classification and attributed losses.</p>
+    </div>
+  </section>
+  <section id="next" data-screen-label="Next" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Next</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">Where to go from here</h2>
+      
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px">
+        <a href="/owasp-2026" class="cs-btn cs-btn-lime cs-btn-lg">View the 2026 edition →</a>
+        <a href="https://solidityscan.com/" target="_blank" rel="noopener" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-lg">Run a free AI scan ↗</a>
+      </div>
+      <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:24px;background:rgba(244,248,244,.04);max-width:640px">
+        <div style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.12em;margin-bottom:8px">UPDATED</div>
+        <div style="font:600 17px var(--font-display);color:#F4F8F4;letter-spacing:-.015em;margin-bottom:8px">The 2026 edition supersedes this list</div>
+        <div style="font:400 14px/1.6 var(--font-body);color:#A9BFAE">Four new categories, $3.67B in 2025 loss data, and 134 documented incidents. Insecure Randomness dropped out; Business Logic, Flash Loans, and Proxy Vulnerabilities came in.</div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ FAQ</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">Common questions about the standard</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">What is the OWASP Smart Contract Top 10?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">A ranked list of the most critical security risks facing smart contracts, published by the OWASP Foundation and built from real incident data rather than theoretical risk models.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">How is it different from the traditional OWASP Top 10?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">The web Top 10 covers server-side application risk. This covers on-chain code, where exploits are atomic, irreversible, and public, and where the attacker can borrow unlimited capital within a single transaction.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Who should use it?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Protocol developers as a design-time checklist, auditors as a coverage baseline, and institutional reviewers as a due diligence reference.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Is it based on theory or real incidents?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Real incidents. 1,200+ documented hacks with root-cause classification, plus a 50,000-contract scan corpus for frequency.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Does it replace a full audit?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">No. It is a baseline for coverage. An audit tests your specific protocol economics, which no generic list can anticipate.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Is this only for DeFi?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">No. NFT platforms, bridges, DAOs, gaming economies, and tokenized asset platforms all face these categories. DeFi simply produces the largest individual losses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

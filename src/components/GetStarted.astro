@@ -1,0 +1,133 @@
+---
+import "../styles/GetStarted.css";
+
+interface Props {
+  allModes?: boolean;
+}
+
+const { allModes = false } = Astro.props;
+---
+
+<section
+  id="contact"
+  class:list={["rehaul-get-started", { "show-apps": !allModes }]}
+  aria-labelledby="rehaul-get-started-title"
+>
+  <div class="rehaul-get-started-inner">
+    <div class="rehaul-get-started-copy">
+      <div class="rehaul-section-kicker">/ Get started</div>
+      <h2 id="rehaul-get-started-title">Start with a scoped assessment</h2>
+      <p>
+        Tell us what you are securing. We reply with scope and next steps
+        within one business day.
+      </p>
+
+      <ul class="rehaul-get-started-benefits">
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Scoping within a day, findings within the first week
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          A senior pentester on every engagement
+        </li>
+        <li>
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Scope and pricing before you commit
+        </li>
+      </ul>
+
+      <p class="rehaul-get-started-link">
+        Prefer to see it first?
+        <a
+          href="https://calendly.com/shashank-credshields/credshields?back=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Book a Demo ↗</a
+        >
+      </p>
+      <p class="rehaul-get-started-login">
+        Already a CredShields One customer?
+        <a
+          href="https://app.credshields.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Log in ↗</a
+        >
+      </p>
+    </div>
+
+    <form class="rehaul-lead-form" data-rehaul-lead-form>
+      <div
+        class="rehaul-form-status"
+        role="status"
+        aria-live="polite"
+      ></div>
+      <div class="rehaul-form-row">
+        <label>
+          <span>NAME <b>*</b></span>
+          <input name="name" required placeholder="Jane Doe" />
+        </label>
+        <label>
+          <span>WORK EMAIL <b>*</b></span>
+          <input name="email" type="email" required autocomplete="email" placeholder="jane@company.com" />
+        </label>
+      </div>
+
+      <div class="rehaul-form-row">
+        <label>
+          <span>COMPANY <b>*</b></span>
+          <input name="company" required autocomplete="organization" placeholder="Company name" />
+        </label>
+        <label>
+          <span>YOUR ROLE <b>*</b></span>
+          <select name="role" required>
+            <option value="">Choose…</option>
+            <option>Founder / CEO</option>
+            <option>CTO / VP Engineering</option>
+            <option>DevOps / Platform</option>
+            <option>CISO / Security lead</option>
+            <option>Compliance / GRC</option>
+            <option>Engineer</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        <span>WHAT DO YOU WANT PENTESTED? <b>*</b></span>
+        <select name="target" required>
+          <option value="">Choose…</option>
+          <option>Web Application</option>
+          <option>Mobile App (iOS / Android)</option>
+          <option>API</option>
+          <option>Smart Contract</option>
+          <option>Cloud Infrastructure</option>
+          <option>Multiple / Not sure yet</option>
+        </select>
+      </label>
+
+      <label>
+        <span>ANYTHING ELSE WE SHOULD KNOW?</span>
+        <textarea name="context" rows="4" placeholder="Stack, release cadence, compliance needs, timeline…"></textarea>
+      </label>
+
+      <button class="rehaul-form-submit" type="submit">Send request →</button>
+      <small>We respond within one business day.</small>
+      <div class="rehaul-form-divider"><span>OR</span></div>
+      <a
+        class="rehaul-form-demo"
+        href="https://calendly.com/shashank-credshields/credshields?back=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Book a Demo ↗</a
+      >
+    </form>
+  </div>
+</section>

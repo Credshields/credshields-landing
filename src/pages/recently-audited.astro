@@ -1,0 +1,215 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/page-components.css";
+import "../styles/penetration-testing.css";
+import "../styles/recently-audited.css";
+
+const title = "Recent Audits & Case Studies | CredShields";
+const description = "Explore CredShields' latest audits and security assessments across Web3 protocols, fintech products, and enterprise platforms.";
+---
+
+<BaseLayout title={title} description={description} mode="chain">
+  <script slot="head" is:inline src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+<!-- HERO -->
+<section class="hero ra-hero" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot"></span><span class="hero-badge-text">150+ audits completed</span></div>
+      <div class="hero-ticker"><span class="ticker-item"> 05 · ISS. 150</span><span class="ticker-sep">◆</span><span class="ticker-item">AUDIT PORTFOLIO</span></div>
+      <h1 class="hero-headline">Explore our most<br>popular <em>audits</em>.</h1>
+      <p class="hero-body">150+ completed audits across smart contracts, DeFi protocols, and enterprise platforms. Browse the portfolio, check popular projects, and verify KYC reports.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary-lg" href="#contact">Submit Project <span>→</span></a>
+        <a class="btn-secondary-lg" href="https://solidityscan.com/quickscan" data-free-ai-scan>Run Free AI Scan <span>↗</span></a>
+      </div>
+    </div>
+    <div class="hero-aside">
+      <div class="dossier-card">
+        <div class="dossier-stamp">AUDIT<br>LOG</div>
+        <div class="dossier-card-head"><span>PORTFOLIO · <strong>150+ AUDITS</strong></span><span>ACTIVE</span></div>
+        <div class="dossier-card-title">Smart contracts, protocols, and enterprise platforms - all <em>verified</em>.</div>
+        <div class="dossier-kv-grid">
+          <span class="dossier-kv-label">Audits</span>
+          <span class="dossier-kv-value">150+ completed</span>
+          <span class="dossier-kv-label">Scope</span>
+          <span class="dossier-kv-value">DeFi · L1/L2 · enterprise</span>
+          <span class="dossier-kv-label">KYC</span>
+          <span class="dossier-kv-value ok">Verified</span>
+          <span class="dossier-kv-label">Reports</span>
+          <span class="dossier-kv-value ok">Public</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIT TAB SECTION -->
+<section id="audit_sec" class="section section--raised">
+  <div class="container">
+    <div class="section-head">
+      <div class="ra-portfolio-kicker">/ Audit portfolio</div>
+      <h2 class="ra-portfolio-title">Browse, verify, trust.</h2>
+    </div>
+
+    <div class="ra-tabs" role="tablist">
+      <button class="ra-tab-btn active" role="tab" aria-selected="true"  data-audit-tab="Tab1">Recently Audited</button>
+      <button class="ra-tab-btn"        role="tab" aria-selected="false" data-audit-tab="Tab2">Popular Projects</button>
+      <button class="ra-tab-btn"        role="tab" aria-selected="false" data-audit-tab="Tab3">KYC Reports</button>
+    </div>
+
+    <!-- Tab 1: Recently Audited (dynamically populated) -->
+    <div id="Tab1" class="ra-tab-panel active" role="tabpanel">
+      <div class="recent-audits"></div>
+      <div class="ra-pagination" id="pagination">
+        <button type="button" id="prev" aria-label="Previous page">
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <path d="M6.83333 12.9987L1 7.16536L6.83333 1.33203" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 7.16797L15 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div id="pages"></div>
+        <button type="button" id="next" aria-label="Next page">
+          <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
+            <path d="M9.16667 12.9987L15 7.16536L9.16667 1.33203" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 7.16797L1 7.16797" stroke="#A6EEC4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tab 2: Popular Projects (dynamically populated) -->
+    <div id="Tab2" class="ra-tab-panel" role="tabpanel">
+      <div class="popular-audits"></div>
+    </div>
+
+    <!-- Tab 3: KYC Reports -->
+    <div id="Tab3" class="ra-tab-panel" role="tabpanel">
+      <div class="ra-kyc-list">
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/etherempire.svg" alt="EtherEmpire" />
+            <span class="ra-kyc-name">EtherEmpire</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><span>site no longer active</span></div>
+            <div class="ra-kyc-date">09 Oct 2025</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/etherempire.pdf" download="EtherEmpire.pdf">View KYC Certificate <img src="/images/arrow-up-right.svg" alt="opens KYC certificate" /></a>
+          </div>
+        </div>
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.svg" alt="Cybercentry" />
+            <span class="ra-kyc-name">Cybercentry</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><a href="https://cybercentry.co.uk" target="_blank" rel="noopener noreferrer">cybercentry.co.uk <img src="/images/arrow-up-right.svg" alt="opens customer site" /></a></div>
+            <div class="ra-kyc-date">16 Dec 2024</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/cybercentry.pdf" download="Cybercentry.pdf">View KYC Certificate <img src="/images/arrow-up-right.svg" alt="opens KYC certificate" /></a>
+          </div>
+        </div>
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.svg" alt="Plutope" />
+            <span class="ra-kyc-name">Plutope</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><a href="https://plutope.io" target="_blank" rel="noopener noreferrer">plutope.io <img src="/images/arrow-up-right.svg" alt="opens customer site" /></a></div>
+            <div class="ra-kyc-date">04 July 2024</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/plutope.pdf" download="Plutope.pdf">View KYC Certificate <img src="/images/arrow-up-right.svg" alt="opens KYC certificate" /></a>
+          </div>
+        </div>
+
+        <div class="ra-kyc-row">
+          <div class="ra-kyc-identity">
+            <img class="ra-kyc-logo" src="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.svg" alt="Helldiver" />
+            <span class="ra-kyc-name">Helldiver</span>
+          </div>
+          <div class="ra-kyc-meta">
+            <div class="ra-kyc-url"><span>site no longer active</span></div>
+            <div class="ra-kyc-date">05 May 2024</div>
+          </div>
+          <div class="ra-kyc-action">
+            <a href="https://web-assets.solidityscan.com/web-assets/solidity_scan_assets/images/audits/kyc/helldiver.pdf" download="Helldiver.pdf">View KYC Certificate <img src="/images/arrow-up-right.svg" alt="opens KYC certificate" /></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <GetStarted allModes />
+
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+    import { openTab } from "../scripts/recently-audited.js";
+
+    document.querySelectorAll<HTMLButtonElement>("[data-audit-tab]").forEach(button => {
+      button.addEventListener("click", event => openTab(event, button.dataset.auditTab));
+    });
+  </script>
+  <script is:inline>
+  function openTab(evt, tabName) {
+    document.querySelectorAll('.ra-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+    document.querySelectorAll('.ra-tab-btn').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById(tabName).classList.add('active');
+    if (evt && evt.currentTarget) {
+      evt.currentTarget.classList.add('active');
+      evt.currentTarget.setAttribute('aria-selected','true');
+    }
+  }
+
+  // URL param tab switching: ?tab-name=recent|popular|kyc
+  (function() {
+    var urlParams = new URLSearchParams(window.location.search);
+    var tab = urlParams.get('tab');
+    var tabName = urlParams.get('tab-name');
+
+    if (tab === 'recent-audits' || tabName === 'recently-audited') {
+      window.location.replace('/recently-audited?tab-name=recent');
+      return;
+    } else if (tab === 'popular-projects') {
+      window.location.replace('/recently-audited?tab-name=popular');
+      return;
+    } else if (tab === 'kyc-reports') {
+      window.location.replace('/recently-audited?tab-name=kyc');
+      return;
+    }
+
+    var tabMap = { 'recent': 'Tab1', 'popular': 'Tab2', 'kyc': 'Tab3' };
+    var targetTab = 'Tab1';
+    if (tabName && tabMap[tabName.toLowerCase()]) {
+      targetTab = tabMap[tabName.toLowerCase()];
+    }
+
+    function activateTab(tabId) {
+      document.querySelectorAll('.ra-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      document.querySelectorAll('.ra-tab-btn').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      var el = document.getElementById(tabId);
+      if (el) el.classList.add('active');
+      var idx = tabId === 'Tab1' ? 0 : tabId === 'Tab2' ? 1 : 2;
+      var btns = document.querySelectorAll('.ra-tab-btn');
+      if (btns[idx]) { btns[idx].classList.add('active'); btns[idx].setAttribute('aria-selected','true'); }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() { activateTab(targetTab); });
+    } else {
+      activateTab(targetTab);
+    }
+  })();
+</script>
+</BaseLayout>

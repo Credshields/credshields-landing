@@ -1,0 +1,162 @@
+---
+import { Image } from "astro:assets";
+import shashank from "../images/shashank.png";
+import indranil from "../images/indranil.png";
+import aditya from "../images/aditya.png";
+import boostVc from "../images/boostVc.svg";
+import draper from "../images/draper.svg";
+import aptemis from "../images/aptemis_capital.svg";
+import amand from "../images/amand_ventures.svg";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/page-components.css";
+import "../styles/penetration-testing.css";
+import "../styles/about.css";
+
+const title = "About CredShields | Web3 & Enterprise Security Experts";
+const description = "Learn how CredShields delivers advanced smart contract audits, Web3 security research, and enterprise-grade application testing across global organizations.";
+---
+
+<BaseLayout title={title} description={description}>
+  <script
+    slot="head"
+    is:inline
+    src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+    async
+  ></script>
+
+<!-- Hero from the refreshed About page. -->
+<section id="top" class="about-hero" aria-label="Hero">
+  <img class="about-hero-watermark" src="/images/about-icon-black.png" alt="" aria-hidden="true" width="440" height="440" />
+  <div class="about-hero-inner">
+    <div class="about-hero-badge">
+      <span class="about-hero-badge-dot" aria-hidden="true"></span>
+      <span>ABOUT CREDSHIELDS</span>
+    </div>
+    <h1 class="about-hero-title">Offensive security researchers who built a product</h1>
+    <p class="about-hero-description">AI-powered pentesting and manual VAPT across web, mobile, cloud, APIs, and smart contracts. Two decades of hands-on offensive security behind it.</p>
+    <div class="about-hero-actions">
+      <a href="#contact" class="about-hero-button about-hero-button-primary">Get Scoped</a>
+      <a href="https://app.credshields.com" target="_blank" rel="noopener noreferrer" class="about-hero-button about-hero-button-secondary">See CredShields One</a>
+    </div>
+  </div>
+</section>
+
+  <section id="story" data-screen-label="Story" class="about-refreshed-section">
+    <div class="about-section-inner">
+      <div class="about-section-kicker">/ Story</div>
+      <h2 class="about-section-title">Where this came from</h2>
+      
+      <div class="about-story-copy">
+        <p class="about-story-paragraph">CredShields grew out of SolidityScan, a Solidity and EVM scanner built for a Web3 market that needed automated contract review faster than any consultancy could deliver it. That product still runs under its own name because it earned its own market.</p>
+        <p class="about-story-paragraph">The wider company came from a simpler observation. Most security testing hands a buyer a pile of machine-generated findings that nobody stands behind, and engineering teams learn to ignore the queue. A finding that has not been reproduced is a guess with a severity label attached.</p>
+        <p class="about-story-paragraph">So the standard we set for ourselves is narrow and hard: every finding is exploited, reproduced, and signed by the researcher who confirmed it. That standard is what CredShields One automates and what our services team delivers by hand.</p>
+      </div>
+    </div>
+  </section>
+  <section id="principles" data-screen-label="How we work" class="about-refreshed-section">
+    <div class="about-section-inner">
+      <div class="about-section-kicker">/ How we work</div>
+      <h2 class="about-section-title">Four commitments we do not flex on</h2>
+      
+      <div class="about-principles-grid">
+        <div class="about-principle-card">
+          <div class="about-principle-number">01</div>
+          <h3 class="about-principle-title">Nothing reaches you unproven</h3>
+          <p class="about-principle-description">If we cannot reproduce it, it does not go in the report. Zero false positives is a delivery standard we hold every report to.</p>
+        </div>
+        <div class="about-principle-card">
+          <div class="about-principle-number">02</div>
+          <h3 class="about-principle-title">A name on every finding</h3>
+          <p class="about-principle-description">You know who found it and who confirmed it. That person is in your Slack channel and on the debrief call.</p>
+        </div>
+        <div class="about-principle-card">
+          <div class="about-principle-number">03</div>
+          <h3 class="about-principle-title">We never subcontract</h3>
+          <p class="about-principle-description">Every engagement is delivered by our own team. That matters when your contract carries flow-down security requirements.</p>
+        </div>
+        <div class="about-principle-card">
+          <div class="about-principle-number">04</div>
+          <h3 class="about-principle-title">We say what we did not cover</h3>
+          <p class="about-principle-description">Scope limits get stated plainly, along with what we would look at next and why. Honesty about limits is part of the deliverable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" data-screen-label="Team" class="about-refreshed-section">
+    <div class="about-section-inner">
+      <div class="about-section-kicker">/ Team</div>
+      <h2 class="about-section-title">The people behind it</h2>
+      
+      <div class="about-team-grid">
+        <div class="about-team-card">
+          <Image src={shashank} alt="Shashank" class="about-team-avatar" width={72} height={72} densities={[1, 2]} format="webp" loading="lazy" />
+          <div class="about-team-role">CO-FOUNDER &amp; CEO</div>
+          <h3 class="about-team-name">Shashank</h3>
+          <p class="about-team-description">12 years of pentesting and 5 years running bug bounty programs. Listed in the halls of fame of Google, Facebook, Apple, and 30+ others. Credited on CVE-2017-7063, CVE-2017-7062, and CVE-2017-2458.</p>
+        </div>
+        <div class="about-team-card">
+          <Image src={indranil} alt="Indranil Roy" class="about-team-avatar" width={72} height={72} densities={[1, 2]} format="webp" loading="lazy" />
+          <div class="about-team-role">CO-FOUNDER &amp; CBO</div>
+          <h3 class="about-team-name">Indranil Roy</h3>
+          <p class="about-team-description">Ex-Deloitte Cyber Risk. Open-source contributor to Nmap and Metasploit, with hall-of-fame recognitions from Tesla, Samsung, Cisco, Nokia, and 20+ others.</p>
+        </div>
+        <div class="about-team-card">
+          <Image src={aditya} alt="Aditya" class="about-team-avatar" width={72} height={72} densities={[1, 2]} format="webp" loading="lazy" />
+          <div class="about-team-role">AUDIT &amp; RESEARCH LEAD</div>
+          <h3 class="about-team-name">Aditya</h3>
+          <p class="about-team-description">10+ years and 500+ pentests across banking, fintech, healthcare, and telecom. Led pentest teams at Cobalt and HackerOne. OSCP, CREST CPSA, AWS Security.</p>
+        </div>
+      </div>
+    <div class="backed-by">
+      <h2 class="backed-by-label">Backed by</h2>
+      <div class="backed-by-logos">
+        <div class="backed-by-logo backed-by-logo-boostvc"><Image src={boostVc} alt="Boost VC" loading="lazy" /></div>
+        <div class="backed-by-logo"><Image src={draper} alt="Draper" loading="lazy" /></div>
+        <div class="backed-by-logo backed-by-logo-aptemis"><Image src={aptemis} alt="Aptemis Capital" loading="lazy" /></div>
+        <div class="backed-by-logo"><Image src={amand} alt="Amand Ventures" loading="lazy" /></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="numbers" data-screen-label="By the numbers" class="about-refreshed-section">
+    <div class="about-section-inner">
+      <div class="about-section-kicker">/ By the numbers</div>
+      <h2 class="about-section-title">What we have done so far</h2>
+      
+      <div class="about-numbers-grid">
+        <div class="about-number-card">
+          <div class="about-number-value">2,000+</div>
+          <div class="about-number-label">VAPT ENGAGEMENTS</div>
+        </div>
+        <div class="about-number-card">
+          <div class="about-number-value">200+</div>
+          <div class="about-number-label">ENGINEERING TEAMS</div>
+        </div>
+        <div class="about-number-card">
+          <div class="about-number-value">20+</div>
+          <div class="about-number-label">CVES DISCLOSED</div>
+        </div>
+        <div class="about-number-card">
+          <div class="about-number-value">100%</div>
+          <div class="about-number-label">REPORTS HUMAN-REVIEWED</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<GetStarted />
+
+<script is:inline src="/js/main.v1.js"></script>
+<script is:inline src="/js/homepage-rehaul.js"></script>
+<script is:inline>
+  document.querySelectorAll('.mode-toggle-btn[data-mode="chain"]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      try { localStorage.setItem('cs-mode', 'chain'); } catch(e) {}
+      window.location.href = 'index.html';
+    });
+  });
+</script>
+</BaseLayout>

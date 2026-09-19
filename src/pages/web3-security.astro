@@ -1,0 +1,346 @@
+---
+import { Image } from "astro:assets";
+import pageLogo0 from "../images/owasp-logo.png";
+import pageLogo1 from "../images/ethereum-foundation.png";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/web3.css";
+
+const title = "Web3 Security - CredShields";
+const description = "Smart contract audits, continuous scanning, and off-chain application testing from the authors of the OWASP Smart Contract Top 10.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="web3-page">
+<section id="top" data-screen-label="Hero" style="background:#081109;color:#F4F8F4;padding:150px 28px clamp(64px,8vw,88px)">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(168,255,69,.25);border-radius:var(--radius-pill);padding:8px 16px;background:rgba(14,36,18,.45);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:#A8FF45;animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:#C9E8AF;letter-spacing:.18em">WEB3 SECURITY · ON-CHAIN AND OFF</span>
+      </div>
+      <h1 style="font: 700 clamp(36px,4.6vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: #F4F8F4; text-wrap: pretty">We wrote the standard, then built the scanner</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: #A9BFAE; margin: 22px 0 30px; text-wrap: pretty">We authored the OWASP Smart Contract Top 10, then built SolidityScan to test against it. One team, contracts to cloud.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:32px">
+        <a href="https://solidityscan.com/" target="_blank" rel="noopener" class="cs-btn cs-btn-lime cs-btn-lg">Run a free scan on SolidityScan ↗</a>
+        <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-lg">Request an audit</a>
+        <a data-herodemo="" href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" style="font:500 14.5px var(--font-body);color:#A8FF45;white-space:nowrap">Book a demo ↗</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;border-top:1px solid rgba(244,248,244,.14);padding-top:26px;max-width:900px">
+        <div><div style="height:26px;display:flex;align-items:center"><Image src={pageLogo0} alt="OWASP" style="height:30px;width:86px;display:block;filter:brightness(0) invert(1);opacity:.92" loading="lazy" /></div><div style="font:400 11px var(--font-mono);color:#7A9A80;letter-spacing:.14em;margin-top:9px">SMART CONTRACT TOP 10 AUTHORS</div></div>
+        <div><div style="height:26px;display:flex;align-items:center"><Image src={pageLogo1} alt="Ethereum Foundation" style="height:26px;width:77px;display:block;filter:brightness(0) invert(1);opacity:.92" loading="lazy" /></div><div style="font:400 11px var(--font-mono);color:#7A9A80;letter-spacing:.14em;margin-top:9px">GRANT RECIPIENT</div></div>
+        <div><div style="font:700 26px var(--font-display);color:#F4F8F4;letter-spacing:-.02em">50K+</div><div style="font:400 11px var(--font-mono);color:#7A9A80;letter-spacing:.14em;margin-top:5px">CONTRACTS SCANNED</div></div>
+        <div><div style="font:700 26px var(--font-display);color:#F4F8F4;letter-spacing:-.02em">$3.67B</div><div style="font:400 11px var(--font-mono);color:#7A9A80;letter-spacing:.14em;margin-top:5px">2025 LOSSES TRACKED</div></div>
+      </div>
+    </div>
+  </section>
+  <section id="credentials" data-screen-label="Credentials" style="border-bottom:1px solid rgba(244,248,244,.12)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Credentials</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: #A8FF45; text-wrap: pretty">We wrote the standard the industry audits against</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: #A9BFAE; margin: 0 0 40px; text-wrap: pretty">Backed by the incident data behind it.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <a href="/owasp-2026" style="border:1px solid rgba(168,255,69,.4);background:rgba(168,255,69,.09);border-radius:var(--radius-md);padding:28px;display:flex;flex-direction:column;gap:10px;color:inherit" class="web3-hover-1">
+          <Image src={pageLogo0} alt="OWASP" style="height:30px;width:86px;display:block;filter:brightness(0) invert(1);opacity:.92" loading="lazy" />
+          <h3 style="font:600 19px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Authors of the Smart Contract Top 10</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0">Both the first 2025 edition and the 2026 update. Our incident data and scan corpus informed every category ranking.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Read the 2026 edition →</span>
+        </a>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px;display:flex;flex-direction:column;gap:10px;background:rgba(244,248,244,.04)">
+          <Image src={pageLogo1} alt="Ethereum Foundation" style="height:28px;width:83px;display:block;filter:brightness(0) invert(1);opacity:.92" loading="lazy" />
+          <h3 style="font:600 19px/1.25 var(--font-display);letter-spacing:-.015em;margin:6px 0 0;color:#F4F8F4">Ethereum Foundation grant</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0">The Ethereum Foundation funded the incident classification and category methodology behind the first Smart Contract Top 10.</p>
+        </div>
+        <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px;display:flex;flex-direction:column;gap:10px;background:rgba(244,248,244,.04);color:inherit" class="web3-hover-2">
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">SOLIDITYSCAN</span>
+          <h3 style="font:600 19px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Our own Solidity and EVM scanner</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0">50,000+ contracts scanned. Every finding maps to an OWASP Smart Contract Top 10 category, which is how the frequency data was produced.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Visit SolidityScan ↗</span>
+        </a>
+        <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px;display:flex;flex-direction:column;gap:10px;background:rgba(244,248,244,.04);color:inherit" class="web3-hover-2">
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">WEB3HACKHUB</span>
+          <h3 style="font:600 19px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">The incident database behind the rankings</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0">Every documented Web3 hack, catalogued with root cause and attributed loss. $3.67B tracked across 134 incidents in 2025 alone.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Browse the database ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="offchain" data-screen-label="The blind spot" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ The blind spot</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: #A8FF45; text-wrap: balance">Audited contracts, unaudited everything else</h2>
+      
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:720px">
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Most digital asset losses do not begin on-chain. They begin in the web backend that calls the contract, the API that authorizes the withdrawal, or the cloud account holding the signing key. Those surfaces sit outside the scope of a contract audit by definition.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">We have seen it directly. One digital asset platform had its contracts audited twice. The withdrawal endpoint in front of them ran the balance check and the debit as separate operations, and twelve concurrent requests moved twelve times the available balance before reconciliation caught up. No on-chain audit would have found it.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">That is the argument for one vendor across both layers: the contract, the application, the API, and the infrastructure, assessed as one system rather than four disconnected reports.</p>
+      </div>
+    </div>
+  </section>
+  <section id="services" data-screen-label="What we do" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What we do</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: #A8FF45; text-wrap: balance">On-chain and off-chain, from one team</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;display:flex;flex-direction:column;gap:9px;background:rgba(244,248,244,.04)">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h4"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">ON-CHAIN</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Smart contract audit</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Manual review by our audit team, backed by SolidityScan. EVM chains: Ethereum, Base, Arbitrum, Optimism, Polygon, and BNB Chain. Findings mapped to the OWASP Smart Contract Top 10, attestation letter included.</p>
+          <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Visit SolidityScan ↗</a>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;display:flex;flex-direction:column;gap:9px;background:rgba(244,248,244,.04)">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 10-2 6"/><path d="M20 5v6h-6"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">ON-CHAIN</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Continuous contract scanning</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Re-scan on every commit, not once at launch. Catches the reinitialised proxy and the modifier dropped in a later change, which a point-in-time audit cannot.</p>
+          <a href="https://solidityscan.com/" target="_blank" rel="noopener" style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Run a free scan ↗</a>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;display:flex;flex-direction:column;gap:9px;background:rgba(244,248,244,.04)">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18a15 15 0 010-18"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">OFF-CHAIN</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Web app and API pentesting</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Withdrawal authorization, trading logic, and the concurrency flaws that drain balances. Most digital asset losses start here, upstream of the contract.</p>
+          <a href="/web-pentest" style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Learn more →</a>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;display:flex;flex-direction:column;gap:9px;background:rgba(244,248,244,.04)">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 18a4 4 0 000-8 6 6 0 00-11.6 1.6A3.5 3.5 0 006.5 18z"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">OFF-CHAIN</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Cloud Security Review</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Key management, signing infrastructure, and the identity graph around your custody systems.</p>
+          <a href="/cloud-pentest" style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Learn more →</a>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;display:flex;flex-direction:column;gap:9px;background:rgba(244,248,244,.04)">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4H6a2 2 0 00-2 2v3a2 2 0 01-2 2 2 2 0 012 2v3a2 2 0 002 2h2"/><path d="M16 4h2a2 2 0 012 2v3a2 2 0 002 2 2 2 0 00-2 2v3a2 2 0 01-2 2h-2"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">OFF-CHAIN</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">API Security Testing</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Exchange and protocol APIs: authorization matrices, rate limiting, and replay protection on signed operations.</p>
+          <a href="/api-security" style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Learn more →</a>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px 24px;display:flex;flex-direction:column;gap:9px;background:rgba(244,248,244,.04)">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">PEOPLE</span>
+          <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Custody red teaming</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Phishing and crypto dusting against the operations team holding the keys. Custody breaches usually start with a person.</p>
+          <a href="/red-team" style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="findings" data-screen-label="Findings" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Findings</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: #A8FF45; text-wrap: balance">What we keep finding in Web3</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: #A9BFAE; margin: 0 0 40px; text-wrap: pretty">From recent engagements across exchanges, wallets, and tokenization platforms.</p>
+      <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);overflow:hidden;background:rgba(244,248,244,.04)">
+        <div style="padding:20px 24px;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical" style="background:rgba(255,139,107,.15);color:#FF8B6B;border:1px solid rgba(255,139,107,.35)">Critical</span>
+            <span class="cs-proof cs-proof-proven" style="background:rgba(168,255,69,.13);color:#A8FF45;border:1px solid rgba(168,255,69,.32)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:#FF8B6B">CVSS 9.2</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:#F4F8F4;text-wrap:pretty">Withdrawal authorization bypassed by concurrent requests</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;text-wrap:pretty">The balance check and the debit were not atomic. Parallel withdrawal requests drained more than the available balance before the ledger reconciled. Entirely off-chain.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid rgba(244,248,244,.12);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical" style="background:rgba(255,139,107,.15);color:#FF8B6B;border:1px solid rgba(255,139,107,.35)">Critical</span>
+            <span class="cs-proof cs-proof-proven" style="background:rgba(168,255,69,.13);color:#A8FF45;border:1px solid rgba(168,255,69,.32)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:#FF8B6B">CVSS 9.0</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:#F4F8F4;text-wrap:pretty">SSRF in an API proxy reaching cloud metadata</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;text-wrap:pretty">A proxy endpoint could be forced to contact internal infrastructure and the metadata service, escalating from one vulnerable route to credentials for the surrounding environment.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid rgba(244,248,244,.12);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high" style="background:rgba(232,195,90,.15);color:#E8C35A;border:1px solid rgba(232,195,90,.35)">High</span>
+            <span class="cs-proof cs-proof-proven" style="background:rgba(168,255,69,.13);color:#A8FF45;border:1px solid rgba(168,255,69,.32)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:#E8C35A">CVSS 8.4</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:#F4F8F4;text-wrap:pretty">Privileged contract function callable by any address after upgrade</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;text-wrap:pretty">An upgrade reinitialized the proxy without re-applying the owner modifier, leaving a mint function publicly callable for the window before it was noticed.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid rgba(244,248,244,.12);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high" style="background:rgba(232,195,90,.15);color:#E8C35A;border:1px solid rgba(232,195,90,.35)">High</span>
+            <span class="cs-proof cs-proof-proven" style="background:rgba(168,255,69,.13);color:#A8FF45;border:1px solid rgba(168,255,69,.32)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:#E8C35A">CVSS 7.8</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:#F4F8F4;text-wrap:pretty">Replayable wallet signatures in the Web3 login flow</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;text-wrap:pretty">A signed message with no nonce or expiry allowed indefinite session regeneration without the wallet holder signing anything new.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="standards" data-screen-label="Standards" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Standards</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">What we test against</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:#A8FF45;letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid rgba(244,248,244,.12);margin-bottom:14px">ON-CHAIN</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>OWASP Smart Contract Top 10 (2026 and 2025)</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SWC Registry classification</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Protocol-specific economic invariants</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Upgrade and governance path review</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:#A8FF45;letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid rgba(244,248,244,.12);margin-bottom:14px">OFF-CHAIN</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>OWASP ASVS and API Security Top 10</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MITRE ATT&amp;CK for the infrastructure layer</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CVSS 3.1 with environmental adjustment</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CWE classification per finding</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:#A8FF45;letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid rgba(244,248,244,.12);margin-bottom:14px">REGULATORY</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MiCA requirements for EU operations</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>VASP and travel rule obligations</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Custody and proof-of-reserve expectations</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:#A9BFAE"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#A8FF45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 for institutional counterparties</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="research" data-screen-label="Research" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Research</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">The research behind it</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h4"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">STANDARD</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">OWASP Smart Contract Top 10 2026</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Four new categories driven by $3.67B in 2025 losses across 134 documented incidents. Read the full breakdown and the loss landscape.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h4"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">ARCHIVE</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">OWASP Smart Contract Top 10 2025</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">The first-ever edition, funded by the Ethereum Foundation and built on $1.42B in 2024 loss data.</p>
+        </div>
+        <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="11" rx="4"/><path d="M8 12H4M20 12h-4M8.5 8.5L6 6M15.5 8.5L18 6M8.5 17.5L6 20M15.5 17.5L18 20M10 5a2 2 0 014 0"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A8FF45;letter-spacing:.14em">DATASET</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Web3HackHub</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Our incident database: real-world hacks catalogued with root-cause classification and attributed losses. The calibration source for both OWASP editions.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Browse Web3HackHub ↗</span>
+        </a>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+        <a href="/owasp-2026" class="cs-btn cs-btn-lime cs-btn-md">OWASP Smart Contract Top 10 2026 →</a>
+        <a href="/owasp-2025" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">2025 edition</a>
+        <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Web3HackHub ↗</a>
+        <a href="Compare - SolidityScan vs CertiK and Hacken.html" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">SolidityScan vs CertiK and Hacken</a>
+      </div>
+    </div>
+  </section>
+  <section id="cases" data-screen-label="Case studies" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Case studies</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">Engagements in this space</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">DIGITAL ASSETS</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Twelve concurrent requests</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">A platform whose contracts were audited twice, and whose withdrawal endpoint was not.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="11" rx="4"/><path d="M8 12H4M20 12h-4M8.5 8.5L6 6M15.5 8.5L18 6M8.5 17.5L6 20M15.5 17.5L18 20M10 5a2 2 0 014 0"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">TOKENIZATION</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Two platforms, 28 findings</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Investor dashboard and admin portal, plus an AWS audit and a red team simulation, before onboarding began.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">MARKET MAKING</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Ten-plus AWS regions, zero breaches</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">A global cloud audit and live phishing simulation for a VARA-regulated market maker.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+        <a href="/case-studies.html" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">All case studies →</a>
+        <a href="/gaming-security.html" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Gaming and digital assets</a>
+      </div>
+    </div>
+  </section>
+  <section id="ecosystem" data-screen-label="Ecosystem" style="border-bottom:1px solid rgba(244,248,244,.12)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Ecosystem</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: #A8FF45; text-wrap: pretty">The public record, open to anyone</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: #A9BFAE; margin: 0 0 40px; text-wrap: pretty">Audit history, ecosystem activity, team verification, and incident data. No account required.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+        <a href="https://credshields.com/recently-audited" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:9px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:24px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <h3 style="font:600 16.5px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Recently Audited</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Every audit we are permitted to publish, newest first.</p>
+          <span style="font:500 12.5px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:6px">Open ↗</span>
+        </a>
+        <a href="https://credshields.com/popular-projects" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:9px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:24px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <h3 style="font:600 16.5px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Popular Projects</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Where the ecosystem is scanning and looking most.</p>
+          <span style="font:500 12.5px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:6px">Open ↗</span>
+        </a>
+        <a href="https://credshields.com/kyc-reports" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:9px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:24px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <h3 style="font:600 16.5px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">KYC Reports</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Verified team identity reports investors can check.</p>
+          <span style="font:500 12.5px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:6px">Open ↗</span>
+        </a>
+        <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:9px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:24px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <h3 style="font:600 16.5px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4">Web3HackHub</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Documented hacks with root cause and attributed losses.</p>
+          <span style="font:500 12.5px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:6px">Open ↗</span>
+        </a>
+      </div>
+      <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:24px 0 0"><a href="/web3-ecosystem" style="font-weight:500">More on the Web3 ecosystem →</a></p>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ FAQ</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:balance">Common questions</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Which chains do you cover?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">EVM chains primarily: Ethereum, Base, Arbitrum, Optimism, Polygon, and BNB Chain. Ask about non-EVM and we will be straight about our depth rather than take the work.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Is SolidityScan separate from CredShields?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">SolidityScan is our scanner and keeps its own name because it has its own market. Same company, same audit team behind it.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Do we need an audit if we scanned already?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Scanning covers known patterns and regressions across every commit. An audit tests your specific protocol economics, which no scanner can anticipate. Most teams need both.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Can you test the application around our contracts?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Yes, and it is where most real losses start. Contract audits and application testing come from the same company, which is unusual in this space.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Do you publish audit reports?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Only if you want them published. Many clients publish the contract audit for community trust and keep the application report private.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">What about the OWASP work, can we cite it?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Yes. Both editions are published by the OWASP Foundation and freely available. Our authorship is a matter of public record.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

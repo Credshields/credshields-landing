@@ -1,0 +1,328 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/code-review-sast.css";
+
+const title = "Source Code Review and SAST - CredShields";
+const description = "We read the code paths a scanner cannot follow, tune your existing SAST until its output is worth reading, and tell you which alerts to delete.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://credshields.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://credshields.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Source Code Review and SAST",
+      "item": "https://credshields.com/code-review-sast/"
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+  <div class="code-review-sast-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <span data-heroicon="" aria-hidden="true" style="color:var(--color-forest);display:block;margin-bottom:18px;transform:scale(1.5);transform-origin:left center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l-6-6 6-6M15 6l6 6-6 6"/></svg></span>
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">CONTINUOUS AND TOOLING</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: var(--color-forest); text-wrap: pretty; max-width: 960px">Code review by people who exploit code for a living</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 22px 0 30px; text-wrap: pretty; max-width: 760px">We read the code paths a scanner cannot follow, tune your existing SAST until its output is worth reading, and tell you which alerts to delete.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+        <a data-herodemo="" href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" style="font:500 14.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Book a demo ↗</a>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="CredShields One" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) 28px">
+      <div style="background:var(--surface-deep);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 460px;max-width:640px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span class="cs-badge cs-badge-lime">Start here</span>
+            <span style="font:500 11px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.16em">CREDSHIELDS ONE</span>
+          </div>
+          <h2 style="font:600 clamp(22px,2.4vw,30px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--text-on-deep-primary);max-width:640px;text-wrap:balance">Code review finds the cause, CredShields One proves the effect</h2>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-on-deep-tertiary);margin:0;text-wrap:pretty">Static review tells you a code path is dangerous. The platform confirms whether it is reachable and exploitable in your running application. Together they cut both false positives and blind spots.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/" class="cs-btn cs-btn-lime cs-btn-md">Explore CredShields One</a>
+          <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Talk it through</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="scope" data-screen-label="What we test" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What we test</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">Manual review where it pays, tooling where it scales</h2>
+      <p style="font:400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">We review the security-critical paths by hand and use tooling for breadth.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">MANUAL REVIEW</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Authentication and authorization enforcement points</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Cryptography use and key handling</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Input trust boundaries and deserialization</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Secrets, credentials, and configuration handling</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">TOOLING</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SAST rule tuning against your codebase</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>False-positive triage and baseline reset</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom rules for your framework patterns</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CI integration and diff-based scanning</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">SUPPLY CHAIN</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Dependency inventory and SBOM generation</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Known-vulnerability reachability analysis</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Transitive dependency and typosquat risk</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Build and artifact provenance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="process" data-screen-label="Process" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ How the engagement runs</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">Read the risky code first</h2>
+      <p style="font:400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">We do not review every line. We review the lines that decide who gets access to what.</p>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">01</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Threat model and prioritization</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A short session to identify the security-critical paths, then we rank the code that guards them.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">2-4 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">02</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Manual review</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Line-by-line review of prioritized paths, with findings raised as we confirm them.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">7-12 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">03</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Tooling and triage</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Your SAST tuned against real output. Every existing alert triaged as real, unreachable, or noise.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">4-7 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">04</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Report and handover</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Signed report plus committed rule configuration, and a retest of fixed paths.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">3-4 days</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="findings" data-screen-label="Sample findings" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Sample findings</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">What these engagements typically surface</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">From recent code review engagements.</p>
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+        <div style="padding:20px 24px;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical">Critical</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-danger-strong)">CVSS 8.9</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Authorization decorator missing on 3 admin routes</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">A framework decorator enforced role checks across the admin blueprint. Three routes added during a rush had been registered directly, bypassing it entirely.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high">High</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 8.3</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">JWT signature verified with a decoded, attacker-controlled key</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">The verification call read the algorithm and key hint from the token itself. No SAST rule flagged it because the library call looked correct.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-medium">Medium</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 6.6</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Reachable known vulnerability behind 4 transitive hops</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">A deserialization CVE in a fourth-level dependency was reachable from an unauthenticated upload handler. Dependency scanners flagged it as low because they do not test reachability.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deliverables" data-screen-label="Deliverables" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What you get</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">A report, plus tooling that stays useful</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Half the value is what we tell you to stop alerting on.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">IN THE REPORT</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Executive summary with business-impact framing</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Findings with file, line, and exploitability analysis</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Remediation as concrete code, not guidance</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Full triage of existing SAST alerts</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>SBOM with reachability-ranked dependencies</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Control mapping to SOC 2, ISO 27001, and PCI DSS</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">ALSO INCLUDED</div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Findings in your tracker</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">Jira, Linear, or GitHub Issues, filed as we confirm them.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Live triage channel</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">A shared Slack or Teams channel with the reviewing engineer for the duration.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Retest included</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">One full retest after remediation, plus ad-hoc retests on individual findings.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Debrief call</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">Code walkthrough with your engineers on the patterns behind the findings, not just the instances.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="standards" data-screen-label="Standards" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Standards we test against</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Standards we review against</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">METHODOLOGY</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>OWASP Code Review Guide</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>OWASP ASVS 4.0 verification requirements</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>NIST SSDF (SP 800-218)</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CWE Top 25 as a floor, not a ceiling</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">SCORING</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CVSS 3.1 with environmental adjustment</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CWE classification per finding</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MITRE ATT&amp;CK technique tagging</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Business-impact rating agreed with you</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">COMPLIANCE</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 secure development evidence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>ISO 27001 Annex A.14</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>PCI DSS 6.3 secure coding</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>GDPR Article 25 data protection by design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" data-screen-label="Engagement sizing" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Engagement sizing</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">Priced by codebase size and language count</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Indicative sizing. Final quote follows a repository walkthrough.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">FOCUSED</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">One service</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">A single service or module, one language, security-critical paths only.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">2 weeks</div>
+        </div>
+        <div style="border:1px solid var(--color-forest);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;background:var(--color-forest-100);">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">APPLICATION</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">Full application</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">One application across frontend and backend, plus SAST tuning. The most common scope.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">3-4 weeks</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ESTATE</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">Multi-repository</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Several services and languages, with shared library review and org-wide rule configuration.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">5-8 weeks</div>
+        </div>
+      </div>
+      <p style="font:400 13.5px/1.6 var(--font-body);color:var(--text-secondary);margin:22px 0 0;max-width:640px">Every engagement is quoted after scoping. No per-seat pricing, no surprise change orders, and retests are included for the life of the engagement.</p>
+    </div>
+  </section>
+  <section id="case" data-screen-label="Case study" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Case study</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: var(--color-forest); text-wrap: pretty">A fintech backend, three routes</h2>
+      
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <div style="flex:1 1 380px;max-width:620px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:16px">FINTECH · SERIES B</div>
+          <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 16px;text-wrap:balance">Their SAST had 1,400 open alerts. The finding that mattered was not one of them.</p>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Three admin routes had been registered outside the blueprint that carried the authorization decorator. Every tool read the code as correct because it was. Only reading the routing table against the decorator list showed the gap. We also closed 1,100 of those alerts as unreachable.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;min-width:180px">
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">3</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">UNPROTECTED ROUTES</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">1,400</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">ALERTS BEFORE</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">300</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">ALERTS AFTER</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Questions we get</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Questions we get</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Do you need our full repository?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes for manual review, under NDA and usually via a read-only account on your own SCM. We do not copy code to our infrastructure.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Which languages do you cover?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Go, Python, Java and Kotlin, TypeScript and JavaScript, C#, Ruby, Rust, and Solidity. Ask about anything else and we will tell you if it is outside our depth.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Can you just tune our existing SAST?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes, that is a standalone engagement. Most teams find the triage alone changes whether engineers read the output at all.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">How does this compare to a pentest?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Code review finds causes across all paths including unreachable ones. A pentest finds effects on reachable paths. Run both if you can; run the pentest first if you cannot.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

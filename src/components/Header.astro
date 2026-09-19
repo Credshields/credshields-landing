@@ -1,0 +1,500 @@
+    <!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+    <div class="nav-wrap">
+      <div class="nav">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo" aria-label="CredShields home">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+          <img
+            src="images/credshields_white_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="110"
+            class="show-chain"
+          />
+          <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+          <img
+            src="images/credshields_black_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="110"
+            class="show-apps"
+          />
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="/about" class="nav-link">About</a>
+
+          <!-- Services dropdown - items tagged by mode -->
+          <div class="nav-link nav-dropdown">
+            <span>Services</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu nav-dropdown-wide">
+              <a href="/services" class="nav-dropdown-item">All services →</a>
+              <div class="nav-dropdown-section-title">MANUAL + AI PENTESTING</div>
+              <a href="web-pentest" class="nav-dropdown-item">Web App Pentesting</a>
+              <a href="mobile-pentest" class="nav-dropdown-item">Mobile App Pentesting</a>
+              <a href="api-security" class="nav-dropdown-item">API Security Testing</a>
+              <a href="cloud-pentest" class="nav-dropdown-item">Cloud Security Review</a>
+              <a href="red-team" class="nav-dropdown-item">Red Team Engagement</a>
+              <div class="nav-dropdown-section-title">CONTINUOUS &amp; TOOLING</div>
+              <a href="devsecops" class="nav-dropdown-item">DevSecOps Integration</a>
+              <a href="/code-review-sast" class="nav-dropdown-item">Source Code Review &amp; SAST</a>
+              <div class="nav-dropdown-section-title">WEB3</div>
+              <a href="/web3-security" class="nav-dropdown-item">Web3 Security</a>
+              <a href="https://solidityscan.com/" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer">SolidityScan ↗</a>
+              <a href="/owasp-2026" class="nav-dropdown-item">OWASP Smart Contract Top 10 2026</a>
+              <a href="/owasp-2025" class="nav-dropdown-item">OWASP Smart Contract Top 10 2025</a>
+              <a href="/web3-ecosystem" class="nav-dropdown-item">Web3 Ecosystem</a>
+              <a href="recently-audited" class="nav-dropdown-item">Recently audited</a>
+              <a href="https://solidityscan.com/web3hackhub" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer">Web3HackHub ↗</a>
+              <div class="nav-dropdown-section-title">SPECIALIZED</div>
+              <a href="ai-llm-security" class="nav-dropdown-item">AI / LLM AppSec</a>
+              <a href="compliance" class="nav-dropdown-item">Compliance Readiness</a>
+              <a href="smart-contract-audits" class="nav-dropdown-item">Smart Contract Audits</a>
+            </div>
+          </div>
+
+
+          <!-- Industries dropdown -->
+          <div class="nav-link nav-dropdown">
+            <span>Industries</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <!-- ⛓ Chain-only industries -->
+              <a
+                href="web3-protocol-security.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Web3 Protocols &amp; Exchanges</a
+              >
+              <a
+                href="stablecoins.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Stablecoins</a
+              >
+              <a
+                href="realworldassets.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Real World Assets</a
+              >
+              <a
+                href="crosschainbridge.html"
+                class="nav-dropdown-item nav-chain-only"
+                >Cross-Chain Bridge</a
+              >
+              <a href="payments.html" class="nav-dropdown-item nav-chain-only"
+                >Payments &amp; DeFi</a
+              >
+              <!-- 📱 Apps-only industries (from apps_site) -->
+              <a
+                href="/fintech-security"
+                class="nav-dropdown-item"
+                >Finance &amp; Fintech</a
+              >
+              <a
+                href="/saas-security"
+                class="nav-dropdown-item nav-apps-only"
+                >SaaS &amp; Enterprise</a
+              >
+              <a
+                href="/healthcare-security"
+                class="nav-dropdown-item nav-apps-only"
+                >Healthcare &amp; Life Sciences</a
+              >
+              <a
+                href="/industry-edtech"
+                class="nav-dropdown-item nav-apps-only"
+                >EdTech</a
+              >
+              <a
+                href="/industry-ecommerce"
+                class="nav-dropdown-item nav-apps-only"
+                >E-commerce &amp; Retail</a
+              >
+              <a
+                href="/industry-govtech"
+                class="nav-dropdown-item nav-apps-only"
+                >Public Sector / GovTech</a
+              >
+              <!-- ✅ Shared -->
+              <a href="/gaming-security" class="nav-dropdown-item"
+                >Gaming &amp; Digital Assets</a
+              >
+            </div>
+          </div>
+
+          <!-- Resources dropdown -->
+          <div class="nav-link nav-dropdown">
+            <span>Resources</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <a href="Resources.html" class="nav-dropdown-item">All Resources</a>
+              <a href="/what-is-ptaas" class="nav-dropdown-item">What is PTaaS?</a>
+              <a href="/compliance-guides" class="nav-dropdown-item">Compliance Guides</a>
+              <a href="/security-glossary" class="nav-dropdown-item">Security Glossary</a>
+              <a href="/pentest-readiness" class="nav-dropdown-item">Pentest Readiness Quiz</a>
+              <a href="/cve-research" class="nav-dropdown-item">CVE Research</a>
+              <a href="/brand-kit" class="nav-dropdown-item">Brand Kit</a>
+              <a href="https://discover.credshields.com/" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer">Blog ↗</a>
+              <a href="/resource-library" class="nav-dropdown-item">Resource Library</a>
+              <a href="/events" class="nav-dropdown-item">Events</a>
+              <a href="/faq" class="nav-dropdown-item">FAQ</a>
+            </div>
+          </div>
+
+          <a href="case-studies.html" class="nav-link nav-apps-only">Case Studies</a>
+          <a href="/why-us" class="nav-link">Why Us</a>
+
+
+          <!-- Institutions - Chain only -->
+          <div class="nav-link nav-dropdown nav-chain-only">
+            <span>Institutions</span>
+            <svg
+              width="10"
+              height="10"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+            <div class="nav-dropdown-menu">
+              <a href="Institutions.html" class="nav-dropdown-item">Overview</a>
+              <a href="vc-crypto-funds.html" class="nav-dropdown-item"
+                >VCs &amp; Crypto Funds</a
+              >
+              <a href="stablecoins.html" class="nav-dropdown-item"
+                >Stablecoins</a
+              >
+              <a href="crosschainbridge.html" class="nav-dropdown-item"
+                >Cross-Chain Bridge</a
+              >
+              <a href="realworldassets.html" class="nav-dropdown-item"
+                >Real World Assets</a
+              >
+              <a href="payments.html" class="nav-dropdown-item">Payments</a>
+            </div>
+          </div>
+
+        </nav>
+
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <a
+            class="btn-nav-demo"
+            href="https://calendly.com/shashank-credshields/credshields?back=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Demo
+          </a>
+          <a class="btn-primary" href="#contact">
+            Get Scoped
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="mobile-menu-btn"
+          id="mobile-menu-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════
+     MOBILE OVERLAY
+════════════════════════════════════════════════════════════ -->
+    <div
+      class="mobile-overlay"
+      id="mobile-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Navigation"
+    >
+      <div class="mobile-overlay-head">
+        <a href="index.html" class="nav-logo">
+          <!-- ▓▓▓▓▓ ⛓ CHAIN MODE - white logo (dark bg) ▓▓▓▓▓ -->
+          <img
+            src="images/credshields_white_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="30"
+            class="show-chain"
+          />
+          <!-- ░░░░░ 📱 APPS MODE - black logo (light bg) ░░░░░ -->
+          <img
+            src="images/credshields_black_logo.svg"
+            alt="CredShields"
+            width="110"
+            height="30"
+            class="show-apps"
+          />
+        </a>
+        <button class="mobile-close" id="mobile-close" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a
+          href="/about"
+          class="mobile-nav-link"
+          style="display: block; padding: 16px 0"
+          >About</a
+        >
+      </div>
+
+      <!-- Services -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-solutions"
+        >
+          <span>Services</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-solutions">
+          <a href="/services" class="mobile-sub-link">All services →</a>
+          <div class="nav-dropdown-section-title">MANUAL + AI PENTESTING</div>
+          <a href="web-pentest" class="mobile-sub-link">Web App Pentesting</a>
+          <a href="mobile-pentest" class="mobile-sub-link">Mobile App Pentesting</a>
+          <a href="api-security" class="mobile-sub-link">API Security Testing</a>
+          <a href="cloud-pentest" class="mobile-sub-link">Cloud Security Review</a>
+          <a href="red-team" class="mobile-sub-link">Red Team Engagement</a>
+          <div class="nav-dropdown-section-title">CONTINUOUS &amp; TOOLING</div>
+          <a href="devsecops" class="mobile-sub-link">DevSecOps Integration</a>
+          <a href="/code-review-sast" class="mobile-sub-link">Source Code Review &amp; SAST</a>
+          <div class="nav-dropdown-section-title">WEB3</div>
+          <a href="/web3-security" class="mobile-sub-link">Web3 Security</a>
+          <a href="https://solidityscan.com/" class="mobile-sub-link" target="_blank" rel="noopener noreferrer">SolidityScan ↗</a>
+          <a href="/owasp-2026" class="mobile-sub-link">OWASP Smart Contract Top 10 2026</a>
+          <a href="/owasp-2025" class="mobile-sub-link">OWASP Smart Contract Top 10 2025</a>
+          <a href="/web3-ecosystem" class="mobile-sub-link">Web3 Ecosystem</a>
+          <a href="recently-audited" class="mobile-sub-link">Recently audited</a>
+          <a href="https://solidityscan.com/web3hackhub" class="mobile-sub-link" target="_blank" rel="noopener noreferrer">Web3HackHub ↗</a>
+          <div class="nav-dropdown-section-title">SPECIALIZED</div>
+          <a href="ai-llm-security" class="mobile-sub-link">AI / LLM AppSec</a>
+          <a href="compliance" class="mobile-sub-link">Compliance Readiness</a>
+          <a href="smart-contract-audits" class="mobile-sub-link">Smart Contract Audits</a>
+        </div>
+      </div>
+
+      <!-- Industries -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-industries"
+        >
+          <span>Industries</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-industries">
+          <!-- ⛓ Chain-only -->
+          <a
+            href="web3-protocol-security.html"
+            class="mobile-sub-link nav-chain-only"
+            >Web3 Protocols &amp; Exchanges</a
+          >
+          <a href="stablecoins.html" class="mobile-sub-link nav-chain-only"
+            >Stablecoins</a
+          >
+          <a href="realworldassets.html" class="mobile-sub-link nav-chain-only"
+            >Real World Assets</a
+          >
+          <a href="crosschainbridge.html" class="mobile-sub-link nav-chain-only"
+            >Cross-Chain Bridge</a
+          >
+          <a href="payments.html" class="mobile-sub-link nav-chain-only"
+            >Payments &amp; DeFi</a
+          >
+          <!-- 📱 Apps-only (from apps_site) -->
+          <a href="/fintech-security" class="mobile-sub-link"
+            >Finance &amp; Fintech</a
+          >
+          <a href="/saas-security" class="mobile-sub-link nav-apps-only"
+            >SaaS &amp; Enterprise</a
+          >
+          <a
+            href="/healthcare-security"
+            class="mobile-sub-link nav-apps-only"
+            >Healthcare &amp; Life Sciences</a
+          >
+          <a href="/industry-edtech" class="mobile-sub-link nav-apps-only"
+            >EdTech</a
+          >
+          <a
+            href="/industry-ecommerce"
+            class="mobile-sub-link nav-apps-only"
+            >E-commerce &amp; Retail</a
+          >
+          <a href="/industry-govtech" class="mobile-sub-link nav-apps-only"
+            >Public Sector / GovTech</a
+          >
+          <!-- ✅ Shared -->
+          <a href="/gaming-security" class="mobile-sub-link"
+            >Gaming &amp; Digital Assets</a
+          >
+        </div>
+      </div>
+
+      <!-- Resources -->
+      <div class="mobile-nav-item">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-resources"
+        >
+          <span>Resources</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-resources">
+          <a href="Resources.html" class="mobile-sub-link">All Resources</a>
+          <a href="/what-is-ptaas" class="mobile-sub-link">What is PTaaS?</a>
+          <a href="/compliance-guides" class="mobile-sub-link">Compliance Guides</a>
+          <a href="/security-glossary" class="mobile-sub-link">Security Glossary</a>
+          <a href="/pentest-readiness" class="mobile-sub-link">Pentest Readiness Quiz</a>
+          <a href="/cve-research" class="mobile-sub-link">CVE Research</a>
+          <a href="/brand-kit" class="mobile-sub-link">Brand Kit</a>
+          <a href="https://discover.credshields.com/" class="mobile-sub-link" target="_blank" rel="noopener noreferrer">Blog ↗</a>
+          <a href="/resource-library" class="mobile-sub-link">Resource Library</a>
+          <a href="/events" class="mobile-sub-link">Events</a>
+          <a href="/faq" class="mobile-sub-link">FAQ</a>
+        </div>
+      </div>
+
+      <div class="mobile-nav-item nav-apps-only">
+        <a href="case-studies.html" class="mobile-nav-link">Case Studies</a>
+      </div>
+
+      <div class="mobile-nav-item">
+        <a href="/why-us" class="mobile-nav-link">Why Us</a>
+      </div>
+
+      <!-- Institutions - Chain only -->
+      <div class="mobile-nav-item nav-chain-only">
+        <div
+          class="mobile-nav-link mobile-nav-toggle"
+          data-target="mob-institutions"
+        >
+          <span>Institutions</span>
+          <svg
+            class="mobile-chevron"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            style="transition: transform 200ms"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+        <div class="mobile-sub" id="mob-institutions">
+          <a href="Institutions.html" class="mobile-sub-link">Overview</a>
+          <a href="vc-crypto-funds.html" class="mobile-sub-link"
+            >VCs &amp; Crypto Funds</a
+          >
+          <a href="stablecoins.html" class="mobile-sub-link">Stablecoins</a>
+          <a href="crosschainbridge.html" class="mobile-sub-link"
+            >Cross-Chain Bridge</a
+          >
+          <a href="realworldassets.html" class="mobile-sub-link"
+            >Real World Assets</a
+          >
+          <a href="payments.html" class="mobile-sub-link">Payments</a>
+        </div>
+      </div>
+
+      <div class="mobile-overlay-cta">
+        <a
+          class="btn-secondary-lg btn-mobile-demo"
+          href="https://calendly.com/shashank-credshields/credshields?back=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="width: 100%; justify-content: center"
+        >
+          Book a Demo
+        </a>
+        <a
+          class="btn-primary-lg"
+          href="#contact"
+          style="width: 100%; text-align: center"
+        >
+          Get Scoped
+        </a>
+        <button
+          class="btn-secondary-lg"
+          style="width: 100%; justify-content: center"
+          data-free-ai-scan
+        >
+          Run Free AI Scan
+        </button>
+      </div>
+    </div>

@@ -1,0 +1,227 @@
+@import "./global.css";
+
+/* Footer styles, including responsive rules and homepage overrides. */
+.footer {
+  background: #040C06;
+  border-top: 1px solid #0A1A0C;
+  padding: 52px 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 240px repeat(3, 1fr);
+  gap: 48px;
+  margin-bottom: 44px;
+}
+.footer-brand-logo {
+  display: flex; align-items: center; gap: 9px;
+  margin-bottom: 14px;
+}
+.footer-brand-name {
+  font-family: var(--font-mono);
+  font-size: 15px; font-weight: 700; color: #FFFFFF;
+}
+.footer-brand-addr {
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+  line-height: 1.65; margin-bottom: 16px;
+}
+.footer-social {
+  display: flex; gap: 12px; margin-bottom: 16px;
+}
+.footer-social-link {
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r-sm);
+  transition: border-color 150ms;
+}
+.footer-social-link:hover { border-color: rgba(255,255,255,0.3); }
+.footer-social-link svg { opacity: 0.45; transition: opacity 150ms; }
+.footer-social-link:hover svg { opacity: 0.85; }
+.footer-copy {
+  font-family: var(--font-mono);
+  font-size: 10px; color: rgba(255,255,255,0.2);
+  letter-spacing: 0.04em;
+}
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 9px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3); margin-bottom: 18px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-link {
+  font-size: 13px; color: rgba(255,255,255,0.5);
+  transition: color 120ms;
+}
+.footer-link:hover { color: rgba(255,255,255,0.85); }
+.footer-bottom {
+  border-top: 1px solid #0A1A0C;
+  padding-top: 20px;
+  display: flex; gap: 20px; justify-content: flex-end;
+}
+.footer-legal {
+  font-family: var(--font-mono);
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.06em; color: rgba(255,255,255,0.2);
+  transition: color 120ms;
+}
+.footer-legal:hover { color: rgba(255,255,255,0.45); }
+
+@media (max-width: 960px) {
+  .footer-grid  { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+}
+
+.footer .rehaul-footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.rehaul-footer-brand {
+  flex: 0 0 240px;
+}
+
+.rehaul-footer-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  min-width: 0;
+}
+
+@media (max-width: 960px) {
+  .footer .rehaul-footer-main {
+    flex-direction: column;
+  }
+
+  .rehaul-footer-brand {
+    flex-basis: auto;
+  }
+
+  .rehaul-footer-navigation {
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .rehaul-footer-navigation {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+}
+
+.rehaul-footer-description {
+  max-width: 240px;
+  margin: 0 0 18px;
+  color: rgba(244, 248, 244, 0.6);
+  font: 400 13px/1.6 "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+  text-wrap: pretty;
+}
+
+.rehaul-footer-reviews {
+  display: flex;
+  padding: 22px 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(244, 248, 244, 0.12);
+}
+
+.rehaul-footer-rating,
+.rehaul-footer-review-actions,
+.rehaul-footer-stars {
+  display: flex;
+  align-items: center;
+}
+
+.rehaul-footer-rating {
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.rehaul-footer-stars {
+  gap: 3px;
+}
+
+.rehaul-footer-stars svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+  fill: #00b67a;
+}
+
+.rehaul-footer-stars .is-partial {
+  opacity: 0.45;
+}
+
+.rehaul-footer-score {
+  color: rgba(244, 248, 244, 0.9);
+  font: 500 13px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+}
+
+.rehaul-footer-score strong {
+  font-weight: 700;
+}
+
+.rehaul-footer-review-count {
+  color: rgba(244, 248, 244, 0.5);
+  font: 400 12px "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+  letter-spacing: 0.06em;
+}
+
+.rehaul-footer-review-actions {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rehaul-footer-review-actions a {
+  color: #a8ff45;
+  font: 500 12.5px "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+}
+
+.rehaul-footer-review-actions a:hover {
+  color: #f4f8f4;
+}
+
+.rehaul-footer-review-actions .rehaul-footer-rate {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #a8ff45;
+  color: #0a1a0c;
+  white-space: nowrap;
+}
+
+.rehaul-footer-review-actions .rehaul-footer-rate:hover {
+  background: #8fe62a;
+  color: #0a1a0c;
+}
+
+.footer .footer-bottom {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.rehaul-footer-company {
+  color: rgba(244, 248, 244, 0.5);
+  font: 400 12px/1.5 "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    system-ui, sans-serif;
+}
+
+.rehaul-footer-legal-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}

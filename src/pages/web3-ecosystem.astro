@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/web3.css";
+
+const title = "Web3 Ecosystem - CredShields";
+const description = "Recently audited projects, popular protocols, KYC reports, and the incident database behind the OWASP Smart Contract Top 10.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="web3-page">
+<section id="top" data-screen-label="Hero" style="background:#081109;color:#F4F8F4;padding:150px 28px clamp(64px,8vw,88px)">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(168,255,69,.25);border-radius:var(--radius-pill);padding:8px 16px;background:rgba(14,36,18,.45);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:#A8FF45;animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:#C9E8AF;letter-spacing:.18em">WEB3 ECOSYSTEM</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: #F4F8F4; text-wrap: pretty">The public record of what we have audited</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: #A9BFAE; margin: 22px 0 30px; text-wrap: pretty">Audits, top protocols, verified team KYC, and the incident database behind it.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="directories" data-screen-label="Directories" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Directories</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:pretty">Four public directories</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+        <a href="https://credshields.com/recently-audited" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:10px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px 26px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.12em">DIRECTORY</span>
+          <h3 style="font:600 18px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Recently Audited</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Every contract audit we are permitted to publish, newest first. Score, chain, and the date it was assessed.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Browse recent audits ↗</span>
+        </a>
+        <a href="https://credshields.com/popular-projects" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:10px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px 26px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.12em">DIRECTORY</span>
+          <h3 style="font:600 18px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Popular Projects</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">The protocols the ecosystem scans and checks most often, ranked by activity. A useful read on where attention sits.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">See popular projects ↗</span>
+        </a>
+        <a href="https://credshields.com/kyc-reports" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:10px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px 26px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0114 0"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.12em">VERIFICATION</span>
+          <h3 style="font:600 18px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">KYC Reports</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Verified team identity reports. Anonymous teams are not disqualifying, but verified ones are checkable, and investors increasingly ask.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">View KYC reports ↗</span>
+        </a>
+        <a href="https://solidityscan.com/web3hackhub" target="_blank" rel="noopener" style="display:flex;flex-direction:column;gap:10px;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:28px 26px;color:inherit;background:rgba(244,248,244,.04)" class="web3-hover-3">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="11" rx="4"/><path d="M8 12H4M20 12h-4M8.5 8.5L6 6M15.5 8.5L18 6M8.5 17.5L6 20M15.5 17.5L18 20M10 5a2 2 0 014 0"/></svg></span>
+          <span style="font:500 10px var(--font-mono);color:#A8FF45;letter-spacing:.12em">DATABASE</span>
+          <h3 style="font:600 18px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:pretty">Web3HackHub</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Documented Web3 hacks with root-cause classification and attributed losses. $3.67B tracked across 134 incidents in 2025.</p>
+          <span style="font:500 13px var(--font-body);color:#A8FF45;margin-top:auto;padding-top:8px">Browse the database ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="why" data-screen-label="Why public" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Why public</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:pretty">Why we publish it</h2>
+      
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:720px">
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Security claims are cheap in Web3. A badge on a landing page tells a user nothing about when the audit ran, what version it covered, or whether the findings were fixed. A public record does.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Recently Audited exists so anyone can check whether a claim is real and current. Popular Projects shows where the ecosystem is actually looking. KYC Reports gives a verifiable answer to a question every investor asks and most teams answer with a Discord handle.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Web3HackHub underpins all of it. It is the incident dataset behind our authorship of the OWASP Smart Contract Top 10, and the reason our category rankings reflect losses that actually happened rather than risks that theoretically could.</p>
+      </div>
+    </div>
+  </section>
+  <section id="chains" data-screen-label="Chains" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Chains</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:#A8FF45;text-wrap:pretty">Where we work</h2>
+      <p style="font:400 var(--type-body-lg)/1.6 var(--font-body);color:#A9BFAE;margin:0 0 40px;max-width:680px;text-wrap:pretty">EVM chains are our depth. We will tell you plainly when something is outside it rather than take the work.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Ethereum</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Base</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Arbitrum</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Optimism</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Polygon</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">BNB Chain</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Avalanche</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">zkSync</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Linea</span>
+        <span style="font:500 12.5px var(--font-mono);color:#F4F8F4;border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-sm);padding:8px 14px;background:rgba(244,248,244,.04)">Scroll</span>
+      </div>
+    </div>
+  </section>
+  <section id="list" data-screen-label="Get listed" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Get listed</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:pretty">Three steps to a listing</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">01</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Run a scan</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Start with a free SolidityScan run. It maps every finding to an OWASP Smart Contract Top 10 category and gives you a score in minutes.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">02</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Book the audit</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Manual review by our audit team on top of the scan. Findings mapped to OWASP Smart Contract Top 10 categories, attestation letter included.</p>
+        </div>
+        <div style="border:1px solid rgba(244,248,244,.14);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span aria-hidden="true" style="color:#A8FF45;display:block;margin-bottom:2px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <div style="font:500 11px var(--font-mono);color:#A9BFAE;letter-spacing:.14em">03</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:#F4F8F4;text-wrap:balance">Publish or keep private</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Your call. Many teams publish the contract audit for community trust and keep the application report internal.</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+        <a href="https://solidityscan.com/" target="_blank" rel="noopener" class="cs-btn cs-btn-lime cs-btn-lg">Run a free scan ↗</a>
+        <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-lg">Request an audit</a>
+        <a href="/web3-security" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-lg">Web3 security overview</a>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid rgba(244,248,244,.12);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ FAQ</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:#A8FF45;text-wrap:pretty">Common questions</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Is listing on Recently Audited automatic?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Only with your consent. Nothing is published without the client agreeing, and many audits stay private at the client’s request.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">What does a KYC report cover?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Verified identity of the core team, held on record so an investor or exchange can confirm a real party stands behind the protocol. It is not an endorsement of the project.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">How is Popular Projects ranked?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">By scan and lookup activity across the platform. It reflects where the ecosystem is looking.</p>
+        </div>
+        <div style="border-top:1px solid rgba(244,248,244,.12);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:#F4F8F4">Can I use Web3HackHub data in my own research?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:#A9BFAE;margin:0;text-wrap:pretty">Yes. It is public, and it is cited in the OWASP Smart Contract Top 10. Attribution is appreciated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

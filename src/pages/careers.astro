@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/careers.css";
+
+const title = "Careers - CredShields";
+const description = "Small team, senior bar, no subcontracting. If you would rather own an engagement end to end than fill a ticket queue, we should talk.";
+---
+<BaseLayout title={title} description={description}>
+  <div class="careers-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">CAREERS</span>
+      </div>
+      <h1 style="font:700 clamp(34px,4.4vw,58px)/1.06 var(--font-display);letter-spacing:-.03em;margin:0;color:var(--color-forest);max-width:800px;text-wrap:balance">Work on findings that get fixed</h1>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:22px 0 30px;max-width:760px;text-wrap:pretty">Small team, senior bar, no subcontracting. If you would rather own an engagement end to end than fill a ticket queue, we should talk.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="open" data-screen-label="Open roles" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Open roles</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">What we are hiring for</h2>
+      <div class="careers-jobs" data-careers-jobs aria-live="polite">
+        <div class="careers-jobs-status">Loading active requirements…</div>
+      </div>
+    </div>
+  </section>
+  <section id="bar" data-screen-label="The bar" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ The bar</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">What we look for</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">CRAFT</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">You can prove what you find</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We care less about tools you have used and more about whether you can reproduce an exploit chain and explain why it matters commercially.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">WRITING</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">You can write for two audiences</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A finding has to land with an engineer who will fix it and an auditor who will assess it. Both read the same report.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">JUDGMENT</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">You know what not to report</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Filtering noise is the job. Volume is easy, and nobody thanks you for it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="process" data-screen-label="Hiring" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Hiring</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">How the process runs</h2>
+      
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">01</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Intro call</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Thirty minutes with the lead for the role. What you have worked on and what you want to work on next.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">30 min</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">02</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Technical conversation</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A real target and a real conversation about how you would approach it. No whiteboard algorithms.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">90 min</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">03</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Practical</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A scoped exercise on our test environment, or a walkthrough of prior work you can share.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">2-4 hours</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">04</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Offer</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">References, terms, and a start date.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">1 week</span>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+    const jobsUrl = "https://raw.githubusercontent.com/Credshields/credshields-resources/refs/heads/master/jobs.json";
+    const jobsRoot = document.querySelector("[data-careers-jobs]");
+    const text = (element, tag, className, value) => {
+      if (!value) return;
+      const child = document.createElement(tag);
+      child.className = className;
+      child.textContent = value;
+      element.append(child);
+    };
+    const renderEmpty = () => { jobsRoot.innerHTML = '<div class="careers-jobs-empty">No active requirements</div>'; };
+    const renderJobs = (jobs) => {
+      const activeJobs = Array.isArray(jobs) ? jobs.filter((job) => job && typeof job === "object") : [];
+      if (!activeJobs.length) return renderEmpty();
+      jobsRoot.replaceChildren();
+      activeJobs.forEach((job, index) => {
+        const card = document.createElement("a");
+        const id = job.id ? String(job.id) : "";
+        card.className = "careers-role-card";
+        card.href = id ? "/job-details.html?id=" + encodeURIComponent(id) : "/job-details.html";
+        text(card, "div", "careers-role-number", "OPEN ROLE · " + String(index + 1).padStart(2, "0"));
+        text(card, "h3", "careers-role-title", job.title || "Untitled role");
+        const meta = document.createElement("div");
+        meta.className = "careers-role-meta";
+        [job.department, job.location, job.employment_type, job.experience_level, job.salary_range].filter(Boolean).slice(0, 4).forEach((value) => text(meta, "span", "careers-role-pill", String(value)));
+        card.append(meta);
+        text(card, "p", "careers-role-description", job.description || "View the full role details and requirements.");
+        text(card, "span", "careers-role-cta", "View role details →");
+        jobsRoot.append(card);
+      });
+    };
+    fetch(jobsUrl, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Jobs request failed"); return response.json(); }).then(renderJobs).catch(renderEmpty);
+  </script>
+</BaseLayout>
