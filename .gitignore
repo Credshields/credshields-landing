@@ -18,7 +18,6 @@ AGENTS.md
 .DS_Store
 .playwright-mcp/
 node_modules/
-!package.json
 scripts/
 !scripts/
 scripts/*
