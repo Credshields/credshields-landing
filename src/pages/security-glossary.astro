@@ -10,7 +10,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
 <BaseLayout title={title} description={description}>
   <div class="security-glossary-page">
 <section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(56px,7vw,72px);position:relative;overflow:hidden">
-    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <img src="images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
     <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
       <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
         <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
@@ -49,7 +49,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Account Takeover (ATO)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The outcome, not the flaw: any chain that ends with an attacker in control of another user's account. Password reset flows are the most common route.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="auth" data-term="broken authentication cwe-287 any failure in proving who someone is: a flow entered halfway, a step skipped, a token accepted without verification, or a credential check the server assumes the client performed." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -58,7 +58,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Broken Authentication</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Any failure in proving who someone is: a flow entered halfway, a step skipped, a token accepted without verification, or a credential check the server assumes the client performed.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="access" data-term="broken function level authorization cwe-285 an endpoint enforces authentication but not role. an ordinary user can call an administrative function simply by knowing the route exists." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -67,7 +67,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Broken Function Level Authorization</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">An endpoint enforces authentication but not role. An ordinary user can call an administrative function simply by knowing the route exists.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="access" data-term="broken object level authorization (bola) cwe-639 the server checks that you are logged in but not that the record you asked for belongs to you. changing an identifier in a request returns another tenant's data. consistently the most common and most damaging api vulnerability." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -76,7 +76,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Broken Object Level Authorization (BOLA)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The server checks that you are logged in but not that the record you asked for belongs to you. Changing an identifier in a request returns another tenant's data. Consistently the most common and most damaging API vulnerability.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="logic" data-term="business logic flaw cwe-840 a workflow that behaves incorrectly on its own terms: a step skipped, an approval bypassed, a value trusted from the client. no signature describes it, so scanners structurally cannot find it." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -85,7 +85,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Business Logic Flaw</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A workflow that behaves incorrectly on its own terms: a step skipped, an approval bypassed, a value trusted from the client. No signature describes it, so scanners structurally cannot find it.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="mobile" data-term="certificate pinning bypass cwe-295 pinning defeated through a debug flag left in a release build or runtime hooking, allowing full interception of the mobile api with the client's protections stripped away." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -94,7 +94,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Certificate Pinning Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Pinning defeated through a debug flag left in a release build or runtime hooking, allowing full interception of the mobile API with the client's protections stripped away.</p>
-          <a href="/mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
+          <a href="mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
         </div>
         <div data-cat="supply" data-term="ci secret exposure cwe-522 workflow triggers that expose repository secrets to unreviewed forks, turning any pull request into a credential disclosure." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -103,7 +103,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">CI Secret Exposure</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Workflow triggers that expose repository secrets to unreviewed forks, turning any pull request into a credential disclosure.</p>
-          <a href="/devsecops" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: DevSecOps Integration →</a>
+          <a href="devsecops" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: DevSecOps Integration →</a>
         </div>
         <div data-cat="data" data-term="cleartext transmission cwe-319 traffic carried over http, or tls configured with weak ciphers, exposing session tokens and transaction data to interception." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -112,7 +112,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Cleartext Transmission</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Traffic carried over HTTP, or TLS configured with weak ciphers, exposing session tokens and transaction data to interception.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="cloud" data-term="cloud metadata service exposure cwe-918 an ssrf that reaches the instance metadata endpoint returns credentials for the workload's role, escalating a single vulnerable proxy into control of the environment." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -121,7 +121,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Cloud Metadata Service Exposure</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">An SSRF that reaches the instance metadata endpoint returns credentials for the workload's role, escalating a single vulnerable proxy into control of the environment.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="injection" data-term="command injection cwe-78 user input is passed to a shell. whatever the shell can do, the attacker can do, at the privilege level of the process." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -130,7 +130,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Command Injection</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">User input is passed to a shell. Whatever the shell can do, the attacker can do, at the privilege level of the process.</p>
-          <a href="/code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
+          <a href="code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
         </div>
         <div data-cat="cloud" data-term="container escape cwe-269 breaking out of a container to the host node, usually via a privileged flag, a mounted socket, or a kernel capability nobody intended to grant." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -139,7 +139,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Container Escape</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Breaking out of a container to the host node, usually via a privileged flag, a mounted socket, or a kernel capability nobody intended to grant.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="auth" data-term="credential stuffing cwe-307 reusing breached username and password pairs at scale. rate limiting and mfa are the controls; neither is present in most first assessments." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -148,7 +148,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Credential Stuffing</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Reusing breached username and password pairs at scale. Rate limiting and MFA are the controls; neither is present in most first assessments.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="auth" data-term="cross-site request forgery (csrf) cwe-352 a logged-in user's browser is induced to send a state-changing request they did not intend. samesite cookies and anti-csrf tokens close it." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -157,7 +157,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Cross-Site Request Forgery (CSRF)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A logged-in user's browser is induced to send a state-changing request they did not intend. SameSite cookies and anti-CSRF tokens close it.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="injection" data-term="cross-site scripting (xss) cwe-79 attacker-controlled content is rendered as markup in another user's browser, executing in that user's session. stored xss in an admin view is the high-value case." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -166,7 +166,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Cross-Site Scripting (XSS)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Attacker-controlled content is rendered as markup in another user's browser, executing in that user's session. Stored XSS in an admin view is the high-value case.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="supply" data-term="dependency confusion cwe-427 a build resolves an internal package name from a public registry, executing code an attacker published under that name." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -175,7 +175,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Dependency Confusion</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A build resolves an internal package name from a public registry, executing code an attacker published under that name.</p>
-          <a href="/code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
+          <a href="code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
         </div>
         <div data-cat="ai" data-term="excessive agency cwe-250 an agent holds more tool permissions than any single task requires, so one successful injection reaches a data-export or write action rather than a harmless reply." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -184,7 +184,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Excessive Agency</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">An agent holds more tool permissions than any single task requires, so one successful injection reaches a data-export or write action rather than a harmless reply.</p>
-          <a href="/ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
+          <a href="ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
         </div>
         <div data-cat="api" data-term="excessive data exposure cwe-213 an endpoint returns the full underlying object because one screen needed two fields of it. the interface hides the rest; the response does not." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -193,7 +193,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Excessive Data Exposure</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">An endpoint returns the full underlying object because one screen needed two fields of it. The interface hides the rest; the response does not.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="access" data-term="forced browsing cwe-425 reaching a page or file directly by url when the only protection was that no link pointed to it. access control enforced in the interface is decoration." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -202,7 +202,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Forced Browsing</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Reaching a page or file directly by URL when the only protection was that no link pointed to it. Access control enforced in the interface is decoration.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="api" data-term="graphql introspection abuse cwe-200 introspection publishes the entire schema, including operations no client uses. combined with a permissive global node resolver it becomes a map of everything reachable." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -211,7 +211,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">GraphQL Introspection Abuse</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Introspection publishes the entire schema, including operations no client uses. Combined with a permissive global node resolver it becomes a map of everything reachable.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="ai" data-term="guardrail bypass cwe-693 reaching prohibited behaviour by reframing, encoding, or routing the request through a path where the guardrail was never applied, such as ingested documents." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -220,7 +220,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Guardrail Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Reaching prohibited behaviour by reframing, encoding, or routing the request through a path where the guardrail was never applied, such as ingested documents.</p>
-          <a href="/ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
+          <a href="ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
         </div>
         <div data-cat="mobile" data-term="hardcoded secrets in binaries cwe-798 api keys and credentials compiled into a shipped app. obfuscation slows extraction; it does not prevent it." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -229,7 +229,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Hardcoded Secrets in Binaries</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">API keys and credentials compiled into a shipped app. Obfuscation slows extraction; it does not prevent it.</p>
-          <a href="/mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
+          <a href="mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
         </div>
         <div data-cat="cloud" data-term="iam privilege escalation path cwe-269 each role looks reasonable alone, but the graph of who can pass or assume whom chains a build role into production administrator. benchmarks score the account green throughout." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -238,7 +238,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">IAM Privilege Escalation Path</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Each role looks reasonable alone, but the graph of who can pass or assume whom chains a build role into production administrator. Benchmarks score the account green throughout.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="data" data-term="information disclosure cwe-200 server banners, stack traces, and framework versions handed to anyone who asks. individually minor, collectively a reconnaissance map." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -247,7 +247,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Information Disclosure</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Server banners, stack traces, and framework versions handed to anyone who asks. Individually minor, collectively a reconnaissance map.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="mobile" data-term="insecure deep link handling cwe-939 a custom scheme handler passes an attacker-supplied url into an in-app webview that already holds an authenticated session." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -256,7 +256,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Insecure Deep Link Handling</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A custom scheme handler passes an attacker-supplied URL into an in-app webview that already holds an authenticated session.</p>
-          <a href="/mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
+          <a href="mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
         </div>
         <div data-cat="injection" data-term="insecure deserialization cwe-502 reconstructing objects from untrusted bytes can invoke code during the reconstruction itself. often reachable from an upload handler with no authentication in front of it." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -265,7 +265,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Insecure Deserialization</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Reconstructing objects from untrusted bytes can invoke code during the reconstruction itself. Often reachable from an upload handler with no authentication in front of it.</p>
-          <a href="/code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
+          <a href="code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
         </div>
         <div data-cat="access" data-term="insecure direct object reference (idor) cwe-639 the web-layer sibling of bola: a url or form parameter names an object directly, and the application never verifies the requester owns it. sequential ids make it trivial to enumerate." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -274,7 +274,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Insecure Direct Object Reference (IDOR)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The web-layer sibling of BOLA: a URL or form parameter names an object directly, and the application never verifies the requester owns it. Sequential IDs make it trivial to enumerate.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="mobile" data-term="insecure local storage cwe-312 tokens, clinical records, or pii written unencrypted to app-private storage. on a rooted device or through a backup, the whole history is readable." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -283,7 +283,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Insecure Local Storage</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Tokens, clinical records, or PII written unencrypted to app-private storage. On a rooted device or through a backup, the whole history is readable.</p>
-          <a href="/mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
+          <a href="mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
         </div>
         <div data-cat="auth" data-term="jwt alg:none cwe-347 a token declares its own signing algorithm and the server honours the declaration. setting it to none removes verification entirely and lets any session be forged." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -292,7 +292,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">JWT alg:none</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A token declares its own signing algorithm and the server honours the declaration. Setting it to none removes verification entirely and lets any session be forged.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="cloud" data-term="kubernetes rbac misconfiguration cwe-284 default service account tokens automounted into every pod plus a permissive cluster role means one compromised container can list secrets across all namespaces." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -301,7 +301,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Kubernetes RBAC Misconfiguration</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Default service account tokens automounted into every pod plus a permissive cluster role means one compromised container can list secrets across all namespaces.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="access" data-term="mass assignment cwe-915 the application binds every field in a request body to its data model. adding an unexpected field such as a role or account status to a routine update grants privileges the form never offered." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -310,7 +310,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Mass Assignment</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The application binds every field in a request body to its data model. Adding an unexpected field such as a role or account status to a routine update grants privileges the form never offered.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="cloud" data-term="missing data-plane logging cwe-778 control-plane actions are logged but file access and serverless invocations are not, so an intrusion into storage may leave no trace at all." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -319,7 +319,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Missing Data-Plane Logging</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Control-plane actions are logged but file access and serverless invocations are not, so an intrusion into storage may leave no trace at all.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="data" data-term="missing security headers cwe-693 absent or incomplete content-security-policy, frame options, and transport security. cheap to add, and their absence widens the impact of every injection class above." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -328,7 +328,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Missing Security Headers</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Absent or incomplete Content-Security-Policy, frame options, and transport security. Cheap to add, and their absence widens the impact of every injection class above.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="injection" data-term="nosql injection cwe-943 the same failure against document stores, where an object-shaped operator in place of a string turns a filter into a query the developer never wrote." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -337,7 +337,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">NoSQL Injection</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The same failure against document stores, where an object-shaped operator in place of a string turns a filter into a query the developer never wrote.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="web3" data-term="oracle manipulation cwe-345 price or state read from a source an attacker can move within a single transaction, usually a spot pool rather than a time-weighted or attested feed." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -355,7 +355,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">OTP Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Phone or email verification circumvented by manipulating the client-side response rather than the code itself. Platforms usually treat OTP as the identity anchor, so bypassing it defeats onboarding entirely.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="cloud" data-term="overly permissive security group cwe-284 network rules allowing unrestricted access to all services and ports. administrative access such as ssh open to the internet across regions is the recurring finding." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -364,7 +364,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Overly Permissive Security Group</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Network rules allowing unrestricted access to all services and ports. Administrative access such as SSH open to the internet across regions is the recurring finding.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="logic" data-term="price manipulation cwe-472 the server trusts an amount, currency, or quantity supplied by the browser instead of recalculating it. in any platform moving real funds this is a direct financial loss." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -373,7 +373,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Price Manipulation</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The server trusts an amount, currency, or quantity supplied by the browser instead of recalculating it. In any platform moving real funds this is a direct financial loss.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="access" data-term="privilege escalation (horizontal) cwe-639 reaching another account's data at the same permission level. the attacker gains nothing in rank, only in reach." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -382,7 +382,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Privilege Escalation (horizontal)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Reaching another account's data at the same permission level. The attacker gains nothing in rank, only in reach.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="access" data-term="privilege escalation (vertical) cwe-269 moving up a permission level entirely, from ordinary user to administrator. usually a missing role check on one route or one mass-assignable field." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -391,7 +391,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Privilege Escalation (vertical)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Moving up a permission level entirely, from ordinary user to administrator. Usually a missing role check on one route or one mass-assignable field.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="ai" data-term="prompt injection cwe-1427 instructions embedded in content the model reads are followed as if they came from the operator. direct injection arrives in the prompt; indirect arrives in a document, page, or record the system ingests." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -400,7 +400,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Prompt Injection</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Instructions embedded in content the model reads are followed as if they came from the operator. Direct injection arrives in the prompt; indirect arrives in a document, page, or record the system ingests.</p>
-          <a href="/ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
+          <a href="ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
         </div>
         <div data-cat="cloud" data-term="public storage bucket cwe-732 object storage readable by anyone with the url, or shared to a wildcard account. encryption does not help when the key policy grants decrypt to the same wildcard." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -409,7 +409,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Public Storage Bucket</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Object storage readable by anyone with the URL, or shared to a wildcard account. Encryption does not help when the key policy grants decrypt to the same wildcard.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="api" data-term="query depth and complexity abuse cwe-770 deeply nested graphql queries multiply resolver work exponentially, exhausting the backend from a single request." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -418,7 +418,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Query Depth and Complexity Abuse</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Deeply nested GraphQL queries multiply resolver work exponentially, exhausting the backend from a single request.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="logic" data-term="race condition (toctou) cwe-367 a check and the action it authorizes are not atomic. concurrent requests slip between them, letting a balance be spent twice or a single-use code redeemed repeatedly." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -427,7 +427,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Race Condition (TOCTOU)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A check and the action it authorizes are not atomic. Concurrent requests slip between them, letting a balance be spent twice or a single-use code redeemed repeatedly.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="ai" data-term="rag context leakage cwe-200 a vector store filtered by tenant at query time but not at index time surfaces another customer's chunks on semantic similarity before the filter applies." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -436,7 +436,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">RAG Context Leakage</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A vector store filtered by tenant at query time but not at index time surfaces another customer's chunks on semantic similarity before the filter applies.</p>
-          <a href="/ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
+          <a href="ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
         </div>
         <div data-cat="api" data-term="rate limit bypass cwe-770 the limiter keys on something the attacker controls, such as exact header casing or a client-supplied identifier, so alternating it resets the counter." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -445,7 +445,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Rate Limit Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The limiter keys on something the attacker controls, such as exact header casing or a client-supplied identifier, so alternating it resets the counter.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="supply" data-term="reachability gap in dependency scanning cwe-1104 a scanner flags a known cve by version match without testing whether the vulnerable path is callable. some criticals are unreachable; some lows are reachable from an unauthenticated handler." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -454,7 +454,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Reachability Gap in Dependency Scanning</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A scanner flags a known CVE by version match without testing whether the vulnerable path is callable. Some criticals are unreachable; some lows are reachable from an unauthenticated handler.</p>
-          <a href="/code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
+          <a href="code-review-sast" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Source Code Review and SAST →</a>
         </div>
         <div data-cat="web3" data-term="reentrancy cwe-841 a contract calls out to an external address before updating its own state, and the callee calls back in to spend the same balance again." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -472,7 +472,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Root Account Without MFA</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The highest-privilege credential in a cloud account protected by a password alone. There is no ceiling on what it can do, which is why it scores as high as it does.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="mobile" data-term="root and jailbreak detection bypass cwe-693 client-side integrity checks removed by patching the binary or hooking at runtime. useful as friction, never as a security boundary." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -481,7 +481,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Root and Jailbreak Detection Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Client-side integrity checks removed by patching the binary or hooking at runtime. Useful as friction, never as a security boundary.</p>
-          <a href="/mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
+          <a href="mobile-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Mobile App Pentesting →</a>
         </div>
         <div data-cat="auth" data-term="saml assertion manipulation cwe-287 enterprise sso where the assertion's signature is not correctly validated, or is validated over the wrong portion of the document, allowing identity and role to be rewritten." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -490,7 +490,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">SAML Assertion Manipulation</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Enterprise SSO where the assertion's signature is not correctly validated, or is validated over the wrong portion of the document, allowing identity and role to be rewritten.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="auth" data-term="scim deprovisioning gap cwe-613 the identity provider removes a user but the application never invalidates their existing sessions, so a departed employee keeps working access." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -499,7 +499,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">SCIM Deprovisioning Gap</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The identity provider removes a user but the application never invalidates their existing sessions, so a departed employee keeps working access.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="data" data-term="sensitive data in api responses cwe-359 password hashes, internal identifiers, or pii returned in a payload the interface never displays. hashing protects passwords at rest, not in transit to an attacker." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -508,7 +508,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Sensitive Data in API Responses</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Password hashes, internal identifiers, or PII returned in a payload the interface never displays. Hashing protects passwords at rest, and offers nothing once the hash reaches an attacker.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="injection" data-term="server-side request forgery (ssrf) cwe-918 the server is coaxed into making a request on the attacker's behalf, reaching internal services and cloud metadata endpoints that hold credentials for the surrounding infrastructure." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -517,7 +517,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Server-Side Request Forgery (SSRF)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The server is coaxed into making a request on the attacker's behalf, reaching internal services and cloud metadata endpoints that hold credentials for the surrounding infrastructure.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="injection" data-term="server-side template injection cwe-1336 user input is evaluated by a template engine. most engines expose enough of the runtime to reach code execution from a single expression." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -526,7 +526,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Server-Side Template Injection</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">User input is evaluated by a template engine. Most engines expose enough of the runtime to reach code execution from a single expression.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="auth" data-term="session fixation cwe-384 the session identifier is not rotated at login, so an identifier planted before authentication becomes a valid authenticated session afterwards." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -535,7 +535,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Session Fixation</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The session identifier is not rotated at login, so an identifier planted before authentication becomes a valid authenticated session afterwards.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="api" data-term="shadow api cwe-1059 an endpoint that exists but appears in no specification, usually a forgotten version or an internal route. undocumented means unreviewed and untested." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -544,7 +544,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Shadow API</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">An endpoint that exists but appears in no specification, usually a forgotten version or an internal route. Undocumented means unreviewed and untested.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="web3" data-term="signature replay cwe-294 a signed message with no nonce or expiry can be submitted repeatedly, regenerating sessions or rebroadcasting a payment the signer authorized once." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -562,7 +562,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">SQL Injection</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Untrusted input reaches a database query as code rather than data. Parameterized queries close it; string concatenation opens it.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="supply" data-term="stale suppression baseline cwe-1071 a committed baseline file silently suppresses hundreds of findings, including ones still live, long after the exception that justified it expired." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -571,7 +571,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Stale Suppression Baseline</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A committed baseline file silently suppresses hundreds of findings, including ones still live, long after the exception that justified it expired.</p>
-          <a href="/devsecops" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: DevSecOps Integration →</a>
+          <a href="devsecops" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: DevSecOps Integration →</a>
         </div>
         <div data-cat="ai" data-term="system prompt extraction cwe-200 coercing the model into emitting its own instructions, often by asking for them as structured output, exposing internal business rules and endpoint names." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -580,7 +580,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">System Prompt Extraction</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Coercing the model into emitting its own instructions, often by asking for them as structured output, exposing internal business rules and endpoint names.</p>
-          <a href="/ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
+          <a href="ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
         </div>
         <div data-cat="access" data-term="tenant boundary bypass cwe-639 in multi-tenant software the separation between customers is enforced in application logic, not infrastructure. one missing filter on a query or a background job exposes data across accounts with no visible failure." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -589,7 +589,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Tenant Boundary Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">In multi-tenant software the separation between customers is enforced in application logic, not infrastructure. One missing filter on a query or a background job exposes data across accounts with no visible failure.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="ai" data-term="tool-call authorization gap cwe-862 the tool trusts the agent, and the agent trusts its input. authorization has to live at the tool layer, not in the prompt asking the model to behave." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -598,7 +598,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Tool-Call Authorization Gap</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The tool trusts the agent, and the agent trusts its input. Authorization has to live at the tool layer, where the prompt cannot reach it.</p>
-          <a href="/ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
+          <a href="ai-llm-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: AI and LLM AppSec →</a>
         </div>
         <div data-cat="cloud" data-term="unencrypted volumes and snapshots cwe-311 storage and backup snapshots left unencrypted by default. recovery points are as sensitive as the live data and are watched less closely." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -607,7 +607,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Unencrypted Volumes and Snapshots</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Storage and backup snapshots left unencrypted by default. Recovery points are as sensitive as the live data and are watched less closely.</p>
-          <a href="/cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
+          <a href="cloud-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Cloud Security Review →</a>
         </div>
         <div data-cat="web3" data-term="unprotected privileged function cwe-862 a mint, upgrade, or withdrawal function callable by any address, often because an upgrade reinitialized a proxy without re-applying the owner modifier." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -625,7 +625,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Unrestricted Resource Consumption</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">No bound on payload size, page size, or request rate. Oversized requests are processed to completion, exhausting memory or spend.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
         <div data-cat="web3" data-term="upgrade proxy governance risk cwe-284 an upgradeable contract is only as trustworthy as the key that can upgrade it. a single hot key behind a proxy is a custody risk, not a code bug." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -643,7 +643,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Weak Password Policy</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">No length floor, no breach-corpus check, and no MFA requirement. Combined with an unrated login endpoint it is credential stuffing waiting to happen.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="logic" data-term="workflow state bypass cwe-841 submitting a later stage's payload directly moves an object into that state, skipping the approvals in between. common in procurement, lending, and onboarding flows." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -652,7 +652,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Workflow State Bypass</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Submitting a later stage's payload directly moves an object into that state, skipping the approvals in between. Common in procurement, lending, and onboarding flows.</p>
-          <a href="/web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
+          <a href="web-pentest" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: Web App Pentesting →</a>
         </div>
         <div data-cat="injection" data-term="xml external entity (xxe) cwe-611 an xml parser resolves external entity references, reading local files or reaching internal hosts. disable entity resolution rather than filtering payloads." style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:32px 24px 24px;display:flex;flex-direction:column;gap:10px;background:var(--surface-raised)">
           <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px">
@@ -661,7 +661,7 @@ const description = "Plain-language definitions of the vulnerability classes tha
           </div>
           <h3 style="font:600 17px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">XML External Entity (XXE)</h3>
           <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">An XML parser resolves external entity references, reading local files or reaching internal hosts. Disable entity resolution rather than filtering payloads.</p>
-          <a href="/api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
+          <a href="api-security" style="font:500 12.5px var(--font-body);color:var(--color-forest);margin-top:auto;padding-top:6px">Where we test it: API Security Testing →</a>
         </div>
       </div>
       <div data-glossary-empty style="display:none;padding:48px 0;text-align:center;font:400 15px var(--font-body);color:var(--text-secondary)">No term matches that search. Try a CWE number, or <a href="#contact" style="font-weight:500">ask us directly</a>.</div>

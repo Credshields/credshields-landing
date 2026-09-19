@@ -19,11 +19,15 @@ const mode = Astro.props.mode ?? "apps";
 const title = Astro.props.title ?? frontmatter.title ?? "CredShields | AI-led Security Audits & Pentesting";
 const description = Astro.props.description ?? frontmatter.description ?? "CredShields secures apps, smart contracts, and Web3 protocols with AI-powered audits, pentesting, and continuous security for 200+ institutions.";
 const canonical = new URL(Astro.url.pathname, "https://credshields.com").href;
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <!doctype html>
 <html lang="en" data-mode={mode}>
   <head>
+    <base href={base} />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -52,17 +56,17 @@ const canonical = new URL(Astro.url.pathname, "https://credshields.com").href;
     <link rel="canonical" href={canonical} />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
     <!-- Fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Design System CSS -->
-    <link rel="stylesheet" href="/css/app_home.css" />
-    <link rel="stylesheet" href="/css/homepage-rehaul.css" />
-    <script is:inline src="/js/three.min.js"></script>
-    <script is:inline type="module" src="/js/hero-globe.js"></script>
+    <link rel="stylesheet" href="css/app_home.css" />
+    <link rel="stylesheet" href="css/homepage-rehaul.css" />
+    <script is:inline src="js/three.min.js"></script>
+    <script is:inline type="module" src="js/hero-globe.js"></script>
 
     <!-- Calendly -->
     <link
