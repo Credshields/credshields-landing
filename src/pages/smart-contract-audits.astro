@@ -1,0 +1,278 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/page-components.css";
+import "../styles/penetration-testing.css";
+import "../styles/smart-contract-audits.css";
+
+const title = "Smart Contract Audits | CredShields";
+const description = "CredShields blends AI-powered scans and expert manual reviews to deliver comprehensive smart contract audits. Prevent exploits before they happen.";
+---
+
+<BaseLayout title={title} description={description} mode="chain">
+  <script slot="head" is:inline src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+
+<section class="hero sc-hero" aria-label="Hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="hero-badge-dot"></span><span class="hero-badge-text">Smart Contract Audits</span></div>
+      <div class="hero-ticker"><span class="ticker-item"> 04 · CHAIN</span><span class="ticker-sep">◆</span><span class="ticker-item">AI + MANUAL</span></div>
+      <h1 class="hero-headline">Audits that prevent <em>exploits</em><br>before they happen.</h1>
+      <p class="hero-body">Billions in assets are locked in smart contracts, and one line of code can expose them to attackers. CredShields blends AI-powered scans and expert manual reviews to deliver comprehensive audits.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary-lg" href="/#security_coverage_360">Explore our solutions <span>→</span></a>
+        <a class="btn-secondary-lg" href="https://solidityscan.com/quickscan" data-free-ai-scan>Run free AI scan <span>↗</span></a>
+      </div>
+    </div>
+    <div class="hero-aside">
+      <div class="dossier-card">
+        <div class="dossier-stamp">CHAIN<br>AUDIT</div>
+        <div class="dossier-card-head"><span>DOSSIER · <strong>SC · AUDIT</strong></span><span>This week</span></div>
+        <div class="dossier-card-title">A senior-led contract review, scoped today, report in <em>seven</em>.</div>
+        <div class="dossier-card-body">AI handles the mechanical scan. Senior auditors handle the judgment, exploit chaining, and economic modelling.</div>
+        <div class="dossier-kv-grid">
+          <span class="dossier-kv-label">Scope</span>
+          <span class="dossier-kv-value">Solidity · Vyper · EVM</span>
+          <span class="dossier-kv-label">Delivery</span>
+          <span class="dossier-kv-value">5–7 business days</span>
+          <span class="dossier-kv-label">Retests</span>
+          <span class="dossier-kv-value ok">Free · 90 days</span>
+          <span class="dossier-kv-label">FPs</span>
+          <span class="dossier-kv-value ok">Contractually zero</span>
+        </div>
+        <div class="dossier-card-foot"><span>Next available: <strong>Mon 04 May</strong></span><a class="dossier-card-cta" href="https://calendly.com/koda-credshields/30min" data-book-security>Claim slot →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sc-section section--raised sc-why">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">/ Why it matters</div>
+      <h2 class="section-title">Three reasons audits are <em>non-negotiable</em>.</h2>
+      <p class="lede">Web3 hacks continue to drain billions from protocols. An audit is no longer optional - it is the price of admission.</p>
+    </div>
+    <div class="card-grid-3">
+      <div class="ai-card">
+        <h3 class="card-title">$3B+ <em>lost</em> in 2023.</h3>
+        <p class="card-body">Web3 hacks continue to drain billions from protocols due to unaudited smart contracts and security vulnerabilities. The cost of a single incident dwarfs the cost of a thorough audit.</p>
+      </div>
+      <div class="ai-card">
+        <h3 class="card-title">Exchange listing <em>requirement</em>.</h3>
+        <p class="card-body">Major exchanges now require comprehensive security audits before listing any new tokens or protocols. A clean audit report is the gatekeeper to liquidity and credibility.</p>
+      </div>
+      <div class="ai-card">
+        <h3 class="card-title">Higher TVL &amp; <em>investor confidence</em>.</h3>
+        <p class="card-body">Audited protocols see significantly higher TVL and investor confidence compared to unaudited alternatives. A signed report is a trust signal that compounds over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sc-section section--surface">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">/ How it works</div>
+      <h2 class="section-title">Six <em>steps</em>, kickoff to certification.</h2>
+      <p class="lede">We monitor every stage of smart-contract development, from manual code review to automated testing. We leave no stones unturned.</p>
+    </div>
+    <div class="pipeline-grid pipeline-grid-6">
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">01</div>
+        <div class="pipeline-step-title">Initial assessment &amp; <em>threat modelling</em></div>
+        <div class="pipeline-step-body">Comprehensive analysis of architecture, dependencies, and potential attack vectors specific to your protocol.</div>
+        <div class="pipeline-step-time"><strong>Day 1</strong> · Senior-led</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">02</div>
+        <div class="pipeline-step-title">AI-powered automated <em>scanning</em></div>
+        <div class="pipeline-step-body">Advanced AI tools including SolidityScan perform initial vulnerability detection and pattern analysis at machine scale.</div>
+        <div class="pipeline-step-time"><strong>Day 1–2</strong> · AI-led</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">03</div>
+        <div class="pipeline-step-title">Manual <em>line-by-line</em> review</div>
+        <div class="pipeline-step-body">Expert security engineers conduct thorough manual code review to catch logic flaws AI might miss.</div>
+        <div class="pipeline-step-time"><strong>Day 2–4</strong> · Senior auditors</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">04</div>
+        <div class="pipeline-step-title">Exploit <em>simulation</em></div>
+        <div class="pipeline-step-body">Testing reentrancy, flash loans, oracle manipulation, and other common attack patterns against live state.</div>
+        <div class="pipeline-step-time"><strong>Day 4–5</strong> · Red team</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">05</div>
+        <div class="pipeline-step-title">Remediation <em>support</em></div>
+        <div class="pipeline-step-body">Ongoing support during fix implementation and comprehensive retesting of remediated issues.</div>
+        <div class="pipeline-step-time"><strong>Day 5–6</strong> · Pair with devs</div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">06</div>
+        <div class="pipeline-step-title">Final report &amp; <em>certification</em></div>
+        <div class="pipeline-step-body">Detailed audit report with findings, recommendations, and official security certification.</div>
+        <div class="pipeline-step-time"><strong>Day 7</strong> · Signed off</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sc-section section--plain sc-checklist">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">/ Comprehensive audit checklist</div>
+      <h2 class="section-title">Six categories. <em>Every</em> known class.</h2>
+      <p class="lede">Our audit covers every critical security aspect following industry standards and best practices.</p>
+    </div>
+    <div class="card-grid-3">
+      <div class="service-card">
+        <div class="service-num"><span>01<span style="margin:0 4px">·</span>CRITICAL</span><span class="service-arrow">↗</span></div>
+        <div class="service-title">Critical security flaws</div>
+        <div class="service-desc">The high-impact classes that move funds. Reentrancy, unprotected ether withdrawal, integer overflow and underflow.</div>
+        <div class="service-tags">
+          <span class="service-stag lime">Reentrancy</span>
+          <span class="service-stag">Withdrawal</span>
+          <span class="service-stag">Overflow</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num"><span>02<span style="margin:0 4px">·</span>ACCESS</span><span class="service-arrow">↗</span></div>
+        <div class="service-title">Access control</div>
+        <div class="service-desc">Authorization through tx.origin, unprotected SELFDESTRUCT, and broader access-control flaws across roles and modifiers.</div>
+        <div class="service-tags">
+          <span class="service-stag lime">tx.origin</span>
+          <span class="service-stag">SELFDESTRUCT</span>
+          <span class="service-stag">RBAC</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num"><span>03<span style="margin:0 4px">·</span>LOGIC</span><span class="service-arrow">↗</span></div>
+        <div class="service-title">Logic &amp; business rules</div>
+        <div class="service-desc">Requirement violation, assert violation, transaction-order dependence, and unstated invariants.</div>
+        <div class="service-tags">
+          <span class="service-stag">require</span>
+          <span class="service-stag lime">TOD</span>
+          <span class="service-stag">Invariants</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num"><span>04<span style="margin:0 4px">·</span>GAS</span><span class="service-arrow">↗</span></div>
+        <div class="service-title">Gas &amp; performance</div>
+        <div class="service-desc">DoS with block gas limit, insufficient-gas griefing, and gas optimization across loops, storage, and external calls.</div>
+        <div class="service-tags">
+          <span class="service-stag lime">DoS</span>
+          <span class="service-stag">Griefing</span>
+          <span class="service-stag">Optimization</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num"><span>05<span style="margin:0 4px">·</span>CRYPTO</span><span class="service-arrow">↗</span></div>
+        <div class="service-title">Cryptography &amp; signatures</div>
+        <div class="service-desc">Signature malleability, weak randomness, and signature replay attacks across permit, meta-tx, and bridge contracts.</div>
+        <div class="service-tags">
+          <span class="service-stag">Malleability</span>
+          <span class="service-stag lime">Replay</span>
+          <span class="service-stag">Randomness</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-num"><span>06<span style="margin:0 4px">·</span>QUALITY</span><span class="service-arrow">↗</span></div>
+        <div class="service-title">Code quality</div>
+        <div class="service-desc">Floating pragma, outdated compiler, unused variables, and typographical errors that signal deeper review gaps.</div>
+        <div class="service-tags">
+          <span class="service-stag lime">Pragma</span>
+          <span class="service-stag">Compiler</span>
+          <span class="service-stag">Style</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sc-section section--surface">
+  <div class="container">
+    <div class="case-study-split">
+      <div class="case-study-body">
+        <div class="case-study-eyebrow">/ Field report</div>
+        <h2 class="case-study-title">DeFi protocol, <em>$20M loss</em> prevented in 48 hours.</h2>
+        <p class="case-study-desc">A DeFi protocol with $500M TVL hired CredShields for a full audit before launching staking pools. We identified critical access-control flaws that could have enabled unlimited withdrawals.</p>
+        <div class="case-study-stats">
+          <div class="case-study-stat">
+            <div class="case-study-stat-val">$20M</div>
+            <div class="case-study-stat-label">Potential loss prevented</div>
+          </div>
+          <div class="case-study-stat">
+            <div class="case-study-stat-val">48h</div>
+            <div class="case-study-stat-label">Detection time</div>
+          </div>
+        </div>
+      </div>
+      <div class="case-study-aside">
+        <div class="dossier-card">
+          <div class="dossier-stamp">CASE<br>CLOSED</div>
+          <div class="dossier-card-head"><span>CASE FILE · <strong>11/2024</strong></span><span>CLOSED</span></div>
+          <div class="dossier-card-title">Access-control chain in the <em>staking pool</em> patched before launch.</div>
+          <div class="dossier-kv-grid">
+            <span class="dossier-kv-label">Findings</span>
+            <span class="dossier-kv-value">Critical access control</span>
+            <span class="dossier-kv-label">Compliance</span>
+            <span class="dossier-kv-value">Pre-launch audit</span>
+            <span class="dossier-kv-label">Engagement</span>
+            <span class="dossier-kv-value">48 hours · triage</span>
+            <span class="dossier-kv-label">Surface</span>
+            <span class="dossier-kv-value">Solidity · staking</span>
+            <span class="dossier-kv-label">Outcome</span>
+            <span class="dossier-kv-value ok">$20M saved</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sc-section section--plain">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">/ Explore related</div>
+      <h2 class="section-title">Adjacent <em>practices</em>.</h2>
+      <p class="lede">Comprehensive security solutions for every aspect of your smart contracts.</p>
+    </div>
+    <div class="worlds-grid">
+      <a class="world-card" href="./dapp-protocol-security.html">
+        <span class="world-card-tag">PROTOCOL</span>
+        <div class="world-card-title">DApp &amp; protocol <em>security</em></div>
+        <ul class="world-card-list">
+          <li>Governance, oracles, bridges</li>
+          <li>Cross-chain message layers</li>
+          <li>Economic-attack modelling</li>
+          <li>Frontend &amp; signing flow review</li>
+        </ul>
+        <span class="world-card-cta">Explore DApp security →</span>
+      </a>
+      <a class="world-card" href="https://solidityscan.com/">
+        <span class="world-card-tag">AI TOOLS</span>
+        <div class="world-card-title">SolidityScan <em>AI scans</em></div>
+        <ul class="world-card-list">
+          <li>Instant AI-powered detection</li>
+          <li>Pre-audit triage workflow</li>
+          <li>CI/CD integration ready</li>
+          <li>Common-vulnerability coverage</li>
+        </ul>
+        <span class="world-card-cta">Explore SolidityScan →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <GetStarted allModes />
+
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

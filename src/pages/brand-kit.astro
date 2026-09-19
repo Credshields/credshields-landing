@@ -1,0 +1,252 @@
+---
+import { Image } from "astro:assets";
+import blackLogo from "../images/logo-full-black-trim.png";
+import whiteLogo from "../images/logo-full-white-trim.png";
+import blackIcon from "../images/icon-black.png";
+import whiteIcon from "../images/icon-white.png";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/brand-kit.css";
+
+const title = "Brand Kit - CredShields";
+const description = "CredShields logos, colors, typography, and usage rules. Download assets for press, partner listings, and integrations.";
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="brand-kit-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">BRAND KIT</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: var(--color-forest); text-wrap: balance">Logos, colors, and how to use them</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 22px 0 30px; text-wrap: pretty">For press, partners, conference organisers, and anyone listing CredShields in an integration directory.&nbsp;</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="logos" data-screen-label="Logos" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Logos</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: balance">The full lockup, and the mark alone</h2>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">Default to the full lockup. Use the shield mark alone only where the name already appears or space is tight, such as an avatar, favicon, or watermark.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+          <div style="background:var(--surface-page);padding:44px 32px;display:flex;align-items:center;justify-content:center;min-height:150px">
+            <Image src={blackLogo} alt="Full lockup, dark" style="max-width:240px;height:auto;display:block" loading="lazy" />
+          </div>
+          <div style="padding:18px 22px;border-top:1px solid var(--border-default);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+              <div style="font:600 14px var(--font-body);color:var(--color-ink)">Full lockup, dark</div>
+              <div style="font:400 11px var(--font-mono);color:var(--text-secondary);margin-top:3px">PNG · transparent</div>
+            </div>
+            <a href={blackLogo.src} download="" style="font:500 12.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Download ↓</a>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+          <div style="background:#0A1A0C;padding:44px 32px;display:flex;align-items:center;justify-content:center;min-height:150px">
+            <Image src={whiteLogo} alt="Full lockup, light" style="max-width:240px;height:auto;display:block" loading="lazy" />
+          </div>
+          <div style="padding:18px 22px;border-top:1px solid var(--border-default);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+              <div style="font:600 14px var(--font-body);color:var(--color-ink)">Full lockup, light</div>
+              <div style="font:400 11px var(--font-mono);color:var(--text-secondary);margin-top:3px">PNG · transparent</div>
+            </div>
+            <a href={whiteLogo.src} download="" style="font:500 12.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Download ↓</a>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+          <div style="background:var(--surface-page);padding:44px 32px;display:flex;align-items:center;justify-content:center;min-height:150px">
+            <Image src={blackIcon} alt="Shield mark, dark" style="max-width:84px;height:auto;display:block" loading="lazy" />
+          </div>
+          <div style="padding:18px 22px;border-top:1px solid var(--border-default);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+              <div style="font:600 14px var(--font-body);color:var(--color-ink)">Shield mark, dark</div>
+              <div style="font:400 11px var(--font-mono);color:var(--text-secondary);margin-top:3px">PNG · transparent</div>
+            </div>
+            <a href={blackIcon.src} download style="font:500 12.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Download ↓</a>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+          <div style="background:#0A1A0C;padding:44px 32px;display:flex;align-items:center;justify-content:center;min-height:150px">
+            <Image src={whiteIcon} alt="Shield mark, light" style="max-width:84px;height:auto;display:block" loading="lazy" />
+          </div>
+          <div style="padding:18px 22px;border-top:1px solid var(--border-default);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div>
+              <div style="font:600 14px var(--font-body);color:var(--color-ink)">Shield mark, light</div>
+              <div style="font:400 11px var(--font-mono);color:var(--text-secondary);margin-top:3px">PNG · transparent</div>
+            </div>
+            <a href={whiteIcon.src} download="" style="font:500 12.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Download ↓</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="rules" data-screen-label="Usage" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Usage</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: var(--color-forest); text-wrap: balance">Rules that keep the mark legible</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-md);padding:26px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.14em;margin-bottom:14px">DO</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font:400 14.5px/1.55 var(--font-body);color:var(--color-ink)">
+            <span>Keep clear space equal to the shield's height on every side.</span>
+            <span>Minimum 120px wide for the full lockup, 24px for the mark alone.</span>
+            <span>Use the light lockup on dark grounds and the dark lockup on light grounds.</span>
+            <span>Write it as CredShields: one word, two capitals.</span>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:14px">DO NOT</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font:400 14.5px/1.55 var(--font-body);color:var(--text-secondary)">
+            <span>Recolor outside the palette, or add shadows and gradients.</span>
+            <span>Stretch, condense, rotate, or box the mark in.</span>
+            <span>Retype the wordmark in another typeface.</span>
+            <span>Place white on light, or dark on dark.</span>
+            <span>Write "credshields", "Credshields", or "CredShields1".</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="color" data-screen-label="Color" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Color</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: balance">Six brand colors, function-locked</h2>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">Each color has one job. Loud Lime is a highlight and CTA fill only, never body text on a light ground and never a large surface fill.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
+          <div style="background:#2E7D0E;height:96px"></div>
+          <div style="padding:16px 18px;background:var(--surface-raised)">
+            <div style="font:600 14px var(--font-body);color:var(--color-ink)">Forest Green</div>
+            <div style="font:400 12px var(--font-mono);color:var(--text-secondary);margin:4px 0 8px;letter-spacing:.04em">#2E7D0E</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Primary accent: headings, marks, links.</div>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
+          <div style="background:#1E3A24;height:96px"></div>
+          <div style="padding:16px 18px;background:var(--surface-raised)">
+            <div style="font:600 14px var(--font-body);color:var(--color-ink)">Deep Green</div>
+            <div style="font:400 12px var(--font-mono);color:var(--text-secondary);margin:4px 0 8px;letter-spacing:.04em">#1E3A24</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Depth surfaces, dark lockups, footers.</div>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
+          <div style="background:#A8FF45;height:96px"></div>
+          <div style="padding:16px 18px;background:var(--surface-raised)">
+            <div style="font:600 14px var(--font-body);color:var(--color-ink)">Loud Lime</div>
+            <div style="font:400 12px var(--font-mono);color:var(--text-secondary);margin:4px 0 8px;letter-spacing:.04em">#A8FF45</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Highlight and CTA fill only.</div>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
+          <div style="background:#0A1A0C;height:96px"></div>
+          <div style="padding:16px 18px;background:var(--surface-raised)">
+            <div style="font:600 14px var(--font-body);color:var(--color-ink)">Green-Black Ink</div>
+            <div style="font:400 12px var(--font-mono);color:var(--text-secondary);margin:4px 0 8px;letter-spacing:.04em">#0A1A0C</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Body text.</div>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
+          <div style="background:#F4F8F4;height:96px"></div>
+          <div style="padding:16px 18px;background:var(--surface-raised)">
+            <div style="font:600 14px var(--font-body);color:var(--color-ink)">Cream Wash</div>
+            <div style="font:400 12px var(--font-mono);color:var(--text-secondary);margin:4px 0 8px;letter-spacing:.04em">#F4F8F4</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">The background.</div>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden">
+          <div style="background:#4A6650;height:96px"></div>
+          <div style="padding:16px 18px;background:var(--surface-raised)">
+            <div style="font:600 14px var(--font-body);color:var(--color-ink)">Dim Green</div>
+            <div style="font:400 12px var(--font-mono);color:var(--text-secondary);margin:4px 0 8px;letter-spacing:.04em">#4A6650</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Secondary text and captions.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="type" data-screen-label="Typography" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Typography</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: balance">Three typefaces, one job each</h2>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">Never substituted for one another. All three are available under the SIL Open Font License.</p>
+      <div>
+        <div style="border-top:1px solid var(--border-default);padding:24px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:baseline">
+          <div>
+            <div style="font:600 16px var(--font-display);color:var(--color-ink);letter-spacing:-.01em">Bricolage Grotesque</div>
+            <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em;margin:6px 0 4px">DISPLAY</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">SemiBold and Bold. Tracking -0.02em to -0.035em, leading 0.94 to 1.1.</div>
+          </div>
+          <div style="font:600 34px/1.05 var(--font-display);letter-spacing:-.03em;color:var(--color-ink)">Pentest every release.</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding:24px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:baseline">
+          <div>
+            <div style="font:600 16px var(--font-display);color:var(--color-ink);letter-spacing:-.01em">Figtree</div>
+            <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em;margin:6px 0 4px">BODY</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Regular, 16 to 22px, leading 1.55 to 1.6.</div>
+          </div>
+          <div style="font:400 17px/1.6 var(--font-body);color:var(--color-ink)">Everything you read in a paragraph is set in Figtree, at a size that stays comfortable across a long page.</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding:24px 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px;align-items:baseline">
+          <div>
+            <div style="font:600 16px var(--font-display);color:var(--color-ink);letter-spacing:-.01em">JetBrains Mono</div>
+            <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em;margin:6px 0 4px">MONO</div>
+            <div style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)">Eyebrows, labels, timestamps, code, and scan output. Uppercase with 0.14em tracking as a label.</div>
+          </div>
+          <div style="font:500 15px var(--font-mono);letter-spacing:.14em;color:var(--color-ink)">CRITICAL · CVSS 9.1 · PROVEN</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="naming" data-screen-label="Naming" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Naming</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">Three names, one house</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">MASTER BRAND</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">CredShields</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The full-scope security firm. Everything else is named under it. One word, two capitals, always.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">THE PLATFORM</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">CredShields One</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The AI pentesting platform. Written with a space, never "CredShields1" or "CS One".</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ENDORSED</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">SolidityScan by CredShields</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The Solidity and EVM scanner. It keeps its own name forward because it has its own market equity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="boilerplate" data-screen-label="Press" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Press</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 40px; color: var(--color-forest); text-wrap: balance">Boilerplate for listings and releases</h2>
+      
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-raised);padding:28px 30px;max-width:760px">
+        <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:14px">SHORT · 25 WORDS</div>
+        <p style="font:400 16px/1.65 var(--font-body);color:var(--color-ink);margin:0 0 24px">CredShields is a full-scope cybersecurity company providing AI-powered penetration testing and manual VAPT services across web, mobile, cloud, APIs, and smart contracts.</p>
+        <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:14px">LONG · 70 WORDS</div>
+        <p style="font:400 16px/1.65 var(--font-body);color:var(--color-ink);margin:0 0 24px">CredShields is a full-scope cybersecurity company providing AI-powered penetration testing and manual VAPT services across web, mobile, cloud, APIs, and smart contracts. Its flagship platform, CredShields One, combines AI-driven security testing with deep offensive security expertise to help organizations identify and remediate vulnerabilities more efficiently. Backed by over two decades of hands-on cybersecurity experience, CredShields supports organizations across the banking, fintech, healthcare, and technology sectors in strengthening their security posture and meeting compliance requirements.</p>
+        <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:14px">CONTACT</div>
+        <p style="font:400 15px/1.6 var(--font-body);color:var(--text-secondary);margin:0">Press and media: <a href="mailto:info@credshields.com" style="font-weight:500">info@credshields.com</a> · Credshields Technologies Pte. Ltd, 20A Tanjong Pagar Road, Singapore 088443</p>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

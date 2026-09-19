@@ -1,0 +1,185 @@
+.ai-llm-security-page{
+  /* ---------- base palette (from brand bible v5) ---------- */
+  --color-forest:#2E7D0E;
+  --color-forest-600:#256A0B;
+  --color-forest-100:#E1F1D9;
+  --color-deep:#1E3A24;
+  --color-deep-700:#152A1A;
+  --color-lime:#A8FF45;
+  --color-lime-600:#8FE62A;
+  --color-lime-100:#EFFFDD;
+  --color-ink:#0A1A0C;
+  --color-cream:#F4F8F4;
+  --color-white:#FFFFFF;
+  --color-dim:#4A6650;
+  --color-line:rgba(10,26,12,.12);
+  --color-line-on-deep:rgba(244,248,244,.16);
+
+  /* ---------- semantic status (intentional addition: not in brand bible, tuned to sit beside forest/lime/cream) ---------- */
+  --color-danger:oklch(60% 0.20 19);
+  --color-danger-strong:oklch(48% 0.19 19);
+  --color-danger-surface:oklch(96% 0.025 19);
+  --color-warning:oklch(76% 0.15 68);
+  --color-warning-strong:oklch(60% 0.14 62);
+  --color-warning-surface:oklch(96% 0.03 68);
+  --color-success:var(--color-forest);
+  --color-success-strong:var(--color-forest-600);
+  --color-success-surface:var(--color-forest-100);
+  --color-info:oklch(66% 0.10 224);
+  --color-info-strong:oklch(52% 0.10 224);
+  --color-info-surface:oklch(96% 0.018 224);
+
+  /* ---------- semantic aliases ---------- */
+  --surface-page:var(--color-cream);
+  --surface-card:var(--color-cream);
+  --surface-raised:var(--color-white);
+  --surface-deep:var(--color-deep);
+  --surface-ink:var(--color-ink);
+  --surface-overlay:rgba(10,26,12,.5);
+  --surface-sunken:rgba(10,26,12,.04);
+
+  --text-primary:var(--color-ink);
+  --text-secondary:var(--color-dim);
+  --text-on-forest:var(--color-cream);
+  --text-on-lime:var(--color-ink);
+  --text-on-deep-primary:var(--color-cream);
+  --text-on-deep-secondary:rgba(244,248,244,.82);
+  --text-on-deep-tertiary:rgba(244,248,244,.7);
+  --text-on-deep-muted:rgba(244,248,244,.5);
+
+  --border-default:var(--color-line);
+  --border-on-deep:var(--color-line-on-deep);
+
+  --link-color:var(--color-forest);
+  --link-hover-color:var(--color-forest-600);
+  --link-color-on-deep:var(--color-lime);
+  --link-hover-color-on-deep:var(--color-cream);
+
+  --accent-primary:var(--color-forest);
+  --accent-highlight:var(--color-lime);
+  --focus-ring-color:var(--color-lime);
+}
+
+.ai-llm-security-page{
+  /* ---------- font families ---------- */
+  --font-display:"Bricolage Grotesque",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --font-body:"Figtree",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",monospace;
+
+  /* ---------- weights ---------- */
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+
+  /* ---------- tracking ---------- */
+  --tracking-tightest:-.035em;
+  --tracking-tight:-.025em;
+  --tracking-snug:-.02em;
+  --tracking-normal:0em;
+  --tracking-wide:.06em;
+  --tracking-widest:.14em;
+
+  /* ---------- leading ---------- */
+  --leading-tight:.94;
+  --leading-snug:1.08;
+  --leading-heading:1.1;
+  --leading-normal:1.55;
+  --leading-relaxed:1.6;
+
+  /* ---------- type scale ----------
+     display = Bricolage Grotesque, body = Figtree, mono = JetBrains Mono
+     named --type-* (not --font-size-*) so it reads as scale, not family */
+  --type-display-1:clamp(3rem,calc(2.1rem + 4.5vw),8rem);      /* 48-128px · hero h1 */
+  --type-display-2:clamp(1.875rem,calc(1.3rem + 2.8vw),3.25rem); /* 30-52px · section h2 */
+  --type-display-3:clamp(1.5rem,calc(1.2rem + 1.5vw),2.375rem);  /* 24-38px · statement / h3 */
+  --type-display-4:1.25rem;                                 /* 20px · card h4 */
+  --type-pull-quote:clamp(1.25rem,calc(1rem + 1.2vw),1.75rem);   /* 20-28px */
+
+  --type-body-lg:clamp(1.125rem,calc(1rem + .5vw),1.3125rem);   /* 18-21px · lead */
+  --type-body:1rem;         /* 16px */
+  --type-body-sm:.906rem;   /* 14.5px */
+  --type-caption:.8125rem;  /* 13px */
+
+  --type-eyebrow:.75rem;    /* 12px uppercase, tracking-widest */
+  --type-mono-sm:.6875rem;  /* 11px */
+}.ai-llm-security-page{
+  /* ---------- radius ----------
+     brand bible uses tight, boxy radii on structural UI (2-3px on swatches/word chips)
+     and full pill radii only on CTA buttons/tags — never a mid-rounded "friendly" radius. */
+  --radius-xs:2px;
+  --radius-sm:3px;
+  --radius-md:6px;
+  --radius-lg:10px;
+  --radius-pill:999px;
+
+  /* ---------- borders ---------- */
+  --border-width-hairline:1px;
+  --border-width-accent:3px; /* pullquote left border, active-tab indicator */
+
+  /* ---------- shadow ----------
+     restraint over decoration: neutral ink-tinted shadows only, no color glow. */
+  --shadow-sm:0 1px 2px rgba(10,26,12,.06);
+  --shadow-md:0 4px 16px rgba(10,26,12,.08);
+  --shadow-lg:0 16px 40px rgba(10,26,12,.14);
+  --shadow-sticky:0 10px 24px rgba(10,26,12,.20); /* the "pinned note" content-template shadow */
+
+  /* ---------- motion ----------
+     no bounce/spring anywhere in the source material: fades, opacity and translateY only. */
+  --duration-fast:150ms; /* @kind other */
+  --duration-base:250ms; /* @kind other */
+  --duration-slow:600ms; /* @kind other */
+  --ease-standard:ease; /* @kind other */
+  --press-scale:.98; /* @kind other */
+
+  /* ---------- focus ---------- */
+  --focus-ring:0 0 0 2px var(--surface-page),0 0 0 4px var(--focus-ring-color);
+}
+.ai-llm-security-page .cs-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;border:1px solid transparent;border-radius:var(--radius-pill);cursor:pointer;white-space:nowrap;transition:background var(--duration-fast) var(--ease-standard),border-color var(--duration-fast) var(--ease-standard),color var(--duration-fast) var(--ease-standard),transform var(--duration-fast) var(--ease-standard)}
+.ai-llm-security-page .cs-btn:active{transform:scale(var(--press-scale))}
+.ai-llm-security-page .cs-btn:focus-visible{outline:none;box-shadow:var(--focus-ring)}
+.ai-llm-security-page .cs-btn:disabled{cursor:not-allowed;opacity:.45;transform:none}
+.ai-llm-security-page .cs-btn-sm{font-size:13px;padding:8px 16px}
+.ai-llm-security-page .cs-btn-md{font-size:14px;padding:12px 22px}
+.ai-llm-security-page .cs-btn-lg{font-size:16px;padding:15px 28px}
+.ai-llm-security-page .cs-btn-primary{background:var(--color-forest);color:var(--text-on-forest)}
+.ai-llm-security-page .cs-btn-primary:hover:not(:disabled){background:var(--color-forest-600)}
+.ai-llm-security-page .cs-btn-lime{background:var(--color-lime);color:var(--text-on-lime)}
+.ai-llm-security-page .cs-btn-lime:hover:not(:disabled){background:var(--color-lime-600)}
+.ai-llm-security-page .cs-btn-secondary{background:transparent;color:var(--color-ink);border-color:var(--color-ink)}
+.ai-llm-security-page .cs-btn-secondary:hover:not(:disabled){background:var(--surface-sunken)}
+.ai-llm-security-page .cs-btn-ghost{background:transparent;color:var(--color-forest);border-color:transparent}
+.ai-llm-security-page .cs-btn-ghost:hover:not(:disabled){background:var(--color-forest-100)}
+.ai-llm-security-page .cs-btn-on-deep.cs-btn-secondary{color:var(--text-on-deep-primary);border-color:var(--border-on-deep)}
+.ai-llm-security-page .cs-btn-on-deep.cs-btn-secondary:hover:not(:disabled){background:rgba(244,248,244,.06)}
+.ai-llm-security-page .cs-btn-icon{width:1em;height:1em;flex-shrink:0}
+.ai-llm-security-page { background: var(--surface-page); color: var(--text-primary); font-family: var(--font-body); }
+.ai-llm-security-page .services-catalog-card:hover { border-color: var(--color-forest) !important; background: var(--surface-raised); }
+.ai-llm-security-page section { scroll-margin-top: 80px; }
+.ai-llm-security-page a { text-decoration: none; }
+.ai-llm-security-page [data-herodemo]:hover { color: var(--color-forest-600) !important; }
+html { scroll-behavior: smooth; }
+@keyframes pulseDot { 0%, 100% { opacity: .35; } 50% { opacity: 1; } }
+@media (max-width: 380px) { .ai-llm-security-page [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .ai-llm-security-page [style*="animation:"] { animation: none !important; } }
+.ai-llm-security-page .cs-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;padding:4px 10px;border-radius:var(--radius-pill);line-height:1.4}
+.ai-llm-security-page .cs-badge-neutral{background:var(--surface-sunken);color:var(--text-secondary)}
+.ai-llm-security-page .cs-badge-forest{background:var(--color-forest-100);color:var(--color-forest-600)}
+.ai-llm-security-page .cs-badge-lime{background:var(--color-lime-100);color:var(--color-deep)}
+.ai-llm-security-page .cs-badge-outline{background:transparent;color:var(--text-secondary);border:1px solid var(--border-default)}
+.ai-llm-security-page .cs-severity{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px 5px 10px;border-radius:var(--radius-pill)}
+.ai-llm-security-page .cs-severity::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;flex-shrink:0}
+.ai-llm-security-page .cs-severity-critical{background:var(--color-danger-surface);color:var(--color-danger-strong)}
+.ai-llm-security-page .cs-severity-high{background:var(--color-warning-surface);color:var(--color-danger-strong)}
+.ai-llm-security-page .cs-severity-medium{background:var(--color-warning-surface);color:var(--color-warning-strong)}
+.ai-llm-security-page .cs-severity-low{background:var(--color-success-surface);color:var(--color-success-strong)}
+.ai-llm-security-page .cs-severity-info{background:var(--color-info-surface);color:var(--color-info-strong)}
+
+.ai-llm-security-page .cs-proof{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:var(--radius-pill);border:1px solid transparent}
+.ai-llm-security-page .cs-proof svg{width:13px;height:13px}
+.ai-llm-security-page .cs-proof-proven{background:var(--color-ink);color:var(--color-lime)}
+.ai-llm-security-page .cs-proof-verified{background:var(--color-forest-100);color:var(--color-forest-600)}
+.ai-llm-security-page .cs-proof-pending{background:transparent;color:var(--text-secondary);border-color:var(--border-default)}
+@media (max-width: 440px) { .ai-llm-security-page [style*="grid-template-columns"] { grid-template-columns: minmax(0, 1fr) !important; } }
+
+

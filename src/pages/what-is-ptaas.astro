@@ -1,0 +1,263 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/what-is-ptaas.css";
+
+const title = "What is PTaaS? Penetration Testing as a Service";
+const description = "What penetration testing as a service actually means, how it differs from a traditional pentest, what to look for in a platform, and where it falls short.";
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is PTaaS cheaper than a traditional pentest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per test, usually. Per year, it depends on cadence. Testing every release costs more annually than one engagement but far less per test, and evidence stays current between audits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do auditors accept PTaaS reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, provided the report includes scope, methodology, findings with severity, and evidence of human involvement. Auditors care about the methodology behind it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PTaaS the same as continuous pentesting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. PTaaS describes how testing is delivered. Continuous pentesting describes how often. A PTaaS platform can still run one engagement a year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does CredShields sit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In-house team plus AI. CredShields One runs autonomous testing on your release cadence and a senior researcher validates every finding before you see it."
+      }
+    }
+  ]
+};
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://credshields.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resources",
+      "item": "https://credshields.com/resources"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What is PTaaS? Penetration Testing as a Service Explained",
+      "item": "https://credshields.com/what-is-ptaas/"
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+  <div class="what-is-ptaas-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">DEFINITION · PTAAS</span>
+      </div>
+      <h1 style="font:700 clamp(34px,4.4vw,58px)/1.06 var(--font-display);letter-spacing:-.03em;margin:0;color:var(--color-forest);max-width:800px;text-wrap:balance">What is PTaaS?</h1>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:22px 0 30px;max-width:760px;text-wrap:pretty">PTaaS replaced the one-off, emailed report with a platform. That is the real change, and it matters less than vendors claim.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="answer" data-screen-label="Definition" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Definition</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">Penetration testing, delivered as a platform</h2>
+      
+      <div style="border-left:3px solid var(--color-forest);background:var(--color-forest-100);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:26px 30px">
+        <div style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.14em;margin-bottom:10px">IN ONE SENTENCE</div>
+        <p style="font:500 18px/1.6 var(--font-body);color:var(--color-ink);margin:0;max-width:760px;text-wrap:pretty">PTaaS is penetration testing delivered through a platform rather than a document: findings appear in a dashboard as testers confirm them, integrate with your tracker, and can be retested on demand instead of waiting for the next engagement.</p>
+      </div>
+    </div>
+  </section>
+  <section id="vs" data-screen-label="How it differs" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ How it differs</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:balance">What actually changed, and what did not</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">The delivery model changed. Whether the testing itself is deeper depends entirely on the vendor.</p>
+      <div style="overflow-x:auto">
+        <div style="display:grid;grid-template-columns:minmax(170px,1fr) repeat(2,minmax(150px,1fr));min-width:520px">
+          <div style="padding:12px 16px;background:var(--surface-sunken)"></div>
+          <div style="padding:12px 16px;font:600 10px var(--font-mono);color:var(--color-ink);letter-spacing:.12em;background:var(--surface-sunken)">TRADITIONAL PENTEST</div>
+          <div style="padding:12px 16px;font:600 10px var(--font-mono);color:var(--color-ink);letter-spacing:.12em;background:var(--surface-sunken)">PTAAS</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:500 13.5px var(--font-body);color:var(--color-ink)">Findings arrive</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">In a static report at the end</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Live, as each is confirmed</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:500 13.5px var(--font-body);color:var(--color-ink)">Integration</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Manual re-entry into Jira</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Direct sync to your tracker</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:500 13.5px var(--font-body);color:var(--color-ink)">Retesting</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">New scope, new invoice</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">On demand, usually included</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:500 13.5px var(--font-body);color:var(--color-ink)">Scheduling</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Weeks of lead time</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Days, sometimes hours</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:500 13.5px var(--font-body);color:var(--color-ink)">Who tests</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">A named consultancy team</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Varies: in-house, marketplace, or AI</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);font:500 13.5px var(--font-body);color:var(--color-ink)">Depth</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Depends on the firm</div>
+          <div style="padding:14px 16px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);font:400 13px var(--font-body);color:var(--text-secondary)">Depends on the vendor, not the label</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="flavours" data-screen-label="Types" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Types</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:balance">Three things sell under one name</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">"PTaaS" describes a delivery model. Ask which methodology sits behind it.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">MARKETPLACE</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">A pool of vetted testers</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">You book an engagement and the platform assigns testers from a pool. Broad specialism, less continuity between tests.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">IN-HOUSE TEAM</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">A fixed team behind a platform</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The same testers across engagements, so they learn your application. Narrower specialism, deeper context.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">AI-LED</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Automated testing with human review</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Machine scale for coverage and retesting, with humans validating findings. Cadence is the advantage; the validation layer is what separates it from a scanner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="evaluate" data-screen-label="Evaluating" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Evaluating</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">What to ask any PTaaS vendor</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">METHOD</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Is every finding manually verified before it reaches me?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Who performs the testing, and what are their credentials?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Do you test business logic, or only known patterns?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>How do you handle multi-tenant authorization?</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">DELIVERY</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Are retests included, and how many?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Does the report satisfy SOC 2, ISO 27001, and PCI DSS?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Can I share an attestation letter with customers?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Do findings sync to Jira, Linear, or GitHub?</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">COMMERCIAL</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>How is it priced, and what triggers a change order?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>What is the time to first validated finding?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>What happens between engagements?</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Can I see a redacted sample report before signing?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="limits" data-screen-label="Limits" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Limits</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">Where PTaaS falls short</h2>
+      
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:720px">
+        <p style="font:400 16px/1.7 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A platform does not make testing deeper. If the underlying work is a scan with a dashboard on top, the delivery model has changed and nothing else has. The question to ask is not whether findings appear live, but whether a human confirmed each one.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Marketplace models trade continuity for breadth. Different testers each engagement means nobody accumulates knowledge of your application, which matters most for business logic, where the flaw depends on understanding what the product is for.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">And some work does not fit the model at all. Objective-based red teaming, regulator-mandated threat-led testing, and first assessments of unusually complex systems are still engagements, not subscriptions.</p>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ FAQ</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:balance">Common questions</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Is PTaaS cheaper than a traditional pentest?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Per test, usually. Per year, it depends on cadence. Testing every release costs more annually than one engagement but far less per test, and evidence stays current between audits.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Do auditors accept PTaaS reports?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes, provided the report includes scope, methodology, findings with severity, and evidence of human involvement. Auditors care about the methodology behind it.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Is PTaaS the same as continuous pentesting?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">No. PTaaS describes how testing is delivered. Continuous pentesting describes how often. A PTaaS platform can still run one engagement a year.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Where does CredShields sit?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">In-house team plus AI. CredShields One runs autonomous testing on your release cadence and a senior researcher validates every finding before you see it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Related guides" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,80px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Related guides</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Keep reading</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+        <a href="Guide - Pentest vs Vulnerability Scan.html" style="display:flex;flex-direction:column;gap:9px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px;color:inherit;transition:border-color .2s ease,background .2s ease">
+          <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">Definition</span>
+          <h3 style="font:600 16px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Pentest vs vulnerability scan</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Two different questions, two different answers.</p>
+          <span style="font:500 12px var(--font-body);color:var(--color-forest);margin-top:4px">Read &#8594;</span>
+        </a>
+        <a href="Guide - DAST vs SAST vs IAST.html" style="display:flex;flex-direction:column;gap:9px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px;color:inherit;transition:border-color .2s ease,background .2s ease">
+          <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">Definition</span>
+          <h3 style="font:600 16px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">DAST vs SAST vs IAST</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">What each tool does, and what none of them do.</p>
+          <span style="font:500 12px var(--font-body);color:var(--color-forest);margin-top:4px">Read &#8594;</span>
+        </a>
+        <a href="Guide - What is BOLA.html" style="display:flex;flex-direction:column;gap:9px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px;color:inherit;transition:border-color .2s ease,background .2s ease">
+          <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">Definition</span>
+          <h3 style="font:600 16px/1.25 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">What is BOLA?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The most common serious API vulnerability, with a worked example.</p>
+          <span style="font:500 12px var(--font-body);color:var(--color-forest);margin-top:4px">Read &#8594;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

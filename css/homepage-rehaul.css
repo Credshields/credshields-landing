@@ -312,12 +312,12 @@ html[data-mode="apps"]
 }
 
 .rehaul-hero-result {
+  position: absolute;
+  right: -100px;
+  bottom: 10px;
   display: flex;
   width: min(330px, 100%);
   max-width: 330px;
-  margin-top: 40px;
-  margin-right: -24px;
-  margin-left: auto;
   padding: 22px 24px;
   flex-direction: column;
   gap: 16px;
@@ -2260,7 +2260,6 @@ html[data-mode="apps"]
   .rehaul-hero-result {
     width: 100%;
     max-width: 540px;
-    margin: 32px 0 0;
   }
 
   .rehaul-controls-grid,

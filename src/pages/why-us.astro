@@ -1,0 +1,222 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import complianceLogo0 from "../images/logo-soc2.png";
+import complianceLogo1 from "../images/logo-iso27001.png";
+import complianceLogo2 from "../images/logo-gdpr.png";
+import complianceLogo3 from "../images/logo-pcidss.png";
+import complianceLogo4 from "../images/logo-hipaa.png";
+import "../styles/why-us.css";
+
+const title = "Why CredShields - CredShields";
+const description = "AI scale with human tradecraft, authored security standards, and full-scope coverage from web and cloud to smart contracts.";
+---
+<BaseLayout title={title} description={description}>
+  <div class="why-us-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px)">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">WHY CREDSHIELDS</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: var(--color-forest); text-wrap: pretty">Proof on every finding</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 22px 0 30px; text-wrap: pretty">AI runs the volume. Senior researchers direct it and validate every finding. The result is release cadence coverage that holds up.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="reasons" data-screen-label="Reasons" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Reasons</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Six reasons teams switch</h2>
+      
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:24px;align-items:start;padding:30px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:5px">01</span>
+          <div>
+            <h3 style="font:600 22px/1.22 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">A human validates every finding</h3>
+            <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 12px;max-width:720px;text-wrap:pretty">Our AI discovers, exploits, and proves. A senior pentester then reproduces the chain, rules out what is not exploitable in your deployment, and signs it. You never triage a machine-generated maybe.</p>
+            <div style="display:inline-flex;align-items:baseline;gap:9px;border-left:2px solid var(--color-forest);padding-left:14px">
+              <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PROOF</span>
+              <span style="font:400 14px/1.6 var(--font-body);color:var(--color-ink)">100% of reports human-reviewed before delivery</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:24px;align-items:start;padding:30px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:5px">02</span>
+          <div>
+            <h3 style="font:600 22px/1.22 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">We wrote the standard others test against</h3>
+            <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 12px;max-width:720px;text-wrap:pretty">CredShields authored the OWASP Smart Contract Top 10, supported by the Ethereum Foundation. When a vendor says they test to the standard, this is the standard they mean.</p>
+            <div style="display:inline-flex;align-items:baseline;gap:9px;border-left:2px solid var(--color-forest);padding-left:14px">
+              <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PROOF</span>
+              <span style="font:400 14px/1.6 var(--font-body);color:var(--color-ink)">OWASP Smart Contract Top 10, 2025 and 2026 editions</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:24px;align-items:start;padding:30px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:5px">03</span>
+          <div>
+            <h3 style="font:600 22px/1.22 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">Full scope coverage</h3>
+            <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 12px;max-width:720px;text-wrap:pretty">Web, mobile, API, cloud, and smart contracts assessed by one team. Most breaches cross layers, and a vendor who only sees one layer cannot follow the chain.</p>
+            <div style="display:inline-flex;align-items:baseline;gap:9px;border-left:2px solid var(--color-forest);padding-left:14px">
+              <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PROOF</span>
+              <span style="font:400 14px/1.6 var(--font-body);color:var(--color-ink)">2,000+ VAPT engagements across every surface</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:24px;align-items:start;padding:30px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:5px">04</span>
+          <div>
+            <h3 style="font:600 22px/1.22 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">Testing runs at your release cadence</h3>
+            <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 12px;max-width:720px;text-wrap:pretty">CredShields One tests each release as it ships and re-runs the exact chain that broke you when you patch. No new statement of work, no waiting for next quarter.</p>
+            <div style="display:inline-flex;align-items:baseline;gap:9px;border-left:2px solid var(--color-forest);padding-left:14px">
+              <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PROOF</span>
+              <span style="font:400 14px/1.6 var(--font-body);color:var(--color-ink)">Retests included for the life of the engagement</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:24px;align-items:start;padding:30px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:5px">05</span>
+          <div>
+            <h3 style="font:600 22px/1.22 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">Reports your auditor accepts and your engineers use</h3>
+            <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 12px;max-width:720px;text-wrap:pretty">Scope, methodology, CVSS scoring, reproduction steps, and control mapping to SOC 2, ISO 27001, PCI DSS, HIPAA, and GDPR in one document. We join the auditor call and answer methodology questions ourselves.</p>
+            <div style="display:inline-flex;align-items:baseline;gap:9px;border-left:2px solid var(--color-forest);padding-left:14px">
+              <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PROOF</span>
+              <span style="font:400 14px/1.6 var(--font-body);color:var(--color-ink)">Attestation letter you can share with customers</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:52px minmax(0,1fr);gap:24px;align-items:start;padding:30px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:5px">06</span>
+          <div>
+            <h3 style="font:600 22px/1.22 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">We tell you when you do not need us</h3>
+            <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 12px;max-width:720px;text-wrap:pretty">If your scope is larger than your framework requires, or an engagement is the wrong tool for the problem, we say so before quoting.</p>
+            <div style="display:inline-flex;align-items:baseline;gap:9px;border-left:2px solid var(--color-forest);padding-left:14px">
+              <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PROOF</span>
+              <span style="font:400 14px/1.6 var(--font-body);color:var(--color-ink)">Free review of your existing pentest report</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="proof" data-screen-label="Proof" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Proof</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">The record</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:24px">
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">2,000+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">VAPT ENGAGEMENTS</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">20+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">YEARS OFFENSIVE EXPERIENCE</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">20+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">CVES DISCLOSED</div>
+        </div>
+        
+      </div>
+      <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;padding:26px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);margin-top:36px">
+        <span style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;text-transform:uppercase">Reports map to</span>
+        <div style="display:flex;gap:26px;flex-wrap:wrap;align-items:center">
+          <Image src={complianceLogo0} alt="SOC 2" title="SOC 2" style="height:44px;width:auto;display:block;object-fit:contain" loading="lazy" />
+          <Image src={complianceLogo1} alt="ISO 27001" title="ISO 27001" style="height:44px;width:auto;display:block;object-fit:contain" loading="lazy" />
+          <Image src={complianceLogo2} alt="GDPR" title="GDPR" style="height:42px;width:auto;display:block;object-fit:contain" loading="lazy" />
+          <Image src={complianceLogo3} alt="PCI DSS" title="PCI DSS" style="height:34px;width:auto;display:block;object-fit:contain" loading="lazy" />
+          <Image src={complianceLogo4} alt="HIPAA" title="HIPAA" style="height:34px;width:auto;display:block;object-fit:contain" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="compare" data-screen-label="Compare" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Compare</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">What usually goes wrong</h2>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">The differences teams weigh most when comparing options.</p>
+      <div style="overflow-x:auto">
+        <div data-cmp-table="" style="display:grid;grid-template-columns:minmax(190px,1.2fr) minmax(150px,1fr) minmax(150px,1fr);min-width:660px">
+          <div style="padding:13px 16px;font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em;background:var(--surface-sunken)">WHAT YOU NEED</div>
+          <div style="padding:13px 16px;font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em;background:var(--surface-sunken)">TYPICAL VENDOR</div>
+          <div style="padding:13px 16px;font:600 10px var(--font-mono);color:var(--color-ink);letter-spacing:.12em;background:var(--color-forest-100);border-top:3px solid var(--color-lime)">CREDSHIELDS</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Findings you can act on</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">A file of scanner output, unvalidated</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">Reproduced, proven, signed by a named researcher</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Someone accountable</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">A rotating pool or a support queue</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">A named senior lead in your Slack from day one</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Retesting after a fix</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">A new statement of work and a new invoice</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">Included, unlimited, for the life of the engagement</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Coverage across layers</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">One surface per vendor</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">Web, mobile, API, cloud, and contracts, one team</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Audit evidence</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">Findings you map to controls yourself</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">Pre-mapped, plus we join the auditor call</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Testing between audits</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">Once a year, then blind for 11 months</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">Every release, at your cadence</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);font:500 14px var(--font-body);color:var(--color-ink)">Honest scoping</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);font:400 13.5px var(--font-body);color:var(--text-secondary)">Scope grows to fit the budget</div>
+          <div style="padding:15px 16px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);background:var(--color-forest-100);font:500 13.5px var(--font-body);color:var(--color-forest-600)">We flag scope you do not need before quoting</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="honest" data-screen-label="When not us" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ When not us</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">When we are not the right fit</h2>
+      
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:720px">
+        <p style="font:400 16px/1.7 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">If you need a name on the report for board optics more than you need the findings, a larger firm will serve you better. We are not the biggest brand in this market and we do not pretend otherwise.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">If your requirement is US federal work needing cleared personnel, we cannot help. If you want a badge for a landing page rather than an assessment, we are the wrong call. Our reports state what we found.</p>
+        <p style="font:400 16px/1.7 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">And if you have never had a pentest and are not sure you are ready, start with the readiness assessment rather than an engagement. A test run before your team can act on it spends its budget on setup instead of findings.</p>
+      </div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+        <a href="/pentest-readiness" class="cs-btn cs-btn-secondary cs-btn-md">Take the readiness assessment</a>
+        <a href="Resources.html" class="cs-btn cs-btn-secondary cs-btn-md">See how we compare, vendor by vendor</a>
+      </div>
+    </div>
+  </section>
+  <section id="start" data-screen-label="Start" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Start</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Two ways in</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span data-icon="shieldCheck" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">PLATFORM</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">CredShields One</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Point it at a target and see validated findings on your next release. Best if you ship weekly and an annual pentest leaves you blind in between.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span data-icon="handshake" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ENGAGEMENT</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">A scoped assessment</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Senior-led, quoted against the agreed scope, delivered to a date. Best for a first deep look, an audit requirement, or a complex application.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <span data-icon="shieldCheck" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">NOT SURE</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Tell us the problem</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Describe what you are securing and the deadline you are working to. We will tell you which one fits, or whether neither does.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

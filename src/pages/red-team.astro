@@ -1,0 +1,328 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/red-team.css";
+
+const title = "Red Team Engagement - CredShields";
+const description = "We pick an objective with you, run the full kill chain to reach it, and tell you exactly where your detection did and did not fire.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://credshields.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://credshields.com/services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Red Team Engagement",
+      "item": "https://credshields.com/red-team/"
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+  <div class="red-team-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <span data-heroicon="" aria-hidden="true" style="color:var(--color-forest);display:block;margin-bottom:18px;transform:scale(1.5);transform-origin:left center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span>
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">MANUAL + AI PENTESTING · RED TEAM</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: var(--color-forest); text-wrap: pretty">Objective based red teaming, with the detection story included</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 22px 0 30px; text-wrap: pretty">We pick an objective with you, run the full kill chain to reach it, and tell you exactly where your detection did and did not fire.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+        <a data-herodemo="" href="https://calendly.com/shashank-credshields/credshields?month=2026-09" target="_blank" rel="noopener" style="font:500 14.5px var(--font-body);color:var(--color-forest);white-space:nowrap">Book a demo ↗</a>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="CredShields One" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) 28px">
+      <div style="background:var(--surface-deep);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 460px;max-width:640px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span class="cs-badge cs-badge-lime">Start here</span>
+            <span style="font:500 11px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.16em">CREDSHIELDS ONE</span>
+          </div>
+          <h2 style="font:600 clamp(22px,2.4vw,30px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--text-on-deep-primary);max-width:640px;text-wrap:balance">Red teaming tests your response, CredShields One tests your surface</h2>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-on-deep-tertiary);margin:0;text-wrap:pretty">A red team answers whether your detection works. The platform answers whether your releases are exploitable. Teams running both catch what each one alone would miss.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/" class="cs-btn cs-btn-lime cs-btn-md">Explore CredShields One</a>
+          <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Talk it through</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="scope" data-screen-label="What we test" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What we test</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">One objective, every route to it</h2>
+      <p style="font:400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">You define what would genuinely hurt. We find the cheapest path an adversary would take.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">INITIAL ACCESS</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>External perimeter and exposed services</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Phishing and pretext campaigns, where authorized</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Credential exposure in public and breach data</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Third-party and supply-chain routes</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">ESCALATION</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Lateral movement across trust boundaries</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Identity and credential harvesting</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Cloud and on-premise pivot paths</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Persistence within scoped constraints</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">DETECTION</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Which TTPs fired an alert, and when</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Coverage gaps mapped to MITRE ATT&amp;CK</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Alert quality and triage timing</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Response and containment effectiveness</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="process" data-screen-label="Process" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ How the engagement runs</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">Five to six weeks, one objective</h2>
+      <p style="font:400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">Only a named few on your side know it is running, which is what makes the detection result meaningful.</p>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">01</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Objective setting</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We agree the crown-jewel objective, hard constraints, and the small group of people who know the engagement is live.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">3-5 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">02</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Reconnaissance</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">External footprinting, employee and technology surface, exposed credentials, and third-party relationships.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">5-8 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">03</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Execution</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Full kill chain toward the objective. Anything destructive or customer-affecting is out of scope by contract.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">12-20 days</span>
+        </div>
+        <div style="display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:20px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);">
+          <span style="font:600 13px var(--font-mono);color:var(--color-dim)">04</span>
+          <div>
+            <h3 style="font:600 17px/1.2 var(--font-display);letter-spacing:-.015em;margin:0 0 6px;color:var(--color-ink)">Purple debrief</h3>
+            <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Joint session replaying the timeline against your detection log, then a signed report with both narratives.</p>
+          </div>
+          <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.1em;white-space:nowrap">4-6 days</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="findings" data-screen-label="Sample findings" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Sample findings</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">What these engagements typically surface</h2>
+      <p style="font:400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">From recent red team engagements.</p>
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+        <div style="padding:20px 24px;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical">Critical</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-danger-strong)">CVSS 9.4</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Objective reached in 9 days via a forgotten vendor VPN account</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">A contractor account from a completed project retained VPN access and reused a password exposed in a public breach. From there, lateral movement to the finance file share was unmonitored.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high">High</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 7.9</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Endpoint detection bypassed by living-off-the-land tooling</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Every action used signed system binaries. The EDR logged the activity but no rule elevated it, so nothing reached the analyst queue.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-medium">Medium</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 6.0</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Alert fired but sat unread for 6 days</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Lateral movement did generate an alert. It routed to a shared mailbox nobody owned, which is a process failure rather than a tooling one.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="deliverables" data-screen-label="Deliverables" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What you get</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">Two narratives: what we did, what you saw</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">The gap between them is the deliverable.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">IN THE REPORT</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Executive summary written for the board</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Full attack narrative with timestamps</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Detection timeline overlaid on our activity</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>MITRE ATT&amp;CK coverage heat map</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Prioritized detection engineering backlog</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest)">›</span>Control mapping to SOC 2, ISO 27001, and DORA</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">ALSO INCLUDED</div>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Findings in your tracker</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">Jira, Linear, or GitHub Issues, filed as we confirm them.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Live triage channel</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">A shared Slack or Teams channel with the red team lead for the duration.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Retest included</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">One full retest after remediation, plus ad-hoc retests on individual findings.</div></div>
+            <div><div style="font:600 14.5px var(--font-body);color:var(--color-ink);margin-bottom:3px">Debrief call</div><div style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary)">Joint purple-team replay with your SOC, walking the timeline hour by hour.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="standards" data-screen-label="Standards" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Standards we test against</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Standards we test against</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">METHODOLOGY</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MITRE ATT&amp;CK Enterprise and Cloud</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>TIBER-EU where financial regulation applies</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>PTES and NIST SP 800-115</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CBEST-aligned threat intelligence input</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">SCORING</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CVSS 3.1 with environmental adjustment</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CWE classification per finding</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>MITRE ATT&amp;CK technique tagging</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Business-impact rating agreed with you</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">COMPLIANCE</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 Type II evidence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>ISO 27001 Annex A controls</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>DORA threat-led penetration testing</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>GDPR Article 32</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" data-screen-label="Engagement sizing" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Engagement sizing</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">Priced by objective and duration</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Indicative sizing. Final quote follows a scoping workshop.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ASSUMED BREACH</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">Start inside</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">We begin with a standard employee workstation. Fastest route to detection findings.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">3-4 weeks</div>
+        </div>
+        <div style="border:1px solid var(--color-forest);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;background:var(--color-forest-100);">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">FULL KILL CHAIN</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">External to objective</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">No starting access. External recon through to the crown-jewel objective. The most common scope.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">5-6 weeks</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px;">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">THREAT-LED</div>
+          <div style="font:600 20px var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">Regulator-aligned</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">TIBER-EU or DORA-aligned, with threat intelligence driving the scenario and regulator reporting.</div>
+          <div style="font:500 12px var(--font-mono);color:var(--color-forest-600);letter-spacing:.06em;margin-top:auto;padding-top:10px">8-12 weeks</div>
+        </div>
+      </div>
+      <p style="font: 400 13.5px/1.6 var(--font-body); color: var(--text-secondary); margin: 22px 0 0">Every engagement is quoted after scoping. No per-seat pricing, no surprise change orders, and retests are included for the life of the engagement.</p>
+    </div>
+  </section>
+  <section id="case" data-screen-label="Case study" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Case study</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">A bank, nine days</h2>
+      
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <div style="flex:1 1 380px;max-width:620px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:16px">BANKING · APAC</div>
+          <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 16px;text-wrap:balance">A contractor account nobody had closed was cheaper than any exploit we had prepared.</p>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The engagement objective was access to the settlement file share. We never needed a vulnerability. An expired vendor relationship left a live VPN account whose password appeared in a public breach corpus. Detection logged the movement but nothing escalated it.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;min-width:180px">
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">9d</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">TO OBJECTIVE</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">0</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">EXPLOITS USED</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">6d</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">ALERT SAT UNREAD</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Questions we get</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Questions we get</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">How is this different from a pentest?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A pentest finds vulnerabilities across a defined surface. A red team pursues one objective by any authorized route and measures whether you notice. Different question, different answer.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Do you phish our employees?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Only if you authorize it, and always within rules we agree in writing. Some clients exclude it entirely and we work around it.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Who on our side should know?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A small trusted group, usually the CISO and one or two others. If the whole security team knows, you are testing a drill rather than your real response.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">What if you cause an outage?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Destructive and customer-affecting actions are contractually out of scope. We have a live abort channel with your named contact throughout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

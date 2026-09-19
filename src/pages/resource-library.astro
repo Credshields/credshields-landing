@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/resource-library.css";
+
+const title = "Resource Library - CredShields";
+const description = "Sample pentest reports, the AppSec maturity model, RFP templates, and compliance checklists. Request any of them by email.";
+---
+<BaseLayout title={title} description={description}>
+  <div class="resource-library-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">RESOURCE LIBRARY</span>
+      </div>
+      <h1 style="font:700 clamp(34px,4.4vw,58px)/1.06 var(--font-display);letter-spacing:-.03em;margin:0;color:var(--color-forest);max-width:960px;text-wrap:pretty">Ask and we will send it</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 22px 0 30px; text-wrap: pretty">Sample reports, templates, and checklists right in your inbox.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section id="assets" data-screen-label="Assets" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Library</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">Worth reading</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-sample-pentest-report" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">REPORT</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">PDF · 24 pages</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Sample Pentest Report</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A full redacted engagement report: scope, methodology, findings with CVSS and reproduction steps, and the compliance mapping auditors read first.</p>
+          <button data-asset="Sample pentest report" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-sample-smart-contract-audit" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">REPORT</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">PDF · 18 pages</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Sample smart contract audit</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A published contract audit with OWASP Smart Contract Top 10 mapping, severity breakdown, and the remediation record.</p>
+          <button data-asset="Sample smart contract audit" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-appsec-maturity-model" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">FRAMEWORK</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">PDF · 12 pages</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">AppSec maturity model</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Five levels across scope, cadence, validation, and remediation. Find where you sit and what the next level actually requires.</p>
+          <button data-asset="AppSec maturity model" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-pentest-rfp-template" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">TEMPLATE</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">DOCX · editable</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Pentest RFP template</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The questions worth asking any testing vendor, in a document you can send as-is. Includes the answers that should worry you.</p>
+          <button data-asset="Pentest RFP template" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-soc-2-evidence-checklist" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">CHECKLIST</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">PDF · 6 pages</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">SOC 2 evidence checklist</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Every artefact an auditor asks for around penetration testing, in the order fieldwork asks for it.</p>
+          <button data-asset="SOC 2 evidence checklist" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-security-questionnaire-pack" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">PACK</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">ZIP · under NDA</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Security questionnaire pack</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Our completed CAIQ and SIG responses, plus the SOC 2 Type II report, for your vendor review. Shared under NDA.</p>
+          <button data-asset="Security questionnaire pack" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-pentest-vs-vulnerability-scan" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">BRIEF</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">PDF · 1 page</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Pentest vs vulnerability scan</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A one-page brief for the person who has to approve the budget, explaining what each one buys.</p>
+          <button data-asset="Pentest vs vulnerability scan" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;display:flex;flex-direction:column;background:var(--surface-raised)">
+          <div style="position:relative;width:100%;height:200px;background:var(--surface-sunken);border-bottom:1px solid var(--border-default)">
+            <image-slot id="asset-web3-security-buyer-s-guide" shape="rect" placeholder="Drop a cover image"></image-slot>
+          </div>
+          <div style="padding:24px 26px 26px;display:flex;flex-direction:column;gap:11px;flex:1">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+            <span style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.12em">GUIDE</span>
+            <span style="font:400 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.06em">PDF · 16 pages</span>
+          </div>
+          <h3 style="font:600 18px/1.28 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:pretty">Web3 security buyer’s guide</h3>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">What to require from a contract auditor, and the off-chain surfaces most audits leave untested.</p>
+          <button data-asset="Web3 security buyer’s guide" class="cs-btn cs-btn-lime cs-btn-sm" style="margin-top:auto;align-self:flex-start;border:none;cursor:pointer;font-family:inherit">Request by email →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Ungated" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,72px) 28px">
+      <div style="border-left:3px solid var(--color-forest);padding:8px 0 8px 24px;max-width:760px">
+        <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 12px;text-wrap:pretty">Other resources you can check out</p>
+        <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Compliance guides, glossary, comparisons, the OWASP Smart Contract Top 10, case studies and more.&nbsp;<a href="Resources.html" style="font-weight: 500;">Browse the open resources →</a></p>
+      </div>
+    </div>
+  </section>
+
+    <dialog data-asset-dialog style="border:0;border-radius:var(--radius-lg);max-width:520px;width:calc(100% - 48px);padding:0;box-shadow:0 32px 80px rgba(10,26,12,.4)">
+      <form data-asset-form method="dialog" style="padding:30px;display:flex;flex-direction:column;gap:14px;background:var(--surface-page)">
+        <div style="display:flex;justify-content:space-between;gap:16px;align-items:flex-start"><div><div style="font:500 10px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:8px">REQUEST ASSET</div><h2 data-asset-title style="font:600 21px/1.25 var(--font-display);letter-spacing:-.02em;color:var(--color-ink);margin:0"></h2></div><button value="cancel" aria-label="Close" style="background:none;border:0;font-size:24px;cursor:pointer">×</button></div>
+        <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0">We will email it straight over. One email, no drip sequence.</p>
+        <input name="name" required placeholder="Full name" autocomplete="name" style="padding:13px 15px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-raised);font:400 15px var(--font-body)">
+        <input name="company" required placeholder="Company" autocomplete="organization" style="padding:13px 15px;border:1px solid var(--border-default);border-radius:var(--radius-sm);background:var(--surface-raised);font:400 15px var(--font-body)">
+        <input name="email" required type="email" placeholder="Work email" autocomplete="email" style="padding:13px 15px;border:1px solid var(--border-default);border-radius:var(--surface-raised);font:400 15px var(--font-body)">
+        <label style="font:400 12.5px/1.5 var(--font-body);color:var(--text-secondary)"><input name="consent" required type="checkbox"> Email me this asset. See our privacy policy.</label>
+        <button class="cs-btn cs-btn-lime cs-btn-lg" style="justify-content:center;border:0;cursor:pointer">Email me the asset →</button>
+      </form>
+    </dialog>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+    const dialog = document.querySelector("[data-asset-dialog]");
+    const assetTitle = document.querySelector("[data-asset-title]");
+    document.querySelectorAll("[data-asset]").forEach((button) => {
+      button.addEventListener("click", () => {
+        assetTitle.textContent = button.dataset.asset ?? "Resource";
+        dialog.showModal();
+      });
+    });
+    document.querySelector("[data-asset-form]").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      form.innerHTML = '<div style="padding:24px 0;text-align:center;font:600 20px var(--font-display);color:var(--color-forest)">On its way.</div><p style="margin:0;text-align:center;font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary)">Check your inbox within a few minutes.</p>';
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,267 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/saas-security.css";
+
+const title = "SaaS and Enterprise - CredShields";
+const description = "B2B platforms ship weekly, then face long security questionnaires. We test at your release pace and supply the evidence buyers ask for.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://credshields.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Industries",
+      "item": "https://credshields.com/industries"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SaaS and Enterprise",
+      "item": "https://credshields.com/saas-security/"
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+  <div class="saas-security-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <span data-heroicon="" style="color:var(--color-forest);display:block;margin-bottom:18px;transform:scale(1.5);transform-origin:left center" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></svg></span>
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">INDUSTRY · SAAS AND ENTERPRISE</span>
+      </div>
+      <h1 style="font: 700 clamp(34px,4.4vw,58px)/1.06 var(--font-display); letter-spacing: -.03em; margin: 0; color: var(--color-forest); text-wrap: pretty">Pass enterprise security review without stalling the roadmap</h1>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 22px 0 30px; text-wrap: pretty">B2B platforms ship weekly, then face long security questionnaires. We test at your release pace and supply the evidence buyers ask for.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="CredShields One" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) 28px">
+      <div style="background:var(--surface-deep);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 460px;max-width:640px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span class="cs-badge cs-badge-lime">Start here</span>
+            <span style="font:500 11px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.16em">CREDSHIELDS ONE</span>
+          </div>
+          <h2 style="font:600 clamp(22px,2.4vw,30px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--text-on-deep-primary);max-width:640px;text-wrap:balance">Your prospect asks for a pentest report dated this quarter</h2>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-on-deep-tertiary);margin:0;text-wrap:pretty">CredShields One regenerates evidence on every release, so the report you attach to a security review is always current. That alone shortens enterprise deals.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/" class="cs-btn cs-btn-lime cs-btn-md">Explore CredShields One</a>
+          <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Talk it through</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="threats" data-screen-label="Threat landscape" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Threat landscape</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">What actually goes wrong in B2B platforms</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Multi-tenancy and integrations are where the criticals live.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">TENANT ISOLATION</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Cross-tenant data access</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The defining risk of B2B SaaS. Usually a missing filter on one resolver or one background job rather than a systemic failure.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ENTERPRISE AUTH</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">SSO and SCIM edge cases</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">SAML assertion handling, IdP-initiated flows, and deprovisioning gaps where a removed user keeps a live session.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">INTEGRATIONS</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Webhooks, OAuth apps, and marketplaces</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Every integration is an authorization surface, and third-party apps often hold broader scopes than the user who installed them.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ADMIN SURFACE</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Internal tooling reachable externally</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Support and impersonation tooling is the highest-value target in any SaaS estate and is frequently the least tested.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="regulation" data-screen-label="Regulation" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What you have to prove</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">What enterprise buyers require</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">The framework is usually SOC 2, but the questionnaire goes further.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">CERTIFICATION</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 Type II annual pentest evidence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>ISO 27001:2022 Annex A.8 and A.14</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Annual and change-driven testing cadence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Attestation letters for customer distribution</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">QUESTIONNAIRES</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CAIQ and SIG responses</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Customer-specific security reviews</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Sub-processor and supply-chain evidence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Vulnerability disclosure and SLA commitments</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">REGIONAL AND SECTOR</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>GDPR Article 32 for EU customers</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>HIPAA where healthcare customers exist</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>FedRAMP readiness for public sector</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>DORA where financial customers exist</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="findings" data-screen-label="Common findings" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What we keep finding</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">What we keep finding in SaaS</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">From recent engagements in this sector.</p>
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+        <div style="padding:20px 24px;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical">Critical</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-danger-strong)">CVSS 9.3</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">GraphQL node resolver returned records from every tenant</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Authorization was enforced on every REST route. The global node interface inherited none of it. A single query walked the entire customer base. It had shipped 14 months earlier.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high">High</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 7.6</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Deprovisioned SSO user retained an active session for 30 days</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">SCIM removed the user from the IdP but the platform never invalidated existing sessions, so a departed employee kept full access.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-medium">Medium</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 6.7</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Support impersonation tooling reachable with a valid customer token</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">The impersonation endpoint checked authentication but not staff role, so any authenticated customer could assume another account.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" data-screen-label="Services" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Where teams here start</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">Where teams here start</h2>
+      <p style="font: 400 18px/1.65 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; text-wrap: pretty">Most SaaS clients run the platform on every release and add manual testing before a major enterprise deal or audit.</p>
+      <div style="display:flex;flex-direction:column">
+        <a href="/" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">CredShields One</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">Tested every release, evidence always current</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more →</span>
+        </a>
+        <a href="/web-pentest" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Web App Pentesting</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">Deep multi-tenant and business-logic assessment</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more →</span>
+        </a>
+        <a href="/compliance" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Compliance Readiness</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">SOC 2 and ISO 27001 evidence, auditor liaison included</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more →</span>
+        </a>
+        <a href="/devsecops" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">DevSecOps Integration</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">Gate every merge on proven findings only</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="proof" data-screen-label="Customer proof" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Customer proof</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">A B2B platform, one query</h2>
+      
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <div style="flex:1 1 380px;max-width:620px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:16px">B2B SAAS · SERIES C</div>
+          <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 16px;text-wrap:balance">One unguarded resolver returned every tenant on the platform. It had shipped 14 months earlier.</p>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The team had authorization checks on every REST route and assumed GraphQL inherited them. It did not. A single introspected query walked the entire customer base. Patched in 48 hours and now retested on every release.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;min-width:180px">
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">14mo</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">UNDETECTED</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">1</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">QUERY TO EXPLOIT</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">48h</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">TO PATCH</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Timing" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,72px) 28px">
+      <div style="border-left:3px solid var(--color-forest);padding:8px 0 8px 24px;max-width:760px">
+        <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 14px;text-wrap:balance">The deal is waiting on the security review.</p>
+        <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Enterprise procurement stalls on stale evidence more often than on findings. If a report dated this quarter is what unblocks a contract, tell us the date it is needed and we will scope around it.</p>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Questions we get</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Questions we get</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Can we share your report with our customers?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes. We provide an attestation letter written for external distribution alongside the full technical report, which most teams keep internal.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">How do you test multi-tenancy?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We provision accounts in at least two tenants and attempt every operation across the boundary. Single-tenant testing cannot find these bugs by construction.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Do you test our marketplace integrations?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes. Third-party OAuth apps and webhook consumers are in scope and are a frequent source of over-scoped access.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">We ship daily. Does a point-in-time pentest even help?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">It helps for depth and for audits. For cadence, the platform is the answer. Most of our SaaS clients run both for that reason.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>

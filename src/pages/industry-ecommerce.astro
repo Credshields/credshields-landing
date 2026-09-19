@@ -1,0 +1,267 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import GetStarted from "../components/GetStarted.astro";
+import "../styles/industry-ecommerce.css";
+
+const title = "E-commerce and Retail - CredShields";
+const description = "Marketplaces, DTC brands, and retail platforms. Scoped around checkout, pricing logic, and the card data environment.";
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://credshields.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Industries",
+      "item": "https://credshields.com/industries"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "E-commerce and Retail",
+      "item": "https://credshields.com/industry-ecommerce/"
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script slot="head" is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} />
+  <div class="industry-ecommerce-page">
+<section id="top" data-screen-label="Hero" style="background:var(--surface-page);border-bottom:1px solid var(--border-default);padding:150px 28px clamp(64px,8vw,88px);position:relative;overflow:hidden">
+    <img src="/images/about-icon-black.png" alt="" style="position:absolute;right:-60px;top:50%;transform:translateY(-50%);width:440px;height:440px;opacity:.045;pointer-events:none">
+    <div style="max-width:1180px;margin:0 auto;position:relative;z-index:2">
+      <span data-heroicon="" style="color:var(--color-forest);display:block;margin-bottom:18px;transform:scale(1.5);transform-origin:left center" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2l2.5 11h11L21 7H6"/></svg></span>
+      <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--color-forest);border-radius:var(--radius-pill);padding:8px 16px;background:var(--color-forest-100);margin-bottom:26px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--color-forest);animation:pulseDot 2.6s infinite"></span>
+        <span style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.18em">INDUSTRY · E-COMMERCE AND RETAIL</span>
+      </div>
+      <h1 style="font:700 clamp(34px,4.4vw,58px)/1.06 var(--font-display);letter-spacing:-.03em;margin:0;color:var(--color-forest);max-width:960px;text-wrap:pretty">Testing for storefronts where a logic flaw costs real margin</h1>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:22px 0 30px;max-width:760px;text-wrap:pretty">Marketplaces, DTC brands, and retail platforms. Scoped around checkout, pricing logic, and the card data environment.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="#contact" class="cs-btn cs-btn-lime cs-btn-lg">Get Scoped</a>
+        <a href="/" class="cs-btn cs-btn-secondary cs-btn-lg">See CredShields One</a>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="CredShields One" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,64px) 28px">
+      <div style="background:var(--surface-deep);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 460px;max-width:640px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+            <span class="cs-badge cs-badge-lime">Start here</span>
+            <span style="font:500 11px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.16em">CREDSHIELDS ONE</span>
+          </div>
+          <h2 style="font:600 clamp(22px,2.4vw,30px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--text-on-deep-primary);text-wrap:balance">You cannot freeze the storefront for a pentest</h2>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-on-deep-tertiary);margin:0;text-wrap:pretty">CredShields One tests each release as it ships, including the pricing and promotion changes that go out weekly. Manual engagements cover PCI requirements and deeper checkout logic.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="/" class="cs-btn cs-btn-lime cs-btn-md">Explore CredShields One</a>
+          <a href="#contact" class="cs-btn cs-btn-secondary cs-btn-on-deep cs-btn-md">Talk it through</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="threats" data-screen-label="Threat landscape" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Threat landscape</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">What actually goes wrong in retail platforms</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Almost none of it is a CVE. It is money logic.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">CHECKOUT</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Price, discount, and cart manipulation</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Coupon stacking, negative quantities, currency confusion, and client-trusted totals. Every one is unique to your implementation.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">CARD DATA</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Scope and segmentation</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">What actually touches card data is usually broader than the diagram claims, and that gap is what fails a PCI assessment.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">MARKETPLACE</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Seller and buyer role boundaries</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Multi-sided platforms where a seller account can reach buyer data, or another seller’s orders and payouts.</p>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px;display:flex;flex-direction:column;gap:10px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">SUPPLY CHAIN</div>
+          <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink);text-wrap:balance">Third-party scripts on the payment page</h3>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Analytics, chat widgets, and tag managers loaded next to checkout are the standard route for card skimming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="regulation" data-screen-label="Regulation" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What you have to prove</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">What you have to prove, and to whom</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">PCI is mandatory. The rest depends on where you sell.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">CARD DATA</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>PCI DSS 4.0 Requirement 11.4 penetration testing</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Requirement 6.4.3 payment page script management</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Segmentation testing at required intervals</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SAQ or ROC evidence depending on level</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">CONSUMER DATA</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>GDPR Article 32 for EU customers</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>CCPA and state privacy laws</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Cookie and tracking consent enforcement</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Data retention for order history</span>
+          </div>
+        </div>
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;padding-bottom:12px;border-bottom:1px solid var(--border-default);margin-bottom:14px">OPERATIONAL</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>SOC 2 for enterprise and wholesale customers</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>ISO 27001 for tender processes</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Fraud and chargeback control evidence</span>
+            <span style="display:flex;align-items:baseline;gap:10px;font:400 14.5px/1.5 var(--font-body);color:var(--text-secondary)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;transform:translateY(2px)"><polyline points="20 6 9 17 4 12"></polyline></svg>Peak-season availability commitments</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="findings" data-screen-label="Common findings" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ What we keep finding</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">What we keep finding in retail</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">From recent engagements in this sector.</p>
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden;background:var(--surface-raised)">
+        <div style="padding:20px 24px;display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-critical">Critical</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-danger-strong)">CVSS 9.0</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Order total recalculated from a client-supplied value at capture</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">The payment capture step trusted a total passed back from the browser rather than recomputing server-side, allowing arbitrary prices at checkout.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-high">High</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 7.7</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Seller account queried orders across the entire marketplace</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">The seller order endpoint filtered by seller ID supplied in the request, not from the session, exposing every merchant’s order and payout data.</div>
+        </div>
+        <div style="padding:20px 24px;border-top:1px solid var(--border-default);display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+            <span class="cs-severity cs-severity-medium">Medium</span>
+            <span class="cs-proof cs-proof-proven"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Proven</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-warning-strong)">CVSS 6.3</span>
+          </div>
+          <div style="font:500 14.5px/1.4 var(--font-mono);color:var(--color-ink);text-wrap:pretty">Promotion codes stackable beyond intended limits via parallel requests</div>
+          <div style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Single-use codes had no atomic redemption lock, so concurrent requests applied the same code repeatedly.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" data-screen-label="Services" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Where teams here start</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 16px;color:var(--color-forest);text-wrap:pretty">Where teams here start</h2>
+      <p style="font:400 18px/1.65 var(--font-body);color:var(--text-secondary);margin:0 0 40px;text-wrap:pretty">Retail clients typically need PCI evidence plus testing every release on a fast-changing storefront.</p>
+      <div style="display:flex;flex-direction:column">
+        <a href="/" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">CredShields One</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">Tested every release, evidence always current</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more &#8594;</span>
+        </a>
+        <a href="/compliance" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Compliance Readiness</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">PCI DSS 4.0 evidence and segmentation testing</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more &#8594;</span>
+        </a>
+        <a href="/web-pentest" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Web App Pentesting</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">Checkout, pricing, and marketplace role testing</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more &#8594;</span>
+        </a>
+        <a href="/mobile-pentest" style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:18px 4px;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);color:inherit" style-hover="background:var(--surface-sunken)">
+          <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+            <span style="font:600 16.5px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Mobile App Pentesting</span>
+            <span style="font:400 14px var(--font-body);color:var(--text-secondary)">Shopping apps, wallets, and in-app payment flows</span>
+          </div>
+          <span style="font:500 13px var(--font-body);color:var(--color-forest);white-space:nowrap">Learn more &#8594;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="proof" data-screen-label="Customer proof" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Customer proof</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">A marketplace, one parameter</h2>
+      
+      <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start">
+        <div style="flex:1 1 380px;max-width:620px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:16px">MARKETPLACE · SERIES B</div>
+          <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 16px;text-wrap:balance">Any seller could read every other seller’s orders by changing one number in a request.</p>
+          <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The seller order endpoint took the seller ID from the request body instead of the session. Two years of quarterly scanning never flagged it, because on paper the request was well-formed and authenticated.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;min-width:180px">
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">1</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">PARAMETER</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">0</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">PRIOR SCANNER ALERTS</div></div>
+          <div><div style="font:700 30px var(--font-display);letter-spacing:-.02em;color:var(--color-forest)">5d</div><div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:4px">TO VERIFIED FIX</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Timing" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,72px) 28px">
+      <div style="border-left:3px solid var(--color-forest);padding:8px 0 8px 24px;max-width:760px">
+        <p style="font:500 var(--type-pull-quote)/1.35 var(--font-display);letter-spacing:-.015em;color:var(--color-ink);margin:0 0 14px;text-wrap:balance">Nobody changes code in Q4. Test before the freeze.</p>
+        <p style="font:400 15.5px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Retail engineering locks down before peak season, so security work either lands before the freeze or waits until January. If your freeze date is approaching, scope backwards from it with us.</p>
+      </div>
+    </div>
+  </section>
+  <section id="faq" data-screen-label="FAQ" style="border-bottom:1px solid var(--border-default);">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,8vw,88px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Questions we get</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 40px;color:var(--color-forest);text-wrap:pretty">Questions we get</h2>
+      
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px 40px">
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Will testing affect live orders?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">No. We test a staging environment with production-like configuration, and any production confirmation pass uses agreed test accounts and payment sandboxes.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Do you test our payment provider?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">We test your integration with them. Most checkout findings live in how that integration is wired.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">Can you help scope our card data environment?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Yes. Scope reduction is usually the highest-leverage PCI work, and it is part of the compliance readiness engagement.</p>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:16px">
+          <h3 style="font:600 16px/1.3 var(--font-display);letter-spacing:-.01em;margin:0 0 6px;color:var(--color-ink)">What about third-party scripts on the payment page?</h3>
+          <p style="font:400 13.5px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">In scope, and increasingly required by PCI DSS 4.0 Requirement 6.4.3. Skimming through injected scripts remains one of the most common real-world retail breaches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+    <GetStarted />
+  </div>
+  <script>
+    import "../../js/main.v1.js";
+    import "../../js/homepage-rehaul.js";
+  </script>
+</BaseLayout>
