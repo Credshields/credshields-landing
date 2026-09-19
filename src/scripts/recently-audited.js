@@ -317,7 +317,7 @@ function fillAuditRow(audit, container) {
           </div>
         </div>
         <a class="audit-link" href="${downloadUrl}" download="${fileName}" data-audit-download>View Audit Report
-          <img class="arrow-icon" src="/images/arrow-up-right.svg" alt="link" />
+          <img class="arrow-icon" src="images/arrow-up-right.svg" alt="link" />
         </a>
       </div>
     </div>
