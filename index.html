@@ -82,6 +82,64 @@
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-PN6ZFK2F");
     </script>
+
+    <!-- Styles for the imported Apps sections only. Shared site CSS stays unchanged. -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&amp;family=Figtree:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" />
+    <style id="home-v2-styles">
+      .home-v2-section {
+        --color-forest: #2e7d0e;
+        --color-forest-600: #256a0b;
+        --color-forest-100: #e1f1d9;
+        --color-lime: #a8ff45;
+        --color-ink: #0a1a0c;
+        --color-dim: #4a6650;
+        --surface-page: #f4f8f4;
+        --surface-raised: #fff;
+        --surface-sunken: rgba(10,26,12,.04);
+        --surface-deep: #1e3a24;
+        --text-secondary: #4a6650;
+        --text-on-deep-primary: #f4f8f4;
+        --text-on-deep-tertiary: rgba(244,248,244,.7);
+        --text-on-deep-muted: rgba(244,248,244,.5);
+        --border-default: rgba(10,26,12,.12);
+        --border-on-deep: rgba(244,248,244,.16);
+        --radius-sm: 3px;
+        --radius-md: 6px;
+        --radius-lg: 10px;
+        --radius-pill: 999px;
+        --font-display: 'Bricolage Grotesque', var(--font-sans);
+        --font-body: 'Figtree', var(--font-sans);
+        --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+        --type-display-2: clamp(1.875rem, calc(1.3rem + 2.8vw), 3.25rem);
+        --type-body-lg: clamp(1.125rem, calc(1rem + .5vw), 1.3125rem);
+        color: var(--color-ink);
+        background: var(--surface-page);
+        font-family: var(--font-body);
+        line-height: 1.6;
+      }
+      .home-v2-section *, .home-v2-section *::before, .home-v2-section *::after { box-sizing: border-box; }
+      .home-v2-section a { text-decoration: none; }
+      .home-v2-section a:hover { color: var(--color-forest-600); }
+      #trust.home-v2-section a:hover { color: #f4f8f4; }
+      .home-v2-section .cs-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: var(--radius-pill); font: 500 11px/1.4 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+      .home-v2-section .cs-badge-forest { background: var(--color-forest-100); color: var(--color-forest-600); }
+      .home-v2-section .cs-badge-lime { background: #efffdd; color: #1e3a24; }
+      .home-v2-section .cs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: var(--radius-pill); font: 600 13px var(--font-body); padding: 8px 16px; }
+      .home-v2-section .cs-btn-primary { background: var(--color-forest); color: #f4f8f4; }
+      .home-v2-section .cs-btn-primary:hover { background: var(--color-forest-600); color: #f4f8f4; }
+      .home-v2-section [data-ctrl]:focus-visible, .home-v2-section [data-svc]:focus-visible, .home-v2-section a:focus-visible { outline: 2px solid var(--color-lime); outline-offset: 3px; }
+      #services.home-v2-section [data-svc]:hover { background: var(--surface-sunken) !important; }
+      #services.home-v2-section [data-svc][aria-pressed="true"] { border-left-color: var(--color-forest) !important; background: var(--color-forest-100) !important; }
+      @media (max-width: 760px) {
+        .home-v2-section [data-trust-split], .home-v2-section [data-svc-split] { grid-template-columns: 1fr !important; }
+        .home-v2-section [data-trust-split] > div:first-child, .home-v2-section [data-svc-split] > div:last-child { position: static !important; }
+        #position.home-v2-section [style*="grid-template-columns:minmax(150px,200px)"] { grid-template-columns: 1fr !important; }
+      }
+      @media (max-width: 650px) {
+        .home-v2-section [data-reveal] { padding-left: 20px !important; padding-right: 20px !important; }
+        #position.home-v2-section [style*="grid-template-columns:repeat(auto-fit"], #how.home-v2-section [style*="grid-template-columns:repeat(auto-fit"], #compare.home-v2-section [style*="grid-template-columns:repeat(auto-fit"], #who.home-v2-section [style*="grid-template-columns:repeat(auto-fit"], #team.home-v2-section [style*="grid-template-columns:repeat(auto-fit"] { grid-template-columns: 1fr !important; }
+      }
+    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -792,23 +850,23 @@
         <div class="rehaul-hero-content">
           <div class="rehaul-hero-badge">
             <span class="rehaul-hero-badge-dot"></span>
-            <span class="rehaul-hero-badge-text">AUTONOMOUS AI PENTESTING</span>
+            <span class="rehaul-hero-badge-text">AGENTIC PENTESTING</span>
           </div>
           <h1 class="rehaul-hero-title">
-            Pentesting at AI scale,
-            <span>for every release</span>
+            Pentesting at
+            <span>the speed you ship</span>
           </h1>
           <p class="rehaul-hero-copy">
-            CredShields One discovers, exploits, and proves vulnerabilities
-            across your web, mobile, cloud, and API surface. Behind it sits a
-            senior offensive security team that validates every finding.
+            CredShields One brings pentesting in-house. Autonomous AI agents do
+            the offensive testing pentesters do: attack your applications,
+            validate what can actually be exploited, and retest the fix.
           </p>
           <div class="rehaul-hero-actions">
             <a href="#contact" class="rehaul-btn rehaul-btn-primary"
               >Get Scoped</a
             >
             <a
-              href="https://app.credshields.com"
+              href="https://one.credshields.com/login"
               class="rehaul-btn rehaul-btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
@@ -816,40 +874,9 @@
             >
           </div>
           <div class="rehaul-hero-audience">
-            BUILT FOR DEVOPS, ENGINEERING, AND SECURITY TEAMS
+            FOR ENGINEERING AND SECURITY TEAMS
           </div>
         </div>
-
-        <aside class="rehaul-hero-result" aria-label="What a run returns">
-          <div class="rehaul-hero-result-label">WHAT A RUN RETURNS</div>
-          <div class="rehaul-result-item">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <div>
-              <div class="rehaul-result-title">Proven findings</div>
-              <p>Each one exploited and reproduced, with the request chain attached.</p>
-            </div>
-          </div>
-          <div class="rehaul-result-item">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <div>
-              <div class="rehaul-result-title">Senior validation</div>
-              <p>A pentester confirms or rules out every finding before it reaches you.</p>
-            </div>
-          </div>
-          <div class="rehaul-result-item">
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            <div>
-              <div class="rehaul-result-title">Retest on the next commit</div>
-              <p>Push a fix and the same chain runs again.</p>
-            </div>
-          </div>
-        </aside>
       </div>
       <div class="rehaul-hero-scroll" aria-hidden="true">
         <span>SCROLL</span>
@@ -1004,18 +1031,18 @@
       aria-labelledby="platform-title"
     >
       <div class="rehaul-platform-inner">
-        <div class="rehaul-platform-eyebrow">/ Inside the platform</div>
+        <div class="rehaul-platform-eyebrow">/ Show the work</div>
         <h2 id="platform-title" class="rehaul-platform-title">
-          One run, end to end
+          Every finding shows what the agent did
         </h2>
         <p class="rehaul-platform-intro">
-          One run, from mapped endpoints to a signed, compliance mapped report.
+          What it attempted, what worked, and the evidence behind it.
         </p>
 
         <figure class="rehaul-platform-feature rehaul-platform-card">
           <figcaption class="rehaul-platform-caption rehaul-platform-card-copy">
-            <span class="rehaul-platform-caption-label">01 / OVERVIEW</span>
-            <strong>Risk score, severity breakdown, and scan coverage for the release.</strong>
+            <span class="rehaul-platform-caption-label">OVERVIEW</span>
+            <strong>Severity, coverage, and what was validated on this run.</strong>
             <span>
               Every issue carries a CWE reference and a confidence score, ranked
               by impact.
@@ -1031,7 +1058,7 @@
         <div class="rehaul-platform-cards">
           <figure class="rehaul-platform-figure rehaul-platform-card">
             <figcaption class="rehaul-platform-caption rehaul-platform-card-copy">
-              <span class="rehaul-platform-caption-label">02 / FINDINGS</span>
+              <span class="rehaul-platform-caption-label">FINDINGS</span>
               <strong>Every finding, searchable.</strong>
               <span>
                 Severity, CWE, confidence, and the endpoint it was found on.
@@ -1047,8 +1074,8 @@
 
           <figure class="rehaul-platform-figure rehaul-platform-card rehaul-platform-card-detail">
             <figcaption class="rehaul-platform-caption rehaul-platform-card-copy">
-              <span class="rehaul-platform-caption-label">03 / FINDING DETAIL</span>
-              <strong>Description, proof of concept, remediation.</strong>
+              <span class="rehaul-platform-caption-label">FINDING DETAIL</span>
+              <strong>The exploit, the evidence, and the fix.</strong>
               <span>
                 Reproduction commands, root cause, and the code fix.
               </span>
@@ -1065,519 +1092,359 @@
         </div>
       </div>
     </section>
-    <!-- APPS Product Position -->
-    <section
-      id="position"
-      class="rehaul-position show-apps"
-      aria-labelledby="position-title"
-    >
-      <div class="rehaul-position-inner">
-        <div class="rehaul-platform-eyebrow">/ Where it fits</div>
-        <h2 id="position-title" class="rehaul-platform-title">
-          Vulnerability detection that keeps up with your releases
-        </h2>
-        <p class="rehaul-position-lead">
-          <strong>
-            CredShields One maps your attack surface, exploits what it finds,
-            and proves which vulnerabilities are real.
-          </strong>
-          A senior pentester reviews every finding before it reaches you, and
-          you decide which environment it runs against.
-        </p>
-        <p class="rehaul-position-copy">
-          Most teams gate releases with DAST, SAST, or a scanner. Those tools
-          flag patterns. CredShields One tests the way a pentester does: it
-          exploits the issue, then proves it.
-        </p>
-
-      <div class="rehaul-workflow" aria-label="Release workflow" data-pipe="" style="position:relative;padding-top:8px;margin-bottom:8px">
-        <div data-pipe-track="" style="position:absolute;left:12.5%;right:12.5%;top:calc(8px + 39px);height:1px;background:rgba(46,125,14,.18);z-index:0">
-          <span data-pipe-pulse="" style="position:absolute;top:50%;left:0%;width:10px;height:10px;border-radius:50%;background:var(--color-forest);box-shadow:0 0 0 4px rgba(168,255,69,.32),0 0 14px rgba(46,125,14,.55);transform:translate(-50%,-50%);opacity:0"></span>
+    <!-- Apps homepage sections from the supplied v2 design -->
+    <section class="home-v2-section show-apps" id="position" data-screen-label="Where it sits" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width: 1180px; margin: 0 auto; padding: clamp(64px,9vw,96px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Why now</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 18px; color: var(--color-forest); text-wrap: pretty">Software changes faster than it can be tested</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: var(--text-secondary); margin: 0 0 40px; max-width: 760px; text-wrap: pretty">AI gives leverage to everyone who works with software, including the people trying to break it. Pentesting expertise has not scaled at the same rate.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:44px">
+        <div style="border-top:2px solid var(--color-forest);padding-top:18px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:10px">01 · ATTACK</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink)">Attackers can attack more</h3>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">AI automates reconnaissance, research, and parts of exploitation. Targets that were not worth an attacker’s time are now within reach. The cost of attacking is falling, and being smaller is less of a defense.</p>
         </div>
-        <div data-pipe-grid="" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;align-items:stretch">
-        <div data-pipe-card="" style="position:relative;z-index:1;background:var(--surface-raised);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:20px 20px 18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 8px rgba(10,26,12,.04);cursor:default">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <span data-pipe-icon="" style="position:relative;width:36px;height:36px;border-radius:50%;background:rgba(46,125,14,.09);border:1px solid rgba(46,125,14,.22);color:var(--color-forest);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="8" y2="12"></line><line x1="16" y1="12" x2="22.95" y2="12"></line></svg></span>
-            <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;white-space:nowrap">01 / COMMIT</span>
-          </div>
-          <div>
-            <div style="font:500 15px/1.35 var(--font-body);color:var(--color-ink)">Engineering ships</div>
-            <div class="rehaul-workflow-stage-steps">PUSH → MERGE</div>
-            <div data-pipe-detail="" style="font:400 12px var(--font-mono);color:var(--text-secondary);letter-spacing:.04em">24 files changed</div>
-          </div>
-          <div class="rehaul-workflow-stage-status">
-            <span class="rehaul-workflow-stage-track"><span data-pipe-stage-progress></span></span>
-          </div>
+        <div style="border-top:2px solid var(--color-forest);padding-top:18px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:10px">02 · BUILD</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink)">Developers can build more</h3>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">AI coding tools let five engineers ship what once took fifty. More code, APIs, permissions, and business logic, all needing to be tested.</p>
         </div>
-        <div data-pipe-card="" style="position:relative;z-index:1;background:var(--surface-raised);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:20px 20px 18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 8px rgba(10,26,12,.04);cursor:default">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <span data-pipe-icon="" style="position:relative;width:36px;height:36px;border-radius:50%;background:rgba(46,125,14,.09);border:1px solid rgba(46,125,14,.22);color:var(--color-forest);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></span>
-            <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;white-space:nowrap">02 / BUILD</span>
-          </div>
-          <div>
-            <div style="font:500 15px/1.35 var(--font-body);color:var(--color-ink)">CI runs</div>
-            <div class="rehaul-workflow-stage-steps">BUILD → TEST</div>
-            <div data-pipe-detail="" style="font:400 12px var(--font-mono);color:var(--text-secondary);letter-spacing:.04em">18 checks passed</div>
-          </div>
-          <div class="rehaul-workflow-stage-status">
-            <span class="rehaul-workflow-stage-track"><span data-pipe-stage-progress></span></span>
-          </div>
-        </div>
-        <div data-pipe-card="" style="position:relative;z-index:1;background:var(--surface-raised);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:20px 20px 18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 8px rgba(10,26,12,.04);cursor:default">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <span data-pipe-icon="" style="position:relative;width:36px;height:36px;border-radius:50%;background:rgba(46,125,14,.09);border:1px solid rgba(46,125,14,.22);color:var(--color-forest);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg></span>
-            <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;white-space:nowrap">03 / DEPLOY</span>
-          </div>
-          <div>
-            <div style="font:500 15px/1.35 var(--font-body);color:var(--color-ink)">Release goes live</div>
-            <div class="rehaul-workflow-stage-steps">DEPLOY → RELEASE</div>
-            <div data-pipe-detail="" style="font:400 12px var(--font-mono);color:var(--text-secondary);letter-spacing:.04em">v2.8.4</div>
-          </div>
-          <div class="rehaul-workflow-stage-status">
-            <span class="rehaul-workflow-stage-track"><span data-pipe-stage-progress></span></span>
-          </div>
-        </div>
-        <div data-pipe-card="" data-pipe-gate="" style="position:relative;z-index:1;background:var(--surface-raised);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:20px 20px 18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 2px 8px rgba(10,26,12,.04);cursor:default">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-            <span data-pipe-icon="" style="position:relative;width:36px;height:36px;border-radius:50%;background:rgba(46,125,14,.09);border:1px solid rgba(46,125,14,.22);color:var(--color-forest);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-              <svg data-pipe-ring="" width="48" height="48" viewBox="0 0 48 48" fill="none" style="position:absolute;top:-6px;left:-6px;width:48px;height:48px" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="rgba(46,125,14,.18)" stroke-width="1.5"></circle><circle cx="24" cy="24" r="22" stroke="var(--color-forest)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="42 96"></circle></svg>
-              <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
-            </span>
-            <span style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;white-space:nowrap">04 / CS ONE</span>
-          </div>
-          <div>
-            <div style="font:500 15px/1.35 var(--font-body);color:var(--color-ink)">CredShields One security gate</div>
-            <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.08em;margin-top:5px;white-space:nowrap">ATTACK → VERIFY → RETEST</div>
-            <div data-pipe-detail="" style="font:400 12px var(--font-mono);color:var(--text-secondary);letter-spacing:.04em">12 security checks</div>
-          </div>
-          <div style="display:flex;flex-direction:column;gap:7px">
-            <span data-pipe-status="" style="font:500 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.1em;min-height:14px">IDLE</span>
-            <span style="height:2px;background:rgba(46,125,14,.12);border-radius:1px;overflow:hidden;display:block"><span data-pipe-progress="" style="display:block;height:100%;width:0%;background:var(--color-forest);border-radius:1px"></span></span>
-          </div>
-        </div>
+        <div style="border-top:2px solid var(--color-forest);padding-top:18px">
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:10px">03 · TEST</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink)">Security has to test more</h3>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">A company with 1,000 developers might have 20 security engineers. Give those developers AI and the bottleneck gets worse. Specialist headcount cannot scale at the same rate.</p>
         </div>
       </div>
-      </div>
-    </section>
-    <!-- APPS How It Works -->
-    <section
-      id="how"
-      class="rehaul-how show-apps"
-      aria-labelledby="how-title"
-    >
-      <div class="rehaul-how-inner">
-        <div class="rehaul-platform-eyebrow">/ How it works</div>
-        <h2 id="how-title" class="rehaul-platform-title">
-          How CredShields One works
-        </h2>
-        <p class="rehaul-how-intro">
-          Five stages. The AI handles scale, senior pentesters handle judgment.
-        </p>
-
-        <div class="rehaul-how-grid">
-          <div class="rehaul-how-stages">
-            <div class="rehaul-how-stage">
-              <div class="rehaul-how-number">01</div>
-              <div>
-                <div class="rehaul-how-stage-heading">
-                  <h3>Discover</h3>
-                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
-                </div>
-                <p>Maps your attack surface: web, mobile, APIs, auth paths, cloud.</p>
-              </div>
-            </div>
-            <div class="rehaul-how-stage">
-              <div class="rehaul-how-number">02</div>
-              <div>
-                <div class="rehaul-how-stage-heading">
-                  <h3>Attack</h3>
-                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
-                </div>
-                <p>Tests APIs, sessions, and business logic on every release.</p>
-              </div>
-            </div>
-            <div class="rehaul-how-stage">
-              <div class="rehaul-how-number">03</div>
-              <div>
-                <div class="rehaul-how-stage-heading">
-                  <h3>Verify</h3>
-                  <span class="rehaul-how-badge rehaul-how-badge-lime">AI + HUMAN</span>
-                </div>
-                <p>Senior pentesters reproduce every exploit. False positives die here.</p>
-              </div>
-            </div>
-            <div class="rehaul-how-stage">
-              <div class="rehaul-how-number">04</div>
-              <div>
-                <div class="rehaul-how-stage-heading">
-                  <h3>Report</h3>
-                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
-                </div>
-                <p>Audit-ready, mapped to SOC 2, ISO 27001, and GDPR. In days.</p>
-              </div>
-            </div>
-            <div class="rehaul-how-stage rehaul-how-stage-last">
-              <div class="rehaul-how-number">05</div>
-              <div>
-                <div class="rehaul-how-stage-heading">
-                  <h3>Retest</h3>
-                  <span class="rehaul-how-badge rehaul-how-badge-forest">AI + HUMAN</span>
-                </div>
-                <p>Re-runs the exact exploit chain against your patch.</p>
-              </div>
-            </div>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: var(--text-secondary); margin: 0 0 44px; text-wrap: pretty">Scanners tell you what might be vulnerable. CredShields One tests the way a pentester does: it attacks, validates what can be exploited, and shows the evidence.</p>
+      <div style="display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin-bottom:22px">
+        <div style="flex:1 1 130px;border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:16px 18px;background:var(--surface-raised)">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">COMMIT</div>
+          <div style="font:400 13px var(--font-body);color:var(--color-dim);margin-top:6px">Engineering ships</div>
+        </div>
+        <div style="align-self:center;padding:0 10px;font:400 14px var(--font-mono);color:var(--color-dim)">→</div>
+        <div style="flex:1 1 130px;border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:16px 18px;background:var(--surface-raised)">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">BUILD</div>
+          <div style="font:400 13px var(--font-body);color:var(--color-dim);margin-top:6px">CI runs</div>
+        </div>
+        <div style="align-self:center;padding:0 10px;font:400 14px var(--font-mono);color:var(--color-dim)">→</div>
+        <div style="flex:1 1 130px;border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:16px 18px;background:var(--surface-raised)">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">DEPLOY</div>
+          <div style="font:400 13px var(--font-body);color:var(--color-dim);margin-top:6px">Release goes live</div>
+        </div>
+        <div style="align-self:center;padding:0 10px;font:400 14px var(--font-mono);color:var(--color-forest)">→</div>
+        <div style="flex:2 1 300px;border:1px solid var(--color-forest);border-radius:var(--radius-sm);padding:16px 18px;background:var(--color-forest-100)">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <span style="font:600 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.14em">CREDSHIELDS ONE</span>
+            <span class="cs-badge cs-badge-lime">On demand pentesting</span>
           </div>
-
-          <div class="rehaul-how-demo">
-            <div class="rehaul-terminal">
-              <div class="rehaul-terminal-header">
-                <span>~/credshields-one · zsh</span>
-                <span class="rehaul-terminal-live">LIVE</span>
-              </div>
-              <div class="rehaul-terminal-body" aria-label="Example CredShields One run">
-                <div>
-                  <span class="rehaul-terminal-prompt">$</span>
-                  cs-one pentest --target app.acme.io --scope cloud,api
-                </div>
-                <div>
-                  <span class="rehaul-terminal-tag">[recon]&nbsp;&nbsp;</span>
-                  mapped 1,284 endpoints · 27 auth flows
-                </div>
-                <div>
-                  <span class="rehaul-terminal-tag">[attack]&nbsp;</span>
-                  chained 14 exploits · 3 business-logic flaws
-                </div>
-                <div>
-                  <span class="rehaul-terminal-tag">[human]&nbsp;&nbsp;</span>
-                  reviewed by @m.laurent · 2 confirmed, 1 ruled out
-                </div>
-                <div>
-                  <span class="rehaul-terminal-tag">[report]&nbsp;</span>
-                  GDPR · SOC 2 · ISO 27001 · export ready
-                </div>
-                <div>
-                  <span class="rehaul-terminal-tag">[retest]&nbsp;</span>
-                  patch verified · 0 regressions
-                </div>
-                <div>
-                  <span class="rehaul-terminal-prompt">$</span>
-                  <span class="rehaul-terminal-cursor" aria-hidden="true"></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="rehaul-scope-note">
-              <div>SAFE BY SCOPE</div>
-              <p>
-                It scans exactly the environment you provide. We exploit to
-                prove impact, then stop.
-              </p>
-            </div>
+          <div style="font:400 13px/1.5 var(--font-body);color:var(--color-ink);margin-top:6px">Tests when the application changes. Retests each fix. No new engagement.</div>
+        </div>
+      </div>
+      <div style="margin-top:56px">
+        <h3 style="font:600 clamp(24px,2.4vw,30px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-forest)">Pentesting becomes a capability, not an event</h3>
+        <p style="font:400 16px/1.6 var(--font-body);color:var(--text-secondary);margin:0 0 24px;max-width:760px;text-wrap:pretty">Applications keep changing after the pentest ends. The product tested six months ago is not the product running today.</p>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:12px">
+          <div style="display:grid;grid-template-columns:minmax(150px,200px) minmax(0,1fr);gap:16px;align-items:center;border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:16px 18px">
+            <div><div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">AN EVENT</div><div style="font:400 13px var(--font-body);color:var(--color-dim);margin-top:4px">Outsourced, periodic</div></div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font:500 12px var(--font-mono);color:var(--text-secondary);border:1px solid var(--border-default);background:transparent;border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Scope</span><span style="font:400 13px var(--font-mono);color:var(--color-dim)">→</span><span style="font:500 12px var(--font-mono);color:var(--text-secondary);border:1px solid var(--border-default);background:transparent;border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Engage a firm</span><span style="font:400 13px var(--font-mono);color:var(--color-dim)">→</span><span style="font:500 12px var(--font-mono);color:var(--text-secondary);border:1px solid var(--border-default);background:transparent;border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Test</span><span style="font:400 13px var(--font-mono);color:var(--color-dim)">→</span><span style="font:500 12px var(--font-mono);color:var(--text-secondary);border:1px solid var(--border-default);background:transparent;border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Report</span><span style="font:400 13px var(--font-mono);color:var(--color-dim)">→</span><span style="font:500 12px var(--font-mono);color:var(--text-secondary);border:1px solid var(--border-default);background:transparent;border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Remediate</span><span style="font:400 13px var(--font-mono);color:var(--color-dim)">→</span><span style="font:500 12px var(--font-mono);color:var(--text-secondary);border:1px solid var(--border-default);background:transparent;border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Repeat months later</span></div>
+          </div>
+          <div style="display:grid;grid-template-columns:minmax(150px,200px) minmax(0,1fr);gap:16px;align-items:center;border:1px solid var(--color-forest);border-radius:var(--radius-sm);padding:16px 18px;background:var(--surface-raised)">
+            <div><div style="font:600 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.14em">A CAPABILITY</div><div style="font:400 13px var(--font-body);color:var(--color-ink);margin-top:4px">In-house, on demand</div></div>
+            <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span style="font:500 12px var(--font-mono);color:var(--color-forest-600);border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Test</span><span style="font:400 13px var(--font-mono);color:var(--color-forest)">→</span><span style="font:500 12px var(--font-mono);color:var(--color-forest-600);border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Validate</span><span style="font:400 13px var(--font-mono);color:var(--color-forest)">→</span><span style="font:500 12px var(--font-mono);color:var(--color-forest-600);border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Remediate</span><span style="font:400 13px var(--font-mono);color:var(--color-forest)">→</span><span style="font:500 12px var(--font-mono);color:var(--color-forest-600);border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Retest</span><span style="font:400 13px var(--font-mono);color:var(--color-forest)">→</span><span style="font:500 12px var(--font-mono);color:var(--color-forest-600);border:1px solid var(--color-forest);background:var(--color-forest-100);border-radius:var(--radius-sm);padding:6px 10px;white-space:nowrap">Reassess as the application changes</span></div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- APPS Comparison -->
-    <section
-      id="compare"
-      class="rehaul-compare show-apps"
-      aria-labelledby="compare-title"
-    >
-      <div class="rehaul-compare-inner">
-        <div class="rehaul-platform-eyebrow">/ Comparison</div>
-        <h2 id="compare-title" class="rehaul-platform-title">
-          How CredShields One compares
-        </h2>
 
-        <div class="rehaul-compare-scroll">
-          <div class="rehaul-compare-grid" role="table" aria-label="Pentesting approaches compared">
-            <div class="rehaul-compare-head" role="columnheader"></div>
-            <div class="rehaul-compare-head" role="columnheader">TRADITIONAL PENTEST</div>
-            <div class="rehaul-compare-head" role="columnheader">DAST / SAST / SCANNERS</div>
-            <div class="rehaul-compare-head rehaul-compare-featured-head" role="columnheader">
-              CREDSHIELDS ONE
-            </div>
+    </div>
+  </section>
 
-            <div class="rehaul-compare-label" role="rowheader">Runs on every release</div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg></div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-
-            <div class="rehaul-compare-label" role="rowheader">Finds business-logic flaws</div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg></div>
-            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-
-            <div class="rehaul-compare-label" role="rowheader">
-              Every finding proven, not flagged
+<section class="home-v2-section show-apps" id="how" data-screen-label="How it works" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ How it works</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 18px;color:var(--color-forest);text-wrap:pretty">Test, validate, remediate, retest</h2>
+      <p style="font:400 var(--type-body-lg)/1.6 var(--font-body);color:var(--text-secondary);margin:0 0 48px;text-wrap:pretty">The agents explore, attack, and adapt the way a pentester does, then stay with the finding until the fix is verified.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px;align-items:start">
+        <div style="display:flex;flex-direction:column">
+          <div style="display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border-default)">
+            <div style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:3px">01</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+                <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink)">Explore</h3>
+                <span class="cs-badge cs-badge-forest">AGENT</span>
+              </div>
+              <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Maps your attack surface: web, mobile, APIs, auth flows, and cloud.</p>
             </div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg></div>
-            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-
-            <div class="rehaul-compare-label" role="rowheader">
-              Senior human on every engagement
+          </div>
+          <div style="display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border-default)">
+            <div style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:3px">02</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+                <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink)">Attack</h3>
+                <span class="cs-badge cs-badge-forest">AGENT</span>
+              </div>
+              <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Pursues attack paths, chains weaknesses, and tests business logic.</p>
             </div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg></div>
-            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-
-            <div class="rehaul-compare-label" role="rowheader">
-              Retests included in the engagement
+          </div>
+          <div style="display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border-default)">
+            <div style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:3px">03</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+                <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink)">Validate</h3>
+                <span class="cs-badge cs-badge-forest">AGENT</span>
+              </div>
+              <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Attempts exploitation and keeps only what it can prove, with the request sequence attached.</p>
             </div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-cross" viewBox="0 0 24 24" role="img" aria-label="No">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg></div>
-            <div class="rehaul-compare-cell" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-            <div class="rehaul-compare-cell rehaul-compare-featured" role="cell"><svg class="rehaul-compare-check" viewBox="0 0 24 24" role="img" aria-label="Yes">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg></div>
-
-            <div class="rehaul-compare-label" role="rowheader">
-              Time to first validated finding
+          </div>
+          <div style="display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border-default)">
+            <div style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:3px">04</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+                <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink)">Remediate</h3>
+                <span class="cs-badge cs-badge-forest">AGENT</span>
+              </div>
+              <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Shows what was exploited, the impact, and the fix. Mapped to SOC 2, ISO 27001, and GDPR.</p>
             </div>
-            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">2 to 6 weeks</div>
-            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">
-              hours, mostly noise
+          </div>
+          <div style="display:flex;gap:20px;padding:22px 0;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default)">
+            <div style="font:600 13px var(--font-mono);color:var(--color-dim);padding-top:3px">05</div>
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px">
+                <h3 style="font:600 18px/1.2 var(--font-display);letter-spacing:-.015em;margin:0;color:var(--color-ink)">Retest</h3>
+                <span class="cs-badge cs-badge-forest">AGENT</span>
+              </div>
+              <p style="font:400 14.5px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Reruns the exact attack path against your patch.<br></p>
             </div>
-            <div
-              class="rehaul-compare-cell rehaul-compare-value rehaul-compare-featured rehaul-compare-featured-value"
-              role="cell"
-            >
-              days, validated
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <div data-copy="" style="background:var(--color-ink);border-radius:var(--radius-md);overflow:hidden">
+            <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid rgba(244,248,244,.12)">
+              <span style="font:400 11px var(--font-mono);color:rgba(244,248,244,.5)">~/credshields-one · zsh</span>
+              <span style="font:400 10px var(--font-mono);color:#A8FF45;letter-spacing:.14em">LIVE</span>
             </div>
-
-            <div class="rehaul-compare-label" role="rowheader">Cost model</div>
-            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">
-              per engagement, 5 figures
+            <div style="padding:18px 16px;font:400 12.5px/1.9 var(--font-mono)">
+              <div style="color:#F4F8F4"><span style="color:#A8FF45">$</span> cs-one pentest --target app.acme.io --scope cloud,api</div>
+              <div style="color:rgba(244,248,244,.78)"><span style="color:#7A9A80">[recon]&nbsp;&nbsp;</span> mapped 1,284 endpoints · 27 auth flows</div>
+              <div style="color:rgba(244,248,244,.78)"><span style="color:#7A9A80">[attack]&nbsp;</span> 14 attack paths · 3 business-logic flaws</div>
+              <div style="color:rgba(244,248,244,.78)"><span style="color:#7A9A80">[validate]</span> 3 exploited · 2 not reproducible, dropped</div>
+              <div style="color:rgba(244,248,244,.78)"><span style="color:#7A9A80">[report]&nbsp;</span> request sequences and fixes attached</div>
+              <div style="color:rgba(244,248,244,.78)"><span style="color:#7A9A80">[retest]&nbsp;</span> patch verified · 0 regressions</div>
+              <div style="color:#F4F8F4"><span style="color:#A8FF45">$</span> <span style="display:inline-block;width:8px;height:14px;background:#A8FF45;vertical-align:-2px;animation:pulseDot 1.2s infinite"></span></div>
             </div>
-            <div class="rehaul-compare-cell rehaul-compare-value" role="cell">
-              subscription
-            </div>
-            <div
-              class="rehaul-compare-cell rehaul-compare-value rehaul-compare-featured rehaul-compare-featured-value rehaul-compare-featured-last"
-              role="cell"
-            >
-              fraction of traditional
-            </div>
+          </div>
+          <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px 24px">
+            <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:8px">SAFE BY SCOPE</div>
+            <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">It tests only the environment you provide. The agents exploit to prove impact, then stop.</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- APPS Audiences -->
-    <section
-      id="who"
-      class="rehaul-who show-apps"
-      aria-labelledby="who-title"
-    >
-      <div class="rehaul-who-inner">
-        <div class="rehaul-platform-eyebrow">/ Who it's for</div>
-        <h2 id="who-title" class="rehaul-platform-title">
-          Built for the whole release path
-        </h2>
-        <p class="rehaul-who-intro">
-          DevOps, engineering, security, and compliance each get what they need
-          from the same run.
-        </p>
+    </div>
+  </section>
 
-        <div class="rehaul-who-grid">
-          <article class="rehaul-who-card">
-            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M20 11a8 8 0 10-2 6"></path>
-              <path d="M20 5v6h-6"></path>
-            </svg>
-            <div class="rehaul-who-label">DEVOPS</div>
-            <h3>Test without holding the release</h3>
-            <p>
-              Runs against staging or a deploy rather than a calendar. No
-              coordination overhead, no waiting on a vendor to open a window.
-            </p>
-            <div class="rehaul-who-meta">CI-TRIGGERED · SCOPED BY YOU</div>
-          </article>
-
-          <article class="rehaul-who-card">
-            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3l7 3v6c0 4.4-2.9 7.9-7 9-4.1-1.1-7-4.6-7-9V6l7-3z"></path>
-              <path d="M9 12l2 2 4-4"></path>
-            </svg>
-            <div class="rehaul-who-label">ENGINEERING</div>
-            <h3>Fix what is proven</h3>
-            <p>
-              Every finding arrives with a reproduced exploit chain and the
-              exact fix. No triaging 400 maybes out of a scanner export.
-            </p>
-            <div class="rehaul-who-meta">PROVEN · REPRODUCIBLE · IN JIRA</div>
-          </article>
-
-          <article class="rehaul-who-card">
-            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="6.5"></circle>
-              <path d="M16 16l4.5 4.5"></path>
-            </svg>
-            <div class="rehaul-who-label">SECURITY</div>
-            <h3>Reach what a scanner cannot</h3>
-            <p>
-              Business logic, chained exploits, and auth flaws, found by senior
-              pentesters directing the AI. Retest any fix on the next commit.
-            </p>
-            <div class="rehaul-who-meta">
-              HUMAN-VALIDATED · RETESTS INCLUDED
-            </div>
-          </article>
-
-          <article class="rehaul-who-card">
-            <svg class="rehaul-who-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="5" y="4" width="14" height="17" rx="2"></rect>
-              <path d="M9 4V3a1 1 0 011-1h4a1 1 0 011 1v1"></path>
-              <path d="M9 11h6M9 15h4"></path>
-            </svg>
-            <div class="rehaul-who-label">COMPLIANCE</div>
-            <h3>Stay audit-ready between reviews</h3>
-            <p>
-              SOC 2, ISO 27001, and GDPR mappings regenerated on every run. Your
-              report is current as of your last release.
-            </p>
-            <div class="rehaul-who-meta">AUDIT-READY · EXPORT ANYTIME</div>
-          </article>
+<section class="home-v2-section show-apps" id="compare" data-screen-label="Comparison" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Comparison</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 16px; color: var(--color-forest); text-wrap: pretty">Proof, not possibility</h2>
+      <p style="font:400 var(--type-body-lg)/1.6 var(--font-body);color:var(--text-secondary);margin:0 0 36px;max-width:760px;text-wrap:pretty">A potential vulnerability is the start of an investigation. A validated one is evidence of what an attacker can do.</p>
+      <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:12px">EXAMPLE · PAID MEMBERSHIP BYPASS</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:64px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:22px 24px;display:flex;flex-direction:column;gap:12px">
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">A SCANNER REPORTS</div>
+          <p style="font:500 16px/1.5 var(--font-mono);color:var(--color-ink);margin:0">Possible access-control issue on /api/membership.</p>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Your security team investigates, reproduces, and decides whether it matters.</p>
+        </div>
+        <div style="border:1px solid var(--color-forest);border-radius:var(--radius-md);padding:22px 24px;display:flex;flex-direction:column;gap:12px;background:var(--surface-raised)">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><span style="font:600 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.14em">THE AGENT REPORTS</span><span class="cs-badge cs-badge-lime">Validated</span></div>
+          <p style="font:500 16px/1.5 var(--font-mono);color:var(--color-ink);margin:0;text-wrap:pretty">Granted a test account a paid plan without completing payment.</p>
+          <div style="display:flex;flex-direction:column;gap:7px;font:400 14px/1.55 var(--font-body);color:var(--text-secondary)">
+            <span style="display:flex;gap:10px"><span style="color:var(--color-forest);flex-shrink:0">›</span>Created a standard account and changed its plan through the membership API</span>
+            <span style="display:flex;gap:10px"><span style="color:var(--color-forest);flex-shrink:0">›</span>Confirmed the server accepted it and unlocked paid features</span>
+            <span style="display:flex;gap:10px"><span style="color:var(--color-forest);flex-shrink:0">›</span>Chained an approval-status flaw to self-approve the account</span>
+            <span style="display:flex;gap:10px"><span style="color:var(--color-forest);flex-shrink:0">›</span>Attached the request sequence, the impact, and the fix</span>
+          </div>
         </div>
       </div>
-    </section>
-    <!-- APPS Team -->
-    <section
-      id="team"
-      class="rehaul-team show-apps"
-      aria-labelledby="team-title"
-    >
-      <div class="rehaul-team-inner">
-        <div class="rehaul-platform-eyebrow">/ The team</div>
-        <h2 id="team-title" class="rehaul-platform-title">
-          The pentesters behind the platform
-        </h2>
-        <p class="rehaul-team-intro">
-          CredShields was built by offensive security researchers. The same
-          team validates your findings.
-        </p>
+      <div style="overflow-x:auto">
+        <div style="display:grid;grid-template-columns:minmax(220px,1.4fr) repeat(3,minmax(150px,1fr));min-width:760px">
+          <div style="padding:14px 16px"></div>
+          <div style="padding:14px 16px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">TRADITIONAL SCANNER</div>
+          <div style="padding:14px 16px;font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.12em">HUMAN PENTESTER</div>
+          <div style="padding:14px 16px;font:600 11px var(--font-mono);color:var(--color-ink);letter-spacing:.12em;background:var(--surface-raised);border:1px solid var(--border-default);border-bottom:none;border-radius:var(--radius-sm) var(--radius-sm) 0 0;border-top:3px solid var(--color-lime)">CREDSHIELDS ONE</div>
 
-        <div class="rehaul-team-stats">
-          <div class="rehaul-team-stat">
-            <div class="rehaul-team-stat-value">2,000+</div>
-            <div class="rehaul-team-stat-label">VAPT ENGAGEMENTS</div>
-          </div>
-          <div class="rehaul-team-stat">
-            <div class="rehaul-team-stat-value">20+</div>
-            <div class="rehaul-team-stat-label">
-              YEARS OFFENSIVE EXPERIENCE
-            </div>
-          </div>
-          <div class="rehaul-team-stat">
-            <div class="rehaul-team-stat-value">20+</div>
-            <div class="rehaul-team-stat-label">CVES DISCLOSED</div>
-          </div>
-          <div class="rehaul-team-stat">
-            <div class="rehaul-team-stat-value">100%</div>
-            <div class="rehaul-team-stat-label">REPORTS HUMAN-REVIEWED</div>
-          </div>
-        </div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Identifies potential vulnerabilities</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
 
-        <div class="rehaul-team-grid">
-          <article class="rehaul-team-card">
-            <div class="rehaul-team-person">
-              <img
-                src="images/shashank.jpeg"
-                alt="Shashank"
-                loading="lazy"
-              />
-              <div>
-                <h3>Shashank</h3>
-                <div>Co-Founder &amp; CEO</div>
-              </div>
-            </div>
-            <p>
-              12 years of pentesting. Halls of fame at Google, Facebook, Apple,
-              and 30+ others.
-            </p>
-            <div class="rehaul-team-credentials">
-              <a href="CVE - 2017-7063.html">CVE-2017-7063</a> ·
-              <a href="CVE - 2017-7062.html">CVE-2017-7062</a> ·
-              <a href="CVE - 2017-2458.html">CVE-2017-2458</a>
-            </div>
-          </article>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Actively attempts exploitation</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Limited</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
 
-          <article class="rehaul-team-card">
-            <div class="rehaul-team-person">
-              <img
-                src="images/indranil.jpeg"
-                alt="Indranil Roy"
-                loading="lazy"
-              />
-              <div>
-                <h3>Indranil Roy</h3>
-                <div>Co-Founder &amp; CBO</div>
-              </div>
-            </div>
-            <p>
-              Ex-Deloitte Cyber Risk. Nmap and Metasploit contributor.
-              Recognized by Tesla, Samsung, Cisco, and 20+ others.
-            </p>
-            <div class="rehaul-team-credentials">
-              NMAP · METASPLOIT CONTRIBUTOR
-            </div>
-          </article>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Tests business logic</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Limited</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
 
-          <article class="rehaul-team-card">
-            <div class="rehaul-team-person">
-              <img
-                src="images/aditya.jpg"
-                alt="Aditya"
-                loading="lazy"
-              />
-              <div>
-                <h3>Aditya</h3>
-                <div>Audit &amp; Research Lead</div>
-              </div>
-            </div>
-            <p>
-              10+ years, 500+ pentests. Led pentest teams at Cobalt and
-              HackerOne.
-            </p>
-            <div class="rehaul-team-credentials">
-              OSCP · CREST CPSA · AWS SECURITY
-            </div>
-          </article>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Chains weaknesses</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Limited</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Validates exploitability</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Limited</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Filters false positives through active validation</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Requires security team</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Provides evidence of exploitation</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Limited</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Can run on demand</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Requires engagement</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Scales across many applications</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Difficult</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-forest)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:500 14px/1.4 var(--font-body);color:var(--color-ink)">Requires pentesting expertise internally</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">Often, to triage</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);font:400 12px/1.45 var(--font-mono);color:var(--text-secondary)">No, if outsourced</div>
+          <div style="padding:13px 16px;border-top:1px solid var(--border-default);background:var(--surface-raised);border-left:1px solid var(--border-default);border-right:1px solid var(--border-default);border-bottom:1px solid var(--border-default);border-radius:0 0 var(--radius-sm) var(--radius-sm);font:500 12px/1.45 var(--font-mono);color:var(--color-forest-600)">No</div>
         </div>
       </div>
-    </section>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:40px">
+        <div><div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:6px">SCANNING</div><p style="font:400 14px/1.55 var(--font-body);color:var(--text-secondary);margin:0">Automates vulnerability detection.</p></div>
+        <div><div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:6px">PENTESTING</div><p style="font:400 14px/1.55 var(--font-body);color:var(--text-secondary);margin:0">Specialists perform offensive testing and determine what can actually be exploited.</p></div>
+        <div><div style="font:600 11px var(--font-mono);color:var(--color-forest-600);letter-spacing:.14em;margin-bottom:6px">AGENTIC PENTESTING</div><p style="font:400 14px/1.55 var(--font-body);color:var(--color-ink);margin:0">Automates the offensive testing and validation pentesters perform.</p></div>
+      </div>
+    </div>
+  </section>
+
+<section class="home-v2-section show-apps" id="who" data-screen-label="Who runs it" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Who it's for</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 18px; color: var(--color-forest); text-wrap: pretty">Pentesting for every team</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: var(--text-secondary); margin: 0 0 44px; text-wrap: pretty">Engineering, AppSec, security leaders, and founders each get something different from the same capability.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:30px;display:flex;flex-direction:column;gap:12px">
+          <span data-icon="refresh" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">ENGINEERING / DEVOPS</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0;color:var(--color-ink);text-wrap:balance">Findings you can act on</h3>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">See what was exploited, how to reproduce it, and how to fix it. Then retest the fix.</p>
+          <div style="font:400 12px var(--font-mono);color:var(--color-dim);letter-spacing:.06em;margin-top:auto;padding-top:8px">ACTIONABILITY</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:30px;display:flex;flex-direction:column;gap:12px">
+          <span data-icon="shieldCheck" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">APPSEC / SECURITY ENGINEERING</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0;color:var(--color-ink);text-wrap:balance">Less time proving what is real</h3>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">The agents attack and validate each vulnerability, so you get evidence of exploitability rather than another queue to triage.</p>
+          <div style="font:400 12px var(--font-mono);color:var(--color-dim);letter-spacing:.06em;margin-top:auto;padding-top:8px">VALIDATION</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:30px;display:flex;flex-direction:column;gap:12px">
+          <span data-icon="search" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">CISO / HEAD OF APPSEC</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0;color:var(--color-ink);text-wrap:balance">Capacity that keeps pace with engineering</h3>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Test more applications, validate more vulnerabilities, and retest faster without scaling specialist headcount at the same rate.</p>
+          <div style="font:400 12px var(--font-mono);color:var(--color-dim);letter-spacing:.06em;margin-top:auto;padding-top:8px">LEVERAGE</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:30px;display:flex;flex-direction:column;gap:12px">
+          <span data-icon="clipboard" style="color:var(--color-forest);display:block;margin-bottom:2px"></span>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em">FOUNDER / CTO</div>
+          <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0;color:var(--color-ink);text-wrap:balance">Pentesting without a pentesting team</h3>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Get pentesting capability before you can justify hiring specialists, and take application security seriously from day one.</p>
+          <div style="font:400 12px var(--font-mono);color:var(--color-dim);letter-spacing:.06em;margin-top:auto;padding-top:8px">ACCESS</div>
+        </div>
+      </div>
+      <div style="margin-top:48px;border:1px solid var(--border-default);border-radius:var(--radius-md);padding:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 40px;align-items:center">
+        <div>
+          <div style="font:500 11px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;margin-bottom:10px">CONSEQUENCE, NOT SIZE</div>
+          <h3 style="font:600 22px/1.2 var(--font-display);letter-spacing:-.02em;margin:0 0 10px;color:var(--color-ink);text-wrap:pretty">What happens if someone exploits your application?</h3>
+          <p style="font:400 15px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">If the answer would materially hurt the business, pentesting matters. That can be a 20-person startup or a global financial institution.</p>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Payments</span>
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Customer funds</span>
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Customer data</span>
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Identity</span>
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Account takeover</span>
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Regulatory exposure</span>
+            <span style="font:500 12px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:6px 11px">Enterprise customers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="home-v2-section show-apps" id="team" data-screen-label="Team" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Built from pentester expertise</div>
+      <h2 style="font: 600 var(--type-display-2)/1.08 var(--font-display); letter-spacing: -.025em; margin: 0 0 18px; color: var(--color-forest); text-wrap: pretty">The expertise behind the agents</h2>
+      <p style="font: 400 var(--type-body-lg)/1.6 var(--font-body); color: var(--text-secondary); margin: 0 0 48px; text-wrap: pretty">Anyone can access models. AI provides scale; pentester expertise determines how it attacks. Our agents carry the methodology our researchers built across real engagements.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-bottom:48px">
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">2,000+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">VAPT ENGAGEMENTS</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">20+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">YEARS OFFENSIVE EXPERIENCE</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">20+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">CVES DISCLOSED</div>
+        </div>
+        <div style="border-top:1px solid var(--border-default);padding-top:18px">
+          <div data-count="" style="font:700 clamp(30px,3vw,40px) var(--font-display);letter-spacing:-.02em;color:var(--color-ink)">40+</div>
+          <div style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-top:6px">HALL OF FAME LISTINGS</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <img src="images/shashank.jpeg" alt="Shashank" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center top;display:block;flex-shrink:0">
+            <div>
+              <div style="font:600 16px var(--font-display);color:var(--color-ink)">Shashank</div>
+              <div style="font:400 12px var(--font-body);color:var(--text-secondary)">Co-Founder &amp; CEO</div>
+            </div>
+          </div>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">12 years of pentesting. Halls of fame at Google, Facebook, Apple, and 30+ others.</p>
+          <div style="font:400 11px var(--font-mono);color:var(--color-dim);margin-top:12px;letter-spacing:.04em">CVE-2017-7063 · CVE-2017-7062 · CVE-2017-2458</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <img src="images/indranil.jpeg" alt="Indranil Roy" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center top;display:block;flex-shrink:0">
+            <div>
+              <div style="font:600 16px var(--font-display);color:var(--color-ink)">Indranil Roy</div>
+              <div style="font:400 12px var(--font-body);color:var(--text-secondary)">Co-Founder &amp; CBO</div>
+            </div>
+          </div>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">Ex-Deloitte Cyber Risk. Nmap and Metasploit contributor. Recognized by Tesla, Samsung, Cisco, and 20+ others.</p>
+          <div style="font:400 11px var(--font-mono);color:var(--color-dim);margin-top:12px;letter-spacing:.04em">NMAP · METASPLOIT CONTRIBUTOR</div>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);padding:26px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+            <img src="images/aditya.jpg" alt="Aditya" style="width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center top;display:block;flex-shrink:0">
+            <div>
+              <div style="font:600 16px var(--font-display);color:var(--color-ink)">Aditya</div>
+              <div style="font:400 12px var(--font-body);color:var(--text-secondary)">Audit &amp; Research Lead</div>
+            </div>
+          </div>
+          <p style="font:400 14px/1.6 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty">10+ years, 500+ pentests. Led pentest teams at Cobalt and HackerOne.</p>
+          <div style="font:400 11px var(--font-mono);color:var(--color-dim);margin-top:12px;letter-spacing:.04em">OSCP · CREST CPSA · AWS SECURITY</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- ═══════════════════════════════════════════════════════════
      SECTION 01 - CHAIN: AI at Core
 ════════════════════════════════════════════════════════════ -->
@@ -2279,298 +2146,285 @@
       </div>
     </section>
 
-    <!-- APPS AI Access Controls -->
-    <section
-      id="trust"
-      class="rehaul-controls show-apps"
-      aria-labelledby="controls-title"
-    >
-      <div class="rehaul-controls-inner">
-        <div class="rehaul-controls-grid">
-          <div class="rehaul-controls-intro">
-            <div class="rehaul-controls-eyebrow">/ AI Access Controls</div>
-            <h2 id="controls-title">How we secure your data and our AI</h2>
-            <p>The questions every security review opens with, answered</p>
-            <div class="rehaul-controls-tags">
-              <span>OWASP LLM Top 10</span>
-              <span>NIST AI RMF</span>
-              <span>SOC 2 Type II</span>
-            </div>
-            <a href="#contact"
-              >Request the full control document →</a
-            >
+    <!-- Apps trust, services, and compliance from the supplied v2 design -->
+    <section class="home-v2-section show-apps" id="trust" data-screen-label="AI access controls" style="background:var(--surface-deep);border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px">
+      <div style="display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.5fr);gap:56px;align-items:start" data-trust-split="">
+        <div style="position:sticky;top:96px">
+          <div style="font:500 12px var(--font-mono);color:#A8FF45;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ AI Access Controls</div>
+          <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 18px;color:#F4F8F4;text-wrap:pretty">How we secure your data and our AI</h2>
+          <p style="font:400 var(--type-body-lg)/1.6 var(--font-body);color:#A9BFAE;margin:0 0 28px;text-wrap:pretty">The questions every security review opens with, answered.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px">
+            <span style="font:500 11px var(--font-mono);color:#C9E8AF;letter-spacing:.08em;border:1px solid rgba(168,255,69,.24);border-radius:var(--radius-pill);padding:6px 13px">OWASP LLM Top 10</span>
+            <span style="font:500 11px var(--font-mono);color:#C9E8AF;letter-spacing:.08em;border:1px solid rgba(168,255,69,.24);border-radius:var(--radius-pill);padding:6px 13px">NIST AI RMF</span>
+            <span style="font:500 11px var(--font-mono);color:#C9E8AF;letter-spacing:.08em;border:1px solid rgba(168,255,69,.24);border-radius:var(--radius-pill);padding:6px 13px">SOC 2 Type II</span>
           </div>
-
-          <div class="rehaul-controls-list">
-            <details class="rehaul-control" open>
-              <summary>
-                <span class="rehaul-control-number">01</span>
-                <span class="rehaul-control-heading">
-                  <strong>Your data never trains models</strong>
-                  <span>Code, findings, prompts, and logs never train any model.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                Application code, scan results, vulnerability findings, prompts,
-                HTTP requests and responses, and interaction logs are never used
-                to train, fine-tune, or improve any model, ours or a third
-                party’s. Model development relies entirely on our own internal
-                test cases. Each customer’s data is logically isolated and
-                processed only for that customer’s scan.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">02</span>
-                <span class="rehaul-control-heading">
-                  <strong>Role-based access control</strong>
-                  <span>RBAC scopes access per user and per project.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                RBAC governs who can launch scans, view findings, configure
-                targets, and export reports. Permissions are scoped per user and
-                per project, so access to scan data and AI output is limited to
-                authorized team members. Adding users, changing scan targets,
-                and deleting data are restricted to admin roles.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">03</span>
-                <span class="rehaul-control-heading">
-                  <strong>You choose the target</strong>
-                  <span>It scans the environment you provide, nothing else.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                The scan target is configurable and entirely at your team’s
-                discretion. Provide a staging or UAT URL and only that
-                environment is scanned; provide production and only production
-                is scanned. The platform includes guardrails to minimize
-                disruption. We recommend staging or UAT during a PoC.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">04</span>
-                <span class="rehaul-control-heading">
-                  <strong>Human oversight</strong>
-                  <span>A human validation layer confirms findings before they are finalized.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                AI scale with human tradecraft, not autonomous AI acting without
-                review. A senior pentester confirms or rules out every finding
-                before it is finalized, which provides oversight over
-                AI-generated conclusions.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">05</span>
-                <span class="rehaul-control-heading">
-                  <strong>External LLM providers</strong>
-                  <span>Only the data required for the requested test is sent.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                Our engine is AI-native and uses external LLM providers for
-                reasoning. The provider is configurable and can be selected or
-                swapped to meet your requirements. Only the data required to
-                perform the requested security testing is sent, for example the
-                specific request, response, or code segment under analysis.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">06</span>
-                <span class="rehaul-control-heading">
-                  <strong>Retention is user-controlled</strong>
-                  <span>Delete a scan and everything associated with it is removed.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                Findings, requests, and scan artifacts are retained only for as
-                long as you need access to the results. Deleting a scan
-                permanently removes it and all associated data: findings,
-                requests and responses, screenshots, configuration, and
-                generated reports. We can provide formal confirmation of
-                deletion at the end of an engagement.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">07</span>
-                <span class="rehaul-control-heading">
-                  <strong>Prompt injection handling</strong>
-                  <span>All scanned content is treated as untrusted input.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                Because our agents analyze untrusted target content, our
-                architecture separates control instructions from analyzed data,
-                so content encountered during a scan cannot redirect agent
-                behavior or exfiltrate data. Findings are validated before
-                reporting, adding a second layer against manipulated output.
-              </p>
-            </details>
-            <details class="rehaul-control">
-              <summary>
-                <span class="rehaul-control-number">08</span>
-                <span class="rehaul-control-heading">
-                  <strong>Logging and governance alignment</strong>
-                  <span>Every action is attributable, mapped to recognized frameworks.</span>
-                </span>
-                <span class="rehaul-control-toggle" aria-hidden="true">+</span>
-              </summary>
-              <p>
-                Scans launched, targets configured, data deleted, and reports
-                exported are logged and attributable to the user who performed
-                them, supporting your own audit and access-review requirements.
-                Our practices align with the OWASP Top 10 for LLM Applications
-                and the NIST AI Risk Management Framework.
-              </p>
-            </details>
-          </div>
+          <a href="#contact" style="font:500 14px var(--font-body);color:#A8FF45">Request the full control document →</a>
         </div>
-      </div>
-    </section>
-
-    <!-- APPS AI Features -->
-    <section class="rehaul-ai-features show-apps">
-      <div class="rehaul-ai-features-inner">
-        <div class="rehaul-ai-features-card">
-          <div class="rehaul-ai-features-copy">
-            <div class="rehaul-ai-features-label">
-              <span>New</span>
-              <span>AI-POWERED FEATURES</span>
+        <div style="display:flex;flex-direction:column;border-bottom:1px solid rgba(244,248,244,.12)">
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="0" aria-expanded="false" aria-controls="v2-control-panel-0" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">01</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">Your data never trains models</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">Code, findings, prompts, and logs never train any model.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="0" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="0" id="v2-control-panel-0" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">Application code, scan results, vulnerability findings, prompts, HTTP requests and responses, and interaction logs are never used to train, fine-tune, or improve any model, ours or a third party’s. Model development relies entirely on our own internal test cases. Each customer’s data is logically isolated and processed only for that customer’s scan.</p>
             </div>
-            <h2>Shipping LLM features? We pentest those too</h2>
-            <p>
-              The same humans-in-the-loop pipeline, applied to the attack
-              surface your AI just added.
-            </p>
           </div>
-          <div class="rehaul-ai-feature-tags">
-            <span>PROMPT INJECTION</span>
-            <span>AGENT MANIPULATION</span>
-            <span>RAG LEAKAGE</span>
-            <span>GUARDRAIL BYPASS</span>
-            <span>TOOL-CALL ABUSE</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPS Services -->
-    <section
-      id="services"
-      class="rehaul-services show-apps"
-      aria-labelledby="services-title"
-    >
-      <div class="rehaul-services-inner">
-        <div class="rehaul-platform-eyebrow">/ Beyond the Platform</div>
-        <h2 id="services-title" class="rehaul-platform-title">
-          Services and
-          <a href="https://solidityscan.com/" target="_blank" rel="noopener"
-            >blockchain</a
-          >
-          security
-        </h2>
-        <p class="rehaul-services-intro">
-          Human-led VAPT engagements and smart contract audits. Every
-          engagement gets a named lead, a signed report, and a committed date.
-        </p>
-
-        <div class="rehaul-services-grid">
-          <div class="rehaul-service-list" role="list">
-            <button type="button" data-rehaul-service="0" aria-pressed="true">
-              <span><strong>Web app pentesting</strong><small>OWASP ASVS L2/L3, business logic, multi-tenant isolation</small></span><i>→</i>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="1" aria-expanded="false" aria-controls="v2-control-panel-1" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">02</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">Role-based access control</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">RBAC scopes access per user and per project.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="1" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
             </button>
-            <button type="button" data-rehaul-service="1" aria-pressed="false">
-              <span><strong>Mobile app pentesting</strong><small>iOS and Android, MASVS-aligned, runtime instrumentation</small></span><i>→</i>
-            </button>
-            <button type="button" data-rehaul-service="2" aria-pressed="false">
-              <span><strong>API security testing</strong><small>REST, GraphQL, and gRPC, OWASP API Top 10 coverage</small></span><i>→</i>
-            </button>
-            <button type="button" data-rehaul-service="3" aria-pressed="false">
-              <span><strong>Cloud security review</strong><small>AWS, GCP, and Azure, attack paths over checklists</small></span><i>→</i>
-            </button>
-            <button type="button" data-rehaul-service="4" aria-pressed="false">
-              <span><strong>Red team engagement</strong><small>Objective-based, full kill chain, detection value included</small></span><i>→</i>
-            </button>
-            <button type="button" data-rehaul-service="5" aria-pressed="false">
-              <span><strong>Smart contract audit</strong><small>Solidity and EVM, manual review backed by SolidityScan</small></span><i>→</i>
-            </button>
-            <button type="button" data-rehaul-service="6" aria-pressed="false">
-              <span><strong>Blockchain protocol audit</strong><small>Bridges, L2s, and DeFi, with economic attack modeling</small></span><i>→</i>
-            </button>
-          </div>
-
-          <div class="rehaul-service-detail" aria-live="polite">
-            <div class="rehaul-service-detail-head">
-              <span>ENGAGEMENT DETAIL</span>
-              <span data-service-duration>2 to 3 weeks</span>
+            <div data-ctrl-panel="1" id="v2-control-panel-1" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">RBAC governs who can launch scans, view findings, configure targets, and export reports. Permissions are scoped per user and per project, so access to scan data and AI output is limited to authorized team members. Adding users, changing scan targets, and deleting data are restricted to admin roles.</p>
             </div>
-            <div class="rehaul-service-detail-body">
-              <h3 data-service-name>Web app pentesting</h3>
-              <div>
-                <div class="rehaul-service-detail-label">WHAT WE TEST</div>
-                <div class="rehaul-service-tests" data-service-tests>
-                  <span>Business logic and workflow abuse</span>
-                  <span>Multi-tenant isolation boundaries</span>
-                  <span>Authentication and session handling</span>
-                  <span>Privilege escalation paths</span>
-                </div>
-              </div>
-              <div>
-                <div class="rehaul-service-detail-label">STANDARDS</div>
-                <div class="rehaul-service-standards" data-service-standards>
-                  <span>OWASP ASVS L2/L3</span><span>OWASP Top 10</span><span>PTES</span>
-                </div>
-              </div>
-              <div class="rehaul-service-deliverable">
-                <div class="rehaul-service-detail-label">YOU RECEIVE</div>
-                <p data-service-deliverable>
-                  Signed report with reproduction steps, CVSS scoring, and
-                  control mapping.
-                </p>
-              </div>
-              <div class="rehaul-service-actions">
-                <a href="web-app-security.html" data-service-link
-                  >See full service</a
-                >
-                <a href="#contact">Get Scoped →</a>
-              </div>
+          </div>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="2" aria-expanded="false" aria-controls="v2-control-panel-2" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">03</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">You choose the target</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">It scans the environment you provide, nothing else.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="2" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="2" id="v2-control-panel-2" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">The scan target is configurable and entirely at your team’s discretion. Provide a staging or UAT URL and only that environment is scanned; provide production and only production is scanned. The platform includes guardrails to minimize disruption. We recommend staging or UAT during a PoC.</p>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="3" aria-expanded="false" aria-controls="v2-control-panel-3" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">04</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">Human oversight</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">Our pentesters set the guardrails the agents work within.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="3" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="3" id="v2-control-panel-3" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">The agents operate within guardrails our offensive security team defines. Findings are validated before they are reported, and our team reviews them before they are finalized, keeping oversight over AI-generated conclusions.</p>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="4" aria-expanded="false" aria-controls="v2-control-panel-4" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">05</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">External LLM providers</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">Only the data required for the requested test is sent.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="4" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="4" id="v2-control-panel-4" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">Our engine is AI-native and uses external LLM providers for reasoning. The provider is configurable and can be selected or swapped to meet your requirements. Only the data required to perform the requested security testing is sent, for example the specific request, response, or code segment under analysis.</p>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="5" aria-expanded="false" aria-controls="v2-control-panel-5" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">06</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">Retention is user-controlled</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">Delete a scan and everything associated with it is removed.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="5" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="5" id="v2-control-panel-5" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">Findings, requests, and scan artifacts are retained only for as long as you need access to the results. Deleting a scan permanently removes it and all associated data: findings, requests and responses, screenshots, configuration, and generated reports. We can provide formal confirmation of deletion at the end of an engagement.</p>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="6" aria-expanded="false" aria-controls="v2-control-panel-6" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">07</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">Prompt injection handling</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">All scanned content is treated as untrusted input.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="6" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="6" id="v2-control-panel-6" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">Because our agents analyze untrusted target content, our architecture separates control instructions from analyzed data, so content encountered during a scan cannot redirect agent behavior or exfiltrate data. Findings are validated before reporting, adding a second layer against manipulated output.</p>
+            </div>
+          </div>
+          <div style="border-top:1px solid rgba(244,248,244,.12)">
+            <button type="button" data-ctrl="7" aria-expanded="false" aria-controls="v2-control-panel-7" style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;width:100%;text-align:left;background:none;border:none;padding:20px 4px;cursor:pointer;font-family:inherit">
+              <span style="display:flex;align-items:baseline;gap:16px;min-width:0">
+                <span style="font:500 11px var(--font-mono);color:#5C7562;flex-shrink:0">08</span>
+                <span style="display:flex;flex-direction:column;gap:5px;min-width:0">
+                  <span style="font:600 16px var(--font-display);letter-spacing:-.01em;color:#F4F8F4">Logging and governance alignment</span>
+                  <span style="font:400 13.5px/1.5 var(--font-body);color:#89A490;text-wrap:pretty">Every action is attributable, mapped to recognized frameworks.</span>
+                </span>
+              </span>
+              <span data-ctrl-icon="7" style="font:400 18px var(--font-mono);color:#A8FF45;flex-shrink:0;line-height:1;transition:transform .22s ease">+</span>
+            </button>
+            <div data-ctrl-panel="7" id="v2-control-panel-7" aria-hidden="true" style="overflow:hidden;max-height:0;opacity:0;transition:max-height .28s ease,opacity .22s ease">
+              <p style="font:400 14px/1.65 var(--font-body);color:#A9BFAE;margin:0 0 20px;padding-left:27px;max-width:720px;text-wrap:pretty">Scans launched, targets configured, data deleted, and reports exported are logged and attributable to the user who performed them, supporting your own audit and access-review requirements. Our practices align with the OWASP Top 10 for LLM Applications and the NIST AI Risk Management Framework.</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- APPS Compliance Strip -->
-    <section class="rehaul-compliance-strip show-apps" aria-label="Compliance">
-      <div class="rehaul-compliance-inner">
-        <p>
-          SOC 2 Type II report on file · ISO 27001 in progress · Reports map to
-        </p>
-        <div class="rehaul-compliance-logos">
-          <img src="images/logo-soc2.png" alt="SOC 2" title="SOC 2" />
-          <img src="images/logo-iso27001.png" alt="ISO 27001" title="ISO 27001" />
-          <img src="images/logo-gdpr.png" alt="GDPR" title="GDPR" />
-          <img src="images/logo-pcidss.png" alt="PCI DSS" title="PCI DSS" />
-          <img src="images/logo-hipaa.png" alt="HIPAA" title="HIPAA" />
+<section class="home-v2-section show-apps" data-screen-label="AI features band" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,72px) 28px">
+      <div style="background:var(--surface-deep);border-radius:var(--radius-lg);padding:clamp(32px,5vw,56px);color:var(--text-on-deep-primary);display:flex;flex-wrap:wrap;gap:36px;align-items:center;justify-content:space-between">
+        <div style="flex:1 1 420px;max-width:560px">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <span class="cs-badge cs-badge-lime">New</span>
+            <span style="font:500 11px var(--font-mono);color:var(--text-on-deep-muted);letter-spacing:.16em">AI APPLICATION SECURITY</span>
+          </div>
+          <h3 style="font:600 clamp(24px,2.6vw,32px)/1.15 var(--font-display);letter-spacing:-.02em;margin:0 0 12px;color:var(--text-on-deep-primary);text-wrap:balance">Shipping LLM features? We pentest those too</h3>
+          <p style="font:400 15px/1.65 var(--font-body);color:var(--text-on-deep-tertiary);margin:0;text-wrap:pretty">The same offensive testing, applied to the attack surface your AI features just added.</p>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;max-width:420px">
+          <span style="font:400 11px var(--font-mono);color:#C9E8AF;letter-spacing:.1em;border:1px solid var(--border-on-deep);border-radius:var(--radius-pill);padding:8px 14px">PROMPT INJECTION</span>
+          <span style="font:400 11px var(--font-mono);color:#C9E8AF;letter-spacing:.1em;border:1px solid var(--border-on-deep);border-radius:var(--radius-pill);padding:8px 14px">AGENT MANIPULATION</span>
+          <span style="font:400 11px var(--font-mono);color:#C9E8AF;letter-spacing:.1em;border:1px solid var(--border-on-deep);border-radius:var(--radius-pill);padding:8px 14px">RAG LEAKAGE</span>
+          <span style="font:400 11px var(--font-mono);color:#C9E8AF;letter-spacing:.1em;border:1px solid var(--border-on-deep);border-radius:var(--radius-pill);padding:8px 14px">GUARDRAIL BYPASS</span>
+          <span style="font:400 11px var(--font-mono);color:#C9E8AF;letter-spacing:.1em;border:1px solid var(--border-on-deep);border-radius:var(--radius-pill);padding:8px 14px">TOOL-CALL ABUSE</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
+<section class="home-v2-section show-apps" id="services" data-screen-label="Services" style="border-bottom:1px solid var(--border-default)">
+    <div data-reveal="" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,96px) 28px">
+      <div style="font:500 12px var(--font-mono);color:var(--color-forest);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px">/ Human-led pentesting</div>
+      <h2 style="font:600 var(--type-display-2)/1.08 var(--font-display);letter-spacing:-.025em;margin:0 0 18px;color:var(--color-forest);text-wrap:pretty">Expertise, delivered directly</h2>
+      <p style="font:400 var(--type-body-lg)/1.6 var(--font-body);color:var(--text-secondary);margin:0 0 40px;max-width:680px;text-wrap:pretty">For engagements that call for specialist assessment, bespoke research, independent third-party review, or regulatory requirements. Every engagement gets a named lead, a signed report, and a committed date.</p>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:36px;align-items:start" data-svc-split="">
+        <div style="display:flex;flex-direction:column">
+          <button type="button" data-svc="0" aria-pressed="true" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Web app pentesting</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">OWASP ASVS L2/L3, business logic, multi-tenant isolation</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+          <button type="button" data-svc="1" aria-pressed="false" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Mobile app pentesting</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">iOS and Android, MASVS-aligned, runtime instrumentation</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+          <button type="button" data-svc="2" aria-pressed="false" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">API security testing</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">REST, GraphQL, and gRPC, OWASP API Top 10 coverage</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+          <button type="button" data-svc="3" aria-pressed="false" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Cloud security review</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">AWS, GCP, and Azure, attack paths over checklists</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+          <button type="button" data-svc="4" aria-pressed="false" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Red team engagement</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Objective-based, full kill chain, detection value included</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+          <button type="button" data-svc="5" aria-pressed="false" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Smart contract audit</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Solidity and EVM, manual review backed by SolidityScan</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+          <button type="button" data-svc="6" aria-pressed="false" style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%;text-align:left;background:none;border:none;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);border-left:2px solid transparent;padding:18px 14px;cursor:pointer;font-family:inherit;transition:background .18s ease,border-color .18s ease">
+            <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
+              <span style="font:600 16px var(--font-display);letter-spacing:-.015em;color:var(--color-ink)">Blockchain protocol audit</span>
+              <span style="font:400 13px/1.45 var(--font-body);color:var(--text-secondary);text-wrap:pretty">Bridges, L2s, and DeFi, with economic attack modeling</span>
+            </span>
+            <span style="font:400 15px var(--font-mono);color:var(--color-forest);flex-shrink:0">→</span>
+          </button>
+        </div>
+        <div style="border:1px solid var(--border-default);border-radius:var(--radius-md);background:var(--surface-raised);overflow:hidden;position:sticky;top:96px">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 22px;border-bottom:1px solid var(--border-default);background:var(--surface-sunken)">
+            <span style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em">ENGAGEMENT DETAIL</span>
+            <span style="font:500 11px var(--font-mono);color:var(--color-forest-600)"><span data-v2-svc-duration>2 to 3 weeks</span></span>
+          </div>
+          <div style="padding:24px 22px;display:flex;flex-direction:column;gap:20px">
+            <h3 style="font:600 20px/1.2 var(--font-display);letter-spacing:-.02em;margin:0;color:var(--color-ink)"><span data-v2-svc-name>Web app pentesting</span></h3>
+            <div>
+              <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:10px">WHAT WE TEST</div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <span data-v2-svc-tests style="display:contents">
+                  <span style="display:flex;align-items:baseline;gap:10px;font:400 14px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest);flex-shrink:0">›</span>Business logic and workflow abuse</span>
+
+                  <span style="display:flex;align-items:baseline;gap:10px;font:400 14px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest);flex-shrink:0">›</span>Multi-tenant isolation boundaries</span>
+
+                  <span style="display:flex;align-items:baseline;gap:10px;font:400 14px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest);flex-shrink:0">›</span>Authentication and session handling</span>
+
+                  <span style="display:flex;align-items:baseline;gap:10px;font:400 14px/1.5 var(--font-body);color:var(--text-secondary)"><span style="color:var(--color-forest);flex-shrink:0">›</span>Privilege escalation paths</span>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:10px">STANDARDS</div>
+              <div style="display:flex;gap:7px;flex-wrap:wrap">
+                <span data-v2-svc-standards style="display:contents">
+                  <span style="font:500 11px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:5px 10px">OWASP ASVS L2/L3</span>
+
+                  <span style="font:500 11px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:5px 10px">OWASP Top 10</span>
+
+                  <span style="font:500 11px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:5px 10px">PTES</span>
+                </span>
+              </div>
+            </div>
+            <div style="border-top:1px solid var(--border-default);padding-top:16px">
+              <div style="font:500 10px var(--font-mono);color:var(--text-secondary);letter-spacing:.14em;margin-bottom:8px">YOU RECEIVE</div>
+              <p style="font:400 14px/1.55 var(--font-body);color:var(--text-secondary);margin:0;text-wrap:pretty"><span data-v2-svc-deliver>Signed report with reproduction steps, CVSS scoring, and control mapping.</span></p>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+              <a href="web-app-security.html" data-v2-svc-href class="cs-btn cs-btn-primary cs-btn-sm">See full service</a>
+              <a href="#contact" style="font:500 13px var(--font-body);color:var(--color-forest)">Get Scoped →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="home-v2-section show-apps" data-screen-label="Compliance strip" style="border-bottom:1px solid var(--border-default)">
+    <div style="max-width:1180px;margin:0 auto;padding:34px 28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+      <span style="font:500 11px var(--font-mono);color:var(--text-secondary);letter-spacing:.16em;text-transform:uppercase">SOC 2 Type II report on file · ISO 27001 in progress · Reports map to</span>
+      <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:center">
+        <img src="images/logo-soc2.png" alt="SOC 2" title="SOC 2" style="height:44px;width:auto;display:block;object-fit:contain">
+        <img src="images/logo-iso27001.png" alt="ISO 27001" title="ISO 27001" style="height:44px;width:auto;display:block;object-fit:contain">
+        <img src="images/logo-gdpr.png" alt="GDPR" title="GDPR" style="height:42px;width:auto;display:block;object-fit:contain">
+        <img src="images/logo-pcidss.png" alt="PCI DSS" title="PCI DSS" style="height:34px;width:auto;display:block;object-fit:contain">
+        <img src="images/logo-hipaa.png" alt="HIPAA" title="HIPAA" style="height:34px;width:auto;display:block;object-fit:contain">
+      </div>
+    </div>
+  </section>
 
     <section
       id="contact"
@@ -3118,5 +2972,101 @@
     <script src="js/main.v1.js"></script>
     <script src="js/homepage-rehaul.js"></script>
     <script src="js/workflow.js"></script>
+
+    <script id="home-v2-interactions">
+      (function () {
+        const trust = document.getElementById('trust');
+        if (trust) {
+          const buttons = [...trust.querySelectorAll('[data-ctrl]')];
+          function openControl(index) {
+            buttons.forEach((button) => {
+              const active = Number(button.dataset.ctrl) === index;
+              const panel = trust.querySelector('[data-ctrl-panel="' + button.dataset.ctrl + '"]');
+              const icon = button.querySelector('[data-ctrl-icon]');
+              button.setAttribute('aria-expanded', String(active));
+              panel.style.maxHeight = active ? panel.scrollHeight + 'px' : '0px';
+              panel.style.opacity = active ? '1' : '0';
+              panel.setAttribute('aria-hidden', String(!active));
+              if (icon) icon.style.transform = active ? 'rotate(45deg)' : 'rotate(0deg)';
+            });
+          }
+          buttons.forEach((button) => button.addEventListener('click', () => {
+            openControl(button.getAttribute('aria-expanded') === 'true' ? -1 : Number(button.dataset.ctrl));
+          }));
+          openControl(0);
+          window.addEventListener('resize', () => {
+            const active = buttons.find((button) => button.getAttribute('aria-expanded') === 'true');
+            if (active) openControl(Number(active.dataset.ctrl));
+          });
+        }
+
+        const services = [
+    { name: 'Web app pentesting', line: 'OWASP ASVS L2/L3, business logic, multi-tenant isolation',
+      tests: ['Business logic and workflow abuse', 'Multi-tenant isolation boundaries', 'Authentication and session handling', 'Privilege escalation paths'],
+      standards: ['OWASP ASVS L2/L3', 'OWASP Top 10', 'PTES'], dur: '2 to 3 weeks',
+      deliver: 'Signed report with reproduction steps, CVSS scoring, and control mapping.', href: 'web-app-security.html' },
+    { name: 'Mobile app pentesting', line: 'iOS and Android, MASVS-aligned, runtime instrumentation',
+      tests: ['Insecure local storage and keychain use', 'Certificate pinning bypass', 'Runtime hooking with Frida', 'Backend API authorization'],
+      standards: ['OWASP MASVS L1/L2', 'MASTG'], dur: '2 to 3 weeks',
+      deliver: 'Per-platform findings, device logs, and a retest once fixes land.', href: 'mobile-app-security.html' },
+    { name: 'API security testing', line: 'REST, GraphQL, and gRPC, OWASP API Top 10 coverage',
+      tests: ['Broken object level authorization', 'Undocumented endpoint discovery', 'GraphQL introspection and batching abuse', 'JWT, OAuth, and mTLS review'],
+      standards: ['OWASP API Top 10', 'ASVS'], dur: '1 to 2 weeks',
+      deliver: 'Endpoint inventory, authorization matrix, and replayable attack chains.', href: 'api-security.html' },
+    { name: 'Cloud security review', line: 'AWS, GCP, and Azure, attack paths over checklists',
+      tests: ['IAM privilege graph mapping', 'Publicly reachable storage and services', 'Kubernetes RBAC and pod security', 'CI/CD supply chain exposure'],
+      standards: ['CIS Benchmarks', 'MITRE ATT&CK Cloud'], dur: '2 weeks',
+      deliver: 'Attack-path diagrams, prioritised remediation, and IaC-level fixes.', href: 'cloud-security.html' },
+    { name: 'Red team engagement', line: 'Objective-based, full kill chain, detection value included',
+      tests: ['External and assumed-breach scenarios', 'Phishing and social engineering', 'Lateral movement and persistence', 'Detection and response validation'],
+      standards: ['MITRE ATT&CK', 'TIBER-EU', 'DORA TLPT'], dur: '4 to 6 weeks',
+      deliver: 'Objective narrative, TTP timeline, and a purple-team debrief.', href: 'red-team.html' },
+    { name: 'Smart contract audit', line: 'Solidity and EVM, manual review backed by SolidityScan',
+      tests: ['Reentrancy and state-update ordering', 'Access control and proxy upgrade paths', 'Oracle manipulation and flash loans', 'Economic and incentive modelling'],
+      standards: ['OWASP Smart Contract Top 10', 'SWC Registry'], dur: '1 to 3 weeks',
+      deliver: 'Line-referenced findings, PoC exploits, and a public audit report.', href: 'smart-contract-audits.html' },
+    { name: 'Blockchain protocol audit', line: 'Bridges, L2s, and DeFi, with economic attack modeling',
+      tests: ['Cross-chain message verification', 'Sequencer and validator assumptions', 'Liquidity and settlement invariants', 'Governance capture scenarios'],
+      standards: ['OWASP Smart Contract Top 10', 'Protocol-specific'], dur: '3 to 6 weeks',
+      deliver: 'Threat model, invariant analysis, and a published report.', href: 'dapp-protocol-security.html' },
+  ];
+        const serviceSection = document.getElementById('services');
+        if (serviceSection) {
+          const buttons = [...serviceSection.querySelectorAll('[data-svc]')];
+          const duration = serviceSection.querySelector('[data-v2-svc-duration]');
+          const name = serviceSection.querySelector('[data-v2-svc-name]');
+          const tests = serviceSection.querySelector('[data-v2-svc-tests]');
+          const standards = serviceSection.querySelector('[data-v2-svc-standards]');
+          const deliver = serviceSection.querySelector('[data-v2-svc-deliver]');
+          const link = serviceSection.querySelector('[data-v2-svc-href]');
+          function setService(index) {
+            const service = services[index];
+            if (!service) return;
+            buttons.forEach((button) => button.setAttribute('aria-pressed', String(Number(button.dataset.svc) === index)));
+            duration.textContent = service.dur;
+            name.textContent = service.name;
+            deliver.textContent = service.deliver;
+            link.href = service.href;
+            tests.replaceChildren(...service.tests.map((value) => {
+              const row = document.createElement('span');
+              row.style.cssText = 'display:flex;align-items:baseline;gap:10px;font:400 14px/1.5 var(--font-body);color:var(--text-secondary)';
+              const marker = document.createElement('span');
+              marker.style.cssText = 'color:var(--color-forest);flex-shrink:0';
+              marker.textContent = '›';
+              row.append(marker, document.createTextNode(value));
+              return row;
+            }));
+            standards.replaceChildren(...service.standards.map((value) => {
+              const item = document.createElement('span');
+              item.style.cssText = 'font:500 11px var(--font-mono);color:var(--color-ink);border:1px solid var(--border-default);border-radius:var(--radius-sm);padding:5px 10px';
+              item.textContent = value;
+              return item;
+            }));
+          }
+          buttons.forEach((button) => button.addEventListener('click', () => setService(Number(button.dataset.svc))));
+          setService(0);
+        }
+      })();
+    </script>
   </body>
 </html>
